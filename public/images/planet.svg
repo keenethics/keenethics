@@ -1,0 +1,12 @@
+<?xml-stylesheet type="text/css" href="../css/style.min.css" ?>
+<svg class="planet" width="104" height="103" viewBox="0 0 124 123" xmlns="http://www.w3.org/2000/svg">
+  <title>Planet</title>
+  <g transform="translate(10 10)" stroke-width="2" fill="none" fill-rule="evenodd">
+    <circle stroke="#333" cx="50.5" cy="50.5" r="39.5"/>
+    <circle stroke="#C1C1C1" cx="50.5" cy="50.5" r="50.5"/>
+    <circle class="planet--sun-one" stroke="#DE4F4F" fill="#FFF" cx="68" cy="86" r="6"/>
+    <circle class="planet--sun-two" stroke="#DE4F4F" fill="#FFF" cx="32" cy="4" r="4"/>
+    <path class="planet--sun-main" stroke="#DE4F4F" d="M56.405 66.697l-8.094 7.145-6.212-8.83-10.633-1.873 3.03-10.364-5.166-9.48 9.99-4.093 4.192-9.95 9.43 5.26 10.392-2.926 1.767 10.65 8.768 6.302-7.226 8.02.54 10.784z"/>
+    <path class="planet--sun-main" stroke="#DE4F4F" d="M61.74 62.74l-4.144 9.97-9.455-5.213-10.377 2.978-1.82-10.643-8.798-6.257 7.185-8.058-.593-10.78 10.78.593 8.058-7.185 6.257 8.798 10.643 1.82-2.978 10.378 5.212 9.456z"/>
+  </g>
+</svg>

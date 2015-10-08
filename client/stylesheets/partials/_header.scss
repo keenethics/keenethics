@@ -1,0 +1,92 @@
+$arrow-anim-range: 10px;
+$arrow-size: 21px;
+$arrow-size-mobile: 17px;
+
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: url('#{$image-url}header-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &--logo {
+    display: block;
+    margin-top: $margin*2;
+    margin-bottom: 0;
+    z-index: 10;
+  }
+  &--logo-link {
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $white;
+      outline: none;
+    }
+    span {
+      display: block;
+      float: left;
+    }
+  }
+  &--title {
+    position: relative;
+    margin-top: 35vh;
+    line-height: normal;
+    transform: translate3d(0,-50%,0);
+    z-index: 10;
+  }
+  &--arrow {
+    display: block;
+    position: absolute;
+    bottom: $padding*2;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    animation-name: up-and-down;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 10;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+  &--arrow-inner {
+    position: relative;
+  }
+  &--arrow-triangle {
+    display: block;
+    width: $arrow-size;
+    height: $arrow-size;
+    border-width: 0 $border-width $border-width 0;
+    border-style: solid;
+    border-color: $white;
+    transform: rotate(45deg) translate3d(3px, 3px, 0);
+    @media all and (max-width: 767px) {
+      width: $arrow-size-mobile;
+      height: $arrow-size-mobile;
+    }
+  }
+  &--arrow-square {
+    display: block;
+    width: $arrow-size;
+    height: $arrow-size;
+    border: $border-width solid $white;
+    transform: rotate(45deg);
+    @media all and (max-width: 767px) {
+      width: $arrow-size-mobile;
+      height: $arrow-size-mobile;
+    }
+  }
+}
+
+@keyframes up-and-down {
+    0%   {transform: translate3d(-50%, -$arrow-anim-range, 0);}
+    50%  {transform: translate3d(-50%, $arrow-anim-range, 0);}
+    100% {transform: translate3d(-50%, -$arrow-anim-range, 0);}
+}

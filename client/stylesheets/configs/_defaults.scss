@@ -1,0 +1,15 @@
+* {
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  @include vendor(box-sizing, border-box);
+}
+html {
+  font-size:62.5%;
+}
+body {
+  position: relative;
+  font:300 13px/1.6 'Proxima nova', Arial;
+  background:#fff;
+  color:#444;
+}

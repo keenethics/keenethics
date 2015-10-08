@@ -1,0 +1,35 @@
+input,
+textarea {
+  appearance: none;
+  width: 100%;
+  max-width: 100vw;
+  padding: floor($padding/1.3) $padding;
+  border: none;
+  border-radius: 0;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.4);
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    color: $white;
+  }
+}
+
+input {
+  & + &,
+  & + textarea,
+  & + button {
+    margin-top: $margin;
+  }
+}
+
+textarea {
+  resize: none;
+
+  & + &,
+  & + input,
+  & + button {
+    margin-top: $margin;
+  }
+}

@@ -1,0 +1,32 @@
+$keen-ethics-animation-dur: 5s;
+
+.keen-ethics {
+  &--part-bottom {
+    animation-name: bounce-part;
+    animation-duration: $keen-ethics-animation-dur;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center center;
+  }
+  &--part-top {
+    animation-name: rotate-part;
+    animation-duration: $keen-ethics-animation-dur;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center center;
+  }
+}
+
+@keyframes bounce-part {
+    0%   {transform: translate3d(0, 0, 0);}
+    50%  {transform: translate3d(0, 2px, 2px);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes rotate-part {
+    0%   {transform: rotate(20deg);}
+    25%  {transform: rotate(0);}
+    50%  {transform: rotate(-20deg);}
+    75%  {transform: rotate(0);}
+    100% {transform: rotate(20deg);}
+}

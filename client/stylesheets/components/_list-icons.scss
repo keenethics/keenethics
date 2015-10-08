@@ -1,0 +1,51 @@
+$list-icons-height: 30px;
+
+.list-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: $padding 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  &--item {
+    flex: 1 1 auto;
+    display: flex;
+    margin: 0 $margin;
+    @media all and (max-width: 767px) {
+      flex: 1 1 30%;
+      margin: $margin $margin;
+    }
+  }
+  &--span {
+    flex: 1 1 auto;
+    display: block;
+    height: $list-icons-height;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: $transition;
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
+    &.-meteor {
+      background-image: url('#{$image-url}meteor.png');
+    }
+    &.-mean {
+      background-image: url('#{$image-url}mean.png');
+    }
+    &.-angular {
+      background-image: url('#{$image-url}angular.png');
+    }
+    &.-react {
+      background-image: url('#{$image-url}react.png');
+    }
+    &.-loopback {
+      background-image: url('#{$image-url}loopback.png');
+    }
+    &.-node {
+      background-image: url('#{$image-url}nodejs.png');
+    }
+  }
+}

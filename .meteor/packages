@@ -1,0 +1,39 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+jquery
+stevezhu:lodash
+accounts-password
+aldeed:collection2
+iron:router
+raix:handlebar-helpers
+matteodem:easy-security
+audit-argument-checks
+fastclick
+zimme:iron-router-active
+manuelschoebel:ms-seo
+browser-policy
+natestrauser:animate-css
+dburles:collection-helpers
+meteorhacks:fast-render
+twbs:bootstrap
+fourseven:scss
+shcherbin:slickjs
+
+ecmascript
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+

@@ -1,0 +1,20 @@
+$stars-anim-dur: 10s;
+
+.stars-underlay {
+  height: 100%;
+  min-height: 4000px;
+  margin-left: -2000px;
+  margin-top: -2000px;
+  min-width: 4000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url('#{$image-url}/stars-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-name: spin-right;
+  animation-duration: $stars-anim-dur*20;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
+}

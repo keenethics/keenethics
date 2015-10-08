@@ -1,0 +1,27 @@
+//----------------------------------*\
+// COLORS
+//----------------------------------*/
+
+$black:      #333;
+$white:      #fff;
+$gray:       #666;
+$gray-light: #c1c1c1;
+$red:        #de4f4f;
+
+//----------------------------------*\
+// BASIC VARIABLES
+//----------------------------------*/
+
+$padding:      15px;
+$margin:       15px;
+$border-width: 1px;
+$border-color: $white;
+$transition:   .5s ease-out;
+$input-padding: floor($padding/1.3);
+
+//----------------------------------*\
+// MAIN PATHES
+//----------------------------------*/
+
+$image-url: '../images/';
+$font-url:  '../fonts/';

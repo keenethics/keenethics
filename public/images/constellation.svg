@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/css" href="../css/style.min.css" ?>
+<svg class="constellation" width="101" height="100" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="-24 26 111 110">
+  <style>
+    .st0{fill:none;stroke:#333333;stroke-width:2;} .st1{fill:#FFFFFF;stroke:#DE4F4F;stroke-width:2;} .st2{fill:none;stroke:#C1C1C1;stroke-width:2;}
+  </style>
+  <title>Group Copy</title>
+  <g transform="translate(10 10)" stroke-width="2" fill="none" fill-rule="evenodd">
+    <path id="Path-55" class="st0" d="M-18 100.3l35.2 7.7L45 95 23.3 69.7l24.5-3.1L63.1 39"/>
+    <path id="Rectangle-15" class="st1 constellation--star-one" d="M-11.135 101.5l-6.364 6.365-6.363-6.364 6.364-6.363z"/>
+    <path id="Rectangle-15-Copy" class="st1" d="M23.865 107.5l-6.364 6.365-6.363-6.364 6.364-6.363z"/>
+    <path id="Rectangle-15-Copy-3" class="st1 constellation--star-two" d="M29.864 68.5l-6.363 6.364-6.363-6.364 6.364-6.364z"/>
+    <path class="st2" d="M-12.2 67l4.2-4.2 4.2 4.2-4.2 4.2-4.2-4.2zm80 14l4.2-4.2 4.2 4.2-4.2 4.2-4.2-4.2zm-20 40l4.2-4.2 4.2 4.2-4.2 4.2-4.2-4.2zm-20-90l4.2-4.2 4.2 4.2-4.2 4.2-4.2-4.2z"/>
+    <path id="Rectangle-15-Copy-4" class="st1" d="M54.865 66.5L48.5 72.864 42.138 66.5l6.364-6.364z"/>
+    <path id="Rectangle-15-Copy-5" class="st1" d="M69.865 38.5L63.5 44.864 57.138 38.5l6.364-6.364z"/>
+    <path id="Rectangle-15-Copy-2" class="st1 constellation--star-three" d="M52.486 95L44 103.485 35.517 95 44 86.515z"/>
+  </g>
+</svg>

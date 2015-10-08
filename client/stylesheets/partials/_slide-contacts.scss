@@ -1,0 +1,36 @@
+.slide-contacts {
+  background-image: url('#{$image-url}contacts-bg.png');
+  background-position: center;
+  background-size: cover;
+  &--title {
+    margin-bottom: $margin*2;
+  }
+  &--info {
+    margin-bottom: $margin*2;
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    a {
+      display: block;
+      color: $white;
+      transition: $transition;
+      & + & {
+        margin-top: floor($margin/2);
+      }
+      &:hover {
+        text-decoration: none;
+        .slide-contacts--arrow {
+          visibility: visible;
+          opacity: 1;
+          transform: translate3d(3px, 0, 0)
+        }
+      }
+    }
+  }
+  &--arrow {
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+    transform: translate3d(-3px, 0, 0)
+  }
+}

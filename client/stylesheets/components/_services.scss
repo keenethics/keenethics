@@ -1,0 +1,83 @@
+$border-dashed-width: $border-width*2;
+
+.services {
+  &--item {
+    @media all and (max-width: 767px) {
+      margin-bottom: $margin*2;
+    }
+  }
+  &--img {
+    margin-bottom: $margin;
+    @media all and (max-width: 767px) {
+      text-align: center;
+    }
+    &.-right {
+      text-align: right;
+      @media all and (max-width: 767px) {
+        text-align: center;
+      }
+    }
+    object {
+      height: 210px;
+      width: auto;
+    }
+  }
+  &--text {
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 37%;
+    min-width: 260px;
+    @media all and (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+    }
+    &.-right {
+      @extend .clearfix;
+      float: right;
+      margin-right: -115px;
+      @media all and (max-width: 767px) {
+        float: none;
+        margin-right: 0;
+      }
+    }
+  }
+  &--list {
+    margin: 0;
+    padding: 0;
+    list-style: disc inside;
+    @media all and (max-width: 767px) {
+      display: inline-block;
+    }
+  }
+  &--list-item {
+    @media all and (max-width: 767px) {
+      white-space: nowrap;
+      text-align: left;
+    }
+  }
+  &--path {
+    display: block;
+    height: 45%;
+    border-style: dashed;
+    border-color: $white;
+    position: absolute;
+    top: 50%;
+    opacity: 0.5;
+    @media all and (max-width: 767px) {
+      display: none;
+    }
+    &.-right {
+      border-width: $border-dashed-width $border-dashed-width 0 0;
+      border-top-right-radius: 30px;
+      right: 90px;
+      left: 200px;
+    }
+    &.-left {
+      border-width: $border-dashed-width 0 0 $border-dashed-width;
+      border-top-left-radius: 30px;
+      right: 200px;
+      left: 90px;
+    }
+  }
+}

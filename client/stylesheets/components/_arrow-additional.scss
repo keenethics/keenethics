@@ -1,0 +1,29 @@
+$arrow-additional-size: 8px;
+
+.arrow-additional {
+  position: relative;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  margin: 0 0 3px 0;
+  padding: 0;
+  background-color: transparent;
+  vertical-align: middle;
+  transition: $transition;
+  @media all and (min-width: 768px) {
+    margin: 0 0 8px 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: $arrow-additional-size;
+    width: $arrow-additional-size;
+    position: absolute;
+    left: 100%;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: $white;
+    background-color: transparent;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+  }
+}

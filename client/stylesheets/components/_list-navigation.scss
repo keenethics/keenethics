@@ -1,0 +1,115 @@
+$list-nav-bullets-size: 10px;
+$list-nav-bullets-active-size: -10px;
+
+.list-navigation {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: $padding;
+  top: 50%;
+  list-style: none;
+  z-index: 50;
+  @media all and (max-width: 767px) {
+    display: none;
+  }
+  &--item {
+    display: block;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: $margin;
+    }
+    &:hover {
+      .list-navigation--tip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &.active {
+      .list-navigation--link {
+        border-color: transparent;
+        color: $white;
+        z-index: 10;
+        &:before {
+          background-color: $red;
+          opacity: 1;
+          visibility: visible;
+          z-index: -1;
+        }
+      }
+    }
+  }
+  &--link {
+    position: relative;
+    display: block;
+    width: $list-nav-bullets-size;
+    height: $list-nav-bullets-size;
+    background-color: transparent;
+    border: $border-width solid $gray-light;
+    border-radius: 50%;
+    color: transparent;
+    text-align: center;
+    line-height: $list-nav-bullets-size;
+    transition: $transition;
+    &:hover {
+      background-color: $gray-light;
+      color: transparent;
+      text-decoration: none;
+    }
+    &:active,
+    &:focus {
+      color: transparent;
+      text-decoration: none;
+      outline: none;
+      &:before {
+        background-color: $red;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: $list-nav-bullets-active-size;
+      right: $list-nav-bullets-active-size;
+      bottom: $list-nav-bullets-active-size;
+      left: $list-nav-bullets-active-size;
+      border-radius: 50%;
+      background-color: $red;
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition;
+      &:active,
+      &:focus {
+        background-color: $red;
+      }
+    }
+  }
+  &--tip {
+    margin-right: 20px;
+    margin-bottom: 18px;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+  }
+  &--text {
+    border-width: 0 0 $border-width 0;
+    border-color: $gray-light;
+    border-style: solid;
+    color: $gray-light;
+    white-space: nowrap;
+    &:after {
+      content: '';
+      display: block;
+      height: $border-width;
+      width: 30px;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 100%;
+      background-color: $gray-light;
+      transform: rotate(45deg) translate3d(3px, 9px, 0);
+    }
+  }
+}
