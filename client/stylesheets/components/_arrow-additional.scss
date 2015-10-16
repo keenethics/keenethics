@@ -1,18 +1,15 @@
-$arrow-additional-size: 8px;
+$arrow-additional-size: 7px;
 
 .arrow-additional {
   position: relative;
   display: inline-block;
   height: 0;
   width: 0;
-  margin: 0 0 3px 0;
+  margin: 0 5px;
   padding: 0;
   background-color: transparent;
   vertical-align: middle;
   transition: $transition;
-  @media all and (min-width: 768px) {
-    margin: 0 0 8px 0;
-  }
   &:after {
     content: '';
     display: block;
@@ -27,3 +24,4 @@ $arrow-additional-size: 8px;
     transform: translate3d(0, -50%, 0) rotate(45deg);
   }
 }
+
