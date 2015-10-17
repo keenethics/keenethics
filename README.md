@@ -1,177 +1,31 @@
-# meteor-boilerplate
+This is a repository with official website of Keenethics company. It's built on top of
+meteor.js. Issue tracking is currently handled within BitBuckets issue system.
 
-This boilerplate is here to give you a starting point for your meteor projects, with a console tool to ease up some tasks. Essential atmosphere packages are included to give you features like routing and collection schemas out-of-the-box.  
+#Development
 
-<!-- toc -->
+##Running app locally
 
-* [Installing with orion-cli](#installing-with-orion-cli)
-* [How to use](#how-to-use)
-  * [Generating files](#generating-files)
-  * [Removing default code](#removing-default-code)
-  * [Available profiles (cofeescript and es6)](#available-profiles-cofeescript-and-es6)
-  * [Deployments](#deployments)
-  * [SEO and other concerns](#seo-and-other-concerns)
-  * [Adding allow rules for external URLs](#adding-allow-rules-for-external-urls)
-* [Structure](#structure)
-  * [Packages used](#packages-used)
-  * [Folder structure](#folder-structure)
-* [Other Awesome Boilerplates](#other-awesome-boilerplates)
-* [License](#license)
+1. Clone repository
+2. [Install meteor.js](https://www.meteor.com/install) and make sure you have MongoDB installed
+3. Start server via ```meteor```
 
-<!-- toc stop -->
+##Commit strategy
 
-The boilerplate looks like following: [boilerplate.meteor.com](http://boilerplate.meteor.com). Have a look at [starthacking](http://starthacking.meteor.com/) for a project created with this boilerplate.
+Commit message should contain related ticket number and a brief description (e.g.
+`Finish homepage layout (ref #2)`). Currently we just commit everything to `master` branch.
 
-## Installing with orion-cli
+##Code style
 
-```bash
-npm install -g orion-cli
-```
+Please use JSLint to ensure quality of your code. You can also consult
+[Google JavaScript Style Guide](http://google.github.io/styleguide/javascriptguide.xml) for other
+code styling questions.
 
-This will install the [orion-cli](https://github.com/matteodem/orion-cli) tool, which can be used for scaffolding files with different profiles.
-You can still clone the repository, which doesn't give you the profile and scaffolding support.
+##Deploying to remote server
 
-## How to use
+We currently use meteor.com hosting as our server. To deploy you can simply run:
 
-```sh
-# Assuming meteor is already installed
-orion create appName
-cd appName && meteor
-```
+`meteor deploy keenethics.meteor.com`
 
-### Generating files
+#Testing
 
-With orion-cli you can scaffold files based on your configuration that you've got.
-
-```sh
-orion generate routes
-```
-
-You can create models, views, change profiles and reset the project with the console tool (see below).
-
-
-### Removing default code
-
-There's already a lot of predefined code in this boilerplate, to show you the possible functionality. However, if you want to start off with an
-empty project use the provided command to get rid off all the code you don't need.
-
-```sh
-orion reset
-```
-
-### Available profiles (coffeescript and es6)
-
-* default (Plain Vanilla Javascript)
-* coffee (coffeescript, Unfancy JavaScript)
-* es6 (traceur, Traceur is a JavaScript.next-to-JavaScript-of-today compiler)
-
-You can change your profile like that
-```sh
-orion set-profile
-```
-
-There will be a prompt, where you can enter __coffee__ or any other profile that you have specified. Also use the ```reset``` command to start off with blank files according to your profile.
-
-### Deployments
-
-It is highly recommended to use [Meteor Up](https://github.com/arunoda/meteor-up) for easy deployments. 
-Have a look at the repository for more information.
-
-### SEO and other concerns
-
-> Meteor cannot do SEO 
-
-This statement is only partially true, since there is a package called [ms-seo](https://github.com/DerMambo/ms-seo), which
-has a lot of neat little tricks to help web crawlers notice your app the way you want them to. This boilerplate also adds constants under
-__client/lib/constants.js__ for the app. Change SEO settings inside the routes like that.
-
-```javascript
-Router.route('/about', function () {
-  this.render('about');
-  // Using the app constants
-  SEO.set({ title: 'About -' + Meteor.App.NAME, og: {...} });
-});
-```
-
-### Adding allow rules for external URLs
-
-The [browser-policy](https://atmospherejs.com/meteor/browser-policy) adds rules to deny all operations from external URLs.
-This helps dealing with clickjacking and other XSS methods used to attack the client. To whitelist a url, add following to 
-__server/config/security.js__
-
-```javascript
-BrowserPolicy.content.allowOriginForAll(YOUR_URL);
-```
-
-Other security enforcing packages like [audit-argument-checks](https://docs.meteor.com/#/full/auditargumentchecks) and 
-[matteodem:easy-security](https://github.com/matteodem/meteor-easy-security) have also been added.
-
-## Structure
-
-### Packages used
-
-* Meteor Core
-  * meteor-platform
-* Routing
-  * [iron:router](https://github.com/EventedMind/iron-router)
-  * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
-* Collections
-  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
-  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
-* Accounts
-  * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
-  * [useraccounts:semantic-ui](https://github.com/meteor-useraccounts/semantic-ui)
-* UI and UX
-  * [fastclick](https://github.com/meteor/meteor/tree/devel/packages/fastclick)
-  * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
-  * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css/)
-  * [semantic:ui](https://github.com/Semantic-Org/Semantic-UI-Meteor/)
-* Security
-  * [browser-policy](https://github.com/meteor/meteor/tree/devel/packages/browser-policy)
-  * [audit-argument-checks](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks)
-  * [matteodem:easy-security](https://github.com/matteodem/meteor-easy-security)
-* SEO
-  * [manuelschoebel:ms-seo](https://github.com/DerMambo/ms-seo)
-* Development
-  * [less](https://github.com/meteor/meteor/tree/devel/packages/less)
-  * [jquery](https://github.com/meteor/meteor/tree/devel/packages/jquery)
-  * [underscore](https://github.com/meteor/meteor/tree/devel/packages/underscore)
-  * [raix:handlebar-helpers](https://github.com/raix/Meteor-handlebar-helpers)
-
-The "insecure" and "autopublish" packages are removed by default (they make your app vulnerable).
-
-### Folder structure
-
-```
-client/ 				# Client folder
-    compatibility/      # Libraries which create a global variable
-    config/             # Configuration files (on the client)
-	lib/                # Library files that get executed first
-    startup/            # Javascript files on Meteor.startup()
-    stylesheets         # LESS files
-    modules/            # Meant for components, such as form and more(*)
-	views/			    # Contains all views(*)
-	    common/         # General purpose html templates
-model/  				# Model files, for each Meteor.Collection(*)
-private/                # Private files
-public/                 # Public files
-routes/                 # All routes(*)
-server/					# Server folder
-    fixtures/           # Meteor.Collection fixtures defined
-    lib/                # Server side library folder
-    publications/       # Collection publications(*)
-    startup/            # On server startup
-meteor-boilerplate		# Command line tool
-```
-
-(*) = the command line tool creates files in these folders
-
-## Other Awesome Boilerplates
-
-- [Void](https://github.com/SachaG/Void) by Sacha Greif
-- [meteor-jw-opinionated-skeleton](https://github.com/jamesdwilson/meteor-jw-opinionated-skeleton) by jamesdwilson (CoffeeScript)
-- [meteor-boilerplate](https://github.com/BeDifferential/meteor-boilerplate) by BeDifferential (CoffeeScript)
-- [em](https://github.com/EventedMind/em) by EventedMind (Boilerplate & Scaffolding)
-
-## License
-This boilerplate has an MIT License, see the LICENSE.txt for more information.
+We don't currently have any tests.
