@@ -25,6 +25,9 @@ $list-nav-bullets-active-size: -10px;
         visibility: visible;
       }
     }
+    .list-navigation--link {
+      padding: 0;
+    }
     &.active {
       .list-navigation--link {
         border-color: transparent;
