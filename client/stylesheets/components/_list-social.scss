@@ -1,0 +1,23 @@
+.list-social {
+  display: block;
+  margin-top: 0;
+  margin-bottom: $margin*2;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  &--item {
+    display: inline-block;
+    margin: 0 5px;
+    &:hover {
+      .list-social--link {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+  &--link {
+    transition: $transition-secondary;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+}
+
