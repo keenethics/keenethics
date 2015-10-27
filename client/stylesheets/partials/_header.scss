@@ -90,3 +90,12 @@ $arrow-size-mobile: 17px;
     50%  {transform: translate3d(-50%, $arrow-anim-range, 0);}
     100% {transform: translate3d(-50%, -$arrow-anim-range, 0);}
 }
+
+.login-buttons {
+  float: right;
+  margin-right: -15%;
+}
+
+.login {
+  text-decoration: none;
+}

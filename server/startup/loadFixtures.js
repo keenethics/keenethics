@@ -9,4 +9,28 @@ function loadFixture(fixtures, collection) {
 
 Meteor.startup(function () {
   //loadFixture(Fixtures['dummyFixture'], DummyCollection);
+
+  var jobs = [{
+      title: 'Knotable',
+      description: 'A service for collaboration',
+      link: 'http://beta.knotable.com/',
+      createdAt: new Date()
+    },{
+      title: 'Comicenglish',
+      description: 'Dervice for learning foreign languages in a gaming form',
+      link: 'http://comicenglish.com/',
+      createdAt: new Date()
+    },{
+      title: 'Pollen',
+      description: 'An app for spreading ideas via email campaigns',
+      link: 'http://www.pollenpost.com',
+      createdAt: new Date()
+    }];
+
+  if(!Jobs.find().count()) {
+    _.each(jobs, function(doc) {
+      Jobs.insert(doc);
+    });
+  }
+
 });

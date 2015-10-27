@@ -1,0 +1,32 @@
+<template name="signInModal">
+  <div class="modal sign-in-modal">
+  <div class="col-xs-12">
+    <div class="modal-dialog">
+      <div class="row">
+          <div class="modal-content">
+            {{#if currentUser}}
+              <div class="modal-header">
+                <h2 class="modal-title">
+                  You already signed-in as <b>{{currentUser.name}}</b>
+                </h2>
+              </div>
+            {{/if}}
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  {{#unless currentUser}}
+                    {{> atForm state=state}}
+                  {{else}}
+                    <div class="sign-out-container">
+                      <button class="button sign-out">Sign out</button>
+                    </div>
+                  {{/unless}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

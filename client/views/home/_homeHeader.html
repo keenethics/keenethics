@@ -1,6 +1,13 @@
 <template name="_homeHeader">
   <header class="header" id="header" role="banner">
     <div class="container js-scroll-spy">
+      <div class="row login-buttons">
+        <div class='col-xs-12'>
+          <!-- <a href="#" class="join button">Join</a>
+          <a href="#" class="sign-in button">Sign in</a> -->
+          <a href="#" class="login button">{{>loginButtons align="right"}}</a>
+        </div>
+      </div>
       <div class="row">
         <h1 class="header--logo col-xs-12">
           <a href="#" class="header--logo-link" title="KeenEthics">
