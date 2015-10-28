@@ -4,7 +4,7 @@ Jobs.attachSchema(
   new SimpleSchema({
     title: {
       type: String,
-      label: 'Job Title'
+      label: 'Title'
     },
     description: {
       type: String,
@@ -26,26 +26,20 @@ Jobs.attachSchema(
         }
       },
       denyUpdate: true
+    },
+    picture: {
+      type: String,
+      label: 'Picture',
+      optional: true,
+      autoform: {
+        afFieldInput: {
+          type: 'fileUpload',
+          collection: 'Images',
+          label: 'Choose file',
+          previewTemplate: '_picturePreview'
+        }
+      }
     }
-    // owner: {
-    //   type: String,
-    //   regEx: SimpleSchema.RegEx.Id,
-    //   autoValue: function () {
-    //     if (this.isInsert) {
-    //       return Meteor.userId();
-    //     }
-    //   },
-    //   autoform: {
-    //     options: function () {
-    //       _.map(Meteor.users.find().fetch(), function (user) {
-    //         return {
-    //           label: user.emails[0].address,
-    //           value: user._id
-    //         };
-    //       });
-    //     }
-    //   }
-    // }
   })
 );
 
@@ -66,13 +60,8 @@ if (Meteor.isServer) {
 }
 
 Jobs.helpers({
-  title: function() {
-    return this.title;
-  },
-  description: function() {
-    return this.description;
-  },
-  link: function() {
-    return this.link;
+  formatedDate: function() {
+    var isoDate = this.createdAt;
+    return isoDate.getMonth() + '/' + isoDate.getDate() + '/' + isoDate.getYear();
   }
 });

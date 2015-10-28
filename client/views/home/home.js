@@ -37,7 +37,6 @@ Template.home.onRendered(function(){
     ]
   });
 
-  
   $('a').click(function() {
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top
@@ -46,15 +45,4 @@ Template.home.onRendered(function(){
   });
 
   $('body').scrollspy({ target: '.js-scroll-spy' });
-});
-
-Template.home.events({
-  'click .sign-in': function () {
-    AccountsTemplates.setState('signIn');
-    Modal.show('signInModal');
-  },
-  'click .join': function () {
-    AccountsTemplates.setState('signUp');
-    Modal.show('signInModal');
-  }
 });

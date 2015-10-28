@@ -1,24 +1,49 @@
 AdminConfig = {
-  name: 'Admin',
+  name: 'Admin Panel',
   adminEmails: ['admin@test.com'],
+  skin: 'black-light',
+  routes: {
+    new: {
+      waitOn: function () {
+        return [
+          Meteor.subscribe('images'),
+          Meteor.subscribe('Jobs')
+        ]
+      }},
+    view: {
+      waitOn: function () {
+        return [
+          Meteor.subscribe('images'),
+          Meteor.subscribe('Jobs')
+        ]
+      }},
+    edit: {
+      waitOn: function () {
+        return [
+          Meteor.subscribe('images'),
+          Meteor.subscribe('Jobs')
+        ]
+      }}
+  },
   collections: {
     Jobs: {
       icon: 'file-o',
       omitFields: ['createdAt'],
+      extraFields: ['_id'],
       tableColumns: [
        { label: 'Title', name: 'title' },
        { label: 'Description', name: 'description' },
-       { label: 'Link', name: 'link' }
-       // { label: 'User', name: 'owner', template: 'userEmail' }
+       { label: 'Reference', name: 'link' },
+       { label: 'Picture', name: 'picture' },
+       { label: 'Created At', name: 'createdAt' }
       ],
-      showEditColumn: true, // Set to false to hide the edit button. True by default.
-      showDelColumn: true, // Set to false to hide the edit button. True by default.
-      showWidget: false,
+      showEditColumn: true,
+      showDelColumn: false,
+      showWidget: true,
       color: 'green'
     }
   }
-  // autoForm:
-  //   omitFields: ['createdAt']
 };
 
+// AdminDashboard.addSidebarItem('New User', AdminDashboard.path('/Users/new'), { icon: 'plus' });
 AdminDashboard.addSidebarItem('New Job', AdminDashboard.path('/Jobs/new'), { icon: 'plus' });
