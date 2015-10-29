@@ -1,4 +1,4 @@
-<?xml-stylesheet type="text/css" href="../css/style.min.css" ?>
+<?xml-stylesheet type="text/css" href="/merged-stylesheets.css" ?>
 <svg class="rocket" width="98" height="99" viewBox="0 0 118 119" xmlns="http://www.w3.org/2000/svg">
   <title>Rocket</title>
   <g transform="translate(10 10) rotate(45 64.35 82.435)" stroke-width="2" fill="none" fill-rule="evenodd">
