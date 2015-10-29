@@ -9,7 +9,37 @@
           </h3>
         </div>
       </div>
-      {{> _sliderImagesPortfolio }}
+      <div class="row">
+        <ul class="slider-images js-slick-slide">
+          {{#each job in jobs }}
+            <li class="slider-images--item">
+              <div class="slider-images--inner">
+                <div class="slider-images--img" style="background-image: url({{job.imgPath}})">
+                </div>
+                <div class="slider-images--overlay"></div>
+                <div class="slider-images--text-block">
+                  <div class="slider-images--headline">
+                    {{job.name}}
+                  </div>
+                  <div class="slider-images--text">
+                    {{job.desc}}
+                  </div>
+                  <a href="{{job.url}}" class="slider-images--link">
+                    <span>{{job.name}}</span>
+                    <span class="arrow-additional"></span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+          <li class="slider-images--item -secondary">
+            <div class="slider-images--inner">
+              <a href="#slide-5" class="slider-images--img" style="background-image: url(images/project-default.jpg)">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
