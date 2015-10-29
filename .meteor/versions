@@ -116,6 +116,7 @@ reload@1.1.4
 retry@1.0.4
 reywood:publish-composite@1.4.2
 routepolicy@1.0.6
+seba:minifiers-autoprefixer@0.0.1
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
@@ -124,7 +125,6 @@ softwarerero:accounts-t9n@1.1.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4
-standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
 tracker@1.0.9

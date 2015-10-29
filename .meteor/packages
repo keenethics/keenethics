@@ -21,7 +21,6 @@ fourseven:scss
 shcherbin:slickjs
 
 ecmascript
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -50,3 +49,4 @@ yogiben:autoform-file
 cfs:standard-packages
 cfs:gridfs
 momentjs:twix
+seba:minifiers-autoprefixer
