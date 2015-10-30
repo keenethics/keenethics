@@ -1,9 +1,9 @@
 var imageStore = new FS.Store.GridFS("images", {
   // chunkSize: 1024*1024,
-  // // transform before write to db
-  // transformWrite: function(fileObj, readStream, writeStream) {
-  //   gm(readStream, fileObj.name()).resize('720', '720').stream().pipe(writeStream);
-  // }
+  // transform before write to db
+  transformWrite: function(fileObj, readStream, writeStream) {
+    gm(readStream, fileObj.name()).resize('720', '720').stream().pipe(writeStream);
+  }
 });
 
 Images = new FS.Collection("images", {

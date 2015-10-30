@@ -108,4 +108,3 @@ Template.home.helpers({
   ]
 
 });
-
