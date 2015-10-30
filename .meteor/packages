@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 jquery
-stevezhu:lodash
 accounts-password
 aldeed:collection2
 iron:router
@@ -22,7 +21,6 @@ fourseven:scss
 shcherbin:slickjs
 
 ecmascript
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -47,9 +45,10 @@ accounts-ui
 useraccounts:bootstrap
 aldeed:simple-schema
 yogiben:autoform-file
-momentjs:twix
 cfs:graphicsmagick
 cfs:filesystem
 cfs:standard-packages
 aldeed:autoform
 cfs:gridfs
+momentjs:twix
+seba:minifiers-autoprefixer
