@@ -62,7 +62,6 @@ if (Meteor.isServer) {
 
 Jobs.helpers({
   formatedDate: function() {
-    var isoDate = this.createdAt;
-    return isoDate.getMonth() + '/' + isoDate.getDate() + '/' + isoDate.getFullYear();
+    return moment(this.createdAt).format('MM-DD-YYYY');
   }
 });

@@ -42,7 +42,6 @@ alanning:roles
 fortawesome:fontawesome
 yogiben:admin
 accounts-ui
-useraccounts:bootstrap
 aldeed:simple-schema
 yogiben:autoform-file
 cfs:graphicsmagick
@@ -52,3 +51,5 @@ aldeed:autoform
 cfs:gridfs
 momentjs:twix
 seba:minifiers-autoprefixer
+vsivsi:file-collection
+mizzao:bootstrap-3

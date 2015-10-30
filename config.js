@@ -1,14 +1,6 @@
 AdminConfig = {
   name: 'Keenethics',
   adminEmails: ['admin@test.com'],
-  // routes: {
-  //   waitOn: function () {
-  //       return [
-  //         Meteor.subscribe('images'),
-  //         Meteor.subscribe('Jobs')
-  //       ]
-  //     }
-  // },
   collections: {
     Jobs: {
       icon: 'file-o',
@@ -18,9 +10,10 @@ AdminConfig = {
        { label: 'Title', name: 'title' },
        { label: 'Description', name: 'description' },
        { label: 'Reference', name: 'link' },
-       { label: 'Picture', name: 'picture' },
-       { label: 'Created At', name: 'createdAt' }
+       { label: 'Picture', template: '_picturePreview' },
+       { label: 'Created At', name: 'createdAt' } //formatedDate().createdAt
       ],
+      extraFields: ['picture'],
       showEditColumn: true,
       showDelColumn: false,
       showWidget: true,
@@ -32,7 +25,34 @@ AdminConfig = {
       // }
     }
   }
+  // userSchema: new SimpleSchema({
+  //   name: {
+  //     type: String,
+  //     regEx: /^[a-z0-9A-Z_]{3,15}$/,
+  //     label: "Name"
+  //   },
+  //   emails: {
+  //     type: [Object],
+  //     optional: true
+  //   },
+  //   "emails.$.address": {
+  //     type: String,
+  //     regEx: SimpleSchema.RegEx.Email
+  //   },
+  //   "emails.$.verified": {
+  //     type: Boolean
+  //   },
+  //   createdAt: {
+  //     type: Date,
+  //     optional: true
+  //   },
+  //   roles: {
+  //    type: Object, // [String]
+  //    optional: true,
+  //    blackbox: true
+  //   }
+  // })
 };
 
 // AdminDashboard.addSidebarItem('New User', AdminDashboard.path('/Users/new'), { icon: 'plus' });
-AdminDashboard.addSidebarItem('New Job', AdminDashboard.path('/Jobs/new'), { icon: 'plus' });
+// AdminDashboard.addSidebarItem('New Job', AdminDashboard.path('/Jobs/new'), { icon: 'plus' });
