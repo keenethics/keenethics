@@ -45,9 +45,11 @@ fortawesome:fontawesome
 yogiben:admin
 accounts-ui
 useraccounts:bootstrap
-aldeed:autoform
 aldeed:simple-schema
 yogiben:autoform-file
-cfs:standard-packages
-cfs:gridfs
 momentjs:twix
+cfs:graphicsmagick
+cfs:filesystem
+cfs:standard-packages
+aldeed:autoform
+cfs:gridfs

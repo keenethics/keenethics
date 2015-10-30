@@ -5,7 +5,7 @@ Router.route('/', {
   },
   waitOn: function() {
     return [
-      Meteor.subscribe ('images'),
+      Meteor.subscribe('images'),
       Meteor.subscribe('Jobs')
     ]
   }

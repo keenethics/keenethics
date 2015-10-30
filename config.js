@@ -1,30 +1,14 @@
 AdminConfig = {
-  name: 'Admin Panel',
+  name: 'Keenethics',
   adminEmails: ['admin@test.com'],
-  skin: 'black-light',
-  routes: {
-    new: {
-      waitOn: function () {
-        return [
-          Meteor.subscribe('images'),
-          Meteor.subscribe('Jobs')
-        ]
-      }},
-    view: {
-      waitOn: function () {
-        return [
-          Meteor.subscribe('images'),
-          Meteor.subscribe('Jobs')
-        ]
-      }},
-    edit: {
-      waitOn: function () {
-        return [
-          Meteor.subscribe('images'),
-          Meteor.subscribe('Jobs')
-        ]
-      }}
-  },
+  // routes: {
+  //   waitOn: function () {
+  //       return [
+  //         Meteor.subscribe('images'),
+  //         Meteor.subscribe('Jobs')
+  //       ]
+  //     }
+  // },
   collections: {
     Jobs: {
       icon: 'file-o',
@@ -41,6 +25,11 @@ AdminConfig = {
       showDelColumn: false,
       showWidget: true,
       color: 'green'
+      // templates: {
+      //   new: {
+      //     name: '_jobCreator'
+      //   }
+      // }
     }
   }
 };

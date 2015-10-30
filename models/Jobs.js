@@ -33,10 +33,11 @@ Jobs.attachSchema(
       optional: true,
       autoform: {
         afFieldInput: {
+          accept: 'image/*',
           type: 'fileUpload',
           collection: 'Images',
-          label: 'Choose file',
-          previewTemplate: '_picturePreview'
+          label: 'Choose picture',
+          // previewTemplate: '_picturePreview'
         }
       }
     }
@@ -62,6 +63,6 @@ if (Meteor.isServer) {
 Jobs.helpers({
   formatedDate: function() {
     var isoDate = this.createdAt;
-    return isoDate.getMonth() + '/' + isoDate.getDate() + '/' + isoDate.getYear();
+    return isoDate.getMonth() + '/' + isoDate.getDate() + '/' + isoDate.getFullYear();
   }
 });
