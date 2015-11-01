@@ -22,9 +22,11 @@ code styling questions.
 
 ##Deploying to remote server
 
-We currently use meteor.com hosting as our server. To deploy you can simply run:
+We currently use meteor.com hosting for our both [staging](http://keenethics.meteor.com) and
+[production](http://keenethics.com) servers. To deploy you can simply run:
 
-`meteor deploy keenethics.meteor.com`
+* For staging: `meteor deploy keenethics.meteor.com`
+* For production: `meteor deploy keenethics.com`
 
 #Testing
 
