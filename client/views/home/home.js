@@ -74,21 +74,21 @@ Template.home.helpers({
       title:   'Chief of the Astronaut Office',
       desc:    `His responsibilities includes the coordination, scheduling, and
                 control of all activities involving Keenethics astronauts.`,
-      imgPath: 'images/team/team-member-1.png'
+      imgPath: 'images/team/maks_s.png'
     },
     {
       name:    'Alex P.',
       title:   'Chief of Meteor Flight Research Center',
       desc:    `He has spent the third-longest time in Meteor.js space of any
                 person. He supervises research and development of Meteor flights.`,
-      imgPath: 'images/team/team-member-4.png'
+      imgPath: 'images/team/alex_p.png'
     },
     {
       name:    'Michael "Rich"',
       title:   'Meteor.js astronaut',
       desc:    `He is a Space Meteor.js Developer who has logged over 12 hours of
                 moonwalk time over three Meteor Shuttle missions.`,
-      imgPath: 'images/team/team-member-2.png'
+      imgPath: 'images/team/michael_rich.png'
      },
      {
        name:    'Yara M.',
@@ -96,14 +96,14 @@ Template.home.helpers({
        desc:    `She is the first woman to have flown in Keenethics space,
                  having been selected from more than five finalists to pilot
                  Keen project applicants.`,
-       imgPath: 'images/team/team-member-3.png'
+       imgPath: 'images/team/yara_m.png'
      },
      {
        name:    'Kate "Kay"',
        title:   'Interstellar communicator',
        desc:    `She is good in orbital and interplanetary communication.
                  She even can talk with creatures from outer space.`,
-       imgPath: ''
+       imgPath: 'images/team/kate_kay.png'
      }
   ]
 
