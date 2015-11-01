@@ -71,7 +71,7 @@ Template.home.helpers({
   employees: () => [
     {
       name:    'Maks S.',
-      title:   'Chief of the Astronaut Office',
+      title:   'Chief of The Astronaut Office',
       desc:    `His responsibilities includes the coordination, scheduling, and
                 control of all activities involving Keenethics astronauts.`,
       imgPath: 'images/team/maks_s.png'
@@ -85,14 +85,14 @@ Template.home.helpers({
     },
     {
       name:    'Michael "Rich"',
-      title:   'Meteor.js astronaut',
+      title:   'Meteor.js Astronaut',
       desc:    `He is a Space Meteor.js Developer who has logged over 12 hours of
                 moonwalk time over three Meteor Shuttle missions.`,
       imgPath: 'images/team/michael_rich.png'
      },
      {
        name:    'Yara M.',
-       title:   'Meteor.js astronaut',
+       title:   'Meteor.js Astronaut',
        desc:    `She is the first woman to have flown in Keenethics space,
                  having been selected from more than five finalists to pilot
                  Keen project applicants.`,
@@ -100,7 +100,7 @@ Template.home.helpers({
      },
      {
        name:    'Kate "Kay"',
-       title:   'Interstellar communicator',
+       title:   'Interstellar Communicator',
        desc:    `She is good in orbital and interplanetary communication.
                  She even can talk with creatures from outer space.`,
        imgPath: 'images/team/kate_kay.png'
