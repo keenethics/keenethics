@@ -36,8 +36,7 @@ Jobs.attachSchema(
           accept: 'image/*',
           type: 'fileUpload',
           collection: 'Images',
-          label: 'Choose picture',
-          // previewTemplate: '_picturePreview'
+          label: 'Choose picture'
         }
       }
     }
