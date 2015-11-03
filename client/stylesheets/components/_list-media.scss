@@ -11,9 +11,7 @@ $list-media-img-size: 160px;
       margin-bottom: $margin*2;
     }
     @media all and (max-width: 767px) {
-      & + & {
-        margin-top: $margin*2;
-      }
+      margin-top: $margin*2;
     }
   }
   &--media {
@@ -72,5 +70,25 @@ $list-media-img-size: 160px;
     color: $gray;
     font-weight: 400;
     line-height: 25px;
+  }
+}
+
+.slide-team .list-media {
+  display: inline-block;
+}
+
+.slide-team .list-media {
+  &--item {
+    padding-bottom: 2%;
+    width: 25%;
+    @media all and (max-width: 1365px) {
+      width: 32%;
+    }
+    @media all and (max-width: 1117px) {
+      width: 47%;
+    }
+    @media all and (max-width: 773px) {
+      width: 100%;
+    }
   }
 }
