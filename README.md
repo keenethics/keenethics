@@ -20,13 +20,23 @@ Please use JSLint to ensure quality of your code. You can also consult
 [Google JavaScript Style Guide](http://google.github.io/styleguide/javascriptguide.xml) for other
 code styling questions.
 
-##Deploying to remote server
+##Deploying to Staging Server
 
-We currently use meteor.com hosting for our both [staging](http://keenethics.meteor.com) and
-[production](http://keenethics.com) servers. To deploy you can simply run:
+We currently use meteor.com hosting for our [staging](http://keenethics.meteor.com) servers.
+To deploy you can simply run:
 
-* For staging: `meteor deploy keenethics.meteor.com`
-* For production: `meteor deploy keenethics.com`
+```
+meteor deploy keenethics.meteor.com
+```
+
+## Deploying to Production Server
+
+To deploy to production server you need to have `mup.json` file with proper configuration. You
+can use `mup.json.example` as an example. Once this is done you can simply run
+
+```
+meteor deploy keenethics.com
+```
 
 #Testing
 
