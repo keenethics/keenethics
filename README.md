@@ -35,7 +35,7 @@ To deploy to production server you need to have `mup.json` file with proper conf
 can use `mup.json.example` as an example. Once this is done you can simply run
 
 ```
-meteor deploy keenethics.com
+mup deploy
 ```
 
 #Testing
