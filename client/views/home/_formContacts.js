@@ -5,7 +5,7 @@ Template._formContacts.events({
         message = $("#message").val();
     var text = "Message from: " + name + "\rEmail: " + email + "\rContent:" + message;
 
-    Meteor.call( 'sendEmail', email, text, function(error, result) {
+    Meteor.call( 'sendContactForm', text, function(error, result) {
       if(error) {
         Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
       } else {
