@@ -93,7 +93,7 @@ Template.home.helpers({
      {
        name:    'Yara M.',
        title:   'Meteor.js Astronaut',
-       desc:    `She is the first woman to have flown in Keenethics space,
+       desc:    `She is the first woman to have flown on Keenethics orbit,
                  having been selected from more than five finalists to pilot
                  Keen project applicants.`,
        imgPath: 'images/team/yara_m.png'
