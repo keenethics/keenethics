@@ -8,5 +8,6 @@ Router.route('/', {
       Meteor.subscribe('images'),
       Meteor.subscribe('Jobs')
     ]
-  }
+  },
+  fastRender: true
 });
