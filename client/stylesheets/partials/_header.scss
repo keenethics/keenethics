@@ -95,13 +95,13 @@ $arrow-size-mobile: 17px;
   padding-left: 67%;
   position: absolute;
   z-index: 1000;
+  right: 5px;
 }
 
 #login-buttons a,
 #login-buttons a:hover {
   text-decoration: none;
   color: #FFFFFF;
-  opacity: 0.9 !important;
 }
 
 .accounts-dialog {
@@ -131,4 +131,30 @@ $arrow-size-mobile: 17px;
   border: 1px solid #7B646C;
   background-color: #FFFFFF;
   color: #2E2D36;
+}
+
+.row.login-buttons .col-xs-12.button {
+  background-color: transparent;
+}
+
+div#login-lock {
+  opacity: 0.001;
+  right: 5px;
+  cursor: pointer;
+}
+
+div#login-lock:hover {
+  opacity: .2;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+
+.visibleElement {
+  display: inline !important;
+}
+
+.hiddenElement {
+  display: none !important;
 }

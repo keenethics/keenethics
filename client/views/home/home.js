@@ -108,3 +108,13 @@ Template.home.helpers({
   ]
 
 });
+
+Template._homeHeader.events({
+  "click a.login-close-text": function () {
+    $('#log-btns').removeClass("visibleElement").addClass("hiddenElement");
+  },
+  "click #login-lock": function() {
+    $('#login-sign-in-link').trigger("click");
+    $('#log-btns').removeClass("hiddenElement").addClass("visibleElement");
+  }
+});
