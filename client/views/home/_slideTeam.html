@@ -11,20 +11,20 @@
       </div>
       <ul class="list-media row">
         {{#each employee in employees}}
-          <li class="list-media--item col-sm-5 col-md-6">
+          <li class="list-media--item col-sm-5 col-md-6" itemscope itemtype="http://schema.org/Person">
             <div class="list-media--media">
               <img class="list-media--overlay" src="images/astronaut-helmet.svg" alt="Astonaut Helmet">
               <div class="list-media--img -round" style="background-image: url({{employee.imgPath}})">
               </div>
             </div>
-            <div class="list-media--headline">
+            <div class="list-media--headline" itemprop="name">
               {{employee.name}}
             </div>
-            <div class="list-media--subline">
+            <div class="list-media--subline" itemprop="jobTitle title">
               {{employee.title}}
             </div>
             {{> _separator }}
-            <div class="list-media--text">
+            <div class="list-media--text" itemprop="makesOffer knows">
               {{employee.desc}}
             </div>
           </li>
