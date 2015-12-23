@@ -12,20 +12,20 @@
       <div class="row">
         <ul class="slider-images js-slick-slide">
           {{#each job in jobs }}
-            <li class="slider-images--item">
+            <li class="slider-images--item"  itemscope itemtype="http://schema.org/WebSite">
               <div class="slider-images--inner">
                 <div class="slider-images--img" style="background-image: url({{job.imgPath}})">
                 </div>
                 <div class="slider-images--overlay"></div>
                 <div class="slider-images--text-block">
-                  <div class="slider-images--headline">
+                  <div class="slider-images--headline" itemprop="name headline alternateName">
                     {{job.name}}
                   </div>
-                  <div class="slider-images--text">
+                  <div class="slider-images--text" itemprop="about description">
                     {{job.desc}}
                   </div>
-                  <a href="{{job.url}}" class="slider-images--link">
-                    <span>{{job.name}}</span>
+                  <a href="{{job.url}}" class="slider-images--link" itemprop="url">
+                    <span itemprop="name headline alternateName">{{job.name}}</span>
                     <span class="arrow-additional"></span>
                   </a>
                 </div>
