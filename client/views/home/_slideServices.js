@@ -1,24 +1,19 @@
 Template._slideServices.helpers({
   technologies: () => [
     {
-      name:        'node.js',
-      development: 'back end',
+      name: 'node.js'
     },
     {
-      name:        'meteor.js',
-      development: 'full stack',
+      name: 'meteor.js'
     },
     {
-      name:        'Angular',
-      development: 'front end',
-     },
-     {
-       name:        'React',
-       development: 'front end',
-     },
-     {
-       name:        'MEAN',
-       development: 'full stack',
-     }
+      name: 'Angular'
+    },
+    {
+      name: 'React'
+    },
+    {
+      name: 'MEAN'
+    }
   ]
 });
