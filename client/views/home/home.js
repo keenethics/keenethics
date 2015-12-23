@@ -90,31 +90,27 @@ Template.home.helpers({
                 moonwalk time over three Meteor Shuttle missions.`,
       imgPath: 'images/team/michael_rich.png'
      },
-     {
-       name:    'Yara M.',
-       title:   'Meteor.js Astronaut',
-       desc:    `She is the first woman to have flown on Keenethics orbit,
-                 having been selected from more than five finalists to pilot
-                 Keen project applicants.`,
-       imgPath: 'images/team/yara_m.png'
-     },
-     {
-       name:    'Kate "Kay"',
-       title:   'Interstellar Communicator',
-       desc:    `She is good in orbital and interplanetary communication.
-                 She even can talk with creatures from outer space.`,
-       imgPath: 'images/team/kate_kay.png'
-     }
+    {
+      name:    'Yara M.',
+      title:   'Meteor.js Astronaut',
+      desc:    `She is the first woman to have flown on Keenethics orbit,
+                having been selected from more than five finalists to pilot
+                Keen project applicants.`,
+      imgPath: 'images/team/yara_m.png'
+    },
+    {
+      name:    'Kate "Kay"',
+      title:   'Interstellar Communicator',
+      desc:    `She is good in orbital and interplanetary communication.
+                She even can talk with creatures from outer space.`,
+      imgPath: 'images/team/kate_kay.png'
+    }
   ]
 
 });
 
 Template._homeHeader.events({
-  "click a.login-close-text": function () {
-    $('#log-btns').removeClass("visibleElement").addClass("hiddenElement");
-  },
   "click #login-lock": function() {
     $('#login-sign-in-link').trigger("click");
-    $('#log-btns').removeClass("hiddenElement").addClass("visibleElement");
   }
 });

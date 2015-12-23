@@ -151,10 +151,6 @@ div#login-lock:hover {
   -o-transition: opacity .5s ease-out;
 }
 
-.visibleElement {
-  display: inline !important;
-}
-
-.hiddenElement {
-  display: none !important;
+a#login-sign-in-link {
+    display: none;
 }
