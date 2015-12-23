@@ -37,10 +37,11 @@ Template.home.onRendered(function(){
     ]
   });
 
-  $('a').click(function() {
-    $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
+  $("a[href^='#']").click(function() {
+    var target    = $($.attr(this, 'href'));
+    var scrollTop = target.offset() && target.offset().top;
+    if(!scrollTop) return;
+    $('html, body').animate({scrollTop}, 500);
     return false;
   });
 
