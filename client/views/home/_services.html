@@ -76,13 +76,13 @@
             of technologies
             <span class="-color-red">:</span>
           </div>
-          <ul class="services--list">
-            <li class="services--list-item">node.js </li>
-            <li class="services--list-item">meteor.js </li>
-            <li class="services--list-item">Angular </li>
-            <li class="services--list-item">React </li>
-            <li class="services--list-item">MEAN</li>
-          </ul>
+          <ul class="services--list" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+            {{#each technology in technologies}}
+              <li class="services--list-item" itemprop="itemOffered" itemscope itemtype="https://schema.org/Service" >
+                <span itemprop="name">{{technology.name}}</span>
+              </li>
+            {{/each}}
+          </ul> 
         </div>
         <div class="services--path -left">
         </div>
