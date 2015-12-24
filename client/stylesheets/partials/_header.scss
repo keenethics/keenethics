@@ -145,12 +145,8 @@ div#login-lock {
 
 div#login-lock:hover {
   opacity: .2;
-  transition: opacity .5s ease-out;
-  -moz-transition: opacity .5s ease-out;
-  -webkit-transition: opacity .5s ease-out;
-  -o-transition: opacity .5s ease-out;
 }
 
 a#login-sign-in-link {
-    display: none;
+  display: none;
 }
