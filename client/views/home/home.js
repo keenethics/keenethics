@@ -54,19 +54,19 @@ Template.home.helpers({
       name: 'Knotable',
       desc: 'A service for collaboration',
       url: 'http://beta.knotable.com/',
-      imgPath: 'images/projects/knotable.jpg'
+      imgPath: 'images/projects/knotable.png'
     },
     {
       name: 'ComicEnglish',
       desc: 'Service for learning foreign languages in a gaming form',
       url: 'http://comicenglish.com/',
-      imgPath: 'images/projects/comic.jpg'
+      imgPath: 'images/projects/comic.png'
     },
     {
       name: 'Pollen',
       desc: 'An app for spreading ideas via email campaigns',
       url: 'http://www.pollenpost.com',
-      imgPath: 'images/projects/pollen.jpg'
+      imgPath: 'images/projects/pollen.png'
     }
   ],
   employees: () => [
