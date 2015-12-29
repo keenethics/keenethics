@@ -54,19 +54,19 @@ Template.home.helpers({
       name: 'Knotable',
       desc: 'A service for collaboration',
       url: 'http://beta.knotable.com/',
-      imgPath: 'images/projects/knotable.png'
+      imgPath: 'images/projects/knotable.jpg'
     },
     {
       name: 'ComicEnglish',
       desc: 'Service for learning foreign languages in a gaming form',
       url: 'http://comicenglish.com/',
-      imgPath: 'images/projects/comic.png'
+      imgPath: 'images/projects/comic.jpg'
     },
     {
       name: 'Pollen',
       desc: 'An app for spreading ideas via email campaigns',
       url: 'http://www.pollenpost.com',
-      imgPath: 'images/projects/pollen.png'
+      imgPath: 'images/projects/pollen.jpg'
     }
   ],
   employees: () => [
@@ -75,21 +75,21 @@ Template.home.helpers({
       title:   'Chief of The Astronaut Office',
       desc:    `His responsibilities includes the coordination, scheduling, and
                 control of all activities involving Keenethics astronauts.`,
-      imgPath: 'images/team/maks_s.png'
+      imgPath: 'images/team/maks_s.jpg'
     },
     {
       name:    'Alex P.',
       title:   'Chief of Meteor Flight Research Center',
       desc:    `He has spent the third-longest time in Meteor.js space of any
                 person. He supervises research and development of Meteor flights.`,
-      imgPath: 'images/team/alex_p.png'
+      imgPath: 'images/team/alex_p.jpg'
     },
     {
       name:    'Michael "Rich"',
       title:   'Meteor.js Astronaut',
       desc:    `He is a Space Meteor.js Developer who has logged over 12 hours of
                 moonwalk time over three Meteor Shuttle missions.`,
-      imgPath: 'images/team/michael_rich.png'
+      imgPath: 'images/team/michael_rich.jpg'
      },
     {
       name:    'Yara M.',
@@ -97,17 +97,45 @@ Template.home.helpers({
       desc:    `She is the first woman to have flown on Keenethics orbit,
                 having been selected from more than five finalists to pilot
                 Keen project applicants.`,
-      imgPath: 'images/team/yara_m.png'
+      imgPath: 'images/team/yara_m.jpg'
     },
     {
       name:    'Kate "Kay"',
       title:   'Interstellar Communicator',
       desc:    `She is good in orbital and interplanetary communication.
                 She even can talk with creatures from outer space.`,
-      imgPath: 'images/team/kate_kay.png'
+      imgPath: 'images/team/kate_kay.jpg'
+    },
+    {
+      name:    'Vlad O.',
+      title:   'Full-stack Pilot-Cosmonaut',
+      desc:    `He has the Medal "For Merit in Space Exploration" for the great achievements 
+                in the field of research, development and utilization of outer space.`,
+      imgPath: 'images/team/vlad_o.jpg'
+    },
+    {
+      name:    'Taras Y.',
+      title:   'Meteor.js astronaut',
+      desc:    `He was chosen from the final pool of 13 candidates 
+                to fly on Reaction Commerce first manned space mission.`,
+      imgPath: 'images/team/taras_y.jpg'
+    },
+    {
+      name:    'Nazar Y.',
+      title:   'Meteor.js aeronautical engineer',
+      desc:    `He has logged a total of 723 hours in Meteor space. 
+                He has flew as a pilot of 7 Meteor Shuttle missions.`,
+      imgPath: 'images/team/nazar_y.jpg'
+    },
+    {
+      name:    'Sergey G.',
+      title:   'Meteor.js astronaut',
+      desc:    `He was a member of two missions to the International Space Station, spending 
+                more than a year in total in space. During his missions he did three spacewalks 
+                lasting more than 18 hours in total.`,
+      imgPath: 'images/team/sergei_g.jpg'
     }
   ]
-
 });
 
 Template._homeHeader.events({
