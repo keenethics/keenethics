@@ -5,6 +5,8 @@ $list-media-img-size: 160px;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-flow: row wrap;
   &--item {
     text-align: center;
     @media all and (max-width: 992px) {
@@ -73,22 +75,3 @@ $list-media-img-size: 160px;
   }
 }
 
-.slide-team .list-media {
-  display: inline-block;
-}
-
-.slide-team .list-media {
-  &--item {
-    padding-bottom: 2%;
-    width: 25%;
-    @media all and (max-width: 1365px) {
-      width: 32%;
-    }
-    @media all and (max-width: 1117px) {
-      width: 47%;
-    }
-    @media all and (max-width: 773px) {
-      width: 100%;
-    }
-  }
-}

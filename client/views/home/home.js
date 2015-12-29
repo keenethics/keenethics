@@ -109,8 +109,8 @@ Template.home.helpers({
     {
       name:    'Vlad O.',
       title:   'Full-stack Pilot-Cosmonaut',
-      desc:    `He has the Medal "For Merit in Space Exploration" for the great achievements 
-                in the field of research, development and reconnaissance of outer space.`,
+      desc:    `He has the Medal "For Merit in Space Exploration" for achievements 
+                in outer space researching, development and reconnaissance.`,
       imgPath: 'images/team/vlad_o.jpg'
     },
     {
