@@ -73,8 +73,8 @@ Template.home.helpers({
     {
       name:    'Maks S.',
       title:   'Chief of The Astronaut Office',
-      desc:    `His responsibilities includes the coordination, scheduling, and
-                control of all activities involving Keenethics astronauts.`,
+      desc:    `His responsibilities are coordination, scheduling, 
+                and control of all Keenethics astronauts’ activities.`,
       imgPath: 'images/team/maks_s.jpg'
     },
     {
@@ -94,7 +94,7 @@ Template.home.helpers({
     {
       name:    'Yara M.',
       title:   'Meteor.js Astronaut',
-      desc:    `She is the first woman to have flown on Keenethics orbit,
+      desc:    `She is the first woman to have flown in Keenethics space,
                 having been selected from more than five finalists to pilot
                 Keen project applicants.`,
       imgPath: 'images/team/yara_m.jpg'
@@ -103,14 +103,14 @@ Template.home.helpers({
       name:    'Kate "Kay"',
       title:   'Interstellar Communicator',
       desc:    `She is good in orbital and interplanetary communication.
-                She even can talk with creatures from outer space.`,
+                She can even talk with creatures from outer space.`,
       imgPath: 'images/team/kate_kay.jpg'
     },
     {
       name:    'Vlad O.',
       title:   'Full-stack Pilot-Cosmonaut',
       desc:    `He has the Medal "For Merit in Space Exploration" for the great achievements 
-                in the field of research, development and utilization of outer space.`,
+                in the field of research, development and reconnaissance of outer space.`,
       imgPath: 'images/team/vlad_o.jpg'
     },
     {
