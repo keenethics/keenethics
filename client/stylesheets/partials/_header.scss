@@ -4,6 +4,7 @@ $arrow-size-mobile: 17px;
 
 .header {
   position: relative;
+  height: 600px;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -36,6 +37,7 @@ $arrow-size-mobile: 17px;
   }
   &--title {
     position: relative;
+    margin-top: 250px;
     margin-top: 35vh;
     line-height: normal;
     transform: translate3d(0,-50%,0);
@@ -149,4 +151,22 @@ div#login-lock:hover {
 
 a#login-sign-in-link {
   display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+  .header {
+    height: 320px;
+    &--title {
+      margin-top: 40%;
+    }
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  .header {
+    height: 480px;
+    &--title {
+      margin-top: 40%;
+    }
+  }
 }
