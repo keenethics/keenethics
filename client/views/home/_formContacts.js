@@ -12,17 +12,12 @@ Template._formContacts.events({
           Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
         } else {
           Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
-          $('#name').val( '' );
-          $('#email').val( '' );
-          $('#message').val( '' );
+          $('.js-contact-from-input').val( '' );
         }
       });
-    } else if (!email || !emailRegEx.test(email)) {
-      Modal.show( '_sendEmailPopup', {'message': 'Email is required.'} );
-    } else if (!message) {
-      Modal.show( '_sendEmailPopup', {'message': 'Message is required.'} );
+    } else {
+      Modal.show( '_sendEmailPopup', {'message': 'Email and message required.'} );
     }
-
     return false;
   }
 });
