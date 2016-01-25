@@ -4,17 +4,25 @@ Template._formContacts.events({
         email = $('#email').val(),
         message = $("#message").val();
     var text = "Message from: " + name + "\rEmail: " + email + "\rContent:" + message;
+    var emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    Meteor.call( 'sendContactForm', text, function(error, result) {
-      if(error) {
-        Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
-      } else {
-        Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
-        $('#name').val( '' );
-        $('#email').val( '' );
-        $('#message').val( '' );
-      }
-    });
+    if (email && emailRegEx.test(email) && message) {
+      Meteor.call( 'sendContactForm', text, function(error, result) {
+        if(error) {
+          Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
+        } else {
+          Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
+          $('#name').val( '' );
+          $('#email').val( '' );
+          $('#message').val( '' );
+        }
+      });
+    } else if (!email || !emailRegEx.test(email)) {
+      Modal.show( '_sendEmailPopup', {'message': 'Email is required.'} );
+    } else if (!message) {
+      Modal.show( '_sendEmailPopup', {'message': 'Message is required.'} );
+    }
+
     return false;
   }
 });
