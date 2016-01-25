@@ -6,7 +6,9 @@ Template._formContacts.events({
     var text = "Message from: " + name + "\rEmail: " + email + "\rContent:" + message;
     var emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (email && emailRegEx.test(email) && message) {
+    if (!email || !emailRegEx.test(email) || !message) {
+      return Modal.show( '_sendEmailPopup', {'message': 'Email and message required.'} );
+    } else {
       Meteor.call( 'sendContactForm', text, function(error, result) {
         if(error) {
           Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
@@ -15,9 +17,7 @@ Template._formContacts.events({
           $('.js-contact-from-input').val( '' );
         }
       });
-    } else {
-      Modal.show( '_sendEmailPopup', {'message': 'Email and message required.'} );
+      return false;
     }
-    return false;
   }
 });
