@@ -14,7 +14,7 @@ Template._formContacts.events({
         Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
       } else {
         Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
-        $('.js-contact-from-input').val( '' );
+        $('.js-contact-form-input').val( '' );
       }
     });
     return false;
