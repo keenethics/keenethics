@@ -8,16 +8,15 @@ Template._formContacts.events({
 
     if (!email || !emailRegEx.test(email) || !message) {
       return Modal.show( '_sendEmailPopup', {'message': 'Email and message required.'} );
-    } else {
-      Meteor.call( 'sendContactForm', text, function(error, result) {
-        if(error) {
-          Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
-        } else {
-          Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
-          $('.js-contact-from-input').val( '' );
-        }
-      });
-      return false;
     }
+    Meteor.call( 'sendContactForm', text, function(error, result) {
+      if(error) {
+        Modal.show( '_sendEmailPopup', {'message': 'An error occurred.'} );
+      } else {
+        Modal.show( '_sendEmailPopup', {'message': 'Your message was sent successfully.'} );
+        $('.js-contact-from-input').val( '' );
+      }
+    });
+    return false;
   }
 });
