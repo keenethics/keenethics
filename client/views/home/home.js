@@ -85,7 +85,7 @@ Template.home.helpers({
       imgPath: 'images/team/alex_p.jpg'
     },
     {
-      name:    'Michael "Rich"',
+      name:    'Michael O.',
       title:   'Meteor.js Astronaut',
       desc:    `He is a Space Meteor.js Developer who has logged over 12 hours of
                 moonwalk time over three Meteor Shuttle missions.`,

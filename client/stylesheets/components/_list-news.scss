@@ -1,0 +1,39 @@
+.list-news{
+  h5{
+    margin-top: -40px;
+    margin-bottom: 50px;
+  }
+}
+ul.list-news{
+  li{
+    list-style-type: none;
+  }
+  a{
+    color: #666;
+    text-decoration: none;
+  }
+  p.date-meetup{
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  span.meetup, span.medium {
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  span.medium{
+    color: #00ab6c;
+  }
+  h4{
+    text-transform: uppercase;
+    color: #333;
+    font-weight: 700;
+  }
+  img{
+    width: 100%;
+  }
+  .list-news-item{
+    @media all and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
+  }
+}
