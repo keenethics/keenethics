@@ -8,6 +8,21 @@ Template.home.onRendered(function(){
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [
+
+      {
+        breakpoint: 1548,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6
+        }
+      },
+      {
+        breakpoint: 1424,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5
+        }
+      },
       {
         breakpoint: 1200,
         settings: {
@@ -31,6 +46,7 @@ Template.home.onRendered(function(){
           slidesToScroll: 1
         }
       }
+
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
