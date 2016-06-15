@@ -1,0 +1,25 @@
+{
+  "name": "keenethics",
+  "version": "1.0.0",
+  "description": "This is a repository with official website of Keenethics company. It's built on top of meteor.js. Issue tracking is currently handled within BitBuckets issue system.",
+  "main": "config.js",
+  "dependencies": {
+    "meteor-node-stubs": "^0.2.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenethics/keenethics.git"
+  },
+  "author": "Keenethics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keenethics/keenethics/issues"
+  },
+  "homepage": "https://github.com/keenethics/keenethics#readme"
+}
