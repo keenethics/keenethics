@@ -10,7 +10,7 @@ export default class SlideTeam extends React.Component {
         <li className="list-media--item col-xs-12 col-sm-4 col-md-3 col-lg-2" itemscope itemtype="http://schema.org/Person" key={index}>
           <div className="list-media--media">
             <img className="list-media--overlay" src="images/astronaut-helmet.svg" alt="Astonaut Helmet" />
-            <div className="list-media--img -round" style="background-image: url({value.imgPath})">
+            <div className="list-media--img -round" style={{backgroundImage: `url(${value.imgPath})`}}>
             </div>
           </div>
           <div className="list-media--headline" itemprop="name">
@@ -19,7 +19,7 @@ export default class SlideTeam extends React.Component {
           <div className="list-media--subline" itemprop="jobTitle title">
             {value.title}
           </div>
-            <Separetor />
+            <Separator />
           <div className="list-media--text" itemprop="makesOffer knows">
             {value.desc}
           </div>

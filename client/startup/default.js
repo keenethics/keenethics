@@ -1,20 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import HomeHeader from '/imports/ui/components/homeHeader';
-import ListIconsTechnologies from '/imports/ui/components/listIconsTechnologies';
-import SlideInfo from '/imports/ui/components/slideInfo';
-import SlideServices from '/imports/ui/components/slideServices';
+
+import HomePage from '/imports/ui/pages/home';
 
 Meteor.startup(function () {
   console.log('hello');
-  render((
-    <div>
-      <HomeHeader />
-      <main className="main" role="main">
-        <ListIconsTechnologies />
-        <SlideInfo />
-        <SlideServices />
-      </main>
-    </div>
-  ), document.getElementById('react-root'));
+  render(<HomePage />, document.getElementById('react-root'));
 });

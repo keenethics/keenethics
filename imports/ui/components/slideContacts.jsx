@@ -16,7 +16,7 @@ export default class SlideContacts extends React.Component {
               </h3>
             </div>
           </div>
-            <ListSosial />
+            <ListSocial />
           <div className="row">
             <div className="col-xs-12">
               <div className="slide-contacts--info -text-center">

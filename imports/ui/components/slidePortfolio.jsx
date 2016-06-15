@@ -3,27 +3,27 @@ import React from 'react';
 export default class SlidePortfolio extends React.Component {
 
   renderJobs() {
-    return this.props.jobs.map((value, index) => {
+    return this.props.jobs.map((value, index) => (
       <li className="slider-images--item"  itemscope itemtype="http://schema.org/WebSite" key={index}>
         <div className="slider-images--inner">
-          <div className="slider-images--img" style="background-image: url({{value.imgPath}})">
+          <div className="slider-images--img" style={{backgroundImage: 'url(' + value.imgPath + ')'}}>
           </div>
           <div className="slider-images--overlay"></div>
           <div className="slider-images--text-block">
             <div className="slider-images--headline" itemprop="name headline alternateName">
-              {{value.name}}
+              {value.name}
             </div>
             <div className="slider-images--text" itemprop="about description">
-              {{value.desc}}
+              {value.desc}
             </div>
             <a href="{{value.url}}" className="slider-images--link" itemprop="url">
-              <span itemprop="name headline alternateName">{{value.name}}</span>
+              <span itemprop="name headline alternateName">{value.name}</span>
               <span className="arrow-additional"></span>
             </a>
           </div>
         </div>
       </li>
-    });
+    ));
   }
 
   render() {
@@ -43,7 +43,7 @@ export default class SlidePortfolio extends React.Component {
               {this.renderJobs()}
               <li className="slider-images--item -secondary">
                 <div className="slider-images--inner">
-                  <a href="#slide-5" className="slider-images--img" style="background-image: url(images/project-default.jpg)">
+                  <a href="#slide-5" className="slider-images--img" style={{backgroundImage: 'url(images/project-default.jpg)'}}>
                   </a>
                 </div>
               </li>
