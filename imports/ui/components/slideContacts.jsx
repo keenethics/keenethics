@@ -41,11 +41,15 @@ export default class SlideContacts extends React.Component {
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-offset-4 col-sm-4">
-              <FormContacts />
+              <FormContacts onSubmit={this.props.onSubmit} />
             </div>
           </div>
         </div>
       </div>
     );
   }
+}
+
+SlideContacts.propTypes = {
+  onSubmit: React.PropTypes.func.isRequired
 }

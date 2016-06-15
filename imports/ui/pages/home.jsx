@@ -9,6 +9,10 @@ import SlideTeam from '../components/slideTeam';
 import SlidePartners from '../components/slidePartners';
 import SlideContacts from '../components/slideContacts';
 
+import Modal from '../components/modal';
+
+import { sendContacts } from '../../api/events';
+
 export default class HomePage extends React.Component {
   getJobs() {
     return [
@@ -38,7 +42,7 @@ export default class HomePage extends React.Component {
       {
         name:    'Maks S.',
         title:   'Chief of The Astronaut Office',
-        desc:    `His responsibilities are coordination, scheduling, 
+        desc:    `His responsibilities are coordination, scheduling,
                   and control of all Keenethics astronauts’ activities.`,
         imgPath: 'images/team/maks_s.jpg'
       },
@@ -74,29 +78,29 @@ export default class HomePage extends React.Component {
       {
         name:    'Vlad O.',
         title:   'Full-stack Pilot-Cosmonaut',
-        desc:    `He has the Medal "For Merit in Space Exploration" for achievements 
+        desc:    `He has the Medal "For Merit in Space Exploration" for achievements
                   in outer space researching, development and reconnaissance.`,
         imgPath: 'images/team/vlad_o.jpg'
       },
       {
         name:    'Taras Y.',
         title:   'Meteor.js astronaut',
-        desc:    `He was chosen from the final pool of 13 candidates 
+        desc:    `He was chosen from the final pool of 13 candidates
                   to fly on Reaction Commerce first manned space mission.`,
         imgPath: 'images/team/taras_y.jpg'
       },
       {
         name:    'Nazar Y.',
         title:   'Meteor.js aeronautical engineer',
-        desc:    `He has logged a total of 723 hours in Meteor space. 
+        desc:    `He has logged a total of 723 hours in Meteor space.
                   He has flew as a pilot of 7 Meteor Shuttle missions.`,
         imgPath: 'images/team/nazar_y.jpg'
       },
       {
         name:    'Sergey G.',
         title:   'Meteor.js astronaut',
-        desc:    `He was a member of two missions to the International Space Station, spending 
-                  more than a year in total in space. During his missions he did three spacewalks 
+        desc:    `He was a member of two missions to the International Space Station, spending
+                  more than a year in total in space. During his missions he did three spacewalks
                   lasting more than 18 hours in total.`,
         imgPath: 'images/team/sergei_g.jpg'
       }
@@ -114,10 +118,11 @@ export default class HomePage extends React.Component {
           <SlidePortfolio jobs={this.getJobs()} />
           <SlideTeam employees={this.getEmployees()} />
           <SlidePartners />
-          <SlideContacts />
+          <SlideContacts onSubmit={sendContacts} />
         </main>
+
+        <Modal />
       </div>
     );
   }
 }
-
