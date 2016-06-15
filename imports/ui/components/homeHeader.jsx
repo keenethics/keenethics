@@ -1,4 +1,5 @@
 import React from 'react';
+import ListNavigator from './listNavigator';
 
 export default class HomeHeader extends React.Component {
   render() {
@@ -32,7 +33,7 @@ export default class HomeHeader extends React.Component {
           <div className="header--arrow-square"></div>
         </div>
       </a>
-      {/*{> _listNavigation }*/}
+      <ListNavigator />
     </div>
     <div className="stars-underlay"></div>
   </header>
