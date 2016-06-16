@@ -4,21 +4,11 @@ import Services from './services';
 export default class SlideServices extends React.Component {
   getTechnologies() {
     return [
-      {
-        name: 'node.js'
-      },
-      {
-        name: 'meteor.js'
-      },
-      {
-        name: 'Angular'
-      },
-      {
-        name: 'React'
-      },
-      {
-        name: 'MEAN'
-      }
+      { name: 'node.js' },
+      { name: 'meteor.js' },
+      { name: 'Angular' },
+      { name: 'React' },
+      { name: 'MEAN' },
     ];
   }
 
@@ -36,9 +26,7 @@ export default class SlideServices extends React.Component {
           </div>
         </div>
         <Services technologies={this.getTechnologies()} />
-        {/*{> _services technologies=technologies }*/}
       </div>
     );
   }
 }
-

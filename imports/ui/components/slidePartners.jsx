@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ListPartners from './listPartners.jsx'
+import ListPartners from './listPartners';
 
-export default class SidePartners extends React.Component {
+export default class SlidePartners extends React.Component {
   render() {
-    return(
+    return (
       <div className="slide slide-partners" id="slide-5">
         <div className="container">
           <div className="row">

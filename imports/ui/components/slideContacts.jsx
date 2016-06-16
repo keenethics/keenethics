@@ -5,7 +5,7 @@ import ListSocial from './listSocial.jsx';
 
 export default class SlideContacts extends React.Component {
   render() {
-    return(
+    return (
       <div className="slide slide-contacts" id="slide-6">
         <div className="container-fluid">
           <div className="row">
@@ -25,10 +25,10 @@ export default class SlideContacts extends React.Component {
                   <span className="slide-contacts--arrow arrow"></span>
                 </a>
                 <a href="https://www.google.com/maps/place/вул.+Литвиненка,+3,+Львів,+Львівська+область,+Україна" target="_blank">
-                  <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">3 Lytvynenka Street St.</span>
-                    <span itemprop="addressLocality">Lviv</span>,
-                    <span itemprop="addressCountry">Ukraine</span>
+                  <span itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                    <span itemProp="streetAddress">3 Lytvynenka Street St.</span>
+                    <span itemProp="addressLocality">Lviv</span>,
+                    <span itemProp="addressCountry">Ukraine</span>
                   </span>
                   <span className="slide-contacts--arrow arrow"></span>
                 </a>
@@ -51,5 +51,5 @@ export default class SlideContacts extends React.Component {
 }
 
 SlideContacts.propTypes = {
-  onSubmit: React.PropTypes.func.isRequired
-}
+  onSubmit: React.PropTypes.func.isRequired,
+};

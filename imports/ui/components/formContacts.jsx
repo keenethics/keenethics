@@ -11,7 +11,7 @@ export default class FormContacts extends React.Component {
         email: e.target.email.value,
         message: e.target.message.value
       }
-    )
+    );
   }
 
   render() {

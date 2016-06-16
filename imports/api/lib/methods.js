@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+
 Meteor.methods({
   sendContactForm: function (text) {
     check(text, String);
@@ -7,10 +9,10 @@ Meteor.methods({
     this.unblock();
 
     Email.send({
-      to:      'founders@keenethics.com',
-      from:    'noreply@keenethics.com',
+      to: 'founders@keenethics.com',
+      from: 'noreply@keenethics.com',
       subject: 'New message from contact form',
-      text
+      text,
     });
-  }
+  },
 });

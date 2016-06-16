@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class ListPartners extends React.Component {
   render() {
-    return(
+    return (
       <ul className="list-partners row">
         <li className=" col-xs-6 col-sm-3">
           <img src="/images/partners/meteor-official.png" />
