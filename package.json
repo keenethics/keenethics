@@ -1,0 +1,56 @@
+{
+  "name": "keenethics",
+  "version": "1.0.0",
+  "description": "This is a repository with official website of Keenethics company. It's built on top of meteor.js. Issue tracking is currently handled within BitBuckets issue system.",
+  "main": "config.js",
+  "dependencies": {
+    "meteor-node-stubs": "^0.2.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-meteor": "^3.0.1",
+    "eslint-plugin-react": "^4.0.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+      "airbnb",
+      "plugin:meteor/recommended"
+    ],
+    "rules": {
+      "meteor/eventmap-params": [
+        2,
+        {
+          "eventParamName": "event",
+          "templateInstanceParamName": "instance"
+        }
+      ],
+      "meteor/template-names": [
+        0
+      ],
+      "consistent-return": 0
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenethics/keenethics.git"
+  },
+  "author": "Keenethics",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keenethics/keenethics/issues"
+  },
+  "homepage": "https://github.com/keenethics/keenethics#readme"
+}

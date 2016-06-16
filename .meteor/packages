@@ -6,17 +6,13 @@
 jquery
 accounts-password
 aldeed:collection2
-iron:router
 raix:handlebar-helpers
 matteodem:easy-security
 audit-argument-checks
 fastclick
-zimme:iron-router-active
-manuelschoebel:ms-seo
 browser-policy
 natestrauser:animate-css
 dburles:collection-helpers
-meteorhacks:fast-render
 fourseven:scss
 shcherbin:slickjs
 
@@ -40,7 +36,6 @@ underscore
 accounts-base
 alanning:roles
 fortawesome:fontawesome
-yogiben:admin
 accounts-ui
 aldeed:simple-schema
 yogiben:autoform-file
@@ -52,6 +47,6 @@ cfs:gridfs
 momentjs:twix
 seba:minifiers-autoprefixer
 vsivsi:file-collection
-mizzao:bootstrap-3
 mizzao:bootboxjs
 peppelg:bootstrap-3-modal
+es5-shim

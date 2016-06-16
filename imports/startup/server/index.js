@@ -1,0 +1,10 @@
+import '/imports/models/Jobs';
+import '/imports/models/Images';
+import '/imports/api/publications/ImagesPub';
+import '/imports/api/publications/JobsPub';
+import '/imports/api/lib/methods';
+import '/imports/api/lib/yaml.min';
+import './fixtures/dummyFixture';
+import './config/security';
+import '/imports/api/loadUsers';
+import './loadFixtures';
