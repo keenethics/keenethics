@@ -9,7 +9,7 @@ export default class SidePartners extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h3 class="title -text-center">
+              <h3 className="title -text-center">
                 <span className="-color-black">Keen</span>
                 <span className="-color-red">partners.</span>
               </h3>

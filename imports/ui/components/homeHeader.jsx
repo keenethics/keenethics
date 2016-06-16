@@ -1,14 +1,30 @@
 import React from 'react';
-import ListNavigator from './listNavigator';
+import ReactDOM from 'react-dom';
+import ListNavigation from './listNavigation';
 
 export default class HomeHeader extends React.Component {
+
+  componentDidMount() {
+    this.view = Blaze.renderWithData(Template.loginButtons, {
+      align: 'right'
+    }, ReactDOM.findDOMNode(this.refs.loginContainer));
+  }
+
+  componentWillUnmount() {
+    Blaze.remove(this.view);
+  }
+
+  onClick() {
+    $('#login-sign-in-link').trigger("click");
+  }
+
   render() {
     return (
   <header className="header" id="header" role="banner">
     <div className="container js-scroll-spy">
       <div className="row login-buttons">
-        <div className='col-xs-12 button'>
-          <div className="glyphicon glyphicon-lock" id="login-lock"></div>
+        <div className='col-xs-12 button' ref='loginContainer'>
+          <div className="glyphicon glyphicon-lock" id="login-lock" onClick={this.onClick.bind(this)}></div>
         </div>
       </div>
       <div className="row">
@@ -33,11 +49,10 @@ export default class HomeHeader extends React.Component {
           <div className="header--arrow-square"></div>
         </div>
       </a>
-      <ListNavigator />
+      <ListNavigation />
     </div>
     <div className="stars-underlay"></div>
   </header>
 );
   }
 }
-

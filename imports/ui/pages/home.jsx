@@ -14,6 +14,7 @@ import Modal from '../components/modal';
 import { sendContacts } from '../../api/events';
 
 export default class HomePage extends React.Component {
+
   getJobs() {
     return [
       {

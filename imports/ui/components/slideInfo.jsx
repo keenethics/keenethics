@@ -15,10 +15,8 @@ export default class SlideInfo extends React.Component {
             </div>
           </div>
           <ListMediaServices />
-          {/*{> _listMediaServices }*/}
         </div>
       </div>
     );
   }
 }
-
