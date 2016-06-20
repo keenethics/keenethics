@@ -1,5 +1,5 @@
 This is a repository with official website of Keenethics company. It's built on top of
-meteor.js. Issue tracking is currently handled within BitBuckets issue system.
+meteor.js.
 
 #Development
 
@@ -7,6 +7,7 @@ meteor.js. Issue tracking is currently handled within BitBuckets issue system.
 
 1. Clone repository
 2. [Install meteor.js](https://www.meteor.com/install) and make sure you have MongoDB installed
+3. Run `meteor npm install` to install all the dependencies
 3. Start server via ```meteor```
 
 ##Commit strategy

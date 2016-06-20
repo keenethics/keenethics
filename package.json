@@ -1,7 +1,7 @@
 {
   "name": "keenethics",
   "version": "1.0.0",
-  "description": "This is a repository with official website of Keenethics company. It's built on top of meteor.js. Issue tracking is currently handled within BitBuckets issue system.",
+  "description": "This is a repository with official website of Keenethics company. It's built on top of meteor.js",
   "main": "config.js",
   "dependencies": {
     "meteor-node-stubs": "^0.2.3",
