@@ -17,18 +17,9 @@ Commit message should contain related ticket number and a brief description (e.g
 
 ##Code style
 
-Please use JSLint to ensure quality of your code. You can also consult
+Please use ESLint to ensure quality of your code. You can also consult
 [Google JavaScript Style Guide](http://google.github.io/styleguide/javascriptguide.xml) for other
 code styling questions.
-
-##Deploying to Staging Server
-
-We currently use meteor.com hosting for our [staging](http://keenethics.meteor.com) servers.
-To deploy you can simply run:
-
-```
-meteor deploy keenethics.meteor.com
-```
 
 ## Deploying to Production Server
 
