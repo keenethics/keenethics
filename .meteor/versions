@@ -83,6 +83,7 @@ meteor@1.1.15
 meteor-base@1.0.4
 minifier-css@1.1.12
 minifier-js@1.1.12
+minifiers-js@1.1.8-modules.8
 minimongo@1.0.17
 mizzao:bootboxjs@4.4.0
 mobile-experience@1.0.4
@@ -119,6 +120,7 @@ shcherbin:slickjs@1.5.8
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 srp@1.0.9
+standard-minifiers-js@1.0.3-modules.8
 templating@1.1.11
 templating-tools@1.0.4
 tracker@1.0.14
