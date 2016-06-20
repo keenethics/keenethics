@@ -44,7 +44,6 @@ cfs:filesystem
 cfs:standard-packages
 aldeed:autoform
 cfs:gridfs
-momentjs:twix
 seba:minifiers-autoprefixer
 vsivsi:file-collection
 mizzao:bootboxjs
