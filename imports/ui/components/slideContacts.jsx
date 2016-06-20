@@ -11,7 +11,7 @@ export default class SlideContacts extends React.Component {
           <div className="row">
             <div className="col-xs-12">
               <h3 className=" slide-contacts--title title -text-center">
-                <span>Contact</span>
+                <span>Contact </span>
                 <span className="-color-red">us.</span>
               </h3>
             </div>

@@ -9,7 +9,7 @@ export default class SlideInfo extends React.Component {
           <div className="row">
             <div className="col-xs-12">
               <h3 className="title -text-center">
-                <span className="-color-black">What if you have a</span>
+                <span className="-color-black">What if you have a </span>
                 <span className="-color-red">keen idea?</span>
               </h3>
             </div>
