@@ -3,7 +3,6 @@ import ListNews from './listNews';
 
 export default class SlideNews extends React.Component {
   render() {
-    console.log(this.props.Posts);
     return (
       <div className="slide slide-partners" id="slide-5">
         <div className="container">

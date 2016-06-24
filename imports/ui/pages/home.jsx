@@ -18,8 +18,15 @@ import { sendContacts } from '../../api/events';
 
 class HomePage extends React.Component {
 
+  componentDidMount() {
+    Meteor.call('getPosts', (error, result) => {
+      Session.set('Posts', result.Posts);
+      Session.set('Users', result.Users);
+    });
+  }
+
   componentDidUpdate() {
-    Meteor.call('checkTwitter', (error, result) => {
+    Meteor.call('getPosts', (error, result) => {
       Session.set('Posts', result.Posts);
       Session.set('Users', result.Users);
     });

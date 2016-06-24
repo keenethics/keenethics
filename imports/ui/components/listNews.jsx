@@ -7,7 +7,6 @@ export default class ListNews extends React.Component {
 
   renderListItems() {
     const listNews = [];
-    console.log(this.props.Posts);
     if (typeof this.props.Posts !== 'undefined') {
       _.map(this.props.Posts.Post, (num, key) => {
         listNews.push(
@@ -25,9 +24,6 @@ export default class ListNews extends React.Component {
   }
 
   render() {
-    console.log(1111);
-    console.log(this.props.Posts);
-    console.log(222);
     return (
       <div>
         <div className="row list-news">

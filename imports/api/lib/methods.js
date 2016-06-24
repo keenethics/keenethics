@@ -29,7 +29,7 @@ Meteor.methods({
     });
   },
 
-  checkTwitter: function () {
+  getPosts: function () {
     this.unblock();
     const url = 'https://blog.keenethics.com/?format=json';
     const result = Meteor.http.call('GET', url, {
