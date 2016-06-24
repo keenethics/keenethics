@@ -4,9 +4,13 @@
   "description": "This is a repository with official website of Keenethics company. It's built on top of meteor.js. Issue tracking is currently handled within BitBuckets issue system.",
   "main": "config.js",
   "dependencies": {
+    "curlrequest": "^0.5.7",
+    "http": "0.0.0",
     "meteor-node-stubs": "^0.2.3",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "eslint": "^2.3.0",
