@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'underscore';
 
-import ListItem from './listItem';
+import ListItem from './listItem.jsx';
 
 export default class ListNews extends React.Component {
 
