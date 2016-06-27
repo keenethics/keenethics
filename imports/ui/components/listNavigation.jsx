@@ -83,11 +83,17 @@ export default class ListNavigator extends React.Component {
         <li className="list-navigation--item">
           <a href="#slide-5" className="list-navigation--link">6</a>
           <div className="list-navigation--tip">
-            <span className="list-navigation--text">Our partners.</span>
+            <span className="list-navigation--text">Keen news.</span>
           </div>
         </li>
         <li className="list-navigation--item">
           <a href="#slide-6" className="list-navigation--link">7</a>
+          <div className="list-navigation--tip">
+            <span className="list-navigation--text">Our partners.</span>
+          </div>
+        </li>
+        <li className="list-navigation--item">
+          <a href="#slide-7" className="list-navigation--link">8</a>
           <div className="list-navigation--tip">
             <span className="list-navigation--text">Contact us.</span>
           </div>

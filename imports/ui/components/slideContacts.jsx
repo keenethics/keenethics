@@ -6,7 +6,7 @@ import ListSocial from './listSocial.jsx';
 export default class SlideContacts extends React.Component {
   render() {
     return (
-      <div className="slide slide-contacts" id="slide-6">
+      <div className="slide slide-contacts" id="slide-7">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xs-12">

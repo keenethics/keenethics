@@ -1,11 +1,10 @@
 import React from 'react';
-import ListNews from 'listNews';
+import ListNews from './listNews';
 
 export default class SlideNews extends React.Component {
-
   render() {
     return (
-      <div classNameName="slide slide-partners" id="slide-5">
+      <div className="slide slide-partners" id="slide-5">
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
@@ -15,9 +14,13 @@ export default class SlideNews extends React.Component {
               </h3>
             </div>
           </div>
-          <ListNews />
+          <ListNews Posts={this.props.Posts} />
         </div>
       </div>
     );
   }
 }
+
+SlideNews.propTypes = {
+  Posts: React.PropTypes.object.isRequired,
+};

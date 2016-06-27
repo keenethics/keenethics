@@ -1,4 +1,6 @@
 import React from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import { Meteor } from 'meteor/meteor';
 
 import HomeHeader from '../components/homeHeader';
 import ListIconsTechnologies from '../components/listIconsTechnologies';
@@ -8,12 +10,25 @@ import SlidePortfolio from '../components/slidePortfolio';
 import SlideTeam from '../components/slideTeam';
 import SlidePartners from '../components/slidePartners';
 import SlideContacts from '../components/slideContacts';
+import SlideNews from '../components/slideNews';
 
 import Modal from '../components/modal';
 
 import { sendContacts } from '../../api/events';
 
-export default class HomePage extends React.Component {
+class HomePage extends React.Component {
+
+  componentDidMount() {
+    Meteor.call('getPosts', (error, result) => {
+      Session.set('Posts', result);
+    });
+  }
+
+  componentDidUpdate() {
+    Meteor.call('getPosts', (error, result) => {
+      Session.set('Posts', result);
+    });
+  }
 
   getJobs() {
     return [
@@ -108,6 +123,7 @@ export default class HomePage extends React.Component {
     ];
   }
 
+
   render() {
     return (
       <div>
@@ -118,8 +134,10 @@ export default class HomePage extends React.Component {
           <SlideServices />
           <SlidePortfolio jobs={this.getJobs()} />
           <SlideTeam employees={this.getEmployees()} />
+          <SlideNews Posts={this.props.Posts} />
           <SlidePartners />
           <SlideContacts onSubmit={sendContacts} />
+
         </main>
 
         <Modal />
@@ -127,3 +145,13 @@ export default class HomePage extends React.Component {
     );
   }
 }
+
+HomePage.propTypes = {
+  Posts: React.PropTypes.object.isRequired,
+};
+
+export default createContainer(() => {
+  return {
+    Posts: Session.get('Posts'),
+  };
+}, HomePage);
