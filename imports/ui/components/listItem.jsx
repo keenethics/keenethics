@@ -7,12 +7,12 @@ export default class ListItem extends React.Component {
     return (
       <li className="col-xs-12 col-sm-6 col-md-3 list-news-item">
         <a href={ `https://blog.keenethics.com/${this.props.Posts.uniqueSlug}?source=latest` }>
-          <div className="minHei">
+          <div className="news-container">
             <img src={ `${src}` } />
           </div>
-          <div className="minHei">
+          <div className="news-container">
             <p className="date-meetup">
-              <span className="-color-red meetup">
+              <span className="-color-red medium">
                 { this.props.Posts.authorName }
               </span>
               <span>{ `${this.props.Posts.virtuals.firstPublishedAtEnglish}, Lviv` }</span>

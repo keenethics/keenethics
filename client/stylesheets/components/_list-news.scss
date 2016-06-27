@@ -5,6 +5,10 @@
   }
 }
 ul.list-news{
+  div.news-container {
+    min-height: 176px !important;
+  }
+
   li{
     list-style-type: none;
   }
@@ -30,6 +34,8 @@ ul.list-news{
   }
   img{
     width: 100%;
+    max-width: 253px !important;;
+    max-height: 176px !important;
   }
   .list-news-item{
     @media all and (max-width: 767px) {

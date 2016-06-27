@@ -1,14 +1,4 @@
 /* Slider */
-
-img {
-  max-width: 253px !important;;
-  max-height: 176px !important;
-}
-
-.minHei {
-  min-height: 175px !important;
-}
-
 .slick-slider
 {
     position: relative;
