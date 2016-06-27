@@ -20,15 +20,13 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     Meteor.call('getPosts', (error, result) => {
-      Session.set('Posts', result.Posts);
-      Session.set('Users', result.Users);
+      Session.set('Posts', result);
     });
   }
 
   componentDidUpdate() {
     Meteor.call('getPosts', (error, result) => {
-      Session.set('Posts', result.Posts);
-      Session.set('Users', result.Users);
+      Session.set('Posts', result);
     });
   }
 
@@ -136,7 +134,7 @@ class HomePage extends React.Component {
           <SlideServices />
           <SlidePortfolio jobs={this.getJobs()} />
           <SlideTeam employees={this.getEmployees()} />
-          <SlideNews Posts={this.props.Posts} Users={this.props.Users} />
+          <SlideNews Posts={this.props.Posts} />
           <SlidePartners />
           <SlideContacts onSubmit={sendContacts} />
 
@@ -150,12 +148,10 @@ class HomePage extends React.Component {
 
 HomePage.propTypes = {
   Posts: React.PropTypes.object.isRequired,
-  Users: React.PropTypes.object.isRequired,
 };
 
 export default createContainer(() => {
   return {
     Posts: Session.get('Posts'),
-    Users: Session.get('Users'),
   };
 }, HomePage);

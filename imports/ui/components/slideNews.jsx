@@ -14,7 +14,7 @@ export default class SlideNews extends React.Component {
               </h3>
             </div>
           </div>
-          <ListNews Posts={this.props.Posts} Users={this.props.Users} />
+          <ListNews Posts={this.props.Posts} />
         </div>
       </div>
     );
@@ -23,5 +23,4 @@ export default class SlideNews extends React.Component {
 
 SlideNews.propTypes = {
   Posts: React.PropTypes.object.isRequired,
-  Users: React.PropTypes.object.isRequired,
 };

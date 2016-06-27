@@ -1,12 +1,22 @@
 import { Meteor } from 'meteor/meteor';
 
+import _ from 'underscore';
+
 const parseJSON = function parseJSON(parts) {
   let posts = parts.substring(parts.indexOf('"Post"'));
   posts = `{${posts.substring(0, posts.indexOf('"Post"}}') + 8)}}`;
 
   let users = parts.substring(parts.indexOf('"User"'));
   users = `{${users.substring(0, users.indexOf('"User"}}') + 8)}}`;
-  return { Posts: JSON.parse(posts), Users: JSON.parse(users) };
+
+  posts = JSON.parse(posts);
+  users = JSON.parse(users);
+
+  _.each(posts.Post, (value, key) => {
+    _.extend(value, { authorName: users.User[value.creatorId].name });
+    posts.Post[key] = _.pick(value, 'uniqueSlug', 'virtuals', 'title', 'creatorId', 'authorName');
+  });
+  return posts.Post;
 };
 
 Meteor.methods({

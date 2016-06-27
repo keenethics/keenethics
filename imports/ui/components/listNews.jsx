@@ -8,11 +8,10 @@ export default class ListNews extends React.Component {
   renderListItems() {
     const listNews = [];
     if (typeof this.props.Posts !== 'undefined') {
-      _.map(this.props.Posts.Post, (num, key) => {
+      _.map(this.props.Posts, (value, key) => {
         listNews.push(
           <ListItem
-            Posts={ _.pick(num, 'uniqueSlug', 'virtuals', 'title', 'creatorId') }
-            Users={ this.props.Users.User }
+            Posts={ value }
             key={ key }
           />
         );
@@ -39,5 +38,4 @@ export default class ListNews extends React.Component {
 
 ListNews.propTypes = {
   Posts: React.PropTypes.object.isRequired,
-  Users: React.PropTypes.object.isRequired,
 };
