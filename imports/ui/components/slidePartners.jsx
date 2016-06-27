@@ -10,7 +10,7 @@ export default class SlidePartners extends React.Component {
           <div className="row">
             <div className="col-xs-12">
               <h3 className="title -text-center">
-                <span className="-color-black">Keen</span>
+                <span className="-color-black">Keen </span>
                 <span className="-color-red">partners.</span>
               </h3>
             </div>

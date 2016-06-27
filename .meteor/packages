@@ -44,10 +44,10 @@ cfs:filesystem
 cfs:standard-packages
 aldeed:autoform
 cfs:gridfs
-momentjs:twix
 seba:minifiers-autoprefixer
 vsivsi:file-collection
 mizzao:bootboxjs
 peppelg:bootstrap-3-modal
 es5-shim
 react-meteor-data
+standard-minifiers-js

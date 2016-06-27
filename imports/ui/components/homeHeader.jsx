@@ -44,7 +44,7 @@ export default class HomeHeader extends React.Component {
           <div className="header--content row">
             <div className="col-xs-12">
               <h2 className="header--title title -big">
-                <span className="-color-red">Ethical</span>
+                <span className="-color-red">Ethical </span>
                   development <br />
                   of <span className="-color-red">keen</span> web-apps.
               </h2>
