@@ -20,7 +20,7 @@
   "setupNode": true,
 
   // WARNING: nodeVersion defaults to 0.10.36 if omitted. Do not use v, just the version number.
-  "nodeVersion": "0.10.40",
+  "nodeVersion": "0.10.45",
 
   // Install PhantomJS on the server
   "setupPhantom": true,
@@ -41,7 +41,7 @@
   // ROOT_URL must be set to https://YOURDOMAIN.com when using the spiderable package & force SSL
   // your NGINX proxy or Cloudflare. When using just Meteor on SSL without spiderable this is not necessary
   "env": {
-    "PORT": 80,
+    "PORT": 8000,
     "ROOT_URL": "http://keenethics.com",
     "MONGO_URL": "mongodb://localhost:27017/keenethics",
     "MAIL_URL": "smtp://smtp-relay.gmail.com:465"
