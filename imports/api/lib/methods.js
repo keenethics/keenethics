@@ -1,6 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 
 import _ from 'underscore';
+import { check } from 'meteor/check';
+import { Email } from 'meteor/email';
 
 const parseJSON = function parseJSON(parts) {
   let posts = parts.substring(parts.indexOf('"Post"'));
@@ -20,7 +22,7 @@ const parseJSON = function parseJSON(parts) {
 };
 
 Meteor.methods({
-  sendContactForm: function (text) {
+  sendContactForm(text) {
     check(text, String);
 
     // Let other method calls from the same client start running,
@@ -35,7 +37,7 @@ Meteor.methods({
     });
   },
 
-  getPosts: function () {
+  getPosts() {
     this.unblock();
     const url = 'https://blog.keenethics.com/?format=json';
     const result = Meteor.http.call('GET', url, {
@@ -43,7 +45,8 @@ Meteor.methods({
         timeout: 3000,
       },
       headers: {
-        'cookie': 'sid=1:Ae8BWDRjWeqWqHqGt3Ik6om0Z8MYiyFSgKLtnEqcwb9GzRN5xVtNgay6WT1Yx5PU;uid=f82ad8efa94',
+        cookie: 'sid=1:Ae8BWDRjWeqWqHqGt3Ik6om0Z8MYiyFSgKLtnEqcwb9GzRN5xVtNgay6WT1Yx5PU;' +
+                'uid=f82ad8efa94',
         'content-type': 'application/json',
       },
     });
