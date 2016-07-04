@@ -37,5 +37,5 @@ export default class ListNews extends React.Component {
 }
 
 ListNews.propTypes = {
-  Posts: React.PropTypes.object.isRequired,
+  Posts: React.PropTypes.array.isRequired,
 };

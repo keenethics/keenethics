@@ -22,5 +22,5 @@ export default class SlideNews extends React.Component {
 }
 
 SlideNews.propTypes = {
-  Posts: React.PropTypes.object.isRequired,
+  Posts: React.PropTypes.array.isRequired,
 };

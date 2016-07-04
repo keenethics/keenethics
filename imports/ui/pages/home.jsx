@@ -147,7 +147,7 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  Posts: React.PropTypes.object.isRequired,
+  Posts: React.PropTypes.array.isRequired,
 };
 
 export default createContainer(() => {

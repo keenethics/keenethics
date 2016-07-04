@@ -29,11 +29,11 @@ Meteor.methods({
     const mediumResult = parsingLib.parseMedium(getNewsData.getMediumJson());
     const meetupResult = parsingLib.parseMeetup(getNewsData.getMeetupJson());
 
-    let result = _.union(_.values(mediumResult), meetupResult);
-    let sorted = _.sortBy(result, 'publishedDate').reverse().slice(0, 4);
+    const result = _.union(_.values(mediumResult), meetupResult);
+    const sorted = _.sortBy(result, 'publishedDate').reverse().slice(0, 4);
 
     _.each(sorted, (value, key) => {
-      let splDate = new Date(value.publishedDate).toString().split(' ');
+      const splDate = new Date(value.publishedDate).toString().split(' ');
       sorted[key].publishedDate = `${splDate[1]} ${splDate[2]} ${splDate[3]} `;
     });
 

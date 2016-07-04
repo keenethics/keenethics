@@ -25,5 +25,5 @@ export default class ListItem extends React.Component {
 }
 
 ListItem.propTypes = {
-  Posts: React.PropTypes.object.isRequired,
+  Posts: React.PropTypes.array.isRequired,
 };
