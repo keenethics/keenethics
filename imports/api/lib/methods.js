@@ -3,9 +3,11 @@ import ParsingLib from './parsingLib';
 import GetNewsData from './getNewsData'
 
 import _ from 'underscore';
+import { check } from 'meteor/check';
+import { Email } from 'meteor/email';
 
 Meteor.methods({
-  sendContactForm: function (text) {
+  sendContactForm(text) {
     check(text, String);
 
     // Let other method calls from the same client start running,
@@ -20,7 +22,7 @@ Meteor.methods({
     });
   },
 
-  getPosts: function () {
+  getPosts() {
     this.unblock();
     const parsingLib = new ParsingLib();
     const getNewsData = new GetNewsData();
