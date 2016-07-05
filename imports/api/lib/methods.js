@@ -24,12 +24,12 @@ Meteor.methods({
 
   getPosts() {
     this.unblock();
-    const sorted = _.sortBy(fetchNews(), 'publishedDate').reverse().slice(0, 4);
+    const posts = _.sortBy(fetchNews(), 'publishedDate').reverse().slice(0, 4);
 
-    _.each(sorted, (value, key) => {
-      sorted[key].publishedDate = moment(value.publishedDate).format('MMMM DD YYYY');
+    _.each(posts, (value, key) => {
+      posts[key].publishedDate = moment(value.publishedDate).format('MMMM DD YYYY');
     });
-
-    return sorted;
+    console.log(typeof posts);
+    return posts;
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createContainer } from 'meteor/react-meteor-data';
+import { render } from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 
 import HomeHeader from '../components/homeHeader';
@@ -16,17 +16,13 @@ import Modal from '../components/modal';
 
 import { sendContacts } from '../../api/events';
 
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
 
   componentDidMount() {
     Meteor.call('getPosts', (error, result) => {
-      Session.set('Posts', result);
-    });
-  }
-
-  componentDidUpdate() {
-    Meteor.call('getPosts', (error, result) => {
-      Session.set('Posts', result);
+      if (result) {
+        render(<HomePage Posts={result} />, document.getElementById('react-root'));
+      }
     });
   }
 
@@ -149,9 +145,3 @@ class HomePage extends React.Component {
 HomePage.propTypes = {
   Posts: React.PropTypes.array.isRequired,
 };
-
-export default createContainer(() => {
-  return {
-    Posts: Session.get('Posts'),
-  };
-}, HomePage);

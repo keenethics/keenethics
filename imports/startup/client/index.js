@@ -5,5 +5,5 @@ import { Meteor } from 'meteor/meteor';
 import HomePage from '/imports/ui/pages/home';
 
 Meteor.startup(() => (
-  render(<HomePage />, document.getElementById('react-root'))
+  render(<HomePage Posts={[]} />, document.getElementById('react-root'))
 ));
