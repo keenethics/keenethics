@@ -8,11 +8,11 @@ export default class ListNews extends React.Component {
   renderListItems() {
     const listNews = [];
     if (typeof this.props.Posts !== 'undefined') {
-      _.map(this.props.Posts, (value, key) => {
+      _.map(this.props.Posts, (post, index) => {
         listNews.push(
           <ListItem
-            Posts={ value }
-            key={ key }
+            Posts={ post }
+            key={ index }
           />
         );
       });
@@ -37,5 +37,5 @@ export default class ListNews extends React.Component {
 }
 
 ListNews.propTypes = {
-  Posts: React.PropTypes.object.isRequired,
+  Posts: React.PropTypes.array.isRequired,
 };
