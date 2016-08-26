@@ -9,6 +9,7 @@ $list-media-img-size: 160px;
   flex-flow: row wrap;
   &--item {
     text-align: center;
+    margin-left: -15px;
     @media all and (max-width: 992px) {
       margin-bottom: $margin*2;
     }
@@ -74,4 +75,3 @@ $list-media-img-size: 160px;
     line-height: 25px;
   }
 }
-

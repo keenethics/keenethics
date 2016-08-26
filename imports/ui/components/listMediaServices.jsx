@@ -9,7 +9,7 @@ export default class ListMediaServices extends React.Component {
             <div className="list-media--img">
               <svg className="planet" width="160" height="160" viewBox="0 0 124 123" xmlns="http://www.w3.org/2000/svg">
                 <title>Planet</title>
-                <g transform="translate(10 10)" strokeWidth="2" fill="none" fill-rule="evenodd">
+                <g transform="translate(10 10)" strokeWidth="2" fill="none" fillRule="evenodd">
                   <circle stroke="#333" cx="50.5" cy="50.5" r="39.5" />
                   <circle stroke="#C1C1C1" cx="50.5" cy="50.5" r="50.5" />
                   <circle className="planet--sun-one" stroke="#DE4F4F" fill="#FFF" cx="68" cy="86" r="6" />
@@ -32,7 +32,7 @@ export default class ListMediaServices extends React.Component {
             <div className="list-media--img">
               <svg className="rocket" width="160" height="160" viewBox="0 0 118 119" xmlns="http://www.w3.org/2000/svg">
                 <title>Rocket</title>
-                <g transform="translate(10 10) rotate(45 64.35 82.435)" strokeWidth="2" fill="none" fill-rule="evenodd">
+                <g transform="translate(10 10) rotate(45 64.35 82.435)" strokeWidth="2" fill="none" fillRule="evenodd">
                   <path d="M15 16L30 1l15 15v60H15V16z" stroke="#333" />
                   <path stroke="#333" fill="#FFF" d="M.858 76L15 61.858 29.142 76 15 90.142zM29.858 76L44 61.858 58.142 76 44 90.142z" />
                   <path stroke="#333" fill="#FFF" d="M15.858 84L30 69.858 44.142 84 30 98.142z" />
@@ -61,7 +61,7 @@ export default class ListMediaServices extends React.Component {
                   .constellation .st2{fill:none;stroke:#C1C1C1;stroke-width:2;}\
                 "}</style>
                 <title>Group Copy</title>
-                <g transform="translate(10 10)" strokeWidth="2" fill="none" fill-rule="evenodd">
+                <g transform="translate(10 10)" strokeWidth="2" fill="none" fillRule="evenodd">
                   <path id="Path-55" className="st0" d="M-18 100.3l35.2 7.7L45 95 23.3 69.7l24.5-3.1L63.1 39" />
                   <path id="Rectangle-15" className="st1 constellation--star-one" d="M-11.135 101.5l-6.364 6.365-6.363-6.364 6.364-6.363z" />
                   <path id="Rectangle-15-Copy" className="st1" d="M23.865 107.5l-6.364 6.365-6.363-6.364 6.364-6.363z" />
