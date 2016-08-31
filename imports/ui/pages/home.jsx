@@ -110,7 +110,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Maksym F.',
-        tilte: 'Full-stack js Astronaut',
+        title: 'Full-stack js Astronaut',
         desc: `Space gamer. He is also one of the pilots who flies on one of the biggest Meteor
                   Shuttle mission in the world.`,
         imgPath: 'images/team/maksym_f.jpg'
