@@ -3,7 +3,6 @@ import React from 'react';
 export default class SlidePortfolio extends React.Component {
 
   toggleReference(event) {
-    console.log($(event.currentTarget).find('div.reference')[0])
     $($(event.currentTarget).find('div.reference')[0]).toggle(1000);
   }
 
