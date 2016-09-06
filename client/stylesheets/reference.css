@@ -1,0 +1,19 @@
+/* References */
+.reference
+{
+    display: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.reference div {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.reference div.author {
+  font-style: normal;
+  padding-bottom: 10px;
+  text-align: right;
+  font-weight: bold;
+}

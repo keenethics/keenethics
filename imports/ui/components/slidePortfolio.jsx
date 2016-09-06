@@ -4,6 +4,7 @@ export default class SlidePortfolio extends React.Component {
 
   toggleReference(event) {
     console.log($(event.currentTarget).find('div.reference')[0])
+    $($(event.currentTarget).find('div.reference')[0]).toggle(1000);
   }
 
   renderJobs() {
@@ -21,11 +22,13 @@ export default class SlidePortfolio extends React.Component {
             <div className="slider-images--text" itemProp="about description">
               {value.desc}
             </div>
-            <div className="reference" itemProp="reference">
-              {value.reference}
-            </div>
-            <div itemProp="author">
-              {value.referenceAuthor}
+            <div className="reference">
+              <div itemProp="reference">
+                {value.reference}
+              </div>
+              <div className="author" itemProp="author">
+                {value.referenceAuthor}
+              </div>
             </div>
             <a href={value.url} className="slider-images--link" itemProp="url">
               <span itemProp="name headline alternateName">{value.name}</span>
