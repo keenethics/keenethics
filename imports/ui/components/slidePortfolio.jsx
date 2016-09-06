@@ -17,7 +17,7 @@ export default class SlidePortfolio extends React.Component {
             <div className="slider-images--text" itemProp="about description">
               {value.desc}
             </div>
-            <a href="{{value.url}}" className="slider-images--link" itemProp="url">
+            <a href={value.url} className="slider-images--link" itemProp="url">
               <span itemProp="name headline alternateName">{value.name}</span>
               <span className="arrow-additional"></span>
             </a>
@@ -44,7 +44,7 @@ export default class SlidePortfolio extends React.Component {
               {this.renderJobs()}
               <li className="slider-images--item -secondary">
                 <div className="slider-images--inner">
-                  <a href="#slide-5" className="slider-images--img"
+                  <a href="#slide-7" className="slider-images--img"
                     style={{ backgroundImage: 'url(images/project-default.jpg)' }}
                   >
                   </a>

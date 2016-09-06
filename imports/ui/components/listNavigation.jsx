@@ -7,17 +7,17 @@ export default class ListNavigator extends React.Component {
       infinite: false,
       speed: 300,
       arrows: false,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 6,
+      slidesToScroll: 6,
       responsive: [
-        /* {
+        {
           breakpoint: 1548,
           settings: { slidesToShow: 6, slidesToScroll: 6 },
         },
         {
           breakpoint: 1424,
           settings: { slidesToShow: 5, slidesToScroll: 5 },
-        }, */
+        },
         {
           breakpoint: 1200,
           settings: { slidesToShow: 4, slidesToScroll: 4, infinite: true, dots: true },

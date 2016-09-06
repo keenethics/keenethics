@@ -46,6 +46,24 @@ export default class HomePage extends React.Component {
         url: 'http://www.pollenpost.com',
         imgPath: 'images/projects/pollen.png',
       },
+      {
+        name: 'Prix',
+        desc: 'A machine-learning system based service for generating revenue',
+        url: 'http://www.prix.ai/',
+        imgPath: 'images/projects/prix.png',
+      },
+      {
+        name: 'My grass grow',
+        desc: 'An agricultural startup',
+        url: 'http://52.48.81.242/',
+        imgPath: 'images/projects/grass-grow.png',
+      },
+      {
+        name: 'Knotel',
+        desc: 'A service for booking workspaces',
+        url: 'https://knotel.com/',
+        imgPath: 'images/projects/knotel.png',
+      },
     ];
   }
 
@@ -131,14 +149,14 @@ export default class HomePage extends React.Component {
       {
         name: 'Nazar K.',
         title: 'Meteor.js Astronaut',
-        desc: `Strong Pilot with will of adamant and suspended approach. 
+        desc: `Strong Pilot with will of adamant and suspended approach.
                                                 Fond of space rockclimbing.`,
         imgPath: 'images/team/nazar_k.jpg'
       },
       {
         name: 'Oleh Jedi',
         title: 'Full-stack js Capt-lieutenant',
-        desc: `Manually assembled his shuttle and flies it at the highest speeds 
+        desc: `Manually assembled his shuttle and flies it at the highest speeds
               (20-30 times faster than light). Used to carry out experimental shuttle missions.`,
         imgPath: 'images/team/oleh_z.jpg',
       },
