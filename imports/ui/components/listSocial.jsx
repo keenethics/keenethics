@@ -34,6 +34,11 @@ export default class ListSocial extends React.Component {
             <img src="/images/social/medium.svg" className="list-social--link" />
           </a>
         </li>
+        <li className="list-social--item">
+          <a href="https://www.linkedin.com/company/keen-ethics">
+            <img src="/images/social/linkedin.svg" className="list-social--link" />
+          </a>
+        </li>
       </ul>
     );
   }

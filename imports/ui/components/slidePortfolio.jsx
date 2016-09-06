@@ -2,9 +2,13 @@ import React from 'react';
 
 export default class SlidePortfolio extends React.Component {
 
+  toggleReference(event) {
+    console.log($(event.currentTarget).find('div.reference')[0])
+  }
+
   renderJobs() {
     return this.props.jobs.map((value, index) => (
-      <li className="slider-images--item" itemScope itemType="http://schema.org/WebSite" key={index}>
+      <li onClick={this.toggleReference} className="slider-images--item" itemScope itemType="http://schema.org/WebSite" key={index}>
         <div className="slider-images--inner">
           <div className="slider-images--img"
             style={{ backgroundImage: `url(${value.imgPath})` }}
@@ -16,6 +20,12 @@ export default class SlidePortfolio extends React.Component {
             </div>
             <div className="slider-images--text" itemProp="about description">
               {value.desc}
+            </div>
+            <div className="reference" itemProp="reference">
+              {value.reference}
+            </div>
+            <div itemProp="author">
+              {value.referenceAuthor}
             </div>
             <a href={value.url} className="slider-images--link" itemProp="url">
               <span itemProp="name headline alternateName">{value.name}</span>

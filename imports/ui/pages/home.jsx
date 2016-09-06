@@ -49,12 +49,16 @@ export default class HomePage extends React.Component {
       {
         name: 'Prix',
         desc: 'A machine-learning system based service for generating revenue',
+        reference: '"We were impressed with Keenethics form the get-go. They really get startups and are able to work without perfect project-plans - making clever and reasonable assumptions as they go and clarifying when the need arises. Great team, solid communication and fast-paced, high-quality development."',
+        referenceAuthor: 'Jens Munch - founder of [preeh]',
         url: 'http://www.prix.ai/',
         imgPath: 'images/projects/prix.png',
       },
       {
         name: 'My grass grow',
         desc: 'An agricultural startup',
+        reference: '“Despite the physical distance and never meeting each other in person, Keenethics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward”',
+        referenceAuthor: 'Wim Honkoop, Bedrijfsplanning B.V. The Netherlands',
         url: 'http://52.48.81.242/',
         imgPath: 'images/projects/grass-grow.png',
       },
