@@ -46,6 +46,28 @@ export default class HomePage extends React.Component {
         url: 'http://www.pollenpost.com',
         imgPath: 'images/projects/pollen.png',
       },
+      {
+        name: 'Prix',
+        desc: 'A machine-learning system based service for generating revenue',
+        reference: '"We were impressed with Keenethics form the get-go. They really get startups and are able to work without perfect project-plans - making clever and reasonable assumptions as they go and clarifying when the need arises. Great team, solid communication and fast-paced, high-quality development."',
+        referenceAuthor: 'Jens Munch, Founder of [preeh]',
+        url: 'http://www.prix.ai/',
+        imgPath: 'images/projects/prix.png',
+      },
+      {
+        name: 'My grass grow',
+        desc: 'Application that helps farmers to graze cows and make related calculations',
+        reference: '“Despite the physical distance and never meeting each other in person, Keenethics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward”',
+        referenceAuthor: 'Wim Honkoop, Bedrijfsplanning B.V. The Netherlands',
+        url: 'http://52.48.81.242/signIn',
+        imgPath: 'images/projects/grass-grow.png',
+      },
+      {
+        name: 'Knotel',
+        desc: 'A service for booking workspaces',
+        url: 'https://knotel.com/',
+        imgPath: 'images/projects/knotel.png',
+      },
     ];
   }
 
@@ -131,14 +153,14 @@ export default class HomePage extends React.Component {
       {
         name: 'Nazar K.',
         title: 'Meteor.js Astronaut',
-        desc: `Strong Pilot with will of adamant and suspended approach. 
+        desc: `Strong Pilot with will of adamant and suspended approach.
                                                 Fond of space rockclimbing.`,
         imgPath: 'images/team/nazar_k.jpg'
       },
       {
         name: 'Oleh Jedi',
         title: 'Full-stack js Capt-lieutenant',
-        desc: `Manually assembled his shuttle and flies it at the highest speeds 
+        desc: `Manually assembled his shuttle and flies it at the highest speeds
               (20-30 times faster than light). Used to carry out experimental shuttle missions.`,
         imgPath: 'images/team/oleh_z.jpg',
       },

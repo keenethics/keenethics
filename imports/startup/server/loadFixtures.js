@@ -17,7 +17,7 @@ Meteor.startup(function () {
       createdAt: new Date()
     },{
       title: 'Comicenglish',
-      description: 'Dervice for learning foreign languages in a gaming form',
+      description: 'Service for learning foreign languages in a gaming form',
       link: 'http://comicenglish.com/',
       createdAt: new Date()
     },{
