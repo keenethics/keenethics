@@ -1,5 +1,5 @@
 .idea/*
-mup.json
+mup.js
 node_modules/
 .DS_Store
 

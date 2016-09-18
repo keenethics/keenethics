@@ -3,7 +3,8 @@ module.exports = {
     keenethics: {
       host: '107.170.121.178',
       username: 'root',
-      password: '-----',
+      //password: '-----',
+      pem: '~/.ssh/key',
     },
   },
 
@@ -19,6 +20,7 @@ module.exports = {
       PORT: 8000,
       ROOT_URL: 'http://keenethics.com/',
       MONGO_URL: 'mongodb://127.0.0.1:27017/keenethics',
+      MAIL_URL: "smtp://smtp-relay.gmail.com:465",
     },
 
     deployCheckWait: 60,
