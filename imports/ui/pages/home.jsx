@@ -100,7 +100,7 @@ export default class HomePage extends React.Component {
         desc: `She is the first woman to have flown in Keenethics space,
                   having been selected from more than five finalists to pilot
                   Keen project applicants.`,
-        imgPath: 'images/team/yara_m.jpg',
+        imgPath: 'images/team/yara_m.jpeg',
       },
       {
         name: 'Vlad O.',
@@ -125,21 +125,21 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Andrew T.',
-        title: 'Meteor.js astronaut',
+        title: 'Meteor.js Astronaut',
         desc: `Ph. D, he has firm and scientific approach to problem-solving and he used
                   to be a pilot on several shuttle missions.`,
-        imgPath: 'images/team/andrew_t.jpg'
+        imgPath: 'images/team/andrew_t.png'
       },
       {
         name: 'Maksym F.',
         title: 'Full-stack js Astronaut',
         desc: `Space gamer. He is also one of the pilots who flies on one of the biggest Meteor
                   Shuttle mission in the world.`,
-        imgPath: 'images/team/maksym_f.jpg'
+        imgPath: 'images/team/maksym_f.jpeg'
       },
       {
         name: 'Maryna Y.',
-        title: 'Full-stack js astronaut',
+        title: 'Full-stack js Astronaut',
         desc: `Space hot fire-show amateur, got an honors diploma in the flight school,
                 acts as a hot second pilot in the hot shuttle mission.`,
         imgPath: 'images/team/maryna_y.png'
@@ -171,6 +171,58 @@ export default class HomePage extends React.Component {
                         communication. She can even talk with creatures from outer space.`,
         imgPath: 'images/team/sofia_i.jpg',
       },
+
+
+      {
+        name: 'Alex B.',
+        title: 'Full-Stack js Midshipman',
+        desc: `Best student of Astronaut Training Center. He is JavaScript enthusiast, React evangelist, Space archeologist.`,
+        imgPath: 'images/team/alex_b.jpeg',
+      },
+      {
+        name: 'Misha P.',
+        title: 'Full-stack js Capt-lieutenant',
+        desc: `Honorable and experienced combattant in Meteor space, has been working during many  years in our space sector.`,
+        imgPath: 'images/team/misha_p.jpeg',
+      },
+      {
+        name: 'Arsen T.',
+        title: 'Full-Stack js Midshipman',
+        desc: `Space sweet Karmaman astronaut. He knows how to keep your Karma clean.`,
+        imgPath: 'images/team/arsen_t.jpg',
+      },
+      {
+        name: 'Igor V.',
+        title: 'Full-Stack js Midshipman',
+        desc: `The youngest midshipman from outer space. Cool and steady even when approaching black hole.`,
+        imgPath: 'images/team/igor_v.jpeg',
+      },
+      {
+        name: 'Taras B.',
+        title: 'Full-Stack js Midshipman',
+        desc: `Best sailor on duty. He does his work while the rest of spacecraft members are asleep.`,
+        imgPath: 'images/team/taras_b.jpeg',
+      },
+      {
+        name: 'Juliya P.',
+        title: 'QA Astronaut',
+        desc: `The prophet sent by highest cosmic power for deliverance our galaxy from evil bugs.`,
+        imgPath: 'images/team/juliya_p.jpg',
+      },
+      {
+        name: 'Ura G.',
+        title: 'Full-stack js Midshipman',
+        desc: `Participated in large battles as a Roockie and dreams  about leading his own squad`,
+        imgPath: 'images/team/ura_g.jpeg',
+      },
+
+      {
+        name: 'Alex H.',
+        title: 'PM Astronaut',
+        desc: `Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.`,
+        imgPath: 'images/team/alex_h.jpeg',
+      },
+
     ];
   }
 
