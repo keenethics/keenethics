@@ -218,7 +218,7 @@ export default class HomePage extends React.Component {
 
       {
         name: 'Alex H.',
-        title: 'PM Astronaut',
+        title: 'International Mission Specialist',
         desc: `Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.`,
         imgPath: 'images/team/alex_h.jpeg',
       },
