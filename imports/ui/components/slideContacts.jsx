@@ -26,9 +26,9 @@ export default class SlideContacts extends React.Component {
                 </a>
                 <a href="https://www.google.com/maps/place/вул.+Литвиненка,+3,+Львів,+Львівська+область,+Україна" target="_blank">
                   <span itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                    <span itemProp="streetAddress">3 Lytvynenka Street St.</span>
+                    <span itemProp="streetAddress">3 Lytvynenka st. </span>
                     <span itemProp="addressLocality">Lviv</span>,
-                    <span itemProp="addressCountry">Ukraine</span>
+                    <span itemProp="addressCountry"> Ukraine</span>
                   </span>
                   <span className="slide-contacts--arrow arrow"></span>
                 </a>
