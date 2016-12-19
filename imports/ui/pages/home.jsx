@@ -210,9 +210,9 @@ export default class HomePage extends React.Component {
         imgPath: 'images/team/juliya_p.jpg',
       },
       {
-        name: 'Ura G.',
+        name: 'Yura G.',
         title: 'Full-stack js Midshipman',
-        desc: `Participated in large battles as a Roockie and dreams  about leading his own squad`,
+        desc: `Participated in large battles as a Rookie and dreams  about leading his own squad`,
         imgPath: 'images/team/ura_g.jpeg',
       },
 
