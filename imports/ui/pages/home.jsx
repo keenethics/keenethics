@@ -128,7 +128,7 @@ export default class HomePage extends React.Component {
         title: 'Meteor.js Astronaut',
         desc: `Ph. D, he has firm and scientific approach to problem-solving and he used
                   to be a pilot on several shuttle missions.`,
-        imgPath: 'images/team/andrew_t.png'
+        imgPath: 'images/team/andrew_t.jpg'
       },
       {
         name: 'Maksym F.',
