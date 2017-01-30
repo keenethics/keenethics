@@ -204,12 +204,6 @@ export default class HomePage extends React.Component {
         imgPath: 'images/team/taras_b.jpeg',
       },
       {
-        name: 'Juliya P.',
-        title: 'QA Astronaut',
-        desc: `The prophet sent by highest cosmic power for deliverance our galaxy from evil bugs.`,
-        imgPath: 'images/team/juliya_p.jpg',
-      },
-      {
         name: 'Yura G.',
         title: 'Full-stack js Midshipman',
         desc: `Participated in large battles as a Rookie and dreams  about leading his own squad`,
