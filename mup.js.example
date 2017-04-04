@@ -21,6 +21,11 @@ module.exports = {
       ROOT_URL: 'http://keenethics.com/',
       MONGO_URL: 'mongodb://127.0.0.1:27017/keenethics',
       MAIL_URL: "smtp://smtp-relay.gmail.com:465",
+
+      // --- cookies for meetup api ---
+
+      SID: "place you cookie sid here",
+      U_ID: "place you cookie uid here",
     },
 
     deployCheckWait: 60,

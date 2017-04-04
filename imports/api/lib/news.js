@@ -9,7 +9,7 @@ const getMediumJson = function getMediumJson() {
       timeout: 3000,
     },
     headers: {
-      'cookie': 'sid=1:Ae8BWDRjWeqWqHqGt3Ik6l4bTD93cFUU02hfphytyo+i9VKMMzh0lC41nF7SOzJb;uid=114a21c48ed7',
+      'cookie': `sid=${process.env.SID};uid=${process.env.U_ID}`,
       'content-type': 'application/json',
     },
   });
