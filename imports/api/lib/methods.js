@@ -25,11 +25,9 @@ Meteor.methods({
   getPosts() {
     this.unblock();
     const posts = _.sortBy(fetchNews(), 'publishedDate').reverse().slice(0, 4);
-
     _.each(posts, (value, key) => {
       posts[key].publishedDate = moment(value.publishedDate).format('MMMM DD YYYY');
     });
-    console.log(typeof posts);
     return posts;
   },
 });

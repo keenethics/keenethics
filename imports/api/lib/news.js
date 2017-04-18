@@ -9,7 +9,7 @@ const getMediumJson = function getMediumJson() {
       timeout: 3000,
     },
     headers: {
-      'cookie': 'sid=1:Ae8BWDRjWeqWqHqGt3Ik6om0Z8MYiyFSgKLtnEqcwb9GzRN5xVtNgay6WT1Yx5PU;uid=f82ad8efa94',
+      'cookie': 'sid=1:Ae8BWDRjWeqWqHqGt3Ik6l4bTD93cFUU02hfphytyo+i9VKMMzh0lC41nF7SOzJb;uid=114a21c48ed7',
       'content-type': 'application/json',
     },
   });
@@ -32,8 +32,8 @@ const getMeetupJson = function getMeetupJson() {
 
 // function for parsing and renurn all news from
 export function fetchNews() {
-  const partsMedium = getMediumJson();
   const postsMeetup = JSON.parse(getMeetupJson());
+  const partsMedium = getMediumJson();
 
   let result = null;
 
@@ -43,6 +43,7 @@ export function fetchNews() {
   let users = partsMedium.substring(partsMedium.indexOf('"User"'));
   users = `{${users.substring(0, users.indexOf('"User"}}') + 8)}}`;
 
+
   postsMedium = JSON.parse(postsMedium);
   users = JSON.parse(users);
 
@@ -51,7 +52,7 @@ export function fetchNews() {
       _.extend(_.pick(value, 'title'), {
         link: `https://blog.keenethics.com/${value.uniqueSlug}?source=latest`,
         authorName: users.User[value.creatorId].name,
-        publishedDate: new Date(value.virtuals.firstPublishedAtEnglish).getTime(),
+        publishedDate: new Date(value.virtuals.firstPublishedAtEnglish || value.latestPublishedAt).getTime(),
         imageSrc: value.virtuals.previewImage.imageId === '' ?
           '/images/news/1.png' :
           `https://cdn-images-1.medium.com/max/500/${value.virtuals.previewImage.imageId}`,
