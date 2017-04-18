@@ -171,18 +171,18 @@ export default class HomePage extends React.Component {
                         communication. She can even talk with creatures from outer space.`,
         imgPath: 'images/team/sofia_i.jpg',
       },
-
-
       {
         name: 'Alex B.',
         title: 'Full-Stack js Midshipman',
-        desc: `Best student of Astronaut Training Center. He is JavaScript enthusiast, React evangelist, Space archeologist.`,
+        desc: `Best student of Astronaut Training Center.
+                        He is JavaScript enthusiast, React evangelist, Space archeologist.`,
         imgPath: 'images/team/alex_b.jpeg',
       },
       {
         name: 'Misha P.',
         title: 'Full-stack js Capt-lieutenant',
-        desc: `Honorable and experienced combattant in Meteor space, has been working during many  years in our space sector.`,
+        desc: `Honorable and experienced combattant in Meteor space,
+                        has been working during many  years in our space sector.`,
         imgPath: 'images/team/misha_p.jpeg',
       },
       {
@@ -209,12 +209,43 @@ export default class HomePage extends React.Component {
         desc: `Participated in large battles as a Rookie and dreams  about leading his own squad`,
         imgPath: 'images/team/ura_g.jpeg',
       },
-
       {
         name: 'Alex H.',
         title: 'International Mission Specialist',
         desc: `Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.`,
         imgPath: 'images/team/alex_h.jpeg',
+      },
+
+
+      {
+        name: 'Sasha S.',
+        title: 'Mission support officer',
+        desc: `Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.`,
+        imgPath: 'images/team/sasha_s.jpg',
+      },
+      {
+        name: 'Yurii S.',
+        title: 'Full-stack js Midshipman',
+        desc: `Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.`,
+        imgPath: 'images/team/yurii_s.jpg',
+      },
+      {
+        name: 'Rostyk T.',
+        title: 'Full-stack js Astronaut',
+        desc: `Was create AI-bots powered space craft. You may never be sure whether you are talking to him, or to his AI.`,
+        imgPath: 'images/team/rostyk_t.jpg',
+      },
+      {
+        name: 'Volodiy A.',
+        title: 'Full-stack js engineer',
+        desc: `He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.`,
+        imgPath: 'images/team/volodiy_a.jpg',
+      },
+      {
+        name: 'Taras P.',
+        title: 'Full-stack js astronaut',
+        desc: `He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.`,
+        imgPath: 'images/team/taras_p.jpg',
       },
 
     ];
