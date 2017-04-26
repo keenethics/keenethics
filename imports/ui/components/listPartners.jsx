@@ -11,10 +11,10 @@ export default class ListPartners extends React.Component {
           <img src="/images/partners/jssolutions.png" />
         </li>
         <li className="col-xs-6 col-sm-3">
-          <img src="/images/partners/bambuk.png" />
+          <img src="/images/partners/azinec.png" />
         </li>
         <li className="col-xs-6 col-sm-3">
-          <img src="/images/partners/azinec.png" />
+          <img src="/images/partners/Image_from_Skype.jpg" />
         </li>
       </ul>
     );
