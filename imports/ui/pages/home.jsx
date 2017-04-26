@@ -237,7 +237,7 @@ export default class HomePage extends React.Component {
         imgPath: 'images/team/rostyk_t.jpg',
       },
       {
-        name: 'Volodiy A.',
+        name: 'Volodya A.',
         title: 'Full-stack js engineer',
         desc: `He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.`,
         imgPath: 'images/team/volodiy_a.jpg',
@@ -252,6 +252,28 @@ export default class HomePage extends React.Component {
     ];
   }
 
+  getPositions() {
+    return [
+      {
+        name: '',
+        title: 'Senior full-stack JavaScript developer',
+        desc: ``,
+        imgPath: 'images/team/Astronauts.jpg',
+      },
+      {
+        name: '',
+        title: 'Project manager',
+        desc: ``,
+        imgPath: 'images/team/Astronauts.jpg',
+      },
+      {
+        name: '',
+        title: 'Sales manager',
+        desc: ``,
+        imgPath: 'images/team/Astronauts.jpg',
+      },
+    ]
+  }
 
   render() {
     return (
@@ -263,7 +285,7 @@ export default class HomePage extends React.Component {
           <SlideServices />
           <SlidePortfolio jobs={this.getJobs()} />
           <SlideTeam employees={this.getEmployees()} />
-          <SlideJoinTeam />
+          <SlideJoinTeam positions={this.getPositions()} />
           <SlideNews Posts={this.props.Posts} />
           <SlidePartners />
           <SlideContacts onSubmit={sendContacts} />
