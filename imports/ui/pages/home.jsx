@@ -8,6 +8,7 @@ import SlideInfo from '../components/slideInfo';
 import SlideServices from '../components/slideServices';
 import SlidePortfolio from '../components/slidePortfolio';
 import SlideTeam from '../components/slideTeam';
+import SlideJoinTeam from '../components/slideJoinTeam';
 import SlidePartners from '../components/slidePartners';
 import SlideContacts from '../components/slideContacts';
 import SlideNews from '../components/slideNews';
@@ -262,6 +263,7 @@ export default class HomePage extends React.Component {
           <SlideServices />
           <SlidePortfolio jobs={this.getJobs()} />
           <SlideTeam employees={this.getEmployees()} />
+          <SlideJoinTeam />
           <SlideNews Posts={this.props.Posts} />
           <SlidePartners />
           <SlideContacts onSubmit={sendContacts} />
