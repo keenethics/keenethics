@@ -159,13 +159,6 @@ export default class HomePage extends React.Component {
         imgPath: 'images/team/nazar_k.jpg'
       },
       {
-        name: 'Oleh Jedi',
-        title: 'Full-stack js Capt-lieutenant',
-        desc: `Manually assembled his shuttle and flies it at the highest speeds
-              (20-30 times faster than light). Used to carry out experimental shuttle missions.`,
-        imgPath: 'images/team/oleh_z.jpg',
-      },
-      {
         name: 'Sofia I.',
         title: 'Steward',
         desc: `She has necessary organizational skills and she is good in orbital and interplanetary
