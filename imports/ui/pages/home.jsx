@@ -231,7 +231,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Volodya A.',
-        title: 'Full-stack js engineer',
+        title: 'Full-stack js Astronaut',
         desc: `He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.`,
         imgPath: 'images/team/volodiy_a.jpg',
       },
