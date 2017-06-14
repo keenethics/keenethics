@@ -97,7 +97,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Yara M.',
-        title: 'Meteor.js Corvette capt',
+        title: 'Meteor.js Corvette Capt',
         desc: `She is the first woman to have flown in Keenethics space,
                   having been selected from more than five finalists to pilot
                   Keen project applicants.`,
@@ -105,7 +105,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Vlad O.',
-        title: 'Full-stack js Frigate captain',
+        title: 'Full-stack js Frigate Captain',
         desc: `Has a medal "For Merit in Space Exploration" for achievements in outer space
                                                     researching, development and reconnaissance.`,
         imgPath: 'images/team/vlad_o.jpg',
@@ -174,7 +174,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Misha P.',
-        title: 'Full-stack js Capt-lieutenant',
+        title: 'Full-Stack js Capt-lieutenant',
         desc: `Honorable and experienced combattant in Meteor space,
                         has been working during many  years in our space sector.`,
         imgPath: 'images/team/misha_p.jpeg',
@@ -193,7 +193,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Taras B.',
-        title: 'Full-Stack js Corvette capt',
+        title: 'Full-Stack js Corvette Capt',
         desc: `Best sailor on duty. He does his work while the rest of spacecraft members are asleep.`,
         imgPath: 'images/team/taras_b.jpeg',
       },
@@ -213,7 +213,7 @@ export default class HomePage extends React.Component {
 
       {
         name: 'Sasha S.',
-        title: 'Mission support officer',
+        title: 'Mission Support Officer',
         desc: `Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.`,
         imgPath: 'images/team/sasha_s.jpg',
       },
@@ -237,7 +237,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Taras P.',
-        title: 'Full-stack js astronaut',
+        title: 'Full-stack js Astronaut',
         desc: `He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.`,
         imgPath: 'images/team/taras_p.jpg',
       },
@@ -249,7 +249,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Viktoria M.',
-        title: 'Astronaut interaction specialist',
+        title: 'Astronaut Interaction Specialist',
         desc: `Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.`,
         imgPath: 'images/team/viktoria_m.jpg',
       },
