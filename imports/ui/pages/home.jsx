@@ -90,14 +90,14 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Michael O.',
-        title: 'Full-Stack js Midshipman',
+        title: 'Full-Stack js Capt-lieutenant',
         desc: `Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork
                                                     over five successful Meteor Shuttle missions.`,
         imgPath: 'images/team/michael_rich.jpg',
       },
       {
         name: 'Yara M.',
-        title: 'Meteor.js Astronaut',
+        title: 'Meteor.js Corvette capt',
         desc: `She is the first woman to have flown in Keenethics space,
                   having been selected from more than five finalists to pilot
                   Keen project applicants.`,
@@ -105,14 +105,14 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Vlad O.',
-        title: 'Full-stack js Corvette capt',
+        title: 'Full-stack js Frigate captain',
         desc: `Has a medal "For Merit in Space Exploration" for achievements in outer space
                                                     researching, development and reconnaissance.`,
         imgPath: 'images/team/vlad_o.jpg',
       },
       {
         name: 'Taras Y.',
-        title: 'Meteor.js Midshipman',
+        title: 'Meteor.js Capt-lieutenant',
         desc: `Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first
                                                                             manned space mission.`,
         imgPath: 'images/team/taras_y.jpg',
@@ -126,21 +126,21 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Andrew T.',
-        title: 'Meteor.js Astronaut',
+        title: 'Meteor.js Capt-lieutenant',
         desc: `Ph. D, he has firm and scientific approach to problem-solving and he used
                   to be a pilot on several shuttle missions.`,
         imgPath: 'images/team/andrew_t.jpg'
       },
       {
         name: 'Maksym F.',
-        title: 'Full-stack js Astronaut',
+        title: 'Full-stack js Midshipman',
         desc: `Space gamer. He is also one of the pilots who flies on one of the biggest Meteor
                   Shuttle mission in the world.`,
         imgPath: 'images/team/maksym_f.jpeg'
       },
       {
         name: 'Maryna Y.',
-        title: 'Full-stack js Astronaut',
+        title: 'Full-stack js Midshipman',
         desc: `Space hot fire-show amateur, got an honors diploma in the flight school,
                 acts as a hot second pilot in the hot shuttle mission.`,
         imgPath: 'images/team/maryna_y.png'
@@ -153,7 +153,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Nazar K.',
-        title: 'Meteor.js Astronaut',
+        title: 'Meteor.js Midshipman',
         desc: `Strong Pilot with will of adamant and suspended approach.
                                                 Fond of space rockclimbing.`,
         imgPath: 'images/team/nazar_k.jpg'
@@ -167,7 +167,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Alex B.',
-        title: 'Full-Stack js Midshipman',
+        title: 'Full-Stack js Capt-lieutenant',
         desc: `Best student of Astronaut Training Center.
                         He is JavaScript enthusiast, React evangelist, Space archeologist.`,
         imgPath: 'images/team/alex_b.jpeg',
@@ -181,7 +181,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Arsen T.',
-        title: 'Full-Stack js Midshipman',
+        title: 'Full-Stack js Capt-lieutenant',
         desc: `Space sweet Karmaman astronaut. He knows how to keep your Karma clean.`,
         imgPath: 'images/team/arsen_t.jpg',
       },
@@ -193,7 +193,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Taras B.',
-        title: 'Full-Stack js Midshipman',
+        title: 'Full-Stack js Corvette capt',
         desc: `Best sailor on duty. He does his work while the rest of spacecraft members are asleep.`,
         imgPath: 'images/team/taras_b.jpeg',
       },
