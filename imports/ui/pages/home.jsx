@@ -90,7 +90,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Michael O.',
-        title: 'Full-Stack js Capt-lieutenant',
+        title: 'Full-stack js Capt-lieutenant',
         desc: `Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork
                                                     over five successful Meteor Shuttle missions.`,
         imgPath: 'images/team/michael_rich.jpg',
@@ -167,33 +167,33 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Alex B.',
-        title: 'Full-Stack js Capt-lieutenant',
+        title: 'Full-stack js Capt-lieutenant',
         desc: `Best student of Astronaut Training Center.
                         He is JavaScript enthusiast, React evangelist, Space archeologist.`,
         imgPath: 'images/team/alex_b.jpeg',
       },
       {
         name: 'Misha P.',
-        title: 'Full-Stack js Capt-lieutenant',
+        title: 'Full-stack js Capt-lieutenant',
         desc: `Honorable and experienced combattant in Meteor space,
                         has been working during many  years in our space sector.`,
         imgPath: 'images/team/misha_p.jpeg',
       },
       {
         name: 'Arsen T.',
-        title: 'Full-Stack js Capt-lieutenant',
+        title: 'Full-stack js Capt-lieutenant',
         desc: `Space sweet Karmaman astronaut. He knows how to keep your Karma clean.`,
         imgPath: 'images/team/arsen_t.jpg',
       },
       {
         name: 'Igor V.',
-        title: 'Full-Stack js Midshipman',
+        title: 'Full-stack js Midshipman',
         desc: `The youngest midshipman from outer space. Cool and steady even when approaching black hole.`,
         imgPath: 'images/team/igor_v.jpeg',
       },
       {
         name: 'Taras B.',
-        title: 'Full-Stack js Corvette Capt',
+        title: 'Full-stack js Corvette Capt',
         desc: `Best sailor on duty. He does his work while the rest of spacecraft members are asleep.`,
         imgPath: 'images/team/taras_b.jpeg',
       },
@@ -209,8 +209,12 @@ export default class HomePage extends React.Component {
         desc: `Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.`,
         imgPath: 'images/team/alex_h.jpeg',
       },
-
-
+      {
+        name: 'Mykola M.',
+        title: 'Full-stack js Midshipman',
+        desc: `Space illusionist, together with Stanley Kubrick he produced all the layouts for US Apollo missions at the time when there was no HTML/CSS. He is now carrying out full-stack missions in outer space.`,
+        imgPath: 'images/team/mykola_m.jpg',
+      },
       {
         name: 'Sasha S.',
         title: 'Mission Support Officer',
@@ -260,7 +264,7 @@ export default class HomePage extends React.Component {
     return [
       {
         name: '',
-        title: 'Senior full-stack JavaScript developer',
+        title: 'Senior Full-stack JavaScript developer',
         desc: ``,
         imgPath: 'images/team/Astronauts.jpg',
       },
