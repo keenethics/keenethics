@@ -219,7 +219,16 @@ export default class HomePage extends React.Component {
 
 
       {
-        name: 'Sasha S.',
+        name: 'Mykola M.',
+        title: 'Full-stack js Midshipman',
+        desc: `Space illusionist, together with Stanley Kubrick he produced all the layouts for
+              US Apollo missions at the time when there was no HTML/CSS.
+              He is now carrying out full-stack missions in outer space.`,
+        imgPath: 'images/team/mykola_m.jpg',
+      },
+
+      {
+        name: 'Oleksandr S.',
         title: 'Mission support officer',
         desc: `Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.`,
         imgPath: 'images/team/sasha_s.jpg',
@@ -244,7 +253,7 @@ export default class HomePage extends React.Component {
       },
       {
         name: 'Taras P.',
-        title: 'Full-stack js astronaut',
+        title: 'Full-stack js Astronaut',
         desc: `He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.`,
         imgPath: 'images/team/taras_p.jpg',
       },
