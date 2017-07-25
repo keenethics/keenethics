@@ -246,12 +246,6 @@ export default class HomePage extends React.Component {
         imgPath: 'images/team/taras_p.jpg',
       },
       {
-        name: 'Mykola H.',
-        title: 'Intergalactic Mission Master',
-        desc: `Mykola is an experienced PMO with a few ships of his own. Now facilitates the astronauts during their operations with other intelligent life forms to guarantee the successful intergalactic deliveries.`,
-        imgPath: 'images/team/mykola_h.jpg',
-      },
-      {
         name: 'Viktoria M.',
         title: 'Astronaut Interaction Specialist',
         desc: `Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.`,
