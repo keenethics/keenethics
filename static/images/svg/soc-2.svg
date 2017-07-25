@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3806 365 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.35;
+      }
+    </style>
+  </defs>
+  <g id="LinkedIn_icon" data-name="LinkedIn icon" transform="translate(3806 365)">
+    <path id="Path_75" data-name="Path 75" class="cls-1" d="M27.871,21.3a3.2,3.2,0,0,0-2.9,1.6V21.527H21.743c.042.909,0,9.7,0,9.7h3.224V25.808a2.173,2.173,0,0,1,.106-.787,1.766,1.766,0,0,1,1.655-1.18c1.167,0,1.633.889,1.633,2.194v5.19h3.225V25.662C31.583,22.684,29.992,21.3,27.871,21.3Zm-2.907,1.635h-.02a.242.242,0,0,0,.02-.033Z" transform="translate(-4.227 -4.14)"/>
+    <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-1" width="3.224" height="9.7" transform="translate(12.505 17.387)"/>
+    <path id="Path_76" data-name="Path 76" class="cls-1" d="M20,0A20,20,0,1,0,40,20,20.023,20.023,0,0,0,20,0ZM30.606,29.046a1.558,1.558,0,0,1-1.578,1.539H10.836A1.558,1.558,0,0,1,9.26,29.046v-18.4A1.558,1.558,0,0,1,10.836,9.1H29.028a1.559,1.559,0,0,1,1.578,1.539v18.4Z"/>
+    <path id="Path_77" data-name="Path 77" class="cls-1" d="M17.111,15.777a1.68,1.68,0,1,0-.043,3.351h.021a1.681,1.681,0,1,0,.022-3.351Z" transform="translate(-2.972 -3.067)"/>
+  </g>
+</svg>

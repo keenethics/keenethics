@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-1345 -7889 50 48.831">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9e61ad;
+      }
+
+      .cls-2 {
+        fill: #8255a3;
+      }
+
+      .cls-3 {
+        fill: #cd0f7e;
+      }
+
+      .cls-4 {
+        fill: #a70d6f;
+      }
+
+      .cls-5 {
+        fill: #88519f;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-7 {
+        fill: #714896;
+      }
+
+      .cls-8 {
+        fill: #6f4795;
+      }
+
+      .cls-9 {
+        fill: #76357e;
+      }
+
+      .cls-10 {
+        fill: #9c60ad;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.539" y1="1.003" x2="0.53" y2="0.005" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#704794"/>
+      <stop offset="1" stop-color="#e92888"/>
+    </linearGradient>
+  </defs>
+  <g id="Aurelia_logo" data-name="Aurelia logo" transform="translate(-2285.856 -8142.481)">
+    <rect id="Rectangle_115" data-name="Rectangle 115" class="cls-1" width="3.816" height="3.816" transform="matrix(0.574, 0.819, -0.819, 0.574, 945.96, 263.569)"/>
+    <rect id="Rectangle_116" data-name="Rectangle 116" class="cls-2" width="8.905" height="8.905" transform="matrix(-0.574, -0.819, 0.819, -0.574, 961.935, 302.311)"/>
+    <rect id="Rectangle_118" data-name="Rectangle 118" class="cls-3" width="16.538" height="12.721" transform="matrix(0.574, 0.819, -0.819, 0.574, 956.51, 253.481)"/>
+    <rect id="Rectangle_119" data-name="Rectangle 119" class="cls-4" width="2.544" height="8.905" transform="matrix(0.574, 0.819, -0.819, 0.574, 961.41, 267.133)"/>
+    <rect id="Rectangle_120" data-name="Rectangle 120" class="cls-1" width="8.905" height="6.361" transform="matrix(0.574, 0.819, -0.819, 0.574, 968.399, 255.749)"/>
+    <rect id="Rectangle_121" data-name="Rectangle 121" class="cls-5" width="2.544" height="3.816" transform="matrix(0.574, 0.819, -0.819, 0.574, 969.963, 262.419)"/>
+    <rect id="Rectangle_122" data-name="Rectangle 122" class="cls-6" width="13.993" height="49.613" transform="translate(981.987 259.323) rotate(56)"/>
+    <rect id="Rectangle_123" data-name="Rectangle 123" class="cls-7" width="2.544" height="5.089" transform="matrix(-0.574, -0.819, 0.819, -0.574, 961.413, 294.912)"/>
+    <rect id="Rectangle_124" data-name="Rectangle 124" class="cls-2" width="2.544" height="2.544" transform="matrix(-0.574, -0.819, 0.819, -0.574, 954.471, 299.645)"/>
+    <rect id="Rectangle_125" data-name="Rectangle 125" class="cls-2" width="8.905" height="8.905" transform="matrix(-0.574, -0.819, 0.819, -0.574, 983.561, 288.318)"/>
+    <rect id="Rectangle_126" data-name="Rectangle 126" class="cls-8" width="2.544" height="2.544" transform="matrix(-0.574, -0.819, 0.819, -0.574, 979.913, 283.108)"/>
+    <rect id="Rectangle_127" data-name="Rectangle 127" class="cls-9" width="16.538" height="11.449" transform="matrix(-0.574, -0.819, 0.819, -0.574, 975.218, 302.203)"/>
+    <rect id="Rectangle_128" data-name="Rectangle 128" class="cls-10" width="8.905" height="8.905" transform="matrix(-0.574, -0.819, 0.819, -0.574, 946.67, 280.685)"/>
+    <rect id="Rectangle_129" data-name="Rectangle 129" class="cls-5" width="3.816" height="5.089" transform="matrix(-0.574, -0.819, 0.819, -0.574, 949.796, 278.496)"/>
+  </g>
+</svg>

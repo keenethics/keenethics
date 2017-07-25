@@ -1,4 +1,4 @@
-.idea/*
-mup.js
-node_modules/
 .DS_Store
+.next
+node_modules
+yarn-error.log

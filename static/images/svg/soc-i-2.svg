@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3798 4139 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a0adc9;
+      }
+    </style>
+  </defs>
+  <g id="LinkedIn_icon" data-name="LinkedIn icon" transform="translate(-3798 4139)">
+    <path id="Path_494" data-name="Path 494" class="cls-1" d="M26.339,21.3a2.4,2.4,0,0,0-2.178,1.2V21.47H21.743c.031.682,0,7.275,0,7.275h2.418V24.68a1.629,1.629,0,0,1,.079-.59,1.324,1.324,0,0,1,1.241-.885c.875,0,1.225.667,1.225,1.646v3.892h2.419V24.571C29.123,22.338,27.93,21.3,26.339,21.3Zm-2.18,1.227h-.015a.181.181,0,0,0,.015-.025Z" transform="translate(-8.606 -8.43)"/>
+    <rect id="Rectangle_239" data-name="Rectangle 239" class="cls-1" width="2.418" height="7.275" transform="translate(9.379 13.04)"/>
+    <path id="Path_495" data-name="Path 495" class="cls-1" d="M15,0A15,15,0,1,0,30,15,15.017,15.017,0,0,0,15,0Zm7.954,21.785a1.168,1.168,0,0,1-1.184,1.154H8.127a1.168,1.168,0,0,1-1.182-1.154V7.982A1.169,1.169,0,0,1,8.127,6.828H21.771a1.169,1.169,0,0,1,1.184,1.154v13.8Z"/>
+    <path id="Path_496" data-name="Path 496" class="cls-1" d="M16.655,15.777a1.26,1.26,0,1,0-.032,2.513h.016a1.261,1.261,0,1,0,.016-2.513Z" transform="translate(-6.051 -6.244)"/>
+  </g>
+</svg>

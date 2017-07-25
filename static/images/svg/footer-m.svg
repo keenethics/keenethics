@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="none"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4205.018 -18823.725 2324.471 206.053">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        filter: url(#Info_back);
+      }
+    </style>
+    <filter id="Info_back" x="-4205.018" y="-18823.725" width="2324.471" height="206.053" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#5371cc" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Info_back-2" data-name="Info back" class="cls-1" d="M250.982,969.2S373.04,954.777,424.75,954.43,591.711,963,638.477,962.986s192.768-12.916,221.452-12.932,155.575,12.361,199.79,12.516,172.37-12.727,206.46-12.516,157.983,12.332,194.461,12.516,176.806-8.051,194.13-8.354,134.8,8.2,172.2,8.354,82.813-3.7,92.447-8.354,121.873-11.637,140.918-11.223,136.376,14.775,160.29,14.8S2337.37,936.408,2375,936.275s91.858,17.439,140.458,17.941v128.111H250.982Z" transform="translate(-4426 -19732)"/>
+  </g>
+</svg>

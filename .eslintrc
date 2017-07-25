@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": 2,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }]
+  },
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "async-await"
+  ],
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "airbnb"
+  ]
+}

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3536.909 12485.998 186.908 186.873">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f47cc;
+        opacity: 0.3;
+      }
+
+      .cls-2 {
+        fill: #4c5ca2;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #7e92cb;
+      }
+
+      .cls-5 {
+        fill: #7383bf;
+      }
+
+      .cls-6 {
+        fill: #e7f3fc;
+      }
+
+      .cls-7 {
+        filter: url(#Shadow);
+      }
+    </style>
+    <filter id="Shadow" x="-3536.909" y="12485.998" width="186.908" height="186.873" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#3f47cc"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Mail_icon" data-name="Mail icon" transform="translate(-3506.914 12505.999)">
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, 3506.91, -12506)">
+      <path id="Shadow-2" data-name="Shadow" class="cls-1" d="M125.9,126.873v0H.279a.361.361,0,0,1-.047,0H0v-70L13.126,44.652V19.688H39.952L59.381,1.6a5.972,5.972,0,0,1,8.145,0L86.955,19.688h26.827V44.652l13.126,12.221v70h-.236a.38.38,0,0,1-.048,0Z" transform="translate(-3506.91 12506)"/>
+    </g>
+    <path id="Path_4860" data-name="Path 4860" class="cls-2" d="M113.782,20.413V39.871L63.455,67.612,13.129,39.871V20.413L0,32.632v70H126.91v-70Z" transform="translate(0 24.238)"/>
+    <g id="Group_1631" data-name="Group 1631" transform="translate(13.129 19.685)">
+      <path id="Path_4864" data-name="Path 4864" class="cls-3" d="M56.327,81.165l50.327-27.742V9H6V53.423Z" transform="translate(-6 -9)"/>
+    </g>
+    <path id="Path_4861" data-name="Path 4861" class="cls-2" d="M65.264,19.686,45.834,1.6a5.981,5.981,0,0,0-8.146,0L18.259,19.686Z" transform="translate(21.694 -0.001)"/>
+    <path id="Path_4862" data-name="Path 4862" class="cls-4" d="M.2,26.059l125.84,69.367c-.072.28-.063.243-.136.523H.282A.283.283,0,0,1,0,95.667V26.178A.134.134,0,0,1,.2,26.059Z" transform="translate(0 30.922)"/>
+    <path id="Path_4863" data-name="Path 4863" class="cls-5" d="M92.256,26.059,29,60.928l62.584,34.5-.136.523h.724a.283.283,0,0,0,.282-.282V26.175A.134.134,0,0,0,92.256,26.059Z" transform="translate(34.455 30.922)"/>
+    <path id="Path_4865" data-name="Path 4865" class="cls-6" d="M40.317,19.375H27.188a2.187,2.187,0,1,1,0-4.375H40.317a2.187,2.187,0,1,1,0,4.375Z" transform="translate(29.703 17.81)"/>
+    <path id="Path_4866" data-name="Path 4866" class="cls-6" d="M50.5,34.375H35.188a2.187,2.187,0,1,1,0-4.375H50.5a2.187,2.187,0,1,1,0,4.375Z" transform="translate(39.208 35.622)"/>
+    <path id="Path_4867" data-name="Path 4867" class="cls-6" d="M28.129,26.375H17.188a2.187,2.187,0,1,1,0-4.375H28.129a2.187,2.187,0,1,1,0,4.375Z" transform="translate(17.822 26.122)"/>
+    <path id="Path_4868" data-name="Path 4868" class="cls-6" d="M47.693,26.375h-17.5a2.187,2.187,0,1,1,0-4.375h17.5a2.187,2.187,0,1,1,0,4.375Z" transform="translate(33.267 26.122)"/>
+    <path id="Path_4869" data-name="Path 4869" class="cls-6" d="M26.188,26.36A2.167,2.167,0,0,1,24,24.173a2.241,2.241,0,0,1,.635-1.553,2.292,2.292,0,0,1,3.107,0,2.251,2.251,0,0,1,.635,1.553,2.167,2.167,0,0,1-2.188,2.187Z" transform="translate(28.515 26.137)"/>
+    <path id="Path_4870" data-name="Path 4870" class="cls-6" d="M43.069,34.375H21.188a2.187,2.187,0,1,1,0-4.375H43.069a2.187,2.187,0,1,1,0,4.375Z" transform="translate(22.574 35.622)"/>
+    <path id="Path_4871" data-name="Path 4871" class="cls-6" d="M17.188,34.36a2.209,2.209,0,0,1-1.554-.634A2.3,2.3,0,0,1,15,32.173a2.157,2.157,0,0,1,.635-1.553,2.291,2.291,0,0,1,3.107,0,2.25,2.25,0,0,1,.635,1.553,2.167,2.167,0,0,1-2.188,2.187Z" transform="translate(17.822 35.637)"/>
+    <path id="Path_4872" data-name="Path 4872" class="cls-6" d="M42.188,26.36A2.167,2.167,0,0,1,40,24.173a2.241,2.241,0,0,1,.635-1.553,2.2,2.2,0,0,1,3.107,3.106A2.312,2.312,0,0,1,42.188,26.36Z" transform="translate(47.524 26.137)"/>
+  </g>
+</svg>

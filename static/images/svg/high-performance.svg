@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4071 -12834 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#de3535"/>
+      <stop offset="1" stop-color="#e46d2e"/>
+    </linearGradient>
+  </defs>
+  <path id="High_Performance_icon" data-name="High Performance icon" class="cls-1" d="M38.823,37.647H35.059V23.765a1.112,1.112,0,0,0-1.177-1.177H29.176A1.112,1.112,0,0,0,28,23.765V37.647H24.47V31.294a1.112,1.112,0,0,0-1.177-1.177H18.588a1.112,1.112,0,0,0-1.177,1.177v6.353H13.882V27.294a1.112,1.112,0,0,0-1.177-1.177H8a1.112,1.112,0,0,0-1.177,1.177V37.647H2.353V25.706l8.235-6.176,8.941,5.412a1.109,1.109,0,0,0,1.412-.235L37.176,9.412a1.165,1.165,0,1,0-1.647-1.647L20,22.353l-8.941-5.412a1.5,1.5,0,0,0-1.412,0L2.353,22.365V1.177A1.111,1.111,0,0,0,1.176,0,1.112,1.112,0,0,0,0,1.177V38.823A1.112,1.112,0,0,0,1.176,40H38.823a1.176,1.176,0,1,0,0-2.353ZM30.353,24.941h2.353V37.647H30.353ZM19.765,32.471h2.353v5.177H19.765Zm-10.588-4h2.353v9.177H9.176Z" transform="translate(-4071 -12834)"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3448 -19303 238.318 238.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2, .cls-3 {
+        opacity: 0.05;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1" y1="0.452" x2="0" y2="0.465" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3c2133"/>
+      <stop offset="1" stop-color="#3d253e"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1998" data-name="Group 1998" transform="translate(-4494 -20452)">
+    <circle id="Planet" class="cls-1" cx="119.098" cy="119.098" r="119.098" transform="translate(1046 1149)"/>
+    <path id="Path_6406" data-name="Path 6406" class="cls-2" d="M1293.768,1230.564s6.315,40.924-59.928,94.756-122.833,44.563-122.833,44.563,33.258,25.618,70.3,24.557,70.259-14.736,88.012-36.2,33.081-49.5,33.412-77.914A133.11,133.11,0,0,0,1293.768,1230.564Z" transform="translate(-18.42 -7.131)"/>
+    <path id="Path_6406-2" data-name="Path 6406" class="cls-3" d="M1082.013,1242.793a37.824,37.824,0,0,0-4.555,15.778" transform="translate(-2 2)"/>
+    <path id="Path_6407" data-name="Path 6407" class="cls-3" d="M1077.458,1263.109s.124,4.015.458,5.913" transform="translate(-2 2)"/>
+  </g>
+</svg>

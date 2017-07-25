@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-4073 5728 45 47.736">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#de3535"/>
+      <stop offset="1" stop-color="#e46d2e"/>
+    </linearGradient>
+  </defs>
+  <path id="Social_Side_icon" data-name="Social Side icon" class="cls-1" d="M50.256,30.667A8.542,8.542,0,0,0,43.5,34L30.383,26.673a8.562,8.562,0,0,0,.476-2.815,8.375,8.375,0,0,0-.486-2.825l13.1-7.315a8.525,8.525,0,1,0-1.764-5.184,8.333,8.333,0,0,0,.486,2.825L29.1,18.674a8.526,8.526,0,1,0,.02,10.358l13.1,7.325a8.53,8.53,0,1,0,8.029-5.689Zm0-27.981A5.858,5.858,0,1,1,44.4,8.544,5.863,5.863,0,0,1,50.256,2.686ZM22.344,29.716A5.858,5.858,0,1,1,28.2,23.858,5.863,5.863,0,0,1,22.344,29.716ZM50.256,45.05a5.858,5.858,0,1,1,5.858-5.858A5.863,5.863,0,0,1,50.256,45.05Z" transform="translate(-4086.8 5728)"/>
+</svg>

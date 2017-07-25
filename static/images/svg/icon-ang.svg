@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1518 -7892 50 53.706">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dd0031;
+      }
+
+      .cls-2 {
+        fill: #c3002f;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Angular_logo" data-name="Angular logo" transform="translate(-1549.9 -7922)">
+    <path id="Path_342" data-name="Path 342" class="cls-1" d="M56.9,30h0l-25,8.915,3.813,33.056L56.9,83.706h0L78.087,71.971,81.9,38.915Z" transform="translate(0 0)"/>
+    <path id="Path_343" data-name="Path 343" class="cls-2" d="M125,30V63.136h0V83.706h0l21.187-11.735L150,38.915Z" transform="translate(-68.1 0)"/>
+    <path id="Path_344" data-name="Path 344" class="cls-3" d="M82.428,52.1,66.8,87.143h5.827L75.769,79.3H89.034l3.142,7.841H98L82.428,52.1Zm4.565,22.368h-9.13l4.565-10.983Z" transform="translate(-25.528 -16.166)"/>
+  </g>
+</svg>

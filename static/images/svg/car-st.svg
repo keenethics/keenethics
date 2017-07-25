@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3562.121 7266.625 51.299 51.299">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #de4f4f;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        filter: url(#Star);
+      }
+    </style>
+    <filter id="Star" x="-3562.121" y="7266.625" width="51.299" height="51.299" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#cb3737" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path id="Star-2" data-name="Star" class="cls-1" d="M7.472,17.744v-.886c-.417-3.238-3.55-3.717-4.7-3.783q-.1,0-.191-.008c-.145,0-.228,0-.228,0l.057-.018A2.8,2.8,0,0,1,2.8,7.472h.36l.09,0c3.219-.058,4.026-2.612,4.22-4.156V2.8a2.816,2.816,0,0,1,.056-.559c0-.054,0-.083,0-.083l.009.056a2.8,2.8,0,0,1,5.542.585v.81c.5,3.961,4.863,3.86,4.863,3.86l-.027,0a2.8,2.8,0,0,1-.166,5.6H15.921a4.549,4.549,0,0,0-2.846,3.951v.718a2.8,2.8,0,1,1-5.6,0Z" transform="translate(-3536.47 7274.75) rotate(45)"/>
+  </g>
+</svg>

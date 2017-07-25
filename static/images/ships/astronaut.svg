@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3066 9356 132.741 38.22">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #4a5acc;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #737ad6;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <g id="Astronaut" transform="translate(-3065.5 9356.5)">
+    <ellipse id="Ellipse_251" data-name="Ellipse 251" class="cls-1" cx="8.04" cy="7.84" rx="8.04" ry="7.84" transform="translate(65.6 3.21)"/>
+    <ellipse id="Ellipse_252" data-name="Ellipse 252" class="cls-2" cx="1.86" cy="1.81" rx="1.86" ry="1.81" transform="translate(71.98 9.24)"/>
+    <rect id="Rectangle_1593" data-name="Rectangle 1593" class="cls-1" width="21" height="16" rx="1" transform="translate(123.5 19.71) rotate(180)"/>
+    <rect id="Rectangle_1595" data-name="Rectangle 1595" class="cls-3" width="7" height="3" rx="0.5" transform="translate(17.5 12.97)"/>
+    <path id="Path_3945" data-name="Path 3945" class="cls-1" d="M39.5,22.72l6.85,12.45A3,3,0,0,0,49,36.72H75.9a3,3,0,0,0,2.62-1.53l7-12.47c5.24-2.09,8.57-2,14,0v2.5a.5.5,0,0,0,.5.5h16a.5.5,0,0,0,.5-.5v-2.5h10a2.77,2.77,0,0,0,4.72-2V14.28a1.73,1.73,0,0,0-.51-1.22l-3.78-3.78V1.22a.5.5,0,0,0-.5-.5H99.76a.5.5,0,0,0-.5.5v2.5c-5.34,1.2-8.6,1.33-13.76,0L83.58.93A1,1,0,0,0,82.76.5H64.28a1,1,0,0,0-.71.29l-3.5,3.5H32.5V1.18A.37.37,0,0,0,32,.81L1.29,8.12a1,1,0,0,0-.79,1v16l2.72,5.07a1,1,0,0,0,.88.53H20a.5.5,0,0,0,.5-.5v-7.5Z"/>
+    <line id="Line_298" data-name="Line 298" class="cls-1" y2="19" transform="translate(85.5 3.72)"/>
+    <line id="Line_299" data-name="Line 299" class="cls-1" y2="24" transform="translate(99.5 0.72)"/>
+    <line id="Line_300" data-name="Line 300" class="cls-1" x2="21" transform="translate(102.5 7.25)"/>
+    <line id="Line_301" data-name="Line 301" class="cls-1" x2="20" transform="translate(103 16.06)"/>
+    <path id="Path_3946" data-name="Path 3946" class="cls-1" d="M75.1,33.72H49.9a.68.68,0,0,1-.6-.36L43.53,22.78v-.06h37.9v.06L75.69,33.36a.68.68,0,0,1-.59.36Z"/>
+    <rect id="Rectangle_1594" data-name="Rectangle 1594" class="cls-1" width="28" height="11" rx="1" transform="translate(32.5 7.47)"/>
+    <line id="Line_302" data-name="Line 302" class="cls-3" x1="44" transform="translate(16.5 12.97)"/>
+    <line id="Line_303" data-name="Line 303" class="cls-3" x1="26.57" transform="translate(99.5 11.72)"/>
+    <path id="Path_3947" data-name="Path 3947" class="cls-4" d="M5.644,27.566H16.563a.88.88,0,0,0,.937-.808V22.72H2.589a.037.037,0,0,0,0,.065l2.624,4.531a.532.532,0,0,0,.431.25Z"/>
+  </g>
+</svg>
