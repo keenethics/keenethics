@@ -1,0 +1,40 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _main = require('../components/layout/main');
+
+var _main2 = _interopRequireDefault(_main);
+
+var _navigation = require('../components/page/navigation');
+
+var _navigation2 = _interopRequireDefault(_navigation);
+
+var _main3 = require('../main.config');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ServicesWebDevelopmentApple = function ServicesWebDevelopmentApple(_ref) {
+  var url = _ref.url;
+  return _react2.default.createElement(_main2.default, { currentURL: url }, _react2.default.createElement('div', { className: 'content-wrap' }, _react2.default.createElement(_navigation2.default, {
+    url: url,
+    image: 'apple',
+    points: _main3.servicesMobileDevelopment
+  }), _react2.default.createElement('div', { className: 'content-block' }, _react2.default.createElement('div', { className: 'content' }, _react2.default.createElement('h2', null, 'iOS Mobile App Development'), _react2.default.createElement('p', null, 'If you are not sure that you need an iOS App for your business, face this fact: in 2016 the total number of active Apple devices has reached 1 billion. So you do need one if you want to offer your services and products to a large community of Apple users.'), _react2.default.createElement('p', null, 'Finding the best provider can take time. You will recognize, that there are a lot of ios app development companies worldwide. But you are not ought to hire a company, which specializes only in the ios app development language and does not have expertise in any other. Plus, rates in this type of companies are often extremely higher.'), _react2.default.createElement('p', null, 'At Keenethics we recommend to chose a company, that has experience in iOS and Android mobile app development software and can have both projects in production at the same time. Such decision will not only save your time and budget but also, it will help to avoid an extra routine.'), _react2.default.createElement('h3', null, 'Professional Apple application development'), _react2.default.createElement('p', null, 'On our spaceship, we use the best programming language for mobile apps to bring clients projects to life. Swift and the Objective-C are the main languages for creating iOS apps. Developers can use only the official ios app development software in their work. The major apple developer program is Xcode. It is a development environment containing tools developed by Apple for developing software for products like iPhone, iPad and etc. An apple developer certificate proves that the developer has the required knowledge and rights for building Apple applications. It is important and you can\u2019t ignore it because otherwise you will not be allowed to upload the app on the AppStore.'), _react2.default.createElement('p', null, 'But what language are android apps written in today? The core language is Java and the official development environment for Android development is Android Studio. So we can use open source mobile app development software for projects, based on the Android platform.'), _react2.default.createElement('p', null, 'If you are not sure which platform to choose, we can offer an all-purpose solution and develop a powerful cross-platform App or a Progressive Web App that will suit every device, regardless of the platform, brand, sizes and so on. Cross-platform and Progressive Web Apps have huge pros: they are responsive, connectivity independent, app-like, linkable, and safe.'), _react2.default.createElement('p', null, 'Astronauts at Keenethics will deliver a high-quality mobile app, no matter on which platform it is based.')))));
+};
+
+ServicesWebDevelopmentApple.defaultProps = {
+  url: {}
+};
+
+exports.default = ServicesWebDevelopmentApple;
