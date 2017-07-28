@@ -6,15 +6,9 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
+const { mailgunAuth } = require('./private.config');
 
 const Router = require('./routes').Router;
-
-const mailgunAuth = {
-  auth: {
-    api_key: 'key-75c9dfefec6348ace59475be3d83c186',
-    domain: 'sandbox3ea896b1438d434ea69663a733b9d81b.mailgun.org',
-  },
-};
 
 const dev = process.env.NODE_ENV !== 'production';
 

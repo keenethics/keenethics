@@ -3628,3 +3628,20 @@ $col-margin-left-tab: 60px;
         transform: translate(0, 0);
     }
 }
+.skype_button {
+  display: inline;
+  p {
+    display: inline !important;
+  }
+  a {
+    display: inline;
+    padding: 0;
+  }
+  .skype-button {
+    display: none;
+  }
+  img {
+    margin: 3px 0 0 5px !important;
+    vertical-align: middle !important;
+  }
+}

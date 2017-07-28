@@ -1,3 +1,5 @@
+/* global Skype */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,6 +13,13 @@ export default class Index extends React.Component {
       contactsIsOpen: false,
     };
     this.onClick = this.onClick.bind(this);
+  }
+  componentDidMount() {
+    Skype.ui({
+      name: 'chat',
+      element: 'SkypeButton_Call_hermannalexey_1',
+      participants: ['hermannalexey'],
+    });
   }
   onClick() {
     this.setState({
@@ -77,7 +86,10 @@ export default class Index extends React.Component {
                     </div>
 
                     <a href={'mailto:founders@keenethics.com'}>founders@keenethics.com</a>
-                    <i>Drop Us a Letter</i>
+                    <i>
+                      Drop Us a Letter or
+                      <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
+                    </i>
                   </div>
 
                   <div className="contact-item">
