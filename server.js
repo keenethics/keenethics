@@ -25,6 +25,8 @@ app.prepare().then(() => {
   const server = express();
   const transporter = nodemailer.createTransport(mailgun(mailgunAuth));
 
+  server.set('port', process.env.PORT || 3000);
+
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: true }));
 
@@ -222,7 +224,7 @@ app.prepare().then(() => {
   });
   server.get('*', (req, res) => handle(req, res));
 
-  server.listen(3000, (err) => {
+  server.listen(server.get('port'), (err) => {
     if (err) {
       throw err;
     }

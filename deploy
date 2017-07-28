@@ -1,0 +1,7 @@
+#!/bin/bash
+yarn build
+ssh root@188.166.35.10 pm2 stop server
+ssh root@188.166.35.10 rm -rf /home/keenethics
+rsync -a ~/Projects/site/keenethics/ root@188.166.35.10:/home/keenethics
+sleep 5s
+ssh root@188.166.35.10 "cd /home/keenethics ; pm2 start server.sh"
