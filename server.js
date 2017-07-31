@@ -23,6 +23,7 @@ app.prepare().then(() => {
 
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: true }));
+  server.use(express.static('public'));
 
   Router.forEachPattern((page, pattern, defaultParams) => (
     server.get(pattern, (req, res) => (
@@ -193,6 +194,9 @@ app.prepare().then(() => {
 
       res.send(posts);
     });
+  });
+  server.get('/robots.txt', (req, res) => {
+    res.send('hello world');
   });
   server.get('/post/:name', (req, res) => {
     const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
