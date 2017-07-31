@@ -629,7 +629,7 @@ export const superteam = [
   {
     name: 'Max Savonin',
     position: 'Chief of The Astronaut Office',
-    description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts’ activities.',
+    description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts� activities.',
     avatar: 'maks_s.jpg',
   },
   {
@@ -639,6 +639,12 @@ export const superteam = [
     avatar: 'alex_h.jpg',
   },
   {
+    name: 'Viktoria Muhina',
+    position: 'Astronaut Interaction Specialist',
+    description: 'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
+    avatar: 'viktoria_m.jpg',
+  },
+  {
     name: 'Sofia Ivanchuk',
     position: 'Steward',
     description: 'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
@@ -646,22 +652,11 @@ export const superteam = [
   },
   {
     name: 'Alexandr Saltykov',
-    position: '',
-    description: '',
+    position: 'Mission Support Officer',
+    description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
     avatar: 'sasha_s.jpg',
   },
-  {
-    name: 'Viktoria Muhina',
-    position: '',
-    description: '',
-    avatar: 'viktoria_m.jpg',
-  },
-  {
-    name: 'Mukola Havrulak',
-    position: '',
-    description: '',
-    avatar: 'mykola_h.jpg',
-  },
+
 ];
 export const team = [
   {
@@ -670,9 +665,9 @@ export const team = [
     people: [
       {
         name: 'Illya Sopov',
-        position: '',
-        description: '',
-        avatar: '.jpg',
+        position: 'Full-stack js Frigate Captain',
+        description: 'The most peaceful astronaut. He stays calm even in the most dangerous situations. This skill he has gained through intergalactic hitchhiking.',
+        avatar: 'illya_s.jpg',
       },
       {
         name: 'Oksentuk Vlad',
@@ -688,7 +683,7 @@ export const team = [
     people: [
       {
         name: 'Yara Morozova',
-        position: 'Meteor.js Corvette Capt',
+        position: 'Full-stack js Corvette Capt',
         description: 'She is the first woman to have flown in Keenethics space, having been selected from more than five finalists to pilot Keen project applicants.',
         avatar: 'yara_m.jpg',
       },
@@ -697,6 +692,12 @@ export const team = [
         position: 'Full-stack js Corvette Capt',
         description: 'Best sailor on duty. He does his work while the rest of spacecraft members are asleep.',
         avatar: 'taras_b.jpg',
+      },
+      {
+        name: 'Ostroviy Mykhailo',
+        position: 'Full-stack js Corvette Capt ',
+        description: 'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
+        avatar: 'michael_rich.jpg',
       },
     ],
   },
@@ -712,21 +713,15 @@ export const team = [
       },
       {
         name: 'Yaskiv Taras',
-        position: 'Meteor.js Capt-lieutenant',
+        position: 'Full-stack js Capt-lieutenant',
         description: 'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
         avatar: 'taras_y.jpg',
       },
       {
         name: 'Andrij Tatomyr',
-        position: 'Meteor.js Capt-lieutenant',
+        position: 'Full-stack js Capt-lieutenant',
         description: 'Ph. D, he has firm and scientific approach to problem-solving and he used to be a pilot on several shuttle missions.',
         avatar: 'andrew_t.jpg',
-      },
-      {
-        name: 'Ostroviy Mykhailo',
-        position: 'Full-stack js Capt-lieutenant',
-        description: 'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
-        avatar: 'michael_rich.jpg',
       },
       {
         name: 'Yanul Marina',
@@ -754,7 +749,7 @@ export const team = [
       },
       {
         name: 'Golomb Yura',
-        position: 'Full-stack js Midshipman',
+        position: 'Full-stack js Capt-lieutenant',
         description: 'Participated in large battles as a Rookie and dreams about leading his own squad',
         avatar: 'ura_g.jpg',
       },
@@ -778,7 +773,7 @@ export const team = [
       },
       {
         name: 'Nazar Kukarkin',
-        position: 'Meteor.js Midshipman',
+        position: 'Full-stack js Midshipman',
         description: 'Strong Pilot with will of adamant and suspended approach. Fond of space rockclimbing.',
         avatar: 'nazar_k.jpg',
       },

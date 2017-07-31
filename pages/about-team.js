@@ -44,13 +44,20 @@ export default class AboutTeam extends React.Component {
     const { left, top } = e.currentTarget.getBoundingClientRect();
     const bodyRect = document.body.getBoundingClientRect();
 
+    let posX = left - 95;
+    const posY = (top + 24) - bodyRect.top;
+
+    if (document.body.clientWidth <= 767) {
+      posX = (document.body.clientWidth / 2) - 145;
+    }
+
     this.setState({
       image: img,
       name,
       position: pos,
       description: desc,
-      pos_x: left - 95,
-      pos_y: (top + 24) - bodyRect.top,
+      pos_x: posX,
+      pos_y: posY,
       show: true,
     });
   }
