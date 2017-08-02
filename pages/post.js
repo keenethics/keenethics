@@ -92,38 +92,6 @@ export default class Post extends React.Component {
                 <div className="article-main">
                   <ReactMarkdown source={this.post.content} />
                 </div>
-
-                <div className="article-btm">
-                  <div className="article-social">
-                    <span>Share It:</span>
-                    <ul>
-                      <li className="soc-1"><a href="">1</a></li>
-                      <li className="soc-2"><a href="">2</a></li>
-                      <li className="soc-3"><a href="">3</a></li>
-                      <li className="soc-4"><a href="">4</a></li>
-                      <li className="soc-5"><a href="">5</a></li>
-                    </ul>
-                  </div>
-
-                  <div className="right-side">
-                    <div className="article-s-wrap">
-                      <div className="article-s">
-                        <img width="20" className="ico" src="/static/images/svg/icon-eye.svg" alt="" />
-                        <span>127</span>
-                      </div>
-
-                      <div className="article-s">
-                        <img width="18" className="ico" src="/static/images/svg/icon-h-2.svg" alt="" />
-                        <span>65</span>
-                      </div>
-                    </div>
-
-                    <a href="" className="next-post">
-                      Next Post
-                      <span className="arrow" />
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -92,7 +92,7 @@ app.prepare().then(() => {
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
-      from: 'sergey.gornostaev@keenethics.com',
+      from: 'no-reply@keenethics.com',
       to: 'accounts@gornostaev.pro',
       subject: 'New contact',
       html,
@@ -153,7 +153,7 @@ app.prepare().then(() => {
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
-      from: 'sergey.gornostaev@keenethics.com',
+      from: 'no-reply@keenethics.com',
       to: 'accounts@gornostaev.pro',
       subject: `Hiring: ${position.value}`,
       html,
