@@ -1806,8 +1806,7 @@ $col-margin-left-tab: 60px;
 
 @include tablet {
   .content-full {
-    margin-left: 150px;
-    padding: 0 35px;
+    padding: 0 40px;
   }
 }
 
@@ -1988,25 +1987,10 @@ $col-margin-left-tab: 60px;
     ------------------- */
 
 .content-socket-m {
-    padding: 60px 100px 50px;
+    padding: 60px 40px 50px;
 
     &.top {
         height: 231px;
-    }
-
-    @media (max-width: 1150px){
-        padding-left: 45px;
-        padding-right: 45px;
-    }
-
-    @include mobile {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @include mobile-s {
-        padding-left: 20px;
-        padding-right: 20px;
     }
 }
 
@@ -2179,9 +2163,8 @@ $col-margin-left-tab: 60px;
         font-size: 18px;
         line-height: 25px;
         color: #000;
-        height: 70px;
         overflow: hidden;
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
 
     p {
@@ -2394,33 +2377,7 @@ $col-margin-left-tab: 60px;
 }
 
 .article-user {
-    padding-left: 0px;
-
-    .avatar {
-        @include border-rad(50%);
-        position: absolute;
-        width: 31px;
-        height: 31px;
-        left: 0;
-        top: -8px;
-        background-color: #fff;
-
-        img {
-            @include border-rad(50%);
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    @include tablet {
-        padding-left: 35px;
-
-        .avatar {
-            width: 20px;
-            height: 20px;
-            top: -5px;
-        }
-    }
+  padding-left: 0px;
 }
 
 .article-date {
@@ -2490,6 +2447,23 @@ $col-margin-left-tab: 60px;
         font-size: 13px;
         line-height: 23px;
         padding-bottom: 22px;
+    }
+    img {
+      max-width: 100%;
+    }
+    ol, ul {
+      font-size: 13px;
+      line-height: 23px;
+      padding-bottom: 11px;
+
+      li {
+        padding-bottom: 11px;
+      }
+    }
+    code {
+      display: block;
+      padding: 20px 25px;
+      background-color: #f6f8fa;
     }
 }
 

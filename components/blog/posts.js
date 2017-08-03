@@ -24,18 +24,6 @@ const Posts = ({ posts }) => (
               <p>{post.subtitle}</p>
             </div>
           </div>
-
-          <div className="art-btm">
-            <div className="s-item">
-              <img width="20" className="ico" src="/static/images/svg/icon-eye.svg" alt="" />
-              194
-            </div>
-
-            <div className="s-item">
-              <img width="18" className="ico" src="/static/images/svg/icon-h.svg" alt="" />
-              {post.like || 0}
-            </div>
-          </div>
         </a>
       </Link>
     ))}

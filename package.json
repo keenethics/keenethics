@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint . --ext .jsx,.js; true",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "analyze": "cross-env ANALYZE=1 next build",
+    "deploy": "bash deploy",
   },
   "dependencies": {
     "body-parser": "^1.17.2",
