@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint . --ext .jsx,.js; true",
     "analyze": "cross-env ANALYZE=1 next build",
-    "deploy": "bash deploy",
+    "deploy": "bash deploy"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.0",
     "babel-eslint": "^7.2.3",
-    "cross-env": "^5.0.1",
+    "cross-env": "^5.0.2",
     "css-loader": "^0.28.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
