@@ -9,3 +9,8 @@
 
 1. Start build via `yarn build` command
 2. Start server via `yarn start` command
+
+## Deploy
+
+1. Start build via `yarn deploy` command
+2. Enjoy
