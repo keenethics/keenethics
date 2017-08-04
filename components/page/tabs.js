@@ -67,23 +67,23 @@ const sliderSetting = {
   adaptiveHeight: false,
   arrows: true,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 6,
+  slidesToScroll: 6,
   initialSlide: 0,
   responsive: [
     {
       breakpoint: 1324,
       settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         dots: true,
       },
     },
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         dots: true,
       },
     },
@@ -108,8 +108,8 @@ const PageTabs = ({ points, withDescription }) =>
   <div className="icon-wrap">
     <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
       <Slider {...sliderSetting}>
-        {points.map(element =>
-          <div className="div">
+        {points.map((element, i)=>
+          <div key={i}>
             <PageTabsElement
               item={element}
               key={element.name}

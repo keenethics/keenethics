@@ -238,7 +238,7 @@ html, body {
 
 .icon-wrap {
   overflow: hidden;
-  height: 170px;
+  height: 200px;
   padding: 20px 0 60px 230px;
   margin: -75px 0 0 -230px;
   box-sizing: content-box;
@@ -287,6 +287,7 @@ html, body {
 
         &:last-child {
           padding-right: 55px;
+          padding-top: 20px;
         }
     }
 
