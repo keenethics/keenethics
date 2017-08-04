@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
     "lint": "eslint . --ext .jsx,.js; true",
     "analyze": "cross-env ANALYZE=1 next build",
     "deploy": "bash deploy"
@@ -24,7 +24,6 @@
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
-    "react-draggable": "^2.2.6",
     "react-html-parser": "^1.0.3",
     "react-markdown": "^2.5.0",
     "react-slick": "^0.14.11",
@@ -35,13 +34,13 @@
   "devDependencies": {
     "autoprefixer": "^7.1.0",
     "babel-eslint": "^7.2.3",
-    "cross-env": "^5.0.1",
+    "cross-env": "^5.0.2",
     "css-loader": "^0.28.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-plugin-async-await": "^0.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.3",
