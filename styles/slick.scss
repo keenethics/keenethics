@@ -11,6 +11,7 @@
 
 .slick-list
 {
+    height: 100%;
     position: relative;
 
     display: block;
@@ -71,10 +72,10 @@
 {
     float: right;
 }
-.slick-slide img
+/*.slick-slide img
 {
     display: block;
-}
+}*/
 .slick-slide.slick-loading img
 {
     display: none;
