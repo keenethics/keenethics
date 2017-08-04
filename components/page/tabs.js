@@ -1,41 +1,52 @@
 import Link from 'next/link';
-
 import React from 'react';
 import PropTypes from 'prop-types';
-import Draggable from 'react-draggable';
+import Slider from 'react-slick';
 
-const PageTabsElement = ({ href, name, tabsDescription, icon }) => (
+const PageTabsElement = ({ href, name, tabsDescription, icon }) =>
   <li>
     <Link href={href}>
       <a>
         <div className="inner">
-          {tabsDescription ? (
-            <div className="ico">
-              <div className="tbl">
-                <div className="cell">
-                  <img width="53" src={`/static/images/svg/${icon}.svg`} alt="" />
+          {tabsDescription
+            ? <div className="ico">
+                <div className="tbl">
+                  <div className="cell">
+                    <img
+                      width="53"
+                      src={`/static/images/svg/${icon}.svg`}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            <div className="tbl">
-              <div className="cell">
-                <img width="53" src={`/static/images/svg/${icon}.svg`} alt="" />
-              </div>
-            </div>
-          )}
-          {!tabsDescription || (
+            : <div className="tbl">
+                <div className="cell">
+                  <img
+                    width="53"
+                    src={`/static/images/svg/${icon}.svg`}
+                    alt=""
+                  />
+                </div>
+              </div>}
+          {!tabsDescription ||
             <span>
-              <span className="ttl">{name}</span>
-              <span className="ttl-s">{tabsDescription}</span>
-            </span>
-          )}
+              <span className="ttl">
+                {name}
+              </span>
+              <span className="ttl-s">
+                {tabsDescription}
+              </span>
+            </span>}
         </div>
-        {!tabsDescription ? <div className="icon-name">{name}</div> : null}
+        {!tabsDescription
+          ? <div className="icon-name">
+              {name}
+            </div>
+          : null}
       </a>
     </Link>
-  </li>
-);
+  </li>;
 
 PageTabsElement.propTypes = {
   href: PropTypes.string,
@@ -50,28 +61,68 @@ PageTabsElement.defaultProps = {
   tabsDescription: '',
   icon: '',
 };
-
-const PageTabs = ({ points, withDescription }) => (
+const sliderSetting = {
+  dots: true,
+  infinite: false,
+  adaptiveHeight: false,
+  arrows: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1324,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 3,
+      },
+    },
+    {
+      breakpoint: 440,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+  ],
+};
+const PageTabs = ({ points, withDescription }) =>
   <div className="icon-wrap">
-    <Draggable
-      axis="x"
-      defaultPosition={{ x: 0, y: 0 }}
-      position={null}
-    >
-      <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
-        {points.map(element => (
-          <PageTabsElement
-            key={element.name}
-            href={element.href}
-            name={element.name}
-            tabsDescription={element.tabsDescription || ''}
-            icon={element.icon}
-          />
-        ))}
-      </ul>
-    </Draggable>
-  </div>
-);
+    <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
+      <Slider {...sliderSetting}>
+        {points.map(element =>
+          <div className="div">
+            <PageTabsElement
+              item={element}
+              key={element.name}
+              href={element.href}
+              name={element.name}
+              tabsDescription={element.tabsDescription || ''}
+              icon={element.icon}
+            />
+          </div>,
+        )}
+      </Slider>
+    </ul>
+  </div>;
 
 PageTabs.propTypes = {
   points: PropTypes.arrayOf(PropTypes.object),
