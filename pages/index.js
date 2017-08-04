@@ -101,7 +101,7 @@ export default class Index extends React.Component {
                       </div>
                     </div>
 
-                    <span>+380 (32) 2 535 535</span>
+                    <span>+38 (096) 814 72 66</span>
                     <i>Give Us a Call</i>
                   </div>
                 </div>
