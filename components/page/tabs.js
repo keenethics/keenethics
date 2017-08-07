@@ -105,25 +105,31 @@ const sliderSetting = {
     },
   ],
 };
-const PageTabs = ({ points, withDescription }) =>
+const listOfTabs = points => (
+  points.map((element, i) => (
+    <div key={i}>
+      <PageTabsElement
+        item={element}
+        key={element.name}
+        href={element.href}
+        name={element.name}
+        tabsDescription={element.tabsDescription || ''}
+        icon={element.icon}
+      />
+    </div>
+  ),
+));
+const PageTabs = ({ points, withDescription }) => (
   <div className="icon-wrap">
     <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
-      <Slider {...sliderSetting}>
-        {points.map((element, i)=>
-          <div key={i}>
-            <PageTabsElement
-              item={element}
-              key={element.name}
-              href={element.href}
-              name={element.name}
-              tabsDescription={element.tabsDescription || ''}
-              icon={element.icon}
-            />
-          </div>,
-        )}
-      </Slider>
+      {points.length > 3 ? (
+        <Slider {...sliderSetting}>
+          {listOfTabs(points)}
+        </Slider>
+      ) : listOfTabs(points)}
     </ul>
-  </div>;
+  </div>
+);
 
 PageTabs.propTypes = {
   points: PropTypes.arrayOf(PropTypes.object),
