@@ -96,10 +96,10 @@ export default class AboutTeam extends React.Component {
       const parade = splitTo(t.people, numberOfShips);
 
       return parade.map(p => (
-        <div className="ship-column">
-          <div className={`ship ${t.key}`}>
-            <img src={`/static/images/ships/${t.key}.svg`} alt="" />
-            {p.map((worker, i) => (
+        p.map((worker, i) => (
+          <div className="ship-column">
+            <div className={`ship ${t.key}`}>
+              <img src={`/static/images/ships/${t.key}.svg`} alt="" />
               <div key={worker.name} className={`worker worker-${i}`} data-img={worker.avatar} data-name={worker.name} data-pos="QA" data-desc={worker.descriptio}>
                 <div className="point-flash">
                   <span
@@ -112,9 +112,9 @@ export default class AboutTeam extends React.Component {
                   />
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        ))
       ));
     });
   }
