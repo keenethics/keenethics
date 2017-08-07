@@ -1,11 +1,11 @@
-/* global fetch */
+/* global fetch, window */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import tinytime from 'tinytime';
 
-import 'whatwg-fetch';
+import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 
@@ -13,31 +13,32 @@ const dateTemplate = tinytime('{MMMM} {DD}');
 const timeTemplate = tinytime('{h}:{mm} {a}');
 
 export default class Post extends React.Component {
-  static getInitialProps({ query: { name } }) {
-    return { name };
+  static async getInitialProps(p) {
+    const name = p.query.name;
+    let url = '';
+    if (p && p.req) {
+      const pathArray = p.req.headers.referer.split('/');
+      const protocol = pathArray[0];
+      const host = pathArray[2];
+
+      url = `${protocol}//${host}/post/${name}`;
+    } else {
+      url = `${window.location.protocol}//${window.location.host}/post/${name}`;
+    }
+
+    const res = await fetch(url);
+    const json = await res.json();
+
+    return { post: json };
   }
   constructor(props) {
     super(props);
 
-    this.post = {};
     this.state = {
-      onLoaded: false,
     };
-
-    (async () => {
-      if (typeof fetch !== 'undefined' && props.name) {
-        const res = await fetch(`/post/${props.name}`);
-        this.post = await res.json();
-
-        this.setState({
-          onLoaded: true,
-        });
-      }
-    })();
   }
   render() {
-    const { onLoaded } = this.state;
-    if (!onLoaded) return null;
+    const { post } = this.props;
 
     return (
       <Layout>
@@ -74,23 +75,23 @@ export default class Post extends React.Component {
               <div className="content-socket-m top">
                 <div className="title-page">
                   <div className="title">
-                    {this.post.title}
+                    {post.title}
                   </div>
 
                   <div className="article-desc">
                     <div className="article-user">
-                      <span>{this.post.author}</span>
+                      <span>{post.author}</span>
                     </div>
                     <div className="article-date">
-                      <span>{dateTemplate.render(new Date(+this.post.date))}</span>
-                      <span>{timeTemplate.render(new Date(+this.post.date))}</span>
+                      <span>{dateTemplate.render(new Date(+post.date))}</span>
+                      <span>{timeTemplate.render(new Date(+post.date))}</span>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="content-full">
                 <div className="article-main">
-                  <ReactMarkdown source={this.post.content} />
+                  <ReactMarkdown source={post.content} />
                 </div>
               </div>
             </div>
@@ -102,9 +103,9 @@ export default class Post extends React.Component {
 }
 
 Post.propTypes = {
-  name: PropTypes.string,
+  post: PropTypes.object,
 };
 
 Post.defaultProps = {
-  name: '',
+  post: {},
 };

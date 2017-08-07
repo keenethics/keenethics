@@ -13,6 +13,7 @@ const Router = require('./routes').Router;
 const dev = process.env.NODE_ENV !== 'production';
 
 const app = next({ dev });
+
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
@@ -195,9 +196,6 @@ app.prepare().then(() => {
       res.send(posts);
     });
   });
-  server.get('/robots.txt', (req, res) => {
-    res.send('hello world');
-  });
   server.get('/post/:name', (req, res) => {
     const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
 
@@ -220,6 +218,7 @@ app.prepare().then(() => {
 
     res.send(post);
   });
+
   server.get('*', (req, res) => handle(req, res));
 
   server.listen(server.get('port'), (err) => {

@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "next": "^2.4.7",
+    "express": "^4.15.4",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^2.4.9",
+    "next-routes": "^1.0.40",
     "next-url-prettifier": "^1.1.5",
     "nodemailer": "^4.0.1",
     "nodemailer-mailgun-transport": "^1.3.5",

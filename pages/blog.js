@@ -1,14 +1,31 @@
-/* global fetch */
+/* global fetch, window */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'whatwg-fetch';
+import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 
 export default class Blog extends React.Component {
+  static async getInitialProps(p) {
+    let url = '';
+    if (p && p.req) {
+      const pathArray = p.req.headers.referer.split('/');
+      const protocol = pathArray[0];
+      const host = pathArray[2];
+
+      url = `${protocol}//${host}/posts`;
+    } else {
+      url = `${window.location.protocol}//${window.location.host}/posts`;
+    }
+
+    const res = await fetch(url);
+    const json = await res.json();
+
+    return { posts: json };
+  }
   constructor(props) {
     super(props);
 
@@ -16,21 +33,9 @@ export default class Blog extends React.Component {
     this.state = {
       onLoaded: false,
     };
-
-    (async () => {
-      if (typeof fetch !== 'undefined') {
-        const res = await fetch('/posts');
-        this.posts = await res.json();
-
-        this.setState({
-          onLoaded: true,
-        });
-      }
-    })();
   }
-
   render() {
-    const { url } = this.props;
+    const { url, posts } = this.props;
 
     return (
       <Layout currentURL={url}>
@@ -58,9 +63,9 @@ export default class Blog extends React.Component {
               <div className="stars-4" />
             </div>
             <div className="filter-head">
-              <div className="title">{!this.state.onLoaded ? 'Loading...' : 'Blog'}</div>
+              <div className="title">{!posts.length ? 'Loading...' : 'Blog'}</div>
             </div>
-            {!this.state.onLoaded ? null : <Posts posts={this.posts} />}
+            {!posts.length ? null : <Posts posts={posts} />}
           </div>
         </div>
       </Layout>
@@ -70,8 +75,10 @@ export default class Blog extends React.Component {
 
 Blog.propTypes = {
   url: PropTypes.object,
+  posts: PropTypes.array,
 };
 
 Blog.defaultProps = {
   url: {},
+  posts: [],
 };

@@ -1,4 +1,3 @@
-
 const UrlPrettifier = require('next-url-prettifier').default;
 
 const routes = [
