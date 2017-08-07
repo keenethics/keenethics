@@ -21,7 +21,7 @@ const Posts = ({ posts }) => (
                 {dateTemplate.render(new Date(+post.date))}
               </div>
               <div className="title">{post.title}</div>
-              <p>{post.subtitle}</p>
+              <p className="description">{post.subtitle}</p>
             </div>
           </div>
         </a>

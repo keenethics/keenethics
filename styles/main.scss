@@ -2103,11 +2103,14 @@ $col-margin-left-tab: 60px;
 
         .art-desc {
             overflow: visible;
+
+            .description {
+              display: block;
+            }
         }
 
         .art-desc-i {
-            top: auto;
-            bottom: 0;
+          top: -50px;
         }
     }
 
@@ -2153,7 +2156,7 @@ $col-margin-left-tab: 60px;
 
 .art-desc {
     position: relative;
-    height: 120px;
+    height: 170px;
     overflow: hidden;
 
     .date {
@@ -2169,11 +2172,12 @@ $col-margin-left-tab: 60px;
         margin-bottom: 10px;
     }
 
-    p {
+    .description {
         font-size: 13px;
         line-height: 18px;
         font-family: $med;
         text-align: left;
+        display: none;
     }
 
     @include desktop {
@@ -2197,7 +2201,7 @@ $col-margin-left-tab: 60px;
     bottom: 0;
     background-color: #fff;
 
-    transition: bottom 0.5s ease-in-out, top 0.5s ease-in-out;
+    transition: top 0.3s ease-in-out;
 
     @include desktop {
         padding: 15px;
