@@ -3,24 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
-const PageTabsElement = ({ href, name, tabsDescription, icon }) =>
+const PageTabsElement = ({ href, name, tabsDescription, icon }) => (
   <li>
     <Link href={href}>
       <a>
         <div className="inner">
           {tabsDescription
             ? <div className="ico">
-                <div className="tbl">
-                  <div className="cell">
-                    <img
-                      width="53"
-                      src={`/static/images/svg/${icon}.svg`}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            : <div className="tbl">
+              <div className="tbl">
                 <div className="cell">
                   <img
                     width="53"
@@ -28,7 +18,17 @@ const PageTabsElement = ({ href, name, tabsDescription, icon }) =>
                     alt=""
                   />
                 </div>
-              </div>}
+              </div>
+            </div>
+            : <div className="tbl">
+              <div className="cell">
+                <img
+                  width="53"
+                  src={`/static/images/svg/${icon}.svg`}
+                  alt=""
+                />
+              </div>
+            </div>}
           {!tabsDescription ||
             <span>
               <span className="ttl">
@@ -41,12 +41,13 @@ const PageTabsElement = ({ href, name, tabsDescription, icon }) =>
         </div>
         {!tabsDescription
           ? <div className="icon-name">
-              {name}
-            </div>
+            {name}
+          </div>
           : null}
       </a>
     </Link>
-  </li>;
+  </li>
+);
 
 PageTabsElement.propTypes = {
   href: PropTypes.string,
@@ -67,15 +68,15 @@ const sliderSetting = {
   adaptiveHeight: false,
   arrows: true,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 7,
+  slidesToScroll: 1,
   initialSlide: 0,
   responsive: [
     {
       breakpoint: 1324,
       settings: {
         slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToScroll: 1,
         dots: true,
       },
     },
@@ -83,7 +84,7 @@ const sliderSetting = {
       breakpoint: 1024,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         dots: true,
       },
     },
@@ -91,7 +92,7 @@ const sliderSetting = {
       breakpoint: 600,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         initialSlide: 3,
       },
     },
@@ -108,8 +109,8 @@ const PageTabs = ({ points, withDescription }) =>
   <div className="icon-wrap">
     <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
       <Slider {...sliderSetting}>
-        {points.map(element =>
-          <div className="div">
+        {points.map((element, i)=>
+          <div key={i}>
             <PageTabsElement
               item={element}
               key={element.name}
