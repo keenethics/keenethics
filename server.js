@@ -177,15 +177,23 @@ app.prepare().then(() => {
       if (err) throw err;
 
       const posts = [];
+      const sortFiles = files.sort();
+      const reverseFiles = sortFiles.reverse();
 
-      files.forEach((file) => {
+      reverseFiles.forEach((file) => {
         const text = fs.readFileSync(path.resolve(__dirname, `posts/${file}`), 'utf8');
 
         const author = (/Author: (.*?)\n/g).exec(text)[1];
         const title = (/Title: (.*?)\n/g).exec(text)[1];
         const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-        const image = (/Preview image: (.*?)\n/g).exec(text)[1];
+        let image = (/Preview image: (.*?)\n/g).exec(text);
         const date = file.split('-')[0];
+
+        if (image && image[1]) {
+          image = image[1];
+        } else {
+          image = '/static/images/astronauts.jpg';
+        }
 
         posts.push({
           title,

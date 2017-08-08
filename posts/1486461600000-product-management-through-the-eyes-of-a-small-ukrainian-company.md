@@ -1,7 +1,6 @@
 Author: Alexey Hermann
 Title: Product Management through the eyes of a small Ukrainian company
 Subtitle: Product Management through the eyes of a small Ukrainian company
-Preview image: /static/posts/0-21qK34ncSfNo1a8n.png
 
 # Product Management through the eyes of a small Ukrainian company.
 
