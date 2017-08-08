@@ -1,4 +1,4 @@
-/* global fetch, window */
+/* global BACKEND_URL, fetch */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -15,18 +15,8 @@ const timeTemplate = tinytime('{h}:{mm} {a}');
 export default class Post extends React.Component {
   static async getInitialProps(p) {
     const name = p.query.name;
-    let url = '';
-    if (p && p.req) {
-      const pathArray = p.req.headers.referer.split('/');
-      const protocol = pathArray[0];
-      const host = pathArray[2];
 
-      url = `${protocol}//${host}/post/${name}`;
-    } else {
-      url = `${window.location.protocol}//${window.location.host}/post/${name}`;
-    }
-
-    const res = await fetch(url);
+    const res = await fetch(`${BACKEND_URL}/post/${name}`);
     const json = await res.json();
 
     return { post: json };

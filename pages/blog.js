@@ -1,4 +1,4 @@
-/* global fetch, window */
+/* global BACKEND_URL, fetch */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,19 +9,8 @@ import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 
 export default class Blog extends React.Component {
-  static async getInitialProps(p) {
-    let url = '';
-    if (p && p.req) {
-      const pathArray = p.req.headers.referer.split('/');
-      const protocol = pathArray[0];
-      const host = pathArray[2];
-
-      url = `${protocol}//${host}/posts`;
-    } else {
-      url = `${window.location.protocol}//${window.location.host}/posts`;
-    }
-
-    const res = await fetch(url);
+  static async getInitialProps() {
+    const res = await fetch(`${BACKEND_URL}/posts`);
     const json = await res.json();
 
     return { posts: json };
