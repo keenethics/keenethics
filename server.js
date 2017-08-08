@@ -94,7 +94,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'accounts@gornostaev.pro',
+      to: 'founders@keenethics.com',
       subject: 'New contact',
       html,
     };
@@ -105,7 +105,8 @@ app.prepare().then(() => {
       }
 
       res.send({
-        status: 'Mail sent',
+        errorField: {},
+        status: 'Message sent',
       });
     });
   });
@@ -155,7 +156,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'accounts@gornostaev.pro',
+      to: 'careers@keenethics.com',
       subject: `Hiring: ${position.value}`,
       html,
     };
@@ -165,7 +166,10 @@ app.prepare().then(() => {
         throw err;
       }
 
-      res.send('Mail sent');
+      res.send({
+        errorField: {},
+        status: 'Message sent',
+      });
     });
   });
   server.get('/posts', (req, res) => {
