@@ -112,12 +112,12 @@ export default class Contacts extends React.Component {
                 <li>
                   <a href="">
                     <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
-                    <div>{'+380 (32) 2 535 535'}</div>
+                    <div>+38 (096) 814 72 66</div>
                     <span>Give Us a Call</span>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href={'mailto:founders@keenethics.com'}>
                     <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
                     <div>founders@keenethics.com</div>
                     <span>Drop Us a Letter</span>
