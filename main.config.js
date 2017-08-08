@@ -629,7 +629,7 @@ export const superteam = [
   {
     name: 'Max S.',
     position: 'Chief of The Astronaut Office',
-    description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts� activities.',
+    description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
     avatar: 'maks_s.jpg',
   },
   {
