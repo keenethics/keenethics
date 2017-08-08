@@ -146,7 +146,7 @@ class Navigation extends React.Component {
           </div>
 
           <div className="sidebar-footer">
-            <Link href={'contacts'} prefetch>
+            <Link href="contacts">
               <a className="button">Contact us</a>
             </Link>
           </div>

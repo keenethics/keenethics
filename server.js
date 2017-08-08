@@ -201,26 +201,28 @@ app.prepare().then(() => {
     });
   });
   server.get('/post/:name', (req, res) => {
-    const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
+    if (req.params && req.params.name) {
+      const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
 
-    const content = text.substring(text.indexOf('\n\n'));
-    const author = (/Author: (.*?)\n/g).exec(text)[1];
-    const title = (/Title: (.*?)\n/g).exec(text)[1];
-    const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-    const image = (/Preview image: (.*?)\n/g).exec(text)[1];
-    const date = req.params.name.split('-')[0];
+      const content = text.substring(text.indexOf('\n\n'));
+      const author = (/Author: (.*?)\n/g).exec(text)[1];
+      const title = (/Title: (.*?)\n/g).exec(text)[1];
+      const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+      const image = (/Preview image: (.*?)\n/g).exec(text)[1];
+      const date = req.params.name.split('-')[0];
 
-    const post = {
-      title,
-      subtitle,
-      author,
-      href: req.params.name.slice(3, -3),
-      image,
-      date,
-      content,
-    };
+      const post = {
+        title,
+        subtitle,
+        author,
+        href: req.params.name.slice(3, -3),
+        image,
+        date,
+        content,
+      };
 
-    res.send(post);
+      res.send(post);
+    }
   });
 
   server.get('*', (req, res) => handle(req, res));
