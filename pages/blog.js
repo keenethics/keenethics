@@ -25,7 +25,6 @@ export default class Blog extends React.Component {
   }
   render() {
     const { url, posts } = this.props;
-
     return (
       <Layout currentURL={url}>
         <div className="content-wrap content-wrap-bg">
@@ -35,6 +34,7 @@ export default class Blog extends React.Component {
               <div className="orbit-star orbit-star-1">
                 <span />
               </div>
+              {this.f}
               <div className="orbit-star orbit-star-2">
                 <span />
               </div>

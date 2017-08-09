@@ -1,10 +1,9 @@
-/* global Raven */
-
 import Head from 'next/head';
 import Router from 'next/router';
 
 import React from 'react';
 import NProgress from 'nprogress';
+import Raven from 'raven-js';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
@@ -30,7 +29,6 @@ export default class LayoutHead extends React.Component {
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
         <link type="image/x-icon" rel="shortcut icon" href="/static/images/favicon.ico" />
         <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js" />
-        <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossOrigin="anonymous" />
       </Head>
     );
   }

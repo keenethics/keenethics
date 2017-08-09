@@ -11,7 +11,8 @@ const dateTemplate = tinytime('{MMMM} {DD} – {h}:{mm} {a}');
 const Posts = ({ posts }) => (
   <div className="blog-grid">
     {posts.map(post => (
-      <Link route={Router.linkPage('post', { name: post.href })} key={post.title}>
+      // <Link route={Router.linkPage('post', { name: post.href })} key={post.title}>
+      <Link route={Router.linkPage('post', { name: post.href })}>
         <a className="art-item">
           <div className="img">
             <img src={post.image} alt="" />

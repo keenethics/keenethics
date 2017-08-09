@@ -15,11 +15,13 @@ export default class Index extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
   componentDidMount() {
-    Skype.ui({
-      name: 'chat',
-      element: 'SkypeButton_Call_hermannalexey_1',
-      participants: ['hermannalexey'],
-    });
+    if (typeof Skype !== 'undefined') {
+      Skype.ui({
+        name: 'chat',
+        element: 'SkypeButton_Call_hermannalexey_1',
+        participants: ['hermannalexey'],
+      });
+    }
   }
   onClick() {
     this.setState({
