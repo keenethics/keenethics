@@ -17,7 +17,10 @@ $menu-w-m: 180px;
   z-index: 999;
   text-align: left;
   box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
-  transition: left 0.4s ease;
+  will-change: transform;
+  pointer-events: auto;
+  transition: transform 330ms ease-out;
+  transform: none;
 
   .sidebar-header {
     position: absolute;
@@ -568,10 +571,10 @@ li.current:hover > .point:before {
 @include mobile {
 
     .sidebar {
-        left: -$menu-w-m;
+      transform: translateX(-103%);
 
         &.open {
-            left: 0;
+          transform: none;
         }
     }
 
