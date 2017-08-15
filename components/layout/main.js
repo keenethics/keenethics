@@ -14,7 +14,7 @@ if (typeof window !== 'undefined' && !window.Promise) {
 
 const Layout = ({ children, currentURL }) => (
   <div className="root">
-    <Head />
+    <Head currentURL={currentURL} />
     <Navigation currentURL={currentURL} />
     { children }
   </div>

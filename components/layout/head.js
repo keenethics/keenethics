@@ -1,10 +1,21 @@
-/* global Raven */
-
 import Head from 'next/head';
 import Router from 'next/router';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
+
+import {
+  config,
+  servicesWebDevelopmentTabs,
+  servicesMobileDevelopment,
+  servicesOutstaffing,
+  techApps,
+  techFrontEnd,
+  techBackEnd,
+  techDatabase,
+  techApiIntegration,
+} from '../../main.config';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
@@ -17,21 +28,62 @@ export default class LayoutHead extends React.Component {
     this.state = {
     };
   }
-  componentDidMount() {
-    Raven.config('https://354718bb50184a3f8b2d6561c650daec@sentry.io/201137').install();
-  }
   render() {
+    const { navigation } = config;
+    const { currentURL } = this.props;
+
+    let currentPoint = null;
+
+    navigation.forEach((point) => {
+      if (!currentPoint && point && point.points) {
+        const subpoint = point.points.map(p => p.href).indexOf(currentURL.pathname);
+
+        if (subpoint > -1) {
+          currentPoint = point.points[subpoint];
+        }
+      }
+      if (point && point.href && point.href === currentURL.pathname) {
+        currentPoint = point;
+      }
+    });
+
+    if (!currentPoint) {
+      const subnavigation = servicesWebDevelopmentTabs.concat(
+        servicesMobileDevelopment,
+        servicesOutstaffing,
+        techApps,
+        techFrontEnd,
+        techBackEnd,
+        techDatabase,
+        techApiIntegration,
+      );
+
+      subnavigation.forEach((point) => {
+        if (point && point.href && point.href === currentURL.pathname) {
+          currentPoint = point;
+        }
+      });
+    }
+
+    const title = `KEEN.ETHICS - ${currentPoint && currentPoint.name ? currentPoint.name : 'Home'}`;
+
     return (
       <Head>
-        <title>KEEN.ETHICS</title>
+        <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link type="text/css" rel="stylesheet" href="/static/main.css" />
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
         <link type="image/x-icon" rel="shortcut icon" href="/static/images/favicon.ico" />
-        <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js" />
-        <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossOrigin="anonymous" />
       </Head>
     );
   }
 }
+
+LayoutHead.propTypes = {
+  currentURL: PropTypes.object,
+};
+
+LayoutHead.defaultProps = {
+  currentURL: {},
+};

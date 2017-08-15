@@ -144,6 +144,7 @@ export default class Index extends React.Component {
             </div>
           </div>
         </div>
+        <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js" />
       </Layout>
     );
   }
