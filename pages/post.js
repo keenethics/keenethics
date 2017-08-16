@@ -1,4 +1,5 @@
 /* global BACKEND_URL, fetch */
+import Error from 'next/error'
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -29,6 +30,10 @@ export default class Post extends React.Component {
   }
   render() {
     const { post } = this.props;
+
+    if (post && post.statusCode && post.statusCode === 404) {
+      return <Error statusCode={404} />;
+    }
 
     return (
       <Layout>

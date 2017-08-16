@@ -210,26 +210,40 @@ app.prepare().then(() => {
   });
   server.get('/post/:name', (req, res) => {
     if (req.params && req.params.name) {
-      const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
+      fs.stat(path.resolve(__dirname, `posts/${req.params.name}.md`), (err) => {
+        if (err == null) {
+          const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
 
-      const content = text.substring(text.indexOf('\n\n'));
-      const author = (/Author: (.*?)\n/g).exec(text)[1];
-      const title = (/Title: (.*?)\n/g).exec(text)[1];
-      const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-      const image = (/Preview image: (.*?)\n/g).exec(text)[1];
-      const date = req.params.name.split('-')[0];
+          const content = text.substring(text.indexOf('\n\n'));
+          const author = (/Author: (.*?)\n/g).exec(text)[1];
+          const title = (/Title: (.*?)\n/g).exec(text)[1];
+          const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+          let image = (/Preview image: (.*?)\n/g).exec(text);
+          const date = req.params.name.split('-')[0];
 
-      const post = {
-        title,
-        subtitle,
-        author,
-        href: req.params.name.slice(3, -3),
-        image,
-        date,
-        content,
-      };
+          if (image && image[1]) {
+            image = image[1];
+          } else {
+            image = '/static/images/astronauts.jpg';
+          }
 
-      res.send(post);
+          const post = {
+            title,
+            subtitle,
+            author,
+            href: req.params.name.slice(3, -3),
+            image,
+            date,
+            content,
+          };
+
+          res.send(post);
+        } else if (err.code === 'ENOENT') {
+          res.status(404).send({ statusCode: 404 });
+        } else {
+          console.log('Error: ', err.code);
+        }
+      });
     }
   });
 
