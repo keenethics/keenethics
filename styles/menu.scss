@@ -187,6 +187,8 @@ $menu-w-m: 180px;
         .menu-sub {
           left: $menu-w;
           z-index: 995;
+          display: none;
+          visibility: hidden;
 
           @include desktop {
             left: $menu-w-mid;
@@ -229,6 +231,10 @@ $menu-w-m: 180px;
                 }
             }
         }
+    }
+    li.show-children .menu-sub {
+      display: block;
+      visibility: visible;
     }
 }
 

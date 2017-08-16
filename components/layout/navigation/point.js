@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 export default class NavigationPoint extends React.Component {
   constructor(props) {
@@ -110,16 +111,21 @@ export default class NavigationPoint extends React.Component {
     const { children, height, currentPoint, currentSubpoint } = this.props;
     const { showChildren } = this.state;
 
+    const className = cn({
+      current: currentPoint || currentSubpoint,
+      'show-children': showChildren,
+    });
+
     return (
       <li
-        className={currentPoint || currentSubpoint ? 'current' : null}
+        className={className}
         role="presentation"
         style={{ height }}
         onMouseEnter={this.onMouseOver}
         onMouseLeave={this.onMouseOut}
       >
         {this.renderPoint()}
-        {showChildren ? children : null}
+        {children}
       </li>
     );
   }
