@@ -7,7 +7,7 @@ export const config = {
         {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
-          href: '/services-web_development',
+          href: '/services-web-development',
           icon: {
             name: 'web',
             alt: 'Web development',
@@ -17,7 +17,7 @@ export const config = {
         {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
-          href: '/services-desktop_applications',
+          href: '/services-desktop-applications',
           icon: {
             name: 'dapp',
             alt: 'Desktop applications',
@@ -27,7 +27,7 @@ export const config = {
         {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
-          href: '/services-mobile_development',
+          href: '/services-mobile-development',
           icon: {
             name: 'mdev',
             alt: 'Mobile development',
@@ -62,7 +62,7 @@ export const config = {
         {
           name: 'Lean Approach',
           description: 'Systematic method for the elimination of waste',
-          href: '/approach-lean_approach',
+          href: '/approach-lean-approach',
           icon: {
             name: 'lean',
             alt: 'Lean approach',
@@ -72,7 +72,7 @@ export const config = {
         {
           name: 'Agile Project Management',
           description: 'AIterative, incremental method of managing the design and build activities of engineering',
-          href: '/approach-agile_project',
+          href: '/approach-agile-project-management',
           icon: {
             name: 'agile',
             alt: 'Agile project management',
@@ -80,19 +80,19 @@ export const config = {
           type: 'icon',
         },
         {
-          name: 'Minimum Valuable Product',
+          name: 'Minimum Viable Product',
           description: 'A product with just enough features to gather validated learning about the product',
-          href: '/approach-minimum_val_product',
+          href: '/approach-minimum-viable-product',
           icon: {
             name: 'min-valuable',
-            alt: 'Minimum valuable product',
+            alt: 'Minimum viable product',
           },
           type: 'icon',
         },
         {
           name: 'Cutting Edge Technologies',
           description: 'We use only the best and the most up-to-date technologies',
-          href: '/approach-cutting_edge',
+          href: '/approach-cutting-edge',
           icon: {
             name: 'cutting',
             alt: 'Cutting edge technologies',
@@ -102,7 +102,7 @@ export const config = {
         {
           name: 'High Performance',
           description: 'Why our team is very creative and productive',
-          href: '/approach-high_performance',
+          href: '/approach-high-performance',
           icon: {
             name: 'high-performance',
             alt: 'High performance',
@@ -112,7 +112,7 @@ export const config = {
         {
           name: 'High Quality Software',
           description: 'Best Quality Software',
-          href: '/approach-high_quality',
+          href: '/approach-high-quality',
           icon: {
             name: 'high-quality',
             alt: 'High quality software',
@@ -137,7 +137,7 @@ export const config = {
         {
           name: 'Front-End',
           description: 'Front-end development is a process of the creation site’s client-side',
-          href: '/tech-front_end',
+          href: '/tech-front-end',
           icon: {
             name: 'front-end',
             alt: 'Front-end',
@@ -147,7 +147,7 @@ export const config = {
         {
           name: 'Back-End',
           description: 'Flawless code with no exceptions',
-          href: '/tech-back_end',
+          href: '/tech-back-end',
           icon: {
             name: 'back-end',
             alt: 'Back-end',
@@ -157,7 +157,7 @@ export const config = {
         {
           name: 'DataBase',
           description: 'Tons of information precisely used and securely stored',
-          href: '/tech-data_base',
+          href: '/tech-data-base',
           icon: {
             name: 'data-base',
             alt: 'Database',
@@ -167,7 +167,7 @@ export const config = {
         {
           name: 'API Integration',
           description: 'We will integrate everything you need',
-          href: '/tech-api_integration',
+          href: '/tech-api-integration',
           icon: {
             name: 'API-integration',
             alt: 'API integration',
@@ -267,7 +267,7 @@ export const config = {
         {
           name: 'Open Source',
           description: '',
-          href: '/about-open_source',
+          href: '/about-open-source',
           icon: {
             name: 'open-source',
             alt: 'Open source',
@@ -384,31 +384,31 @@ export const config = {
 };
 export const servicesWebDevelopmentTabs = [
   {
-    href: '/services-web_development-E',
+    href: '/services-web-development-e-commerce',
     name: 'E-Commerce',
     description: 'Sites, which help you sell your goods',
     icon: 'icon-e',
   },
   {
-    href: '/services-web_development-CHAT',
+    href: '/services-web-development-chatbot',
     name: 'Chat Bots',
     description: 'Blogs, Social Media, Corporative Sites, etc.',
     icon: 'icon-chat-bots',
   },
   {
-    href: '/services-web_development-NODE',
+    href: '/services-web-development-node',
     name: 'Website Node JS',
     description: 'Sites, which help you sell your goods',
     icon: 'icon-node',
   },
   {
-    href: '/services-web_development-METEOR',
+    href: '/services-web-development-meteor',
     name: 'Meteor.js',
     description: 'Blogs, Social Media, Corporative Sites, etc.',
     icon: 'icon-meteor',
   },
   {
-    href: '/services-web_development-VOICE',
+    href: '/services-web-development-programmable-voice',
     name: 'Programmable Voice',
     description: 'Send money online or with your mobile',
     icon: 'icon-voice',
@@ -416,14 +416,14 @@ export const servicesWebDevelopmentTabs = [
 ];
 export const servicesMobileDevelopment = [
   {
-    href: '/services-mobile_development-APPLE',
+    href: '/services-mobile-development-apple',
     name: 'iOS DEVELOPMENT',
     tabsDescription: '14 apps developed',
     description: '14 apps developed',
     icon: 'icon-apple',
   },
   {
-    href: '/services-mobile_development-ANDROID',
+    href: '/services-mobile-development-android',
     name: 'Android development',
     tabsDescription: '23 apps developed',
     description: '23 apps developed',
@@ -432,21 +432,21 @@ export const servicesMobileDevelopment = [
 ];
 export const servicesOutstaffing = [
   {
-    href: '/services-outstaffing-SENIOR',
+    href: '/services-outstaffing-senior',
     name: 'Senior developer',
     tabsDescription: '4 in our team',
     description: '4 in our team',
     icon: 'icon-o-1',
   },
   {
-    href: '/services-outstaffing-TEAM',
+    href: '/services-outstaffing-team',
     name: 'Dedicated team',
     tabsDescription: '4-8 people',
     description: '4-8 people',
     icon: 'icon-o-2',
   },
   {
-    href: '/services-outstaffing-TECHNICAL',
+    href: '/services-outstaffing-technical-consultancy',
     name: 'Technical consultancy',
     tabsDescription: '24 hours for an answer',
     description: '24 hours for an answer',
@@ -456,32 +456,32 @@ export const servicesOutstaffing = [
 
 export const techApps = [
   {
-    href: '/tech-apps-PHONE',
+    href: '/tech-apps-phonegap',
     name: 'PhoneGap',
     icon: 'icon-pg',
   },
   {
-    href: '/tech-apps-ELECTRON',
+    href: '/tech-apps-electron',
     name: 'Electron',
     icon: 'icon-en',
   },
   {
-    href: '/tech-apps-ACC',
+    href: '/tech-apps-accelerated-mobile-pages',
     name: 'Accelerated Mobile Pages',
     icon: 'icon-acc',
   },
   {
-    href: '/tech-apps-PROG',
+    href: '/tech-apps-progressive-web-apps',
     name: 'Progressive Web Apps',
     icon: 'icon-prog',
   },
   {
-    href: '/tech-apps-RN',
+    href: '/tech-apps-react-native',
     name: 'React Native',
     icon: 'icon-rn',
   },
   {
-    href: '/tech-apps-CORDOVA',
+    href: '/tech-apps-cordova',
     name: 'Cordova',
     icon: 'icon-cv',
   },
@@ -489,42 +489,42 @@ export const techApps = [
 
 export const techFrontEnd = [
   {
-    href: '/tech-front_end-REACT',
+    href: '/tech-front-end-react',
     name: 'React',
     icon: 'icon-rn',
   },
   {
-    href: '/tech-front_end-REDUX',
+    href: '/tech-front-end-redux',
     name: 'Redux',
     icon: 'icon-redux',
   },
   {
-    href: '/tech-front_end-ANGULAR',
+    href: '/tech-front-end-angular',
     name: 'Angular',
     icon: 'icon-ang',
   },
   // {
-  //   href: '/tech-front_end-AURELIA',
+  //   href: '/tech-front-end-AURELIA',
   //   name: 'Aurelia',
   //   icon: 'icon-aurelia',
   // },
   {
-    href: '/tech-front_end-REACT_N',
+    href: '/tech-front-end-react-native',
     name: 'React Native',
     icon: 'icon-rn',
   },
   {
-    href: '/tech-front_end-ANGULAR_2',
+    href: '/tech-front-end-angular-2',
     name: 'Angular 2.0',
     icon: 'icon-ang',
   },
   {
-    href: '/tech-front_end-VUE',
+    href: '/tech-front-end-vue',
     name: 'Vue JS',
     icon: 'icon-vue',
   },
   {
-    href: '/tech-front_end-NEXT',
+    href: '/tech-front-end-next',
     name: 'Next JS',
     icon: 'icon-next',
   },
@@ -532,17 +532,17 @@ export const techFrontEnd = [
 
 export const techBackEnd = [
   {
-    href: '/tech-back_end-EXPRESS',
+    href: '/tech-back-end-express',
     name: 'Express',
     icon: 'icon-ex',
   },
   {
-    href: '/tech-back_end-METEOR',
+    href: '/tech-back-end-meteor',
     name: 'Meteor',
     icon: 'icon-meteor_',
   },
   {
-    href: '/tech-back_end-HAPI',
+    href: '/tech-back-end-hapi',
     name: 'Hapi',
     icon: 'icon-hapi',
   },
@@ -550,19 +550,19 @@ export const techBackEnd = [
 
 export const techDatabase = [
   {
-    href: '/tech-data_base-MONGO',
+    href: '/tech-data-base-mongo',
     name: 'Mongo',
     description: 'For GIANT ideas',
     icon: 'icon-mongo',
   },
   {
-    href: '/tech-data_base-MYSQL',
+    href: '/tech-data-base-mysql',
     name: 'MySQL',
     description: 'The world’s most popular open source database',
     icon: 'icon-mysql',
   },
   {
-    href: '/tech-data_base-POST',
+    href: '/tech-data-base-postgresql',
     name: 'PostgreSQL',
     description: 'The world’s most advanced open source database',
     icon: 'icon-post',
@@ -571,37 +571,37 @@ export const techDatabase = [
 
 export const techApiIntegration = [
   {
-    href: '/tech-api_integration-REST',
+    href: '/tech-api-integration-rest',
     name: 'Rest',
     description: 'Send money online or with your mobile',
     icon: 'icon-rest',
   },
   {
-    href: '/tech-api_integration-PAYPAL',
+    href: '/tech-api-integration-paypal',
     name: 'PayPal',
     description: 'The world’s most popular open source database',
     icon: 'icon-paypal',
   },
   {
-    href: '/tech-api_integration-GRAP',
+    href: '/tech-api-integration-graphql',
     name: 'Graphql',
     description: 'Send money online or with your mobile',
     icon: 'icon-grap',
   },
   {
-    href: '/tech-api_integration-BRAIN',
+    href: '/tech-api-integration-braintree',
     name: 'Braintree',
     description: 'Send money online or with your mobile',
     icon: 'icon-brain',
   },
   // {
-  //   href: '/tech-api_integration-ELASTIC',
+  //   href: '/tech-api-integration-ELASTIC',
   //   name: 'Elastic Search',
   //   description: 'The world’s most popular open source database',
   //   icon: 'icon-el',
   // },
   {
-    href: '/tech-api_integration-STRIPE',
+    href: '/tech-api-integration-stripe',
     name: 'Stripe',
     description: 'Send money online or with your mobile',
     icon: 'icon-stripe',
