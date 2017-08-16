@@ -96,7 +96,7 @@ class Navigation extends React.Component {
     const { currentURL } = this.props;
 
     const { navigation } = config;
-    const height = `${100 / navigation.length}%`;
+    const height = `${100 / navigation.filter(n => !n.type && n.type !== 'hidden').length}%`;
 
     let currentPoint = null;
     let currentSubpoint = null;
@@ -131,17 +131,22 @@ class Navigation extends React.Component {
 
           <div className="sidebar-content">
             <ul className="sidebar-navigation">
-              {navigation.map((n, i) => (
-                <Point
-                  key={n.name}
-                  element={n}
-                  height={height}
-                  currentPoint={currentPoint === i}
-                  showSidebar={dimensions.width > 767}
-                >
-                  {this.getPointContent(n, currentPoint === i, currentSubpoint)}
-                </Point>
-              ))}
+              {navigation.map((n, i) => {
+                if (n.type && n.type === 'hidden') {
+                  return null;
+                }
+                return (
+                  <Point
+                    key={n.name}
+                    element={n}
+                    height={height}
+                    currentPoint={currentPoint === i}
+                    showSidebar={dimensions.width > 767}
+                  >
+                    {this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                  </Point>
+                );
+              })}
             </ul>
           </div>
 

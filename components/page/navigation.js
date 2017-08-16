@@ -106,7 +106,7 @@ export default class PageNavigation extends React.Component {
                 </Link>
                 <Link href={this.points.current.href}>
                   <a className="slide-title current">
-                    <div className="title">{this.points.current.name}</div>
+                    <h1 className="title">{this.points.current.name}</h1>
                     <div className="title-s">{this.points.current.description || ''}</div>
                   </a>
                 </Link>

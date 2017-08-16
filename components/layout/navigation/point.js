@@ -23,9 +23,6 @@ export default class NavigationPoint extends React.Component {
       });
     }
   }
-  shouldComponentUpdate(nextProps) {
-    return true;
-  }
   onMouseOver() {
     if (this.state.showChildren) {
       return;

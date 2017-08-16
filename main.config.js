@@ -276,6 +276,11 @@ export const config = {
         },
       ],
     },
+    {
+      name: 'Contacts',
+      href: '/contacts',
+      type: 'hidden',
+    },
   ],
   careers: [
     {
