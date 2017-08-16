@@ -103,14 +103,14 @@ export default class Contacts extends React.Component {
               <div className="contacts-mail" />
               <ul className="contacts-list">
                 <li>
-                  <a href="">
+                  <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
                     <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
                     <div>3 Lytvynenka Street</div>
                     <span>Lviv, Ukraine</span>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="tel:+380968147266">
                     <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
                     <div>+38 (096) 814 72 66</div>
                     <span>Give Us a Call</span>

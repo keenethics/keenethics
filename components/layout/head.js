@@ -75,7 +75,6 @@ export default class LayoutHead extends React.Component {
         <link type="text/css" rel="stylesheet" href="/static/main.css" />
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
         <link type="image/x-icon" rel="shortcut icon" href="/static/images/favicon.ico" />
-        <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js" />
       </Head>
     );
   }
