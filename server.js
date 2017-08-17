@@ -95,7 +95,7 @@ app.prepare().then(() => {
     const mailOptions = {
       from: 'no-reply@keenethics.com',
       to: 'founders@keenethics.com',
-      subject: 'New contact',
+      subject: `New message from ${email.value}`,
       html,
     };
 

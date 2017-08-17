@@ -1,5 +1,4 @@
 /* global BACKEND_URL, fetch */
-import Error from 'next/error';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,6 +8,7 @@ import tinytime from 'tinytime';
 import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
+import Error from './_error';
 
 const dateTemplate = tinytime('{MMMM} {DD}');
 const timeTemplate = tinytime('{h}:{mm} {a}');
