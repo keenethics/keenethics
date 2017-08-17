@@ -1,5 +1,5 @@
 /* global BACKEND_URL, fetch */
-import Error from 'next/error'
+import Error from 'next/error';
 
 import React from 'react';
 import PropTypes from 'prop-types';

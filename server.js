@@ -241,7 +241,7 @@ app.prepare().then(() => {
         } else if (err.code === 'ENOENT') {
           res.status(404).send({ statusCode: 404 });
         } else {
-          console.log('Error: ', err.code);
+          res.status(500).send({ statusCode: 500 });
         }
       });
     }

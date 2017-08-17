@@ -3686,9 +3686,9 @@ next-url-prettifier@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/next-url-prettifier/-/next-url-prettifier-1.1.5.tgz#ce27eb29f584bd53aadf091874138ddd93bc8272"
 
-next@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/next/-/next-3.0.3.tgz#35128ba8359064ffe8d1d5e5543410319c6d66d3"
+next@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/next/-/next-3.0.6.tgz#14d9330b1f4eab60fdb84523034a3016f16fe414"
   dependencies:
     ansi-html "0.0.7"
     babel-core "6.25.0"

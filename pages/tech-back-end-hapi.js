@@ -43,7 +43,7 @@ const TechBackEndHapi = ({ url }) => (
           </p>
           <p>
             The Hapi.js framework is empowering such companies as PayPal, Condé Nast, Disney,
-            Macy's, microapps, Mozilla, Muzzley, Open Table, Walmart, Yahoo, and a lot more.
+            Macy`s, microapps, Mozilla, Muzzley, Open Table, Walmart, Yahoo, and a lot more.
           </p>
           <h3>Hire Hapi Developers</h3>
           <p>
