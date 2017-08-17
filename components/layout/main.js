@@ -12,10 +12,10 @@ if (typeof window !== 'undefined' && !window.Promise) {
   window.Promise = Promise;
 }
 
-const Layout = ({ children, currentURL }) => (
+const Layout = ({ children, currentURL, noMenu }) => (
   <div className="root">
     <Head currentURL={currentURL} />
-    <Navigation currentURL={currentURL} />
+    {noMenu ? null : <Navigation currentURL={currentURL} />}
     { children }
   </div>
 );
@@ -26,11 +26,13 @@ Layout.propTypes = {
     PropTypes.array,
   ]),
   currentURL: PropTypes.object,
+  noMenu: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   children: null,
   currentURL: {},
+  noMenu: false,
 };
 
 export default Layout;
