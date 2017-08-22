@@ -113,8 +113,6 @@ app.prepare().then(() => {
   server.post('/careers', (req, res) => {
     const { name, email, position, message } = req.body;
 
-    console.log(req.body);
-
     name.value = name.value.replace(/\s+/g, ' ');
     message.value = message.value.replace(/\s+/g, ' ');
 
