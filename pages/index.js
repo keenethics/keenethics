@@ -59,11 +59,11 @@ export default class Index extends React.Component {
                       5-stars rated company at Clutch
                     </a>
 
-                    <div className="title-main">
+                    <h1 className="title-main">
                       ETHICAL <br />
                       DEVELOPMENT <br />
                       OF KEEN WEB-APPS
-                    </div>
+                    </h1>
 
                     <div className="title-u">
                       YOU HAVE A KEEN IDEA <span className="dash" /> WE HAVE A KEEN APPROACH

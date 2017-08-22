@@ -19,11 +19,11 @@ export default class Careers extends React.Component {
       activeItemIndex: 0,
       showApplyForm: false,
       sliderIsActive: false,
-      firstname: {
+      name: {
         value: '',
         error: false,
       },
-      lastname: {
+      email: {
         value: '',
         error: false,
       },
@@ -133,7 +133,7 @@ export default class Careers extends React.Component {
     }, []);
   }
   getCareersItem() {
-    const { activeItemIndex, showApplyForm, isPending, firstname, lastname, message } = this.state;
+    const { activeItemIndex, showApplyForm, isPending, name, email, message } = this.state;
     const { position, experience, description, image } = config.careers[activeItemIndex];
 
     return (
@@ -149,18 +149,18 @@ export default class Careers extends React.Component {
             <form onSubmit={this.onSubmit}>
               <div className="input-wrap">
                 <input
-                  className={firstname.error ? 'error' : null}
-                  name="firstname"
-                  placeholder="First Name"
+                  className={name.error ? 'error' : null}
+                  name="name"
+                  placeholder="Your Fullname"
                   type="text"
                   onChange={this.onChange}
                 />
               </div>
               <div className="input-wrap input-wrap-l">
                 <input
-                  className={lastname.error ? 'error' : null}
-                  name="lastname"
-                  placeholder="Last Name"
+                  className={email.error ? 'error' : null}
+                  name="email"
+                  placeholder="Email"
                   type="text"
                   onChange={this.onChange}
                 />

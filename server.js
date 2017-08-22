@@ -111,27 +111,28 @@ app.prepare().then(() => {
     });
   });
   server.post('/careers', (req, res) => {
-    const { firstname, lastname, position, message } = req.body;
+    const { name, email, position, message } = req.body;
 
-    firstname.value = firstname.value.replace(/\s+/g, ' ');
-    lastname.value = lastname.value.replace(/\s+/g, ' ');
+    console.log(req.body);
+
+    name.value = name.value.replace(/\s+/g, ' ');
     message.value = message.value.replace(/\s+/g, ' ');
 
-    if (!formatValidation.validate({ min: 3, max: 25 }, firstname.value)) {
-      firstname.error = true;
+    if (!formatValidation.validate({ min: 3, max: 25 }, name.value)) {
+      name.error = true;
 
       res.send({
-        errorField: { firstname },
-        status: 'Wrong first name length',
+        errorField: { name },
+        status: 'Wrong name length',
       });
       return;
     }
-    if (!formatValidation.validate({ min: 3, max: 25 }, lastname.value)) {
-      lastname.error = true;
+    if (!formatValidation.validate({ type: 'email' }, email.value)) {
+      email.error = true;
 
       res.send({
-        errorField: { lastname },
-        status: 'Wrong last name length',
+        errorField: { email },
+        status: 'Wrong email address',
       });
       return;
     }
@@ -150,7 +151,7 @@ app.prepare().then(() => {
     }
 
     const html = `
-      <p>${firstname.value} ${lastname.value}</p>
+      <p>${name.value} - ${email.value}</p>
       <p>Position: ${position.value}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
