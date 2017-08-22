@@ -66,12 +66,14 @@ export default class LayoutHead extends React.Component {
     }
 
     const title = `KEEN.ETHICS - ${currentPoint && currentPoint.name ? currentPoint.name : 'Home'}`;
+    const description = currentPoint && currentPoint.description ? currentPoint.description : 'Software development';
 
     return (
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {description.length ? <meta name="description" content={description} /> : null}
         <link type="text/css" rel="stylesheet" href="/static/main.css" />
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
         <link type="image/x-icon" rel="shortcut icon" href="/static/images/favicon.ico" />

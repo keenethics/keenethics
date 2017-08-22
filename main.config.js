@@ -71,7 +71,7 @@ export const config = {
         },
         {
           name: 'Agile Project Management',
-          description: 'AIterative, incremental method of managing the design and build activities of engineering',
+          description: 'Alterative, incremental method of managing the design and build activities of engineering',
           href: '/approach-agile-project-management',
           icon: {
             name: 'agile',
@@ -111,7 +111,7 @@ export const config = {
         },
         {
           name: 'High Quality Software',
-          description: 'Best Quality Software',
+          description: 'Well-tested, carefully-crafted masterpiece',
           href: '/approach-high-quality',
           icon: {
             name: 'high-quality',
@@ -225,10 +225,12 @@ export const config = {
     },
     {
       name: 'Blog',
+      description: 'Articles based on our experience',
       href: '/blog',
     },
     {
       name: 'Careers',
+      description: '',
       href: '/careers',
     },
     {
@@ -236,7 +238,7 @@ export const config = {
       points: [
         {
           name: 'Team',
-          description: '',
+          description: 'Meat our Squad',
           href: '/about-team',
           icon: {
             name: 'team',
@@ -266,7 +268,7 @@ export const config = {
         // },
         {
           name: 'Open Source',
-          description: '',
+          description: 'Ethical support for the community',
           href: '/about-open-source',
           icon: {
             name: 'open-source',
@@ -278,6 +280,7 @@ export const config = {
     },
     {
       name: 'Contacts',
+      description: 'Have an idea? We can`t wait to help you implement it!',
       href: '/contacts',
       type: 'hidden',
     },
@@ -386,31 +389,31 @@ export const servicesWebDevelopmentTabs = [
   {
     href: '/services-web-development-e-commerce',
     name: 'E-Commerce',
-    description: 'Sites, which help you sell your goods',
+    description: 'Building amazing e-commerce products',
     icon: 'icon-e',
   },
   {
     href: '/services-web-development-chatbot',
     name: 'Chat Bots',
-    description: 'Blogs, Social Media, Corporative Sites, etc.',
+    description: 'Talking to AI was never that easy',
     icon: 'icon-chat-bots',
   },
   {
     href: '/services-web-development-node',
     name: 'Website Node JS',
-    description: 'Sites, which help you sell your goods',
+    description: 'Leading and rule-breaking technology',
     icon: 'icon-node',
   },
   {
     href: '/services-web-development-meteor',
     name: 'Meteor.js',
-    description: 'Blogs, Social Media, Corporative Sites, etc.',
+    description: 'An ambitious fullstack-framework',
     icon: 'icon-meteor',
   },
   {
     href: '/services-web-development-programmable-voice',
     name: 'Programmable Voice',
-    description: 'Send money online or with your mobile',
+    description: 'When computer can replace a human',
     icon: 'icon-voice',
   },
 ];
@@ -419,14 +422,14 @@ export const servicesMobileDevelopment = [
     href: '/services-mobile-development-apple',
     name: 'iOS DEVELOPMENT',
     tabsDescription: '14 apps developed',
-    description: '14 apps developed',
+    description: 'Mobile applications for popular platform',
     icon: 'icon-apple',
   },
   {
     href: '/services-mobile-development-android',
     name: 'Android development',
     tabsDescription: '23 apps developed',
-    description: '23 apps developed',
+    description: 'Most popular Linux-based mobile OS',
     icon: 'icon-android',
   },
 ];
@@ -435,14 +438,14 @@ export const servicesOutstaffing = [
     href: '/services-outstaffing-senior',
     name: 'Senior developer',
     tabsDescription: '4 in our team',
-    description: '4 in our team',
+    description: 'Best skills and expertise',
     icon: 'icon-o-1',
   },
   {
     href: '/services-outstaffing-team',
     name: 'Dedicated team',
     tabsDescription: '4-8 people',
-    description: '4-8 people',
+    description: 'Great developers who already have multiple projects behind',
     icon: 'icon-o-2',
   },
   {
@@ -458,31 +461,37 @@ export const techApps = [
   {
     href: '/tech-apps-phonegap',
     name: 'PhoneGap',
+    description: 'Framework for building mobile applications reusing existing codebase',
     icon: 'icon-pg',
   },
   {
     href: '/tech-apps-electron',
     name: 'Electron',
+    description: 'JS-application on your desktop',
     icon: 'icon-en',
   },
   {
     href: '/tech-apps-accelerated-mobile-pages',
     name: 'Accelerated Mobile Pages',
+    description: 'High speed for content loading and great Google-ranking',
     icon: 'icon-acc',
   },
   {
     href: '/tech-apps-progressive-web-apps',
     name: 'Progressive Web Apps',
+    description: 'Working with web-applications offline',
     icon: 'icon-prog',
   },
   {
     href: '/tech-apps-react-native',
     name: 'React Native',
+    description: 'Using native mobile UI-elements with crossplatform JS-code',
     icon: 'icon-rn',
   },
   {
     href: '/tech-apps-cordova',
     name: 'Cordova',
+    description: 'Open-source framework for cross-platform mobile applications',
     icon: 'icon-cv',
   },
 ];
@@ -491,41 +500,49 @@ export const techFrontEnd = [
   {
     href: '/tech-front-end-react',
     name: 'React',
+    description: 'Library for blazing-fast UI-rendering va virtual-DOM',
     icon: 'icon-rn',
   },
   {
     href: '/tech-front-end-redux',
     name: 'Redux',
+    description: 'Organizing state in React-applciation',
     icon: 'icon-redux',
   },
   {
     href: '/tech-front-end-angular',
     name: 'Angular',
+    description: 'Google-backed frontend-framework',
     icon: 'icon-ang',
   },
-  // {
-  //   href: '/tech-front-end-AURELIA',
-  //   name: 'Aurelia',
-  //   icon: 'icon-aurelia',
-  // },
+  {
+    href: '/tech-front-end-aurelia',
+    name: 'Aurelia',
+    description: 'Ambitious Angular-competitor by one of former Angular-deveopers',
+    icon: 'icon-aurelia',
+  },
   {
     href: '/tech-front-end-react-native',
     name: 'React Native',
+    description: 'Speeding up hybrid mobile-apps by using native mobile UI-elements',
     icon: 'icon-rn',
   },
   {
     href: '/tech-front-end-angular-2',
     name: 'Angular 2.0',
+    description: 'Next-generation frontend-framework',
     icon: 'icon-ang',
   },
   {
     href: '/tech-front-end-vue',
     name: 'Vue JS',
+    description: 'Popular lightweight library for UI',
     icon: 'icon-vue',
   },
   {
     href: '/tech-front-end-next',
     name: 'Next JS',
+    description: 'Fullstack framework aiming simplicity combined with powerful features',
     icon: 'icon-next',
   },
 ];
@@ -534,16 +551,19 @@ export const techBackEnd = [
   {
     href: '/tech-back-end-express',
     name: 'Express',
+    description: 'Most popular backend framework on top of node.js',
     icon: 'icon-ex',
   },
   {
     href: '/tech-back-end-meteor',
     name: 'Meteor',
+    description: 'Fullstack real-time framework',
     icon: 'icon-meteor_',
   },
   {
     href: '/tech-back-end-hapi',
-    name: 'Hapi',
+    name: 'HAPI',
+    description: 'node.js-based backend framework',
     icon: 'icon-hapi',
   },
 ];
@@ -552,19 +572,19 @@ export const techDatabase = [
   {
     href: '/tech-data-base-mongo',
     name: 'Mongo',
-    description: 'For GIANT ideas',
+    description: 'Fast noSQL database',
     icon: 'icon-mongo',
   },
   {
     href: '/tech-data-base-mysql',
     name: 'MySQL',
-    description: 'The world’s most popular open source database',
+    description: 'Most popular SQL-database',
     icon: 'icon-mysql',
   },
   {
     href: '/tech-data-base-postgresql',
     name: 'PostgreSQL',
-    description: 'The world’s most advanced open source database',
+    description: 'SQL-database with advanced features',
     icon: 'icon-post',
   },
 ];
@@ -572,38 +592,38 @@ export const techDatabase = [
 export const techApiIntegration = [
   {
     href: '/tech-api-integration-rest',
-    name: 'Rest',
-    description: 'Send money online or with your mobile',
+    name: 'REST',
+    description: 'Organizing your backend endpoints',
     icon: 'icon-rest',
   },
   {
     href: '/tech-api-integration-paypal',
     name: 'PayPal',
-    description: 'The world’s most popular open source database',
+    description: 'Sending and receiving money online',
     icon: 'icon-paypal',
   },
   {
     href: '/tech-api-integration-graphql',
-    name: 'Graphql',
-    description: 'Send money online or with your mobile',
+    name: 'GraphQL',
+    description: 'Smart organizing of dataflow between frontend and backend',
     icon: 'icon-grap',
   },
   {
     href: '/tech-api-integration-braintree',
     name: 'Braintree',
-    description: 'Send money online or with your mobile',
+    description: 'Solution for accepting, splitting andprocessing payments online',
     icon: 'icon-brain',
   },
-  // {
-  //   href: '/tech-api-integration-ELASTIC',
-  //   name: 'Elastic Search',
-  //   description: 'The world’s most popular open source database',
-  //   icon: 'icon-el',
-  // },
+  {
+    href: '/tech-api-integration-elastic-search',
+    name: 'Elastic Search',
+    description: 'Popular search-engine',
+    icon: 'icon-el',
+  },
   {
     href: '/tech-api-integration-stripe',
     name: 'Stripe',
-    description: 'Send money online or with your mobile',
+    description: 'Developer-friendly payments service',
     icon: 'icon-stripe',
   },
 ];
