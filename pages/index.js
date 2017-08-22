@@ -40,9 +40,24 @@ export default class Index extends React.Component {
               <div className="tbl">
                 <div className="cell">
                   <div className="title-wrap">
-                    <div className="title-u title-top">
-                      TOP RATED UPWORK AGENCY
-                    </div>
+                    <p>
+                      <a
+                        href="https://www.upwork.com/agencies/~0106b5437592391f94"
+                        className="title-u title-top"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        TOP RATED UPWORK AGENCY
+                      </a>
+                    </p>
+                    <a
+                      href="https://clutch.co/profile/keenethics"
+                      className="title-u title-top title-clutch"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      5-stars rated company at Clutch
+                    </a>
 
                     <div className="title-main">
                       ETHICAL <br />

@@ -358,8 +358,11 @@
 
 .title-top {
     position: relative;
-    padding-left: 35px;
+    padding: 0 0 0 35px;
+    margin: 10px 0 0;
     color: #5B659B;
+    text-decoration: none;
+    display: inline-block;
 
     &:before {
         @extend .ps;
@@ -367,7 +370,7 @@
         height: 21px;
         left: 0;
         top: 0;
-        background: url(/static/images/svg/top-rated.svg) no-repeat;
+        background: url(/static/images/svg/top-rated.svg) no-repeat center;
     }
 
     @include lt {
@@ -378,6 +381,25 @@
             top: 2px;
         }
     }
+    @include mobile {
+      font-size: 10px;
+      padding: 0 0 0 26px;
+
+      &:before {
+        top: 4px;
+        width: 18px;
+      }
+    }
+}
+
+.title-clutch:before {
+  background: url('/static/images/clutch.svg') no-repeat center;
+  width: 18px;
+
+  @include mobile {
+    font-size: 10px;
+    top: 0;
+  }
 }
 
 .slide-navigation { // TITLE INNER PAGE
