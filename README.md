@@ -15,7 +15,7 @@
 1. Start build via `yarn deploy` command
 2. Enjoy
 
-### nginx config
+## Nginx config
 ```
   http {
 
