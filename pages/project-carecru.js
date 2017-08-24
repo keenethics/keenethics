@@ -8,7 +8,7 @@ const baseColor = '#fd725f';
 const ProjectCarecru = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <div className="content-block">
+      <div className="content-block content-block-project">
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">

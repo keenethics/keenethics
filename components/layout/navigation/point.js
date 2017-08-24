@@ -49,17 +49,12 @@ export default class NavigationPoint extends React.Component {
     });
   }
   renderPoint() {
-    const { href, type } = this.props.element;
+    const { href } = this.props.element;
 
     if (href) {
       const attr = {
         className: 'point',
       };
-
-      if (type && type === 'number') {
-        attr.rel = 'noopener noreferrer';
-        attr.target = '_blank';
-      }
       return (
         <Link href={href} prefetch>
           {React.createElement('a', attr, this.renderPointContent())}
