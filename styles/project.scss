@@ -61,16 +61,26 @@
   }
 }
 .project-content-preview-inner {
+  position: relative;
   margin: 0 auto;
   max-width: 500px;
-  max-height: 300px;
-}
-.project-content-preview-inner img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  z-index: 200;
+  height: 330px;
+  overflow: hidden;
+
+  .macbook {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 200;
+  }
+  .screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    z-index: 150;
+  }
 }
 .project-content-more {
   padding: 20px 25px 25px;
@@ -89,5 +99,49 @@
     padding: 10px 16px;
     border-radius: 20px;
     text-decoration: none;
+  }
+}
+.project-achievements {
+  margin: 50px 0;
+
+  h3 {
+    font-size: 24px;
+    margin: 0 0 26px;
+  }
+  ul li {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 16px;
+    padding: 0 0 2px 28px;
+    line-height: 1.4;
+    background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
+    background-size: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.project-preview {
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, .05);
+  border-radius: 18px;
+
+  p {
+    font-size: 18px;
+    color: #444;
+    margin: 0 0 10px;
+
+    span {
+      display: block;
+      font-size: 14px;
+      margin: 2px 0;
+      color: #888;
+    }
+  }
+
+  .link {
+    margin: 0;
   }
 }
