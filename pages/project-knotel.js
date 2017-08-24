@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 
-const baseColor = '#ff6246';
+const baseColor = '#fc634d';
 
 const ProjectKnotel = ({ url }) => (
   <Layout currentURL={url}>
@@ -15,18 +15,20 @@ const ProjectKnotel = ({ url }) => (
               <h2 className="title">Knotel</h2>
               <h3 className="duration"><span>Duration:</span> In development since April 2016</h3>
               <p className="description">
-                Headquarters as a Service: Knotel provides comprehensive office services powered by
-                domain experts and best of breed technology.
+                Headquarters as a Service
               </p>
               <div className="tags">
                 <div className="tag-title">Technologies:</div>
                 <div className="tag" style={{ color: baseColor }}>Meteor</div>
                 <div className="tag" style={{ color: baseColor }}>React</div>
+                <div className="tag" style={{ color: baseColor }}>React Native</div>
+                <div className="tag" style={{ color: baseColor }}>Mongo</div>
               </div>
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
-                <img src="/static/images/project/macbook.png" alt="macbook" />
+                <img src="/static/images/project/macbook.png" alt="macbook" className="macbook" />
+                <img src="/static/images/project/knotel.png" alt="Knotel" className="screen" />
               </div>
             </div>
           </div>

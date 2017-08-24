@@ -22,7 +22,7 @@
     line-height: 1.3;
   }
   .tags {
-    margin: 20px 0 0;
+    margin: 25px 0 0;
     overflow: hidden;
 
     .tag-title {
@@ -45,6 +45,15 @@
   max-width: 500px;
   padding: 0 28px;
   margin: 0 auto;
+
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  .full-width & {
+    padding: 20px 25px 25px;
+    max-width: 800px;
+  }
 }
 .project-content-preview {
   position: relative;
@@ -104,6 +113,9 @@
 .project-achievements {
   margin: 50px 0;
 
+  &:first-child {
+    margin-top: 0;
+  }
   h3 {
     font-size: 24px;
     margin: 0 0 26px;
@@ -112,7 +124,7 @@
     font-size: 16px;
     color: #444;
     margin: 0 0 16px;
-    padding: 0 0 2px 28px;
+    padding: 0 0 2px 30px;
     line-height: 1.4;
     background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
     background-size: 18px;
@@ -143,5 +155,31 @@
 
   .link {
     margin: 0;
+  }
+}
+
+.project-feedback {
+  margin: 50px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 24px;
+    margin: 0 0 26px;
+  }
+  p {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 12px;
+    padding: 0 0 2px 30px;
+    background: url('/static/images/project/icon-quote.svg') no-repeat left center;
+    background-size: 18px;
+    line-height: 1.4;
+  }
+  .project-customer {
+    font-size: 12px;
+    color: #666;
+    padding: 0 0 0 30px;
   }
 }

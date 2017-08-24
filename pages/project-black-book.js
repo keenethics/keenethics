@@ -5,7 +5,7 @@ import Layout from '../components/layout/main';
 
 const baseColor = '#3c67ab';
 
-const ProjectComicEnglish = ({ url }) => (
+const ProjectBlackBook = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
       <div className="content-block">
@@ -59,7 +59,7 @@ const ProjectComicEnglish = ({ url }) => (
                 <span>Password: 111111</span>
               </p>
               <a
-                href="https://knotel.com"
+                href="http://bb-ipad.herokuapp.com"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="link"
@@ -74,11 +74,11 @@ const ProjectComicEnglish = ({ url }) => (
     </div>
   </Layout>
 );
-ProjectComicEnglish.propTypes = {
+ProjectBlackBook.propTypes = {
   url: PropTypes.object,
 };
-ProjectComicEnglish.defaultProps = {
+ProjectBlackBook.defaultProps = {
   url: {},
 };
 
-export default ProjectComicEnglish;
+export default ProjectBlackBook;
