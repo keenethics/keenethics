@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#6f727d';
 
@@ -48,6 +49,7 @@ const ProjectPollen = ({ url }) => (
               </ul>
             </div>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#1b9c19';
 
@@ -39,6 +40,7 @@ const ProjectBarfrogs = ({ url }) => (
               </ul>
             </div>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

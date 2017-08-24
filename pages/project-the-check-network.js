@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#258b49';
 
@@ -62,6 +63,7 @@ const ProjectTheCheckNetwork = ({ url }) => (
               Look at the project
             </a>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

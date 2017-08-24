@@ -192,6 +192,7 @@ $menu-w-m: 180px;
           z-index: 995;
           display: none;
           visibility: hidden;
+          overflow: hidden;
 
           @include desktop {
             left: $menu-w-mid;
@@ -344,7 +345,7 @@ li.current:hover > .point:before {
     box-shadow: 0px 2px 19.6px 0.4px rgba(80, 116, 165, 0.1);
   }
   .menu-sub-inner {
-    width: 100%;
+    width: 150px;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;

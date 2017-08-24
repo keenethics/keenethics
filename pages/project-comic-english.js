@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#ee521d';
 
@@ -39,6 +40,7 @@ const ProjectComicEnglish = ({ url }) => (
               time. The website is currently offline.
             </p>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

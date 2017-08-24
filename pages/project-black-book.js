@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#3c67ab';
 
@@ -69,6 +70,7 @@ const ProjectBlackBook = ({ url }) => (
               </a>
             </div>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

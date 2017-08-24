@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#4b44b7';
 
@@ -66,6 +67,7 @@ const ProjectPlutio = ({ url }) => (
               Look at the project
             </a>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>

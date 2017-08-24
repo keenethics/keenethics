@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const baseColor = '#fc634d';
 
@@ -70,6 +71,7 @@ const ProjectKnotel = ({ url }) => (
               Look at the project
             </a>
           </div>
+          <Navigation url={url} />
         </div>
       </div>
     </div>
