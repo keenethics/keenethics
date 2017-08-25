@@ -2,5 +2,8 @@
 .next
 .idea
 node_modules
+
 yarn-error.log
 private.config.js
+
+/static/main.css

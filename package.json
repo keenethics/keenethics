@@ -25,7 +25,7 @@
     "react": "^15.6.1",
     "react-click-outside": "^2.3.1",
     "react-dom": "^15.6.1",
-    "react-html-parser": "^1.0.3",
+    "react-html-parser": "^2.0.0",
     "react-markdown": "^2.5.0",
     "react-slick": "^0.14.11",
     "string-format-validation": "^2.0.2",
