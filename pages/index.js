@@ -79,15 +79,8 @@ export default class Index extends React.Component {
               </div>
 
               <div className={contactsIsOpen ? 'contacts open' : 'contacts'}>
-                <div ref={n => {
-                  n.setAttribute('itemscope', '');
-                  n.setAttribute('itemtype', 'http://schema.org/Organization');
-                }}>
-                  <div className="contact-item" ref={n => {
-                    n.setAttribute('itemprop', 'address');
-                    n.setAttribute('itemscope', '');
-                    n.setAttribute('itemtype', 'http://schema.org/PostalAddress');
-                  }}>
+                <div>
+                  <div className="contact-item">
                     <div className="tbl ico">
                       <div className="cell">
                         <div className="ico-svg">
@@ -95,14 +88,10 @@ export default class Index extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank" ref={n => {
-                      n.setAttribute('itemprop', 'streetAddress');
-                    }}>
+                    <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
                       3 Lytvynenka Street
                     </a>
-                    <i ref={n => {
-                      n.setAttribute('itemprop', 'addressLocality');
-                    }}>Lviv, Ukraine</i>
+                    <i>Lviv, Ukraine</i>
                   </div>
 
                   <div className="contact-item">
@@ -114,9 +103,7 @@ export default class Index extends React.Component {
                       </div>
                     </div>
 
-                    <a href={'mailto:founders@keenethics.com'} ref={n => {
-                      n.setAttribute('itemprop', 'email');
-                    }}>founders@keenethics.com</a>
+                    <a href={'mailto:founders@keenethics.com'}>founders@keenethics.com</a>
                     <i>
                       Drop Us a Letter or
                       <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
@@ -132,10 +119,8 @@ export default class Index extends React.Component {
                       </div>
                     </div>
 
-                    <a href="tel:+380968147266" ref={n => {
-                      n.setAttribute('itemprop', 'telephone');
-                    }}>+38 (096) 814 72 66</a>
-                    <i>Give Us a Call</i>
+                    <a href="tel:+380968147266">+38 (096) 814 72 66</a>
+                    <i>Give Us a Calls</i>
                   </div>
                 </div>
 
