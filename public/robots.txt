@@ -1,4 +1,2 @@
 User-Agent:
-Disallow: /
-Allow: /?okparam=
-Allow: /$
+Allow: *
