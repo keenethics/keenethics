@@ -108,7 +108,7 @@ export default class NavigationPoint extends React.Component {
 
     const className = cn({
       current: currentPoint || currentSubpoint,
-      'show-children': showChildren,
+      'show-children': showChildren && children,
     });
 
     return (
@@ -117,6 +117,7 @@ export default class NavigationPoint extends React.Component {
         role="presentation"
         style={{ height }}
         onMouseEnter={this.onMouseOver}
+        onClick={this.onMouseOver}
         onMouseLeave={this.onMouseOut}
       >
         {this.renderPoint()}
