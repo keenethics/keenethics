@@ -116,12 +116,9 @@ class Navigation extends React.Component {
     });
 
     return (
-      <div className="sidebar-wrapper">
-        <button className="menu-btn" onClick={this.showSidebar}>
-          <i />
-        </button>
-        <nav className={showSidebar ? 'sidebar open' : 'sidebar'}>
-          <div className="sidebar-header">
+      <div className="navigation">
+        <div className="navigation-inner">
+          <div className="navigation-header">
             <Link href={'/'} prefetch>
               <a className="logo">
                 <img src="/static/images/svg/logo.svg" alt="Keenethics" width="120px" />
@@ -129,8 +126,8 @@ class Navigation extends React.Component {
             </Link>
           </div>
 
-          <div className="sidebar-content">
-            <ul className="sidebar-navigation">
+          <div className="navigation-content">
+            <ul>
               {navigation.map((n, i) => {
                 if (n.type && n.type === 'hidden') {
                   return null;
@@ -150,12 +147,12 @@ class Navigation extends React.Component {
             </ul>
           </div>
 
-          <div className="sidebar-footer">
+          <div className="navigation-footer">
             <Link href="contacts">
               <a className="button">Contact us</a>
             </Link>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }

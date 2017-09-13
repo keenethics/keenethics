@@ -13,10 +13,14 @@ if (typeof window !== 'undefined' && !window.Promise) {
 }
 
 const Layout = ({ children, currentURL, noMenu }) => (
-  <div className="root">
+  <div className="layout">
     <Head currentURL={currentURL} />
     {noMenu ? null : <Navigation currentURL={currentURL} />}
-    { children }
+    <div className="content">
+      <div className="content-inner">
+        { children }
+      </div>
+    </div>
   </div>
 );
 

@@ -1,0 +1,62 @@
+.navigation {
+  display: table-cell;
+  height: 100%;
+  background: #fff;
+  width: 1px;
+}
+.navigation-inner {
+  position: relative;
+  width: 200px;
+  height: 100%;
+}
+.navigation-header {
+  position: absolute;
+  width: 200px;
+  height: 54px;
+  left: 0;
+  top: 0;
+
+  .logo {
+    display: block;
+    height: 14px;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+.navigation-content {
+  width: 200px;
+  height: 100%;
+  overflow: hidden;
+
+  ul {
+    height: 100%;
+    padding: 54px 0 0;
+    box-sizing: border-box;
+
+    li {
+      display: block;
+      border-bottom: 1px solid #eef0f1;
+
+      &:hover .menu-sub {
+        display: block;
+        position: absolute;
+        left: 200px;
+        top: 0;
+        width: 100%;
+      }
+      &.current .menu-sub {
+        display: block;
+        position: absolute;
+        left: 200px;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+  .point {
+
+  }
+  .menu-sub {
+    display: none;
+  }
+}
