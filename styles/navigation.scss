@@ -1,20 +1,22 @@
 .navigation {
   display: table-cell;
   height: 100%;
-  background: #fff;
   width: 1px;
+  background: #fff;
+  vertical-align: top;
 }
 .navigation-inner {
   position: relative;
-  width: 200px;
+  min-width: 160px;
   height: 100%;
 }
 .navigation-header {
   position: absolute;
-  width: 200px;
+  width: 160px;
   height: 54px;
   left: 0;
   top: 0;
+  background: #fff;
   box-shadow: 0 2px 20px rgba(80, 116, 165, .1);
 
   .logo {
@@ -24,41 +26,82 @@
     text-align: center;
   }
 }
+.navigation-footer {
+  position: absolute;
+  padding: 10px 0 0;
+  width: 160px;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  text-align: center;
+
+  .button {
+    border-radius: 35px;
+    padding: 16px 28px;
+    display: inline-block;
+    height: 45px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background: 0 0;
+    border: none;
+    outline: none;
+    font-family: "Raleway-Bold";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg,#de3535 0%,#e3621d 100%);
+    box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+}
+.subnavigation {
+  display: none;
+  width: 160px;
+  background: pink;
+
+
+}
 .navigation-content {
-  width: 200px;
+  display: block;
   height: 100%;
+  padding: 54px 0 60px;
+  box-sizing: border-box;
   overflow: hidden;
 
-  ul {
-    height: 100%;
-    padding: 54px 0 0;
-    box-sizing: border-box;
+  .item {
+    display: block;
+    border-bottom: 1px solid #eef0f1;
 
-    li {
+    &:last-child {
+      border: none;
+    }
+    &:hover .subnavigation {
       display: block;
-      border-bottom: 1px solid #eef0f1;
+      position: absolute;
+      left: 160px;
+      top: 0;
+      width: 160px;
+      z-index: 9999;
+    }
+    &.current {
+      width: 320px;
 
-      &:hover .menu-sub {
+      .subnavigation {
         display: block;
         position: absolute;
-        left: 200px;
+        left: 160px;
         top: 0;
-        width: 100%;
-      }
-      &.current .menu-sub {
-        display: block;
-        position: absolute;
-        left: 200px;
-        top: 0;
-        width: 100%;
+        z-index: 100;
       }
     }
-  }
-  .point {
-
-  }
-  .menu-sub {
-    display: none;
+    .subnavigation .item.current {
+      width: 160px;
+      background: #f5f9fa;
+    }
   }
 }
 
@@ -74,6 +117,6 @@
     display: table-cell;
     vertical-align: middle;
     font-size: 14px;
-    padding: 0 20px 0 40px;
+    padding: 0 20px 0 30px;
   }
 }

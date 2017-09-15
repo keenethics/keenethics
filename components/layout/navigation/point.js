@@ -51,18 +51,11 @@ export default class NavigationPoint extends React.Component {
   renderPoint() {
     const { href } = this.props.element;
 
-    if (href) {
-      const attr = {
-        className: 'navigation-point',
-      };
-      return (
-        <Link href={href} prefetch>
-          {React.createElement('a', attr, this.renderPointContent())}
-        </Link>
-      );
-    }
-
-    return (
+    return href ? (
+      <Link href={href} prefetch>
+        <a className="navigation-point">{this.renderPointContent()}</a>
+      </Link>
+    ) : (
       <span className="navigation-point">
         {this.renderPointContent()}
       </span>
@@ -73,7 +66,7 @@ export default class NavigationPoint extends React.Component {
 
     switch (type) {
       case 'icon': return (
-        <span className="cell">
+        <span className="navigation-cell">
           <span className="menu-ico sz-1 svg">
             <img src={`/static/images/svg/${icon.name || ''}.svg`} alt={icon.alt || ''} />
           </span>
@@ -83,7 +76,7 @@ export default class NavigationPoint extends React.Component {
         </span>
       );
       case 'number': return (
-        <span className="cell">
+        <span className="navigation-cell">
           <i>{number}</i>
           <span className="menu-sub-nm">
             {name}
@@ -102,19 +95,13 @@ export default class NavigationPoint extends React.Component {
     const { showChildren } = this.state;
 
     const className = cn({
+      item: true,
       current: currentPoint || currentSubpoint,
       'show-children': showChildren && children,
     });
 
     return (
-      <li
-        className={className}
-        role="presentation"
-        style={{ height }}
-        onMouseEnter={this.onMouseOver}
-        onClick={this.onMouseOver}
-        onMouseLeave={this.onMouseOut}
-      >
+      <li className={className} role="presentation" style={{ height }}>
         {this.renderPoint()}
         {children}
       </li>

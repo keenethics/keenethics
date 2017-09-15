@@ -41,8 +41,8 @@ class Navigation extends React.Component {
 
     if (points) {
       return (
-        <ul className="menu-sub">
-          <div className="menu-sub-inner">
+        <ul className="subnavigation">
+          <div className="subnavigation-inner">
             {points.map((p, i) => (
               <Point
                 key={p.name}
@@ -125,28 +125,24 @@ class Navigation extends React.Component {
               </a>
             </Link>
           </div>
-
-          <div className="navigation-content">
-            <ul>
-              {navigation.map((n, i) => {
-                if (n.type && n.type === 'hidden') {
-                  return null;
-                }
-                return (
-                  <Point
-                    key={n.name}
-                    element={n}
-                    height={height}
-                    currentPoint={currentPoint === i}
-                    showSidebar={dimensions.width > 767}
-                  >
-                    {this.getPointContent(n, currentPoint === i, currentSubpoint)}
-                  </Point>
-                );
-              })}
-            </ul>
-          </div>
-
+          <ul className="navigation-content">
+            {navigation.map((n, i) => {
+              if (n.type && n.type === 'hidden') {
+                return null;
+              }
+              return (
+                <Point
+                  key={n.name}
+                  element={n}
+                  height={height}
+                  currentPoint={currentPoint === i}
+                  showSidebar={dimensions.width > 767}
+                >
+                  {this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                </Point>
+              );
+            })}
+          </ul>
           <div className="navigation-footer">
             <Link href="contacts">
               <a className="button">Contact us</a>

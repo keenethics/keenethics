@@ -1,6 +1,8 @@
 .content {
   display: table-cell;
   height: 100%;
+  vertical-align: top;
+  -webkit-overflow-scrolling: touch;
 }
 .content-inner {
   height: 100%;
