@@ -15,6 +15,7 @@
   height: 54px;
   left: 0;
   top: 0;
+  box-shadow: 0 2px 20px rgba(80, 116, 165, .1);
 
   .logo {
     display: block;
@@ -58,5 +59,21 @@
   }
   .menu-sub {
     display: none;
+  }
+}
+
+.navigation-point {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: #2d4352;
+  cursor: pointer;
+  text-decoration: none;
+
+  .navigation-cell {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 0 20px 0 40px;
   }
 }

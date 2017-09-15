@@ -53,7 +53,7 @@ export default class NavigationPoint extends React.Component {
 
     if (href) {
       const attr = {
-        className: 'point',
+        className: 'navigation-point',
       };
       return (
         <Link href={href} prefetch>
@@ -63,7 +63,7 @@ export default class NavigationPoint extends React.Component {
     }
 
     return (
-      <span className="point">
+      <span className="navigation-point">
         {this.renderPointContent()}
       </span>
     );
@@ -91,12 +91,7 @@ export default class NavigationPoint extends React.Component {
         </span>
       );
       default: return (
-        <span className="cell">
-          <span className="menu-nm-wrap">
-            <span className="menu-bg" />
-            <span className="menu-nm">{name}</span>
-          </span>
-        </span>
+        <span className="navigation-cell">{name}</span>
       );
     }
   }
