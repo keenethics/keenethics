@@ -8,12 +8,6 @@ export default class NavigationPoint extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      showChildren: props.currentPoint && props.showSidebar,
-    };
-
-    this.onMouseOver = this.onMouseOver.bind(this);
-    this.onMouseOut = this.onMouseOut.bind(this);
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
   }
@@ -23,30 +17,6 @@ export default class NavigationPoint extends React.Component {
         showChildren: nextProps.currentPoint && nextProps.showSidebar,
       });
     }
-  }
-  onMouseOver() {
-    if (this.state.showChildren) {
-      return;
-    }
-    if (!this.props.children) {
-      return;
-    }
-
-    this.setState({
-      showChildren: true,
-    });
-  }
-  onMouseOut() {
-    if (this.props.currentPoint) {
-      return;
-    }
-    if (!this.props.children) {
-      return;
-    }
-
-    this.setState({
-      showChildren: false,
-    });
   }
   renderPoint() {
     const { href } = this.props.element;
@@ -67,12 +37,10 @@ export default class NavigationPoint extends React.Component {
     switch (type) {
       case 'icon': return (
         <span className="navigation-cell">
-          <span className="menu-ico sz-1 svg">
+          <span className="navigation-icon">
             <img src={`/static/images/svg/${icon.name || ''}.svg`} alt={icon.alt || ''} />
           </span>
-          <span className="menu-sub-nm">
-            {name}
-          </span>
+          {name}
         </span>
       );
       case 'number': return (
@@ -92,12 +60,10 @@ export default class NavigationPoint extends React.Component {
     if (!this.props.element.name) return null;
 
     const { children, height, currentPoint, currentSubpoint } = this.props;
-    const { showChildren } = this.state;
 
     const className = cn({
-      item: true,
+      'navigation-item': true,
       current: currentPoint || currentSubpoint,
-      'show-children': showChildren && children,
     });
 
     return (
@@ -126,7 +92,6 @@ NavigationPoint.propTypes = {
   currentSubpoint: PropTypes.bool,
   showSidebar: PropTypes.bool,
 };
-
 NavigationPoint.defaultProps = {
   children: null,
   element: {

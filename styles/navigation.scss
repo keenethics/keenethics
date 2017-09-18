@@ -61,9 +61,24 @@
 .subnavigation {
   display: none;
   width: 160px;
-  background: pink;
+  background: #fff;
+  overflow: hidden;
+  border-left: 1px solid #eef0f1;
 
+  .subnavigation-inner {
+    width: 160px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 100px 0 0;
+    box-sizing: content-box;
 
+    .navigation-cell {
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 13px;
+    }
+  }
 }
 .navigation-content {
   display: block;
@@ -72,9 +87,11 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  .item {
+  .navigation-item {
+    width: 160px;
     display: block;
     border-bottom: 1px solid #eef0f1;
+    box-sizing: border-box;
 
     &:last-child {
       border: none;
@@ -89,6 +106,7 @@
     }
     &.current {
       width: 320px;
+      background: #f5f9fa;
 
       .subnavigation {
         display: block;
@@ -98,9 +116,8 @@
         z-index: 100;
       }
     }
-    .subnavigation .item.current {
+    .subnavigation .navigation-item.current {
       width: 160px;
-      background: #f5f9fa;
     }
   }
 }
@@ -118,5 +135,14 @@
     vertical-align: middle;
     font-size: 14px;
     padding: 0 20px 0 30px;
+  }
+  .navigation-icon {
+    display: block;
+    width: 30px;
+    margin: 0 auto 8px;
+
+    img {
+      width: 100%;
+    }
   }
 }

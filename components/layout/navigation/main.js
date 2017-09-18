@@ -39,9 +39,9 @@ class Navigation extends React.Component {
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
 
-    if (points) {
+    if (points && this.state.dimensions.height > -1) {
       return (
-        <ul className="subnavigation">
+        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
           <div className="subnavigation-inner">
             {points.map((p, i) => (
               <Point
@@ -92,7 +92,7 @@ class Navigation extends React.Component {
     });
   }
   render() {
-    const { showSidebar, dimensions } = this.state;
+    const { dimensions } = this.state;
     const { currentURL } = this.props;
 
     const { navigation } = config;
