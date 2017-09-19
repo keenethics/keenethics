@@ -38,7 +38,7 @@ export default class NavigationPoint extends React.Component {
       case 'icon': return (
         <span className="navigation-cell">
           <span className="navigation-icon">
-            <img src={`/static/images/svg/${icon.name || ''}.svg`} alt={icon.alt || ''} />
+            <img src={`/static/images/svg/${icon.name || ''}.svg`} width="30px" height="30px" alt={icon.alt || ''} />
           </span>
           {name}
         </span>
