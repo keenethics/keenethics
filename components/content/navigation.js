@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PageBackground from './background';
+import ContentNavigationBackground from './background';
 
 import { config } from '../../main.config';
 
@@ -74,26 +74,17 @@ export default class ContentNavigation extends React.Component {
     return currentPoints;
   }
   render() {
-    const { image, title } = this.props;
+    const { image } = this.props;
 
     return (
       <div className="content-navigation">
         <div className="content-navigation-inner">
           {!image || (
-            <div className="figure-wrap">
-              <div className="tbl">
-                <div className="cell">
-                  <div className="figure">
-                    <img className="f-top" src={`/static/images/figures/${image}_top.png`} alt="" />
-                    <img className="f-btm" src={`/static/images/figures/${image}_btm.png`} alt="" />
-                  </div>
-                </div>
+            <div className="content-navigation-image">
+              <div className="content-navigation-image-inner">
+                <img className="image-top" src={`/static/images/figures/${image}_top.png`} alt="" />
+                <img className="image-bottom" src={`/static/images/figures/${image}_btm.png`} alt="" />
               </div>
-            </div>
-          )}
-          {!title || (
-            <div className="slide-menu-title">
-              <span>{title}</span>
             </div>
           )}
           <div className="tbl">
@@ -120,7 +111,7 @@ export default class ContentNavigation extends React.Component {
               </div>
             </div>
           </div>
-          <PageBackground />
+          <ContentNavigationBackground props={this.point} />
         </div>
       </div>
     );

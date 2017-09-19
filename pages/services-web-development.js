@@ -9,9 +9,9 @@ import { servicesWebDevelopmentTabs } from '../main.config';
 
 const ServicesWebDevelopment = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'web_development'} />
+    <ContentNavigation url={url} image="web_development" />
     <PageTabs points={servicesWebDevelopmentTabs} />
-    <div className="content">
+    <div className="contents">
       <h2>Web Development Services</h2>
       <p>
         If you want to go online and build a website or an app, you will definitely need to find

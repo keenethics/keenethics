@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const ContentNavigationBackground = () => (
   <div className="content-navigation-background">
@@ -10,18 +9,12 @@ const ContentNavigationBackground = () => (
       <div className="orbit" />
     </div>
     <div className="stars">
-      <div className="star" />
-      <div className="star" />
-      <div className="star" />
-      <div className="star" />
+      <div className="star-1" />
+      <div className="star-2" />
+      <div className="star-3" />
+      <div className="star-4" />
     </div>
   </div>
 );
-
-ContentNavigationBackground.propTypes = {
-};
-
-ContentNavigationBackground.defaultProps = {
-};
 
 export default ContentNavigationBackground;
