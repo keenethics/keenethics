@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
-import PageTabs from '../components/page/tabs';
+import ContentNavigation from '../components/content/navigation';
+import PageTabs from '../components/content/tabs';
 
 import { techDatabase } from '../main.config';
 
 const TechDataBase = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap with-icons">
-      <PageNavigation url={url} image="db" />
+      <ContentNavigation url={url} image="db" />
       <div className="content-block">
         <PageTabs
           points={techDatabase}

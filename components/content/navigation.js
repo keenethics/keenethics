@@ -7,7 +7,7 @@ import PageBackground from './background';
 
 import { config } from '../../main.config';
 
-export default class PageNavigation extends React.Component {
+export default class ContentNavigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -71,15 +71,14 @@ export default class PageNavigation extends React.Component {
       });
     }
 
-
     return currentPoints;
   }
   render() {
     const { image, title } = this.props;
 
     return (
-      <div className={title ? 'slide-block with-menu-title' : 'slide-block'}>
-        <div className="slide-block-inner">
+      <div className="content-navigation">
+        <div className="content-navigation-inner">
           {!image || (
             <div className="figure-wrap">
               <div className="tbl">
@@ -128,14 +127,13 @@ export default class PageNavigation extends React.Component {
   }
 }
 
-PageNavigation.propTypes = {
+ContentNavigation.propTypes = {
   url: PropTypes.object,
   image: PropTypes.string,
   title: PropTypes.string,
   points: PropTypes.array,
 };
-
-PageNavigation.defaultProps = {
+ContentNavigation.defaultProps = {
   url: {},
   image: '',
   title: '',

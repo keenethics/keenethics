@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
-import PageTabs from '../components/page/tabs';
+import ContentNavigation from '../components/content/navigation';
+import PageTabs from '../components/content/tabs';
 
 import { techBackEnd } from '../main.config';
 
 const TechBackEnd = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap with-icons">
-      <PageNavigation url={url} image="be" />
+      <ContentNavigation url={url} image="be" />
       <div className="content-block">
         <PageTabs
           points={techBackEnd}

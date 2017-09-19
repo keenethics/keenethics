@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 const ApproachHighPerformance = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation url={url} image={'high'} />
+      <ContentNavigation url={url} image={'high'} />
       <div className="content-block content-block-f">
         <div className="content">
           <div className="perfomance-wrap">

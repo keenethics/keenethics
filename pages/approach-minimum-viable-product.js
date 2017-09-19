@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 const ApproachMinimumValProduct = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation url={url} image={'min'} />
+      <ContentNavigation url={url} image={'min'} />
       <div className="content-block">
         <div className="content">
           <h3>MVP development services for startups and existing businesses</h3>

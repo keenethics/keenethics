@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 import { techBackEnd } from '../main.config';
 
 const TechBackEndMeteor = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation
+      <ContentNavigation
         url={url}
         image="be"
         points={techBackEnd}

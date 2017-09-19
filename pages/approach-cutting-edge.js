@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 const ApproachCuttingEdge = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation url={url} image={'cut'} />
+      <ContentNavigation url={url} image={'cut'} />
       <div className="content-block">
         <div className="content">
           <h2>Cutting Edge Technologies</h2>

@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 import { techApps } from '../main.config';
 
 const TechAppsProg = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation
+      <ContentNavigation
         url={url}
         image="app"
         points={techApps}

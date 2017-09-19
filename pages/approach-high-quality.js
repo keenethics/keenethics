@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 const ApproachHighQuality = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation url={url} image={'lean'} />
+      <ContentNavigation url={url} image={'lean'} />
       <div className="content-block content-block-s">
         <div className="content">
           <div className="ser-wrap ser-quality">

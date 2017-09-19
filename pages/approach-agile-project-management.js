@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import PageNavigation from '../components/page/navigation';
+import ContentNavigation from '../components/content/navigation';
 
 const ApproachAgileProject = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
-      <PageNavigation url={url} image={'agile'} />
+      <ContentNavigation url={url} image={'agile'} />
       <div className="content-block">
         <div className="content">
           <h2>Agile Project Management Services</h2>
