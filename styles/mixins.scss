@@ -1,3 +1,18 @@
 @mixin for-tablet {
   @media (max-width: 768px) { @content; }
 }
+@mixin for-desktop {
+  @media (max-width: 1368px) { @content; }
+}
+@mixin tr-top($bwr, $bwb, $bwl, $col) {
+    width: 0; height: 0; border-style: solid; border-width: 0 $bwr $bwb $bwl; border-color:  transparent transparent $col transparent;
+}
+@mixin tr-right($bwt, $bwb, $bwl, $col) {
+    width: 0; height: 0; border-style: solid; border-width:  $bwt 0 $bwb $bwl; border-color:   transparent transparent transparent $col;
+}
+@mixin tr-bottom($bwt, $bwr, $bwl, $col) {
+    width: 0; height: 0; border-style: solid; border-width: $bwt $bwr 0  $bwl; border-color: $col  transparent transparent transparent;
+}
+@mixin tr-left($bwt, $bwr, $bwb, $col) {
+    width: 0; height: 0; border-style: solid; border-width: $bwt $bwr $bwb 0; border-color: transparent $col   transparent transparent;
+}

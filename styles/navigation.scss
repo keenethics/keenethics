@@ -4,6 +4,7 @@
   width: 1px;
   background: #fff;
   vertical-align: top;
+  box-shadow: 0 2px 19px rgba(80, 116, 165, .1);
 
   @include for-tablet {
     display: none;

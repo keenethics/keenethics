@@ -61,7 +61,9 @@ export default class Index extends React.Component {
                 <h1>Ethical<br />development<br />of keen web-apps</h1>
                 <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
               </div>
-              <SocialButton />
+              <div className="home-page-social">
+                <SocialButton />
+              </div>
             </div>
           </div>
           <div className="home-page-background">
@@ -82,7 +84,7 @@ export default class Index extends React.Component {
             </div>
           </div>
         </div>
-        <div className={contactsIsOpen ? 'contacts open' : 'contacts'}>
+        <div className={contactsIsOpen ? 'home-page-contacts open' : 'home-page-contacts'}>
           <div>
             <div className="contact-item">
               <div className="tbl ico">

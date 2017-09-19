@@ -22,7 +22,7 @@
   right: 50px;
   z-index: 200;
 
-  @include for-tablet {
+  @include for-desktop {
     display: none;
     visibility: hidden;
   };
@@ -44,5 +44,40 @@
   .image-bottom {
     top: 15px;
     z-index: 80;
+  }
+}
+.content-block {
+  padding: 40px 25px 25px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 24px;
+    margin: 20px 0 28px;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 20px 0 26px;
+  }
+  ul {
+    margin: 26px 10px;
+  }
+  ul li {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 16px;
+    padding: 0 0 2px 30px;
+    line-height: 1.5;
+    background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
+    background-size: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 14px;
   }
 }

@@ -21,6 +21,7 @@
     margin: -119px 0 0 -119px;
     background: url('/static/images/svg/planet.svg') no-repeat;
     background-size: 100%;
+    z-index: 10;
   }
   .orbits, .stars {
     position: absolute;
@@ -64,17 +65,67 @@
     &:nth-child(3) {
       width: 760px;
       height: 760px;
-      left: -50px;
+      left: -100px;
       top: -150px;
       animation-duration: 60s;
     }
     &:nth-child(4) {
       width: 1060px;
       height: 1060px;
-      left: -150px;
+      left: -200px;
       top: -300px;
       animation-duration: 80s;
     }
+  }
+}
+.home-page-background .orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .08);
+  width: 360px;
+  height: 360px;
+  margin: -180px 0 0 -180px;
+  box-sizing: border-box;
+  animation: spin 20s infinite linear;
+
+  &:before {
+    content: '';
+    position: relative;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -6px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url('/static/images/svg/star.svg') no-repeat center;
+    animation: spin 10s infinite linear;
+  }
+
+  &:nth-child(2) {
+    width: 560px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    margin: -280px 0 0 -280px;
+    animation-duration: 40s;
+  }
+  &:nth-child(3) {
+    width: 760px;
+    height: 760px;
+    left: 50%;
+    top: 50%;
+    margin: -380px 0 0 -380px;
+    animation-duration: 60s;
+  }
+  &:nth-child(4) {
+    width: 1060px;
+    height: 1060px;
+    left: 50%;
+    top: 50%;
+    margin: -530px 0 0 -530px;
+    animation-duration: 80s;
   }
 }
 @function multiple-box-shadow($n) {
