@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#289e94';
@@ -30,6 +31,7 @@ const ProjectWorkbooking = ({ url }) => (
                 <img src="/static/images/project/workbooking.png" alt="Workbooking" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

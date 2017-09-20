@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#20cc97';
@@ -31,6 +32,7 @@ const ProjectPrix = ({ url }) => (
                 <img src="/static/images/project/prix.png" alt="Prix" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

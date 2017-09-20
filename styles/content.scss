@@ -6,12 +6,13 @@
 }
 .content-inner {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .content-navigation {
   overflow: hidden;
-  background: #1e2343 url('/static/images/space-bg.webp') no-repeat center bottom;
-  background-size: cover;
+  background: #071e40;
+  background: linear-gradient(145deg, #071e40 0%,#662938 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071e40', endColorstr='#662938', GradientType=1);
 }
 .content-navigation-inner {
   position: relative;

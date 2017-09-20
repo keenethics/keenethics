@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#1b9c19';
@@ -24,6 +25,7 @@ const ProjectBarfrogs = ({ url }) => (
                 <div className="tag" style={{ color: baseColor }}>React</div>
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>
