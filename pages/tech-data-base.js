@@ -13,7 +13,7 @@ const TechDataBase = ({ url }) => (
       <PageNavigation url={url} image="db" />
       <div className="content-block">
         <PageTabs
-          points={techDatabase}
+          points={techDatabase()}
         />
         <div className="content">
           <h2>Database Development Services</h2>

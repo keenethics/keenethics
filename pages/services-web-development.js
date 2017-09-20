@@ -13,7 +13,7 @@ const ServicesWebDevelopment = ({ url }) => (
       <PageNavigation url={url} image={'web_development'} />
       <div className="content-block">
         <PageTabs
-          points={servicesWebDevelopmentTabs}
+          points={servicesWebDevelopmentTabs()}
         />
         <div className="content">
           <h2>Web Development Services</h2>

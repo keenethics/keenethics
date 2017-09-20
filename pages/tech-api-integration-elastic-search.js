@@ -12,7 +12,7 @@ const TechApiIntegrationElastic = ({ url }) => (
       <PageNavigation
         url={url}
         image="be"
-        points={techApiIntegration}
+        points={techApiIntegration()}
       />
       <div className="content-block">
         <div className="content">

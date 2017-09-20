@@ -13,7 +13,7 @@ const TechApps = ({ url }) => (
       <PageNavigation url={url} image="app" />
       <div className="content-block">
         <PageTabs
-          points={techApps}
+          points={techApps()}
         />
         <div className="content">
           <h2>App Development Services</h2>

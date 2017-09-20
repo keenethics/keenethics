@@ -12,7 +12,7 @@ const TechDataBaseMongo = ({ url }) => (
       <PageNavigation
         url={url}
         image="be"
-        points={techDatabase}
+        points={techDatabase()}
       />
       <div className="content-block">
         <div className="content">

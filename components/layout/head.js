@@ -48,14 +48,14 @@ export default class LayoutHead extends React.Component {
     });
 
     if (!currentPoint) {
-      const subnavigation = servicesWebDevelopmentTabs.concat(
-        servicesMobileDevelopment,
+      const subnavigation = servicesWebDevelopmentTabs().concat(
         servicesOutstaffing,
-        techApps,
-        techFrontEnd,
-        techBackEnd,
-        techDatabase,
-        techApiIntegration,
+        servicesMobileDevelopment(),
+        techApps(),
+        techFrontEnd(),
+        techBackEnd(),
+        techDatabase(),
+        techApiIntegration(),
       );
 
       subnavigation.forEach((point) => {
@@ -65,8 +65,8 @@ export default class LayoutHead extends React.Component {
       });
     }
 
-    const title = `KEEN.ETHICS - ${currentPoint && currentPoint.name ? currentPoint.name : 'Home'}`;
-    const description = currentPoint && currentPoint.description ? currentPoint.description : 'Software development';
+    const title = `KEEN.ETHICS - ${currentPoint && currentPoint.metaTitle ? currentPoint.metaTitle : 'Home'}`;
+    const description = currentPoint && currentPoint.metaDescription ? currentPoint.metaDescription : 'Software development';
 
     return (
       <Head>

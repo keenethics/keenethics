@@ -12,7 +12,7 @@ const TechBackEndHapi = ({ url }) => (
       <PageNavigation
         url={url}
         image="be"
-        points={techBackEnd}
+        points={techBackEnd()}
       />
       <div className="content-block">
         <div className="content">

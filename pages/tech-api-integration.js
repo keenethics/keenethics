@@ -13,7 +13,7 @@ const TechApiIntegration = ({ url }) => (
       <PageNavigation url={url} image="be" />
       <div className="content-block">
         <PageTabs
-          points={techApiIntegration}
+          points={techApiIntegration()}
         />
         <div className="content">
           <h2>API Integration Services</h2>

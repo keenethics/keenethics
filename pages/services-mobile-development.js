@@ -13,7 +13,7 @@ const ServicesMobileDevelopment = ({ url }) => (
       <PageNavigation url={url} image={'mobile_development'} />
       <div className="content-block">
         <PageTabs
-          points={servicesMobileDevelopment}
+          points={servicesMobileDevelopment()}
           withDescription
         />
         <div className="content">

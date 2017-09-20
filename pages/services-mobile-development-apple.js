@@ -12,7 +12,7 @@ const ServicesWebDevelopmentApple = ({ url }) => (
       <PageNavigation
         url={url}
         image={'apple'}
-        points={servicesMobileDevelopment}
+        points={servicesMobileDevelopment()}
       />
       <div className="content-block">
         <div className="content">

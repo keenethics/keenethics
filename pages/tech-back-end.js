@@ -13,7 +13,7 @@ const TechBackEnd = ({ url }) => (
       <PageNavigation url={url} image="be" />
       <div className="content-block">
         <PageTabs
-          points={techBackEnd}
+          points={techBackEnd()}
         />
         <div className="content">
           <h2>Back-End</h2>

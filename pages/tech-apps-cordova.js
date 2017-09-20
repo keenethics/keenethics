@@ -12,7 +12,7 @@ const TechAppsCordova = ({ url }) => (
       <PageNavigation
         url={url}
         image="app"
-        points={techApps}
+        points={techApps()}
       />
       <div className="content-block">
         <div className="content">

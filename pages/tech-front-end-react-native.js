@@ -12,7 +12,7 @@ const TechFrontEndReactNative = ({ url }) => (
       <PageNavigation
         url={url}
         image="fe"
-        points={techFrontEnd}
+        points={techFrontEnd()}
       />
       <div className="content-block">
         <div className="content">

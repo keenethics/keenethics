@@ -13,7 +13,7 @@ const ServicesOutstaffing = ({ url }) => (
       <PageNavigation url={url} image="fe" />
       <div className="content-block">
         <PageTabs
-          points={techFrontEnd}
+          points={techFrontEnd()}
         />
         <div className="content">
           <h2>Front-End</h2>
