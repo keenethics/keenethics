@@ -132,6 +132,7 @@ const PageTabs = ({ points, withDescription }) => (
 );
 
 PageTabs.propTypes = {
+  points: PropTypes.arrayOf(PropTypes.object),
   withDescription: PropTypes.bool,
 };
 
