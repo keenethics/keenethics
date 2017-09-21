@@ -5,8 +5,13 @@
   -webkit-overflow-scrolling: touch;
 }
 .content-inner {
+  position: relative;
   height: 100%;
   overflow-y: auto;
+
+  @include for-tablet {
+    margin-left: -1px;
+  };
 }
 .content-navigation {
   overflow: hidden;
@@ -48,7 +53,7 @@
   }
 }
 .content-block {
-  padding: 40px 25px 25px;
+  padding: 35px 25px 25px;
   max-width: 800px;
   margin: 0 auto;
 

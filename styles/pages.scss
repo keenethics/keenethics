@@ -20,7 +20,6 @@
   max-width: 920px;
   flex-basis: auto;
   flex-grow: 1;
-
   margin: 0 auto;
   z-index: 600;
 
@@ -32,20 +31,29 @@
     font-weight: 900;
     text-transform: uppercase;
     line-height: 60px;
+
+    @include for-mobile {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
   h2 {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     color: rgba(255, 255, 255, .8);
+    line-height: 1.2;
 
+    @include for-mobile {
+      margin-right: 40px;
+    }
     .dash {
       display: inline-block;
       position: relative;
       vertical-align: top;
       margin: 0 16px 0 8px;
       top: 7px;
-      width: 30px;
+      width: 22px;
       height: 1px;
       background: #bfafc6;
 
@@ -72,6 +80,7 @@
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.2;
 
   &.link:before {
     content: '';
@@ -225,6 +234,7 @@
   color: #fff;
   padding: 80px 0 0;
   margin: 0 0 20px;
+  z-index: -1;
 
   .title {
     font-size: 28px;

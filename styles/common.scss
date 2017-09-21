@@ -33,7 +33,6 @@ html, body {
     font-weight: 400;
   }
 }
-
 .slide-title {
   display: block;
   text-decoration: none;
@@ -48,9 +47,12 @@ html, body {
     font-size: 14px;
     line-height: 20px;
     color: #a9bbea;
+
+    @include for-tablet {
+      @include visible(false);
+    }
   }
 }
-
 .slide-title-nav {
   display: inline-block;
   position: relative;
@@ -78,7 +80,6 @@ html, body {
     transition: transform 0.3s ease-in-out;
   }
 }
-
 .slide-title-nav:hover {
   &.prev {
     .title, .title-s, &:before {

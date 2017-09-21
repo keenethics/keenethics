@@ -5,107 +5,25 @@ import PropTypes from 'prop-types';
 
 import Slider from 'react-slick';
 
-const PageTabsElement = ({ href, name, tabsDescription, icon }) => (
-  <li>
-    <Link href={href}>
-      <a>
-        <div className="inner">
-          {tabsDescription
-            ? <div className="ico">
-              <div className="tbl">
-                <div className="cell">
-                  <img
-                    width="53"
-                    src={`/static/images/svg/${icon}.svg`}
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            : <div className="tbl">
-              <div className="cell">
-                <img
-                  width="53"
-                  src={`/static/images/svg/${icon}.svg`}
-                  alt=""
-                />
-              </div>
-            </div>}
-          {!tabsDescription ||
-            <span>
-              <span className="ttl">
-                {name}
-              </span>
-              <span className="ttl-s">
-                {tabsDescription}
-              </span>
-            </span>}
-        </div>
-        {!tabsDescription
-          ? <div className="icon-name">
-            {name}
-          </div>
-          : null}
-      </a>
-    </Link>
-  </li>
+const PageTabsElement = ({ href, name, icon }) => (
+  <Link href={href}>
+    <a className="content-tabs-item">
+      <img width="40" height="40" src={`/static/images/svg/${icon}.svg`} alt={icon} />
+      <span className="content-tabs-item-name">{name}</span>
+    </a>
+  </Link>
 );
 
 PageTabsElement.propTypes = {
   href: PropTypes.string,
   name: PropTypes.string,
-  tabsDescription: PropTypes.string,
   icon: PropTypes.string,
 };
 
 PageTabsElement.defaultProps = {
   href: '',
   name: '',
-  tabsDescription: '',
   icon: '',
-};
-const sliderSetting = {
-  dots: true,
-  infinite: false,
-  adaptiveHeight: false,
-  arrows: true,
-  speed: 500,
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  responsive: [
-    {
-      breakpoint: 1324,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 3,
-      },
-    },
-    {
-      breakpoint: 440,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
-  ],
 };
 const listOfTabs = points => (
   points.map((element, i) => (
@@ -121,17 +39,76 @@ const listOfTabs = points => (
     </div>
   ),
 ));
-const PageTabs = ({ points, withDescription }) => (
-  <div className="icon-wrap">
-    <ul className={withDescription ? 'icon-row icon-d-row' : 'icon-row'}>
-      {points.length > 3 ? (
-        <Slider {...sliderSetting}>
-          {listOfTabs(points)}
-        </Slider>
-      ) : listOfTabs(points)}
-    </ul>
-  </div>
-);
+const PageTabs = ({ points }) => {
+  const sliderSetting = {
+    dots: points.length > 5,
+    arrows: points.length > 5,
+    infinite: true,
+    adaptiveHeight: false,
+    speed: 100,
+    slidesToShow: points.length > 5 ? 5 : points.length,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 1324,
+        settings: {
+          slidesToShow: points.length > 6 ? 6 : points.length,
+          slidesToScroll: 1,
+          dots: points.length > 6,
+          arrows: points.length > 6,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: points.length > 4 ? 4 : points.length,
+          slidesToScroll: 1,
+          dots: points.length > 4,
+          arrows: points.length > 4,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: points.length > 3 ? 3 : points.length,
+          slidesToScroll: 1,
+          dots: points.length > 3,
+          arrows: points.length > 3,
+        },
+      },
+      {
+        breakpoint: 440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          draggable: true,
+        },
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          draggable: true,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="content-tabs">
+      <div className="content-tabs-inner">
+        <Slider {...sliderSetting}>{listOfTabs(points)}</Slider>
+      </div>
+    </div>
+  );
+};
 
 PageTabs.propTypes = {
   points: PropTypes.arrayOf(PropTypes.object),

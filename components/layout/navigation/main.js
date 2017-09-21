@@ -67,9 +67,7 @@ class Navigation extends React.Component {
 
     return '90px';
   }
-  showSidebar(e) {
-    e.preventDefault();
-
+  showSidebar() {
     this.setState({
       showSidebar: true,
     });
@@ -92,7 +90,7 @@ class Navigation extends React.Component {
     });
   }
   render() {
-    const { dimensions } = this.state;
+    const { showSidebar } = this.state;
     const { currentURL } = this.props;
 
     const { navigation } = config;
@@ -116,7 +114,10 @@ class Navigation extends React.Component {
     });
 
     return (
-      <div className="navigation">
+      <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
+        <div className="navigation-hamburger" onClick={this.showSidebar} role="presentation">
+          <span />
+        </div>
         <div className="navigation-inner">
           <div className="navigation-header">
             <Link href={'/'} prefetch>
@@ -136,7 +137,6 @@ class Navigation extends React.Component {
                   element={n}
                   height={height}
                   currentPoint={currentPoint === i}
-                  showSidebar={dimensions.width > 767}
                 >
                   {this.getPointContent(n, currentPoint === i, currentSubpoint)}
                 </Point>

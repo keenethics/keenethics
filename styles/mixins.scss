@@ -1,3 +1,6 @@
+@mixin for-mobile {
+  @media (max-width: 480px) { @content; }
+}
 @mixin for-tablet {
   @media (max-width: 768px) { @content; }
 }
@@ -15,4 +18,13 @@
 }
 @mixin tr-left($bwt, $bwr, $bwb, $col) {
     width: 0; height: 0; border-style: solid; border-width: $bwt $bwr $bwb 0; border-color: transparent $col   transparent transparent;
+}
+@mixin visible($visible) {
+  @if $visible {
+    display: block;
+    visibility: visible;
+  } @else {
+    display: none;
+    visibility: hidden;
+  }
 }

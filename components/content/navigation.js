@@ -121,7 +121,6 @@ export default class ContentNavigation extends React.Component {
 ContentNavigation.propTypes = {
   url: PropTypes.object,
   image: PropTypes.string,
-  title: PropTypes.string,
   points: PropTypes.array,
 };
 ContentNavigation.defaultProps = {

@@ -1,7 +1,6 @@
 /* eslint no-nested-ternary: 0 */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 
@@ -51,10 +50,3 @@ export default class Error extends React.Component {
     );
   }
 }
-
-Error.propTypes = {
-  statusCode: PropTypes.string,
-};
-Error.defaultProps = {
-  statusCode: '',
-};
