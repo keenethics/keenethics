@@ -50,47 +50,30 @@ export default class Index extends React.Component {
             </div>
             <h1>Ethical<br />development<br />of keen web-apps</h1>
             <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
-          </div>
-          <div>
-            <div className="contact-item">
-              <div className="tbl ico">
-                <div className="cell">
-                  <div className="ico-svg">
-                    <img src="/static/images/svg/icon-map.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                3 Lytvynenka Street
-              </a>
-              <i>Lviv, Ukraine</i>
-            </div>
-            <div>
+            <div className="home-page-content-contact">
               <div className="contact-item">
-                <div className="tbl ico">
-                  <div className="cell">
-                    <div className="ico-svg">
-                      <img src="/static/images/svg/icon-mail.svg" alt="" />
-                    </div>
-                  </div>
+                <div className="contact-item-icon">
+                  <img src="/static/images/svg/icon-map.svg" alt="" />
                 </div>
-
+                <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
+                  3 Lytvynenka Street
+                </a>
+                <i>Lviv, Ukraine</i>
+              </div>
+              <div className="contact-item">
+                <div className="contact-item-icon">
+                  <img src="/static/images/svg/icon-mail.svg" alt="" />
+                </div>
                 <a href={'mailto:founders@keenethics.com'}>founders@keenethics.com</a>
                 <i>
                   Drop Us a Letter or
                   <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
                 </i>
               </div>
-
               <div className="contact-item">
-                <div className="tbl ico">
-                  <div className="cell">
-                    <div className="ico-svg">
-                      <img src="/static/images/svg/icon-tel.svg" alt="" />
-                    </div>
-                  </div>
+                <div className="contact-item-icon">
+                  <img src="/static/images/svg/icon-tel.svg" alt="" />
                 </div>
-
                 <a href="tel:+380968147266">+38 (096) 814 72 66</a>
                 <i>Give Us a Calls</i>
               </div>

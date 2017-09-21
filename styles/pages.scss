@@ -13,12 +13,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .home-page-content {
   position: relative;
-  padding: 60px 25px 25px;
-  max-width: 800px;
+  padding: 120px 25px 25px;
+  max-width: 920px;
+  flex-basis: auto;
+  flex-grow: 1;
+
   margin: 0 auto;
   z-index: 600;
 
@@ -26,7 +28,7 @@
     font-size: 44px;
     color: #fff;
     letter-spacing: 4px;
-    margin: 40px 0 48px;
+    margin: 40px 0 28px;
     font-weight: 900;
     text-transform: uppercase;
     line-height: 60px;
@@ -60,39 +62,95 @@
     }
   }
 }
-.home-page-content-link {
-  a {
-    font-size: 14px;
-    position: relative;
-    padding: 0 0 0 28px;
-    margin: 20px 0 0;
-    color: #5b659b;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 700;
-    text-transform: uppercase;
+.home-page-content-link a {
+  font-size: 14px;
+  position: relative;
+  padding: 0 0 0 28px;
+  margin: 20px 0 0;
+  color: #5b659b;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
 
-    &.link:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      left: 0;
-      top: -2px;
-    }
-    &.link-upwork:before {
-      background: url('/static/images/svg/top-rated.svg') no-repeat center;
-    }
-    &.link-clutch:before {
-      background: url('/static/images/clutch.svg') no-repeat center;
-      top: -3px;
-    }
+  &.link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: -2px;
+  }
+  &.link-upwork:before {
+    background: url('/static/images/svg/top-rated.svg') no-repeat center;
+  }
+  &.link-clutch:before {
+    background: url('/static/images/clutch.svg') no-repeat center;
+    top: -3px;
   }
 }
-.home-page-contacts {
-  display: none;
-  visibility: hidden;
+.home-page-content-contact {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0 40px;
+  margin: 90px 0 0;
+
+  .contact-item {
+    float: left;
+    width: 33.33%;
+    margin: 10px 0;
+
+    @media (max-width: 980px) {
+      width: 100%;
+    }
+
+    .contact-item-icon {
+      float: left;
+      padding: 6px;
+      margin: 0 8px 0 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .1);
+
+      img {
+        display: block;
+        width: 18px;
+        height: 18px;
+        padding: 8px;
+        border: 1px solid rgba(255, 255, 255, .4);
+        border-radius: 50%;
+      }
+    }
+    a {
+      display: block;
+      margin: 7px 0 5px;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+    }
+    i {
+      display: block;
+      font-size: 14px;
+      color: rgba(255, 255, 255, .3);
+    }
+    .skype_button {
+      display: inline;
+      p {
+        display: inline !important;
+      }
+      a {
+        display: inline;
+        padding: 0;
+      }
+      .skype-button {
+        display: none;
+      }
+      img {
+        margin: 3px 0 0 5px !important;
+        vertical-align: middle !important;
+      }
+    }
+  }
 }
 .home-page-social {
   position: absolute;
