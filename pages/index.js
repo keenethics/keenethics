@@ -9,10 +9,8 @@ import SocialButton from '../components/social-buttons/main';
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      contactsIsOpen: false,
-    };
-    this.onClick = this.onClick.bind(this);
+
+    this.state = {};
   }
   componentDidMount() {
     if (typeof Skype !== 'undefined') {
@@ -23,48 +21,83 @@ export default class Index extends React.Component {
       });
     }
   }
-  onClick() {
-    this.setState({
-      contactsIsOpen: !this.state.contactsIsOpen,
-    });
-  }
   render() {
     const { url } = this.props;
-    const { contactsIsOpen } = this.state;
 
     return (
       <Layout currentURL={url}>
         <div className="home-page">
-          <div className="home-page-table">
-            <div className="home-page-cell">
-              <div className="home-page-content">
-                <div className="home-page-content-link">
-                  <a
-                    href="https://www.upwork.com/agencies/~0106b5437592391f94"
-                    className="link link-upwork"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Top rated Upwork agency
-                  </a>
+          <div className="home-page-content">
+            <div className="home-page-content-link">
+              <a
+                href="https://www.upwork.com/agencies/~0106b5437592391f94"
+                className="link link-upwork"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Top rated Upwork agency
+              </a>
+            </div>
+            <div className="home-page-content-link">
+              <a
+                href="https://clutch.co/profile/keenethics"
+                className="link link-clutch"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                5-stars rated company at Clutch
+              </a>
+            </div>
+            <h1>Ethical<br />development<br />of keen web-apps</h1>
+            <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
+          </div>
+          <div>
+            <div className="contact-item">
+              <div className="tbl ico">
+                <div className="cell">
+                  <div className="ico-svg">
+                    <img src="/static/images/svg/icon-map.svg" alt="" />
+                  </div>
                 </div>
-                <div className="home-page-content-link">
-                  <a
-                    href="https://clutch.co/profile/keenethics"
-                    className="link link-clutch"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    5-stars rated company at Clutch
-                  </a>
-                </div>
-                <h1>Ethical<br />development<br />of keen web-apps</h1>
-                <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
               </div>
-              <div className="home-page-social">
-                <SocialButton />
+              <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
+                3 Lytvynenka Street
+              </a>
+              <i>Lviv, Ukraine</i>
+            </div>
+            <div>
+              <div className="contact-item">
+                <div className="tbl ico">
+                  <div className="cell">
+                    <div className="ico-svg">
+                      <img src="/static/images/svg/icon-mail.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <a href={'mailto:founders@keenethics.com'}>founders@keenethics.com</a>
+                <i>
+                  Drop Us a Letter or
+                  <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
+                </i>
+              </div>
+
+              <div className="contact-item">
+                <div className="tbl ico">
+                  <div className="cell">
+                    <div className="ico-svg">
+                      <img src="/static/images/svg/icon-tel.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <a href="tel:+380968147266">+38 (096) 814 72 66</a>
+                <i>Give Us a Calls</i>
               </div>
             </div>
+          </div>
+          <div className="home-page-social">
+            <SocialButton />
           </div>
           <div className="home-page-background">
             <div className="home-page-background-inner">
@@ -81,52 +114,6 @@ export default class Index extends React.Component {
                 <div className="star-3" />
                 <div className="star-4" />
               </div>
-            </div>
-          </div>
-        </div>
-        <div className={contactsIsOpen ? 'home-page-contacts open' : 'home-page-contacts'}>
-          <div>
-            <div className="contact-item">
-              <div className="tbl ico">
-                <div className="cell">
-                  <div className="ico-svg">
-                    <img src="/static/images/svg/icon-map.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                3 Lytvynenka Street
-              </a>
-              <i>Lviv, Ukraine</i>
-            </div>
-
-            <div className="contact-item">
-              <div className="tbl ico">
-                <div className="cell">
-                  <div className="ico-svg">
-                    <img src="/static/images/svg/icon-mail.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <a href={'mailto:founders@keenethics.com'}>founders@keenethics.com</a>
-              <i>
-                Drop Us a Letter or
-                <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
-              </i>
-            </div>
-
-            <div className="contact-item">
-              <div className="tbl ico">
-                <div className="cell">
-                  <div className="ico-svg">
-                    <img src="/static/images/svg/icon-tel.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <a href="tel:+380968147266">+38 (096) 814 72 66</a>
-              <i>Give Us a Calls</i>
             </div>
           </div>
         </div>
