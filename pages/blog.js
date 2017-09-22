@@ -7,6 +7,7 @@ import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
+import Background from '../components/content/background';
 
 export default class Blog extends React.Component {
   static async getInitialProps() {
@@ -27,34 +28,13 @@ export default class Blog extends React.Component {
     const { url, posts } = this.props;
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="content-socket-m">
-            <div className="orbit-wrap inner">
-              <ul className="orbit"><li /><li /><li /><li /></ul>
-              <div className="orbit-star orbit-star-1">
-                <span />
-              </div>
-              {this.f}
-              <div className="orbit-star orbit-star-2">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-3">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-4">
-                <span />
-              </div>
+        <div className="blog-page">
+          <Background className="blog-page-background" />
+          <div className="blog-page-content">
+            <div className="blog-page-header">
+              <div className="blog-page-title">Blog</div>
             </div>
-            <div className="stars-wrap">
-              <div className="stars-1" />
-              <div className="stars-2" />
-              <div className="stars-3" />
-              <div className="stars-4" />
-            </div>
-            <div className="filter-head">
-              <div className="title">{!posts.length ? 'Loading...' : 'Blog'}</div>
-            </div>
-            {!posts.length ? null : <Posts posts={posts} />}
+            {!posts.length ? <div className="blog-loading">Loading...</div> : <Posts posts={posts} />}
           </div>
         </div>
       </Layout>

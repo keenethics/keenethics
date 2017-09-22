@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ContentNavigationBackground = () => (
-  <div className="content-navigation-background">
+const Background = ({ className }) => (
+  <div className={className}>
     <div className="orbits">
       <div className="orbit" />
       <div className="orbit" />
@@ -17,4 +18,12 @@ const ContentNavigationBackground = () => (
   </div>
 );
 
-export default ContentNavigationBackground;
+Background.propTypes = {
+  className: PropTypes.string,
+};
+
+Background.defaultProps = {
+  className: 'content-navigation-background',
+};
+
+export default Background;
