@@ -12,7 +12,7 @@ const TechApps = ({ url }) => (
     <ContentNavigation url={url} image="app" />
     <PageTabs points={techApps} />
     <div className="content-block">
-      <h2>App Development Services</h2>
+      <h1>App Development Services</h1>
       <p>
         Maybe, there are a few businesses left that can successfully {'function'} without any web
         and software products. But most companies can significantly improve and grow their
@@ -66,7 +66,7 @@ const TechApps = ({ url }) => (
         (PWA) is a hybrid of a regular website and a mobile application. This model combines
         features offered by most popular browsers with the features of mobile experience.
       </p>
-      <h3>Hire App Developers</h3>
+      <h2>Hire App Developers</h2>
       <p>
         For a lot of companies, in-house app development is unreasonable and very expensive.
         Hiring local software development service providers is not always as cost-effective as
@@ -101,6 +101,7 @@ const TechApps = ({ url }) => (
     </div>
   </Layout>
 );
+
 TechApps.propTypes = {
   url: PropTypes.object,
 };

@@ -83,7 +83,7 @@
   left: 0;
   bottom: 0;
   background: #fff;
-  box-shadow: 0 2px 19.6px .4px rgba(80, 116, 165, .1);
+  box-shadow: 0 -4px 20px rgba(80, 116, 165, .1);
   text-align: center;
 
   .button {
@@ -105,6 +105,7 @@
     box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
     cursor: pointer;
     box-sizing: border-box;
+    font-weight: 700;
   }
 }
 .subnavigation {

@@ -367,7 +367,10 @@
     line-height: 1.4;
     background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
     background-size: 18px;
-
+    
+    &:before {
+      @include visible(false);
+    }
     &:last-child {
       margin-bottom: 0;
     }

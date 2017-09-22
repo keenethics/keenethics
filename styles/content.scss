@@ -53,30 +53,58 @@
   }
 }
 .content-block {
-  padding: 35px 25px 25px;
-  max-width: 800px;
+  padding: 30px 25px 25px;
+  max-width: 920px;
   margin: 0 auto;
 
+  h1 {
+    font-size: 26px;
+    margin: 30px 0 18px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
+  }
   h2 {
     font-size: 24px;
-    margin: 20px 0 28px;
+    margin: 28px 0 18px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
   }
   h3 {
-    font-size: 20px;
-    margin: 20px 0 26px;
+    font-size: 22px;
+    margin: 26px 0 18px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
   }
   ul {
     margin: 26px 10px;
   }
   ul li {
+    position: relative;
     font-size: 16px;
-    color: #666;
-    margin: 0 0 16px;
-    padding: 0 0 2px 30px;
+    color: #444;
+    margin: 0 0 14px;
+    padding: 0 0 2px 24px;
     line-height: 1.5;
-    background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
     background-size: 16px;
 
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      border: 2px solid #f2af3b;
+      border-radius: 50%;
+    }
     &:last-child {
       margin-bottom: 0;
     }

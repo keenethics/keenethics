@@ -12,7 +12,7 @@ const ServicesWebDevelopment = ({ url }) => (
     <ContentNavigation url={url} image="web_development" />
     <PageTabs points={servicesWebDevelopmentTabs} />
     <div className="content-block">
-      <h2>Web Development Services</h2>
+      <h1>Web Development Services</h1>
       <p>
         If you want to go online and build a website or an app, you will definitely need to find
         a web development provider. Usually app and website development is taken as a process of
@@ -25,7 +25,7 @@ const ServicesWebDevelopment = ({ url }) => (
         rates. Luckily you can hire an offshore web design development company and get a worthy
         product for the same money.
       </p>
-      <h3>Professional web company</h3>
+      <h2>Professional web company</h2>
       <p>
         We believe that a professional web development company not just completes the defined
         work on time but also gives value. Transparent processes, on-time communication and
@@ -56,6 +56,7 @@ const ServicesWebDevelopment = ({ url }) => (
     </div>
   </Layout>
 );
+
 ServicesWebDevelopment.propTypes = {
   url: PropTypes.object,
 };
