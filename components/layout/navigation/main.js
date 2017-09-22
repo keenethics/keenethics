@@ -90,7 +90,7 @@ class Navigation extends React.Component {
     });
   }
   render() {
-    const { showSidebar } = this.state;
+    const { showSidebar, dimensions } = this.state;
     const { currentURL } = this.props;
 
     const { navigation } = config;
@@ -118,7 +118,7 @@ class Navigation extends React.Component {
         <div className="navigation-hamburger" onClick={this.showSidebar} role="presentation">
           <span />
         </div>
-        <div className="navigation-inner">
+        <div className="navigation-inner" style={{ height: dimensions.height }}>
           <div className="navigation-header">
             <Link href={'/'} prefetch>
               <a className="logo">
@@ -126,7 +126,7 @@ class Navigation extends React.Component {
               </a>
             </Link>
           </div>
-          <ul className="navigation-content">
+          <ul className="navigation-content" style={{ height: dimensions.height }}>
             {navigation.map((n, i) => {
               if (n.type && n.type === 'hidden') {
                 return null;

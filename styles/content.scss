@@ -8,6 +8,7 @@
   position: relative;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 
   @include for-tablet {
     margin-left: -1px;
