@@ -8,43 +8,7 @@ const ApproachHighQuality = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image={'lean'} />
     <div className="content-block">
-      <div className="ser-wrap ser-quality">
-        <div className="ser-item">
-          <div className="ico">
-            <span>
-              <img width="37" src="/static/images/svg/q-1.svg" alt="" />
-            </span>
-          </div>
-          <div className="ser-ttl">Code Quality Cross Reviews</div>
-          <div className="ser-text">
-            We have our own internal projects and so we do understand that even the perfect
-          </div>
-        </div>
-        <div className="ser-item">
-          <div className="ico">
-            <span>
-              <img width="30" src="/static/images/svg/q-2.svg" alt="" />
-            </span>
-          </div>
-          <div className="ser-ttl">Manual and Automation Tests</div>
-          <div className="ser-text">
-            We have our own internal projects and so we do understand that
-            even the perfect
-          </div>
-        </div>
-        <div className="ser-item">
-          <div className="ico">
-            <span>
-              <img width="38" src="/static/images/svg/q-3.svg" alt="" />
-            </span>
-          </div>
-          <div className="ser-ttl">Code Linting and Standarts</div>
-          <div className="ser-text">
-            We have our own internal projects and so we do understand that
-            even the perfect
-          </div>
-        </div>
-      </div>
+      <h1>High quality software</h1>
       <p>
         Backend development - is the process of programming the site and
         filling it with functional. Creating a core site, site development

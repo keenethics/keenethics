@@ -367,7 +367,7 @@
     line-height: 1.4;
     background: url('/static/images/project/icon-achieve.svg') no-repeat left center;
     background-size: 18px;
-    
+
     &:before {
       @include visible(false);
     }
@@ -459,4 +459,230 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+}
+
+.perfomance-wrap {
+  position: relative;
+  width: 900px;
+  margin: 0 auto 50px;
+
+  @media (max-width: 1440px) {
+    width: auto;
+    margin-right: 30px;
+  }
+  @media (max-width: 1280px) {
+    margin-right: 20px;
+  }
+  .line {
+    position: absolute;
+    width: 1px;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background-color: #b9bce5;
+  }
+  .point {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -8px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px 0px rgba(63, 71, 204, 0.1);
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      left: 50%;
+      top: 50%;
+      margin: -2px 0 0 -2px;
+      background-color: #3f47cc;
+    }
+  }
+}
+.perfomance-column {
+  width: 380px;
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
+}
+.perfomance-item {
+  @include clearfix;
+  position: relative;
+  margin-bottom: 80px;
+  &:first-child {
+    .point {
+      margin-top: -14px;
+    }
+    .perfomance-text span {
+      height: 80px;
+    }
+    .perfomance-image {
+      margin-top: -100px;
+    }
+  }
+  &:nth-child(even) {
+    .perfomance-text {
+      text-align: left;
+    }
+    .perfomance-image {
+      float: right;
+    }
+  }
+}
+
+.perfomance-text {
+  font-weight: 700;
+  line-height: 23px;
+  text-align: right;
+
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 205px;
+  }
+}
+.perfomance-image {
+  position: relative;
+  width: 320px;
+  img {
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+  }
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -26px;
+    display: block;
+    text-align: center;
+
+    i {
+      border-radius: 10px;
+      display: inline-block;
+      font-style: normal;
+      padding: 20px 27px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      background-color: #fff;
+      box-shadow: 0px 10px 30px 0px rgba(63, 71, 204, 0.1);
+    }
+  }
+}
+@media (max-width: 1250px){
+    .perfomance-wrap {
+        width: 520px;
+        margin: -80px auto 0;
+
+        .line, .point {
+            display: none;
+        }
+
+        .perfomance-column {
+            width: 50%;
+        }
+    }
+
+    .perfomance-image {
+        width: 270px;
+        left: -7px;
+
+        span {
+            bottom: -20px;
+
+            i {
+                font-size: 12px;
+                padding: 15px 25px;
+            }
+        }
+    }
+
+    .perfomance-text {
+        width: 220px;
+        font-size: 12px;
+        line-height: 22px;
+
+        span {
+            height: 160px;
+        }
+    }
+
+    .perfomance-item {
+        margin-bottom: 50px;
+
+        &:first-child {
+
+            .perfomance-image {
+                margin-top: 0;
+            }
+
+            .perfomance-text {
+                margin-top: 53px;
+
+                span {
+                    height: 100px;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+
+            .perfomance-image {
+                left: auto;
+                right: -7px;
+            }
+
+            .perfomance-text {
+                float: right;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+
+    .perfomance-wrap {
+        width: 270px;
+        margin: auto;
+
+        .perfomance-column {
+            width: auto !important;
+            float: none !important;
+        }
+    }
+
+    .perfomance-item {
+        margin-bottom: 35px;
+
+        .perfomance-text, .perfomance-image {
+            float: none !important;
+        }
+    }
+
+    .perfomance-image {
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .perfomance-text {
+        width: auto;
+        margin: 35px 15px 0 !important;
+        height: auto;
+        text-align: center;
+
+        span {
+            height: auto !important;
+        }
+    }
 }
