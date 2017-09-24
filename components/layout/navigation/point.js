@@ -64,6 +64,7 @@ export default class NavigationPoint extends React.Component {
     const className = cn({
       'navigation-item': true,
       current: currentPoint || currentSubpoint,
+      'is-link': !children,
     });
 
     return (

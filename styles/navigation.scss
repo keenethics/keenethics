@@ -162,6 +162,10 @@
       width: 320px;
       background: #f5f9fa;
 
+      &.is-link {
+        width: 160px;
+      }
+
       .subnavigation {
         display: block;
         position: absolute;

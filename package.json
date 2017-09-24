@@ -11,7 +11,7 @@
     "deploy": "bash deploy"
   },
   "dependencies": {
-    "body-parser": "^1.18.1",
+    "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
     "express": "^4.15.4",
     "isomorphic-fetch": "^2.2.1",
