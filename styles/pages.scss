@@ -688,18 +688,18 @@
 }
 .careers-page-header {
   position: relative;
-  padding: 40px 0;
+  padding: 80px 0;
   background: linear-gradient(135deg, #071e40 0%, #662938 80%);
   overflow: hidden;
 
   h1 {
     position: relative;
     z-index: 600;
-    font-size: 20px;
+    font-size: 26px;
     line-height: 24px;
     color: #fff;
     font-weight: 700;
-    margin: 0 60px;
+    margin: 0 50px;
 
     span {
       display: block;
@@ -720,26 +720,45 @@
 }
 .careers-page-content {
   position: relative;
-  padding: 90px 0 0;
+  padding: 130px 25px 0;
 }
 .careers-page-slider {
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
   right: 0;
 
   &.loading {
     @include visible(false);
   }
+  .slick-arrow {
+    top: 20px;
+    left: 12px;
+
+    .slick-next {
+      left: auto;
+      right: 12px;
+    }
+  }
+  .slick-slider {
+    overflow: visible;
+  }
+  .slick-dots {
+    top: -35px;
+    z-index: 700;
+  }
 }
 .careers-page-slider-ship {
   padding: 0 15px;
   text-align: center;
   box-sizing: border-box;
-  opacity: .4;
+  opacity: .5;
+  transform: scale(.6);
+  transition: all .2s;
 
   &.slick-center {
     opacity: 1;
+    transform: scale(1);
   }
 
   span {
@@ -760,12 +779,116 @@
     margin: 0 auto;
   }
 }
-.career-window {
+.careers-page-position {
   position: relative;
   border-radius: 10px;
   box-shadow: 0 10px 40px 0 rgba(27, 47, 90, .4);
-  max-width: 500px;
+  max-width: 340px;
   margin: 0 auto;
   background-image: linear-gradient(135deg, #1b2f5a 0%, #2e1b5a 100%);
   text-align: center;
+
+  &:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 6px;
+    border-color: transparent transparent #212154;
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -5px
+  }
+}
+.careers-page-position-inner {
+  padding: 30px 20px 35px;
+
+  .career-position {
+    font-weight: 400;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 6px;
+  }
+  .career-experience {
+    font-size: 12px;
+    margin: 0 0 30px;
+    color: #a9bbea;
+  }
+  .career-description {
+    color: #fff;
+    font-size: 12px;
+    line-height: 19px;
+
+    p {
+      margin: 0 0 15px;
+      color: #dfe0f2;
+    }
+  }
+  .button {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    bottom: -18px;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 35px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-image: linear-gradient(90deg, #de3535 0%, #e3621d 100%);
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+.input-wrap {
+  margin-bottom: 8px;
+
+  input {
+    height: 39px;
+    line-height: 39px;
+    padding: 0 8px;
+    width: 100%;
+    color: #6d669f;
+    font-size: 14px;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    border-bottom: 1px solid #6d669f;
+    box-sizing: border-box;
+
+    &.error {
+      color: red;
+      border-color: red;
+    }
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px 8px;
+    margin: 16px 0 0;
+    font-size: 14px;
+    border: 1px solid #6d669f;
+    color: #6d669f;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+  }
+}
+.career-form-status {
+  margin: 14px 0 6px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
 }

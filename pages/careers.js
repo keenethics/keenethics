@@ -60,6 +60,18 @@ export default class Careers extends React.Component {
       initialSlide: this.state.activeItemIndex,
       init: this.sliderInit,
       centerMode: true,
+      responsive: [
+        {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            draggable: true,
+          },
+        },
+      ],
     };
   }
   onSubmit(e) {
@@ -133,16 +145,19 @@ export default class Careers extends React.Component {
     }, []);
   }
   getCareersItem() {
-    const { activeItemIndex, showApplyForm, isPending, name, email, message } = this.state;
+    const { activeItemIndex, showApplyForm, isPending, name, email, message, status } = this.state;
     const { position, experience, description } = config.careers[activeItemIndex];
 
     return (
-      <div className="career-block active">
-        <div className="career-vac">{position}</div>
-        <div className="title-s">{experience}</div>
-        {showApplyForm || <div className="career-main text">{HtmlParser(description)}</div>}
-        {!showApplyForm || (
-          <div className="career-main form">
+      <div className="careers-page-position-inner">
+        <div className="career-position">{position}</div>
+        <div className="career-experience">{experience}</div>
+        {!showApplyForm ? (
+          <div className="career-description">
+            {HtmlParser(description)}
+          </div>
+        ) : (
+          <div className="career-form">
             <form onSubmit={this.onSubmit}>
               <div className="input-wrap">
                 <input
@@ -153,7 +168,7 @@ export default class Careers extends React.Component {
                   onChange={this.onChange}
                 />
               </div>
-              <div className="input-wrap input-wrap-l">
+              <div className="input-wrap">
                 <input
                   className={email.error ? 'error' : null}
                   name="email"
@@ -170,6 +185,7 @@ export default class Careers extends React.Component {
                   onChange={this.onChange}
                 />
               </div>
+              {!status || <div className="career-form-status">{status}</div>}
               <button
                 type="submit"
                 className={isPending ? 'button button-send pending' : 'button button-send'}
@@ -179,11 +195,7 @@ export default class Careers extends React.Component {
             </form>
           </div>
         )}
-        {showApplyForm || (
-          <button className="button" onClick={this.toggleApplyForm}>
-            Apply
-          </button>
-        )}
+        {showApplyForm || <button className="button" onClick={this.toggleApplyForm}>Apply</button>}
       </div>
     );
   }
@@ -197,6 +209,7 @@ export default class Careers extends React.Component {
   sliderChange(activeItemIndex) {
     this.setState({
       activeItemIndex,
+      showApplyForm: false,
     });
   }
   sliderInit() {
@@ -211,7 +224,6 @@ export default class Careers extends React.Component {
   }
   render() {
     const { url } = this.props;
-    const { status } = this.state;
 
     return (
       <Layout currentURL={url}>
@@ -233,16 +245,9 @@ export default class Careers extends React.Component {
                 ))}
               </Slider>
             </div>
-          </div>
-          <div className="career-wrap">
-            <div className="career-window">
-              <div className="figure-1" />
-              <div className="figure-2" />
+            <div className="careers-page-position">
               {this.getCareersItem()}
             </div>
-            {status ? (
-              <div className="form-status">{status}</div>
-            ) : null}
           </div>
         </div>
       </Layout>
