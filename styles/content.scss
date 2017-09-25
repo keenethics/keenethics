@@ -55,12 +55,13 @@
 }
 .content-block {
   padding: 30px 25px 25px;
-  max-width: 920px;
+  max-width: 820px;
   margin: 0 auto;
 
   h1 {
     font-size: 26px;
     margin: 30px 0 18px;
+    line-height: 34px;
 
     &:first-child {
       margin-top: 18px;
@@ -69,6 +70,7 @@
   h2 {
     font-size: 24px;
     margin: 28px 0 18px;
+    line-height: 30px;
 
     &:first-child {
       margin-top: 18px;

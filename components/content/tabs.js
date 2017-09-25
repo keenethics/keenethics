@@ -41,25 +41,16 @@ const listOfTabs = points => (
 ));
 const PageTabs = ({ points }) => {
   const sliderSetting = {
-    dots: points.length > 5,
-    arrows: points.length > 5,
+    dots: points.length > 6,
+    arrows: points.length > 6,
     infinite: true,
     adaptiveHeight: false,
     speed: 100,
-    slidesToShow: points.length > 5 ? 5 : points.length,
+    slidesToShow: points.length > 6 ? 6 : points.length,
     slidesToScroll: 1,
     initialSlide: 0,
     draggable: false,
     responsive: [
-      {
-        breakpoint: 1324,
-        settings: {
-          slidesToShow: points.length > 6 ? 6 : points.length,
-          slidesToScroll: 1,
-          dots: points.length > 6,
-          arrows: points.length > 6,
-        },
-      },
       {
         breakpoint: 1024,
         settings: {
@@ -81,7 +72,7 @@ const PageTabs = ({ points }) => {
       {
         breakpoint: 440,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: points.length > 3 ? 3 : points.length,
           slidesToScroll: 1,
           dots: true,
           arrows: true,

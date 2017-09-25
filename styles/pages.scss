@@ -923,3 +923,27 @@
   text-align: center;
   font-size: 14px;
 }
+.open-source-button {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px 0 50px;
+  margin: 10px 0 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &:hover {
+    background: #222;
+  }
+  img {
+    position: absolute;
+    left: 22px;
+    top: 14px;
+  }
+}

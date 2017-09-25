@@ -55,8 +55,16 @@ class Navigation extends React.Component {
         </ul>
       );
     }
-
-    return null;
+    if (points && this.state.dimensions.height < 0) {
+      return (
+        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+          <div className="subnavigation-loading" />
+        </ul>
+      );
+    }
+    if (!points) {
+      return null;
+    }
   }
   getPointHeight(numberOfPoints) {
     const { height } = this.state.dimensions;
