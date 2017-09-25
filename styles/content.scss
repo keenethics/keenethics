@@ -84,10 +84,15 @@
       margin-top: 18px;
     }
   }
-  ul {
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  ul, ol {
     margin: 26px 10px;
   }
-  ul li {
+  ul, ol li {
     position: relative;
     font-size: 16px;
     color: #444;
@@ -116,5 +121,10 @@
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 14px;
+  }
+  code {
+    display: block;
+    padding: 20px 25px;
+    background-color: #f6f8fa;
   }
 }

@@ -19,7 +19,6 @@ const Posts = ({ posts }) => (
           <div className="blog-page-post-header">
             <div className="date">{dateTemplate.render(new Date(+post.date))}</div>
             <div className="title">{post.title}</div>
-            <div className="description">{post.subtitle}</div>
           </div>
         </a>
       </Link>

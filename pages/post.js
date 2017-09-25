@@ -8,6 +8,7 @@ import tinytime from 'tinytime';
 import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Error from './_error';
 
 const dateTemplate = tinytime('{MMMM} {DD}');
@@ -37,59 +38,24 @@ export default class Post extends React.Component {
 
     return (
       <Layout>
-        <div className="post">
-          <div className="content-wrap content-wrap-bg">
-            <div className="orbit-wrap inner">
-              <ul className="orbit">
-                <li />
-                <li />
-                <li />
-                <li />
-              </ul>
-
-              <div className="orbit-star orbit-star-1">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-2">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-3">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-4">
-                <span />
-              </div>
-            </div>
-            <div className="stars-wrap">
-              <div className="stars-1" />
-              <div className="stars-2" />
-              <div className="stars-3" />
-              <div className="stars-4" />
-            </div>
-            <div className="article-page">
-              <div className="content-socket-m top">
-                <div className="title-page">
-                  <div className="title">
-                    {post.title}
-                  </div>
-
-                  <div className="article-desc">
-                    <div className="article-user">
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="article-date">
-                      <span>{dateTemplate.render(new Date(+post.date))}</span>
-                      <span>{timeTemplate.render(new Date(+post.date))}</span>
-                    </div>
-                  </div>
+        <div className="blog-post-page page">
+          <div className="blog-post-page-header page-header">
+            <div className="blog-post-page-title page-title">
+              <h1>{post.title}</h1>
+              <div className="blog-post-page-description">
+                <div className="blog-post-page-user">
+                  <span>{post.author}</span>
+                </div>
+                <div className="blog-post-page-date">
+                  <span>{dateTemplate.render(new Date(+post.date))}</span>
+                  <span>{timeTemplate.render(new Date(+post.date))}</span>
                 </div>
               </div>
-              <div className="content-full">
-                <div className="article-main">
-                  <ReactMarkdown source={post.content} />
-                </div>
-              </div>
+              <Background className="open-source-page-background" />
             </div>
+          </div>
+          <div className="blog-post-page-content content-block">
+            <ReactMarkdown source={post.content} />
           </div>
         </div>
       </Layout>

@@ -31,16 +31,56 @@
 .blog-page-post {
   float: left;
   width: 220px;
-  height: 290px;
-  margin: 0 15px 40px;
+  height: 280px;
+  margin: 15px 15px 40px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
+  text-decoration: none;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 8px -4px rgba(0, 0, 0, .1);
+  }
 }
 .blog-page-post-img {
   height: 140px;
+  overflow: hidden;
 
   img {
     width: 100%;
+  }
+}
+.blog-page-post-header {
+  background: #fff;
+  padding: 15px;
+  height: 140px;
+  text-align: center;
+  box-sizing: border-box;
+
+  .date {
+    color: #6f6f89;
+    margin-bottom: 15px;
+  }
+  .title {
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+}
+.blog-post-page-description {
+  margin: 12px 50px 0;
+  color: rgba(255, 255, 255, .6);
+
+  .blog-post-page-user {
+    margin: 0 0 6px;
+  }
+  .blog-post-page-date {
+    span {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
   }
 }
