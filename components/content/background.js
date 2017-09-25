@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Background = ({ className }) => (
-  <div className={className}>
+  <div className={`page-background ${className}`}>
     <div className="orbits">
       <div className="orbit" />
       <div className="orbit" />

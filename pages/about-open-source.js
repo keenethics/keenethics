@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 
 export default class AboutTeam extends React.Component {
   constructor(props) {
@@ -14,39 +15,14 @@ export default class AboutTeam extends React.Component {
 
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="content-socket content-socket-a">
-            <div className="title-page">
-              <div className="title">Open Source</div>
-              <div className="title-s">We contribute a whole lot</div>
-            </div>
-            <div className="orbit-wrap inner">
-              <ul className="orbit">
-                <li /><li /><li /><li />
-              </ul>
-              <div className="orbit-star orbit-star-1">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-2">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-3">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-4">
-                <span />
-              </div>
-            </div>
-            <div className="stars-wrap">
-              <div className="stars-1" />
-              <div className="stars-2" />
-              <div className="stars-3" />
-              <div className="stars-4" />
+        <div className="open-source-page page">
+          <div className="open-source-page-header page-header">
+            <div className="open-source-page-title page-title">
+              <h1>Open Source <span>We contribute a whole lot</span></h1>
+              <Background className="open-source-page-background" />
             </div>
           </div>
-          <div className="content-os">
-            <img className="mb" src="/static/images/macbook.png" alt="" />
-
+          <div className="open-source-page-content">
             <div className="content-os-socket top">
               <div className="title">Why Do We Support <br /> Open Source?</div>
 
