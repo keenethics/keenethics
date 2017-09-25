@@ -34,13 +34,7 @@
   width: 100%;
   min-height: 100%;
   overflow: hidden;
-  background: #071e40;
-  background: linear-gradient(135deg, #071e40 0%,#662938 80%);
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr='#071e40',
-    endColorstr='#662938',
-    GradientType=1
-  );
+  background: linear-gradient(135deg, #071e40 0%, #662938 80%);
   display: flex;
   justify-content: center;
   align-items: center;
