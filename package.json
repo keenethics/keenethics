@@ -16,6 +16,7 @@
     "express": "^4.15.5",
     "isomorphic-fetch": "^2.2.1",
     "micro": "^9.0.0",
+    "nanoid": "^0.2.1",
     "next": "^3.2.2",
     "next-url-prettifier": "^1.1.5",
     "nodemailer": "^4.1.1",
