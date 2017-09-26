@@ -124,40 +124,12 @@ export default class AboutTeam extends React.Component {
 
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="content-socket content-socket-t">
-            <div className="title-page">
-              <div className="title">Team</div>
-              <div className="title-s">Astronaut office</div>
-            </div>
-            <div className="orbit-wrap inner">
-              <ul className="orbit">
-                <li /><li /><li /><li />
-              </ul>
-              <div className="orbit-star orbit-star-1">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-2">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-3">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-4">
-                <span />
-              </div>
-            </div>
-            <div className="stars-wrap">
-              <div className="stars-1" />
-              <div className="stars-2" />
-              <div className="stars-3" />
-              <div className="stars-4" />
-            </div>
-            <div className="ships">
-              {this.getSupership()}
-              <div className="ship-columns">
-                {this.getSpaceships()}
-              </div>
+        <div className="team-page page">
+          <div className="team-page-title">Team <span>Astronaut office</span></div>
+          <div className="ships">
+            {this.getSupership()}
+            <div className="ship-columns">
+              {this.getSpaceships()}
             </div>
           </div>
         </div>
