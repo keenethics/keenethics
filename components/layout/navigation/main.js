@@ -65,6 +65,8 @@ class Navigation extends React.Component {
     if (!points) {
       return null;
     }
+
+    return null;
   }
   getPointHeight(numberOfPoints) {
     const { height } = this.state.dimensions;
