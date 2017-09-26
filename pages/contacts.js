@@ -6,6 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 
 export default class Contacts extends React.Component {
   constructor(props) {
@@ -79,24 +80,10 @@ export default class Contacts extends React.Component {
 
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="orbit-wrap inner">
-            <ul className="orbit"><li /><li /><li /><li /></ul>
-            <div className="orbit-star orbit-star-1"><span /></div>
-            <div className="orbit-star orbit-star-2"><span /></div>
-            <div className="orbit-star orbit-star-3"><span /></div>
-            <div className="orbit-star orbit-star-4"><span /></div>
-          </div>
-          <div className="stars-wrap">
-            <div className="stars-1" />
-            <div className="stars-2" />
-            <div className="stars-3" />
-            <div className="stars-4" />
-          </div>
+        <div className="contacts-page">
           <div className="contacts-socket">
             <div className="title-page">
-              <div className="title">Contact Us</div>
-              <div className="title-s">We’ll answer in a moment!</div>
+              <h1 className="title">Contact Us <span>We’ll answer in a moment!</span></h1>
             </div>
             <div className="contacts-block">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
@@ -188,6 +175,7 @@ export default class Contacts extends React.Component {
               </div>
             </div>
           </div>
+          <Background />
         </div>
       </Layout>
     );
