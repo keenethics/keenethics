@@ -68,7 +68,8 @@
 }
 .contacts-socket {
     width: 1050px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 0 80px;
 
     .title-page {
         padding: 100px 0 90px;
@@ -197,7 +198,8 @@
       padding: 13px 0;
     }
     .form-status {
-      padding: 0 0 18px;
+      font-size: 12px;
+      padding: 0 0 10px;
     }
     @media (max-width: 1200px){
         width: auto;
