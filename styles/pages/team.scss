@@ -61,6 +61,11 @@
   .ship {
     position: relative;
     height: 100px;
+
+    &:hover .ship-content-wrapper {
+      display: block;
+      opacity: 1;
+    }
   }
   .ship-image {
     position: absolute;
@@ -86,17 +91,11 @@
     background: #fff;
     border-radius: 12px;
     width: 60%;
-    transition: all .1s;
     z-index: 700;
 
     @include for-tablet {
       width: 90%;
       left: 10%;
-    }
-
-    &:hover {
-      opacity: 1;
-      top: -50px;
     }
   }
   .ship-content {
