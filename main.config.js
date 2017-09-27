@@ -1,7 +1,7 @@
 const maskTitle = technology => `${technology} Development`;
-const maskDescription = technology => `Looking to hire ${technology} developers? 
-   Appnovation, a ${technology} development company, specializes in ${technology} development services.
-    Hire our ${technology} developers today.`;
+const maskDescription = technology => `Looking to hire ${technology} developers?
+  Appnovation, a ${technology} development company, specializes in ${technology} development services.
+  Hire our ${technology} developers today.`;
 
 export const config = {
   navigationMinPointsHeight: 90,
@@ -12,6 +12,8 @@ export const config = {
         {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
+          metaTitle: 'Professional Web Design & Development Company',
+          metaDescription: 'Looking to hire web developers? Appnovation, a web development company, specializes in web development services. Hire our web developers today',
           href: '/services-web-development',
           icon: {
             name: 'web',
@@ -22,6 +24,8 @@ export const config = {
         {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
+          metaTitle: 'Desktop Application Development & Desktop Software App Development',
+          metaDescription: 'Looking to hire Desktop Application developers? Appnovation, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
           href: '/services-desktop-applications',
           icon: {
             name: 'dapp',
@@ -32,6 +36,8 @@ export const config = {
         {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
+          metaTitle: 'Mobile Application Development Services & Custom Apps Development Company',
+          metaDescription: 'Looking to hire mobile app developers? Appnovation, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
           href: '/services-mobile-development',
           icon: {
             name: 'mdev',
@@ -41,8 +47,9 @@ export const config = {
         },
         {
           name: 'Outstaffing',
-          description:
-            'Process of using by one company another`s company staff',
+          description: 'Process of using by one company another`s company staff',
+          metaTitle: '',
+          metaDescription: '',
           href: '/services-outstaffing',
           icon: {
             name: 'outs',
@@ -327,26 +334,6 @@ export const config = {
           },
           type: 'icon',
         },
-        // {
-        //   name: 'Values',
-        //   description: '',
-        //   href: '/about-values',
-        //   icon: {
-        //     name: 'values',
-        //     alt: 'Values',
-        //   },
-        //   type: 'icon',
-        // },
-        // {
-        //   name: 'Social Side',
-        //   description: '',
-        //   href: '/about-social_side',
-        //   icon: {
-        //     name: 'social-side',
-        //     alt: 'Social side',
-        //   },
-        //   type: 'icon',
-        // },
         {
           name: 'Open Source',
           description: 'Ethical support for the community',
@@ -782,6 +769,9 @@ export const spaceships = {
   frigate_captain: {
     capacity: 4,
   },
+  spaceship: {
+    capacity: 1,
+  },
 };
 
 export const superteam = [
@@ -830,6 +820,48 @@ export const superteam = [
 ];
 
 export const team = [
+  {
+    position: 'Missions control',
+    key: 'spaceship',
+    people: [
+      {
+        name: 'Oleksiy P.',
+        position: 'Chief of Meteor Flight Research Center',
+        description: 'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
+        avatar: 'alex_p.jpg',
+      },
+      {
+        name: 'Max S.',
+        position: 'Chief of The Astronaut Office',
+        description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
+        avatar: 'maks_s.jpg',
+      },
+      {
+        name: 'Alexey H.',
+        position: 'International Mission Specialist',
+        description: 'Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.',
+        avatar: 'alex_h.jpg',
+      },
+      {
+        name: 'Viktoria M.',
+        position: 'Astronaut Interaction Specialist',
+        description: 'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
+        avatar: 'viktoria_m.jpg',
+      },
+      {
+        name: 'Sofia I.',
+        position: 'Steward',
+        description: 'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
+        avatar: 'sofia_i.jpg',
+      },
+      {
+        name: 'Alexandr S.',
+        position: 'Mission Support Officer',
+        description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
+        avatar: 'sasha_s.jpg',
+      },
+    ],
+  },
   {
     position: 'Frigate captain',
     key: 'frigate_captain',

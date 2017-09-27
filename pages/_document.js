@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
             }}
           />
         </noscript>
-        <Main />
+        <Main className="root" />
         <NextScript />
       </html>
     );

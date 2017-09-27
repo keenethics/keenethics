@@ -1,0 +1,231 @@
+.slide-navigation {
+  position: relative;
+  z-index: 600;
+  padding: 100px 25px 25px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 400;
+  }
+}
+.slide-title {
+  display: block;
+  text-decoration: none;
+
+  &.current {
+    font-size: 24px;
+    margin: 50px 0;
+    cursor: default;
+  }
+
+  .title-s {
+    font-size: 14px;
+    line-height: 20px;
+    color: #a9bbea;
+
+    @include for-tablet {
+      @include visible(false);
+    }
+  }
+}
+.slide-title-nav {
+  display: inline-block;
+  position: relative;
+  padding-left: 47px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 23px;
+    opacity: 0.7;
+  }
+  &.prev:before {
+    @include tr-top(8px, 8px, 8px, #fff);
+  }
+  &.next:before {
+    @include tr-bottom(8px, 8px, 8px, #fff);
+  }
+  .title {
+    font-size: 24px;
+    opacity: 0.7;
+  }
+  .title, .title-s, &:before {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.slide-title-nav:hover {
+  &.prev {
+    .title, .title-s, &:before {
+      transform: translateY(-10px);
+    }
+  }
+  &.next {
+    .title, .title-s, &:before {
+      transform: translateY(10px);
+    }
+  }
+  &:before {
+    transition-delay:0.1s;
+  }
+}
+.content-tabs {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+.content-tabs-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -65px 0 0;
+  box-sizing: border-box;
+  z-index: 500;
+}
+.content-tabs-item {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 12px 40px 12px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(63, 71, 204, .1);
+  margin: 25px 0 40px;
+  transition: all .3s ease-in-out;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 20;
+    background: #fff;
+    border-radius: 40px 12px 40px 12px;
+  }
+  img {
+    position: relative;
+    display: block;
+    padding: 20px;
+    z-index: 30;
+  }
+  .content-tabs-item-name {
+    position: absolute;
+    width: 120px;
+    font-size: 11px;
+    color: #000;
+    left: -20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out;
+    z-index: 10;
+
+    @include for-tablet {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+  }
+  &:hover {
+    transform: scale(1.2);
+
+    .content-tabs-item-name {
+      transform: translateY(5px);
+      opacity: 1;
+    }
+  }
+}
+.slick-slider {
+  position: relative;
+  overflow: hidden;
+
+  .slick-dots {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .7);
+      border: none;
+      overflow: hidden;
+      text-indent: 9999px;
+      margin: 3px;
+      vertical-align: middle;
+      transition: all .3s ease-in-out;
+
+      &.slick-active {
+        width: 6px;
+        height: 6px;
+        margin: 2px;
+      }
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 8px;
+    top: 44px;
+    z-index: 650;
+    border: none;
+    background: #fff;
+    overflow: hidden;
+    text-indent: 9999px;
+    box-shadow: 0 0 20px rgba(63, 71, 204, .4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(0.9);
+      background: #eee;
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 13px;
+    }
+
+    &.slick-prev {
+      &:before {
+        @include tr-left(6px, 8px, 6px, #444);
+      }
+    }
+    &.slick-next {
+      left: auto;
+      right: 8px;
+
+      &:before {
+        left: auto;
+        right: 15px;
+        @include tr-right(6px, 6px, 8px, #444);
+      }
+    }
+  }
+}
+.slick-list {
+  overflow: hidden;
+}
+.slick-slide {
+  display: block;
+  float: left;
+  text-align: center;
+}

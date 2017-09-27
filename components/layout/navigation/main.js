@@ -39,10 +39,10 @@ class Navigation extends React.Component {
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
 
-    if (points) {
+    if (points && this.state.dimensions.height > -1) {
       return (
-        <ul className="menu-sub">
-          <div className="menu-sub-inner">
+        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+          <div className="subnavigation-inner">
             {points.map((p, i) => (
               <Point
                 key={p.name}
@@ -54,6 +54,16 @@ class Navigation extends React.Component {
           </div>
         </ul>
       );
+    }
+    if (points && this.state.dimensions.height < 0) {
+      return (
+        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+          <div className="subnavigation-loading" />
+        </ul>
+      );
+    }
+    if (!points) {
+      return null;
     }
 
     return null;
@@ -67,9 +77,7 @@ class Navigation extends React.Component {
 
     return '90px';
   }
-  showSidebar(e) {
-    e.preventDefault();
-
+  showSidebar() {
     this.setState({
       showSidebar: true,
     });
@@ -116,46 +124,41 @@ class Navigation extends React.Component {
     });
 
     return (
-      <div className="sidebar-wrapper">
-        <button className="menu-btn" onClick={this.showSidebar}>
-          <i />
-        </button>
-        <nav className={showSidebar ? 'sidebar open' : 'sidebar'}>
-          <div className="sidebar-header">
+      <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
+        <div className="navigation-hamburger" onClick={this.showSidebar} role="presentation">
+          <span />
+        </div>
+        <div className="navigation-inner" style={{ height: dimensions.height }}>
+          <div className="navigation-header">
             <Link href={'/'} prefetch>
               <a className="logo">
                 <img src="/static/images/svg/logo.svg" alt="Keenethics" width="120px" />
               </a>
             </Link>
           </div>
-
-          <div className="sidebar-content">
-            <ul className="sidebar-navigation">
-              {navigation.map((n, i) => {
-                if (n.type && n.type === 'hidden') {
-                  return null;
-                }
-                return (
-                  <Point
-                    key={n.name}
-                    element={n}
-                    height={height}
-                    currentPoint={currentPoint === i}
-                    showSidebar={dimensions.width > 767}
-                  >
-                    {this.getPointContent(n, currentPoint === i, currentSubpoint)}
-                  </Point>
-                );
-              })}
-            </ul>
-          </div>
-
-          <div className="sidebar-footer">
+          <ul className="navigation-content" style={{ height: dimensions.height }}>
+            {navigation.map((n, i) => {
+              if (n.type && n.type === 'hidden') {
+                return null;
+              }
+              return (
+                <Point
+                  key={n.name}
+                  element={n}
+                  height={height}
+                  currentPoint={currentPoint === i}
+                >
+                  {this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                </Point>
+              );
+            })}
+          </ul>
+          <div className="navigation-footer">
             <Link href="contacts">
               <a className="button">Contact us</a>
             </Link>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }

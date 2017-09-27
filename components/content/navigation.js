@@ -3,9 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ContentNavigationBackground from './background';
+
 import { config } from '../../main.config';
 
-export default class PageNavigation extends React.Component {
+export default class ContentNavigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -69,30 +71,20 @@ export default class PageNavigation extends React.Component {
       });
     }
 
-
     return currentPoints;
   }
   render() {
-    const { image, title } = this.props;
+    const { image } = this.props;
 
     return (
-      <div className={title ? 'slide-block with-menu-title' : 'slide-block'}>
-        <div className="slide-block-inner">
+      <div className="content-navigation">
+        <div className="content-navigation-inner">
           {!image || (
-            <div className="figure-wrap">
-              <div className="tbl">
-                <div className="cell">
-                  <div className="figure">
-                    <img className="f-top" src={`/static/images/figures/${image}_top.png`} alt="" />
-                    <img className="f-btm" src={`/static/images/figures/${image}_btm.png`} alt="" />
-                  </div>
-                </div>
+            <div className="content-navigation-image">
+              <div className="content-navigation-image-inner">
+                <img className="image-top" src={`/static/images/figures/${image}_top.png`} alt="" />
+                <img className="image-bottom" src={`/static/images/figures/${image}_btm.png`} alt="" />
               </div>
-            </div>
-          )}
-          {!title || (
-            <div className="slide-menu-title">
-              <span>{title}</span>
             </div>
           )}
           <div className="tbl">
@@ -106,7 +98,7 @@ export default class PageNavigation extends React.Component {
                 </Link>
                 <Link href={this.points.current.href}>
                   <a className="slide-title current">
-                    <h1 className="title">{this.points.current.name}</h1>
+                    <div className="title">{this.points.current.name}</div>
                     <div className="title-s">{this.points.current.description || ''}</div>
                   </a>
                 </Link>
@@ -119,34 +111,19 @@ export default class PageNavigation extends React.Component {
               </div>
             </div>
           </div>
-
-          <div className="orbit-wrap inner">
-            <ul className="orbit"><li /><li /><li /><li /></ul>
-            <div className="orbit-star orbit-star-1"><span /></div>
-            <div className="orbit-star orbit-star-2"><span /></div>
-            <div className="orbit-star orbit-star-3"><span /></div>
-            <div className="orbit-star orbit-star-4"><span /></div>
-          </div>
-          <div className="stars-wrap">
-            <div className="stars-1" />
-            <div className="stars-2" />
-            <div className="stars-3" />
-            <div className="stars-4" />
-          </div>
+          <ContentNavigationBackground props={this.point} />
         </div>
       </div>
     );
   }
 }
 
-PageNavigation.propTypes = {
+ContentNavigation.propTypes = {
   url: PropTypes.object,
   image: PropTypes.string,
-  title: PropTypes.string,
   points: PropTypes.array,
 };
-
-PageNavigation.defaultProps = {
+ContentNavigation.defaultProps = {
   url: {},
   image: '',
   title: '',

@@ -3,8 +3,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 
 import { spaceships, superteam, team } from '../main.config';
 
@@ -96,20 +98,20 @@ export default class AboutTeam extends React.Component {
       const parade = splitTo(t.people, numberOfShips);
 
       return parade.map(p => (
-        p.map((worker, i) => (
-          <div className="ship-column">
+        p.map(worker => (
+          <div className="ship-wrapper" key={nanoid()}>
             <div className={`ship ${t.key}`}>
-              <img src={`/static/images/ships/${t.key}.svg`} alt="" />
-              <div key={worker.name} className={`worker worker-${i}`} data-img={worker.avatar} data-name={worker.name} data-pos="QA" data-desc={worker.descriptio}>
-                <div className="point-flash">
-                  <span
-                    onMouseOver={this.onMouseOver}
-                    onMouseOut={this.onMouseOut}
-                    data-img={worker.avatar}
-                    data-name={worker.name}
-                    data-pos={worker.position}
-                    data-desc={worker.description}
-                  />
+              <div className="ship-image">
+                <img src={`/static/images/ships/${t.key}.svg`} alt="" />
+              </div>
+              <div className="ship-content-wrapper">
+                <div className="ship-content">
+                  <div className="ship-content-user-avatar">
+                    <img src={`/static/images/team/${worker.avatar}`} alt="" />
+                  </div>
+                  <div className="ship-content-user-name">{worker.name}</div>
+                  <div className="ship-content-user-position">{worker.position}</div>
+                  <div className="ship-content-user-description">{worker.description}</div>
                 </div>
               </div>
             </div>
@@ -119,65 +121,21 @@ export default class AboutTeam extends React.Component {
     });
   }
   render() {
-    const { image, name, position, description, pos_x, pos_y, show } = this.state;
     const { url } = this.props;
 
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="content-socket content-socket-t">
-            <div className="title-page">
-              <div className="title">Team</div>
-              <div className="title-s">Astronaut office</div>
-            </div>
-            <div className="orbit-wrap inner">
-              <ul className="orbit">
-                <li /><li /><li /><li />
-              </ul>
-              <div className="orbit-star orbit-star-1">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-2">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-3">
-                <span />
-              </div>
-              <div className="orbit-star orbit-star-4">
-                <span />
-              </div>
-            </div>
-            <div className="stars-wrap">
-              <div className="stars-1" />
-              <div className="stars-2" />
-              <div className="stars-3" />
-              <div className="stars-4" />
-            </div>
+        <div className="team-page page">
+          <div className="team-page-content">
+            <h1 className="team-page-title">Team <span>Astronaut office</span></h1>
             <div className="ships">
-              {this.getSupership()}
               <div className="ship-columns">
                 {this.getSpaceships()}
               </div>
             </div>
           </div>
+          <Background className="open-source-page-background" />
         </div>
-        {!show || (
-          <div
-            className={show ? 'worker-tooltip show' : 'worker-tooltip hide'}
-            style={{
-              left: pos_x,
-              top: pos_y,
-              opacity: 1,
-            }}
-          >
-            <div className="img">
-              <img src={`/static/images/team/${image}`} alt="" />
-            </div>
-            <div className="name">{name}</div>
-            <div className="pos">{position}</div>
-            <div className="desc">{description}</div>
-          </div>
-        )}
       </Layout>
     );
   }

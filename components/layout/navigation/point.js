@@ -8,12 +8,6 @@ export default class NavigationPoint extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      showChildren: props.currentPoint && props.showSidebar,
-    };
-
-    this.onMouseOver = this.onMouseOver.bind(this);
-    this.onMouseOut = this.onMouseOut.bind(this);
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
   }
@@ -24,46 +18,15 @@ export default class NavigationPoint extends React.Component {
       });
     }
   }
-  onMouseOver() {
-    if (this.state.showChildren) {
-      return;
-    }
-    if (!this.props.children) {
-      return;
-    }
-
-    this.setState({
-      showChildren: true,
-    });
-  }
-  onMouseOut() {
-    if (this.props.currentPoint) {
-      return;
-    }
-    if (!this.props.children) {
-      return;
-    }
-
-    this.setState({
-      showChildren: false,
-    });
-  }
   renderPoint() {
     const { href } = this.props.element;
 
-    if (href) {
-      const attr = {
-        className: 'point',
-      };
-      return (
-        <Link href={href} prefetch>
-          {React.createElement('a', attr, this.renderPointContent())}
-        </Link>
-      );
-    }
-
-    return (
-      <span className="point">
+    return href ? (
+      <Link href={href} prefetch>
+        <a className="navigation-point">{this.renderPointContent()}</a>
+      </Link>
+    ) : (
+      <span className="navigation-point">
         {this.renderPointContent()}
       </span>
     );
@@ -73,17 +36,15 @@ export default class NavigationPoint extends React.Component {
 
     switch (type) {
       case 'icon': return (
-        <span className="cell">
-          <span className="menu-ico sz-1 svg">
-            <img src={`/static/images/svg/${icon.name || ''}.svg`} alt={icon.alt || ''} />
+        <span className="navigation-cell">
+          <span className="navigation-icon">
+            <img src={`/static/images/svg/${icon.name || ''}.svg`} width="30px" height="30px" alt={icon.alt || ''} />
           </span>
-          <span className="menu-sub-nm">
-            {name}
-          </span>
+          {name}
         </span>
       );
       case 'number': return (
-        <span className="cell">
+        <span className="navigation-cell">
           <i>{number}</i>
           <span className="menu-sub-nm">
             {name}
@@ -91,12 +52,7 @@ export default class NavigationPoint extends React.Component {
         </span>
       );
       default: return (
-        <span className="cell">
-          <span className="menu-nm-wrap">
-            <span className="menu-bg" />
-            <span className="menu-nm">{name}</span>
-          </span>
-        </span>
+        <span className="navigation-cell">{name}</span>
       );
     }
   }
@@ -104,22 +60,15 @@ export default class NavigationPoint extends React.Component {
     if (!this.props.element.name) return null;
 
     const { children, height, currentPoint, currentSubpoint } = this.props;
-    const { showChildren } = this.state;
 
     const className = cn({
+      'navigation-item': true,
       current: currentPoint || currentSubpoint,
-      'show-children': showChildren && children,
+      'is-link': !children,
     });
 
     return (
-      <li
-        className={className}
-        role="presentation"
-        style={{ height }}
-        onMouseEnter={this.onMouseOver}
-        onClick={this.onMouseOver}
-        onMouseLeave={this.onMouseOut}
-      >
+      <li className={className} role="presentation" style={{ height }}>
         {this.renderPoint()}
         {children}
       </li>
@@ -144,7 +93,6 @@ NavigationPoint.propTypes = {
   currentSubpoint: PropTypes.bool,
   showSidebar: PropTypes.bool,
 };
-
 NavigationPoint.defaultProps = {
   children: null,
   element: {

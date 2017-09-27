@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#3c67ab';
@@ -32,6 +33,7 @@ const ProjectBlackBook = ({ url }) => (
                 <img src="/static/images/project/black-book.png" alt="Nokia Black Book" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

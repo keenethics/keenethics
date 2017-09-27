@@ -65,14 +65,26 @@ export default class LayoutHead extends React.Component {
       });
     }
 
-    const title = `KEEN.ETHICS - ${currentPoint && currentPoint.metaTitle ? currentPoint.metaTitle : 'Home'}`;
-    const description = currentPoint && currentPoint.metaDescription ? currentPoint.metaDescription : 'Software development';
+    let title = 'Home';
+    let description = 'Software development';
+
+    if (currentPoint && currentPoint.metaTitle) {
+      title = currentPoint.metaTitle;
+    } else if (currentPoint && currentPoint.name) {
+      title = currentPoint.name;
+    }
+
+    if (currentPoint && currentPoint.metaDescription) {
+      description = currentPoint.metaDescription;
+    } else if (currentPoint && currentPoint.description) {
+      description = currentPoint.description;
+    }
 
     return (
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
         {description.length ? <meta name="description" content={description} /> : null}
         <link type="text/css" rel="stylesheet" href="/static/main.css" />
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
