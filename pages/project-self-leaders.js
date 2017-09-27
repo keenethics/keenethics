@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#261353';
@@ -34,6 +35,7 @@ const ProjectPlutio = ({ url }) => (
                 <img src="/static/images/project/self-leaders.png" alt="SelfLeaders" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>
