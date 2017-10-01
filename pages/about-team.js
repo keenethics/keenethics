@@ -7,6 +7,7 @@ import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
+import Ship from '../components/pages/about/ship-item';
 
 import { spaceships, superteam, team } from '../main.config';
 
@@ -98,25 +99,7 @@ export default class AboutTeam extends React.Component {
       const parade = splitTo(t.people, numberOfShips);
 
       return parade.map(p => (
-        p.map(worker => (
-          <div className="ship-wrapper" key={nanoid()}>
-            <div className={`ship ${t.key}`}>
-              <div className="ship-image">
-                <img src={`/static/images/ships/${t.key}.svg`} alt="" />
-              </div>
-              <div className="ship-content-wrapper">
-                <div className="ship-content">
-                  <div className="ship-content-user-avatar">
-                    <img src={`/static/images/team/${worker.avatar}`} alt="" />
-                  </div>
-                  <div className="ship-content-user-name">{worker.name}</div>
-                  <div className="ship-content-user-position">{worker.position}</div>
-                  <div className="ship-content-user-description">{worker.description}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))
+        p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} />)
       ));
     });
   }

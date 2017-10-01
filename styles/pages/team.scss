@@ -28,26 +28,6 @@
 .ship-columns {
   @include clearfix;
 }
-.frigate_captain .ship-image img {
-  width: 90%;
-  padding: 0 5%;
-}
-.corvette_captain .ship-image img {
-  width: 80%;
-  padding: 0 10%;
-}
-.capt_lieutenant .ship-image img {
-  width: 70%;
-  padding: 0 15%;
-}
-.midshipman .ship-image img {
-  width: 60%;
-  padding: 0 20%;
-}
-.astronaut .ship-image img {
-  width: 50%;
-  padding: 0 25%;
-}
 .ship-wrapper {
   float: left;
   width: 50%;
@@ -62,9 +42,25 @@
     position: relative;
     height: 100px;
 
-    &:hover .ship-content-wrapper {
-      display: block;
-      opacity: 1;
+    &.frigate_captain .ship-image img {
+      width: 90%;
+      padding: 0 5%;
+    }
+    &.corvette_captain .ship-image img {
+      width: 80%;
+      padding: 0 10%;
+    }
+    &.capt_lieutenant .ship-image img {
+      width: 70%;
+      padding: 0 15%;
+    }
+    &.midshipman .ship-image img {
+      width: 60%;
+      padding: 0 20%;
+    }
+    &.astronaut .ship-image img {
+      width: 50%;
+      padding: 0 25%;
     }
   }
   .ship-image {
@@ -79,12 +75,10 @@
     justify-content: flex-end;
 
     img {
-      width: 90%;
-      left: 5%;
+      width: 100%;
     }
   }
   .ship-content-wrapper {
-    opacity: 0;
     position: absolute;
     top: -40px;
     left: 20%;
@@ -92,10 +86,14 @@
     border-radius: 12px;
     width: 60%;
     z-index: 700;
-
+    @include visible(false);
     @include for-tablet {
       width: 90%;
       left: 10%;
+    }
+
+    &.show {
+      @include visible(true);
     }
   }
   .ship-content {
