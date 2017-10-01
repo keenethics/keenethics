@@ -752,9 +752,10 @@
   top: 15px;
   left: 0;
   right: 0;
+  transition: all 3s;
 
   &.loading {
-    @include visible(false);
+    opacity: 0;
   }
   .slick-arrow {
     top: 20px;

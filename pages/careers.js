@@ -224,6 +224,11 @@ export default class Careers extends React.Component {
   }
   render() {
     const { url } = this.props;
+    const { sliderIsActive, activeItemIndex } = this.state;
+
+    if (this.slider && !activeItemIndex) {
+      this.slider.slickGoTo(0);
+    }
 
     return (
       <Layout currentURL={url}>
@@ -233,7 +238,7 @@ export default class Careers extends React.Component {
             <Background className="careers-page-background" />
           </div>
           <div className="careers-page-content">
-            <div className={this.state.sliderIsActive ? 'careers-page-slider' : 'careers-page-slider loading'}>
+            <div className={sliderIsActive && this.slider ? 'careers-page-slider' : 'careers-page-slider loading'}>
               <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
                 {config.careers.map(item => (
                   <div className="careers-page-slider-ship" key={item.position}>
