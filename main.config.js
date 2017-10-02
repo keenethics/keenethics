@@ -88,6 +88,8 @@ export const config = {
           description:
             'Alterative, incremental method of managing the design and build activities of engineering',
           href: '/approach-agile-project-management',
+          metaTitle: 'Agile project management companies',
+          metaDescription: 'Agile Project Management services and Agile solutions from Keenethics services help deliver your business software on time and on budget.',
           icon: {
             name: 'agile',
             alt: 'Agile project management',
@@ -98,6 +100,8 @@ export const config = {
           name: 'Minimum Viable Product',
           description:
             'A product with just enough features to gather validated learning about the product',
+          metaTitle: 'MVP development company',
+          metaDescription: 'Outsource your MVP development and let us build a product your customers will love. We do prototyping, design (UX/UI) and everything in between.',
           href: '/approach-minimum-viable-product',
           icon: {
             name: 'min-valuable',
@@ -497,7 +501,8 @@ export const servicesMobileDevelopment = () => {
   const elements = [
     {
       href: '/services-mobile-development-apple',
-      name: 'iOS DEVELOPMENT',
+      name: 'iOS development',
+      name2: 'iOS',
       tabsDescription: '14 apps developed',
       description: 'Mobile applications for popular platform',
       icon: 'icon-apple',
@@ -505,6 +510,7 @@ export const servicesMobileDevelopment = () => {
     {
       href: '/services-mobile-development-android',
       name: 'Android development',
+      name2: 'Android',
       tabsDescription: '23 apps developed',
       description: 'Most popular Linux-based mobile OS',
       icon: 'icon-android',
@@ -512,34 +518,45 @@ export const servicesMobileDevelopment = () => {
   ];
   return elements.map(e => ({
     ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
+    metaTitle: maskTitle(e.name2),
+    metaDescription: maskDescription(e.name2),
   }));
 };
 
-export const servicesOutstaffing = [
-  {
-    href: '/services-outstaffing-senior',
-    name: 'Senior developer',
-    tabsDescription: '4 in our team',
-    description: 'Best skills and expertise',
-    icon: 'icon-o-1',
-  },
-  {
-    href: '/services-outstaffing-team',
-    name: 'Dedicated team',
-    tabsDescription: '4-8 people',
-    description: 'Great developers who already have multiple projects behind',
-    icon: 'icon-o-2',
-  },
-  {
-    href: '/services-outstaffing-technical-consultancy',
-    name: 'Technical consultancy',
-    tabsDescription: '24 hours for an answer',
-    description: '24 hours for an answer',
-    icon: 'icon-o-3',
-  },
-];
+export const servicesOutstaffing = () => {
+  const elements = [
+    {
+      href: '/services-outstaffing-senior',
+      name: 'Senior developer',
+      name2: 'Senior',
+      tabsDescription: '4 in our team',
+      description: 'Best skills and expertise',
+      icon: 'icon-o-1',
+    },
+    {
+      href: '/services-outstaffing-team',
+      name: 'Dedicated team',
+      name2: 'Dedicated team',
+      tabsDescription: '4-8 people',
+      description: 'Great developers who already have multiple projects behind',
+      icon: 'icon-o-2',
+    },
+    {
+      href: '/services-outstaffing-technical-consultancy',
+      name: 'Technical consultancy',
+      name2: 'Technical consultancy',
+      tabsDescription: '24 hours for an answer',
+      description: '24 hours for an answer',
+      icon: 'icon-o-3',
+    },
+  ];
+
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name2),
+    metaDescription: maskDescription(e.name2),
+  }));
+};
 
 export const techApps = () => {
   const elements = [

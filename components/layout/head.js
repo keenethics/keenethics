@@ -49,7 +49,7 @@ export default class LayoutHead extends React.Component {
 
     if (!currentPoint) {
       const subnavigation = servicesWebDevelopmentTabs().concat(
-        servicesOutstaffing,
+        servicesOutstaffing(),
         servicesMobileDevelopment(),
         techApps(),
         techFrontEnd(),

@@ -11,7 +11,7 @@ const ServicesOutstaffingSenior = ({ url }) => (
     <ContentNavigation
       url={url}
       image={'outstaffing_s'}
-      points={servicesOutstaffing}
+      points={servicesOutstaffing()}
     />
     <div className="content-block">
       <h1>Hire Senior Developer</h1>
