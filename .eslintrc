@@ -9,6 +9,7 @@
   },
   "rules": {
     "semi": 2,
+    "class-methods-use-this": 0,
     "react/forbid-prop-types": 0,
     "react/no-array-index-key": 0,
     "react/no-danger": 0,

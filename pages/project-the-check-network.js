@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#258b49';
@@ -34,6 +35,7 @@ const ProjectTheCheckNetwork = ({ url }) => (
                 <img src="/static/images/project/the-check-network.png" alt="The Check Network" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <div className="project-achievements">

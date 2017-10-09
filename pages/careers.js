@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import HtmlParser from 'react-html-parser';
 
+import Background from '../components/content/background';
+
 import Layout from '../components/layout/main';
 
 import { config } from '../main.config';
@@ -50,16 +52,26 @@ export default class Careers extends React.Component {
 
     this.sliderSettings = {
       swipe: true,
-      infinite: false,
-      centerMode: true,
+      infinite: true,
       dots: true,
       arrows: true,
-      variableWidth: true,
-      centerPadding: 0,
-      className: 'career-slider',
+      slidesToShow: 3,
       afterChange: this.sliderChange,
       initialSlide: this.state.activeItemIndex,
       init: this.sliderInit,
+      centerMode: true,
+      responsive: [
+        {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            draggable: true,
+          },
+        },
+      ],
     };
   }
   onSubmit(e) {
@@ -133,19 +145,19 @@ export default class Careers extends React.Component {
     }, []);
   }
   getCareersItem() {
-    const { activeItemIndex, showApplyForm, isPending, name, email, message } = this.state;
-    const { position, experience, description, image } = config.careers[activeItemIndex];
+    const { activeItemIndex, showApplyForm, isPending, name, email, message, status } = this.state;
+    const { position, experience, description } = config.careers[activeItemIndex];
 
     return (
-      <div className="career-block active">
-        <div className="career-ship">
-          <img className="size-2" src={`/static/images/ships/${image}.svg`} alt="" />
-        </div>
-        <div className="career-vac">{position}</div>
-        <div className="title-s">{experience}</div>
-        {showApplyForm || <div className="career-main text">{HtmlParser(description)}</div>}
-        {!showApplyForm || (
-          <div className="career-main form">
+      <div className="careers-page-position-inner">
+        <div className="career-position">{position}</div>
+        <div className="career-experience">{experience}</div>
+        {!showApplyForm ? (
+          <div className="career-description">
+            {HtmlParser(description)}
+          </div>
+        ) : (
+          <div className="career-form">
             <form onSubmit={this.onSubmit}>
               <div className="input-wrap">
                 <input
@@ -156,7 +168,7 @@ export default class Careers extends React.Component {
                   onChange={this.onChange}
                 />
               </div>
-              <div className="input-wrap input-wrap-l">
+              <div className="input-wrap">
                 <input
                   className={email.error ? 'error' : null}
                   name="email"
@@ -173,6 +185,7 @@ export default class Careers extends React.Component {
                   onChange={this.onChange}
                 />
               </div>
+              {!status || <div className="career-form-status">{status}</div>}
               <button
                 type="submit"
                 className={isPending ? 'button button-send pending' : 'button button-send'}
@@ -182,11 +195,7 @@ export default class Careers extends React.Component {
             </form>
           </div>
         )}
-        {showApplyForm || (
-          <button className="button" onClick={this.toggleApplyForm}>
-            Apply
-          </button>
-        )}
+        {showApplyForm || <button className="button" onClick={this.toggleApplyForm}>Apply</button>}
       </div>
     );
   }
@@ -200,6 +209,7 @@ export default class Careers extends React.Component {
   sliderChange(activeItemIndex) {
     this.setState({
       activeItemIndex,
+      showApplyForm: false,
     });
   }
   sliderInit() {
@@ -214,56 +224,34 @@ export default class Careers extends React.Component {
   }
   render() {
     const { url } = this.props;
-    const { status } = this.state;
+    const { sliderIsActive, activeItemIndex } = this.state;
+
+    if (this.slider && !activeItemIndex) {
+      this.slider.slickGoTo(0);
+    }
 
     return (
       <Layout currentURL={url}>
-        <div className="content-wrap content-wrap-bg">
-          <div className="orbit-wrap inner">
-            <ul className="orbit"><li /><li /><li /><li /></ul>
-            <div className="orbit-star orbit-star-1"><span /></div>
-            <div className="orbit-star orbit-star-2"><span /></div>
-            <div className="orbit-star orbit-star-3"><span /></div>
-            <div className="orbit-star orbit-star-4"><span /></div>
+        <div className="careers-page">
+          <div className="careers-page-header">
+            <h1 className="title">Careers<span>We’re hiring</span></h1>
+            <Background className="careers-page-background" />
           </div>
-          <div className="stars-wrap">
-            <div className="stars-1" />
-            <div className="stars-2" />
-            <div className="stars-3" />
-            <div className="stars-4" />
-          </div>
-          <div className="content-socket-c">
-            <div className="title-page">
-              <div className="title">Careers</div>
-              <div className="title-s">We’re hiring</div>
-            </div>
-            <div className="career-wrap">
-              <div className={this.state.sliderIsActive ? 'slider-loaded' : 'loading-slider'}>
-                <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
-                  {config.careers.map(item => (
-                    <div key={item.position}>
-                      <div className="career-ship">
-                        <img className="size-2" src={`/static/images/ships/${item.image}.svg`} alt="" />
-                      </div>
-                      <span>{item.position}</span>
+          <div className="careers-page-content">
+            <div className={sliderIsActive && this.slider ? 'careers-page-slider' : 'careers-page-slider loading'}>
+              <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
+                {config.careers.map(item => (
+                  <div className="careers-page-slider-ship" key={item.position}>
+                    <div className="careers-page-slider-ship-img">
+                      <img src={`/static/images/ships/${item.image}.svg`} className={item.image} alt={item.position} />
                     </div>
-                  ))}
-                </Slider>
-              </div>
-              <div className="career-items left">
-                {this.getCareersItems(true)}
-              </div>
-              <div className="career-items right">
-                {this.getCareersItems()}
-              </div>
-              <div className="career-window">
-                <div className="figure-1" />
-                <div className="figure-2" />
-                {this.getCareersItem()}
-              </div>
-              {status ? (
-                <div className="form-status">{status}</div>
-              ) : null}
+                    <span>{item.position}</span>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+            <div className="careers-page-position">
+              {this.getCareersItem()}
             </div>
           </div>
         </div>

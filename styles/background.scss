@@ -1,0 +1,236 @@
+.page-background, .home-page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  overflow: hidden;
+
+  .home-page-background-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .planet {
+    position: absolute;
+    width: 238px;
+    height: 238px;
+    top: 50%;
+    left: 50%;
+    margin: -119px 0 0 -119px;
+    background: url('/static/images/svg/planet.svg') no-repeat;
+    background-size: 100%;
+    z-index: 10;
+  }
+  .orbits, .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .orbit {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .15);
+    width: 360px;
+    height: 360px;
+    box-sizing: border-box;
+    animation: spin 20s infinite linear;
+
+    &:before {
+      content: '';
+      position: relative;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url('/static/images/svg/star.svg') no-repeat center;
+      animation: spin 10s infinite linear;
+    }
+
+    &:nth-child(2) {
+      width: 560px;
+      height: 560px;
+      left: 0;
+      top: -50px;
+      animation-duration: 40s;
+    }
+    &:nth-child(3) {
+      width: 760px;
+      height: 760px;
+      left: -100px;
+      top: -150px;
+      animation-duration: 60s;
+    }
+    &:nth-child(4) {
+      width: 1060px;
+      height: 1060px;
+      left: -200px;
+      top: -300px;
+      animation-duration: 80s;
+    }
+  }
+}
+.home-page-background .orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .08);
+  width: 360px;
+  height: 360px;
+  margin: -180px 0 0 -180px;
+  box-sizing: border-box;
+  animation: spin 20s infinite linear;
+
+  &:before {
+    content: '';
+    position: relative;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -6px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url('/static/images/svg/star.svg') no-repeat center;
+    animation: spin 10s infinite linear;
+  }
+
+  &:nth-child(2) {
+    width: 560px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    margin: -280px 0 0 -280px;
+    animation-duration: 40s;
+  }
+  &:nth-child(3) {
+    width: 760px;
+    height: 760px;
+    left: 50%;
+    top: 50%;
+    margin: -380px 0 0 -380px;
+    animation-duration: 60s;
+  }
+  &:nth-child(4) {
+    width: 1060px;
+    height: 1060px;
+    left: 50%;
+    top: 50%;
+    margin: -530px 0 0 -530px;
+    animation-duration: 80s;
+  }
+}
+@function multiple-box-shadow($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+  }
+  @return unquote($value);
+}
+
+@function multiple-box-shadow-red($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #DE4F4F';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #DE4F4F';
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(400);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow-red(35);
+$shadows-big-2: multiple-box-shadow-red(15);
+
+.star-1,
+.star-2,
+.star-3,
+.star-4 {
+  border-radius: 50%;
+  background : transparent;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 2000px;
+    background: transparent;
+  }
+}
+.star-1,
+.star-2 {
+  opacity: 0.55;
+}
+.star-1 {
+  width: 3px;
+  height: 3px;
+  box-shadow: $shadows-medium;
+  animation: animStar 110s linear infinite;
+
+  &:after {
+    width: 3px;
+    height: 3px;
+    box-shadow: $shadows-medium;
+  }
+}
+.star-2 {
+  width: 1px;
+  height: 1px;
+  box-shadow: $shadows-small;
+  animation: animStar 150s linear infinite;
+
+  &:after {
+    width: 1px;
+    height: 1px;
+    box-shadow : $shadows-small;
+  }
+}
+.star-3 {
+  width: 4px;
+  height: 4px;
+  box-shadow: $shadows-big;
+  animation: animStar 130s linear infinite;
+
+  &:after {
+    width: 4px;
+    height: 4px;
+    box-shadow : $shadows-big;
+  }
+}
+.star-4 {
+  width: 2px;
+  height: 2px;
+  box-shadow: $shadows-big-2;
+  animation: animStar 200s linear infinite;
+
+  &:after {
+    width: 2px;
+    height: 2px;
+    box-shadow: $shadows-big-2;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+@keyframes spin {
+	from {
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(1turn);
+	}
+}

@@ -1,3 +1,8 @@
+const maskTitle = technology => `${technology} Development`;
+const maskDescription = technology => `Looking to hire ${technology} developers?
+  Appnovation, a ${technology} development company, specializes in ${technology} development services.
+  Hire our ${technology} developers today.`;
+
 export const config = {
   navigationMinPointsHeight: 90,
   navigation: [
@@ -7,6 +12,8 @@ export const config = {
         {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
+          metaTitle: 'Professional Web Design & Development Company',
+          metaDescription: 'Looking to hire web developers? Appnovation, a web development company, specializes in web development services. Hire our web developers today',
           href: '/services-web-development',
           icon: {
             name: 'web',
@@ -17,6 +24,8 @@ export const config = {
         {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
+          metaTitle: 'Desktop Application Development & Desktop Software App Development',
+          metaDescription: 'Looking to hire Desktop Application developers? Appnovation, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
           href: '/services-desktop-applications',
           icon: {
             name: 'dapp',
@@ -27,6 +36,8 @@ export const config = {
         {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
+          metaTitle: 'Mobile Application Development Services & Custom Apps Development Company',
+          metaDescription: 'Looking to hire mobile app developers? Appnovation, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
           href: '/services-mobile-development',
           icon: {
             name: 'mdev',
@@ -37,6 +48,8 @@ export const config = {
         {
           name: 'Outstaffing',
           description: 'Process of using by one company another`s company staff',
+          metaTitle: '',
+          metaDescription: '',
           href: '/services-outstaffing',
           icon: {
             name: 'outs',
@@ -46,7 +59,8 @@ export const config = {
         },
         {
           name: 'Proof of Concept',
-          description: 'Realization of a certain method or idea in order to demonstrate its feasibility',
+          description:
+            'Realization of a certain method or idea in order to demonstrate its feasibility',
           href: '/services-proof',
           icon: {
             name: 'pcon',
@@ -71,8 +85,11 @@ export const config = {
         },
         {
           name: 'Agile Project Management',
-          description: 'Alterative, incremental method of managing the design and build activities of engineering',
+          description:
+            'Alterative, incremental method of managing the design and build activities of engineering',
           href: '/approach-agile-project-management',
+          metaTitle: 'Agile project management companies',
+          metaDescription: 'Agile Project Management services and Agile solutions from Keenethics services help deliver your business software on time and on budget.',
           icon: {
             name: 'agile',
             alt: 'Agile project management',
@@ -81,7 +98,10 @@ export const config = {
         },
         {
           name: 'Minimum Viable Product',
-          description: 'A product with just enough features to gather validated learning about the product',
+          description:
+            'A product with just enough features to gather validated learning about the product',
+          metaTitle: 'MVP development company',
+          metaDescription: 'Outsource your MVP development and let us build a product your customers will love. We do prototyping, design (UX/UI) and everything in between.',
           href: '/approach-minimum-viable-product',
           icon: {
             name: 'min-valuable',
@@ -91,7 +111,8 @@ export const config = {
         },
         {
           name: 'Cutting Edge Technologies',
-          description: 'We use only the best and the most up-to-date technologies',
+          description:
+            'We use only the best and the most up-to-date technologies',
           href: '/approach-cutting-edge',
           icon: {
             name: 'cutting',
@@ -136,7 +157,8 @@ export const config = {
         },
         {
           name: 'Front-End',
-          description: 'Front-end development is a process of the creation site’s client-side',
+          description:
+            'Front-end development is a process of the creation site’s client-side',
           href: '/tech-front-end',
           icon: {
             name: 'front-end',
@@ -316,26 +338,6 @@ export const config = {
           },
           type: 'icon',
         },
-        // {
-        //   name: 'Values',
-        //   description: '',
-        //   href: '/about-values',
-        //   icon: {
-        //     name: 'values',
-        //     alt: 'Values',
-        //   },
-        //   type: 'icon',
-        // },
-        // {
-        //   name: 'Social Side',
-        //   description: '',
-        //   href: '/about-social_side',
-        //   icon: {
-        //     name: 'social-side',
-        //     alt: 'Social side',
-        //   },
-        //   type: 'icon',
-        // },
         {
           name: 'Open Source',
           description: 'Ethical support for the community',
@@ -455,248 +457,319 @@ export const config = {
     },
   ],
 };
-export const servicesWebDevelopmentTabs = [
-  {
-    href: '/services-web-development-e-commerce',
-    name: 'E-Commerce',
-    description: 'Building amazing e-commerce products',
-    icon: 'icon-e',
-  },
-  {
-    href: '/services-web-development-chatbot',
-    name: 'Chat Bots',
-    description: 'Talking to AI was never that easy',
-    icon: 'icon-chat-bots',
-  },
-  {
-    href: '/services-web-development-node',
-    name: 'Website Node JS',
-    description: 'Leading and rule-breaking technology',
-    icon: 'icon-node',
-  },
-  {
-    href: '/services-web-development-meteor',
-    name: 'Meteor.js',
-    description: 'An ambitious fullstack-framework',
-    icon: 'icon-meteor',
-  },
-  {
-    href: '/services-web-development-programmable-voice',
-    name: 'Programmable Voice',
-    description: 'When computer can replace a human',
-    icon: 'icon-voice',
-  },
-];
-export const servicesMobileDevelopment = [
-  {
-    href: '/services-mobile-development-apple',
-    name: 'iOS DEVELOPMENT',
-    tabsDescription: '14 apps developed',
-    description: 'Mobile applications for popular platform',
-    icon: 'icon-apple',
-  },
-  {
-    href: '/services-mobile-development-android',
-    name: 'Android development',
-    tabsDescription: '23 apps developed',
-    description: 'Most popular Linux-based mobile OS',
-    icon: 'icon-android',
-  },
-];
-export const servicesOutstaffing = [
-  {
-    href: '/services-outstaffing-senior',
-    name: 'Senior developer',
-    tabsDescription: '4 in our team',
-    description: 'Best skills and expertise',
-    icon: 'icon-o-1',
-  },
-  {
-    href: '/services-outstaffing-team',
-    name: 'Dedicated team',
-    tabsDescription: '4-8 people',
-    description: 'Great developers who already have multiple projects behind',
-    icon: 'icon-o-2',
-  },
-  {
-    href: '/services-outstaffing-technical-consultancy',
-    name: 'Technical consultancy',
-    tabsDescription: '24 hours for an answer',
-    description: '24 hours for an answer',
-    icon: 'icon-o-3',
-  },
-];
+export const servicesWebDevelopmentTabs = () => {
+  const elements = [
+    {
+      href: '/services-web-development-e-commerce',
+      name: 'E-Commerce',
+      description: 'Building amazing e-commerce products',
+      icon: 'icon-e',
+    },
+    {
+      href: '/services-web-development-chatbot',
+      name: 'Chat Bots',
+      description: 'Talking to AI was never that easy',
+      icon: 'icon-chat-bots',
+    },
+    {
+      href: '/services-web-development-node',
+      name: 'Website Node JS',
+      description: 'Leading and rule-breaking technology',
+      icon: 'icon-node',
+    },
+    {
+      href: '/services-web-development-meteor',
+      name: 'Meteor.js',
+      description: 'An ambitious fullstack-framework',
+      icon: 'icon-meteor',
+    },
+    {
+      href: '/services-web-development-programmable-voice',
+      name: 'Programmable Voice',
+      description: 'When computer can replace a human',
+      icon: 'icon-voice',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
 
-export const techApps = [
-  {
-    href: '/tech-apps-phonegap',
-    name: 'PhoneGap',
-    description: 'Framework for building mobile applications reusing existing codebase',
-    icon: 'icon-pg',
-  },
-  {
-    href: '/tech-apps-electron',
-    name: 'Electron',
-    description: 'JS-application on your desktop',
-    icon: 'icon-en',
-  },
-  {
-    href: '/tech-apps-accelerated-mobile-pages',
-    name: 'Accelerated Mobile Pages',
-    description: 'High speed for content loading and great Google-ranking',
-    icon: 'icon-acc',
-  },
-  {
-    href: '/tech-apps-progressive-web-apps',
-    name: 'Progressive Web Apps',
-    description: 'Working with web-applications offline',
-    icon: 'icon-prog',
-  },
-  {
-    href: '/tech-apps-react-native',
-    name: 'React Native',
-    description: 'Using native mobile UI-elements with crossplatform JS-code',
-    icon: 'icon-rn',
-  },
-  {
-    href: '/tech-apps-cordova',
-    name: 'Cordova',
-    description: 'Open-source framework for cross-platform mobile applications',
-    icon: 'icon-cv',
-  },
-];
+export const servicesMobileDevelopment = () => {
+  const elements = [
+    {
+      href: '/services-mobile-development-apple',
+      name: 'iOS development',
+      name2: 'iOS',
+      tabsDescription: '14 apps developed',
+      description: 'Mobile applications for popular platform',
+      icon: 'icon-apple',
+    },
+    {
+      href: '/services-mobile-development-android',
+      name: 'Android development',
+      name2: 'Android',
+      tabsDescription: '23 apps developed',
+      description: 'Most popular Linux-based mobile OS',
+      icon: 'icon-android',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name2),
+    metaDescription: maskDescription(e.name2),
+  }));
+};
 
-export const techFrontEnd = [
-  {
-    href: '/tech-front-end-react',
-    name: 'React',
-    description: 'Library for blazing-fast UI-rendering va virtual-DOM',
-    icon: 'icon-rn',
-  },
-  {
-    href: '/tech-front-end-redux',
-    name: 'Redux',
-    description: 'Organizing state in React-applciation',
-    icon: 'icon-redux',
-  },
-  {
-    href: '/tech-front-end-angular',
-    name: 'Angular',
-    description: 'Google-backed frontend-framework',
-    icon: 'icon-ang',
-  },
-  {
-    href: '/tech-front-end-aurelia',
-    name: 'Aurelia',
-    description: 'Ambitious Angular-competitor by one of former Angular-deveopers',
-    icon: 'icon-aurelia',
-  },
-  {
-    href: '/tech-front-end-react-native',
-    name: 'React Native',
-    description: 'Speeding up hybrid mobile-apps by using native mobile UI-elements',
-    icon: 'icon-rn',
-  },
-  {
-    href: '/tech-front-end-angular-2',
-    name: 'Angular 2.0',
-    description: 'Next-generation frontend-framework',
-    icon: 'icon-ang',
-  },
-  {
-    href: '/tech-front-end-vue',
-    name: 'Vue JS',
-    description: 'Popular lightweight library for UI',
-    icon: 'icon-vue',
-  },
-  {
-    href: '/tech-front-end-next',
-    name: 'Next JS',
-    description: 'Fullstack framework aiming simplicity combined with powerful features',
-    icon: 'icon-next',
-  },
-];
+export const servicesOutstaffing = () => {
+  const elements = [
+    {
+      href: '/services-outstaffing-senior',
+      name: 'Senior developer',
+      name2: 'Senior',
+      tabsDescription: '4 in our team',
+      description: 'Best skills and expertise',
+      icon: 'icon-o-1',
+    },
+    {
+      href: '/services-outstaffing-team',
+      name: 'Dedicated team',
+      name2: 'Dedicated team',
+      tabsDescription: '4-8 people',
+      description: 'Great developers who already have multiple projects behind',
+      icon: 'icon-o-2',
+    },
+    {
+      href: '/services-outstaffing-technical-consultancy',
+      name: 'Technical consultancy',
+      name2: 'Technical consultancy',
+      tabsDescription: '24 hours for an answer',
+      description: '24 hours for an answer',
+      icon: 'icon-o-3',
+    },
+  ];
 
-export const techBackEnd = [
-  {
-    href: '/tech-back-end-express',
-    name: 'Express',
-    description: 'Most popular backend framework on top of node.js',
-    icon: 'icon-ex',
-  },
-  {
-    href: '/tech-back-end-meteor',
-    name: 'Meteor',
-    description: 'Fullstack real-time framework',
-    icon: 'icon-meteor_',
-  },
-  {
-    href: '/tech-back-end-hapi',
-    name: 'HAPI',
-    description: 'node.js-based backend framework',
-    icon: 'icon-hapi',
-  },
-];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name2),
+    metaDescription: maskDescription(e.name2),
+  }));
+};
 
-export const techDatabase = [
-  {
-    href: '/tech-data-base-mongo',
-    name: 'Mongo',
-    description: 'Fast noSQL database',
-    icon: 'icon-mongo',
-  },
-  {
-    href: '/tech-data-base-mysql',
-    name: 'MySQL',
-    description: 'Most popular SQL-database',
-    icon: 'icon-mysql',
-  },
-  {
-    href: '/tech-data-base-postgresql',
-    name: 'PostgreSQL',
-    description: 'SQL-database with advanced features',
-    icon: 'icon-post',
-  },
-];
+export const techApps = () => {
+  const elements = [
+    {
+      href: '/tech-apps-phonegap',
+      name: 'PhoneGap',
+      description:
+        'Framework for building mobile applications reusing existing codebase',
+      icon: 'icon-pg',
+    },
+    {
+      href: '/tech-apps-electron',
+      name: 'Electron',
+      description: 'JS-application on your desktop',
+      icon: 'icon-en',
+    },
+    {
+      href: '/tech-apps-accelerated-mobile-pages',
+      name: 'Accelerated Mobile Pages',
+      description: 'High speed for content loading and great Google-ranking',
+      icon: 'icon-acc',
+    },
+    {
+      href: '/tech-apps-progressive-web-apps',
+      name: 'Progressive Web Apps',
+      description: 'Working with web-applications offline',
+      icon: 'icon-prog',
+    },
+    {
+      href: '/tech-apps-react-native',
+      name: 'React Native',
+      description: 'Using native mobile UI-elements with crossplatform JS-code',
+      icon: 'icon-rn',
+    },
+    {
+      href: '/tech-apps-cordova',
+      name: 'Cordova',
+      description:
+        'Open-source framework for cross-platform mobile applications',
+      icon: 'icon-cv',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
 
-export const techApiIntegration = [
-  {
-    href: '/tech-api-integration-rest',
-    name: 'REST',
-    description: 'Organizing your backend endpoints',
-    icon: 'icon-rest',
-  },
-  {
-    href: '/tech-api-integration-paypal',
-    name: 'PayPal',
-    description: 'Sending and receiving money online',
-    icon: 'icon-paypal',
-  },
-  {
-    href: '/tech-api-integration-graphql',
-    name: 'GraphQL',
-    description: 'Smart organizing of dataflow between frontend and backend',
-    icon: 'icon-grap',
-  },
-  {
-    href: '/tech-api-integration-braintree',
-    name: 'Braintree',
-    description: 'Solution for accepting, splitting andprocessing payments online',
-    icon: 'icon-brain',
-  },
-  {
-    href: '/tech-api-integration-elastic-search',
-    name: 'Elastic Search',
-    description: 'Popular search-engine',
-    icon: 'icon-el',
-  },
-  {
-    href: '/tech-api-integration-stripe',
-    name: 'Stripe',
-    description: 'Developer-friendly payments service',
-    icon: 'icon-stripe',
-  },
-];
+export const techFrontEnd = () => {
+  const elements = [
+    {
+      href: '/tech-front-end-react',
+      name: 'React',
+      description: 'Library for blazing-fast UI-rendering va virtual-DOM',
+      icon: 'icon-rn',
+    },
+    {
+      href: '/tech-front-end-redux',
+      name: 'Redux',
+      description: 'Organizing state in React-applciation',
+      icon: 'icon-redux',
+    },
+    {
+      href: '/tech-front-end-angular',
+      name: 'Angular',
+      description: 'Google-backed frontend-framework',
+      icon: 'icon-ang',
+    },
+    {
+      href: '/tech-front-end-aurelia',
+      name: 'Aurelia',
+      description:
+        'Ambitious Angular-competitor by one of former Angular-deveopers',
+      icon: 'icon-aurelia',
+    },
+    {
+      href: '/tech-front-end-react-native',
+      name: 'React Native',
+      description:
+        'Speeding up hybrid mobile-apps by using native mobile UI-elements',
+      icon: 'icon-rn',
+    },
+    {
+      href: '/tech-front-end-angular-2',
+      name: 'Angular 2.0',
+      description: 'Next-generation frontend-framework',
+      icon: 'icon-ang',
+    },
+    {
+      href: '/tech-front-end-vue',
+      name: 'Vue JS',
+      description: 'Popular lightweight library for UI',
+      icon: 'icon-vue',
+    },
+    {
+      href: '/tech-front-end-next',
+      name: 'Next JS',
+      description:
+        'Fullstack framework aiming simplicity combined with powerful features',
+      icon: 'icon-next',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
+
+export const techBackEnd = () => {
+  const elements = [
+    {
+      href: '/tech-back-end-express',
+      name: 'Express',
+      description: 'Most popular backend framework on top of node.js',
+      icon: 'icon-ex',
+    },
+    {
+      href: '/tech-back-end-meteor',
+      name: 'Meteor',
+      description: 'Fullstack real-time framework',
+      icon: 'icon-meteor_',
+    },
+    {
+      href: '/tech-back-end-hapi',
+      name: 'HAPI',
+      description: 'node.js-based backend framework',
+      icon: 'icon-hapi',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
+
+export const techDatabase = () => {
+  const elements = [
+    {
+      href: '/tech-data-base-mongo',
+      name: 'Mongo',
+      description: 'Fast noSQL database',
+      icon: 'icon-mongo',
+    },
+    {
+      href: '/tech-data-base-mysql',
+      name: 'MySQL',
+      description: 'Most popular SQL-database',
+      icon: 'icon-mysql',
+    },
+    {
+      href: '/tech-data-base-postgresql',
+      name: 'PostgreSQL',
+      description: 'SQL-database with advanced features',
+      icon: 'icon-post',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
+
+export const techApiIntegration = () => {
+  const elements = [
+    {
+      href: '/tech-api-integration-rest',
+      name: 'REST',
+      description: 'Organizing your backend endpoints',
+      icon: 'icon-rest',
+    },
+    {
+      href: '/tech-api-integration-paypal',
+      name: 'PayPal',
+      description: 'Sending and receiving money online',
+      icon: 'icon-paypal',
+    },
+    {
+      href: '/tech-api-integration-graphql',
+      name: 'GraphQL',
+      description: 'Smart organizing of dataflow between frontend and backend',
+      icon: 'icon-grap',
+    },
+    {
+      href: '/tech-api-integration-braintree',
+      name: 'Braintree',
+      description:
+        'Solution for accepting, splitting andprocessing payments online',
+      icon: 'icon-brain',
+    },
+    {
+      href: '/tech-api-integration-elastic-search',
+      name: 'Elastic Search',
+      description: 'Popular search-engine',
+      icon: 'icon-el',
+    },
+    {
+      href: '/tech-api-integration-stripe',
+      name: 'Stripe',
+      description: 'Developer-friendly payments service',
+      icon: 'icon-stripe',
+    },
+  ];
+  return elements.map(e => ({
+    ...e,
+    metaTitle: maskTitle(e.name),
+    metaDescription: maskDescription(e.name),
+  }));
+};
+
 export const spaceships = {
   astronaut: {
     capacity: 2,
@@ -713,47 +786,99 @@ export const spaceships = {
   frigate_captain: {
     capacity: 4,
   },
+  spaceship: {
+    capacity: 1,
+  },
 };
+
 export const superteam = [
   {
     name: 'Oleksiy P.',
     position: 'Chief of Meteor Flight Research Center',
-    description: 'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
+    description:
+      'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
     avatar: 'alex_p.jpg',
   },
   {
     name: 'Max S.',
     position: 'Chief of The Astronaut Office',
-    description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
+    description:
+      'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
     avatar: 'maks_s.jpg',
   },
   {
     name: 'Alexey H.',
     position: 'International Mission Specialist',
-    description: 'Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.',
+    description:
+      'Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.',
     avatar: 'alex_h.jpg',
   },
   {
     name: 'Viktoria M.',
     position: 'Astronaut Interaction Specialist',
-    description: 'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
+    description:
+      'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
     avatar: 'viktoria_m.jpg',
   },
   {
     name: 'Sofia I.',
     position: 'Steward',
-    description: 'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
+    description:
+      'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
     avatar: 'sofia_i.jpg',
   },
   {
     name: 'Alexandr S.',
     position: 'Mission Support Officer',
-    description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
+    description:
+      'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
     avatar: 'sasha_s.jpg',
   },
-
 ];
+
 export const team = [
+  {
+    position: 'Missions control',
+    key: 'spaceship',
+    people: [
+      {
+        name: 'Oleksiy P.',
+        position: 'Chief of Meteor Flight Research Center',
+        description: 'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
+        avatar: 'alex_p.jpg',
+      },
+      {
+        name: 'Max S.',
+        position: 'Chief of The Astronaut Office',
+        description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
+        avatar: 'maks_s.jpg',
+      },
+      {
+        name: 'Alexey H.',
+        position: 'International Mission Specialist',
+        description: 'Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.',
+        avatar: 'alex_h.jpg',
+      },
+      {
+        name: 'Viktoria M.',
+        position: 'Astronaut Interaction Specialist',
+        description: 'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
+        avatar: 'viktoria_m.jpg',
+      },
+      {
+        name: 'Sofia I.',
+        position: 'Steward',
+        description: 'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
+        avatar: 'sofia_i.jpg',
+      },
+      {
+        name: 'Alexandr S.',
+        position: 'Mission Support Officer',
+        description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
+        avatar: 'sasha_s.jpg',
+      },
+    ],
+  },
   {
     position: 'Frigate captain',
     key: 'frigate_captain',
@@ -761,13 +886,15 @@ export const team = [
       {
         name: 'Illya S.',
         position: 'Full-stack js Frigate Captain',
-        description: 'The most peaceful astronaut. He stays calm even in the most dangerous situations. This skill he has gained through intergalactic hitchhiking.',
+        description:
+          'The most peaceful astronaut. He stays calm even in the most dangerous situations. This skill he has gained through intergalactic hitchhiking.',
         avatar: 'illya_s.jpg',
       },
       {
         name: 'Vlad O.',
         position: 'Full-stack js Frigate Captain',
-        description: 'Has a medal "For Merit in Space Exploration" for achievements in outer space researching, development and reconnaissance.',
+        description:
+          'Has a medal "For Merit in Space Exploration" for achievements in outer space researching, development and reconnaissance.',
         avatar: 'vlad_o.jpg',
       },
     ],
@@ -779,19 +906,22 @@ export const team = [
       {
         name: 'Yara M.',
         position: 'Full-stack js Corvette Capt',
-        description: 'She is the first woman to have flown in Keenethics space, having been selected from more than five finalists to pilot Keen project applicants.',
+        description:
+          'She is the first woman to have flown in Keenethics space, having been selected from more than five finalists to pilot Keen project applicants.',
         avatar: 'yara_m.jpg',
       },
       {
         name: 'Taras B.',
         position: 'Full-stack js Corvette Capt',
-        description: 'Best sailor on duty. He does his work while the rest of spacecraft members are asleep.',
+        description:
+          'Best sailor on duty. He does his work while the rest of spacecraft members are asleep.',
         avatar: 'taras_b.jpg',
       },
       {
         name: 'Mykhailo O.',
         position: 'Full-stack js Corvette Capt ',
-        description: 'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
+        description:
+          'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
         avatar: 'michael_rich.jpg',
       },
     ],
@@ -803,49 +933,57 @@ export const team = [
       {
         name: 'Sergey G.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'A Strong pilot with cool UX and UI feeling and game development background. Leads gamification at Keenethics flagship.',
+        description:
+          'A Strong pilot with cool UX and UI feeling and game development background. Leads gamification at Keenethics flagship.',
         avatar: 'sergei_g.jpg',
       },
       {
         name: 'Taras Y.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
+        description:
+          'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
         avatar: 'taras_y.jpg',
       },
       {
         name: 'Andrij T.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Ph. D, he has firm and scientific approach to problem-solving and he used to be a pilot on several shuttle missions.',
+        description:
+          'Ph. D, he has firm and scientific approach to problem-solving and he used to be a pilot on several shuttle missions.',
         avatar: 'andrew_t.jpg',
       },
       {
         name: 'Yanul M.',
         position: 'Full-stack js Midshipman',
-        description: 'Space hot fire-show amateur, got an honors diploma in the flight school, acts as a hot second pilot in the hot shuttle mission.',
+        description:
+          'Space hot fire-show amateur, got an honors diploma in the flight school, acts as a hot second pilot in the hot shuttle mission.',
         avatar: 'maryna_y.png',
       },
       {
         name: 'Mykhailo P.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Honorable and experienced combattant in Meteor space, has been working during many years in our space sector.',
+        description:
+          'Honorable and experienced combattant in Meteor space, has been working during many years in our space sector.',
         avatar: 'misha_p.jpg',
       },
       {
         name: 'Arsen T.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Space sweet Karmaman astronaut. He knows how to keep your Karma clean.',
+        description:
+          'Space sweet Karmaman astronaut. He knows how to keep your Karma clean.',
         avatar: 'arsen_t.jpg',
       },
       {
         name: 'Sasha B.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Best student of Astronaut Training Center. He is JavaScript enthusiast, React evangelist, Space archeologist.',
+        description:
+          'Best student of Astronaut Training Center. He is JavaScript enthusiast, React evangelist, Space archeologist.',
         avatar: 'alex_b.jpg',
       },
       {
         name: 'Golomb Y.',
         position: 'Full-stack js Capt-lieutenant',
-        description: 'Participated in large battles as a Rookie and dreams about leading his own squad',
+        description:
+          'Participated in large battles as a Rookie and dreams about leading his own squad',
         avatar: 'ura_g.jpg',
       },
     ],
@@ -857,31 +995,36 @@ export const team = [
       {
         name: 'Max F.',
         position: 'Full-stack js Midshipman',
-        description: 'Space gamer. He is also one of the pilots who flies on one of the biggest Meteor Shuttle mission in the world.',
+        description:
+          'Space gamer. He is also one of the pilots who flies on one of the biggest Meteor Shuttle mission in the world.',
         avatar: 'maksym_f.jpg',
       },
       {
         name: 'Mykola M.',
         position: 'Full-stack js Midshipman',
-        description: 'Space illusionist, together with Stanley Kubrick he produced all the layouts for US Apollo missions at the time when there was no HTML/CSS. He is now carrying out full-stack missions in outer space.',
+        description:
+          'Space illusionist, together with Stanley Kubrick he produced all the layouts for US Apollo missions at the time when there was no HTML/CSS. He is now carrying out full-stack missions in outer space.',
         avatar: 'mykola_m.jpg',
       },
       {
         name: 'Nazar K.',
         position: 'Full-stack js Midshipman',
-        description: 'Strong Pilot with will of adamant and suspended approach. Fond of space rockclimbing.',
+        description:
+          'Strong Pilot with will of adamant and suspended approach. Fond of space rockclimbing.',
         avatar: 'nazar_k.jpg',
       },
       {
         name: 'Ihor V.',
         position: 'Full-stack js Midshipman',
-        description: 'The youngest midshipman from outer space. Cool and steady even when approaching black hole.',
+        description:
+          'The youngest midshipman from outer space. Cool and steady even when approaching black hole.',
         avatar: 'igor_v.jpg',
       },
       {
         name: 'Yuriy S.',
         position: 'Full-stack js Midshipman',
-        description: 'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
+        description:
+          'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
         avatar: 'yurii_s.jpg',
       },
     ],
@@ -893,25 +1036,29 @@ export const team = [
       {
         name: 'Taras P.',
         position: 'Full-stack js Astronaut',
-        description: 'He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.',
+        description:
+          'He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.',
         avatar: 'taras_p.jpg',
       },
       {
         name: 'Mykhailo F.',
         position: 'Full-stack js Astronaut',
-        description: 'Has space banking background and is good at front-end and mobile fields.',
+        description:
+          'Has space banking background and is good at front-end and mobile fields.',
         avatar: 'misha_f.jpg',
       },
       {
         name: 'Volodymyr A.',
         position: 'Full-stack js Astronaut',
-        description: 'He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.',
+        description:
+          'He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.',
         avatar: 'volodiy_a.jpg',
       },
       {
         name: 'Rostyslav T.',
         position: 'Full-stack js Astronaut',
-        description: 'Was create AI-bots powered space craft. You may never be sure whether you are talking to him, or to his AI.',
+        description:
+          'Was create AI-bots powered space craft. You may never be sure whether you are talking to him, or to his AI.',
         avatar: 'rostyk_t.jpg',
       },
     ],

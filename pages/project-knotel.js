@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#fc634d';
@@ -32,6 +33,7 @@ const ProjectKnotel = ({ url }) => (
                 <img src="/static/images/project/knotel.png" alt="Knotel" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

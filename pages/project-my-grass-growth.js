@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#28b293';
@@ -30,6 +31,7 @@ const ProjectMyGrassGrowth = ({ url }) => (
                 <img src="/static/images/project/my-grass-growth.png" alt="My Grass Growth" className="screen" />
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

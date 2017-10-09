@@ -9,21 +9,16 @@ import { Router } from '../../routes';
 const dateTemplate = tinytime('{MMMM} {DD} – {h}:{mm} {a}');
 
 const Posts = ({ posts }) => (
-  <div className="blog-grid">
+  <div className="blog-page-posts">
     {posts.map(post => (
       <Link route={Router.linkPage('post', { name: post.href })} key={post.title}>
-        <a className="art-item">
-          <div className="img">
+        <a className="blog-page-post">
+          <div className="blog-page-post-img">
             <img src={post.image} alt="" />
           </div>
-          <div className="art-desc">
-            <div className="art-desc-i">
-              <div className="date">
-                {dateTemplate.render(new Date(+post.date))}
-              </div>
-              <div className="title">{post.title}</div>
-              <p className="description">{post.subtitle}</p>
-            </div>
+          <div className="blog-page-post-header">
+            <div className="date">{dateTemplate.render(new Date(+post.date))}</div>
+            <div className="title">{post.title}</div>
           </div>
         </a>
       </Link>
@@ -34,7 +29,6 @@ const Posts = ({ posts }) => (
 Posts.propTypes = {
   posts: PropTypes.array,
 };
-
 Posts.defaultProps = {
   posts: [],
 };

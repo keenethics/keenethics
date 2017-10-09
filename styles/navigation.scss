@@ -1,0 +1,228 @@
+.navigation {
+  display: table-cell;
+  height: 100%;
+  width: 1px;
+  background: #fff;
+  vertical-align: top;
+  box-shadow: 0 2px 19px rgba(80, 116, 165, .1);
+}
+.navigation-hamburger {
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  padding: 16px 10px;
+  z-index: 800;
+  cursor: pointer;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+  @include visible(false);
+
+  @include for-tablet {
+    @include visible(true);
+  }
+  span {
+    display: block;
+    height: 2px;
+    background: #081f3f;
+    border-radius: 2px;
+  }
+  &:before, &:after {
+    content: '';
+    display: block;
+    margin: 0 0 6px;
+    width: 30px;
+    height: 2px;
+    background: #081f3f;
+    border-radius: 2px;
+  }
+  &:after {
+    top: 8px;
+    margin: 6px 0 0;
+  }
+}
+.navigation-inner {
+  position: relative;
+  min-width: 160px;
+  height: 100%;
+  background: #fff;
+
+  @include for-tablet {
+    @include visible(false);
+
+    .is-open & {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 800;
+      @include visible(true);
+    }
+  };
+}
+.navigation-header {
+  position: absolute;
+  width: 160px;
+  height: 54px;
+  left: 0;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(80, 116, 165, .1);
+
+  .logo {
+    display: block;
+    height: 14px;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+.navigation-footer {
+  position: absolute;
+  padding: 15px 0 0;
+  width: 160px;
+  height: 60px;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0 -4px 20px rgba(80, 116, 165, .1);
+  text-align: center;
+
+  .button {
+    border-radius: 35px;
+    padding: 16px 28px;
+    display: inline-block;
+    height: 45px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background: 0 0;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #de3535 0%, #e3621d 100%);
+    box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+}
+.subnavigation {
+  display: none;
+  width: 160px;
+  background: #fff;
+  overflow: hidden;
+  border-left: 1px solid #eef0f1;
+  box-sizing: border-box;
+
+  .subnavigation-inner {
+    width: 160px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 100px 0 0;
+    box-sizing: content-box;
+
+    .navigation-cell {
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+  .subnavigation-loading {
+    width: 160px;
+    height: 100vh;
+    background: #fff;
+  }
+}
+.navigation-content {
+  display: block;
+  height: 100%;
+  padding: 54px 0 75px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .navigation-item {
+    width: 160px;
+    display: block;
+    border-bottom: 1px solid #eef0f1;
+    box-sizing: border-box;
+
+    &:last-child {
+      border: none;
+    }
+    &:hover {
+      background: rgba(245, 249, 250, .5);
+    }
+    &:hover .subnavigation {
+      display: block;
+      position: absolute;
+      left: 160px;
+      top: 0;
+      width: 160px;
+      z-index: 9999;
+    }
+    &.current {
+      width: 320px;
+      background: #f5f9fa;
+
+      &.is-link {
+        width: 160px;
+      }
+
+      .subnavigation {
+        display: block;
+        position: absolute;
+        left: 160px;
+        top: 0;
+        z-index: 100;
+      }
+    }
+    .subnavigation .navigation-item.current {
+      width: 160px;
+    }
+  }
+}
+
+.navigation-point {
+  display: table;
+  width: 100%;
+  height: 100%;
+  color: #2d4352;
+  cursor: pointer;
+  text-decoration: none;
+
+  .navigation-cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 0 20px 0 30px;
+
+    > i {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      right: 5px;
+      font-style: normal;
+      font-weight: 700;
+      color: #f8fafd;
+      font-size: 100px;
+      line-height: 25px;
+      height: 30px;
+      top: 50%;
+      margin-top: -15px;
+    }
+  }
+  .navigation-icon {
+    display: block;
+    width: 30px;
+    margin: 0 auto 8px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

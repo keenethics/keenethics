@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#ee521d';
@@ -24,6 +25,7 @@ const ProjectComicEnglish = ({ url }) => (
                 <div className="tag" style={{ color: baseColor }}>Ionic</div>
               </div>
             </div>
+            <Background />
           </div>
           <div className="project-content-more">
             <p>

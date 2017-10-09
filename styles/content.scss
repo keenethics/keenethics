@@ -1,0 +1,129 @@
+.content {
+  display: table-cell;
+  height: 100%;
+  vertical-align: top;
+  -webkit-overflow-scrolling: touch;
+}
+.content-inner {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @include for-tablet {
+    margin-left: -1px;
+  };
+}
+.content-navigation {
+  overflow: hidden;
+  background: #071e40;
+  background: linear-gradient(145deg, #071e40 0%,#662938 80%);
+}
+.content-navigation-inner {
+  position: relative;
+  height: 460px;
+}
+.content-navigation-image {
+  position: absolute;
+  right: 50px;
+  z-index: 200;
+
+  @include for-desktop {
+    display: none;
+    visibility: hidden;
+  };
+}
+.content-navigation-image-inner {
+  position: relative;
+  width: 600px;
+  height: 340px;
+  margin: 60px 0;
+
+  .image-top, .image-bottom {
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  .image-bottom {
+    top: 15px;
+    z-index: 80;
+  }
+}
+.content-block {
+  padding: 30px 25px 25px;
+  max-width: 820px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 26px;
+    margin: 30px 0 18px;
+    line-height: 34px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    margin: 28px 0 18px;
+    line-height: 30px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
+  }
+  h3 {
+    font-size: 22px;
+    margin: 26px 0 18px;
+
+    &:first-child {
+      margin-top: 18px;
+    }
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  ul, ol {
+    margin: 26px 10px;
+  }
+  ul li, ol li {
+    position: relative;
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 14px;
+    padding: 0 0 2px 24px;
+    line-height: 1.5;
+    background-size: 16px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+      display: block;
+      width: 5px;
+      height: 5px;
+      border: 2px solid #f2af3b;
+      border-radius: 50%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+  }
+  code {
+    display: block;
+    padding: 20px 25px;
+    background-color: #f6f8fa;
+  }
+}
