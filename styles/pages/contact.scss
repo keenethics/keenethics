@@ -234,32 +234,24 @@
 }
 
 .contacts-mail {
-    position: absolute;
-    z-index: 1;
-    left: 300px;
-    top: 50%;
-    margin-top: -83px;
-    width: 166px;
-    height: 166px;
-    background: url(/static/images/svg/mail.svg) no-repeat;
-    background-size: 100% 100%;
+  position: absolute;
+  z-index: 1;
+  left: 300px;
+  top: 50%;
+  margin-top: -83px;
+  width: 166px;
+  height: 166px;
+  background: url('/static/images/svg/mail.svg') no-repeat;
+  background-size: 100% 100%;
 
-    @media (max-width: 1200px){
-        top: 130px;
-        left: 50%;
-        margin: 0 0 0 -70px;
-    }
-
-    @media (max-width: 550px){
-        right: 10px;
-        top: 150px;
-        width: 100px;
-        height: 100px;
-    }
-
-    @media (max-width: 375px){
-        top: 175px;
-    }
+  @media (max-width: 1200px) {
+    top: 130px;
+    left: 50%;
+    margin: 0 0 0 -70px;
+  }
+  @media (max-width: 550px) {
+    display: none;
+  }
 }
 
 .contacts-stars {
