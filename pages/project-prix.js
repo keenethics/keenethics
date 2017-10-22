@@ -67,7 +67,7 @@ const ProjectPrix = ({ url }) => (
               </div>
             </div>
             <a
-              href="http://52.48.81.242/signIn"
+              href="https://www.prix.ai"
               rel="noopener noreferrer"
               target="_blank"
               className="link"
