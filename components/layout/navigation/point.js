@@ -1,3 +1,5 @@
+/* global document */
+
 import Link from 'next/link';
 
 import React from 'react';
@@ -10,6 +12,11 @@ export default class NavigationPoint extends React.Component {
 
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
+  }
+  componentDidMount() {
+    if (this.props.currentSubpoint) {
+      this.props.scroll(document.getElementById('current-subpoint').offsetTop);
+    }
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.showSidebar !== nextProps.showSidebar) {
@@ -68,7 +75,7 @@ export default class NavigationPoint extends React.Component {
     });
 
     return (
-      <li className={className} role="presentation" style={{ height }}>
+      <li className={className} role="presentation" id={currentSubpoint ? 'current-subpoint' : ''} style={{ height }}>
         {this.renderPoint()}
         {children}
       </li>
@@ -92,6 +99,7 @@ NavigationPoint.propTypes = {
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
   showSidebar: PropTypes.bool,
+  scroll: PropTypes.func,
 };
 NavigationPoint.defaultProps = {
   children: null,
@@ -109,4 +117,5 @@ NavigationPoint.defaultProps = {
   currentPoint: false,
   currentSubpoint: false,
   showSidebar: false,
+  scroll: null,
 };
