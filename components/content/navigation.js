@@ -87,28 +87,30 @@ export default class ContentNavigation extends React.Component {
               </div>
             </div>
           )}
-          <div className="tbl">
-            <div className="cell">
-              <div className="slide-navigation">
-                <Link href={this.points.prev.href}>
-                  <a className="slide-title slide-title-nav prev">
-                    <div className="title">{this.points.prev.name}</div>
-                    <div className="title-s">{this.points.prev.description || ''}</div>
-                  </a>
-                </Link>
-                <Link href={this.points.current.href}>
-                  <a className="slide-title current">
-                    <div className="title">{this.points.current.name}</div>
-                    <div className="title-s">{this.points.current.description || ''}</div>
-                  </a>
-                </Link>
-                <Link href={this.points.next.href}>
-                  <a className="slide-title slide-title-nav next">
-                    <div className="title">{this.points.next.name}</div>
-                    <div className="title-s">{this.points.next.description || ''}</div>
-                  </a>
-                </Link>
-              </div>
+          <div className="content-navigation-carousel">
+            <div className="content-navigation-carousel-inner">
+              <Link href={this.points.prev.href}>
+                <a className="content-navigation-carousel-link prev">
+                  <div className="content">
+                    <div className="name">{this.points.prev.name}</div>
+                    <div className="description">{this.points.prev.description || ''}</div>
+                  </div>
+                </a>
+              </Link>
+              <Link href={this.points.current.href}>
+                <a className="content-navigation-carousel-link current">
+                  <div className="name">{this.points.current.name}</div>
+                  <div className="description">{this.points.current.description || ''}</div>
+                </a>
+              </Link>
+              <Link href={this.points.next.href}>
+                <a className="content-navigation-carousel-link next">
+                  <div className="content">
+                    <div className="name">{this.points.next.name}</div>
+                    <div className="description">{this.points.next.description || ''}</div>
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
           <ContentNavigationBackground props={this.point} />
