@@ -1,4 +1,4 @@
-/* global window */
+/* global window, document */
 
 import Link from 'next/link';
 
@@ -11,6 +11,13 @@ import Point from './point';
 import { config } from '../../../main.config';
 
 class Navigation extends React.Component {
+  static scrollToActiveSubpoint(scroll) {
+    const inner = document.getElementById('subnavigation-inner-current');
+
+    if (inner) {
+      inner.scrollTop = scroll;
+    }
+  }
   constructor(props) {
     super(props);
 
@@ -20,6 +27,7 @@ class Navigation extends React.Component {
         height: -1,
       },
       showSidebar: false,
+      offsetTop: 0,
     };
 
     this.getPointContent = this.getPointContent.bind(this);
@@ -42,13 +50,18 @@ class Navigation extends React.Component {
     if (points && this.state.dimensions.height > -1) {
       return (
         <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
-          <div className="subnavigation-inner">
+          <div
+            ref={(n) => { this.wrapper = n; }}
+            id={currentPoint && currentSubpoint ? 'subnavigation-inner-current' : ''}
+            className="subnavigation-inner"
+          >
             {points.map((p, i) => (
               <Point
                 key={p.name}
                 element={p}
                 height={this.getPointHeight(points.length)}
                 currentSubpoint={currentPoint && currentSubpoint === i}
+                scroll={this.constructor.scrollToActiveSubpoint}
               />
             ))}
           </div>
