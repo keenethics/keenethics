@@ -23,27 +23,25 @@ module.exports = {
       value[path.resolve(__dirname, 'static/main.css')] = path.resolve(__dirname, 'styles/main.scss');
 
       config.entry = value;
-      config.module.rules.push(
-        {
-          test: /\.css$/,
-          loader: 'emit-file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
+      config.module.rules.push({
+        test: /\.css$/,
+        loader: 'emit-file-loader',
+        options: {
+          name: '[path][name].[ext]',
         },
-        {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader', 'postcss-loader', 'sass-loader'],
-          }),
-          include: [
-            path.resolve(__dirname, 'styles'),
-            path.resolve(__dirname, 'node_modules'),
-            path.resolve(__dirname, 'static'),
-          ],
-        },
-      );
+      });
+      config.module.rules.push({
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'postcss-loader', 'sass-loader'],
+        }),
+        include: [
+          path.resolve(__dirname, 'styles'),
+          path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'static'),
+        ],
+      });
       config.plugins.push(new ExtractTextPlugin('[name]'));
 
       return config;
