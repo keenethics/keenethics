@@ -76,7 +76,15 @@ export default class Contacts extends React.Component {
   }
   render() {
     const { url } = this.props;
-    const { isPending, status, firstname, lastname, email, phone, message } = this.state;
+    const {
+      isPending,
+      status,
+      firstname,
+      lastname,
+      email,
+      phone,
+      message,
+    } = this.state;
 
     return (
       <Layout currentURL={url}>
@@ -104,7 +112,7 @@ export default class Contacts extends React.Component {
                   </a>
                 </li>
                 <li>
-                  <a href={'mailto:founders@keenethics.com'}>
+                  <a href="mailto:founders@keenethics.com">
                     <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
                     <div>founders@keenethics.com</div>
                     <span>Drop Us a Letter</span>

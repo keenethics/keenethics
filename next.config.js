@@ -42,7 +42,8 @@ module.exports = {
             path.resolve(__dirname, 'node_modules'),
             path.resolve(__dirname, 'static'),
           ],
-        });
+        },
+      );
       config.plugins.push(new ExtractTextPlugin('[name]'));
 
       return config;

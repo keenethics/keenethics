@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachCuttingEdge = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'cut'} />
+    <ContentNavigation url={url} image="cut" />
     <div className="content-block">
       <h1>Cutting Edge Technologies</h1>
       <p>

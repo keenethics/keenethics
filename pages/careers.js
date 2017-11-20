@@ -29,10 +29,6 @@ export default class Careers extends React.Component {
         value: '',
         error: false,
       },
-      position: {
-        value: '',
-        error: false,
-      },
       message: {
         value: '',
         error: false,
@@ -129,6 +125,7 @@ export default class Careers extends React.Component {
           role="presentation"
           className={activeItemIndex === i ? 'career-item active' : 'career-item'}
           onClick={() => this.itemClick(i)}
+          onKeyDown={() => this.itemClick(i)}
         >
           <img src={`/static/images/ships/${item.image}.svg`} className="size-2" alt="" />
           <span>{item.position}</span>
@@ -145,7 +142,15 @@ export default class Careers extends React.Component {
     }, []);
   }
   getCareersItem() {
-    const { activeItemIndex, showApplyForm, isPending, name, email, message, status } = this.state;
+    const {
+      activeItemIndex,
+      showApplyForm,
+      isPending,
+      name,
+      email,
+      message,
+      status,
+    } = this.state;
     const { position, experience, description } = config.careers[activeItemIndex];
 
     return (

@@ -18,13 +18,6 @@ export default class NavigationPoint extends React.Component {
       this.props.scroll(document.getElementById('current-subpoint').offsetTop);
     }
   }
-  componentWillReceiveProps(nextProps) {
-    if (this.props.showSidebar !== nextProps.showSidebar) {
-      this.setState({
-        showChildren: nextProps.currentPoint && nextProps.showSidebar,
-      });
-    }
-  }
   renderPoint() {
     const { href } = this.props.element;
 
@@ -39,7 +32,12 @@ export default class NavigationPoint extends React.Component {
     );
   }
   renderPointContent() {
-    const { name, icon, number, type } = this.props.element;
+    const {
+      name,
+      icon,
+      number,
+      type,
+    } = this.props.element;
 
     switch (type) {
       case 'icon': return (
@@ -66,7 +64,12 @@ export default class NavigationPoint extends React.Component {
   render() {
     if (!this.props.element.name) return null;
 
-    const { children, height, currentPoint, currentSubpoint } = this.props;
+    const {
+      children,
+      height,
+      currentPoint,
+      currentSubpoint,
+    } = this.props;
 
     const className = cn({
       'navigation-item': true,
@@ -98,7 +101,6 @@ NavigationPoint.propTypes = {
   height: PropTypes.string,
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
-  showSidebar: PropTypes.bool,
   scroll: PropTypes.func,
 };
 NavigationPoint.defaultProps = {
@@ -116,6 +118,5 @@ NavigationPoint.defaultProps = {
   height: '0px',
   currentPoint: false,
   currentSubpoint: false,
-  showSidebar: false,
   scroll: null,
 };

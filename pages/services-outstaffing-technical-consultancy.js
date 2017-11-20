@@ -10,7 +10,7 @@ const ServicesOutstaffingTechnical = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
       url={url}
-      image={'outstaffing_tc'}
+      image="outstaffing_tc"
       points={servicesOutstaffing()}
     />
     <div className="content-block">

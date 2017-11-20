@@ -27,7 +27,13 @@ export default class ShipItem extends React.Component {
     const { showPopup } = this.state;
 
     return (
-      <div className="ship-wrapper" onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
+      <div
+        className="ship-wrapper"
+        onMouseOver={this.onMouseOver}
+        onMouseOut={this.onMouseOut}
+        onFocus={this.onMouseOver}
+        onBlur={this.onMouseOut}
+      >
         <div className={`ship ${ship.key}`}>
           <div className="ship-image">
             <img src={`/static/images/ships/${ship.key}.svg`} alt="" />

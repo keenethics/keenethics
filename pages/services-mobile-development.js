@@ -9,7 +9,7 @@ import { servicesMobileDevelopment } from '../main.config';
 
 const ServicesMobileDevelopment = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'mobile_development'} />
+    <ContentNavigation url={url} image="mobile_development" />
     <PageTabs points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>Mobile Development</h1>

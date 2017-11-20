@@ -24,7 +24,7 @@ export default class Navigation extends React.Component {
 
     return (
       <ul className={showButtons ? 'open' : ''}>
-        <li id="soc-btn" role="presentation" onClick={this.showButtons} />
+        <li id="soc-btn" role="presentation" onClick={this.showButtons} onKeyDown={this.showButtons} />
         {config.social.map(i => (
           <li className={i.class} key={i.name}>
             <Link href={i.href}>

@@ -8,7 +8,7 @@ import { servicesMobileDevelopment } from '../main.config';
 
 const ServicesWebDevelopmentApple = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'apple'} points={servicesMobileDevelopment()} />
+    <ContentNavigation url={url} image="apple" points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>iOS Mobile App Development</h1>
       <p>

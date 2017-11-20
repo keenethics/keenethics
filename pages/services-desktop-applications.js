@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ServicesDesktopApplications = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'desktop'} />
+    <ContentNavigation url={url} image="desktop" />
     <div className="content-block">
       <h1>Desktop Application Development</h1>
       <p>

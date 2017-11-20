@@ -8,7 +8,7 @@ import { servicesWebDevelopmentTabs } from '../main.config';
 
 const ServicesWebDevelopmentMeteor = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'web_development'} points={servicesWebDevelopmentTabs()} />
+    <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>Meteor.js Development Services</h1>
       <p>

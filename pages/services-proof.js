@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ServicesProof = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'proof'} />
+    <ContentNavigation url={url} image="proof" />
     <div className="content-block">
       <h1>Proof of concept</h1>
       <p>

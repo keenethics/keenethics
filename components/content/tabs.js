@@ -37,8 +37,8 @@ const listOfTabs = points => (
         icon={element.icon}
       />
     </div>
-  ),
-));
+  ))
+);
 const PageTabs = ({ points }) => {
   const sliderSetting = {
     dots: points.length > 6,

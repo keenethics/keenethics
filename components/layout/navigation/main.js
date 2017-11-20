@@ -27,7 +27,6 @@ class Navigation extends React.Component {
         height: -1,
       },
       showSidebar: false,
-      offsetTop: 0,
     };
 
     this.getPointContent = this.getPointContent.bind(this);
@@ -138,12 +137,12 @@ class Navigation extends React.Component {
 
     return (
       <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
-        <div className="navigation-hamburger" onClick={this.showSidebar} role="presentation">
+        <div className="navigation-hamburger" onClick={this.showSidebar} onKeyDown={this.showSidebar} role="presentation">
           <span />
         </div>
         <div className="navigation-inner" style={{ height: dimensions.height }}>
           <div className="navigation-header">
-            <Link href={'/'} prefetch>
+            <Link href="/" prefetch>
               <a className="logo">
                 <img src="/static/images/svg/logo.svg" alt="Keenethics" width="120px" />
               </a>

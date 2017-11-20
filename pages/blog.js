@@ -20,9 +20,6 @@ export default class Blog extends React.Component {
     super(props);
 
     this.posts = [];
-    this.state = {
-      onLoaded: false,
-    };
   }
   render() {
     const { url, posts } = this.props;

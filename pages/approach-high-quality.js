@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachHighQuality = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'lean'} />
+    <ContentNavigation url={url} image="lean" />
     <div className="content-block">
       <h1>High quality software</h1>
       <p>

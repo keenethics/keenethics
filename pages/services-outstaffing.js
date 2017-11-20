@@ -9,7 +9,7 @@ import { servicesOutstaffing } from '../main.config';
 
 const ServicesOutstaffing = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'outstaffing'} />
+    <ContentNavigation url={url} image="outstaffing" />
     <PageTabs points={servicesOutstaffing()} />
     <div className="content-block">
       <h1>Outstaffing Process</h1>

@@ -128,6 +128,5 @@ ContentNavigation.propTypes = {
 ContentNavigation.defaultProps = {
   url: {},
   image: '',
-  title: '',
   points: [],
 };

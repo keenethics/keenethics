@@ -866,12 +866,6 @@ export const team = [
         avatar: 'viktoria_m.jpg',
       },
       {
-        name: 'Sofia I.',
-        position: 'Steward',
-        description: 'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
-        avatar: 'sofia_i.jpg',
-      },
-      {
         name: 'Alexandr S.',
         position: 'Mission Support Officer',
         description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',

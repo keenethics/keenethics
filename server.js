@@ -33,7 +33,13 @@ app.prepare().then(() => {
   ));
 
   server.post('/contact', (req, res) => {
-    const { firstname, lastname, email, phone, message } = req.body;
+    const {
+      firstname,
+      lastname,
+      email,
+      phone,
+      message,
+    } = req.body;
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
     lastname.value = lastname.value.replace(/\s+/g, ' ');
@@ -111,7 +117,12 @@ app.prepare().then(() => {
     });
   });
   server.post('/careers', (req, res) => {
-    const { name, email, position, message } = req.body;
+    const {
+      name,
+      email,
+      position,
+      message,
+    } = req.body;
 
     name.value = name.value.replace(/\s+/g, ' ');
     message.value = message.value.replace(/\s+/g, ' ');

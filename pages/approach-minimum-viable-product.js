@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachMinimumValProduct = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image={'min'} />
+    <ContentNavigation url={url} image="min" />
     <div className="content-block">
       <h1>MVP development services for startups and existing businesses</h1>
       <p>
