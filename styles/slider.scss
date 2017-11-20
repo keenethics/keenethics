@@ -85,6 +85,16 @@
   margin: -65px 0 0;
   box-sizing: border-box;
   z-index: 500;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+  height: 150px;
+  overflow: hidden;
+
+  &.slider-active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .content-tabs-item {
   position: relative;
