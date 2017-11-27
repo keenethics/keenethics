@@ -75,7 +75,7 @@ export default class Index extends React.Component {
                   <img src="/static/images/svg/icon-tel.svg" alt="phone" />
                 </div>
                 <a href="tel:+380968147266">+38 (096) 814 72 66</a>
-                <i>Give Us a Calls</i>
+                <i>Give Us a Call</i>
               </div>
             </div>
           </div>
