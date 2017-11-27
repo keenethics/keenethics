@@ -177,7 +177,7 @@ export default class Contacts extends React.Component {
                     type="submit"
                     className={isPending ? 'button button-send pending' : 'button button-send'}
                   >
-                    <img src="/static/images/svg/send.svg" alt="" />
+                    <img src="/static/images/svg/send.svg" alt="send" />
                   </button>
                 </form>
               </div>

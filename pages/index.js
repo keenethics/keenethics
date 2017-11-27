@@ -53,7 +53,7 @@ export default class Index extends React.Component {
             <div className="home-page-content-contact">
               <div className="contact-item">
                 <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-map.svg" alt="" />
+                  <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
                 <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
                   3 Lytvynenka Street
@@ -62,7 +62,7 @@ export default class Index extends React.Component {
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-mail.svg" alt="" />
+                  <img src="/static/images/svg/icon-mail.svg" alt="mail" />
                 </div>
                 <a href="mailto:founders@keenethics.com">founders@keenethics.com</a>
                 <i>
@@ -72,7 +72,7 @@ export default class Index extends React.Component {
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-tel.svg" alt="" />
+                  <img src="/static/images/svg/icon-tel.svg" alt="phone" />
                 </div>
                 <a href="tel:+380968147266">+38 (096) 814 72 66</a>
                 <i>Give Us a Calls</i>

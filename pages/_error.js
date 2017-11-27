@@ -37,7 +37,7 @@ export default class Error extends React.Component {
           <div className="page-404-socket">
             <section>
               <div className="image">
-                <img src="/static/images/404.png" alt="" />
+                <img src="/static/images/404.png" alt="404" />
               </div>
               <p>Looks like you are going the wrong way</p>
               <a href="/" className="btn-e">

@@ -14,7 +14,7 @@ const Posts = ({ posts }) => (
       <Link route={Router.linkPage('post', { name: post.href })} key={post.title}>
         <a className="blog-page-post">
           <div className="blog-page-post-img">
-            <img src={post.image} alt="" />
+            <img src={post.image} alt={post.title} />
           </div>
           <div className="blog-page-post-header">
             <div className="date">{dateTemplate.render(new Date(+post.date))}</div>

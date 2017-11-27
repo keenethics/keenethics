@@ -15,7 +15,7 @@ const ApproachHighPerformance = ({ url }) => (
             <div className="point" />
             <div className="perfomance-column right">
               <div className="perfomance-image">
-                <img src="/static/images/p-img-01.jpg" alt="" />
+                <img src="/static/images/p-img-01.jpg" alt="Standing table kit" />
                 <span><i>STANDING TABLE KIT</i></span>
               </div>
             </div>
@@ -32,7 +32,7 @@ const ApproachHighPerformance = ({ url }) => (
             <div className="point" />
             <div className="perfomance-column left">
               <div className="perfomance-image">
-                <img src="/static/images/p-img-02.jpg" alt="" />
+                <img src="/static/images/p-img-02.jpg" alt="Powerful computers" />
                 <span><i>POWERFUL COMPUTERS</i></span>
               </div>
             </div>
@@ -49,7 +49,7 @@ const ApproachHighPerformance = ({ url }) => (
             <div className="point" />
             <div className="perfomance-column right">
               <div className="perfomance-image">
-                <img src="/static/images/p-img-03.jpg" alt="" />
+                <img src="/static/images/p-img-03.jpg" alt="Result-coupling" />
                 <span><i>RESULTS-COUPLING</i></span>
               </div>
             </div>
@@ -66,7 +66,7 @@ const ApproachHighPerformance = ({ url }) => (
             <div className="point" />
             <div className="perfomance-column left">
               <div className="perfomance-image">
-                <img src="/static/images/p-img-04.jpg" alt="" />
+                <img src="/static/images/p-img-04.jpg" alt="Healthyness" />
                 <span><i>HEALTHYNESS</i></span>
               </div>
             </div>

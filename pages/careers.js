@@ -127,7 +127,7 @@ export default class Careers extends React.Component {
           onClick={() => this.itemClick(i)}
           onKeyDown={() => this.itemClick(i)}
         >
-          <img src={`/static/images/ships/${item.image}.svg`} className="size-2" alt="" />
+          <img src={`/static/images/ships/${item.image}.svg`} className="size-2" alt="Ship" />
           <span>{item.position}</span>
         </div>
       );
