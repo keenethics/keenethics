@@ -5,7 +5,7 @@ Meta title: Upgrading your Meteor app to HTTP/2 - Keenethics Corporate Blog
 Meta description: Did you hear about HTTP/2? What do you know about its benefits? Read on Keenethics Corporate Blog!
 Preview image: https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png
 
-# Upgrading your Meteor app to HTTP/2
+## Upgrading your Meteor app to HTTP/2
 
 ![HTTP2](https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png)
 

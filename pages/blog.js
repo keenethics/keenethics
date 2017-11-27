@@ -29,7 +29,7 @@ export default class Blog extends React.Component {
           <Background className="blog-page-background" />
           <div className="blog-page-content">
             <div className="blog-page-header">
-              <div className="blog-page-title">Blog</div>
+              <h1 className="blog-page-title">Blog</h1>
             </div>
             {!posts.length ? <div className="blog-loading">Loading...</div> : <Posts posts={posts} />}
           </div>
