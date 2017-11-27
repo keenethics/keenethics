@@ -24,8 +24,6 @@ export default class Error extends React.Component {
       }
     });
 
-    console.log(baseURLs);
-
     return (
       <Layout noMenu>
         <div className="page-404 slide-block main">

@@ -1,4 +1,5 @@
 const express = require('express');
+const expressUncapitalize = require('express-uncapitalize');
 const fs = require('fs');
 const path = require('path');
 const next = require('next');
@@ -23,8 +24,9 @@ app.prepare().then(() => {
   server.set('port', process.env.PORT || 3000);
 
   server.use(bodyParser.json());
-  server.use(bodyParser.urlencoded({ extended: true }));
+  server.use(expressUncapitalize());
   server.use(express.static('public'));
+  server.use(bodyParser.urlencoded({ extended: true }));
 
   Router.forEachPattern((page, pattern, defaultParams) => (
     server.get(pattern, (req, res) => (

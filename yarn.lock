@@ -2652,6 +2652,10 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+express-uncapitalize@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/express-uncapitalize/-/express-uncapitalize-1.0.0.tgz#e1f56e8850112295fbdfb696f66cca0bace3243f"
+
 express@^4.15.2:
   version "4.15.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.15.3.tgz#bab65d0f03aa80c358408972fc700f916944b662"
