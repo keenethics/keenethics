@@ -27,11 +27,7 @@ export default class AboutTeam extends React.Component {
   constructor(props) {
     super(props);
 
-
-    this.onMouseOver = this.onMouseOver.bind(this);
-    this.onMouseOut = this.onMouseOut.bind(this);
     this.getSpaceships = this.getSpaceships.bind(this);
-    this.getSupership = this.getSupership.bind(this);
   }
   getSpaceships() {
     return team.map((t) => {
