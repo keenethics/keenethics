@@ -318,11 +318,15 @@ export const config = {
     {
       name: 'Blog',
       description: 'Articles based on our experience',
+      metaTitle: 'Welcome to Keenethics Corporate Blog!',
+      metaDescription: 'Read the latest news and opinions about software development from Keenethics Blog - all articles are based on our experience!',
       href: '/blog',
     },
     {
       name: 'Careers',
       description: '',
+      metaTitle: 'Careers at Software Development Company - Keenethics',
+      metaDescription: 'Careers at software development company Keenethics',
       href: '/careers',
     },
     {
@@ -353,6 +357,8 @@ export const config = {
     {
       name: 'Contacts',
       description: 'Have an idea? We can`t wait to help you implement it!',
+      metaTitle: 'Contacts - Keenethics Office And Locations  - Keenethics',
+      metaDescription: 'Have an idea? We can`t wait to help you implement it! Contact Keenethics software development company to get a professional insight into your business idea!',
       href: '/contacts',
       type: 'hidden',
     },
@@ -449,11 +455,6 @@ export const config = {
       name: 'Upwork',
       class: 'soc-6',
       href: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
-    },
-    {
-      name: 'Medium',
-      class: 'soc-7',
-      href: 'https://blog.keenethics.com/',
     },
   ],
 };

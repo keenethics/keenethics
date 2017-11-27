@@ -1,6 +1,8 @@
 Author: Alexey Hermann
 Title: Product Management through the eyes of a small Ukrainian company
 Subtitle: Product Management through the eyes of a small Ukrainian company
+Meta title: Product Management in small Ukrainian company - Keenethics Blog
+Meta description: This article is to show some of the harsh realities we have to face, as opposed to the way it’s done in bigger companies
 
 # Product Management through the eyes of a small Ukrainian company.
 

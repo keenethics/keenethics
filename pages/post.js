@@ -30,14 +30,21 @@ export default class Post extends React.Component {
     };
   }
   render() {
-    const { post } = this.props;
+    const { url, post } = this.props;
 
     if (post && post.statusCode && post.statusCode === 404) {
       return <Error statusCode={404} />;
     }
 
+    const meta = {};
+
+    if (post && post.metaTitle && post.metaDescription) {
+      meta.title = post.metaTitle;
+      meta.description = post.metaDescription;
+    }
+
     return (
-      <Layout>
+      <Layout currentURL={url} meta={meta}>
         <div className="blog-post-page page">
           <div className="blog-post-page-header page-header">
             <div className="blog-post-page-title page-title">
@@ -64,9 +71,11 @@ export default class Post extends React.Component {
 }
 
 Post.propTypes = {
+  url: PropTypes.object,
   post: PropTypes.object,
 };
 
 Post.defaultProps = {
+  url: {},
   post: {},
 };

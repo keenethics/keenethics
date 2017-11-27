@@ -228,6 +228,8 @@ app.prepare().then(() => {
           const author = (/Author: (.*?)\n/g).exec(text)[1];
           const title = (/Title: (.*?)\n/g).exec(text)[1];
           const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+          const metaTitle = (/Meta title: (.*?)\n/g).exec(text)[1];
+          const metaDescription = (/Meta description: (.*?)\n/g).exec(text)[1];
           let image = (/Preview image: (.*?)\n/g).exec(text);
           const date = req.params.name.split('-')[0];
 
@@ -240,6 +242,8 @@ app.prepare().then(() => {
           const post = {
             title,
             subtitle,
+            metaTitle,
+            metaDescription,
             author,
             href: req.params.name.slice(3, -3),
             image,

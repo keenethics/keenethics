@@ -1,5 +1,9 @@
+/* global BACKEND_URL, fetch */
+
 import Head from 'next/head';
 import Router from 'next/router';
+
+import 'isomorphic-fetch';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -30,7 +34,7 @@ export default class LayoutHead extends React.Component {
   }
   render() {
     const { navigation } = config;
-    const { currentURL } = this.props;
+    const { currentURL, meta } = this.props;
 
     let currentPoint = null;
 
@@ -65,8 +69,8 @@ export default class LayoutHead extends React.Component {
       });
     }
 
-    let title = 'Home';
-    let description = 'Software development';
+    let title = 'Custom Software Development Company - Keenethics';
+    let description = 'Keenethics is an Eastern European software development company, that provides custom software development for your business';
 
     if (currentPoint && currentPoint.metaTitle) {
       title = currentPoint.metaTitle;
@@ -78,6 +82,11 @@ export default class LayoutHead extends React.Component {
       description = currentPoint.metaDescription;
     } else if (currentPoint && currentPoint.description) {
       description = currentPoint.description;
+    }
+
+    if (!currentPoint && meta && meta.title && meta.description) {
+      title = meta.title;
+      description = meta.description;
     }
 
     return (
@@ -96,8 +105,10 @@ export default class LayoutHead extends React.Component {
 
 LayoutHead.propTypes = {
   currentURL: PropTypes.object,
+  meta: PropTypes.object,
 };
 
 LayoutHead.defaultProps = {
   currentURL: {},
+  meta: {},
 };

@@ -41,11 +41,16 @@ export default class Layout extends React.Component {
     });
   }
   render() {
-    const { children, currentURL, noMenu } = this.props;
+    const {
+      children,
+      currentURL,
+      meta,
+      noMenu,
+    } = this.props;
 
     return (
       <div className="layout">
-        <Head currentURL={currentURL} />
+        <Head currentURL={currentURL} meta={meta} />
         {noMenu ? null : <Navigation currentURL={currentURL} />}
         <div className="content">
           <div className="content-inner" style={{ height: this.state.dimensions.height }}>
@@ -63,11 +68,13 @@ Layout.propTypes = {
     PropTypes.array,
   ]),
   currentURL: PropTypes.object,
+  meta: PropTypes.object,
   noMenu: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   children: null,
   currentURL: {},
+  meta: {},
   noMenu: false,
 };
