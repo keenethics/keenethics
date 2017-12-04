@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
 
@@ -57,7 +58,7 @@ export default class Error extends React.Component {
               </a>
               <div className="base-urls">
                 <a href="/">Home</a>
-                {baseURLs.map(({ name, href }) => <a href={href}>{name}</a>)}
+                {baseURLs.map(({ name, href }) => <a key={nanoid()} href={href}>{name}</a>)}
               </div>
             </section>
           </div>

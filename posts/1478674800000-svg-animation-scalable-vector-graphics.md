@@ -5,8 +5,6 @@ Meta title: SVG animation (Scalable Vector Graphics)
 Meta description: Why we are using SVG - read on Keenethics Corporate Blog!
 Preview image: https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.
 
-## SVG animation (Scalable Vector Graphics)
-
 Fast and practical animating of SVG images.
 
 ![Heroes](https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.)

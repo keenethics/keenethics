@@ -4,8 +4,6 @@ Subtitle: Product Management through the eyes of a small Ukrainian company
 Meta title: Product Management in small Ukrainian company - Keenethics Blog
 Meta description: This article is to show some of the harsh realities we have to face, as opposed to the way it’s done in bigger companies
 
-## Product Management through the eyes of a small Ukrainian company.
-
 The purpose of this article is to show some of the harsh realities we have to face, as opposed to the way it’s done in bigger companies. As a service company, we don’t require a product manager in our team (just yet). However, these are the people our company communicates with the most. I would like to say a few things about this role, as I feel there isn’t as much information on product management, as there is on some other, more popular professions in the IT industry.
 
 Of course, there is theory, and then, there’s practice. I’ll start by giving a little theoretical background, and then I’ll go through a couple of the more peculiar cases, that occurred in my practice.

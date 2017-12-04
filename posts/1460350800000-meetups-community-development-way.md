@@ -5,8 +5,6 @@ Meta title: Technological meetups. Community development way
 Meta description: Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace.
 Preview image: https://cdn-images-1.medium.com/max/800/1*xhu7sN4K3xTsoX0kSC-B6Q.jpeg
 
-## Meetups. Community development way
-
 ![way](https://cdn-images-1.medium.com/max/800/1*xhu7sN4K3xTsoX0kSC-B6Q.jpeg)
 
 Recently a lot of new technologies in web-development have been appearing. Some of them look promising. However, when you choose either one of them for commercial development you automatically face such issues:
