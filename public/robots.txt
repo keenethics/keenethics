@@ -1,2 +1,4 @@
 User-Agent:
 Allow: *
+
+SITEMAP: https://keenethics.com/sitemap.xml
