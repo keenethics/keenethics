@@ -6,6 +6,31 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
+const JsonLd = ({ data }) =>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+/>;
+
+const companyData = {
+  '@context': 'http://www.schema.org',
+  '@type': 'Organization',
+  'name': 'Keenethics',
+  'url': 'https://keenethics.com/',
+  'description': 'Custom Software Development Company',
+  'address': {
+    '@type': 'PostalAddress',
+    'streetAddress': '3 Lytvynenka Street',
+    'addressLocality': 'Lviv',
+    'postalCode': '79000',
+    'addressCountry': 'Ukraine'
+  },
+  'contactPoint': {
+    '@type': 'ContactPoint',
+    'telephone': '+38 (096) 814 72 66'
+  }
+}
+
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +51,7 @@ export default class Index extends React.Component {
 
     return (
       <Layout currentURL={url}>
+        <JsonLd data={companyData} />
         <div className="home-page">
           <div className="home-page-content">
             <div className="home-page-content-link">
