@@ -835,27 +835,6 @@ export const superteam = [
       'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
     avatar: 'sasha_s.jpg',
   },
-  {
-    name: 'Ihor F.',
-    position: 'Recruitment&Brand Mission Specialist',
-    description:
-      'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
-    avatar: 'Astronauts.jpg',
-  },
-  {
-    name: 'Oksana P.',
-    position: 'Space Pixel Commander',
-    description:
-      'Can turn a few words or a code line into something beautiful.',
-    avatar: 'Astronauts.jpg',
-  },
-  {
-    name: 'Liuba S.',
-    position: 'Spaceflight Mission Specialist',
-    description:
-      'Discipline is her forte, she is the most punctual astronaut.',
-    avatar: 'Astronauts.jpg',
-  },
 ];
 
 export const team = [
@@ -892,6 +871,24 @@ export const team = [
         position: 'Mission Support Officer',
         description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
         avatar: 'sasha_s.jpg',
+      },
+      {
+        name: 'Ihor F.',
+        position: 'Recruitment&Brand Mission Specialist',
+        description: 'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
+        avatar: 'astronauts.jpg',
+      },
+      {
+        name: 'Oksana P.',
+        position: 'Space Pixel Commander',
+        description: 'Can turn a few words or a code line into something beautiful.',
+        avatar: 'astronauts.jpg',
+      },
+      {
+        name: 'Liuba S.',
+        position: 'Spaceflight Mission Specialist',
+        description: 'Discipline is her forte, she is the most punctual astronaut.',
+        avatar: 'astronauts.jpg',
       },
     ],
   },
@@ -945,7 +942,7 @@ export const team = [
         position: 'Full-stack js Corvette Capt ',
         description:
           'Super friendly, quiet and hard-working astronaut.',
-        avatar: 'Astronauts.jpg',
+        avatar: 'astronauts.jpg',
       },
     ],
   },
@@ -1055,14 +1052,14 @@ export const team = [
         position: 'Full-stack js Midshipman',
         description:
           'Learns and teaches others at the same time. He constantly spreads knowledge in our spacecraft.',
-        avatar: 'Astronauts.jpg',
+        avatar: 'astronauts.jpg',
       },
       {
         name: 'Vlad E.',
         position: 'Full-stack js Midshipman',
         description:
           'Literally knows what «with fire and sword» means.',
-        avatar: 'Astronauts.jpg',
+        avatar: 'astronauts.jpg',
       },
     ],
   },
