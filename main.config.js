@@ -821,19 +821,40 @@ export const superteam = [
       'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
     avatar: 'viktoria_m.jpg',
   },
-  {
+  /*{
     name: 'Sofia I.',
     position: 'Steward',
     description:
       'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
     avatar: 'sofia_i.jpg',
-  },
+  },*/
   {
     name: 'Alexandr S.',
     position: 'Mission Support Officer',
     description:
       'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
     avatar: 'sasha_s.jpg',
+  },
+  {
+    name: 'Ihor F.',
+    position: 'Recruitment&Brand Mission Specialist',
+    description:
+      'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
+    avatar: '',
+  },
+  {
+    name: 'Oksana P.',
+    position: 'Space Pixel Commander',
+    description:
+      'Can turn a few words or a code line into something beautiful.',
+    avatar: '',
+  },
+  {
+    name: 'Liuba S.',
+    position: 'Spaceflight Mission Specialist',
+    description:
+      'Discipline is her forte, she is the most punctual astronaut.',
+    avatar: '',
   },
 ];
 
@@ -918,6 +939,13 @@ export const team = [
         description:
           'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
         avatar: 'michael_rich.jpg',
+      },
+      {
+        name: 'Serhiy S.',
+        position: 'Full-stack js Corvette Capt ',
+        description:
+          'Super friendly, quiet and hard-working astronaut.',
+        avatar: '',
       },
     ],
   },
@@ -1021,6 +1049,20 @@ export const team = [
         description:
           'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
         avatar: 'yurii_s.jpg',
+      },
+      {
+        name: 'Taras M.',
+        position: 'Full-stack js Midshipman',
+        description:
+          'Learns and teaches others at the same time. He constantly spreads knowledge in our spacecraft.',
+        avatar: '',
+      },
+      {
+        name: 'Vlad E.',
+        position: 'Full-stack js Midshipman',
+        description:
+          'Literally knows what «with fire and sword» means.',
+        avatar: '',
       },
     ],
   },
