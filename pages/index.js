@@ -27,7 +27,8 @@ const companyData = {
   },
   'contactPoint': {
     '@type': 'ContactPoint',
-    'telephone': '+38 (096) 814 72 66'
+    'telephone': '+38 (096) 814 72 66',
+    'contactType': 'Sales Representative'
   }
 }
 
