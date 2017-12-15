@@ -840,21 +840,21 @@ export const superteam = [
     position: 'Recruitment&Brand Mission Specialist',
     description:
       'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
-    avatar: '',
+    avatar: 'Astronauts.jpg',
   },
   {
     name: 'Oksana P.',
     position: 'Space Pixel Commander',
     description:
       'Can turn a few words or a code line into something beautiful.',
-    avatar: '',
+    avatar: 'Astronauts.jpg',
   },
   {
     name: 'Liuba S.',
     position: 'Spaceflight Mission Specialist',
     description:
       'Discipline is her forte, she is the most punctual astronaut.',
-    avatar: '',
+    avatar: 'Astronauts.jpg',
   },
 ];
 
@@ -945,7 +945,7 @@ export const team = [
         position: 'Full-stack js Corvette Capt ',
         description:
           'Super friendly, quiet and hard-working astronaut.',
-        avatar: '',
+        avatar: 'Astronauts.jpg',
       },
     ],
   },
@@ -1055,14 +1055,14 @@ export const team = [
         position: 'Full-stack js Midshipman',
         description:
           'Learns and teaches others at the same time. He constantly spreads knowledge in our spacecraft.',
-        avatar: '',
+        avatar: 'Astronauts.jpg',
       },
       {
         name: 'Vlad E.',
         position: 'Full-stack js Midshipman',
         description:
           'Literally knows what «with fire and sword» means.',
-        avatar: '',
+        avatar: 'Astronauts.jpg',
       },
     ],
   },
