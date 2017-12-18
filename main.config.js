@@ -876,19 +876,19 @@ export const team = [
         name: 'Ihor F.',
         position: 'Recruitment&Brand Mission Specialist',
         description: 'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
-        avatar: 'astronauts.jpg',
+        avatar: 'ihor_f.jpg',
       },
       {
         name: 'Oksana P.',
         position: 'Space Pixel Commander',
         description: 'Can turn a few words or a code line into something beautiful.',
-        avatar: 'astronauts.jpg',
+        avatar: 'oksana_p.jpg',
       },
       {
         name: 'Liuba S.',
         position: 'Spaceflight Mission Specialist',
         description: 'Discipline is her forte, she is the most punctual astronaut.',
-        avatar: 'astronauts.jpg',
+        avatar: 'liuba_s.jpg',
       },
     ],
   },
@@ -1052,7 +1052,7 @@ export const team = [
         position: 'Full-stack js Midshipman',
         description:
           'Learns and teaches others at the same time. He constantly spreads knowledge in our spacecraft.',
-        avatar: 'astronauts.jpg',
+        avatar: 'taras_m.jpg',
       },
       {
         name: 'Vlad E.',
