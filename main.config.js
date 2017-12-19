@@ -942,7 +942,7 @@ export const team = [
         position: 'Full-stack js Corvette Capt ',
         description:
           'Super friendly, quiet and hard-working astronaut.',
-        avatar: 'astronauts.jpg',
+        avatar: 'serhii_s.jpg',
       },
     ],
   },
@@ -1059,7 +1059,7 @@ export const team = [
         position: 'Full-stack js Midshipman',
         description:
           'Literally knows what «with fire and sword» means.',
-        avatar: 'astronauts.jpg',
+        avatar: 'vlad_e.jpg',
       },
     ],
   },
