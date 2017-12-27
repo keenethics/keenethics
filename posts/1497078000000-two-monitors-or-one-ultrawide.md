@@ -3,7 +3,7 @@ Title: Two monitors or one ultrawide?
 Subtitle: Two monitors or one ultrawide?
 Meta title: Two monitors or one ultrawide? New way of improving productivity
 Meta description: New way of improving productivity - read on Keenethics Corporate Blog!
-Preview image: /static/posts/0-21qK34ncSfNo1a8n.png
+Preview image: https://cdn-images-1.medium.com/max/800/0*21qK34ncSfNo1a8n.
 
 ## Two monitors or one ultrawide?
 
