@@ -3,7 +3,7 @@ Title: Two monitors or one ultrawide?
 Subtitle: Two monitors or one ultrawide?
 Meta title: Two monitors or one ultrawide? New way of improving productivity
 Meta description: New way of improving productivity - read on Keenethics Corporate Blog!
-Preview image: /static/images/blog-post-01.png
+Preview image: https://cdn-images-1.medium.com/max/800/0*21qK34ncSfNo1a8n.
 
 At Keenethics we always think of new way of improving our productivity and in this case we drew our attention to monitors. Insufficient size of a monitor does not allow a user to have many windows opened at the same time and therefore forces a user to switch between windows which is time-consuming.
 Obviously we are not the first ones to think of that.

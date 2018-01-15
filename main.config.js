@@ -821,13 +821,13 @@ export const superteam = [
       'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
     avatar: 'viktoria_m.jpg',
   },
-  {
+  /*{
     name: 'Sofia I.',
     position: 'Steward',
     description:
       'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
     avatar: 'sofia_i.jpg',
-  },
+  },*/
   {
     name: 'Alexandr S.',
     position: 'Mission Support Officer',
@@ -872,6 +872,24 @@ export const team = [
         description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
         avatar: 'sasha_s.jpg',
       },
+      {
+        name: 'Ihor F.',
+        position: 'Recruitment&Brand Mission Specialist',
+        description: 'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
+        avatar: 'ihor_f.jpg',
+      },
+      {
+        name: 'Oksana P.',
+        position: 'Space Pixel Commander',
+        description: 'Can turn a few words or a code line into something beautiful.',
+        avatar: 'oksana_p.jpg',
+      },
+      {
+        name: 'Liuba S.',
+        position: 'Spaceflight Mission Specialist',
+        description: 'Discipline is her forte, she is the most punctual astronaut.',
+        avatar: 'liuba_s.jpg',
+      },
     ],
   },
   {
@@ -914,10 +932,24 @@ export const team = [
       },
       {
         name: 'Mykhailo O.',
-        position: 'Full-stack js Corvette Capt ',
+        position: 'Full-stack js Corvette Capt',
         description:
           'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
         avatar: 'michael_rich.jpg',
+      },
+      {
+        name: 'Taras Y.',
+        position: 'Full-stack js Corvette Capt',
+        description:
+          'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
+        avatar: 'taras_y.jpg',
+      },
+      {
+        name: 'Serhiy S.',
+        position: 'Full-stack js Corvette Capt ',
+        description:
+          'Super friendly, quiet and hard-working astronaut.',
+        avatar: 'serhii_s.jpg',
       },
     ],
   },
@@ -933,13 +965,6 @@ export const team = [
         avatar: 'sergei_g.jpg',
       },
       {
-        name: 'Taras Y.',
-        position: 'Full-stack js Capt-lieutenant',
-        description:
-          'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
-        avatar: 'taras_y.jpg',
-      },
-      {
         name: 'Andrij T.',
         position: 'Full-stack js Capt-lieutenant',
         description:
@@ -948,17 +973,17 @@ export const team = [
       },
       {
         name: 'Yanul M.',
-        position: 'Full-stack js Midshipman',
+        position: 'Full-stack js Capt-lieutenant',
         description:
           'Space hot fire-show amateur, got an honors diploma in the flight school, acts as a hot second pilot in the hot shuttle mission.',
         avatar: 'maryna_y.png',
       },
       {
-        name: 'Mykhailo P.',
+        name: 'Max F.',
         position: 'Full-stack js Capt-lieutenant',
         description:
-          'Honorable and experienced combattant in Meteor space, has been working during many years in our space sector.',
-        avatar: 'misha_p.jpg',
+          'Space gamer. He is also one of the pilots who flies on one of the biggest Meteor Shuttle mission in the world.',
+        avatar: 'maksym_f.jpg',
       },
       {
         name: 'Arsen T.',
@@ -966,6 +991,34 @@ export const team = [
         description:
           'Space sweet Karmaman astronaut. He knows how to keep your Karma clean.',
         avatar: 'arsen_t.jpg',
+      },
+      {
+        name: 'Mykola M.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'Space illusionist, together with Stanley Kubrick he produced all the layouts for US Apollo missions at the time when there was no HTML/CSS. He is now carrying out full-stack missions in outer space.',
+        avatar: 'mykola_m.jpg',
+      },
+      {
+        name: 'Nazar K.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'Strong Pilot with will of adamant and suspended approach. Fond of space rockclimbing.',
+        avatar: 'nazar_k.jpg',
+      },
+      {
+        name: 'Ihor V.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'The youngest midshipman from outer space. Cool and steady even when approaching black hole.',
+        avatar: 'igor_v.jpg',
+      },
+      {
+        name: 'Yuriy S.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
+        avatar: 'yurii_s.jpg',
       },
       {
         name: 'Sasha B.',
@@ -981,6 +1034,20 @@ export const team = [
           'Participated in large battles as a Rookie and dreams about leading his own squad',
         avatar: 'ura_g.jpg',
       },
+      {
+        name: 'Mykhailo F.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'Has space banking background and is good at front-end and mobile fields.',
+        avatar: 'misha_f.jpg',
+      },
+      {
+        name: 'Volodymyr A.',
+        position: 'Full-stack js Capt-lieutenant',
+        description:
+          'He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.',
+        avatar: 'volodiy_a.jpg',
+      },
     ],
   },
   {
@@ -988,39 +1055,25 @@ export const team = [
     key: 'midshipman',
     people: [
       {
-        name: 'Max F.',
+        name: 'Taras P.',
         position: 'Full-stack js Midshipman',
         description:
-          'Space gamer. He is also one of the pilots who flies on one of the biggest Meteor Shuttle mission in the world.',
-        avatar: 'maksym_f.jpg',
+          'He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.',
+        avatar: 'taras_p.jpg',
       },
       {
-        name: 'Mykola M.',
+        name: 'Taras M.',
         position: 'Full-stack js Midshipman',
         description:
-          'Space illusionist, together with Stanley Kubrick he produced all the layouts for US Apollo missions at the time when there was no HTML/CSS. He is now carrying out full-stack missions in outer space.',
-        avatar: 'mykola_m.jpg',
+          'Learns and teaches others at the same time. He constantly spreads knowledge in our spacecraft.',
+        avatar: 'taras_m.jpg',
       },
       {
-        name: 'Nazar K.',
+        name: 'Vlad E.',
         position: 'Full-stack js Midshipman',
         description:
-          'Strong Pilot with will of adamant and suspended approach. Fond of space rockclimbing.',
-        avatar: 'nazar_k.jpg',
-      },
-      {
-        name: 'Ihor V.',
-        position: 'Full-stack js Midshipman',
-        description:
-          'The youngest midshipman from outer space. Cool and steady even when approaching black hole.',
-        avatar: 'igor_v.jpg',
-      },
-      {
-        name: 'Yuriy S.',
-        position: 'Full-stack js Midshipman',
-        description:
-          'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
-        avatar: 'yurii_s.jpg',
+          'Literally knows what «with fire and sword» means.',
+        avatar: 'vlad_e.jpg',
       },
     ],
   },
@@ -1028,27 +1081,6 @@ export const team = [
     position: 'Astronaut',
     key: 'astronaut',
     people: [
-      {
-        name: 'Taras P.',
-        position: 'Full-stack js Astronaut',
-        description:
-          'He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.',
-        avatar: 'taras_p.jpg',
-      },
-      {
-        name: 'Mykhailo F.',
-        position: 'Full-stack js Astronaut',
-        description:
-          'Has space banking background and is good at front-end and mobile fields.',
-        avatar: 'misha_f.jpg',
-      },
-      {
-        name: 'Volodymyr A.',
-        position: 'Full-stack js Astronaut',
-        description:
-          'He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.',
-        avatar: 'volodiy_a.jpg',
-      },
       {
         name: 'Rostyslav T.',
         position: 'Full-stack js Astronaut',
