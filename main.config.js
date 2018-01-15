@@ -279,13 +279,6 @@ export const config = {
           type: 'number',
         },
         {
-          name: 'CareCru',
-          description: 'Increasing loyalty of existing clients',
-          href: '/project-carecru',
-          number: '12',
-          type: 'number',
-        },
-        {
           name: 'Tetrami',
           description: 'Online discounting',
           href: '/project-tetrami',
