@@ -76,7 +76,7 @@ export default class Index extends React.Component {
               </a>
             </div>
             <h1>Ethical<br />development<br />of keen web-apps</h1>
-            <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
+            <h2>You have a keen idea<span className="dash" />we have an ethical approach to custom software development</h2>
             <div className="home-page-content-contact" itemscope itemtype="http://schema.org/Organization">
               <div className="contact-item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <div className="contact-item-icon">
