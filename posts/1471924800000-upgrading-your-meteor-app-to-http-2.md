@@ -1,8 +1,8 @@
 Author: Oleh Zymnytskiy
-Title: Upgrading your Meteor app to HTTP/2
-Subtitle: Upgrading your Meteor app to HTTP/2
-Meta title: Upgrading your Meteor app to HTTP/2 - Keenethics Corporate Blog
-Meta description: Did you hear about HTTP/2? What do you know about its benefits? Read on Keenethics Corporate Blog!
+Title: Upgrading Your Meteor App to HTTP/2
+Subtitle: Upgrading Your Meteor App to HTTP/2
+Meta title: Upgrading Your Meteor app to HTTP/2 - Keenethics Corporate Blog
+Meta description: Did You Hear About HTTP/2? What Do You Know About Its Benefits? Read on Keenethics Corporate Blog!
 Preview image: https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png
 
 ![HTTP2](https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png)
@@ -29,7 +29,7 @@ apt-get update
 apt-get install nginx
 `
 
-## Install Letsencrypt and generate certificate
+## Install Letsencrypt and Generate Certificate
 
 Clone Letsencrypt repo as a first step.
 
@@ -61,7 +61,7 @@ You probably understood you have to replace example.com with your domain. You ca
 `
 This command will create folder in /etc/letsencrypt/ that will contain certificate (fullchain.pem) and private key (privkey.pem).
 
-## Redeploy Meteor application
+## Redeploy Meteor Application
 
 If your application is using port 80 you have to change it by changing value of PORT enviroment variable. For example I used mup and changed it in env section of mup.json.
 
@@ -104,7 +104,7 @@ Restart Nginx again to apply last changes.
 
 If you don’t get any errors — congratulations, your website just got HTTP/2 support.
 
-## Static content
+## Static Content
 
 Now nginx is proxying all th requests to our meteor application. But there’s one more thing to improve. Meteor isn’t that good in serving static content (compiled scripts and styles, images and fonts) and we could improve website performance even more by using nginx for it!
 

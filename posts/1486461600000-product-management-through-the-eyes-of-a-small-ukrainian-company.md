@@ -1,8 +1,8 @@
 Author: Alexey Hermann
-Title: Product Management through the eyes of a small Ukrainian company
-Subtitle: Product Management through the eyes of a small Ukrainian company
-Meta title: Product Management in small Ukrainian company - Keenethics Blog
-Meta description: This article is to show some of the harsh realities we have to face, as opposed to the way it’s done in bigger companies
+Title: Product Management Through the Eyes of a Small Ukrainian Company
+Subtitle: Product Management Through the Eyes of a Small Ukrainian Company
+Meta title: Product Management in Small Ukrainian Company - Keenethics Blog
+Meta description: This Article is to Show Some of the Harsh Realities We Have to Face, as Opposed to the Way It’s Done in Bigger Companies
 
 The purpose of this article is to show some of the harsh realities we have to face, as opposed to the way it’s done in bigger companies. As a service company, we don’t require a product manager in our team (just yet). However, these are the people our company communicates with the most. I would like to say a few things about this role, as I feel there isn’t as much information on product management, as there is on some other, more popular professions in the IT industry.
 
@@ -34,7 +34,7 @@ __Disadvantages__: you are going to find yourself in a position of an archaeolog
 
 __Advantages__: you are encouraged to come up with solutions and proposals, which in itself, is a certain level of freedom.
 
-## The “Know-it-all”:
+## The “Know-it-All”:
 
 &ndash; is obsessed with quality;
 
@@ -60,7 +60,7 @@ __Advantages__: a lot of communication experience can be gained from such projec
 
 __Disadvantages__: exhausting and time-consuming communication, where you have to justify, debate and battle over every technical decision you make.
 
-## A “Business owner”:
+## A “Business Owner”:
 
 &ndash; knows what he wants;
 
