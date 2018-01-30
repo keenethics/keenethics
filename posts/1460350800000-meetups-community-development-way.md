@@ -1,7 +1,7 @@
 Author: Max Savonin
-Title: Meetups. Community development way
-Subtitle: Meetups. Community development way
-Meta title: Technological meetups. Community development way
+Title: Meetups. Community Development Way
+Subtitle: Meetups. Community Development Way
+Meta title: Technological Meetups. Community Development Way
 Meta description: Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace.
 Preview image: https://cdn-images-1.medium.com/max/800/1*xhu7sN4K3xTsoX0kSC-B6Q.jpeg
 
@@ -54,6 +54,6 @@ During the six month period of community development based on 5 meetups, we deri
 3. good announcement
 4. pizza afterwards
 
-## Bottom line:
+## Bottom Line:
 
 Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace. Programmers see use-cases at those meetups, talk to more experienced colleagues and they are able to find work with most interesting employers. Well-held meetups generate new speakers and even more followers of the new technology.

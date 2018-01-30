@@ -1,15 +1,15 @@
 Author: Maryna Yanul
-Title: SVG animation
-Subtitle: SVG animation (Scalable Vector Graphics)
-Meta title: SVG animation (Scalable Vector Graphics)
-Meta description: Why we are using SVG - read on Keenethics Corporate Blog!
+Title: SVG Animation
+Subtitle: SVG Animation (Scalable Vector Graphics)
+Meta title: SVG Animation (Scalable Vector Graphics)
+Meta description: Why We Are Using SVG - Read on Keenethics Corporate Blog!
 Preview image: https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.
 
-Fast and practical animating of SVG images.
+Fast and Practical Animating of SVG Images.
 
 ![Heroes](https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.)
 
-## Why we are using SVG
+## Why We are Using SVG
 
 If we observe the rapid growth of web development segment over the course of past few years we notice more frequent usage of SVG images. They are used for icons, logos, graphs and even fonts. Why has SVG become so popular these days that even clients suggest using it when providing requirement specification. Superb quality on any devices — main reason to chose this particular format over others.
 
@@ -32,13 +32,13 @@ But there are also inconveniences:
 3. Disadvantage of XML markup — large file size
 
 
-## Ways of optimizing SVG images
+## Ways of Optimizing SVG Images
 
 Since we end up writing some extra code when rendering vector graphic the end result should be optimized using different services. Most often we use SVGO ([https://github.com/svg/svgo](https://github.com/svg/svgo)). It’s quite easy to use and there is no need to upload the images to other websites.
 
 ![Example of SVG optimisation using SVGO](https://cdn-images-1.medium.com/max/800/0*8YcO63_4ajXq0qEb.)
 
-## Process of animating SVG
+## Process of Animating SVG
 
 There is a number of ways SVG can be animated:
 
