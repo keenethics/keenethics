@@ -86,12 +86,14 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      <div className="col-1 pree-title">
 		Development challenges
 	      </div>
-	      <div className="row">
+	      <div className="row pree-technology-row">
 		<div className="col-4-1 pree-technology-stack">
 		  Technology stack for backend:
 		</div>
-		<div className="col-4-3">
-
+		<div className="col-4-3 pree-technology-stack-data">
+		  <div>Nodejs</div>
+		  <div>Express</div>
+		  <div>Mongo</div>
 		</div>
 	      </div>
 	      
