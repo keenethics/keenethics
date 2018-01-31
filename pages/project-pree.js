@@ -82,21 +82,46 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      </div>
 	    </div>
 
-	    <div className="row pree-technology">
+	    <div className="row pree-technology flex-wrap">
 	      <div className="col-1 pree-title">
 		Development challenges
 	      </div>
 	      <div className="row pree-technology-row">
-		<div className="col-4-1 pree-technology-stack">
+		<div className="pree-technology-stack">
 		  Technology stack for backend:
 		</div>
-		<div className="col-4-3 pree-technology-stack-data">
-		  <div>Nodejs</div>
-		  <div>Express</div>
-		  <div>Mongo</div>
+		<div className="pree-technology-stack-data flex-row">
+		  <div>
+		    <div>Nodejs</div>
+		    <div>Express</div>
+		    <div>Mongo</div>
+		  </div>
 		</div>
 	      </div>
 	      
+	      <div className="row pree-technology-row">
+		<div className="pree-technology-stack stakc-android-ios">
+		  Technology stack for Android and IOS:
+		</div>
+		<div className="pree-technology-stack-data flex-row">
+		  <div>
+		    <div>Ionic</div>
+		    <div>Cordova</div>
+		    <div>BLE</div>
+		    <div>Google Mups</div>
+		    <div>Geolocation</div>
+		  </div>
+		</div>
+	      </div>
+
+	      <div className="row pree-technology-row row-left pree-body block">
+		The whole implementation of the app is possible thank to the open source cordova ble plugin - <a href="https://github.com/don/cordova-plugin-ble-central" target="_blank">https://github.com/don/cordova-plugin-ble-central</a>
+	      </div>
+
+	      <div className="row pree-technology-row row-right pree-body">
+		This plugin allows to scan, connect, read/write information from a ble device - in our case PREE device. We use this plugin for scanning PREE devices, getting power of received signal for every devices, setting bluetooth pair connection for every attached device. Also we used Google maps and Geolocation for storing and showing actual location for attached PREE device. All this stuff is required for main feature - notify user when you lose connect or back to range for some PREE device. 
+	      </div>
+
 	    </div>
 	    
 	  </div>

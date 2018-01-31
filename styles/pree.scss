@@ -1,3 +1,12 @@
+.flex-row {
+  display: flex;
+  direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .backgroutd-nr-cov {
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,7 +96,6 @@
 .pree-technology {
   box-sizing: border-box;
   padding: 60px;
-  flex-wrap: wrap;
   .pree-technology-row {
     padding-top: 30px;
     .pree-technology-stack {
@@ -97,26 +105,44 @@
       font-style: 'Regular';
       font-family: 'Open Sans';
       color: #313131;
-      margin: auto;
+      margin: auto 0;
+      &.stakc-android-ios {
+	max-width: 20%;
+      }
+      &.block {
+	display: block;
+      }
     }
     
     .pree-technology-stack-data {
       padding-left: 30px;
-      display: flex;
-      flex-direction: row;
       div {
-	margin: 0 7px;
-	padding: 15px 30px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	border-radius: 25px;
-	border: 2px solid #4179f8;
-	font-size: 22px;
-	color: #313131;
-	font-weight: 300;
-	font-family: 'Open Sans';
-	font-style: 'Light';
+	display: flex;
+	flex-wrap: wrap;
+	div {
+	  margin: 5px;
+	  padding: 15px 30px;
+	  -webkit-border-radius: 25px;
+	  -moz-border-radius: 25px;
+	  border-radius: 25px;
+	  border: 2px solid #4179f8;
+	  font-size: 22px;
+	  color: #313131;
+	  font-weight: 300;
+	  font-family: 'Open Sans';
+	  font-style: 'Light';
+	}
       }
     }
+    
+
+  }
+
+  .row-left {
+    width: 80%;
+  }
+
+  .row-right {
+    padding-left: 20%;
   }
 }
