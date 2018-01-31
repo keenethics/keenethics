@@ -121,12 +121,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/blog/1517306255770-docker-5-cases-when-you-should-not-use-it.md</loc>
+    <loc>https://keenethics.com/blog/1517306255770-docker-5-cases-when-you-should-not-use-it</loc>
     <lastmod>2018-01-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
- 
+  <url>
+    <loc>https://keenethics.com/blog/1517325231241-stop-losing-your-staff</loc>
+    <lastmod>2018-01-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://keenethics.com/services-mobile-development</loc>
     <lastmod>2017-12-19</lastmod>
