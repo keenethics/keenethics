@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .row {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .col-2 {
+      width: 50%;
+      max-width: 50%;
+      &:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+    }
+
+    .col-1 {
+      width: 100%;
+      max-width: 100%;
+      &:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+    }
+    .col-4-1 {
+      width: 250%;
+      max-width: 25%;
+      &:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+    }
+    .col-4-3 {
+      width: 75%;
+      max-width: 75%;
+      &:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+    }
+  }
+}
+
