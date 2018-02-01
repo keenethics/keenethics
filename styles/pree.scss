@@ -75,15 +75,11 @@
 }
 
 .pree-purpose {
-  flex-direction: row!important;
-  flex-wrap: wrap-reverse!important;
   box-sizing: border-box;
   padding: 20px 0 100px 0;
   background: url(/static/images/project/pree-purpose-trapeze.png) 0 900px no-repeat;
   @media screen and (min-width: 500px) {
     background: url(/static/images/project/pree-purpose-trapeze.png) 0 750px no-repeat;
-    flex-wrap: wrap;
-    flex-direction: row;
   }
   @media screen and (min-width: 769px) {
     background: url(/static/images/project/pree-purpose-trapeze.png) 0 900px no-repeat;
@@ -155,8 +151,11 @@
 .pree-tutorial {
   box-sizing: border-box;
   .pree-tutorial-image {
-    padding: 100px 0 60px 0;
+    padding: 50px 0;
     box-sizing: border-box;
+    @media screen and (min-width: 901px) {
+      padding: 100px 0 50px 0;
+    }
   }
 
   .pree-tutorial-content {
@@ -242,13 +241,7 @@
 }
 
 .pree-problem {
-  flex-direction: row!important;
-  flex-wrap: wrap-reverse!important;
   box-sizing: border-box;
-  @media screen and (min-width: 901px) {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
   .pree-problem-content {
     padding: 50px;
     box-sizing: border-box;
@@ -307,24 +300,22 @@
 	}
       }
       &.pree-scanning-text {
-	padding-right: 30px;
+	padding-right: 0;
+	@media screen and (min-width: 901px) {
+	  padding-right: 30px;
+	}
 	@media screen and (min-width: 1500px) {
 	  padding-right: 100px;
 	}
-
       }
     }
   }
 }
 
 .pree-achivement {
-  padding: 50px 0 0 50px;
-  flex-direction: row!important;
-  flex-wrap: wrap-reverse!important;
+  padding: 50px 0 0 0;
   box-sizing: border-box;
   @media screen and (min-width: 901px) {
-    flex-wrap: wrap;
-    flex-direction: row;
     padding: 80px 0 0 60px;
   }
   @media screen and (min-width: 1500px) {
@@ -332,8 +323,7 @@
   }
   .pree-achivement-content {
     @media screen and (max-width: 900px) {
-      padding-top: 20px;
-      padding-right: 50px;
+      padding: 20px 50px 0 50px;
     }
 
     .achivement-link {
@@ -359,6 +349,7 @@
     background-size: cover;
     @media screen and (max-width: 900px) {
       height: 500px;
+      margin-left: 50px;
     }
   }
 }

@@ -24,7 +24,7 @@ const ProjectPree = ({ url }) => (
 	      </div>
 	    </div>
 	    
-	    <div className="row pree-purpose">
+	    <div className="row reverse pree-purpose">
 	      <div className="col-2">
 		<div className="pree-phone-container">
 		  <img src="/static/images/project/pree-purpose-phone.png" />
@@ -122,7 +122,7 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      </div>
 	    </div>
 
-	    <div className="row pree-problem">
+	    <div className="row reverse pree-problem">
 	      <div className="col-2 bg-gray pree-problem-content">
 		<div className="title">
 		  <div className="left-title pree-title">Problems</div>
@@ -159,7 +159,7 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      </div>
 	    </div>
 
-	    <div className="row pree-achivement">
+	    <div className="row reverse pree-achivement">
 	      <div className="col-2 pree-achivement-content">
 		<div className="pree-title">
 		  Achivement

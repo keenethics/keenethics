@@ -11,6 +11,12 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    &.reverse {
+      @media screen and (max-width: 900px) {
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+      }
+    } 
     @media screen and (min-width: 901px) {
       flex-direction: row;
     }
