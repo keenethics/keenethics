@@ -26,6 +26,16 @@
       clear: both;
     }
 
+    .col-1 {
+      width: 100%;
+      max-width: 100%;
+      &:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+    }
+
     .col-2 {
       width: 100%;
       max-width: 100%;
@@ -40,15 +50,16 @@
       }
     }
 
-    .col-1 {
-      width: 100%;
-      max-width: 100%;
+    .col-3-1 {
+      width: 33.3%;
+      max-width: 33.3%;
       &:after {
 	content: "";
 	display: table;
 	clear: both;
       }
     }
+
     .col-4-1 {
       width: 250%;
       max-width: 25%;
@@ -71,4 +82,3 @@
     }
   }
 }
-

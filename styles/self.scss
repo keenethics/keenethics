@@ -1,0 +1,71 @@
+.self-logo-title {
+  background: linear-gradient(to right, #27056c, #49376c, #27056c);
+  font-size: 44px;
+  line-height: 50px;
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.self-title {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 400;
+  font-family: 'Raleway';
+  color: #36166a;
+  font-style: italic;
+}
+
+.self-subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: 'Raleway';
+  color: #a4a3a3;
+}
+
+.self-body {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: 'Raleway';
+  color: #313131;
+  
+}
+
+.self-intro {
+  padding: 50px 0 30px 50px; 
+  box-sizing: border-box;
+  .self-intro-title-container {
+    padding-right: 30px;
+    .self-subtitle {
+      padding: 30px 0 0 30px;
+    }
+    .self-body {
+      padding: 40px 0 0 0;
+    }
+  }
+  .self-intro-title {
+    display: flex;
+    div {
+      &:first-child {
+	font-size: 100px;
+      }
+      &:last-child {
+	display: flex;
+	padding-left: 10px;
+	span {
+	  display: block;
+	  margin-top: auto;
+	}
+      }
+    }
+  }
+  .self-intro-image {
+    background: url(/static/images/project/self-lider-logo.png) left no-repeat;
+    @media screen and (max-width: 900px) {
+      height: 500px;
+      background-size: cover;
+    }
+  }
+}
