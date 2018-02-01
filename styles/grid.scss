@@ -10,6 +10,10 @@
     width: 100%;
     max-width: 100%;
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 901px) {
+      flex-direction: row;
+    }
     &:after {
       content: "";
       display: table;
@@ -17,12 +21,16 @@
     }
 
     .col-2 {
-      width: 50%;
-      max-width: 50%;
+      width: 100%;
+      max-width: 100%;
       &:after {
 	content: "";
 	display: table;
 	clear: both;
+      }
+      @media screen and (min-width: 901px) {
+	width: 50%;
+	max-width: 50%;
       }
     }
 
@@ -45,12 +53,14 @@
       }
     }
     .col-4-3 {
-      width: 75%;
-      max-width: 75%;
-      &:after {
-	content: "";
-	display: table;
-	clear: both;
+      @media screen and (min-width: 901px) {
+	width: 75%;
+	max-width: 75%;
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
       }
     }
   }

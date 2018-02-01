@@ -15,7 +15,7 @@ const ProjectPree = ({ url }) => (
 		  <div className="logo-rows">
 		    <img src="/static/images/project/pree-logo.png" />
 		  </div>
-		  <div className="logo-rows logo-title pree-title">
+		  <div className="logo-rows logo-title pree-title-gray">
 		    Stop losing your staff
 		  </div>
 		</div>
@@ -108,21 +108,100 @@ The main page - list of devices is available from almost all pages. This UX feat
 		    <div>Ionic</div>
 		    <div>Cordova</div>
 		    <div>BLE</div>
-		    <div>Google Mups</div>
+		    <div>Google Maps</div>
 		    <div>Geolocation</div>
 		  </div>
 		</div>
 	      </div>
-
 	      <div className="row pree-technology-row row-left pree-body block">
 		The whole implementation of the app is possible thank to the open source cordova ble plugin - <a href="https://github.com/don/cordova-plugin-ble-central" target="_blank">https://github.com/don/cordova-plugin-ble-central</a>
 	      </div>
-
+	      
 	      <div className="row pree-technology-row row-right pree-body">
 		This plugin allows to scan, connect, read/write information from a ble device - in our case PREE device. We use this plugin for scanning PREE devices, getting power of received signal for every devices, setting bluetooth pair connection for every attached device. Also we used Google maps and Geolocation for storing and showing actual location for attached PREE device. All this stuff is required for main feature - notify user when you lose connect or back to range for some PREE device. 
 	      </div>
-
 	    </div>
+
+	    <div className="row pree-problem">
+	      <div className="col-2 bg-gray pree-problem-content">
+		<div className="title">
+		  <div className="left-title pree-title">Problems</div>
+		  <div className="right-title">
+		    <img src="/static/images/project/1.svg" />
+		  </div>
+		</div>
+		<div className="title">
+		  <div className="left-title black-text pree-title">Connection</div>
+		</div>
+		<div className="title pree-body">
+		  There are a lot of manufactures of Android devices and that’s why the bluetooth behavior is different with each of them. Sometimes the connection between Android smartphone and PREE device is established from seventh attempt. It  takes a lot of customer time and we made the decision - keep scanning the BLE devices and try to reconnect after every unsuccessful connect. Also we implemented the scanning and connecting to operate in background mode.  This leads to power consumption increase, but it seems that right now we have found a golden mean for Android platform - between strong connect, reliable data and acceptable energy consumption. 
+		</div>
+	      </div>
+	      <div className="col-2 pree-problem-image">
+	      </div>
+	    </div>
+
+	    <div className="row pree-scanning">
+	      <div className="col-4-1 bg-blue ">
+	      </div>
+	      <div className="col-4-3 pree-scanning-content bg-grey">
+		<div className="title">
+		  <div className="right-title">
+		    <img src="/static/images/project/2.svg" />
+		  </div>
+		</div>
+		<div className="title">
+		  <div className="left-title black-text pree-title">Scanning on IOS</div>
+		</div>
+		<div className="title pree-scanning-text pree-body">
+		  On iOS platform connecting to BLE  works out better than on Android platform (iBeacon is developed by Apple). In iOS the main app flow is implemented through scanning of PREE devices and tries to connect to them. And it works fast and reliable.  The price of that bluetooth functionality is  more power consuming. Also in iOS it’s not easy for bluetooth to scan in background mode. Firstly in order to upload it to the appsotore you have to explain to them why you need it. Secondly  the scanning in background mode leads to an increase in the power consumption of iPhone. That’s why we made the decision - avoid using ble scanning in background mode on iOS platform. The bluetooth connection works reliably -  it allows to read some information from PREE device and bluetooth periphery which helps to calculate the approximated distance. 
+		</div>
+	      </div>
+	    </div>
+
+	    <div className="row pree-achivement">
+	      <div className="col-2 pree-achivement-content">
+		<div className="pree-title">
+		  Achivement
+		</div>
+		<div className="pree-body">
+		 <br/><br/>Developed app which can scan/connect/read/write for PREE ble devices (iBeacon)
+		 <br/><br/>Developed feature which notifies user when he lose connection or back to range with his PREE device.
+		 <br/><br/>Developed feature which store is the last to know location of your PREE device and rewrite it when you are back in range.
+		 <br/><br/>Developed feature showing all the above mentioned locations on map for every device and on general map.
+		 <br/><br/>Developed feature showing approximate distance to you PREE device. 
+		 <br/><br/>Developed two modes for PREE device - ‘close by’ (strict) and ‘normal’ (no strict) which depends on distance to your PREE device.
+		 <br/><br/>Developed feature which notifies your family member when PREE device is lost.  
+		</div>
+		<div className="pree-title-gray achivement-link">Visit website</div>
+		<div className="pree-title"><a href="http://preetrack.com" target="_blank">preetrack.com</a></div>
+	      </div>
+	      
+	      <div className="col-2 pree-achivement-image">
+	      </div>
+	    </div>
+
+	     <div className="row pree-download">
+	       <div className="col-1 pree-download-content">
+		 <div className="pree-title-gray">Download App for free:</div>
+		 <div className="pree-download-stores">
+		   <img src="/static/images/project/app-store.png" />
+		   <img src="/static/images/project/google-play.png" />
+		 </div>
+	       </div>
+	     </div>
+
+	     <div className="row pree-thanks">
+	       <div className="col-2 pree-thanks-image">
+	       </div>
+	       <div className="col-2 pree-thanks-content">
+		 <div className="pree-thanks-logo-container">
+		   <img src="/static/images/project/pree-small-logo.png" />
+		 </div>
+		 <div className="pree-title pree-thanks-text"> Thank you for watching! </div>
+	       </div>
+	     </div>
+
 	    
 	  </div>
 	</div>
