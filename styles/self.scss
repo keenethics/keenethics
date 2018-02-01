@@ -1,17 +1,19 @@
+
 .self-logo-title {
   background: linear-gradient(to right, #27056c, #49376c, #27056c);
   font-size: 44px;
   line-height: 50px;
-  font-weight: 400;
+  font-weight: 700;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'Times New Roman, sans-serif';
 }
 
 .self-title {
   font-size: 30px;
   line-height: 45px;
   font-weight: 400;
-  font-family: 'Raleway';
+  font-family: 'Open Sans';
   color: #36166a;
   font-style: italic;
 }
@@ -20,7 +22,7 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
-  font-family: 'Raleway';
+  font-family: 'Times New Roman, sans-serif';
   color: #a4a3a3;
 }
 
@@ -28,9 +30,45 @@
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  font-family: 'Raleway';
+  font-family: 'Times New Roman, sans-serif';
   color: #313131;
   
+}
+
+.self-quotes {
+  display: flex;
+  div {
+    &:first-child {
+      font-size: 100px;
+    }
+    &:last-child {
+      display: flex;
+      padding-left: 10px;
+      span {
+	font-family: 'Times New Roman, sans-serif';
+	display: block;
+	margin-top: auto;
+      }
+    }
+  }
+}
+
+.self-digit {
+  span {
+    line-height: 55px;
+    font-weight: 100;
+    font-family: 'Open Sans';
+    &:first-child {
+      font-size: 78px;
+      color: #a4a3a3;
+      vertical-align: top;
+    }
+    &:last-child {
+      padding: 0 20px;
+      font-size: 100px;
+      color: #36166a;
+    }
+  }
 }
 
 .self-intro {
@@ -39,26 +77,10 @@
   .self-intro-title-container {
     padding-right: 30px;
     .self-subtitle {
-      padding: 30px 0 0 30px;
+      padding: 0 0 0 30px;
     }
     .self-body {
       padding: 40px 0 0 0;
-    }
-  }
-  .self-intro-title {
-    display: flex;
-    div {
-      &:first-child {
-	font-size: 100px;
-      }
-      &:last-child {
-	display: flex;
-	padding-left: 10px;
-	span {
-	  display: block;
-	  margin-top: auto;
-	}
-      }
     }
   }
   .self-intro-image {
@@ -68,4 +90,10 @@
       background-size: cover;
     }
   }
+}
+
+
+.self-tutorial {
+  padding: 50px 0 30px 50px;
+  
 }

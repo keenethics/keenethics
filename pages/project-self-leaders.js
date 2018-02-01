@@ -18,19 +18,28 @@ const ProjectPlutio = ({ url }) => (
 	      <div className="col-2">
 		<div className="self-intro-title-container">
 		  <div className="self-logo-title">SelfLeaders</div>
-		  <div className="self-subtitle">Personal Growth Tools</div>
+		  <div className="self-subtitle">Personal Growth Tool</div>
 		  <div className="self-body">SelfLeaders is a Swedish company that helps their customers create strong cultures where co workers are engaged, drive development and take care of themselves and each other.</div>
 		</div>
-		<div className="self-intro-title">
+		<div className="self-quotes">
 		  <div>``</div>
-		  <div className="self-title"><span>We call it self-leadership.</span></div>
+		  <div className="self-title title"><span>We call it self-leadership.</span></div>
 		</div>
 	      </div>
 	      <div className="col-2 self-intro-image bg-cover"></div>
 	    </div>
 
-	    <div className="row reverse">
-	      <div className="col-2"></div>
+	    <div className="row reverse self-tutorial">
+	      <div className="col-2">
+		<div className="self-digit">
+		  <span>01</span>
+		  <span>/</span>
+		</div>
+
+		<div className="self-title">
+		  How It Works
+		</div>
+	      </div>
 	      <div className="col-2"></div>
 	    </div>
 
