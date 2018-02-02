@@ -1,37 +1,61 @@
+.p-r-30 {
+  box-sizing: border-box;
+  padding-right: 30px;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
 
 .self-logo-title {
-  background: linear-gradient(to right, #27056c, #49376c, #27056c);
-  font-size: 44px;
-  line-height: 50px;
+  color: #27056c;
+  font-size: 60px;
+  line-height: 60px;
   font-weight: 700;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: 'Times New Roman, sans-serif';
 }
 
 .self-title {
-  font-size: 30px;
-  line-height: 45px;
-  font-weight: 400;
-  font-family: 'Open Sans';
-  color: #36166a;
-  font-style: italic;
+  padding: 15px 0;
+  span {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #36166a;
+  }
 }
 
 .self-subtitle {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 400;
-  font-family: 'Times New Roman, sans-serif';
-  color: #a4a3a3;
+  span {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #a4a3a3;
+  }
 }
 
 .self-body {
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: 'Times New Roman, sans-serif';
-  color: #313131;
+  span {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #313131;
+  }
+}
+
+.self-hr {
+  display: none;
+  margin: 90px 0 50px 0;
+  border: 0;
+  height: 3px;
+  background: #310a44;
+  @media screen and (min-width: 1101px) {
+    display: block;
+  }
   
 }
 
@@ -39,7 +63,9 @@
   display: flex;
   div {
     &:first-child {
-      font-size: 100px;
+      background: url(/static/images/project/quotes.svg) top no-repeat;
+      min-width: 50px;
+      min-height: 100px;
     }
     &:last-child {
       display: flex;
@@ -48,14 +74,18 @@
 	font-family: 'Times New Roman, sans-serif';
 	display: block;
 	margin-top: auto;
+	font-style: italic;
       }
     }
   }
 }
 
 .self-digit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   span {
-    line-height: 55px;
+    line-height: 66px;
     font-weight: 100;
     font-family: 'Open Sans';
     &:first-child {
@@ -64,20 +94,56 @@
       vertical-align: top;
     }
     &:last-child {
+      display: block;
+      width: 30px;
+      height: 76px;
+      background: url(/static/images/project/vertical-line.svg) center no-repeat;
       padding: 0 20px;
-      font-size: 100px;
+    }
+  }
+}
+
+.slash-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  span {
+    &:first-child {
+      display: block;
+      width: 30px;
+      height: 76px;
+      background: url(/static/images/project/vertical-line.svg) center no-repeat;
+    }
+    &:last-child {
+      font-size: 30px;
+      line-height: 78px;
+      font-weight: 400;
+      font-family: 'Open Sans';
       color: #36166a;
     }
   }
 }
 
+.self-sse {
+  display: none;
+  @media screen and (min-width: 1101px) {
+    display: block;
+    color: #a4a3a3;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    font-family: 'Times New Roman, sans-serif';
+    text-align: right;
+    width: 100%;
+  }
+}
+
 .self-intro {
-  padding: 50px 0 30px 50px; 
-  box-sizing: border-box;
+  padding: 50px 0 30px 20px; 
   .self-intro-title-container {
-    padding-right: 30px;
-    .self-subtitle {
-      padding: 0 0 0 30px;
+    padding: 10px;
+    @media screen and (min-width: 1101px) {
+      padding-top: 100px;
     }
     .self-body {
       padding: 40px 0 0 0;
@@ -85,15 +151,426 @@
   }
   .self-intro-image {
     background: url(/static/images/project/self-lider-logo.png) left no-repeat;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1100px) {
+      height: 400px;
+      background-size: contain;
+    }
+    @media screen and (min-width: 550px) {
+      height: 450px;
+    }
+    @media screen and (min-width: 600px) {
       height: 500px;
-      background-size: cover;
+    }
+    @media screen and (min-width: 650px) {
+      height: 600px;
+    }
+    @media screen and (min-width: 1101px) {
+      background: url(/static/images/project/self-lider-logo.png) top left no-repeat;
+      height: 550px;
     }
   }
 }
 
 
 .self-tutorial {
-  padding: 50px 0 30px 50px;
+  @media screen and (min-width: 1101px) {
+    padding-bottom: 100px;
+  }
   
+  .self-tutorial-body {
+    padding: 50px 30px 30px 20px;
+  }
+  .self-tutorial-image {
+    &>div {
+      background: url(/static/images/project/self-team.png) left no-repeat;
+      background-size: cover;
+      @media screen and (max-width: 1100px) {
+	height: 400px;
+	background-size: cover;
+      }
+      @media screen and (min-width: 600px) {
+	height: 450px;
+      }
+      @media screen and (min-width: 650px) {
+	height: 500px;
+      }
+      @media screen and (min-width: 1101px) {
+	height: 350px;
+      }
+    }
+  }
+}
+
+.self-tech {
+  .self-tech-content {
+    padding: 50px 30px 50px 20px;
+    @media screen and (min-width: 1101px) {
+      padding: 0 80px 50px 120px;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .self-tech-content-left {
+      width: 50%;
+      @media screen and (min-width: 1101px) {
+	width: 100%;
+      }
+    }
+    .self-tech-content-right {
+      width: 50%;
+      @media screen and (min-width: 1101px) {
+	width: 100%;
+      }
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      span {
+	margin: 7px 0;
+	font-size: 20px;
+	line-height: 50px;
+	width: 140px;
+	border: 2px solid #350f48;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	text-align: center;
+	font-weight: 300;
+	font-family: 'Open Sans';
+	@media screen and (min-width: 1101px) {
+	  margin-left: auto;
+	}
+      }
+    }
+  }
+  .self-tech-image {
+    background: url(/static/images/project/self-tech.png) right no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 1100px) {
+      height: 400px;
+      background-size: cover;
+    }
+    @media screen and (min-width: 600px) {
+      height: 450px;
+    }
+    @media screen and (min-width: 650px) {
+      height: 500px;
+    }
+  }
+}
+
+.self-impressed {
+  &>div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 50px 30px 20px;
+  }
+}
+
+.self-screen {
+  &>div {
+    background: url(/static/images/project/self-screen.png) center no-repeat;
+    height: 350px;
+    background-size: cover;
+    @media screen and (min-width: 500px) {
+      height: 400px;
+    }
+    @media screen and (min-width: 600px) {
+      height: 450px;
+    }
+    @media screen and (min-width: 650px) {
+      height: 500px;
+    }
+  }
+}
+
+.self-achivements {
+  padding: 50px 0;
+  .self-achivements-content {
+    padding: 20px;
+    @media screen and (min-width: 1101px) {
+      padding: 60px 20px 20px 20px;
+    }
+    .title-container {
+      padding-left: 30px;
+    }
+  }
+  .content-container {
+    &>div {
+      display: flex;
+      margin: 15px 0;
+      span {
+	&:first-child {
+	  display: block;
+	  min-width: 56px;
+	  min-height: 21px;
+	  background: url(/static/images/project/self-checkbox.png) left no-repeat;
+	}
+      }
+    }
+  }
+  .self-achivements-image {
+    &>div {
+      background: url(/static/images/project/self-achivement.png) left no-repeat;
+      height: 350px;
+      background-size: cover;
+      @media screen and (min-width: 500px) {
+	height: 400px;
+      }
+      @media screen and (min-width: 600px) {
+	height: 450px;
+      }
+      @media screen and (min-width: 1101px) {
+	height: 350px;
+      }
+    }
+  }
+}
+
+.self-managed {
+  .self-managed-content {
+    padding: 50px 20px 25px 20px;
+    .self-managed-chapter {
+      padding: 0 30px 15px 10px;
+      .self-subtitle {
+	padding: 15px 0;
+      }
+    }
+  }
+  .self-managed-image {
+    background: url(/static/images/project/self-managed.png) right no-repeat;
+    height: 350px;
+    background-size: cover;
+    @media screen and (min-width: 500px) {
+      height: 400px;
+    }
+    @media screen and (min-width: 600px) {
+      height: 450px;
+    }
+    @media screen and (min-width: 650px) {
+      height: 500px;
+    }
+  }
+}
+.container {
+  .row {
+    &.self-development {
+      flex-direction: column;
+      .self-development-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 60px 50px 30px 40px;
+	@media screen and (min-width: 1101px) {
+	  padding: 60px 0 30px 0;
+	}
+	.self-development-header-title {
+	  @media screen and (min-width: 1101px) {
+	    width: 33%;
+	    text-align: center;
+	    padding-top: 40px;
+	  }
+	  .self-digit {
+	    @media screen and (min-width: 1101px) {
+	      justify-content: center;
+	    }	    
+	  }
+	}
+	.self-development-header-line {
+	  width: 33.3%;
+	  display: none;
+	  @media screen and (min-width: 1101px) {
+	    display: block;
+	  }
+	}
+      }
+      .self-development-images-container {
+	padding: 0 20px;
+	div {
+	  @media screen and (min-width: 1101px) {
+	    padding: 0 5px;
+	  }
+	  &.self-body {
+	    padding: 25px 0;
+	  }
+	}
+	.self-development-image {
+	  height: 260px;
+	  &.image-1 {
+	    background: url(/static/images/project/self-dev-image-1.png) center no-repeat;
+	  }
+	  &.image-2 {
+	    background: url(/static/images/project/self-dev-image-2.png) center no-repeat;
+	  }
+
+	  &.image-3 {
+	    background: url(/static/images/project/self-dev-image-3.png) center no-repeat;
+	  }
+	}
+      }
+    }
+  }
+}
+
+.container {
+  .row {
+    &.self-flow {
+      flex-direction: column;
+      .self-flow-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 60px 50px 0 40px;
+	@media screen and (min-width: 1101px) {
+	  padding: 60px 0 0 0;
+	}
+	.self-flow-header-line {
+	  width: 33.3%;
+	  display: none;
+	  @media screen and (min-width: 1101px) {
+	    display: block;
+	  }
+	}
+	.self-flow-header-title {
+	  @media screen and (min-width: 1101px) {
+	    width: 33%;
+	    text-align: center;
+	    padding-top: 40px;
+	  }
+	  .self-digit {
+	    @media screen and (min-width: 1101px) {
+	      justify-content: center;
+	    }	    
+	  }
+	}
+      }
+      .self-flow-body-web {
+	display: none;
+	min-height: 550px;
+	background: url(/static/images/project/self-flow.png) center no-repeat;
+	background-size: contain;
+	.self-flow-web-1 {
+	  display: flex;
+	  padding-top: 20px;
+	  div {
+	    width: 20%;
+	    text-align: center;
+	    &.self-flow-web-middle {
+	      width: 15%;
+	    }
+	  }
+	}
+	.self-flow-web-2 {
+	  &>div {
+	    width: 18%;
+	    margin-left: auto;
+	    padding-right: 5%;
+	    padding-top: 60px;
+	    text-align: center;
+	  }
+	}
+	.self-flow-web-3 {
+	  &>div {
+	    width: 30%;
+	    margin: 150px auto 0;
+	    padding-top: 60px;
+	    text-align: center;
+	    @media screen and (min-width: 1300px) {
+	       margin: 180px auto 0;
+	    }
+	    @media screen and (min-width: 1480px) {
+	      margin: 220px auto 0;
+	    }
+	    @media screen and (min-width: 1520px) {
+	      margin: 250px auto 0;
+	    }
+	    @media screen and (min-width: 1650px) {
+	      margin: 280px auto 0;
+	    }
+	    @media screen and (min-width: 180px) {
+	      margin: 360px auto 0;
+	    }
+	    @media screen and (min-width: 2150px) {
+	      margin: 390px auto 0;
+	    }
+	    @media screen and (min-width: 2400px) {
+	      margin: 410px auto 0;
+	    }
+	  }
+	}
+
+	.self-flow-web-4 {
+	  &>div {
+	    width: 18%;
+	    margin-top: 60px;
+	    margin-left: auto;
+	    padding-right: 3%;
+	    text-align: center;
+	    @media screen and (min-width: 1250px) {
+	       margin-top: 80px;
+	    }
+	    @media screen and (min-width: 1450px) {
+	      margin-top: 100px;
+	    }
+	    @media screen and (min-width: 1500px) {
+	      margin-top: 140px;
+	    }
+	    @media screen and (min-width: 1650px) {
+	      margin-top: 160px;
+	    }
+	    @media screen and (min-width: 1800px) {
+	      margin-top: 200px;
+	    }
+	    @media screen and (min-width: 2150px) {
+	      margin-top: 240px;
+	    }
+	    @media screen and (min-width: 2400px) {
+	      margin-top: 280px;
+	    }
+	  }
+	}
+		
+	@media screen and (min-width: 1101px) {
+	  display: block;
+	}
+      }
+      
+      .self-flow-body-mobile {
+	padding: 0 20px 30px 20px;
+	@media screen and (min-width: 1101px) {
+	  display: none;
+	}
+	.self-body {
+	  padding: 20px 0;
+	}
+      }
+    }
+  }
+}
+
+.self-mockup {
+  div {
+    height: 300px;
+    background: url(/static/images/project/self-free-mockup.png) left no-repeat;
+    background-size: cover;
+    @media screen and (min-width: 550px) {
+      height: 400px;
+    }
+    @media screen and (min-width: 600px) {
+      height: 450px;
+    }
+  }
+}
+
+.self-footer {
+  &>div {
+    padding: 20px 0;
+    div {
+      margin: 0 auto;
+      width: 530px;
+      max-width: 530px;
+      height: 190px;
+      background: url(/static/images/project/self-footer.png) right no-repeat;
+      background-size: inherit;
+    }
+  }
 }
