@@ -49,13 +49,18 @@
 
 .self-hr {
   display: none;
-  margin: 90px 0 50px 0;
+  margin: 90px 0 50px;
+
   border: 0;
   height: 3px;
   background: #310a44;
   @media screen and (min-width: 1101px) {
     display: block;
   }
+  @media screen and (min-width: 1500px) {
+    margin: 90px 0 80px;
+  }
+
   
 }
 
@@ -139,14 +144,26 @@
 }
 
 .self-intro {
-  padding: 50px 0 30px 20px; 
-  .self-intro-title-container {
-    padding: 10px;
+  .self-intro-body-container {
+    padding: 50px 50px 50px 20px;
     @media screen and (min-width: 1101px) {
-      padding-top: 100px;
+      padding: 150px 50px 50px 20px;
     }
-    .self-body {
-      padding: 40px 0 0 0;
+    @media screen and (min-width: 1500px) {
+      padding: 150px 100px 50px 110px;
+    }
+    @media screen and (min-width: 1900px) {
+      padding: 150px 100px 200px 110px;
+    }
+
+    .self-quotes {
+      padding-top: 30px;
+    }
+    
+    .self-intro-title-container {
+      .self-body {
+	padding: 40px 0 0 0;
+      }
     }
   }
   .self-intro-image {
@@ -168,6 +185,9 @@
       background: url(/static/images/project/self-lider-logo.png) top left no-repeat;
       height: 550px;
     }
+    @media screen and (min-width: 1101px) {
+      background-size: contain;
+    }
   }
 }
 
@@ -179,6 +199,10 @@
   
   .self-tutorial-body {
     padding: 50px 30px 30px 20px;
+    @media screen and (min-width: 1500px) {
+      padding: 50px 80px 30px 110px;
+    }
+
   }
   .self-tutorial-image {
     &>div {
@@ -197,6 +221,9 @@
       @media screen and (min-width: 1101px) {
 	height: 350px;
       }
+      @media screen and (min-width: 1101px) {
+	height: 500px;
+      }
     }
   }
 }
@@ -207,6 +234,19 @@
     @media screen and (min-width: 1101px) {
       padding: 0 80px 50px 120px;
     }
+    @media screen and (min-width: 1500px) {
+      padding: 0 120px 50px 180px;
+    }
+    @media screen and (min-width: 1700px) {
+      padding: 0 150px 50px 200px;
+    }
+    @media screen and (min-width: 1900px) {
+      padding: 0 180px 50px 220px;
+    }
+    @media screen and (min-width: 1900px) {
+      padding: 0 210px 50px 250px;
+    }
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -263,6 +303,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 40px 50px 30px 20px;
+    @media screen and (min-width: 1500px) {
+      padding: 40px 100px 30px 130px;
+    }
+    @media screen and (min-width: 1800px) {
+      padding: 40px 180px 30px 200px;
+    }
   }
 }
 
@@ -280,6 +326,10 @@
     @media screen and (min-width: 650px) {
       height: 500px;
     }
+    @media screen and (min-width: 1500px) {
+      height: 800px;
+    }
+    
   }
 }
 
@@ -289,6 +339,9 @@
     padding: 20px;
     @media screen and (min-width: 1101px) {
       padding: 60px 20px 20px 20px;
+    }
+    @media screen and (min-width: 1500px) {
+      padding: 60px 100px 50px 100px;
     }
     .title-container {
       padding-left: 30px;
@@ -322,13 +375,23 @@
       @media screen and (min-width: 1101px) {
 	height: 350px;
       }
+      @media screen and (min-width: 1500px) {
+	height: 500px;
+      }
     }
   }
 }
 
 .self-managed {
+  @media screen and (min-width: 1101px) {
+    padding: 50px 0;
+  }
   .self-managed-content {
     padding: 50px 20px 25px 20px;
+    @media screen and (min-width: 1500px) {
+      padding: 50px 100px 50px 100px;
+    }
+
     .self-managed-chapter {
       padding: 0 30px 15px 10px;
       .self-subtitle {
@@ -385,12 +448,29 @@
       }
       .self-development-images-container {
 	padding: 0 20px;
+
+	@media screen and (min-width: 1500px) {
+	  padding: 0 50px;
+	}
+
 	div {
 	  @media screen and (min-width: 1101px) {
 	    padding: 0 5px;
 	  }
+	  @media screen and (min-width: 1500px) {
+	    padding: 0 50px;
+	  }
 	  &.self-body {
 	    padding: 25px 0;
+	    @media screen and (min-width: 1800px) {
+	      padding: 50px 30px;
+	    }
+	    @media screen and (min-width: 1900px) {
+	      padding: 80px 50px;
+	    }
+	    @media screen and (min-width: 2100px) {
+	      padding: 80px 80px;
+	    }
 	  }
 	}
 	.self-development-image {
@@ -443,99 +523,101 @@
 	  }
 	}
       }
-      .self-flow-body-web {
-	display: none;
-	min-height: 550px;
-	background: url(/static/images/project/self-flow.png) center no-repeat;
-	background-size: contain;
-	.self-flow-web-1 {
-	  display: flex;
-	  padding-top: 20px;
-	  div {
-	    width: 20%;
-	    text-align: center;
-	    &.self-flow-web-middle {
-	      width: 15%;
-	    }
-	  }
-	}
-	.self-flow-web-2 {
-	  &>div {
-	    width: 18%;
-	    margin-left: auto;
-	    padding-right: 5%;
-	    padding-top: 60px;
-	    text-align: center;
-	  }
-	}
-	.self-flow-web-3 {
-	  &>div {
-	    width: 30%;
-	    margin: 150px auto 0;
-	    padding-top: 60px;
-	    text-align: center;
-	    @media screen and (min-width: 1300px) {
-	       margin: 180px auto 0;
-	    }
-	    @media screen and (min-width: 1480px) {
-	      margin: 220px auto 0;
-	    }
-	    @media screen and (min-width: 1520px) {
-	      margin: 250px auto 0;
-	    }
-	    @media screen and (min-width: 1650px) {
-	      margin: 280px auto 0;
-	    }
-	    @media screen and (min-width: 180px) {
-	      margin: 360px auto 0;
-	    }
-	    @media screen and (min-width: 2150px) {
-	      margin: 390px auto 0;
-	    }
-	    @media screen and (min-width: 2400px) {
-	      margin: 410px auto 0;
-	    }
-	  }
-	}
+      .self-flow-body-web-container {
+	@media screen and (min-width: 1300px) {
+	  padding: 0 100px;
+	}	    
 
-	.self-flow-web-4 {
-	  &>div {
-	    width: 18%;
-	    margin-top: 60px;
-	    margin-left: auto;
-	    padding-right: 3%;
-	    text-align: center;
-	    @media screen and (min-width: 1250px) {
-	       margin-top: 80px;
-	    }
-	    @media screen and (min-width: 1450px) {
-	      margin-top: 100px;
-	    }
-	    @media screen and (min-width: 1500px) {
-	      margin-top: 140px;
-	    }
-	    @media screen and (min-width: 1650px) {
-	      margin-top: 160px;
-	    }
-	    @media screen and (min-width: 1800px) {
-	      margin-top: 200px;
-	    }
-	    @media screen and (min-width: 2150px) {
-	      margin-top: 240px;
-	    }
-	    @media screen and (min-width: 2400px) {
-	      margin-top: 280px;
+	.self-flow-body-web {
+	  display: none;
+	  min-height: 550px;
+	  background: url(/static/images/project/self-flow.png) center no-repeat;
+	  background-size: contain;
+	  display: flex;
+	  flex-direction: column;
+	  @media screen and (min-width: 1300px) {
+	    min-height: 600px; 
+	  }	    
+	  @media screen and (min-width: 1600px) {
+	    min-height: 650px;
+	  }
+	  @media screen and (min-width: 1700px) {
+	    min-height: 700px;
+	  }
+	  @media screen and (min-width: 1800px) {
+	    min-height: 750px;
+	  }
+	  @media screen and (min-width: 2000px) {
+	    min-height: 800px;
+	  }
+	  @media screen and (min-width: 2100px) {
+	    min-height: 850px;
+	  }
+	  @media screen and (min-width: 2200px) {
+	    min-height: 900px;
+	  }
+	  @media screen and (min-width: 2300px) {
+	    min-height: 950px;
+	  }
+	  @media screen and (min-width: 2500px) {
+	    min-height: 1000px;
+	  }
+	  @media screen and (min-width: 2700px) {
+	    min-height: 1050px;
+	  }
+	  
+	  .self-flow-web-1 {
+	    display: flex;
+	    padding-top: 40px;
+	    div {
+	      width: 20%;
+	      text-align: center;
+	      &.self-flow-web-middle {
+		width: 15%;
+	      }
 	    }
 	  }
+	  .self-flow-web-2 {
+	    margin-top: auto;
+	    margin-bottom: auto;
+	    @media screen and (min-width: 1300px) {
+	      padding-bottom: 100px;
+	    }  
+	    &>div {
+	      width: 18%;
+	      margin-left: auto;
+	      padding-right: 5%;
+	      text-align: center;
+	    }
+	  }
+	  .self-flow-web-3 {
+	    margin-top: auto;
+	    &>div {
+	      width: 30%;
+	      margin: 0 auto 0;
+	      padding-top: 60px;
+	      text-align: center;
+	    }
+	  }
+
+	  .self-flow-web-4 {
+	    margin-top: auto;
+	    &>div {
+	      width: 18%;
+	      margin-left: auto;
+	      padding-right: 3%;
+	      text-align: center;
+	    }
+	  }
+	  
+	  @media screen and (min-width: 1101px) {
+	    display: flex;
+	  }
 	}
-		
-	@media screen and (min-width: 1101px) {
-	  display: block;
-	}
-      }
-      
+      }      
       .self-flow-body-mobile {
 	padding: 0 20px 30px 20px;
+	flex-direction: column;
 	@media screen and (min-width: 1101px) {
 	  display: none;
 	}
@@ -558,12 +640,28 @@
     @media screen and (min-width: 600px) {
       height: 450px;
     }
+    @media screen and (min-width: 1500px) {
+      height: 500px;
+    }
+    @media screen and (min-width: 1700px) {
+      height: 550px;
+    }
+    @media screen and (min-width: 1900px) {
+      height: 600px;
+    }
+    @media screen and (min-width: 2300px) {
+      height: 650px;
+    }
+    @media screen and (min-width: 2700px) {
+      height: 700px;
+    }
+
   }
 }
 
 .self-footer {
   &>div {
-    padding: 20px 0;
+    padding: 100px 0 50px 0;
     div {
       margin: 0 auto;
       width: 530px;

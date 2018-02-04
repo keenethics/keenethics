@@ -15,7 +15,7 @@ const ProjectPlutio = ({ url }) => (
 	  <div className="container">
 	    
 	    <div className="row self-intro border-box">
-	      <div className="col-2">
+	      <div className="col-2 self-intro-body-container">
 		<div className="self-intro-title-container">
 		  <div className="self-logo-title">SelfLeaders</div>
 		  <div className="self-subtitle"><span>Personal Growth Tool</span></div>
@@ -199,22 +199,24 @@ We implemented two-week sprint in order to have more frequent demos, more freque
 		 <div className="self-body border-box"><span>Task is completed by developer. Pull request created. Task is reviewed by teammate.</span></div>
 		 <div className="self-body border-box"><span>QA reveals some bugs and moves Task back to Sprint.</span></div>
 	       </div>
-	       <div className="col-1 border-box self-flow-body-web">
-		 <div className="self-flow-web-1">
-		   <div></div>
-		   <div className="self-body">Developer moves task which he/she works on.</div>
-		   <div className="self-flow-web-middle"></div>
-		   <div className="self-body">Task is pushed to staging. Task is ready for testing.</div>
-		   <div></div>
-		 </div>
-		 <div className="self-flow-web-2">
-		   <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
-		 </div>
-		 <div className="self-flow-web-3">
-		   <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
-		 </div>
-		 <div className="self-flow-web-4">
-		   <div className="self-body">QA reveals some bugs and moves Task back to Sprint.</div>
+	       <div className="self-flow-body-web-container">
+		 <div className="col-1 border-box self-flow-body-web">
+		   <div className="self-flow-web-1">
+		     <div></div>
+		     <div className="self-body">Developer moves task which he/she works on.</div>
+		     <div className="self-flow-web-middle"></div>
+		     <div className="self-body">Task is pushed to staging. Task is ready for testing.</div>
+		     <div></div>
+		   </div>
+		   <div className="self-flow-web-2">
+		     <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
+		   </div>
+		   <div className="self-flow-web-3">
+		     <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
+		   </div>
+		   <div className="self-flow-web-4">
+		     <div className="self-body">QA reveals some bugs and moves Task back to Sprint.</div>
+		   </div>
 		 </div>
 	       </div>
 	    </div>
