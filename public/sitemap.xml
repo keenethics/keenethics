@@ -132,6 +132,15 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://keenethics.com/blog/1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way.md</loc>
+    <lastmod>2018-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  
   <url>
     <loc>https://keenethics.com/services-mobile-development</loc>
     <lastmod>2017-12-19</lastmod>

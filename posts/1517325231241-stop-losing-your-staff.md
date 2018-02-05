@@ -5,7 +5,7 @@ Meta title: Stop Losing Your Staff
 Meta description: Stop Losing Your Staff
 Preview image: /static/posts/pree-preview.png
 
-![Heroes](/static/posts/pree-inartical.png)
+![Heroes](/static/posts/pree-in-article.png)
 
 # Stop Losing Your Stuff
 
