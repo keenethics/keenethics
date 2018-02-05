@@ -3,9 +3,9 @@ Title: Docker: 5 Cases when You shouldn't Use it
 Subtitle: Docker: 5 Cases when You shouldn't Use it
 Meta title: Docker: 5 Cases when You shouldn't Use it
 Meta description: Docker: 5 Cases when You shouldn't Use it
-Preview image: /static/posts/docker_artical.png
+Preview image: /static/posts/docker-preview.png
 
-![Heroes](/static/posts/startup-photos.jpg)
+![Heroes](/static/posts/docker-in-article.jpg)
 
 There are many good things about Docker. This containerization fellow manages to pack, ship, and run applications as a lightweight, portable, self-sufficient LXC container. Docker is great for businesses of all sizes. It eliminates the “it works on my machine” problem when you’re working on a piece of code in a small team while enterprises can use Docker to build Agile software delivery pipelines to ship new features faster and more securely. With its built-in containerization system, Docker is an excellent tool for clusterization and cloud computing. Sounds too good to be true, right? Well, there are still several cases when your project won’t benefit from Docker. Here are five of them.
 
