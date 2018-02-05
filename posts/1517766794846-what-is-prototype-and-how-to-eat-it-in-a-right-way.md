@@ -5,11 +5,11 @@ Meta title: What is Prototype and How to Eat it in a Right Way
 Meta description: What is Prototype and How to Eat it in a Right Way
 Preview image: /static/posts/prototype-preview.png
 
-![Heroes](/static/posts/prototype-inarticle.png)
+![Heroes](/static/posts/prototype-in-article.png)
 
 Has it ever occured to you that you see a familiar word but it feels like it has a different meaning in certain cases?
 
-![Heroes](/static/posts/prototype-inartical2.jpg)
+![Heroes](/static/posts/prototype-in-article-robot.jpg)
 
 ## Why Do I Need to Know That?
 Not knowing this term can lead to misunderstandings when communicating with a development team you may lose time and also appear ignorant.
