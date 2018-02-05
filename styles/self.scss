@@ -448,7 +448,11 @@
       }
       .self-development-images-container {
 	padding: 0 20px;
-
+	flex-direction: column;
+	@media screen and (min-width: 1500px) {
+	  flex-direction: row;
+	}
+	
 	@media screen and (min-width: 1500px) {
 	  padding: 0 50px;
 	}
@@ -533,8 +537,10 @@
 	  min-height: 550px;
 	  background: url(/static/images/project/self-flow.png) center no-repeat;
 	  background-size: contain;
-	  display: flex;
-	  flex-direction: column;
+	  @media screen and (min-width: 1101px) {
+	    display: flex;
+	    flex-direction: column;
+	  }	    
 	  @media screen and (min-width: 1300px) {
 	    min-height: 600px; 
 	  }	    
@@ -662,13 +668,15 @@
 .self-footer {
   &>div {
     padding: 100px 0 50px 0;
-    div {
-      margin: 0 auto;
-      width: 530px;
-      max-width: 530px;
-      height: 190px;
-      background: url(/static/images/project/self-footer.png) right no-repeat;
-      background-size: inherit;
+    &>a {
+      width: 100%;
+      &>div {
+	margin: 0 auto;
+	width: 100%;
+	height: 190px;
+	background: url(/static/images/project/self-footer.png) center no-repeat;
+	background-size: contain;
+      }
     }
   }
 }

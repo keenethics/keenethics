@@ -15,7 +15,7 @@ const ProjectPlutio = ({ url }) => (
 	  <div className="container">
 	    
 	    <div className="row self-intro border-box">
-	      <div className="col-2 self-intro-body-container">
+	      <div className="col-2 border-box self-intro-body-container">
 		<div className="self-intro-title-container">
 		  <div className="self-logo-title">SelfLeaders</div>
 		  <div className="self-subtitle"><span>Personal Growth Tool</span></div>
@@ -30,7 +30,7 @@ const ProjectPlutio = ({ url }) => (
 	    </div>
 
 	    <div className="row reverse self-tutorial border-box">
-	      <div className="col-2 self-tutorial-image">
+	      <div className="col-2 border-box  self-tutorial-image">
 		<hr className="self-hr"/>
 		<div></div>
 	      </div>
@@ -227,7 +227,7 @@ We implemented two-week sprint in order to have more frequent demos, more freque
 
 	    <div className="row self-footer">
 	      <div className="col-1 border-box">
-		<div></div>
+		<a href="http://tools.selfleaders.com/" target="_blank"><div></div></a>
 	      </div>
 	    </div>
 	    

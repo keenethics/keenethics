@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
+import Navigation from '../components/project/navigation';
 
 const ProjectPree = ({ url }) => (
   <Layout currentURL={url}>
@@ -44,7 +45,7 @@ According to the received signal the app notifies user when he or she loses conn
 	      </div>
 	    </div>
 	    
-	    <div className="row">
+	    <div className="row reverse">
 	      <div className="col-2 pree-tasks-image"></div>
 	      <div className="col-2 bg-grey">
 		<div className="pree-tasks-content">
@@ -200,11 +201,10 @@ The main page - list of devices is available from almost all pages. This UX feat
 		 </div>
 		 <div className="pree-title pree-thanks-text"> Thank you for watching! </div>
 	       </div>
-	     </div>
-
-	    
+	     </div>	    
 	  </div>
 	</div>
+	<Navigation url={url} />
       </div>
     </div>
   </Layout>
