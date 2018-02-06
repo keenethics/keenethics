@@ -188,8 +188,8 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      </div>
 	    </div>
 
-	     <div className="row pree-download">
-	       <div className="col-1 pree-download-content">
+	     <div className="row pree-download border-box">
+	       <div className="col-1 pree-download-content border-box">
 		 <div className="pree pree-title-gray">Download App for free:</div>
 		 <div className="pree-download-stores">
 		   <img src="/static/images/project/app-store.png" />

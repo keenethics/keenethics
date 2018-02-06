@@ -35,12 +35,14 @@ const ProjectPlutio = ({ url }) => (
 		<div></div>
 	      </div>
 	      <div className="col-2 border-box self-tutorial-body">
-		<div className="self-digit">
-		  <span>01</span>
-		  <span></span>
-		</div>
-		<div className="self-title">
-		  <span>How It Works</span>
+		<div className="self-tutorial-body-header">
+		  <div className="self-digit">
+		    <span>01</span>
+		    <span></span>
+		  </div>
+		  <div className="self-title">
+		    <span>How It Works</span>
+		  </div>
 		</div>
 		<div className="self-body"><span>Understanding personal values is the key to understanding your own motivation. Ever since the start of SelfLeaders in 2009, this method has been central in our approach to working with individual and organizational transformation. <br/><br/>
 
@@ -162,20 +164,20 @@ ing materials, videos, presentations, etc.</span></div>
 		<div className="col-3-1 border-box">
 		  <div className="self-development-image image-1"></div>
 		  <div className="self-body bordere-box">
-		    We follow a well-known sprint cycle to ship increments on a bi-weekly basis. <br/><br/>
-We implemented two-week sprint in order to have more frequent demos, more frequent retrospectives.
+		   <span> We follow a well-known sprint cycle to ship increments on a bi-weekly basis. <br/><br/>
+We implemented two-week sprint in order to have more frequent demos, more frequent retrospectives.</span>
 		  </div>
 		</div>
 		<div className="col-3-1 border-box">
 		  <div className="self-development-image image-2"></div>
 		  <div className="self-body bordere-box">
-		    We use gamified technique called “Scrum Poker” which helps to create a productive and fun work environment at sprint planning.
+		    <span>We use gamified technique called “Scrum Poker” which helps to create a productive and fun work environment at sprint planning.</span>
 		  </div>
 		</div>
 		<div className="col-3-1 border-box">
 		  <div className="self-development-image image-3"></div>
 		  <div className="self-body bordere-box">
-		    We see retrospective as an opportunity for the team to inspect and create a plan for improvements to be enacted during the next sprint.
+		    <span>We see retrospective as an opportunity for the team to inspect and create a plan for improvements to be enacted during the next sprint.</span>
 		  </div>
 		</div>
 	      </div>
@@ -203,19 +205,19 @@ We implemented two-week sprint in order to have more frequent demos, more freque
 		 <div className="col-1 border-box self-flow-body-web">
 		   <div className="self-flow-web-1">
 		     <div></div>
-		     <div className="self-body">Developer moves task which he/she works on.</div>
+		     <div className="self-body"><span>Developer moves task which he/she works on.</span></div>
 		     <div className="self-flow-web-middle"></div>
-		     <div className="self-body">Task is pushed to staging. Task is ready for testing.</div>
+		     <div className="self-body"><span>Task is pushed to staging. Task is ready for testing.</span></div>
 		     <div></div>
 		   </div>
 		   <div className="self-flow-web-2">
-		     <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
+		     <div className="self-body"><span>Task is considered as a bug-free, and labels as Done.</span></div>
 		   </div>
 		   <div className="self-flow-web-3">
-		     <div className="self-body">Task is considered as a bug-free, and labels as Done.</div>
+		     <div className="self-body"><span>Task is considered as a bug-free, and labels as Done.</span></div>
 		   </div>
 		   <div className="self-flow-web-4">
-		     <div className="self-body">QA reveals some bugs and moves Task back to Sprint.</div>
+		     <div className="self-body"><span>QA reveals some bugs and moves Task back to Sprint.</span></div>
 		   </div>
 		 </div>
 	       </div>

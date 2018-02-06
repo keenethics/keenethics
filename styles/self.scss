@@ -145,7 +145,7 @@
 
 .self-intro {
   .self-intro-body-container {
-    padding: 50px 50px 50px 20px;
+    padding: 50px 50px 0 20px;
     @media screen and (min-width: 1101px) {
       padding: 150px 50px 50px 20px;
     }
@@ -168,10 +168,9 @@
   }
   .self-intro-image {
     background: url(/static/images/project/self-lider-logo.png) left no-repeat;
-    @media screen and (max-width: 1100px) {
-      height: 400px;
-      background-size: contain;
-    }
+    height: 400px;
+    background-size: contain;
+    margin: 0 20px;
     @media screen and (min-width: 550px) {
       height: 450px;
     }
@@ -184,6 +183,7 @@
     @media screen and (min-width: 1101px) {
       background: url(/static/images/project/self-lider-logo.png) top left no-repeat;
       height: 550px;
+      margin: 0;
     }
     @media screen and (min-width: 1101px) {
       background-size: contain;
@@ -198,7 +198,17 @@
   }
   
   .self-tutorial-body {
-    padding: 50px 30px 30px 20px;
+    .self-tutorial-body-header {
+      padding: 0 20px;
+    }
+    padding: 0 30px 30px 20px;
+    @media screen and (min-width: 500px) {
+      padding: 50px 30px 30px 20px;
+    }
+    @media screen and (min-width: 1101px) {
+      padding: 50p x30px 30px 20px;
+    }
+
     @media screen and (min-width: 1500px) {
       padding: 50px 80px 30px 110px;
     }
@@ -208,7 +218,8 @@
     &>div {
       background: url(/static/images/project/self-team.png) left no-repeat;
       background-size: cover;
-      @media screen and (max-width: 1100px) {
+      height: 300px;
+      @media screen and (min-width: 500px) {
 	height: 400px;
 	background-size: cover;
       }
@@ -269,7 +280,7 @@
 	font-size: 20px;
 	line-height: 50px;
 	width: 140px;
-	border: 2px solid #350f48;
+	border: 1px solid #350f48;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
 	border-radius: 25px;
@@ -285,7 +296,8 @@
   .self-tech-image {
     background: url(/static/images/project/self-tech.png) right no-repeat;
     background-size: cover;
-    @media screen and (max-width: 1100px) {
+    height: 300px;
+    @media screen and (min-width: 500px) {
       height: 400px;
       background-size: cover;
     }
@@ -315,7 +327,7 @@
 .self-screen {
   &>div {
     background: url(/static/images/project/self-screen.png) center no-repeat;
-    height: 350px;
+    height: 300px;
     background-size: cover;
     @media screen and (min-width: 500px) {
       height: 400px;
@@ -336,7 +348,7 @@
 .self-achivements {
   padding: 50px 0;
   .self-achivements-content {
-    padding: 20px;
+    padding: 0 20px 40px 20px;
     @media screen and (min-width: 1101px) {
       padding: 60px 20px 20px 20px;
     }
@@ -350,7 +362,7 @@
   .content-container {
     &>div {
       display: flex;
-      margin: 15px 0;
+      margin: 30px 0;
       span {
 	&:first-child {
 	  display: block;
@@ -364,7 +376,7 @@
   .self-achivements-image {
     &>div {
       background: url(/static/images/project/self-achivement.jpg) left no-repeat;
-      height: 350px;
+      height: 300px;
       background-size: cover;
       @media screen and (min-width: 500px) {
 	height: 400px;
@@ -373,9 +385,6 @@
 	height: 450px;
       }
       @media screen and (min-width: 1101px) {
-	height: 350px;
-      }
-      @media screen and (min-width: 1500px) {
 	height: 500px;
       }
     }
@@ -387,11 +396,17 @@
     padding: 50px 0;
   }
   .self-managed-content {
-    padding: 50px 20px 25px 20px;
+    padding: 0 20px 25px 20px;
     @media screen and (min-width: 1500px) {
       padding: 50px 100px 50px 100px;
     }
 
+    @media screen and (min-width: 1500px) {
+      padding: 50px 100px 50px 100px;
+    }
+    .slash-title {
+      padding-left: 20px;
+    }
     .self-managed-chapter {
       padding: 0 30px 15px 10px;
       .self-subtitle {
@@ -401,7 +416,7 @@
   }
   .self-managed-image {
     background: url(/static/images/project/self-managed.png) right no-repeat;
-    height: 350px;
+    height: 300px;
     background-size: cover;
     @media screen and (min-width: 500px) {
       height: 400px;
@@ -449,7 +464,7 @@
       .self-development-images-container {
 	padding: 0 20px;
 	flex-direction: column;
-	@media screen and (min-width: 1500px) {
+	@media screen and (min-width: 1101px) {
 	  flex-direction: row;
 	}
 	
@@ -571,10 +586,17 @@
 	  @media screen and (min-width: 2700px) {
 	    min-height: 1050px;
 	  }
+
+	  .self-body {
+	    &>span {
+	      font-size: 13px;
+	      line-height: 18px;
+	    }
+	  }
 	  
 	  .self-flow-web-1 {
 	    display: flex;
-	    padding-top: 40px;
+	    padding-top: 70px;
 	    div {
 	      width: 20%;
 	      text-align: center;
