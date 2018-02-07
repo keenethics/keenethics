@@ -9,14 +9,11 @@ const ProjectPree = ({ url }) => (
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
-	  <div className="container">
-
-	    
+	  <div className="container">	    
 	    <div className="row">
 	      <div className="col-2">
 		<div className="border-box pree-logo bg-grey">
 		  <div className="logo-rows">
-		   
 		    <div>
 		      <img src="/static/images/project/pree-logo.png" />
 		      PREE
@@ -59,13 +56,10 @@ According to the received signal the app notifies user when he or she loses conn
 		  <div className="pree pree-body">
 		    Our task was to develop and release mobile app for Android and iOS platforms which has to communicate with BLE devices and give its users location information of their stuff.  
 		  </div>
-
 		  <div className="pree pree-title">UI / UX</div>
 		  <div className="pree pree-body">
 		    The most important thing in PREE app is to provide the ability to quickly access and control their PREE devices. That’s why after user registration, the BLE starts scanning of PREE devices and attaches  trackers to user’s account. <br/><br/>
-
 The main page - list of devices is available from almost all pages. This UX feature allows easy and fast access to settings of PREE devices. 
-
 		  </div>
 		</div>
 	      </div>
@@ -123,7 +117,6 @@ The main page - list of devices is available from almost all pages. This UX feat
 	      <div className="row pree-technology-row row-left pree pree-body block">
 		The whole implementation of the app is possible thank to the open source cordova ble plugin - <a href="https://github.com/don/cordova-plugin-ble-central" target="_blank">https://github.com/don/cordova-plugin-ble-central</a>
 	      </div>
-	      
 	      <div className="row pree-technology-row row-right pree pree-body">
 		This plugin allows to scan, connect, read/write information from a ble device - in our case PREE device. We use this plugin for scanning PREE devices, getting power of received signal for every devices, setting bluetooth pair connection for every attached device. Also we used Google maps and Geolocation for storing and showing actual location for attached PREE device. All this stuff is required for main feature - notify user when you lose connect or back to range for some PREE device. 
 	      </div>
@@ -208,7 +201,6 @@ The main page - list of devices is available from almost all pages. This UX feat
 		 <div className="pree pree-title pree-thanks-text"> Thank you for watching! </div>
 	       </div>
 	     </div>
-
 	     
 	  </div>
 	</div>
