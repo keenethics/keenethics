@@ -14,7 +14,7 @@ const ServicesOutstaffingTechnical = ({ url }) => (
       points={servicesOutstaffing()}
     />
     <div className="content-block">
-      <h1>Technical consultancy</h1>
+      <h1>Technical Consulting Services</h1>
       <p>
         There can be a lot of reasons for companies to hire Technical Consultants. If you faced
         a challenging project, have a specific business goal or want to build a startup, and

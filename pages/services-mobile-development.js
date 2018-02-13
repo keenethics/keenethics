@@ -12,7 +12,7 @@ const ServicesMobileDevelopment = ({ url }) => (
     <ContentNavigation url={url} image="mobile_development" />
     <PageTabs points={servicesMobileDevelopment()} />
     <div className="content-block">
-      <h1>Mobile Development</h1>
+      <h1>Mobile App Development Services</h1>
       <p>
         According to statistics, people check their smartphone almost 300 times a day. Teens
         snap lock button even more often. We touch our phones almost every minute, check for new

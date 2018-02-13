@@ -8,7 +8,7 @@ const ServicesProof = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="proof" />
     <div className="content-block">
-      <h1>Proof of concept</h1>
+      <h1>Proof of Technology Solution</h1>
       <p>
         When an idea of a new product or service comes to mind, people often hesitate to bring
         it to life. It is easier to find the reason why we should not do anything rather than to

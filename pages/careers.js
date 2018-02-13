@@ -239,7 +239,7 @@ export default class Careers extends React.Component {
       <Layout currentURL={url}>
         <div className="careers-page">
           <div className="careers-page-header">
-            <h1 className="title">Careers<span>We’re hiring</span></h1>
+            <h1 className="title">Careers - Open Positions</h1>
             <Background className="careers-page-background" />
           </div>
           <div className="careers-page-content">

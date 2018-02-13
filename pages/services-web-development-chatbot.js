@@ -10,7 +10,7 @@ const ServicesWebDevelopmentChat = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
-      <h2>Chatbot Development</h2>
+      <h1>Chatbot Development Services</h1>
       <p>
         Your apps and websites promote you 24/7. How do you like an idea to build a customer
         service, that also does not sleep? Then think about chatbots – virtual assistants

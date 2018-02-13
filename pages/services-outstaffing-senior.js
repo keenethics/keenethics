@@ -14,7 +14,7 @@ const ServicesOutstaffingSenior = ({ url }) => (
       points={servicesOutstaffing()}
     />
     <div className="content-block">
-      <h1>Hire Senior Developer</h1>
+      <h1>Hiring Senior Developers</h1>
       <p>
         For big promising projects and startups, the technical part of the deal is important to
         succeed. Short-sighted decisions and bad implementation can make the whole project fail.

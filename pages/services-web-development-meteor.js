@@ -10,7 +10,7 @@ const ServicesWebDevelopmentMeteor = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
-      <h1>Meteor.js Development Services</h1>
+      <h1>Meteor.JS Development Services</h1>
       <p>
         When you have decided to launch a cross-platform application or a website, you need to
         find experienced professionals to do the tech side. When choosing a partner, pay

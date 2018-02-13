@@ -12,7 +12,7 @@ export const config = {
         {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
-          metaTitle: 'Professional Web Design & Development Company',
+          metaTitle: 'Custom Web Development Company  - Keenethics',
           metaDescription: 'Looking to hire web developers? Appnovation, a web development company, specializes in web development services. Hire our web developers today',
           href: '/services-web-development',
           icon: {
@@ -24,7 +24,7 @@ export const config = {
         {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
-          metaTitle: 'Desktop Application Development & Desktop Software App Development',
+          metaTitle: 'Desktop Application Development Company & Desktop Software App Development - Keenethics',
           metaDescription: 'Looking to hire Desktop Application developers? Appnovation, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
           href: '/services-desktop-applications',
           icon: {
@@ -36,7 +36,7 @@ export const config = {
         {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
-          metaTitle: 'Mobile Application Development Services & Custom Apps Development Company',
+          metaTitle: 'Mobile App Development | Professional App Development Company - Keenethics',
           metaDescription: 'Looking to hire mobile app developers? Appnovation, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
           href: '/services-mobile-development',
           icon: {
@@ -48,7 +48,7 @@ export const config = {
         {
           name: 'Outstaffing',
           description: 'Process of using by one company another`s company staff',
-          metaTitle: '',
+          metaTitle: 'Outstaffing company that helps to find highly qualified developers - Keenethics',
           metaDescription: '',
           href: '/services-outstaffing',
           icon: {
@@ -59,6 +59,7 @@ export const config = {
         },
         {
           name: 'Proof of Concept',
+	  metaTitle: 'The Proof Of Concept Solution - Keenethics',
           description:
             'Realization of a certain method or idea in order to demonstrate its feasibility',
           href: '/services-proof',
@@ -311,7 +312,7 @@ export const config = {
     {
       name: 'Blog',
       description: 'Articles based on our experience',
-      metaTitle: 'Welcome to Keenethics Corporate Blog!',
+      metaTitle: 'Web Development News & Ideas - Blog Keenethics',
       metaDescription: 'Read the latest news and opinions about software development from Keenethics Blog - all articles are based on our experience!',
       href: '/blog',
     },
@@ -350,7 +351,7 @@ export const config = {
     {
       name: 'Contacts',
       description: 'Have an idea? We can`t wait to help you implement it!',
-      metaTitle: 'Contacts - Keenethics Office And Locations  - Keenethics',
+      metaTitle: 'Contacts - Office And Locations - Keenethics',
       metaDescription: 'Have an idea? We can`t wait to help you implement it! Contact Keenethics software development company to get a professional insight into your business idea!',
       href: '/contacts',
       type: 'hidden',
@@ -456,37 +457,41 @@ export const servicesWebDevelopmentTabs = () => {
     {
       href: '/services-web-development-e-commerce',
       name: 'E-Commerce',
+      metaTitle: 'eCommerce Software Development Company | eCommerce Developers - Keenethics',
       description: 'Building amazing e-commerce products',
       icon: 'icon-e',
     },
     {
       href: '/services-web-development-chatbot',
       name: 'Chat Bots',
+      metaTitle: 'Chatbot Development Company | Microsoft Bot Framework Development - Keenethics',
       description: 'Talking to AI was never that easy',
       icon: 'icon-chat-bots',
     },
     {
       href: '/services-web-development-node',
       name: 'Website Node JS',
+      metaTitle: 'Node.Js Development Company | Node.js Website Development - Keenethics',
       description: 'Leading and rule-breaking technology',
       icon: 'icon-node',
     },
     {
       href: '/services-web-development-meteor',
       name: 'Meteor.js',
+      metaTitle: 'Meteor JS Development Company‎ - Keenethics',
       description: 'An ambitious fullstack-framework',
       icon: 'icon-meteor',
     },
     {
       href: '/services-web-development-programmable-voice',
       name: 'Programmable Voice',
+      metaTitle: 'Programmable Voice Development - Keenethics',
       description: 'When computer can replace a human',
       icon: 'icon-voice',
     },
   ];
   return elements.map(e => ({
     ...e,
-    metaTitle: maskTitle(e.name),
     metaDescription: maskDescription(e.name),
   }));
 };
@@ -497,6 +502,7 @@ export const servicesMobileDevelopment = () => {
       href: '/services-mobile-development-apple',
       name: 'iOS development',
       name2: 'iOS',
+      metaTitle: 'iOS Development Company | App Design & Development‎ - Keenethics',
       tabsDescription: '14 apps developed',
       description: 'Mobile applications for popular platform',
       icon: 'icon-apple',
@@ -505,6 +511,7 @@ export const servicesMobileDevelopment = () => {
       href: '/services-mobile-development-android',
       name: 'Android development',
       name2: 'Android',
+      metaTitle: 'Android App Development Company - Keenethics',
       tabsDescription: '23 apps developed',
       description: 'Most popular Linux-based mobile OS',
       icon: 'icon-android',
@@ -512,7 +519,6 @@ export const servicesMobileDevelopment = () => {
   ];
   return elements.map(e => ({
     ...e,
-    metaTitle: maskTitle(e.name2),
     metaDescription: maskDescription(e.name2),
   }));
 };
@@ -523,6 +529,7 @@ export const servicesOutstaffing = () => {
       href: '/services-outstaffing-senior',
       name: 'Senior developer',
       name2: 'Senior',
+      metaTitle: 'Outstaffing company that helps to find highly qualified Senior developers - Keenethics',
       tabsDescription: '4 in our team',
       description: 'Best skills and expertise',
       icon: 'icon-o-1',
@@ -531,6 +538,7 @@ export const servicesOutstaffing = () => {
       href: '/services-outstaffing-team',
       name: 'Dedicated team',
       name2: 'Dedicated team',
+      metaTitle: 'Dedicated Team Of Developers. Offshore Outsourcing Software Development‎ - Keenethics',
       tabsDescription: '4-8 people',
       description: 'Great developers who already have multiple projects behind',
       icon: 'icon-o-2',
@@ -539,6 +547,7 @@ export const servicesOutstaffing = () => {
       href: '/services-outstaffing-technical-consultancy',
       name: 'Technical consultancy',
       name2: 'Technical consultancy',
+      metaTitle: 'Technical consulting | Technical consultancy‎ - Keenethics',
       tabsDescription: '24 hours for an answer',
       description: '24 hours for an answer',
       icon: 'icon-o-3',
@@ -547,7 +556,6 @@ export const servicesOutstaffing = () => {
 
   return elements.map(e => ({
     ...e,
-    metaTitle: maskTitle(e.name2),
     metaDescription: maskDescription(e.name2),
   }));
 };
