@@ -17,7 +17,7 @@ const Posts = ({ posts }) => (
             <img src={post.image} alt={post.title} />
           </div>
           <div className="blog-page-post-header">
-            <div className="date">{dateTemplate.render(new Date(+post.date))}</div>
+            <div className="date">{dateTemplate.render(new Date(parseInt(post.date, 10)))}</div>
             <div className="title">{post.title}</div>
           </div>
         </a>
