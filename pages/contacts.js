@@ -93,21 +93,21 @@ export default class Contacts extends React.Component {
             <div className="title-page">
               <h1 className="title">Contact Us</h1>
             </div>
-            <div className="contacts-block" itemscope itemtype="http://schema.org/Organization">
+            <div className="contacts-block" itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               <div className="contacts-mail" />
               <ul className="contacts-list">
-                <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
                     <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
-                    <div itemprop="streetAddress">3 Lytvynenka Street</div>
-                    <span><span itemprop="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemprop="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
+                    <div itemProp="streetAddress">3 Lytvynenka Street</div>
+                    <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
                   </a>
                 </li>
                 <li>
                   <a href="tel:+380968147266">
                     <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
-                    <div itemprop="telephone">+38 (096) 814 72 66</div>
+                    <div itemProp="telephone">+38 (096) 814 72 66</div>
                     <span>Give Us a Call</span>
                   </a>
                 </li>

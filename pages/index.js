@@ -77,15 +77,15 @@ export default class Index extends React.Component {
             </div>
             <h1>Ethical<br />development<br />of keen web-apps</h1>
             <h2>You have a keen idea<span className="dash" />we have an ethical approach to custom software development</h2>
-            <div className="home-page-content-contact" itemscope itemtype="http://schema.org/Organization">
-              <div className="contact-item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
+              <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
                 <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                  <span itemprop="streetAddress">3 Lytvynenka Street</span>
+                  <span itemProp="streetAddress">3 Lytvynenka Street</span>
                 </a>
-                <i><span itemprop="addressLocality">Lviv</span>, <span itemprop="addressRegion">Ukraine</span></i>
+                <i><span itemProp="addressLocality">Lviv</span>, <span itemProp="addressRegion">Ukraine</span></i>
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
@@ -101,7 +101,7 @@ export default class Index extends React.Component {
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-tel.svg" alt="phone" />
                 </div>
-                <a href="tel:+380968147266"><span itemprop="telephone">+38 (096) 814 72 66</span></a>
+                <a href="tel:+380968147266"><span itemProp="telephone">+38 (096) 814 72 66</span></a>
                 <i>Give Us a Call</i>
               </div>
             </div>

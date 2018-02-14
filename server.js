@@ -8,6 +8,7 @@ const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const { mailgunAuth } = require('./private.config');
+const { postsDatePair } = require('./postsort.config');
 
 const Router = require('./routes').Router;
 
@@ -177,48 +178,41 @@ app.prepare().then(() => {
       if (err) {
         throw err;
       }
-
       res.send({
         errorField: {},
         status: 'Message sent',
       });
     });
   });
-  server.get('/posts', (req, res) => {
-    fs.readdir(path.resolve(__dirname, 'posts'), 'utf8', (err, files) => {
-      if (err) throw err;
+  server.get('/posts', async (req, res) => {
+    const posts = [];
+    const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
+    res.send(sortedPosts
+	     .map((file) => {
+	       const fileStat = fs.existsSync(path.resolve(__dirname, `posts/${file.filename}`));
+	       if(!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
+	       const text = fs.readFileSync(path.resolve(__dirname, `posts/${file.filename}`), 'utf8');
+	       const author = (/Author: (.*?)\n/g).exec(text)[1];
+	       const title = (/Title: (.*?)\n/g).exec(text)[1];
+	       const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+	       let image = (/Preview image: (.*?)\n/g).exec(text);
+	       const date = file.createdAt;
 
-      const posts = [];
-      const sortFiles = files.sort();
-      const reverseFiles = sortFiles.reverse();
-
-      reverseFiles.forEach((file) => {
-        const text = fs.readFileSync(path.resolve(__dirname, `posts/${file}`), 'utf8');
-
-        const author = (/Author: (.*?)\n/g).exec(text)[1];
-        const title = (/Title: (.*?)\n/g).exec(text)[1];
-        const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-        let image = (/Preview image: (.*?)\n/g).exec(text);
-        const date = file.split('-')[0];
-
-        if (image && image[1]) {
-          image = image[1];
-        } else {
-          image = '/static/images/astronauts.jpg';
-        }
-
-        posts.push({
-          title,
-          subtitle,
-          author,
-          href: file.slice(0, -3),
-          image,
-          date,
-        });
-      });
-
-      res.send(posts);
-    });
+	       if (image && image[1]) {
+		 image = image[1];
+	       } else {
+		 image = '/static/images/astronauts.jpg';
+	       }
+	       return {
+		 title,
+		 subtitle,
+		 author,
+		 href: file.filename.slice(0, -3),
+		 image,
+		 date,
+	       };
+	     })
+	     .filter((v) => v !== null));
   });
   server.get('/post/:name', (req, res) => {
     if (req.params && req.params.name) {
