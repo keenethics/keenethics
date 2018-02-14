@@ -10,7 +10,7 @@ const ServicesWebDevelopmentAndroid = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="android" points={servicesMobileDevelopment()} />
     <div className="content-block">
-      <h1>Android Mobile App Development</h1>
+      <h1>Android App Development Services</h1>
       <p>
         On of the most efficient ways to achieve new business goals is to find a mobile software
         development team and build your own app to strengthen brand’s position. Till more and

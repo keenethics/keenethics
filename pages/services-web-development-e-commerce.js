@@ -10,7 +10,7 @@ const ServicesWebDevelopmentE = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
-      <h1>Ecommerce web development services</h1>
+      <h1>eCommerce Software Development Services</h1>
       <p>
         Developing ecommerce websites and platforms is one of the most popular services
         nowadays. So what is ecommerce development and when do you need to hire a team of

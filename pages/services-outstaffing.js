@@ -12,7 +12,7 @@ const ServicesOutstaffing = ({ url }) => (
     <ContentNavigation url={url} image="outstaffing" />
     <PageTabs points={servicesOutstaffing()} />
     <div className="content-block">
-      <h1>Outstaffing Process</h1>
+      <h1>Hiring Developers</h1>
       <p>
         Outstaffing is the process of using by one company another&apos;s company staff.
       </p>

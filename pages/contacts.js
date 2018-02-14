@@ -91,7 +91,7 @@ export default class Contacts extends React.Component {
         <div className="contacts-page">
           <div className="contacts-socket">
             <div className="title-page">
-              <h1 className="title">Contact Us <span>We’ll answer in a moment!</span></h1>
+              <h1 className="title">Contact Us</h1>
             </div>
             <div className="contacts-block" itemscope itemtype="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>

@@ -14,7 +14,7 @@ const ServicesOutstaffingTeam = ({ url }) => (
       points={servicesOutstaffing()}
     />
     <div className="content-block">
-      <h1>Dedicated Development Team</h1>
+      <h1>Dedicated Software Development Teams</h1>
       <p>
         Outstaffing is the process of using by one company another`s company staff. The
         company-customer does not enter law relations with the staff of the organization that is

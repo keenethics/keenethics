@@ -10,7 +10,7 @@ const ServicesWebDevelopmentNode = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
-      <h1>Website Node.js Development Services</h1>
+      <h1>Node.Js Development Services</h1>
       <p>
         Since businesses spend more and more time on their digital activities, Node.js
         development services become needed. Node.js is a free, open-source, cross-platform

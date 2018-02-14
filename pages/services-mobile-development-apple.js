@@ -10,7 +10,7 @@ const ServicesWebDevelopmentApple = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="apple" points={servicesMobileDevelopment()} />
     <div className="content-block">
-      <h1>iOS Mobile App Development</h1>
+      <h1>iOS Development Services</h1>
       <p>
         If you are not sure that you need an iOS App for your business, face this fact: in 2016
         the total number of active Apple devices has reached 1 billion. So you do need one if

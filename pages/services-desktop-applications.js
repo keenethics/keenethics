@@ -8,7 +8,7 @@ const ServicesDesktopApplications = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation url={url} image="desktop" />
     <div className="content-block">
-      <h1>Desktop Application Development</h1>
+      <h1>Desktop Application Development Services</h1>
       <p>
         So what is desktop application development and how to know if it is the right solution
         for your business?
