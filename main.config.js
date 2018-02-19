@@ -307,6 +307,13 @@ export const config = {
           number: '16',
           type: 'number',
         },
+	{
+          name: 'Pree',
+          description: 'Stop losing your things',
+          href: '/project-pree',
+          number: '17',
+          type: 'number',
+        },
       ],
     },
     {

@@ -1,0 +1,467 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.backgroutd-nr-cov {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pree {
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 40px;
+  &.pree-title {
+    color: #4179f8;
+    padding-bottom: 10px;
+  }
+
+  &.pree-title-gray {
+    color: #b5b5b5;
+    line-height: 40px;
+    letter-spacing:4px;
+  }
+
+  &.pree-body {
+    font-size: 15px;
+    line-height: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+  }
+
+}
+
+
+.bg-grey {
+  background-color: #eeeeee; 
+}
+
+.bg-blue {
+  background-color: #709df8; 
+}
+
+.pree-logo {
+  padding: 90px 10px;
+  width: 100%;
+  height: 100%;
+  @media screen and (min-width: 1500px) {
+    padding: 120px 10px;
+  }
+  .pree-title-gray {
+    font-size: 18px;
+    letter-spacing: 0px;
+    @media screen and (min-width: 400px) {
+      font-size: 26px;
+      letter-spacing: 4px;
+    }
+    @media screen and (min-width: 500px) {
+      font-size: 30px;
+    }
+
+  }
+  .logo-rows {
+    @media screen and (min-width: 500px) {
+      text-align: center;
+    }
+    
+    &.logo-title {
+      text-align: left;
+      padding-left: 10px;
+      @media screen and (min-width: 400px) {
+	text-align: center;
+      }
+
+    }
+    div {
+      font-size: 60px;
+      letter-spacing: 10px;
+      padding-left: 5px;
+      color: #4179f8;
+      width: fit-content;
+      @media screen and (min-width: 400px) {
+	font-size: 110px;
+	letter-spacing: 20px;
+	padding-left: 20px;
+      }
+      @media screen and (min-width: 500px) {
+	margin: 0 auto;
+	font-size: 120px;
+	letter-spacing: 35px;
+	padding-left: 35px;
+      }
+      img {
+	width: 15%;
+	margin-left: 5px;
+	@media screen and (min-width: 400px) {
+	  width: unset;
+	  margin-left: 10px;
+	}
+
+	@media screen and (min-width: 500px) {
+	  margin-left: 10px;
+	  width: unset;
+	}
+      }
+    }
+    
+  }
+}
+
+.pree-logo-image {
+  background: url(/static/images/project/pree-header-right.png) left no-repeat;
+  background-size: cover;
+  height: 300px;
+  @media screen and (min-width: 500px) {
+    height: 500px;
+  }
+
+  @media screen and (min-width: 1101px) {
+    height: auto;
+  }
+}
+
+.pree-purpose {
+  padding: 20px 0 100px 0;
+  background: url(/static/images/project/pree-purpose-trapeze.png) 0 900px no-repeat;
+  @media screen and (min-width: 500px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 750px no-repeat;
+  }
+  @media screen and (min-width: 769px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 900px no-repeat;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  @media screen and (min-width: 950px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 650px no-repeat;
+  }
+  @media screen and (min-width: 1000px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 650px no-repeat;
+  }
+  @media screen and (min-width: 1101px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 450px no-repeat;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1500px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 400px no-repeat;
+    background-size: cover;
+  }
+  @media screen and (min-width: 2000px) {
+    background: url(/static/images/project/pree-purpose-trapeze.png) 0 300px no-repeat;
+    background-size: cover;
+  }
+    
+  .pree-purpose-right {
+    padding: 40px 80px 0 50px;
+    @media screen and (min-width: 1101px) {
+      padding: 40px 80px 0 0;
+    }
+    @media screen and (min-width: 1500px) {
+      padding: 120px 80px 0 0;
+    }
+    
+  }
+  .pree-phone-container {
+    padding-top: 100px;
+    img {
+      transform: translateX(-50px);
+    }
+  }
+}
+
+.pree-tasks-image {
+  background: url(/static/images/project/pree-tasks-image.png) right no-repeat;
+  background-size: cover;
+  height: 300px;
+  @media screen and (min-width: 500px) {
+    height: 500px;
+  }
+
+  @media screen and (min-width: 1101px) {
+    height: auto;
+  }
+}
+
+.pree-tasks-content {
+  padding: 50px 80px 50px 50px;
+  @media screen and (min-width: 1500px) {
+    padding: 130px 80px;
+  }
+  .pree-title {
+    @media screen and (min-width: 1500px) {
+      padding-top: 20px;
+    }
+  }
+}
+
+
+.pree-tutorial {
+  .pree-tutorial-image {
+    padding: 50px 0;
+    @media screen and (min-width: 1101px) {
+      padding: 100px 20px 50px 20px;
+    }
+    @media screen and (min-width: 1500px) {
+      padding: 100px 80px;
+    }
+  }
+
+  .pree-tutorial-content {
+    padding: 100px 60px 60px 60px;
+    @media screen and (min-width: 1500px) {
+      padding: 110px 200px 0 110px;
+    }
+  }
+}
+
+.pree-technology {
+  padding: 50px;
+  font-family: 'Raleway';
+  @media screen and (min-width: 1101px) {
+    padding: 30px;
+  }
+  @media screen and (min-width: 1500px) {
+    padding: 80px 110px;
+  }
+
+  .pree-technology-row {
+    padding-top: 30px;
+    .pree-technology-stack {
+      font-size: 17px;
+      line-height: 24px;
+      font-weight: 400;
+      font-style: 'Regular';
+      color: #313131;
+      margin: auto 0;
+      &.stakc-android-ios {
+	max-width: 100%;
+	@media screen and (min-width: 1101px) {
+	  max-width: 20%;
+	}
+
+      }
+    }
+
+    &.block {
+      display: block;
+    }
+    
+    .pree-technology-stack-data {
+      padding-top: 20px;
+      @media screen and (min-width: 1101px) {
+	padding-left: 30px;
+	padding-top: 0;
+      }
+      div {
+	display: flex;
+	flex-wrap: wrap;
+	div {
+	  margin: 5px;
+	  padding: 15px 30px;
+	  -webkit-border-radius: 25px;
+	  -moz-border-radius: 25px;
+	  border-radius: 25px;
+	  border: 1px solid #4179f8;
+	  font-size: 22px;
+	  color: #313131;
+	  font-weight: 300;
+	  font-style: 'Light';
+	}
+      }
+    }
+  }
+
+  .row-left {
+    width: 100%;
+    @media screen and (min-width: 1101px) {
+      width: 80%;
+    }
+  }
+
+  .row-right {
+    @media screen and (min-width: 1101px) {
+      padding-left: 20%;
+    }
+  }
+}
+
+.pree-problem {
+  .pree-problem-content {
+    padding: 50px;
+    @media screen and (min-width: 1101px) {
+      padding: 50px 60px 60px 60px;
+    }
+    @media screen and (min-width: 1500px) {
+      padding: 50px 110px;
+    }
+
+    .title {
+      display: flex;
+      .left-title {
+	margin-right: auto;
+	line-height: 55px;
+	&.black-text {
+	  color: #313131;
+	}
+      }
+      .right-title {
+	&>img {
+	  width: 90%;
+	}
+      }
+    }
+  }
+  .pree-problem-image {
+    background: url(/static/images/project/pree-problem-image.png) center no-repeat;
+    background-size: cover;
+    height: 300px;
+    @media screen and (min-width: 500px) {
+      height: 500px;
+    }
+    @media screen and (min-width: 1101px) {
+      height: auto;
+    }
+    @media screen and (min-width: 1600px) {
+      height: 560px;
+    }
+  }
+}
+
+
+.pree-scanning {
+  .pree-scanning-content {
+    padding: 50px;
+    @media screen and (min-width: 1101px) {
+      padding: 50px 60px 60px 60px;
+    }
+
+    @media screen and (min-width: 1500px) {
+      padding: 50px 110px;
+    }
+
+    .title {
+      display: flex;
+      .right-title {
+	margin-left: auto;
+	&>img {
+	  width: 90%;
+	}
+      }
+      .left-title {
+	margin-right: auto;
+	line-height: 55px;
+	&.black-text {
+	  color: #313131;
+	}
+      }
+      &.pree-scanning-text {
+	padding-right: 0;
+	@media screen and (min-width: 1101px) {
+	  padding-right: 30px;
+	}
+	@media screen and (min-width: 1500px) {
+	  padding-right: 100px;
+	}
+      }
+    }
+  }
+}
+
+.pree-achivement {
+  padding: 50px 0 0 0;
+  @media screen and (min-width: 1101px) {
+    padding: 80px 0 0 60px;
+  }
+  @media screen and (min-width: 1500px) {
+    padding: 80px 0 0 110px;
+  }
+  .pree-achivement-content {
+    @media screen and (max-width: 1100px) {
+      padding: 20px 50px 0 50px;
+    }
+
+    .achivement-link {
+      padding-top: 140px;
+      padding-bottom: 0;
+      @media screen and (max-width: 1100px) {
+	padding-top: 40px;
+	text-align: center;
+      }
+    }
+    .pree-title {
+      text-align: center;
+      @media screen and (min-width: 1101px) {
+	text-align: left;
+      }
+
+      a {
+	text-decoration: none;
+	border-bottom: 2px solid #4179f8;
+	color: #4179f8;
+      }
+    }
+  }
+
+  .pree-achivement-image {
+    background: url(/static/images/project/pree-macbook-pro.png) left bottom no-repeat;
+    background-size: cover;
+    height: 300px;
+    @media screen and (min-width: 500px) {
+      height: 500px;
+      margin-left: 50px;
+    }
+  }
+}
+
+.pree-download {
+  padding: 90px 20px;
+  .pree-download-content {
+    display: flex;
+    flex-direction: column;
+    div {
+      margin: 0 auto;
+    }
+    .pree-download-stores {
+      padding-top: 20px;
+      display: flex;
+      img {
+	height: 50px;
+	margin: 0 5px;
+	@media screen and (min-width: 500px) {
+	  height: auto;
+	}
+      }
+    }
+  }
+}
+
+.pree-thanks {
+  .pree-thanks-image {
+    background: url(/static/images/project/pree-thanks-image.jpeg) center no-repeat;
+    background-size: cover;
+  }
+  .pree-thanks-content {
+    padding: 70px 0;
+    @media screen and (min-width: 1650px) {
+      padding: 150px 0;
+    }
+    .pree-thanks-logo-container {
+      margin: 0 auto;
+      img {
+	width: 30%;
+      }
+    }
+    .pree-thanks-text {
+      padding-top: 50px;
+      text-align: center;
+    }
+   
+  }
+}
