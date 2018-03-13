@@ -95,7 +95,7 @@ const ProjectPlutio = ({ url }) => (
               </ul>
             </div>
             <div className="title">How we managed it</div>
-            <div className="grid pree-grid">
+            <div className="grid sl-grid">
               <div className="col-1-2">
                 <div>
                   <p>
@@ -114,13 +114,12 @@ const ProjectPlutio = ({ url }) => (
               </div>
             </div>
             <div className="title">Development</div>
-            <div className="grid pree-grid">
+            <div className="grid sl-grid">
               <div className="col-1-3">
-                <div className="pree-grid-img-wrap">
+                <div className="grid-img-wrap">
                   <img 
                     src="/static/images/project/self-leaders-development-icon-sprint-cycle.png" 
                     alt="Sprint Cycle"
-                    className="pree-grid-img"
                   />
                 </div>
                 <div>
@@ -130,11 +129,10 @@ const ProjectPlutio = ({ url }) => (
                 </div>
               </div>
               <div className="col-1-3">
-                <div className="pree-grid-img-wrap">
+                <div className="grid-img-wrap">
                   <img 
                     src="/static/images/project/self-leaders-development-icon-scrum-poker.png" 
                     alt="Scrum Poker"
-                    className="pree-grid-img"
                   />
                 </div>
                 <div className="pree-grid-text">
@@ -144,11 +142,10 @@ const ProjectPlutio = ({ url }) => (
                 </div>
               </div>
               <div className="col-1-3">
-                <div className="pree-grid-img-wrap">
+                <div className="grid-img-wrap">
                   <img 
                     src="/static/images/project/self-leaders-development-icon-team.png" 
                     alt="Team"
-                    className="pree-grid-img"
                   />
                 </div>
                 <div className="pree-grid-text">
