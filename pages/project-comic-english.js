@@ -20,9 +20,8 @@ const ProjectComicEnglish = ({ url }) => (
                 Learn English while chatting with AI
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>Ionic</div>
+                <div className="tag">Meteor</div>
+                <div className="tag">Ionic</div>
               </div>
             </div>
             <Background />

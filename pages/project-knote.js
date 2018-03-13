@@ -20,13 +20,12 @@ const ProjectKnotel = ({ url }) => (
                 A tool for online collaboration and task-management
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>Blaze</div>
-                <div className="tag" style={{ color: baseColor }}>Chrome Extension</div>
-                <div className="tag" style={{ color: baseColor }}>iOS</div>
-                <div className="tag" style={{ color: baseColor }}>Android</div>
-                <div className="tag" style={{ color: baseColor }}>React Native</div>
+                <div className="tag">Meteor</div>
+                <div className="tag">Blaze</div>
+                <div className="tag">Chrome Extension</div>
+                <div className="tag">iOS</div>
+                <div className="tag">Android</div>
+                <div className="tag">React Native</div>
               </div>
             </div>
             <div className="project-content-preview">

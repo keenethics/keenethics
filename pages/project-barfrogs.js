@@ -20,9 +20,8 @@ const ProjectBarfrogs = ({ url }) => (
                 Find an event you are interested in
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Express</div>
-                <div className="tag" style={{ color: baseColor }}>React</div>
+                <div className="tag">Express</div>
+                <div className="tag">React</div>
               </div>
             </div>
             <Background />

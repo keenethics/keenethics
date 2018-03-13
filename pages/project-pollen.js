@@ -20,9 +20,8 @@ const ProjectPollen = ({ url }) => (
                 Organizing social-campaigns via Gmail contacts
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>Blaze</div>
+                <div className="tag">Meteor</div>
+                <div className="tag">Blaze</div>
               </div>
             </div>
             <Background />

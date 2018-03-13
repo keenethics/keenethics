@@ -22,8 +22,7 @@ const ProjectPrix = ({ url }) => (
                 Increasing loyalty of existing clients
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>React</div>
+                <div className="tag">React</div>
               </div>
             </div>
             <div className="project-content-preview">
