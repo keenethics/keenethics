@@ -24,9 +24,10 @@
   }
 }
 .tags--big {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   & .tag {
     @media (min-width: 980px) {
+      margin-right: 20px;
       font-size: 18px;
       padding: 12px 26px;
     }
@@ -269,6 +270,19 @@
 .pree-grid {
   margin: 40px 0;
 }
+.sl-grid {
+  margin: 40px 0;
+  & .col-1-3 {
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+    & .pree-grid-text {
+      @media (max-width: 1000px) {
+        padding-left: 0;
+      }
+    }
+  }
+}
 .pree-grid-text {
   padding-left: 25px;
 
@@ -277,30 +291,33 @@
     padding-top: 40px;
   }
 }
-.pree-grid-img-wrap {
-  height: 145px;
+.grid-img-wrap {
+  height: 150px;
+  position: relative;
+  & img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
 }
 .pree-fullwidth-image {
-  background: #72a3f5 url('/static/images/project/pree-fullwidth-image-phone.jpg') no-repeat center;
+  background: #72a3f5 url('/static/images/project/pree-fullwidth-image-phone.jpg') center center no-repeat;
+  background-size: contain;
   height: 610px;
 
   @media (min-width: 980px) {
-    background: #72a3f5 url('/static/images/project/pree-fullwidth-image.jpg') no-repeat center;
+    background: #72a3f5 url('/static/images/project/pree-fullwidth-image.jpg') center center no-repeat;
+    background-size: contain;
+    height: 610px;
+  }
+  @media (max-width: 1200px) {
+    height: 500px;
   }
 }
 .image-gaps {
   display: block;
   padding: 20px 0;
 }
-
-/* .flex-columns {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-column-3 {
-  width: 33.33%;
-  box-sizing: border-box;
-  @media (max-width: 980px) {
-    
-  }
-} */
