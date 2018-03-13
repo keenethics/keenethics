@@ -6,16 +6,17 @@ import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 
 const baseColor = '#dffd35';
+const accentColor = '#222';
 
 const ProjectTetrami = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
-          <div className="project-content-summary" style={{ background: baseColor, color: '#222' }}>
+          <div className="project-content-summary" style={{ background: baseColor, color: accentColor }}>
             <div className="project-content-summary-inner">
-              <h2 className="title" style={{ color: '#222' }}>Tetrami</h2>
-              <h3 className="duration" style={{ color: '#222' }}>
+              <h2 className="title" style={{ color: accentColor }}>Tetrami</h2>
+              <h3 className="duration" style={{ color: accentColor }}>
                 <span>Duration:</span> 4 months, nearly done, will be on google play and app store
                 soon
               </h3>
@@ -23,10 +24,9 @@ const ProjectTetrami = ({ url }) => (
                 Online discounting
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: '#222' }}>Meteor</div>
-                <div className="tag" style={{ color: '#222' }}>Angular 1.3</div>
-                <div className="tag" style={{ color: '#222' }}>Ionic 1.2</div>
+                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Meteor</div>
+                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Angular 1.3</div>
+                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Ionic 1.2</div>
               </div>
             </div>
             <div className="project-content-preview">

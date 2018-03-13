@@ -15,18 +15,13 @@ const ProjectPlutio = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">SelfLeaders</h2>
-              <h3 className="duration">
-                <span>Duration:</span> 24.11.2016 until present time. An ongoing project
-              </h3>
               <p className="description">
                 Personal Growth Tool
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>GraphQL</div>
-                <div className="tag" style={{ color: baseColor }}>React</div>
-                <div className="tag" style={{ color: baseColor }}>Blaze</div>
+                <div className="tag">Feentech</div>
+                <div className="tag">E-Commerce</div>
+                <div className="tag">Education</div>
               </div>
             </div>
             <div className="project-content-preview">
@@ -38,16 +33,39 @@ const ProjectPlutio = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
-            <p>
-              SelfLeaders is a Swedish company that helps their customers create strong cultures
-              where co workers are engaged, driving development and taking care of themselves and
-              each other. We call it self-leadership.” It is an app for facilitators and
-              participants of workshops.
+            <p className="center">
+              SelfLeaders is a Swedish company that helps their customers create strong cultures where co 
+              workers are engaged, drive development and take care of themselves and each other. 
             </p>
+            <div className="title">How it works</div>
             <p>
-              There was only one developer on this project in the beginning, but as the company grew
-              they hired more and now there are 3 developers working on that project from our side.
+              Understanding personal values is the key to understanding your own motivation. Ever since 
+              the start of SelfLeaders in 2009, this method has been central in our approach to working 
+              with individual and organizational transformation.
             </p>
+            <p>SelfLeaders delivers trainings to businesses, NGOs and the public sector with the aim to 
+              help them to become truly value-based. SelfLeaders workshops would be impossible without 
+              application which we made. This application is a tool for facilitators and participants of 
+              workshops. Tool’s functionality helps to conduct workshop with interacting materials, videos, 
+              presentations, etc.
+            </p>
+            <img 
+              src="/static/images/project/self-leaders-prew-1.jpg" 
+              alt="Self Leaders" 
+              className="image-gaps"
+            />
+            <div className="title">Technology</div>
+            <div className="tags tags--big">
+              <div className="tag">Meteor</div>
+              <div className="tag">GraphQL</div>
+              <div className="tag">React</div>
+              <div className="tag">Blaze</div>
+            </div>
+            <img 
+              src="/static/images/project/self-leaders-prew-2.jpg" 
+              alt="Self Leaders" 
+              className="image-gaps"
+            />
             <div className="project-achievements">
               <h3>Achievements</h3>
               <ul>
@@ -75,6 +93,94 @@ const ProjectPlutio = ({ url }) => (
                   people.
                 </li>
               </ul>
+            </div>
+            <div className="title">How we managed it</div>
+            <div className="grid sl-grid">
+              <div className="col-1-2">
+                <div>
+                  <p>
+                    <span className="semi-bold">We grow fast!</span>
+                    We have started development with only one full stacker and after 3 months, we expanded to three decent developers, QA and a Project Manager to handle the project flow.
+                  </p>
+                  </div>
+                </div>
+                <div className="col-1-2">
+                  <div className="pree-grid-text">
+                    <p>
+                      <span className="semi-bold">We love agility!</span>
+                      Self Leaders is the best example of the agile methodology successfully running on the project. Scrum attributes with all their features were integrated into the project development process. 
+                    </p>
+                  </div>
+              </div>
+            </div>
+            <div className="title">Development</div>
+            <div className="grid sl-grid">
+              <div className="col-1-3">
+                <div className="grid-img-wrap">
+                  <img 
+                    src="/static/images/project/self-leaders-development-icon-sprint-cycle.png" 
+                    alt="Sprint Cycle"
+                  />
+                </div>
+                <div>
+                  <p>
+                    We follow a well-known sprint cycle to ship increments on a bi-weekly basis. We implemented two-week sprint in order to have more frequent demos, more frequent retrospectives.
+                  </p>
+                </div>
+              </div>
+              <div className="col-1-3">
+                <div className="grid-img-wrap">
+                  <img 
+                    src="/static/images/project/self-leaders-development-icon-scrum-poker.png" 
+                    alt="Scrum Poker"
+                  />
+                </div>
+                <div className="pree-grid-text">
+                  <p>
+                    We use gamified technique called “Scrum Poker” which helps to create a productive and fun work environment at sprint planning.
+                  </p>
+                </div>
+              </div>
+              <div className="col-1-3">
+                <div className="grid-img-wrap">
+                  <img 
+                    src="/static/images/project/self-leaders-development-icon-team.png" 
+                    alt="Team"
+                  />
+                </div>
+                <div className="pree-grid-text">
+                  <p>
+                    We see retrospective as an opportunity for the team to inspect and create a plan for improvements to be enacted during the next sprint.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="title">Flow</div>
+            <p>
+              Developer moves task which he/she works on.
+            </p>
+            <p>
+              Task is completed by developer. Pull request created. Task is reviewed by teammate.
+            </p>
+            <p>
+              Task is pushed to staging. Task is ready for testing.
+            </p>
+            <p>
+              Task is considered as a bug-free, and labels as Done.
+            </p>
+            <p>
+              QA reveals some bugs and moves Task back to Sprint.
+            </p>
+            <img 
+              src="/static/images/project/self-leaders-prew-3.jpg" 
+              alt="Self Leaders" 
+              className="image-gaps"
+            />
+            <div className="project-feedback">
+              <h3>Client’s Feedback</h3>
+              <p>
+                I am really impressed with the different tools and tips that we also got to bring with us, extremely useful.
+              </p>
             </div>
             <a
               href="http://selfleaders.com"

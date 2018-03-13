@@ -20,9 +20,8 @@ const ProjectMyGrassGrowth = ({ url }) => (
                 Keep you cows healthy and well-fed
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>Blaze</div>
+                <div className="tag">Meteor</div>
+                <div className="tag">Blaze</div>
               </div>
             </div>
             <div className="project-content-preview">

@@ -6,31 +6,36 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
-const JsonLd = ({ data }) =>
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-/>;
+const JsonLd = ({ data }) => (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+  />
+);
+
+JsonLd.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 const companyData = {
   '@context': 'http://www.schema.org',
   '@type': 'Organization',
-  'name': 'Keenethics',
-  'url': 'https://keenethics.com/',
-  'description': 'Custom Software Development Company',
-  'address': {
+  name: 'Keenethics',
+  url: 'https://keenethics.com/',
+  description: 'Custom Software Development Company',
+  address: {
     '@type': 'PostalAddress',
-    'streetAddress': '3 Lytvynenka Street',
-    'addressLocality': 'Lviv',
-    'postalCode': '79000',
-    'addressCountry': 'Ukraine'
+    streetAddress: '3 Lytvynenka Street',
+    addressLocality: 'Lviv',
+    postalCode: '79000',
+    addressCountry: 'Ukraine',
   },
-  'contactPoint': {
+  contactPoint: {
     '@type': 'ContactPoint',
-    'telephone': '+38 (096) 814 72 66',
-    'contactType': 'Sales Representative'
-  }
-}
+    telephone: '+38 (096) 814 72 66',
+    contactType: 'Sales Representative',
+  },
+};
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -76,7 +81,7 @@ export default class Index extends React.Component {
               </a>
             </div>
             <h1>Ethical<br />development<br />of keen web-apps</h1>
-            <h2>You have a keen idea<span className="dash" />we have an ethical approach to custom software development</h2>
+            <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
             <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
               <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                 <div className="contact-item-icon">

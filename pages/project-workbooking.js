@@ -20,9 +20,8 @@ const ProjectWorkbooking = ({ url }) => (
                 Get hired or find someone to do the job for you
               </p>
               <div className="tags">
-                <div className="tag-title">Technologies:</div>
-                <div className="tag" style={{ color: baseColor }}>Meteor</div>
-                <div className="tag" style={{ color: baseColor }}>React</div>
+                <div className="tag">Meteor</div>
+                <div className="tag">React</div>
               </div>
             </div>
             <div className="project-content-preview">
