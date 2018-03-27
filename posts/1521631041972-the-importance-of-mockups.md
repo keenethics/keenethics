@@ -1,8 +1,8 @@
 Author: Alexey Hermann
-Title: Mockup
-Subtitle: Mockup
-Meta title: Mockup
-Meta description: Mockup
+Title: The Importance of Mockups
+Subtitle: The Importance of Mockups
+Meta title: The Importance of Mockups
+Meta description: The Importance of Mockups
 Preview image: /static/posts/mockup.jpg
 
 ![Heroes](/static/posts/mockup.jpg)

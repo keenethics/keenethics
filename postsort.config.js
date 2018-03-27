@@ -10,7 +10,7 @@ const postsDatePair = [
   { createdAt: 1517306255770, filename: '1517306255770-docker-5-cases-when-you-should-not-use-it.md' },
   { createdAt: 1517325231241, filename: '1517325231241-stop-losing-your-staff.md' },
   { createdAt: 1517766794846, filename: '1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way.md' },
-  { createdAt: 1521631041972, filename: '1521631041972-mockup.md' },
+  { createdAt: 1521631041972, filename: '1521631041972-the-importance-of-mockups.md' },
   { createdAt: 1521640519375, filename: '1521640519375-cultural-factors-in-design.md' },
 ];
 
