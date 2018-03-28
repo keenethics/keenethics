@@ -3,9 +3,9 @@ Title: The Importance of Mockups
 Subtitle: The Importance of Mockups
 Meta title: The Importance of Mockups
 Meta description: The Importance of Mockups
-Preview image: /static/posts/mockup.jpg
+Preview image: /static/posts/mockup.png
 
-![Heroes](/static/posts/mockup.jpg)
+![Heroes](/static/posts/mockup.png)
 
 Up to 50% of your budget will be spent on application design. The most
 basic app that takes 160 hours to code can easily take as much time to

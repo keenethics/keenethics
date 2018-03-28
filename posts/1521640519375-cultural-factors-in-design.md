@@ -5,7 +5,7 @@ Meta title: Cultural factors in design or how to make your product accessible to
 Meta description: Cultural factors in design or how to make your product accessible to everyone?
 Preview image: /static/posts/apple-imac-ipad-workplace-38568.jpeg
 
-![](/static/posts/ipad-tablet-technology-touch.jpg)
+![Heroes](/static/posts/ipad-tablet-technology-touch.jpg)
 
 Can you imagine that you have finally received a product which is
 suitable, accessible, convenient and created in a way that all the
