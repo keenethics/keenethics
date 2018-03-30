@@ -3,11 +3,13 @@ const expressUncapitalize = require('express-uncapitalize');
 const fs = require('fs');
 const path = require('path');
 const next = require('next');
+const fetch = require('node-fetch');
+const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
-const { mailgunAuth } = require('./private.config');
+const { mailgunAuth, hubSpot } = require('./private.config');
 const { postsDatePair } = require('./postsort.config');
 
 const Router = require('./routes').Router;
@@ -17,6 +19,25 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 
 const handle = app.getRequestHandler();
+
+const checkStatus = response => response.ok ? response.json() : Promise.reject(response.json());
+
+const sendContactToHubSpot = hubSpotParameters => {
+  const parameters = querystring.stringify(hubSpotParameters);
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+      'Content-Length': parameters.length,
+    },
+  };
+  const { userId, formId } = hubSpot;
+  const hubUrl = `https://forms.hubspot.com/uploads/form/v2/${userId}/${formId}?${parameters}`;
+
+  fetch(hubUrl, options)
+    .then(checkStatus)
+    .catch(error => console.log('Hubspot request error: ', error));
+}
 
 app.prepare().then(() => {
   const server = express();
@@ -112,13 +133,20 @@ app.prepare().then(() => {
       if (err) {
         throw err;
       }
-
       res.send({
         errorField: {},
         status: 'Message sent',
       });
     });
-  });
+
+    const hubSpotParameters = {
+      firstname: firstname.value,
+      lastname: lastname.value,
+      email: email.value,
+      phone: phone.value.toString(),
+    };
+
+    sendContactToHubSpot(hubSpotParameters);
   server.post('/careers', (req, res) => {
     const {
       name,
