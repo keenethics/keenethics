@@ -20,9 +20,9 @@ const app = next({ dev });
 
 const handle = app.getRequestHandler();
 
-const checkStatus = response => response.ok ? response.json() : Promise.reject(response.json());
+const checkStatus = response => (response.ok ? response.json() : Promise.reject(response.json()));
 
-const sendContactToHubSpot = hubSpotParameters => {
+const sendContactToHubSpot = (hubSpotParameters) => {
   const parameters = querystring.stringify(hubSpotParameters);
   const options = {
     method: 'POST',
@@ -147,6 +147,7 @@ app.prepare().then(() => {
     };
 
     sendContactToHubSpot(hubSpotParameters);
+  });
   server.post('/careers', (req, res) => {
     const {
       name,
