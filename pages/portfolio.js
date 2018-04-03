@@ -24,6 +24,8 @@ export default class Portfolio extends React.Component {
 
     this.filter = this.filter.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.activeAllWorks = this.activeAllWorks.bind(this);
+    this.disabledBtn = this.disabledBtn.bind(this);
 
   }
 
@@ -57,11 +59,26 @@ export default class Portfolio extends React.Component {
       this.activeWorks.push(category);
     } else {
       if (this.activeWorks.length === 1) {
+        this.disabledBtn(e.target);
         return;
       }
       this.activeWorks.splice(position, 1);
     }
     this.setState({activeWorks: this.activeWorks});
+  };
+
+  activeAllWorks(e) {
+    if (this.state.activeWorks.length == this.filterList.length) {
+      this.disabledBtn(e.target);
+      return;
+    }
+    this.activeWorks = this.filterList.slice();
+    this.setState({activeWorks: this.activeWorks});
+  };
+
+  disabledBtn(btn) {
+    btn.classList.add('-disabled');
+    setTimeout(function() { btn.classList.remove('-disabled') }, 500);
   };
   
   render() {
@@ -70,7 +87,7 @@ export default class Portfolio extends React.Component {
 
     const FilterBtn = ({ category }) => (
       <li className="filter__item">
-        <button className={`filter__btn ${activeWorks.indexOf(category)>=0 ? 'filter__btn--active' : '' }`} onClick={this.handleClick}>{category}</button>
+        <button className={`filter__btn ${activeWorks.indexOf(category)>=0 ? '-red' : '' }`} onClick={this.handleClick}>{category}</button>
       </li>
     );
 
@@ -81,11 +98,16 @@ export default class Portfolio extends React.Component {
           <div className="portfolio__header">
             <h1 className="portfolio__title">Portfolio</h1>
           </div>
-          <ul className="filter__list">
-            {this.filterList.map((category) => (
-              <FilterBtn category={category} key={category}/>
-            ))}
-          </ul>
+          <div className="filter">
+            <div className="filter__show-all">
+              <button onClick={this.activeAllWorks} className={`filter__btn -show-all ${this.state.activeWorks.length !== this.filterList.length ? '-active' : '' }` }>Show all</button>
+            </div>
+            <ul className="filter__list">
+              {this.filterList.map((category) => (
+                <FilterBtn category={category} key={category}/>
+              ))}
+            </ul>
+          </div>
           {works.length && <Works works={works.filter(this.filter)} />}
         </section>
       </Layout>

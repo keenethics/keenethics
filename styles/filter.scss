@@ -1,7 +1,25 @@
-.filter__list {
-   margin: -15px -15px 10px -15px;
+.filter {
+   margin-bottom: 30px;
    display: flex;
-   justify-content: space-around;
+   align-items: center;
+   max-width: 870px;
+   margin: 0 auto;
+   @media (max-width: 1200px ) {
+      flex-direction: column;
+   }
+}
+.filter__show-all {
+   flex-grow: 1;
+   margin-right: 30px;
+   @media (max-width: 1200px ) {
+      margin-right: 0;
+      margin-bottom: 20px;
+   }
+}
+.filter__list {
+   margin: 0 -15px;
+   display: flex;
+   justify-content: center;
    list-style: none;
    flex-wrap: wrap;
 }
@@ -9,26 +27,26 @@
    padding: 15px;
 }
 .filter__btn {
-   padding: 20px 35px;
-   min-width: 200px;
+   padding: 12px 32.5px;
    border: none;
    background: rgba($color: #FAFCFC, $alpha: .2);
-   border-radius: 35px;
+   border-radius: 20px;
    color: #fff;
-   font-size: 16px;
+   font-size: 14px;
    cursor: pointer;
    overflow: hidden;
    position: relative;
-   @media (max-width: 1000px ) {
-      padding: 15px;
+   @media (max-width: 1200px ) {
+      min-width: 220px;
+      padding: 10px 30px;
    }
    &:after {
       content: '';
       position: absolute;
       top: 50%;
       right: 15px;
-      height: 10px;
-      width: 20px;
+      height: 8px;
+      width: 16px;
       border: 2px solid #fff;
       border-top: none;
       border-right: none;
@@ -39,23 +57,41 @@
    &:focus {
       outline: none;
    }
-
-   &--active {
+   &.-red {
       padding-left: 20px;
-      padding-right: 50px;
-      background: linear-gradient(to bottom, #e1602c 0%, #dc3a3a 100%);
+      padding-right: 45px;
+      background: linear-gradient(to right, #e1602c 0%, #dc3a3a 100%);
       &:after {
          opacity: 1;
       }
    }
-   
-}
-
-@keyframes btnAnimation {
-   from {
-      transform: translateY(0);
+   &.-disabled {
+      position: relative;
+      animation: disabledBtb .05s linear;
+      animation-iteration-count: 3;
    }
-   to {
-      transform: translateY(-66.66%);
+   &.-show-all {
+      min-width: auto;
+      white-space: nowrap;
+      color: rgba($color: #fff, $alpha: .5);
+      border: .5px solid rgba($color: #fff, $alpha: .3);
+      background: transparent;
+      padding: 12px 15px;
+      @media (max-width: 1000px ) {
+         padding: 10px 15px;
+      }
+      &.-active {
+         color: rgba($color: #fff, $alpha: .8);;
+         border-color: transparent;
+         background: rgba($color: #FAFCFC, $alpha: .2);
+      }
+   }
+   @keyframes disabledBtb {
+      from {
+         left: -1px;
+      }
+      to {
+         right: -1px;
+      }
    }
 }
