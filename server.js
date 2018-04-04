@@ -37,7 +37,7 @@ const sendContactToHubSpot = (hubSpotParameters) => {
   fetch(hubUrl, options)
     .then(checkStatus)
     .catch(error => console.log('Hubspot request error: ', error));
-}
+};
 
 app.prepare().then(() => {
   const server = express();
@@ -213,35 +213,35 @@ app.prepare().then(() => {
       });
     });
   });
-  server.get('/posts', async (req, res) => {
-    const posts = [];
+  server.get('/posts', (req, res) => {
     const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
     res.send(sortedPosts
-	     .map((file) => {
-	       const fileStat = fs.existsSync(path.resolve(__dirname, `posts/${file.filename}`));
-	       if(!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
-	       const text = fs.readFileSync(path.resolve(__dirname, `posts/${file.filename}`), 'utf8');
-	       const author = (/Author: (.*?)\n/g).exec(text)[1];
-	       const title = (/Title: (.*?)\n/g).exec(text)[1];
-	       const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-	       let image = (/Preview image: (.*?)\n/g).exec(text);
-	       const date = file.createdAt;
+      .map((file) => {
+        const fileStat = fs.existsSync(path.resolve(__dirname, `posts/${file.filename}`));
+        if (!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
+        const text = fs.readFileSync(path.resolve(__dirname, `posts/${file.filename}`), 'utf8');
+        const author = (/Author: (.*?)\n/g).exec(text)[1];
+        const title = (/Title: (.*?)\n/g).exec(text)[1];
+        const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+        let image = (/Preview image: (.*?)\n/g).exec(text);
+        const date = file.createdAt;
 
-	       if (image && image[1]) {
-		 image = image[1];
-	       } else {
-		 image = '/static/images/astronauts.jpg';
-	       }
-	       return {
-		 title,
-		 subtitle,
-		 author,
-		 href: file.filename.slice(0, -3),
-		 image,
-		 date,
-	       };
-	     })
-	     .filter((v) => v !== null));
+        if (image && image[1]) {
+          image = image[1];
+        } else {
+          image = '/static/images/astronauts.jpg';
+        }
+
+        return {
+          title,
+          subtitle,
+          author,
+          href: file.filename.slice(0, -3),
+          image,
+          date,
+        };
+      })
+      .filter(v => v !== null));
   });
   server.get('/post/:name', (req, res) => {
     if (req.params && req.params.name) {
