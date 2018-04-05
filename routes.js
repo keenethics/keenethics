@@ -10,14 +10,6 @@ const routes = [
     prettyUrl: ({ name = '' }) => `/blog/${name}`,
     prettyUrlPatterns: [{ pattern: '/blog/:name' }],
   },
-  {
-    page: 'portfolio',
-    prettyUrl: '/portfolio',
-  },
-  {
-    page: 'work',
-    prettyUrl: ({ name = '' }) => `/${name}`
-    },
 ];
 
 const urlPrettifier = new UrlPrettifier(routes);
