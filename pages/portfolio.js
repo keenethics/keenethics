@@ -13,14 +13,15 @@ import { works } from '../main.config';
 export default class Portfolio extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.filterList = [];
     this.activeWorks = [];
     this.getFilterList();
-    
+
     this.state = {
       activeWorks: this.activeWorks
     }
+    
 
     this.filter = this.filter.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -29,7 +30,15 @@ export default class Portfolio extends React.Component {
 
   }
 
+  componentDidMount() {
+    let subnavigation = document.querySelector('.navigation-item.current > .subnavigation');
+    subnavigation.style.display = 'none';
+    subnavigation.parentElement.classList.add('is-link');
+  }
+
   getFilterList() {
+    const { url } = this.props;
+
     works.map(work => {
       work.category.main.map(category => {
         if (this.filterList.indexOf(category) < 0) {
@@ -37,8 +46,33 @@ export default class Portfolio extends React.Component {
         }
       });
     });
-    this.activeWorks = this.filterList.slice();
-  }
+
+    let ankerPosition = url.asPath.indexOf('#');
+
+    if (ankerPosition > -1) {
+      let anker = url.asPath.slice(ankerPosition + 1, url.asPath.length);
+      let ankerArr = anker.split('-');
+      ankerArr.forEach((el, i) => {
+        ankerArr[i] = el.charAt(0).toUpperCase() + el.substr(1)
+      });
+
+      let category = ankerArr.join(' ');
+
+      if (category === 'All') {
+        this.activeWorks = this.filterList.slice();
+      } else {
+        works.map(work => {
+          work.category.main.map(c => {
+            if (c === category) {
+              this.activeWorks[0] = c;
+            }
+          });
+        });
+      }
+    } else {
+      this.activeWorks = this.filterList.slice();
+    };
+  };
 
   filter(work) {
     for (let wi = 0; wi < this.state.activeWorks.length; wi++) {
@@ -64,7 +98,8 @@ export default class Portfolio extends React.Component {
       }
       this.activeWorks.splice(position, 1);
     }
-    this.setState({activeWorks: this.activeWorks});
+
+    this.setState({ activeWorks: this.activeWorks });
   };
 
   activeAllWorks(e) {
@@ -84,7 +119,6 @@ export default class Portfolio extends React.Component {
   render() {
     const { url } = this.props;
     const {activeWorks} = this.state;
-
     const FilterBtn = ({ category }) => (
       <li className="filter__item">
         <button className={`filter__btn ${activeWorks.indexOf(category)>=0 ? '-red' : '' }`} onClick={this.handleClick}>{category}</button>
@@ -103,7 +137,7 @@ export default class Portfolio extends React.Component {
               <button onClick={this.activeAllWorks} className={`filter__btn -show-all ${this.state.activeWorks.length !== this.filterList.length ? '-active' : '' }` }>Show all</button>
             </div>
             <ul className="filter__list">
-              {this.filterList.map((category) => (
+              {this.filterList.map(category => (
                 <FilterBtn category={category} key={category}/>
               ))}
             </ul>

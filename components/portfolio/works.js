@@ -3,14 +3,12 @@ import { Link } from 'next-url-prettifier';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Router } from '../../routes';
-
 const Works = ({ works }) => (
   <div className="portfolio-works">
     <ul className="portfolio__list">
       {works.map(work => (
         <li className="portfolio__item" key={work.title}>
-          <Link route={Router.linkPage('work', { name: work.href })}>
+          <Link href={work.href}>
             <a className="portfolio__item-link">
               <figure className="portfolio__item-figure">
                 <img src={`../static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
