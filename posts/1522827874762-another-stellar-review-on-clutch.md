@@ -5,6 +5,8 @@ Meta title: Leading B2B ratings and reviews platform custom web development
 Meta description: Leading B2B ratings and reviews platform custom web development
 Preview image: /static/posts/clutch.png
 
+![Heroes](/static/posts/clutch.png)
+
 <span id="_gjdgxs" class="anchor"></span>Recently, one of our clients
 took the time to review us on [*Clutch*](https://clutch.co/developers),
 the leading B2B ratings and reviews platform. We are so happy with the

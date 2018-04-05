@@ -14,3 +14,6 @@
 
 1. Start build via `yarn deploy` command
 2. Enjoy
+
+### Note for deploy:
+If you deploy to production and see that your changes didn't implement, but in localhost all works. You can try command `killall node` on prod.
