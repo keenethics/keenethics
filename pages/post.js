@@ -11,7 +11,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Error from './_error';
 
-const dateTemplate = tinytime('{MMMM} {DD}');
+const dateTemplate = tinytime('{YYYY} {MMMM} {DD}');
 const timeTemplate = tinytime('{h}:{mm} {a}');
 
 export default class Post extends React.Component {

@@ -6,7 +6,7 @@ import tinytime from 'tinytime';
 
 import { Router } from '../../routes';
 
-const dateTemplate = tinytime('{MMMM} {DD} – {h}:{mm} {a}');
+const dateTemplate = tinytime('{YYYY} {MMMM} {DD} – {h}:{mm} {a}');
 
 const Posts = ({ posts }) => (
   <div className="blog-page-posts">
