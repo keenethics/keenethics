@@ -205,142 +205,28 @@ export const config = {
       metaTitle: 'Portfolio Keenethics',
       metaDescription: '???',
       href: '/portfolio',
-        points: [
-          {
-            name: 'All',
-            href: '/portfolio#all'
-          },
-          {
-            name: 'Business Digitalization',
-            href: '/portfolio#business-digitalization'
-          },
-          {
-            name: 'Startups',
-            href: '/portfolio#startups'
-          },
-          {
-            name: 'MVP',
-            href: '/portfolio#MVP'
-          },
-          {
-            name: 'Other',
-            href: '/portfolio#other'
-          },
-        ]
-      // points: [
-      //   {
-      //     name: 'Knotel',
-      //     description: 'Headquarters as a Service',
-      //     href: '/project-knotel',
-      //     number: '01',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'ComicEnglish',
-      //     description: 'Learn English while chatting with AI',
-      //     href: '/project-comic-english',
-      //     number: '02',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Pollen',
-      //     description: 'Organizing social-campaigns via Gmail contacts',
-      //     href: '/project-pollen',
-      //     number: '03',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Black Book',
-      //     description: 'Display the statistics of company employees',
-      //     href: '/project-black-book',
-      //     number: '04',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'TheCheckNetwork',
-      //     description: 'SEO-optimization as a service',
-      //     href: '/project-the-check-network',
-      //     number: '05',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Wargaming',
-      //     description: 'Economic wars game',
-      //     href: '/project-wargaming',
-      //     number: '06',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Knote',
-      //     description: 'A tool for online collaboration and task-management',
-      //     href: '/project-knote',
-      //     number: '07',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'My Grass Growth',
-      //     description: 'Keep you cows healthy and well-fed',
-      //     href: '/project-my-grass-growth',
-      //     number: '08',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'WorkBooking',
-      //     description: 'Get hired or find someone to do the job for you',
-      //     href: '/project-workbooking',
-      //     number: '09',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'BarFrogs',
-      //     description: 'Find an event you are interested in',
-      //     href: '/project-barfrogs',
-      //     number: '10',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Prix',
-      //     description: 'Increasing loyalty of existing clients',
-      //     href: '/project-prix',
-      //     number: '11',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Tetrami',
-      //     description: 'Online discounting',
-      //     href: '/project-tetrami',
-      //     number: '13',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Phenix',
-      //     description: 'Online video-streaming',
-      //     href: '/project-phenix',
-      //     number: '14',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Plutio',
-      //     description: 'Business management platform',
-      //     href: '/project-plutio',
-      //     number: '15',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'SelfLeaders',
-      //     description: 'Personal Growth Tool',
-      //     href: '/project-self-leaders',
-      //     number: '16',
-      //     type: 'number',
-      //   },
-      //   {
-      //     name: 'Pree',
-      //     description: 'Stop losing your stuff',
-      //     href: '/project-pree',
-      //     number: '17',
-      //     type: 'number',
-      //   },
-      // ],
+      points: [
+        {
+          name: 'All',
+          href: '/portfolio?chosen=All'
+        },
+        {
+          name: 'Business Digitalization',
+          href: '/portfolio?chosen=Business Digitalization'
+        },
+        {
+          name: 'Startups',
+          href: '/portfolio?chosen=Startups'
+        },
+        {
+          name: 'MVP',
+          href: '/portfolio?chosen=MVP'
+        },
+        {
+          name: 'Other',
+          href: '/portfolio?chosen=Other'
+        },
+      ]
     },
     {
       name: 'Blog',
@@ -1136,108 +1022,139 @@ export const works = [
       { title: 'Knotel',
         href: 'project-knotel',
         imgSrc: 'Knotel.jpg',
-        category: {main: ['Business Digitalization'], additional: ['Real Estate']},
-        descr: 'Headquarters as a Service'},
-
-      { title: 'The Check Network',
+        category: {
+          main: ['Business Digitalization'],
+          additional: ['Real Estate']
+        },
+        description: 'Headquarters as a Service'
+      }, {
+        title: 'The Check Network',
         href: 'project-the-check-network',
         imgSrc: 'The-Check-Network.jpg',
-        category: {main: ['Startups'], additional: ['E-commerce']},
-        descr: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one'},
-
-      { title: 'Pollen',
+        category: {
+          main: ['Startups'],
+          additional: ['E-commerce']
+        },
+        description: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one'
+      }, {
+        title: 'Pollen',
         href: 'project-pollen',
         imgSrc: 'Pollen.jpg',
-        category: {main: ['Startups']},
-        descr: 'Organizing social-campaigns via Gmail contacts' },
-
-      { title: 'Wargaming',
+        category: {
+          main: ['Startups']
+        },
+        description: 'Organizing social-campaigns via Gmail contacts'
+      }, {
+        title: 'Wargaming',
         href: 'project-wargaming',
-        category: {main: ['MVP', 'Business Digitalization']},
+        category: {
+          main: ['MVP', 'Business Digitalization']
+        },
         imgSrc: 'Wargaming.jpg',
-        descr: 'Platform for forecasting and validation of business strategies for companies.' },
-
-      { title: 'BarFrogs',
+        description: 'Platform for forecasting and validation of business strategies for companies.'
+      }, {
+        title: 'BarFrogs',
         href: 'project-barfrogs',
-        category: {main: ['Startups']},
+        category: {
+          main: ['Startups']
+        },
         imgSrc: 'BarFrogs.jpg',
-        descr: 'Find an event you are interested in' },
-
-      { title: 'Black Book',
+        description: 'Find an event you are interested in'
+      }, {
+        title: 'Black Book',
         href: 'project-black-book',
-        category: {main: ['Business Digitalization']},
+        category: {
+          main: ['Business Digitalization']
+        },
         imgSrc: 'Black-Book.jpg',
-        descr: 'Display the statistics of company employees' },
-
-      { title: 'ComicEnglish',
+        description: 'Display the statistics of company employees'
+      }, {
+        title: 'ComicEnglish',
         href: 'project-comic-english',
         imgSrc: 'ComicEnglish.jpg',
-        category: {main: ['Startups'], additional: ['E-Learning']},
-        descr: 'Learn English while chatting with AI' },
-
-      { title: 'Prix',
+        category: {
+          main: ['Startups'],
+          additional: ['E-Learning']
+        },
+        description: 'Learn English while chatting with AI'
+      }, {
+        title: 'Prix',
         href: 'project-prix',
         imgSrc: 'Prix.jpg',
-        category: {main: ['Startups'], additional: ['AI']},
-        descr: 'Increasing loyalty of existing clients' },
-
-      { title: 'Knote',
+        category: {
+          main: ['Startups'],
+          additional: ['AI']
+        },
+        description: 'Increasing loyalty of existing clients'
+      }, {
+        title: 'Knote',
         href: 'project-knote',
         imgSrc: 'Knote.jpg',
-        category: {main: ['Startups'], additional: ['Team collaboration tool']},
-        descr: 'A tool for online collaboration and task-management' },
-
-      { title: 'My Grass Growth',
+        category: {
+          main: ['Startups'],
+          additional: ['Team collaboration tool']
+        },
+        description: 'A tool for online collaboration and task-management'
+      }, {
+        title: 'My Grass Growth',
         href: 'project-my-grass-growth',
         imgSrc: 'My-Grass-Growth.jpg',
-        category: {main: ['Business Digitalization'], additional: ['Farming']},
-        descr: 'Keep you cows healthy and well-fed' },
-
-      { title: 'WorkBooking',
+        category: {
+          main: ['Business Digitalization'],
+          additional: ['Farming']
+        },
+        description: 'Keep you cows healthy and well-fed'
+      },
+      {
+        title: 'WorkBooking',
         href: 'project-workbooking',
         imgSrc: 'Workbooking.jpg',
-        category: {main: ['MVP'], additional: ['Job platform']},
-        descr: 'Get hired or find someone to do the job for you' },
-
-      { title: 'Tetrami',
+        category: {
+          main: ['MVP'],
+          additional: ['Job platform']
+        },
+        description: 'Get hired or find someone to do the job for you'
+      }, {
+        title: 'Tetrami',
         href: 'project-tetrami',
         imgSrc: 'Tetrami.jpg',
-        category: {main: ['Other'], additional: ['E-commerce']},
-        descr: 'Online discounting' },
-
-      { title: 'Phenix',
+        category: {
+          main: ['Other'],
+          additional: ['E-commerce']
+        },
+        description: 'Online discounting'
+      }, {
+        title: 'Phenix',
         href: 'project-phenix',
         imgSrc: 'Phenix.jpg',
-        category: {main: ['Other']},
-        descr: 'Online video-streaming' },
-
-      { title: 'Plutio',
+        category: {
+          main: ['Other']
+        },
+        description: 'Online video-streaming'
+      }, { 
+        title: 'Plutio',
         href: 'project-plutio',
         imgSrc: 'Plutio.jpg',
-        category: {main: ['Startups']},
-        descr: 'Business management platform' },
-
-      { title: 'SelfLeaders',
+        category: {
+          main: ['Startups']
+        },
+        description: 'Business management platform'
+      }, {
+        title: 'SelfLeaders',
         href: 'project-self-leaders',
         imgSrc: 'SelfLeaders.jpg',
-        category: {main: ['Startups'], additional: ['E-Learning']},
-        descr: 'Personal Growth Tool' },
-
-      { title: 'Pree',
+        category: {
+          main: ['Startups'],
+          additional: ['E-Learning']
+        },
+        description: 'Personal Growth Tool' 
+      }, {
+        title: 'Pree',
         href: 'project-pree',
         imgSrc: 'Pree.jpg',
-        category: {main: ['Startups'], additional: ['IoT']},
-        descr: 'Stop losing your stuff' },
-
-      // { title: 'Parkit',
-      //   href: '',
-      //   imgSrc: 'prew.jpg',
-      //   category: {main: ['Startups']},
-      //   descr: '' },
-
-      //{ title: 'Blueprint',
-      //   href: '',
-      //   imgSrc: 'prew.jpg',
-      //   category: {main: ['Startups'], additional: ['Team collaboration tool']},
-      //   descr: '' },
+        category: {
+          main: ['Startups'],
+          additional: ['IoT']
+        },
+        description: 'Stop losing your stuff' },
     ];
