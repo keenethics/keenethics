@@ -10,118 +10,98 @@ import Works from '../components/portfolio/works';
 
 import { works } from '../main.config';
 
+const flatten = deepArray => deepArray.reduce( (a, b) => a.concat(b), []);
+
+const transformateCategories = (chosenCategory, existCategories) => {
+  const categories = existCategories.filter(existCategory =>
+    chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
+
+  return categories.length ? categories : existCategories;
+}
+
 export default class Portfolio extends React.Component {
   constructor(props) {
     super(props);
 
-    this.filterList = [];
-    this.activeWorks = [];
-    this.getFilterList();
-
     this.state = {
-      activeWorks: this.activeWorks
-    }
-    
+      ...this.getGategoriesList.call(this)
+    };
 
-    this.filter = this.filter.bind(this);
+    this.worksCountFor = this.worksCountFor.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.activeAllWorks = this.activeAllWorks.bind(this);
+    this.showAllWorks = this.showAllWorks.bind(this);
     this.disabledBtn = this.disabledBtn.bind(this);
-
   }
 
   componentDidMount() {
-    let subnavigation = document.querySelector('.navigation-item.current > .subnavigation');
+    const subnavigation = document.querySelector('.navigation-item.current > .subnavigation');
     subnavigation.style.display = 'none';
     subnavigation.parentElement.classList.add('is-link');
   }
 
-  getFilterList() {
+  getGategoriesList() {
     const { url } = this.props;
+    const chosenCategory = url.query.chosen;
+    const categories = works
+      .map(work => work.category.main)
+      .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []) // flatten
+    const uniqCategories = [...new Set(categories)]
 
-    works.map(work => {
-      work.category.main.map(category => {
-        if (this.filterList.indexOf(category) < 0) {
-          this.filterList.push(category);
-        }
-      });
-    });
+    const selectedWorks = chosenCategory && chosenCategory !== 'All'
+      ? transformateCategories(chosenCategory.split(','), uniqCategories)
+      : uniqCategories;
 
-    let ankerPosition = url.asPath.indexOf('#');
+    return { selectedWorks, categorisList: uniqCategories };
+  }
 
-    if (ankerPosition > -1) {
-      let anker = url.asPath.slice(ankerPosition + 1, url.asPath.length);
-      let ankerArr = anker.split('-');
-      ankerArr.forEach((el, i) => {
-        ankerArr[i] = el.charAt(0).toUpperCase() + el.substr(1)
-      });
+  worksCountFor(work) {
+    const { selectedWorks } = this.state;
 
-      let category = ankerArr.join(' ');
-
-      if (category === 'All') {
-        this.activeWorks = this.filterList.slice();
-      } else {
-        works.map(work => {
-          work.category.main.map(c => {
-            if (c === category) {
-              this.activeWorks[0] = c;
-            }
-          });
-        });
-      }
-    } else {
-      this.activeWorks = this.filterList.slice();
-    };
-  };
-
-  filter(work) {
-    for (let wi = 0; wi < this.state.activeWorks.length; wi++) {
-      for (let ci = 0; ci < work.category.main.length; ci++) {
-        if (work.category.main[ci] === this.state.activeWorks[wi]) {
-          return true;
-        }
-      }
-    }
-    return false;
+    return work.category.main.filter(category => selectedWorks.includes(category)).length;
   }
 
   handleClick(e) {
-    let category = e.target.innerHTML;
-    let position = this.activeWorks.indexOf(category);
+    const selectedWorks = this.state.selectedWorks.slice();
+    const category = e.target.innerHTML;
+    const position = selectedWorks.indexOf(category);
 
-    if (position < 0) {
-      this.activeWorks.push(category);
+    if (position === -1) {
+      selectedWorks.push(category);
     } else {
-      if (this.activeWorks.length === 1) {
+      if (selectedWorks.length === 1) {
         this.disabledBtn(e.target);
         return;
       }
-      this.activeWorks.splice(position, 1);
+      selectedWorks.splice(position, 1);
     }
 
-    this.setState({ activeWorks: this.activeWorks });
-  };
+    this.setState({ selectedWorks });
+  }
 
-  activeAllWorks(e) {
-    if (this.state.activeWorks.length == this.filterList.length) {
+  showAllWorks(e) {
+    let selectedWorks = this.state.selectedWorks.slice();
+    const { categorisList } = this.state;
+
+    if (selectedWorks.length === categorisList.length) {
       this.disabledBtn(e.target);
       return;
     }
-    this.activeWorks = this.filterList.slice();
-    this.setState({activeWorks: this.activeWorks});
-  };
+
+    selectedWorks = categorisList.slice();
+    this.setState({ selectedWorks });
+  }
 
   disabledBtn(btn) {
     btn.classList.add('-disabled');
-    setTimeout(function() { btn.classList.remove('-disabled') }, 500);
-  };
-  
+    setTimeout(() => btn.classList.remove('-disabled'), 500);
+  }
+
   render() {
     const { url } = this.props;
-    const {activeWorks} = this.state;
+    const { selectedWorks, categorisList } = this.state;
     const FilterBtn = ({ category }) => (
       <li className="filter__item">
-        <button className={`filter__btn ${activeWorks.indexOf(category)>=0 ? '-red' : '' }`} onClick={this.handleClick}>{category}</button>
+        <button className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : '' }`} onClick={this.handleClick}>{category}</button>
       </li>
     );
 
@@ -134,15 +114,19 @@ export default class Portfolio extends React.Component {
           </div>
           <div className="filter">
             <div className="filter__show-all">
-              <button onClick={this.activeAllWorks} className={`filter__btn -show-all ${this.state.activeWorks.length !== this.filterList.length ? '-active' : '' }` }>Show all</button>
+              <button onClick={this.showAllWorks} className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : '' }` }>Show all</button>
             </div>
             <ul className="filter__list">
-              {this.filterList.map(category => (
-                <FilterBtn category={category} key={category}/>
+              {categorisList.map(category => (
+                <FilterBtn category={category} key={category} />
               ))}
             </ul>
           </div>
-          {works.length && <Works works={works.filter(this.filter)} />}
+          {
+            works.length
+              ? <Works works={works.filter(this.worksCountFor)} />
+              : null
+          }
         </section>
       </Layout>
     );
