@@ -21,6 +21,12 @@ export default class Blog extends React.Component {
 
     this.posts = [];
   }
+  componentDidMount() {
+    document.body.style.overflowY = 'hidden';
+  }
+  componentWillUnmount() {
+    document.body.style.overflowY = 'initial';
+  }
   render() {
     const { url, posts } = this.props;
     return (
