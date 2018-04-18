@@ -75,6 +75,9 @@ export default class Portfolio extends React.Component {
       selectedWorks.splice(position, 1);
     }
 
+    const url = `/portfolio?chosen=${selectedWorks.join(',')}`;
+    window.history.replaceState({ url }, '', url);
+
     this.setState({ selectedWorks });
   }
 
