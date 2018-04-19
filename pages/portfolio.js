@@ -24,7 +24,7 @@ export default class Portfolio extends React.Component {
     super(props);
 
     this.state = {
-      ...this.getGategoriesList.call(this)
+      ...this.getGategoriesList(props.url)
     };
 
     this.worksCountFor = this.worksCountFor.bind(this);
@@ -39,8 +39,7 @@ export default class Portfolio extends React.Component {
     subnavigation.parentElement.classList.add('is-link');
   }
 
-  getGategoriesList() {
-    const { url } = this.props;
+  getGategoriesList(url) {
     const chosenCategory = url.query.chosen;
     const categories = works
       .map(work => work.category.main)
@@ -82,7 +81,7 @@ export default class Portfolio extends React.Component {
   }
 
   showAllWorks(e) {
-    let selectedWorks = this.state.selectedWorks.slice();
+    const selectedWorks = this.state.selectedWorks.slice();
     const { categorisList } = this.state;
 
     if (selectedWorks.length === categorisList.length) {
@@ -90,8 +89,7 @@ export default class Portfolio extends React.Component {
       return;
     }
 
-    selectedWorks = categorisList.slice();
-    this.setState({ selectedWorks });
+    this.setState({ selectedWorks: categorisList });
   }
 
   disabledBtn(btn) {
@@ -104,7 +102,11 @@ export default class Portfolio extends React.Component {
     const { selectedWorks, categorisList } = this.state;
     const FilterBtn = ({ category }) => (
       <li className="filter__item">
-        <button className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : '' }`} onClick={this.handleClick}>{category}</button>
+        <button
+          className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : '' }`}
+          onClick={this.handleClick}>
+          {category}
+        </button>
       </li>
     );
 
@@ -117,7 +119,11 @@ export default class Portfolio extends React.Component {
           </div>
           <div className="filter">
             <div className="filter__show-all">
-              <button onClick={this.showAllWorks} className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : '' }` }>Show all</button>
+              <button
+                onClick={this.showAllWorks}
+                className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : '' }` }>
+                Show all
+              </button>
             </div>
             <ul className="filter__list">
               {categorisList.map(category => (
