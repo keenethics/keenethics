@@ -121,6 +121,10 @@
     line-height: 1.5;
     margin: 0 0 14px;
   }
+  ol > li > p,
+  ul > li > p {
+    margin: 7px 0 2px;
+  }
   code {
     display: block;
     padding: 20px 25px;

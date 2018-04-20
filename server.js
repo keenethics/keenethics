@@ -247,6 +247,11 @@ app.prepare().then(() => {
     if (req.params && req.params.name) {
       fs.stat(path.resolve(__dirname, `posts/${req.params.name}.md`), (err) => {
         if (err == null) {
+          const filename = `${req.params.name}.md`;
+          const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt).map(post => post.filename);
+          const postIndex = sortedPosts.indexOf(filename);
+          const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].replace('.md', '')}`;
+          const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].replace('.md', '')}`;
           const text = fs.readFileSync(path.resolve(__dirname, `posts/${req.params.name}.md`), 'utf8');
 
           const content = text.substring(text.indexOf('\n\n'));
@@ -274,6 +279,8 @@ app.prepare().then(() => {
             image,
             date,
             content,
+            hrefToPreviousPost,
+            hrefToNextPost,
           };
 
           res.send(post);

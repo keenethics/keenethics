@@ -1,0 +1,120 @@
+.portfolio {
+   padding: 60px 30px;
+   position: relative;
+   @media (max-width: 500px) {
+      padding: 40px 20px;
+   }
+}
+.portfolio__background {
+   min-height: 100vh;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+   background: linear-gradient(135deg, #071e40 0%, #662938 80%);
+}
+.portfolio__header {
+   margin-bottom: 50px;
+}
+.portfolio__title {
+   font-size: 45px;
+   text-align: center;
+   color: #fff;
+   font-weight: 400;
+   @media (max-width: 1200px ) {
+      margin-bottom: 40px;
+   }
+}
+.portfolio-works__row {
+   margin-bottom: 30px;
+}
+.portfolio-works__category-title {
+   margin-bottom: 5px;
+   text-align: center;
+   font-size: 30px;
+   color: #E3504E;
+}
+.portfolio__list {
+   margin: 0 -15px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   list-style: none;
+}
+.portfolio__item {
+   box-sizing: border-box;
+   padding: 15px;
+   width: 300px;
+   transition: transform .1s ease-in-out;
+   
+   @media (max-width: 350px) {
+      width: 100%;
+   }
+}
+.portfolio__item-link {
+   display: block;
+   text-decoration: none;
+   height: 100%;
+}
+.portfolio__item-figure {
+   background: #fff;
+   border-radius: 8px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
+   transition: box-shadow .2s ease-in-out;
+   &:hover {
+      // transform: scale(1.01);
+      box-shadow: 3px 3px 25px rgba(0, 0, 0, .7);
+   }
+}
+.portfolio__item-img {
+   width: 100%;
+}
+.portfolio__figcaption {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 15px;
+   flex-grow: 1;
+}
+.portfolio__item-title {
+   margin-bottom: 10px;
+   color: rgba($color: #000, $alpha: .9);
+   font-size: 24px;
+   font-weight: 600;
+}
+.portfolio__item-categories {
+   margin: 0 -5px 15px -5px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   font-size: 14px;
+}
+.portfolio__item-category {
+   padding: 2px 12px 2px 5px;
+   color: rgba($color: #000, $alpha: .7);
+   position: relative;
+   &:after {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+   }
+   &:last-child {
+      padding-right: 5px;
+      &:after {
+         display: none;
+      }
+   }
+}
+.portfolio__item-descr {
+   color: rgba($color: #000, $alpha: .9);;
+   text-align: center;
+   line-height: 1.2;
+}

@@ -47,8 +47,8 @@ export default class Index extends React.Component {
     if (typeof Skype !== 'undefined') {
       Skype.ui({
         name: 'chat',
-        element: 'SkypeButton_Call_hermannalexey_1',
-        participants: ['hermannalexey'],
+        element: 'SkypeButton_Call_maxsav',
+        participants: ['maxsav28'],
       });
     }
   }
@@ -99,7 +99,7 @@ export default class Index extends React.Component {
                 <a href="mailto:founders@keenethics.com">founders@keenethics.com</a>
                 <i>
                   Drop Us a Letter or
-                  <div className="skype_button" id="SkypeButton_Call_hermannalexey_1" />
+                  <div className="skype_button" id="SkypeButton_Call_maxsav" />
                 </i>
               </div>
               <div className="contact-item">

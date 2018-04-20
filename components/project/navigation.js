@@ -3,35 +3,34 @@ import Link from 'next/link';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { config } from '../../main.config';
+import { works } from '../../main.config';
 
 const Navigation = ({ url }) => {
-  const { navigation } = config;
+  const { navigation } = works;
   const project = {
     prev: {},
     current: {},
     next: {},
   };
-
-  const { points } = navigation.find(e => e.name === 'Portfolio');
-
-  points.forEach((n, i) => {
-    const index = n.href === url.pathname ? i : -1;
+  
+  works.forEach((work, i) => {
+    const index = work.href === url.pathname.substring(1) ? i : -1;
 
     if (index > -1) {
-      project.current = points[index];
+      project.current = works[index];
 
-      if (points[index + 1]) {
-        project.next = points[index + 1];
+      if (works[index + 1]) {
+        project.next = works[index + 1];
       } else {
-        project.next = points[0];
+        project.next = works[0];
       }
 
-      if (points[index - 1]) {
-        project.prev = points[index - 1];
+      if (works[index - 1]) {
+        project.prev = works[index - 1];
       } else {
-        project.prev = points[points.length - 1];
+        project.prev = works[works.length - 1];
       }
+      return;
     }
   });
 
@@ -40,12 +39,12 @@ const Navigation = ({ url }) => {
       <div className="project-navigation-inner">
         <Link href={project.prev.href}>
           <a className="project-navigation-prev">
-            {project.prev.name}
+            {project.prev.title}
           </a>
         </Link>
         <Link href={project.next.href}>
           <a className="project-navigation-next">
-            {project.next.name}
+            {project.next.title}
           </a>
         </Link>
       </div>

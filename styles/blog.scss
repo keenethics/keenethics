@@ -84,3 +84,25 @@
     }
   }
 }
+
+.blog-post-navigation {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  .prev-arrow,
+  .next-arrow {
+    cursor: pointer;
+    padding: 10px;
+    color: blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .prev-arrow {
+    margin-right: 30px;
+    margin-left: -30px;
+  }
+}
