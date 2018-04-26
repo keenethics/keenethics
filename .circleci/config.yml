@@ -1,14 +1,12 @@
 version: 2
-experimental:
-  notify:
-    branches:
-      only:
-        - master
 jobs:
   build:
     docker:
       - image: circleci/node:6.11
     working_directory: ~/keenethics
+    branches:
+      only:
+        - master
     steps:
       - checkout
       - restore_cache:
@@ -23,7 +21,10 @@ jobs:
       - run:
           name: Fix host authenticity for 107.170.121.178
           command: ssh-keyscan 107.170.121.178 >> ~/.ssh/known_hosts
-      - run: yarn deploy
       - add_ssh_keys:
           fingerprints:
-            - "98:07:43:e3:59:01:09:83:3d:69:1c:eb:ca:17:33:78"
+            - "MD5:04:13:38:a4:16:d4:ac:10:99:a7:4c:b4:4e:62:96:1b"
+      - run:
+          name: Install rsync
+          command: sudo apt install rsync
+      - run: yarn deploy
