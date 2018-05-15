@@ -102,15 +102,17 @@ const ProjectPrix = ({ url }) => (
             <div className="tags-blog">
               <p>Technology stack for backend:</p>
               <div className="tags">
-                <div className="tag">Feentech</div>
-                <div className="tag">E-Commerce</div>
-                <div className="tag">Education</div>
+                <div className="tag">Node.js</div>
+                <div className="tag">Express</div>
+                <div className="tag">Mongo</div>
               </div>
               <p>Technology stack for Android and IOS:</p>
               <div className="tags">
-                <div className="tag">Feentech</div>
-                <div className="tag">E-Commerce</div>
-                <div className="tag">Education</div>
+                <div className="tag">Ionic</div>
+                <div className="tag">Cordova</div>
+                <div className="tag">BLE</div>
+                <div className="tag">Google Maps</div>
+                <div className="tag">Geolocation</div>
               </div>
             </div>
             <p>
