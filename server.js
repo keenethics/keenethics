@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
-const { mailgunAuth, hubSpot } = require('./config');
+const { mailgunAuth, hubSpot } = require('./private.config');
 const { postsDatePair } = require('./postsort.config');
 
 const Router = require('./routes').Router;

@@ -14,7 +14,7 @@ const ProjectPrix = ({ url }) => (
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
-              <h2 className="title">Prix</h2>
+              <h2 className="title">Paceup</h2>
               <h3 className="duration">
                 <span>Duration:</span> 1 month. 1 developer. Full cycle of React web app.
               </h3>
@@ -28,7 +28,7 @@ const ProjectPrix = ({ url }) => (
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
                 <img src="/static/images/project/macbook.png" alt="macbook" className="macbook" />
-                <img src="/static/images/project/prix.png" alt="Prix" className="screen" />
+                <img src="/static/images/project/paceup.png" alt="Prix" className="screen" />
               </div>
             </div>
             <Background />
@@ -66,7 +66,7 @@ const ProjectPrix = ({ url }) => (
               </div>
             </div>
             <a
-              href="https://www.prix.ai"
+              href="https://www.paceup.com/"
               rel="noopener noreferrer"
               target="_blank"
               className="link"

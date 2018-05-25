@@ -211,16 +211,16 @@ export const config = {
           href: '/portfolio?chosen=All'
         },
         {
-          name: 'Business Digitalization',
-          href: '/portfolio?chosen=Business Digitalization'
+          name: 'Business apps',
+          href: '/portfolio?chosen=Business apps'
         },
         {
-          name: 'Startups',
-          href: '/portfolio?chosen=Startups'
+          name: 'Educational apps',
+          href: '/portfolio?chosen=Educational apps'
         },
         {
-          name: 'MVP',
-          href: '/portfolio?chosen=MVP'
+          name: 'Consumer apps',
+          href: '/portfolio?chosen=Consumer apps'
         },
         {
           name: 'Other',
@@ -1023,7 +1023,7 @@ export const works = [
         href: 'project-knotel',
         imgSrc: 'Knotel.jpg',
         category: {
-          main: ['Business Digitalization'],
+          main: ['Business apps', 'Consumer apps'],
           additional: ['Real Estate']
         },
         description: 'Headquarters as a Service'
@@ -1032,7 +1032,7 @@ export const works = [
         href: 'project-the-check-network',
         imgSrc: 'The-Check-Network.jpg',
         category: {
-          main: ['Startups'],
+          main: ['Consumer apps'],
           additional: ['E-commerce']
         },
         description: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one'
@@ -1041,14 +1041,14 @@ export const works = [
         href: 'project-pollen',
         imgSrc: 'Pollen.jpg',
         category: {
-          main: ['Startups']
+          main: ['Educational apps']
         },
         description: 'Organizing social-campaigns via Gmail contacts'
       }, {
         title: 'Wargaming',
         href: 'project-wargaming',
         category: {
-          main: ['MVP', 'Business Digitalization']
+          main: ['Business apps']
         },
         imgSrc: 'Wargaming.jpg',
         description: 'Platform for forecasting and validation of business strategies for companies.'
@@ -1056,7 +1056,7 @@ export const works = [
         title: 'BarFrogs',
         href: 'project-barfrogs',
         category: {
-          main: ['Startups']
+          main: ['Consumer apps']
         },
         imgSrc: 'BarFrogs.jpg',
         description: 'Find an event you are interested in'
@@ -1064,7 +1064,7 @@ export const works = [
         title: 'Black Book',
         href: 'project-black-book',
         category: {
-          main: ['Business Digitalization']
+          main: ['Business apps']
         },
         imgSrc: 'Black-Book.jpg',
         description: 'Display the statistics of company employees'
@@ -1073,16 +1073,16 @@ export const works = [
         href: 'project-comic-english',
         imgSrc: 'ComicEnglish.jpg',
         category: {
-          main: ['Startups'],
+          main: ['Educational apps'],
           additional: ['E-Learning']
         },
         description: 'Learn English while chatting with AI'
       }, {
-        title: 'Prix',
-        href: 'project-prix',
-        imgSrc: 'Prix.jpg',
+        title: 'Paceup',
+        href: 'project-paceup',
+        imgSrc: 'paceup.png',
         category: {
-          main: ['Startups'],
+          main: ['Business apps'],
           additional: ['AI']
         },
         description: 'Increasing loyalty of existing clients'
@@ -1091,7 +1091,7 @@ export const works = [
         href: 'project-knote',
         imgSrc: 'Knote.jpg',
         category: {
-          main: ['Startups'],
+          main: ['Other'],
           additional: ['Team collaboration tool']
         },
         description: 'A tool for online collaboration and task-management'
@@ -1100,7 +1100,7 @@ export const works = [
         href: 'project-my-grass-growth',
         imgSrc: 'My-Grass-Growth.jpg',
         category: {
-          main: ['Business Digitalization'],
+          main: ['Business apps'],
           additional: ['Farming']
         },
         description: 'Keep you cows healthy and well-fed'
@@ -1110,7 +1110,7 @@ export const works = [
         href: 'project-workbooking',
         imgSrc: 'Workbooking.jpg',
         category: {
-          main: ['MVP'],
+          main: ['Consumer apps'],
           additional: ['Job platform']
         },
         description: 'Get hired or find someone to do the job for you'
@@ -1119,7 +1119,7 @@ export const works = [
         href: 'project-tetrami',
         imgSrc: 'Tetrami.jpg',
         category: {
-          main: ['Other'],
+          main: ['Consumer apps'],
           additional: ['E-commerce']
         },
         description: 'Online discounting'
@@ -1128,7 +1128,7 @@ export const works = [
         href: 'project-phenix',
         imgSrc: 'Phenix.jpg',
         category: {
-          main: ['Other']
+          main: ['Business apps']
         },
         description: 'Online video-streaming'
       }, { 
@@ -1136,7 +1136,7 @@ export const works = [
         href: 'project-plutio',
         imgSrc: 'Plutio.jpg',
         category: {
-          main: ['Startups']
+          main: ['Business apps']
         },
         description: 'Business management platform'
       }, {
@@ -1144,7 +1144,7 @@ export const works = [
         href: 'project-self-leaders',
         imgSrc: 'SelfLeaders.jpg',
         category: {
-          main: ['Startups'],
+          main: ['Educational apps'],
           additional: ['E-Learning']
         },
         description: 'Personal Growth Tool' 
@@ -1153,7 +1153,7 @@ export const works = [
         href: 'project-pree',
         imgSrc: 'Pree.jpg',
         category: {
-          main: ['Startups'],
+          main: ['Consumer apps'],
           additional: ['IoT']
         },
         description: 'Stop losing your stuff' },
