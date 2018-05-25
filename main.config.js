@@ -1091,7 +1091,7 @@ export const works = [
         href: 'project-knote',
         imgSrc: 'Knote.jpg',
         category: {
-          main: ['Other'],
+          main: ['Business apps'],
           additional: ['Team collaboration tool']
         },
         description: 'A tool for online collaboration and task-management'
