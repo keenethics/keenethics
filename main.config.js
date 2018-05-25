@@ -1023,7 +1023,7 @@ export const works = [
         href: 'project-knotel',
         imgSrc: 'Knotel.jpg',
         category: {
-          main: ['Business apps', 'Consumer apps'],
+          main: ['Consumer apps'],
           additional: ['Real Estate']
         },
         description: 'Headquarters as a Service'
