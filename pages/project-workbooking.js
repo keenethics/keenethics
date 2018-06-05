@@ -15,13 +15,9 @@ const ProjectWorkbooking = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">WorkBooking</h2>
-              <h3 className="duration"><span>Duration:</span> 4 months, 3 developers</h3>
-              <p className="description">
-                Get hired or find someone to do the job for you
-              </p>
               <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">React</div>
+                <div className="tag">Consumer apps</div>
+                <div className="tag">Job platform</div>
               </div>
             </div>
             <div className="project-content-preview">
@@ -33,41 +29,76 @@ const ProjectWorkbooking = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
-            <p>
-              A service where any kind of craftsperson can find a relevant job.
-            </p>
-            <p>
-              Workbooking.net promo website is intended to introduce new service, describe benefits
-              for all  audiences, and increase brand awareness and the number of service users.
-            </p>
-            <p>
-              Sign up and get new possibilities to manage your schedule and do what you like most.
-              Whether it’s just a hobby or what you want to do professionally, you are going to be
-              able to create your own working conditions tailored up to your personality and
-              preferences! If you are looking for professionals in a specific field, you can find a
-              broad variety of categories on our platform that give you a great pool to surf through
-              and choose what you are looking for.
-            </p>
-            <div className="project-achievements">
-              <h3>Achievements</h3>
-              <ul>
-                <li>
-                  Launched MVP that has enabled target audience validation and gathered early
-                  adopters. The app is on pause due to difficulties licences and other legal
-                  proceedings.
-                </li>
-              </ul>
-            </div>
+	    <div className="project-content-chapter">
+	      <p className="chapter-title">What is the purpose of the app?</p>
+	      <p className="chapter-paragraph">Workbooking introduces new service with benefits for all audiences.</p>
+	      <p className="chapter-paragraph">Workbooking is the place that unites people who are looking for individuals in a specific fields for a specific task at particular time and place; and professionals who are looking for a part-time job.</p>
+	    </div>
+
+	    <div className="project-content-chapter">
+	      <p className="chapter-title">Our task</p>
+	      <p className="chapter-paragraph">Our task was to develop and release easy and fast platform with the search and calander available for any devices.</p>
+	    </div>
+
+	    <div className="double-collumn-wrapper">
+	      <div className="collumn">
+		<img className="" src="static/images/project/workbooking-persona.png" />
+	      </div>
+	      <div className="collumn">
+		<div className="project-content-chapter">
+		  <p className="chapter-title">User personas</p>
+		  <p className="chapter-paragraph">In current case, we had 2 user personas, which represent 2 major user groups, there are Customers and Professionals. Focused on the needs and expectations of these user personas, we figured out a clear picture of user’s expectations and how they are likely to use the site.</p>
+		</div>
+	      </div>
+	    </div>
+
+	    <div className="project-content-chapter">
+	      <p className="chapter-title">Wireframes</p>
+	      <p className="chapter-paragraph">We used wireframing to provide a visual understanding of a platform early in a project. 
+		A website service was separated at the structural level. Content and functionality were laid out on the platform with taking into account user needs and user journeys.</p>
+	      <p className="chapter-paragraph">We use this practice early in the development process to establish the basic structure of the website before visual design and content is added. </p>
+	    </div>
+	    
+          </div>
+	  
+	  <div className="project-content-summary custom" style={{ background: baseColor }}>
+	    <div className="three-collumn-wrapper">
+	      <img className="collumn" src="static/images/project/workbooking-1-1.png" />
+	      <img className="collumn" src="static/images/project/workbooking-1-2.png" />
+	      <img className="collumn" src="static/images/project/workbooking-1-3.png" />
+	    </div>
+	    <div className="three-collumn-wrapper">
+	      <img className="collumn" src="static/images/project/workbooking-2-1.png" />
+	      <img className="collumn" src="static/images/project/workbooking-2-2.png" />
+	      <img className="collumn" src="static/images/project/workbooking-2-3.png" />	      
+	    </div>
+          </div>
+
+	  <div className="project-content-more">
+	    <div className="project-content-chapter">
+	      <p className="chapter-title">Technology</p>
+	      <div className="chapter-paragraph">
+		<div className="tags">
+                  <div className="tag incontent">Meteor</div>
+                  <div className="tag incontent">React</div>
+		  <div className="tag incontent">Mongo</div>
+		</div>
+	      </div>
+
+	    </div>
+
+	  </div>
+	  
             <a
-              href="http://workbooking.net"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
+               href="http://workbooking.net"
+               rel="noopener noreferrer"
+               target="_blank"
+               className="link"
+               style={{ background: baseColor }}
+               >
               Look at the project
             </a>
-          </div>
+          
           <Navigation url={url} />
         </div>
       </div>
