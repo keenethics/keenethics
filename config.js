@@ -1,15 +1,8 @@
 const mailgunAuth = {
   auth: {
-    api_key: process.env.MAIL_API_KEY,
-    domain: process.env.MAIL_DOMAIN,
+    api_key: 'key-dd631dcfbf75c356371ed4abe120c84d',
+    domain: 'keenethics.com',
   },
 };
 
 module.exports.mailgunAuth = mailgunAuth;
-
-const hubSpot = {
-  formId: process.env.HUB_SPOT_FORM_ID,
-  userId: process.env.HUB_SPOT_USER_ID,
-};
-
-module.exports.hubSpot = hubSpot;
