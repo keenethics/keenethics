@@ -53,7 +53,7 @@ const ProjectWorkbooking = ({ url }) => (
 	    </div>
 
 	    <div className="project-content-chapter">
-	      <p className="chapter-title">Wireframes</p>
+	      <p className="chapter-title custom">Wireframes</p>
 	      <p className="chapter-paragraph">We used wireframing to provide a visual understanding of a platform early in a project. 
 		A website service was separated at the structural level. Content and functionality were laid out on the platform with taking into account user needs and user journeys.</p>
 	      <p className="chapter-paragraph">We use this practice early in the development process to establish the basic structure of the website before visual design and content is added. </p>
@@ -84,21 +84,67 @@ const ProjectWorkbooking = ({ url }) => (
 		  <div className="tag incontent">Mongo</div>
 		</div>
 	      </div>
-
+	    </div>
+	    
+	    <div className="project-content-chapter">
+	      <img className="chapter-image" src="static/images/project/workbooking-peoople.png" />
 	    </div>
 
+	    <div className="project-content-chapter custom">
+	      <p className="chapter-title">Challenges</p>
+	      <div className="double-collumn-wrapper">
+		<div className="collumn">
+		  <div className="project-content-chapter">
+		    <p className="chapter-subtitle">Customers</p>
+		    <p className="chapter-paragraph">iSimplify finding occasional demand of some services for businesses, NGOs and private sector. As well as provide guarantees of quality and reliability of these services.</p>
+		    <img className="chapter-image" src="static/images/project/workbooking-chalanges-1.png" />
+		  </div>
+		</div>
+		<div className="collumn">
+		  <div className="project-content-chapter">
+		    <p className="chapter-subtitle">Professionals</p>
+		    <p className="chapter-paragraph">Provide oportunities for existing market of people who are looking for a part-time job on regular and flexible basis as well as increasing a number of clients.</p>
+		    <img className="chapter-image" src="static/images/project/workbooking-chalanges-2.png" />
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+	    <div className="project-content-chapter custom">
+	      <div className="project-achievements">
+		<p className="chapter-subtitle">Achievement</p>
+		<ul>
+		  <li>Developed a platform for professionals who are looking for part-time job.</li>
+		  <li>Developed feature for managing schedule of professionals.</li>
+		  <li>Developed easy search of appropriate candidates among different fields for a range of goals diversity at one place.</li>
+		</ul>
+	      </div>
+	    </div>
+	    
+	    <div className="project-content-chapter custom">
+	      <img className="chapter-image" src="static/images/project/workbooking-monitors.png" />
+	    </div>
+
+	    <div className="project-content-chapter custom">
+	      <p className="chapter-title">Clien's feedback</p>
+	      <p className="chapter-paragraph italic short">"I am really impressed with the different tools and tips that we also got to bring with us, extremely useful."</p>
+	    </div>
+
+	    <div className="project-content-chapter custom">
+	      <img className="chapter-image" src="static/images/project/workbooking-leptop.png" />
+	    </div>
+
+	     <div className="project-content-chapter custom">	  
+              <a
+		 href="http://workbooking.net"
+		 rel="noopener noreferrer"
+		 target="_blank"
+		 className="link"
+		 style={{ background: '#149c93' }} >
+		Look at the project
+              </a>
+	    </div>
 	  </div>
-	  
-            <a
-               href="http://workbooking.net"
-               rel="noopener noreferrer"
-               target="_blank"
-               className="link"
-               style={{ background: baseColor }}
-               >
-              Look at the project
-            </a>
-          
           <Navigation url={url} />
         </div>
       </div>
