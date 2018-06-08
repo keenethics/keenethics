@@ -1014,7 +1014,7 @@ export const team = [
 export const works = [
   {
     title: 'Knotel',
-    href: 'project-knotel',
+    href: '/project-knotel',
     imgSrc: 'Knotel.jpg',
     category: {
       main: ['Consumer apps'],
@@ -1024,7 +1024,7 @@ export const works = [
   },
   {
     title: 'The Check Network',
-    href: 'project-the-check-network',
+    href: '/project-the-check-network',
     imgSrc: 'The-Check-Network.jpg',
     category: {
       main: ['Consumer apps'],
@@ -1034,7 +1034,7 @@ export const works = [
   },
   {
     title: 'Pollen',
-    href: 'project-pollen',
+    href: '/project-pollen',
     imgSrc: 'Pollen.jpg',
     category: {
       main: ['Educational apps'],
@@ -1043,7 +1043,7 @@ export const works = [
   },
   {
     title: 'Wargaming',
-    href: 'project-wargaming',
+    href: '/project-wargaming',
     category: {
       main: ['Business apps'],
     },
@@ -1052,7 +1052,7 @@ export const works = [
   },
   {
     title: 'BarFrogs',
-    href: 'project-barfrogs',
+    href: '/project-barfrogs',
     category: {
       main: ['Consumer apps'],
     },
@@ -1061,7 +1061,7 @@ export const works = [
   },
   {
     title: 'Black Book',
-    href: 'project-black-book',
+    href: '/project-black-book',
     category: {
       main: ['Business apps'],
     },
@@ -1070,7 +1070,7 @@ export const works = [
   },
   {
     title: 'ComicEnglish',
-    href: 'project-comic-english',
+    href: '/project-comic-english',
     imgSrc: 'ComicEnglish.jpg',
     category: {
       main: ['Educational apps'],
@@ -1080,7 +1080,7 @@ export const works = [
   },
   {
     title: 'Paceup',
-    href: 'project-paceup',
+    href: '/project-paceup',
     imgSrc: 'paceup.png',
     category: {
       main: ['Business apps'],
@@ -1090,7 +1090,7 @@ export const works = [
   },
   {
     title: 'Knote',
-    href: 'project-knote',
+    href: '/project-knote',
     imgSrc: 'Knote.jpg',
     category: {
       main: ['Business apps'],
@@ -1100,7 +1100,7 @@ export const works = [
   },
   {
     title: 'My Grass Growth',
-    href: 'project-my-grass-growth',
+    href: '/project-my-grass-growth',
     imgSrc: 'My-Grass-Growth.jpg',
     category: {
       main: ['Business apps'],
@@ -1110,7 +1110,7 @@ export const works = [
   },
   {
     title: 'WorkBooking',
-    href: 'project-workbooking',
+    href: '/project-workbooking',
     imgSrc: 'Workbooking.jpg',
     category: {
       main: ['Consumer apps'],
@@ -1120,7 +1120,7 @@ export const works = [
   },
   {
     title: 'Tetrami',
-    href: 'project-tetrami',
+    href: '/project-tetrami',
     imgSrc: 'Tetrami.jpg',
     category: {
       main: ['Consumer apps'],
@@ -1130,7 +1130,7 @@ export const works = [
   },
   {
     title: 'Phenix',
-    href: 'project-phenix',
+    href: '/project-phenix',
     imgSrc: 'Phenix.jpg',
     category: {
       main: ['Business apps'],
@@ -1139,7 +1139,7 @@ export const works = [
   },
   {
     title: 'Plutio',
-    href: 'project-plutio',
+    href: '/project-plutio',
     imgSrc: 'Plutio.jpg',
     category: {
       main: ['Business apps'],
@@ -1148,7 +1148,7 @@ export const works = [
   },
   {
     title: 'SelfLeaders',
-    href: 'project-self-leaders',
+    href: '/project-self-leaders',
     imgSrc: 'SelfLeaders.jpg',
     category: {
       main: ['Educational apps'],
@@ -1158,7 +1158,7 @@ export const works = [
   },
   {
     title: 'Pree',
-    href: 'project-pree',
+    href: '/project-pree',
     imgSrc: 'Pree.jpg',
     category: {
       main: ['Consumer apps'],
