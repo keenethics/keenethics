@@ -208,25 +208,25 @@ export const config = {
       points: [
         {
           name: 'All',
-          href: '/portfolio?chosen=All'
+          href: '/portfolio?chosen=All',
         },
         {
           name: 'Business apps',
-          href: '/portfolio?chosen=Business apps'
+          href: '/portfolio?chosen=Business apps',
         },
         {
           name: 'Educational apps',
-          href: '/portfolio?chosen=Educational apps'
+          href: '/portfolio?chosen=Educational apps',
         },
         {
           name: 'Consumer apps',
-          href: '/portfolio?chosen=Consumer apps'
+          href: '/portfolio?chosen=Consumer apps',
         },
         {
           name: 'Other',
-          href: '/portfolio?chosen=Other'
+          href: '/portfolio?chosen=Other',
         },
-      ]
+      ],
     },
     {
       name: 'Blog',
@@ -741,13 +741,6 @@ export const superteam = [
       'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
     avatar: 'viktoria_m.jpg',
   },
-  /*{
-    name: 'Sofia I.',
-    position: 'Steward',
-    description:
-      'She has necessary organizational skills and she is good in orbital and interplanetary communication. She can even talk with creatures from outer space.',
-    avatar: 'sofia_i.jpg',
-  },*/
   {
     name: 'Alexandr S.',
     position: 'Mission Support Officer',
@@ -987,31 +980,31 @@ export const team = [
       {
         name: 'Taras K.',
         position: 'Full-stack js Astronaut',
-        description:'',
+        description: '',
         avatar: 'taras_k.jpg',
       },
       {
         name: 'Oleh K.',
         position: 'Full-stack js Astronaut',
-        description:'',
+        description: '',
         avatar: 'oleh_k.jpg',
       },
       {
         name: 'Max S.',
         position: 'Full-stack js Astronaut',
-        description:'',
+        description: '',
         avatar: 'max_s.jpg',
       },
       {
         name: 'Vadym S.',
         position: 'Full-stack js Astronaut',
-        description:'',
+        description: '',
         avatar: 'vadym_s.jpg',
       },
       {
         name: 'Dmytro P.',
         position: 'Full-stack js Astronaut',
-        description:'',
+        description: '',
         avatar: 'dmytro_p.jpg',
       },
     ],
@@ -1019,142 +1012,158 @@ export const team = [
 ];
 
 export const works = [
-      { title: 'Knotel',
-        href: 'project-knotel',
-        imgSrc: 'Knotel.jpg',
-        category: {
-          main: ['Consumer apps'],
-          additional: ['Real Estate']
-        },
-        description: 'Headquarters as a Service'
-      }, {
-        title: 'The Check Network',
-        href: 'project-the-check-network',
-        imgSrc: 'The-Check-Network.jpg',
-        category: {
-          main: ['Consumer apps'],
-          additional: ['E-commerce']
-        },
-        description: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one'
-      }, {
-        title: 'Pollen',
-        href: 'project-pollen',
-        imgSrc: 'Pollen.jpg',
-        category: {
-          main: ['Educational apps']
-        },
-        description: 'Organizing social-campaigns via Gmail contacts'
-      }, {
-        title: 'Wargaming',
-        href: 'project-wargaming',
-        category: {
-          main: ['Business apps']
-        },
-        imgSrc: 'Wargaming.jpg',
-        description: 'Platform for forecasting and validation of business strategies for companies.'
-      }, {
-        title: 'BarFrogs',
-        href: 'project-barfrogs',
-        category: {
-          main: ['Consumer apps']
-        },
-        imgSrc: 'BarFrogs.jpg',
-        description: 'Find an event you are interested in'
-      }, {
-        title: 'Black Book',
-        href: 'project-black-book',
-        category: {
-          main: ['Business apps']
-        },
-        imgSrc: 'Black-Book.jpg',
-        description: 'Display the statistics of company employees'
-      }, {
-        title: 'ComicEnglish',
-        href: 'project-comic-english',
-        imgSrc: 'ComicEnglish.jpg',
-        category: {
-          main: ['Educational apps'],
-          additional: ['E-Learning']
-        },
-        description: 'Learn English while chatting with AI'
-      }, {
-        title: 'Paceup',
-        href: 'project-paceup',
-        imgSrc: 'paceup.png',
-        category: {
-          main: ['Business apps'],
-          additional: ['AI']
-        },
-        description: 'Increasing loyalty of existing clients'
-      }, {
-        title: 'Knote',
-        href: 'project-knote',
-        imgSrc: 'Knote.jpg',
-        category: {
-          main: ['Business apps'],
-          additional: ['Team collaboration tool']
-        },
-        description: 'A tool for online collaboration and task-management'
-      }, {
-        title: 'My Grass Growth',
-        href: 'project-my-grass-growth',
-        imgSrc: 'My-Grass-Growth.jpg',
-        category: {
-          main: ['Business apps'],
-          additional: ['Farming']
-        },
-        description: 'Keep you cows healthy and well-fed'
-      },
-      {
-        title: 'WorkBooking',
-        href: 'project-workbooking',
-        imgSrc: 'Workbooking.jpg',
-        category: {
-          main: ['Consumer apps'],
-          additional: ['Job platform']
-        },
-        description: 'Get hired or find someone to do the job for you'
-      }, {
-        title: 'Tetrami',
-        href: 'project-tetrami',
-        imgSrc: 'Tetrami.jpg',
-        category: {
-          main: ['Consumer apps'],
-          additional: ['E-commerce']
-        },
-        description: 'Online discounting'
-      }, {
-        title: 'Phenix',
-        href: 'project-phenix',
-        imgSrc: 'Phenix.jpg',
-        category: {
-          main: ['Business apps']
-        },
-        description: 'Online video-streaming'
-      }, { 
-        title: 'Plutio',
-        href: 'project-plutio',
-        imgSrc: 'Plutio.jpg',
-        category: {
-          main: ['Business apps']
-        },
-        description: 'Business management platform'
-      }, {
-        title: 'SelfLeaders',
-        href: 'project-self-leaders',
-        imgSrc: 'SelfLeaders.jpg',
-        category: {
-          main: ['Educational apps'],
-          additional: ['E-Learning']
-        },
-        description: 'Personal Growth Tool' 
-      }, {
-        title: 'Pree',
-        href: 'project-pree',
-        imgSrc: 'Pree.jpg',
-        category: {
-          main: ['Consumer apps'],
-          additional: ['IoT']
-        },
-        description: 'Stop losing your stuff' },
-    ];
+  {
+    title: 'Knotel',
+    href: 'project-knotel',
+    imgSrc: 'Knotel.jpg',
+    category: {
+      main: ['Consumer apps'],
+      additional: ['Real Estate'],
+    },
+    description: 'Headquarters as a Service',
+  },
+  {
+    title: 'The Check Network',
+    href: 'project-the-check-network',
+    imgSrc: 'The-Check-Network.jpg',
+    category: {
+      main: ['Consumer apps'],
+      additional: ['E-commerce'],
+    },
+    description: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one',
+  },
+  {
+    title: 'Pollen',
+    href: 'project-pollen',
+    imgSrc: 'Pollen.jpg',
+    category: {
+      main: ['Educational apps'],
+    },
+    description: 'Organizing social-campaigns via Gmail contacts',
+  },
+  {
+    title: 'Wargaming',
+    href: 'project-wargaming',
+    category: {
+      main: ['Business apps'],
+    },
+    imgSrc: 'Wargaming.jpg',
+    description: 'Platform for forecasting and validation of business strategies for companies.',
+  },
+  {
+    title: 'BarFrogs',
+    href: 'project-barfrogs',
+    category: {
+      main: ['Consumer apps'],
+    },
+    imgSrc: 'BarFrogs.jpg',
+    description: 'Find an event you are interested in',
+  },
+  {
+    title: 'Black Book',
+    href: 'project-black-book',
+    category: {
+      main: ['Business apps'],
+    },
+    imgSrc: 'Black-Book.jpg',
+    description: 'Display the statistics of company employees',
+  },
+  {
+    title: 'ComicEnglish',
+    href: 'project-comic-english',
+    imgSrc: 'ComicEnglish.jpg',
+    category: {
+      main: ['Educational apps'],
+      additional: ['E-Learning'],
+    },
+    description: 'Learn English while chatting with AI',
+  },
+  {
+    title: 'Paceup',
+    href: 'project-paceup',
+    imgSrc: 'paceup.png',
+    category: {
+      main: ['Business apps'],
+      additional: ['AI'],
+    },
+    description: 'Increasing loyalty of existing clients',
+  },
+  {
+    title: 'Knote',
+    href: 'project-knote',
+    imgSrc: 'Knote.jpg',
+    category: {
+      main: ['Business apps'],
+      additional: ['Team collaboration tool'],
+    },
+    description: 'A tool for online collaboration and task-management',
+  },
+  {
+    title: 'My Grass Growth',
+    href: 'project-my-grass-growth',
+    imgSrc: 'My-Grass-Growth.jpg',
+    category: {
+      main: ['Business apps'],
+      additional: ['Farming'],
+    },
+    description: 'Keep you cows healthy and well-fed',
+  },
+  {
+    title: 'WorkBooking',
+    href: 'project-workbooking',
+    imgSrc: 'Workbooking.jpg',
+    category: {
+      main: ['Consumer apps'],
+      additional: ['Job platform'],
+    },
+    description: 'Get hired or find someone to do the job for you',
+  },
+  {
+    title: 'Tetrami',
+    href: 'project-tetrami',
+    imgSrc: 'Tetrami.jpg',
+    category: {
+      main: ['Consumer apps'],
+      additional: ['E-commerce'],
+    },
+    description: 'Online discounting',
+  },
+  {
+    title: 'Phenix',
+    href: 'project-phenix',
+    imgSrc: 'Phenix.jpg',
+    category: {
+      main: ['Business apps'],
+    },
+    description: 'Online video-streaming',
+  },
+  {
+    title: 'Plutio',
+    href: 'project-plutio',
+    imgSrc: 'Plutio.jpg',
+    category: {
+      main: ['Business apps'],
+    },
+    description: 'Business management platform',
+  },
+  {
+    title: 'SelfLeaders',
+    href: 'project-self-leaders',
+    imgSrc: 'SelfLeaders.jpg',
+    category: {
+      main: ['Educational apps'],
+      additional: ['E-Learning'],
+    },
+    description: 'Personal Growth Tool',
+  },
+  {
+    title: 'Pree',
+    href: 'project-pree',
+    imgSrc: 'Pree.jpg',
+    category: {
+      main: ['Consumer apps'],
+      additional: ['IoT'],
+    },
+    description: 'Stop losing your stuff',
+  },
+];
