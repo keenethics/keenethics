@@ -24,22 +24,16 @@ function splitTo(arr, n) {
 }
 
 export default class AboutTeam extends React.Component {
-  constructor(props) {
-    super(props);
+  getSpaceships = () => team.map((t) => {
+    const spaceship = spaceships[t.key];
+    const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
+    const parade = splitTo(t.people, numberOfShips);
 
-    this.getSpaceships = this.getSpaceships.bind(this);
-  }
-  getSpaceships() {
-    return team.map((t) => {
-      const spaceship = spaceships[t.key];
-      const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
-      const parade = splitTo(t.people, numberOfShips);
+    return parade.map(p => (
+      p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} />)
+    ));
+  })
 
-      return parade.map(p => (
-        p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} />)
-      ));
-    });
-  }
   render() {
     const { url } = this.props;
 
