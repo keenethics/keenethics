@@ -10,21 +10,21 @@ import Works from '../components/portfolio/works';
 
 import { works } from '../main.config';
 
-const flatten = deepArray => deepArray.reduce( (a, b) => a.concat(b), []);
+const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(existCategory =>
     chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
 
   return categories.length ? categories : existCategories;
-}
+};
 
 export default class Portfolio extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      ...this.getGategoriesList(props.url)
+      ...this.getGategoriesList(props.url),
     };
 
     this.worksCountFor = this.worksCountFor.bind(this);
@@ -43,8 +43,8 @@ export default class Portfolio extends React.Component {
     const chosenCategory = url.query.chosen;
     const categories = works
       .map(work => work.category.main)
-      .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []) // flatten
-    const uniqCategories = [...new Set(categories)]
+      .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
+    const uniqCategories = [...new Set(categories)];
 
     const selectedWorks = chosenCategory && chosenCategory !== 'All'
       ? transformateCategories(chosenCategory.split(','), uniqCategories)
@@ -103,8 +103,9 @@ export default class Portfolio extends React.Component {
     const FilterBtn = ({ category }) => (
       <li className="filter__item">
         <button
-          className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : '' }`}
-          onClick={this.handleClick}>
+          className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : ''}`}
+          onClick={this.handleClick}
+        >
           {category}
         </button>
       </li>
@@ -121,7 +122,8 @@ export default class Portfolio extends React.Component {
             <div className="filter__show-all">
               <button
                 onClick={this.showAllWorks}
-                className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : '' }` }>
+                className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : ''}`}
+              >
                 Show all
               </button>
             </div>

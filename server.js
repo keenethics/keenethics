@@ -41,7 +41,10 @@ const sendContactToHubSpot = (hubSpotParameters) => {
 
 app.prepare().then(() => {
   const server = express();
-  const transporter = nodemailer.createTransport(mailgun(mailgunAuth));
+  let transporter = { sendMail: (mail) => { console.warn('Can\'t send email: Mailgun not initialized properly.', mail); } };
+  if (mailgunAuth.auth.api_key) {
+    transporter = nodemailer.createTransport(mailgun(mailgunAuth));
+  }
 
   server.set('port', process.env.PORT || 3000);
 

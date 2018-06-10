@@ -12,7 +12,7 @@ const Navigation = ({ url }) => {
     current: {},
     next: {},
   };
-  
+
   works.forEach((work, i) => {
     const index = work.href === url.pathname.substring(1) ? i : -1;
 
@@ -30,23 +30,22 @@ const Navigation = ({ url }) => {
       } else {
         project.prev = works[works.length - 1];
       }
-      return;
     }
   });
 
   return (
     <div className="project-navigation">
       <div className="project-navigation-inner">
-        <Link href={project.prev.href}>
+        {project.prev.href && <Link href={project.prev.href}>
           <a className="project-navigation-prev">
             {project.prev.title}
           </a>
-        </Link>
-        <Link href={project.next.href}>
+        </Link>}
+        {project.next.href && <Link href={project.next.href}>
           <a className="project-navigation-next">
             {project.next.title}
           </a>
-        </Link>
+                              </Link>}
       </div>
     </div>
   );

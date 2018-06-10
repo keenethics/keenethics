@@ -98,7 +98,7 @@ export default class LayoutHead extends React.Component {
         <link type="text/css" rel="stylesheet" href="/static/main.css" />
         <link type="image/vnd.microsoft.icon" rel="icon" href="/static/images/favicon.ico" />
         <link type="image/x-icon" rel="shortcut icon" href="/static/images/favicon.ico" />
-	<link rel="alternate" hreflang="en-US" href={`https://keenethics.com${currentURL.pathname}`} />
+        <link rel="alternate" hrefLang="en-US" href={`https://keenethics.com${currentURL.pathname}`} />
       </Head>
     );
   }
