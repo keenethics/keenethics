@@ -10,6 +10,13 @@
 1. Start build via `yarn build` command
 2. Start server via `yarn start` command
 
+## Commit strategy
+
+1. You should create new branches out of dev branch
+2. You should make a pull-request to dev branch
+3. You should check your open pull-requests and rebase them against dev in case any conflicts
+4. You should use master branch only for deployment
+
 ## Deploy
 
 1. Start build via `yarn deploy` command
