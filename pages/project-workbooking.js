@@ -87,7 +87,7 @@ const ProjectWorkbooking = ({ url }) => (
 	    </div>
 	    
 	    <div className="project-content-chapter">
-	      <img className="chapter-image" src="static/images/project/workbooking-peoople.png" />
+	      <img className="chapter-image" src="static/images/project/workbooking-people.png" />
 	    </div>
 
 	    <div className="project-content-chapter custom">
