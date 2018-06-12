@@ -133,17 +133,6 @@ const ProjectWorkbooking = ({ url }) => (
 	    <div className="project-content-chapter custom">
 	      <img className="chapter-image" src="static/images/project/workbooking-leptop.png" />
 	    </div>
-
-	     <div className="project-content-chapter custom">	  
-              <a
-		 href="http://workbooking.net"
-		 rel="noopener noreferrer"
-		 target="_blank"
-		 className="link"
-		 style={{ background: '#149c93' }} >
-		Look at the project
-              </a>
-	    </div>
 	  </div>
           <Navigation url={url} />
         </div>
