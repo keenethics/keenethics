@@ -87,7 +87,7 @@ const TechAppsAcc = ({ url }) => (
           your page will show up in the search engine more frequently;
         </li>
         <li>
-          <strong>No need for a dedicated map site</strong> - you don't have to
+          <strong>No need for a dedicated map site</strong> - you don&apos;t have to
           create an XML file for your site as Google will pick them for you.
         </li>
       </ul>
