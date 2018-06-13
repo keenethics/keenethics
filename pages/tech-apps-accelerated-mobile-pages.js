@@ -1,88 +1,118 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Layout from '../components/layout/main';
-import ContentNavigation from '../components/content/navigation';
+import Layout from "../components/layout/main";
+import ContentNavigation from "../components/content/navigation";
 
-import { techApps } from '../main.config';
+import { techApps } from "../main.config";
 
 const TechAppsAcc = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation
-      url={url}
-      image="app"
-      points={techApps()}
-    />
+    <ContentNavigation url={url} image="app" points={techApps()} />
     <div className="content-block">
-      <h1>Accelerated Mobile Pages</h1>
+      <h1>AMP Web Design and Development Services</h1>
       <p>
-        We are pretty sure that you know the fact that 40% of users click off after 3 seconds if
-        the website did not launch. No wonder the performance of your mobile site is so
-        important.
+        It comes as no surprise that approximately 60% of world population
+        utilize smartphones as their daily driver for web browsing. These small,
+        yet, efficient devices have proven to be not only helpful but much more
+        convenient than a traditional laptop. Thus, the need for a Google
+        accelerated mobile page (AMP) setup is paramount. With this technology,
+        web pages load significantly faster and the overall user experience
+        becomes much better. The system will boost your earnings and you will
+        end up getting more visitors to your site.
       </p>
+      <h2>Google AMP Development Service</h2>
       <p>
-        There are a lot of ways to achieve those magnificent page speed results and improve the
-        user experience. On of the most efficient is called Accelerated Mobile Pages (AMP).
+        Back in 2016, Google launched the AMP project and ever since, the
+        popularity of it grew immensely. The basic idea behind this service is
+        to increase performance of each page by loading assets much faster.
+        These so-called accelerated mobile pages are very responsive and are
+        often utilized by every major e-commerce company. The core benefit of
+        given framework is that you develop content once and enhance it
+        basically everywhere. According to Google, the AMP will load five times
+        faster while eating ten times fewer mobile data. Moreover, the company
+        announced that their web engine will favor AMP-powered pages more than
+        the traditional ones. Another key component of this project is the fact
+        that by incorporating this technology, the bounce rate will be reduced,
+        making your potential clients stay on the website longer due to a
+        positive and instant experience. Last but not least, enhanced pages will
+        be featured in Google search more often. Ignoring such service may
+        potentially result in the loss of traffic, engagements, and clicks.
       </p>
+      <h2>Accelerated Mobile Page Development Services</h2>
       <p>
-        So what is AMP and who is AMP for? Accelerated Mobile Page is a project from Google and
-        Twitter designed to make really fast mobile pages. It&apos;s basically a stripped-down
-        form of HTML, a ‘diet’ HTML.
+        Our company provides a lot of services, and AMP is one of them. We have
+        been installing this toolbox in the past and can easily state that the
+        process is painless and does not require a lot of time. With the help of
+        this technology, you will be able to publish content much faster. As a
+        result, more revenue from ads and subscriptions can be expected. We
+        fully understand that installing the AMP isn’t enough as you need to
+        know what kind of information works best with the improvement. Our team
+        utilizes the most relevant information to increase the effect of AMP,
+        and we know how content can impact the end performance of a page. It
+        does not matter where your business is situated as the project allows us
+        to implement the system and adapt it to all kind of audiences.
       </p>
+      <h2>Advantages Of Accelerated Mobile Pages (Amp)</h2>
       <p>
-        Google AMP is a new open framework built entirely out of existing web technologies,
-        which allows websites to build light-weight webpages. Essentially a framework for
-        creating mobile web pages, AMP pages are built with 3 core components:
+        AMP incorporates a full set of benefits which your business can harvest
+        from day one. To give you an idea, here are some of the immediate
+        effects that AMP brings to the table.
       </p>
       <ul>
-        <li>AMP HTML is HTML with some restrictions for reliable performance;</li>
-        <li>The AMP JS library ensures the fast rendering of AMP HTML pages;</li>
-        <li>The Google AMP Cache can be used to serve cached AMP HTML pages.</li>
+        <li>
+          <strong>Faster website loading times</strong> - By eliminating useless
+          elements, the page becomes less bloated and the overall load time is
+          reduced. Visitors to your site will enjoy the fact that the layout is
+          clear and responsive;
+        </li>
+        <li>
+          <strong>Increased mobile ranking</strong> - Despite the fact that AMP
+          is not a ranking booster, it still has an impact on the rank of the
+          website because your pages load faster. If by any chance Google starts
+          to prioritize AMP-powered pages, your SERP rank will increase
+          dramatically;
+        </li>
+        <li>
+          <strong>Improved server response</strong> - If your business
+          experience a huge influx of users, the stress they put on the server
+          will essentially be reduced. This will lead to reduced expenses as you
+          server maintenance procedures will be cut in half. Not to mention the
+          fact that the available space can lead to the modernization of the
+          site;
+        </li>
+        <li>
+          <strong>Improved SEO</strong> - The need for customized content will
+          be reduced and you will able to gather data much faster. Moreover,
+          your page will show up in the search engine more frequently;
+        </li>
+        <li>
+          <strong>No need for a dedicated map site</strong> - you don't have to
+          create an XML file for your site as Google will pick them for you.
+        </li>
       </ul>
       <p>
-        Therefore, it is better (and safer) to choose software developers, that have strong
-        experience in the stack of technologies listed above.
-      </p>
-      <p>
-        Who uses AMP? In the list of domains publishing AMP pages you will find E-commerce
-        projects (Wego, Womp mobile, Milestone), publishers (The Washington Post, Nobrocker,
-        Relay Media), advertisers (Teads.tv, plista) and others.
-      </p>
-      <h2>Accelerated Mobile Pages Pros and Cons</h2>
-      <p>
-        As mentioned, Google AMP helps to make your web pages very fast and load instantly. You
-        do not need to look for custom solutions for different platforms: iOS, Android,
-        WinPhone, BlackBerry etc.
-      </p>
-      <p>
-        What are the Google AMP cons? You will have to maintain at least two versions of any
-        article page: The original version of your article page that users will typically see,
-        and the AMP page version. But it is still an easy thing to do.
-      </p>
-      <p>
-        Our customers often ask what is AMP for SEO and is AMP SEO-friendly. AMP have two
-        benefits for SEO. One is it will have a “Fast” label designation on search engine
-        results pages, and the other is that it will be a ranking factor. So yes, for SEO AMP is
-        good.
-      </p>
-      <p>
-        On the Keenethics spaceship, our Front-End and Back-End developers know how to use all
-        required technologies, so they can complete and AMP project in no time. You can always
-        ask for Accelerated mobile pages example directly or check our portfolio.
-      </p>
-      <p>
-        Contact us and get a tech advice on how to make your product even faster and more
-        user-friendly.
+        Although the benefits are clear, there are a few minor drawbacks the
+        system is known for. The AMP does support Google Analytics, but you
+        would be forced to use different tags as the results will end up being
+        mixed. However, it is critical to mention that placing tags on an AMP
+        page is just as easy as placing them on a non-powered page. True, this
+        generates more work for you, but as mentioned above, the advantages
+        simply overweight the cons. There is no real reason for you not to
+        implement the form. With AMP enabled on your website, your business
+        activities will increase in performance. Thus, if you decide on
+        implementing the accelerated mobile page system, contact us as we have
+        been working with the system since its launch.
       </p>
     </div>
   </Layout>
 );
 
 TechAppsAcc.propTypes = {
-  url: PropTypes.object,
+  url: PropTypes.object
 };
 TechAppsAcc.defaultProps = {
-  url: {},
+  url: {}
 };
 
 export default TechAppsAcc;

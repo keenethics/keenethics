@@ -496,8 +496,8 @@ export const techApps = () => {
     },
     {
       href: '/tech-apps-accelerated-mobile-pages',
-      name: 'Accelerated Mobile Pages',
-      description: 'High speed for content loading and great Google-ranking',
+      name: 'Accelerated Mobile Pages (AMP) Development Company - Keenethics',
+      description: 'Accelerated Mobile Pages improve user experience and load instantly within search results page in mobile devices. Contact Keenethics team for AMP Website Design and Development Services.',
       icon: 'icon-acc',
     },
     {
