@@ -17,7 +17,7 @@ const ProjectKnotel = ({ url }) => (
               <h2 className="title">Knotel</h2>
               <h3 className="duration"><span>Duration:</span> In development since April 2016</h3>
               <p className="description">
-                Headquarters as a Service
+                Knotel - the Innovative Platform for Workspace Management
               </p>
               <div className="tags">
                 <div className="tag">Meteor</div>
@@ -36,31 +36,37 @@ const ProjectKnotel = ({ url }) => (
           </div>
           <div className="project-content-more">
             <p>
-              Headquarters as a Service: Knotel provides comprehensive office services powered by
-              domain experts and best of breed technology.
+              It becomes clear that the market is growing when the diversity starts to show. The flexible workspace industry not only got bigger in size lately; it also branched out in the new directions. Knotel is the brand that was quick to keep up with the market opportunities. They have recognized the growing demand for the workspace management services and created their own niche.
+            </p>
+            <h2>The idea behind Knotel</h2>
+            <p>
+              The lack of growth opportunities for the multiple startups in terms of real estate was something that the founders of Knotel experienced themselves. There was too little space available for the new companies that would fulfill all their needs: being flexible enough to accommodate the changing number of teams and open for modifications at the same time. Thus, the primary goal of Knotel was to develop a flexible solution to this problem, and they managed to come up with a win-win situation for both lenders and tenants.
             </p>
             <p>
-              Teams are shrinking. The growth of entrepreneurship and the independent workforce are
-              leading to changes in traditional office environments. The new office worker demands a
-              new office environment. The checklist for the modern CEO has also changed dramatically
+              What Knotel did was creating the platform that would connect the owners of multiple commercial properties with the tenants in search of a flexibility. This way, the lenders would still have the long-term tenants, whereas the latter would not be tied to a single space and could later relocate to another location within the network of their lender.
             </p>
             <p>
-              Knotel is meeting this need by providing an open planned and on demand office that is
-              operated, not fresh. Spaces that are flexible, not leased. Pricing is inclusive and
-              simple.
+              Knotel is a unique service of managing workspace which is based on the principles of shared economy. Their model is sometimes described as Airbnb for the commercial real estate. The value proposition that Knotel offers to their customers is something that no other service can provide.
+            </p>
+            <h2>The benefits provided by Knotel</h2>
+            <p>
+              Knotel is basically an intermediary between the property owners and the companies looking for an accommodation. There is a number of benefits that the growing companies get from such arrangement.
             </p>
             <p>
-              As hosted workspace solutions proliferate a pattern of serving smaller, high churn
-              demographics has emerged. Yet, solutions for serious, growing professional teams
-              (venture backed, CEO led, purposeful groups growing businesses) are in great demand.
+              Naturally, the greatest advantage is the flexibility; the company CEOs know that they can relocate at any given time, which deprives them of a headache that comes along with looking for an available property that will not be partially occupied by someone else.
             </p>
             <p>
-              Knotel is hosted workspaces for serious growing teams. We focus on a low churn, mature
-              clientele. Our team is made up of well connected, veteran founders, as well as former
-              WeWork, Starwood and NeueHouse executives.
+              Also, Knotel handles a bunch of other technical and specific things. Given that the intermediary takes on all the real estate-related tasks, the businesses that use their service don’t have to deal with the typical office management issues.
             </p>
             <p>
-              Knotel is the next level in company-sized workspaces.
+              As a result, the customers of Knotel get even more than that; they have the luxury to fully concentrate on the most important thing - developing their business.
+            </p>
+            <h2>Sui generis platform</h2>
+            <p>
+              The demand for the services of Knotel mainly comes from the small companies with 20+ people employed who are lured by the short-term lease opportunities. It may seem that this approach is not new to the flexible workspace industry, but this impression is deceptive. The position of Knotel on the market is pretty solid, which is ensured by the way they get their profit. Whereas many other workspace management companies rely on the building leases and extract the revenues from license or membership fees, Knotel embraces the terms resembling that of hotels and partners up with the landlords under profit-sharing arrangements. This makes the company remain in a safe place in the event of a downturn.
+            </p>
+            <p>
+              Although Knotel is a relatively new company, they see further growth, and more opportunities are yet to come for this aspiring venture.
             </p>
             <a
               href="https://knotel.com"
