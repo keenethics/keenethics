@@ -59,5 +59,8 @@
     "uglifycss": "0.0.29",
     "webpack-bundle-analyzer": "^2.9.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "<=9"
+  }
 }
