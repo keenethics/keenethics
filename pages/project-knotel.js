@@ -36,7 +36,7 @@ const ProjectKnotel = ({ url }) => (
           </div>
           <div className="project-content-more">
             <p>
-              It becomes clear that the market is growing when the diversity starts to show. The flexible workspace industry not only got bigger in size lately; it also branched out in the new directions. Knotel is the brand that was quick to keep up with the market opportunities. They have recognized the growing demand for the workspace management services and created their own niche.
+              It becomes clear that the market is growing when the diversity starts to show. The flexible workspace industry not only got bigger in size lately. It also branched out in the new directions. Knotel is the brand that was quick to keep up with the market opportunities. They have recognized the growing demand for the workspace management services and created their own niche.
             </p>
             <h2>The idea behind Knotel</h2>
             <p>
@@ -53,13 +53,13 @@ const ProjectKnotel = ({ url }) => (
               Knotel is basically an intermediary between the property owners and the companies looking for an accommodation. There is a number of benefits that the growing companies get from such arrangement.
             </p>
             <p>
-              Naturally, the greatest advantage is the flexibility; the company CEOs know that they can relocate at any given time, which deprives them of a headache that comes along with looking for an available property that will not be partially occupied by someone else.
+              Naturally, the greatest advantage is the flexibility. The company CEOs know that they can relocate at any given time, which deprives them of a headache that comes along with looking for an available property that will not be partially occupied by someone else.
             </p>
             <p>
               Also, Knotel handles a bunch of other technical and specific things. Given that the intermediary takes on all the real estate-related tasks, the businesses that use their service don’t have to deal with the typical office management issues.
             </p>
             <p>
-              As a result, the customers of Knotel get even more than that; they have the luxury to fully concentrate on the most important thing - developing their business.
+              As a result, the customers of Knotel get even more than that. They have the luxury to fully concentrate on the most important thing - developing their business.
             </p>
             <h2>Sui generis platform</h2>
             <p>
