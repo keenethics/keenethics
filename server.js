@@ -15,6 +15,7 @@ const { postsDatePair } = require('./postsort.config');
 const Router = require('./routes').Router;
 
 const dev = process.env.NODE_ENV !== 'production';
+const DEFAULT_PORT = 3000;
 
 const app = next({ dev });
 
@@ -46,7 +47,7 @@ app.prepare().then(() => {
     transporter = nodemailer.createTransport(mailgun(mailgunAuth));
   }
 
-  server.set('port', process.env.PORT || 3000);
+  server.set('port', process.env.PORT || DEFAULT_PORT);
 
   server.use(bodyParser.json());
   server.use(expressUncapitalize());
@@ -251,7 +252,9 @@ app.prepare().then(() => {
       fs.stat(path.resolve(__dirname, `posts/${req.params.name}.md`), (err) => {
         if (err == null) {
           const filename = `${req.params.name}.md`;
-          const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt).map(post => post.filename);
+          const sortedPosts = postsDatePair
+            .sort((a, b) => b.createdAt - a.createdAt)
+            .map(post => post.filename);
           const postIndex = sortedPosts.indexOf(filename);
           const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].replace('.md', '')}`;
           const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].replace('.md', '')}`;
@@ -303,4 +306,4 @@ app.prepare().then(() => {
       throw err;
     }
   });
-});
+}).catch(console.error);
