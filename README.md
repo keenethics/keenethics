@@ -24,3 +24,7 @@
 
 ### Note for deploy:
 If you deploy to production and see that your changes didn't implement, but in localhost all works. You can try command `killall node` on prod.
+
+## Note for macOS developers
+1. Node.js version has to be <= 9
+2. After installing dependencies you have to run `npm rebuild node-sass`
