@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Layout from "../components/layout/main";
-import ContentNavigation from "../components/content/navigation";
+import Layout from '../components/layout/main';
+import ContentNavigation from '../components/content/navigation';
 
-import { techApps } from "../main.config";
+import { techApps } from '../main.config';
 
 const TechAppsAcc = ({ url }) => (
   <Layout currentURL={url}>
