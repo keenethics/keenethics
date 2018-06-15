@@ -1,6 +1,6 @@
 const maskTitle = technology => `${technology} Development`;
 const maskDescription = technology => `Looking to hire ${technology} developers?
-  Appnovation, a ${technology} development company, specializes in ${technology} development services.
+  Keenethics, a ${technology} development company, specializes in ${technology} development services.
   Hire our ${technology} developers today.`;
 
 export const config = {
@@ -13,7 +13,7 @@ export const config = {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
           metaTitle: 'Custom Web Development Company  - Keenethics',
-          metaDescription: 'Looking to hire web developers? Appnovation, a web development company, specializes in web development services. Hire our web developers today',
+          metaDescription: 'Looking to hire web developers? Keenethics, a web development company, specializes in web development services. Hire our web developers today',
           href: '/services-web-development',
           icon: {
             name: 'web',
@@ -25,7 +25,7 @@ export const config = {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
           metaTitle: 'Desktop Application Development Company & Desktop Software App Development - Keenethics',
-          metaDescription: 'Looking to hire Desktop Application developers? Appnovation, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
+          metaDescription: 'Looking to hire Desktop Application developers? Keenethics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
           href: '/services-desktop-applications',
           icon: {
             name: 'dapp',
@@ -37,7 +37,7 @@ export const config = {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
           metaTitle: 'Mobile App Development | Professional App Development Company - Keenethics',
-          metaDescription: 'Looking to hire mobile app developers? Appnovation, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
+          metaDescription: 'Looking to hire mobile app developers? Keenethics, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
           href: '/services-mobile-development',
           icon: {
             name: 'mdev',
