@@ -71,8 +71,8 @@ const LayoutHead = (props) => {
   let description = DEFAULT_DESCRIPTION;
 
   if (meta) {
-    title = meta.title;
-    description = meta.description;
+    title = meta.title || DEFAULT_TITLE;
+    description = meta.description || DEFAULT_DESCRIPTION;
   }
 
   if (currentPoint) {
@@ -88,7 +88,7 @@ const LayoutHead = (props) => {
         name="viewport"
         content="initial-scale=1.0, user-scalable=no, width=device-width"
       />
-      {description.length ? <meta
+      {description && description.length ? <meta
         name="description"
         content={description}
       /> : null}
