@@ -8,3 +8,4 @@ yarn-error.log
 private.config.js
 
 /static/main.css
+.css.map
