@@ -1,7 +1,25 @@
 const maskTitle = technology => `${technology} Development`;
 const maskDescription = technology => `Looking to hire ${technology} developers?
-  Appnovation, a ${technology} development company, specializes in ${technology} development services.
+  Keenethics, a ${technology} development company, specializes in ${technology} development services.
   Hire our ${technology} developers today.`;
+
+const maskMapper = (t) => {
+  const { name, metaTitle, metaDescription } = t;
+  return {
+    ...t,
+    metaTitle: metaTitle || maskTitle(name),
+    metaDescription: metaDescription || maskDescription(name),
+  };
+};
+
+export const COMPANY_LINKS = {
+  linkedin: 'https://www.linkedin.com/company/keen-ethics',
+  github: 'https://github.com/keenethics',
+  googlePlus: 'https://plus.google.com/103030720036135400511/about',
+  twitter: 'https://twitter.com/keen_ethics',
+  upwork: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
+  facebook: 'https://www.facebook.com/KeenEthics.development',
+};
 
 export const config = {
   navigationMinPointsHeight: 90,
@@ -12,8 +30,8 @@ export const config = {
         {
           name: 'Web Development',
           description: 'Responsive and user-oriented web coding',
-          metaTitle: 'Custom Web Development Company  - Keenethics',
-          metaDescription: 'Looking to hire web developers? Appnovation, a web development company, specializes in web development services. Hire our web developers today',
+          metaTitle: 'Custom Web Development Company - Keenethics',
+          metaDescription: 'Looking to hire web developers? Keenethics, a web development company, specializes in web development services. Hire our web developers today',
           href: '/services-web-development',
           icon: {
             name: 'web',
@@ -25,7 +43,7 @@ export const config = {
           name: 'Desktop Applications',
           description: 'Native applications with flawless workflow',
           metaTitle: 'Desktop Application Development Company & Desktop Software App Development - Keenethics',
-          metaDescription: 'Looking to hire Desktop Application developers? Appnovation, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
+          metaDescription: 'Looking to hire Desktop Application developers? Keenethics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
           href: '/services-desktop-applications',
           icon: {
             name: 'dapp',
@@ -37,7 +55,7 @@ export const config = {
           name: 'Mobile Development',
           description: 'Slick and fast iOS and Android apps for your needs',
           metaTitle: 'Mobile App Development | Professional App Development Company - Keenethics',
-          metaDescription: 'Looking to hire mobile app developers? Appnovation, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
+          metaDescription: 'Looking to hire mobile app developers? Keenethics, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
           href: '/services-mobile-development',
           icon: {
             name: 'mdev',
@@ -342,32 +360,32 @@ export const config = {
     {
       name: 'Facebook',
       class: 'soc-1',
-      href: 'https://www.facebook.com/KeenEthics.development',
+      href: COMPANY_LINKS.facebook,
     },
     {
       name: 'Linkedin',
       class: 'soc-2',
-      href: 'https://www.linkedin.com/company/keen-ethics',
+      href: COMPANY_LINKS.linkedin,
     },
     {
-      name: 'Github',
+      name: 'GitHub',
       class: 'soc-3',
-      href: 'https://github.com/keenethics',
+      href: COMPANY_LINKS.github,
     },
     {
       name: 'GooglePlus',
       class: 'soc-4',
-      href: 'https://plus.google.com/103030720036135400511/about',
+      href: COMPANY_LINKS.googlePlus,
     },
     {
       name: 'Twitter',
       class: 'soc-5',
-      href: 'https://twitter.com/keen_ethics',
+      href: COMPANY_LINKS.twitter,
     },
     {
       name: 'Upwork',
       class: 'soc-6',
-      href: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
+      href: COMPANY_LINKS.upwork,
     },
   ],
 };
@@ -496,7 +514,8 @@ export const techApps = () => {
     },
     {
       href: '/tech-apps-accelerated-mobile-pages',
-      name: 'Accelerated Mobile Pages (AMP) Development Company - Keenethics',
+      name: 'Accelerated Mobile Pages (AMP)',
+      metaTitle: 'Accelerated Mobile Pages (AMP) Development Company - Keenethics',
       description: 'Accelerated Mobile Pages improve user experience and load instantly within search results page in mobile devices. Contact Keenethics team for AMP Website Design and Development Services.',
       icon: 'icon-acc',
     },
@@ -520,11 +539,7 @@ export const techApps = () => {
       icon: 'icon-cv',
     },
   ];
-  return elements.map(e => ({
-    ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
-  }));
+  return elements.map(maskMapper);
 };
 
 export const techFrontEnd = () => {
@@ -581,11 +596,7 @@ export const techFrontEnd = () => {
       icon: 'icon-next',
     },
   ];
-  return elements.map(e => ({
-    ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
-  }));
+  return elements.map(maskMapper);
 };
 
 export const techBackEnd = () => {
@@ -609,11 +620,7 @@ export const techBackEnd = () => {
       icon: 'icon-hapi',
     },
   ];
-  return elements.map(e => ({
-    ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
-  }));
+  return elements.map(maskMapper);
 };
 
 export const techDatabase = () => {
@@ -637,11 +644,7 @@ export const techDatabase = () => {
       icon: 'icon-post',
     },
   ];
-  return elements.map(e => ({
-    ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
-  }));
+  return elements.map(maskMapper);
 };
 
 export const techApiIntegration = () => {
@@ -684,11 +687,7 @@ export const techApiIntegration = () => {
       icon: 'icon-stripe',
     },
   ];
-  return elements.map(e => ({
-    ...e,
-    metaTitle: maskTitle(e.name),
-    metaDescription: maskDescription(e.name),
-  }));
+  return elements.map(maskMapper);
 };
 
 export const spaceships = {
@@ -711,44 +710,6 @@ export const spaceships = {
     capacity: 1,
   },
 };
-
-export const superteam = [
-  {
-    name: 'Oleksiy P.',
-    position: 'Chief of Meteor Flight Research Center',
-    description:
-      'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
-    avatar: 'alex_p.jpg',
-  },
-  {
-    name: 'Max S.',
-    position: 'Chief of The Astronaut Office',
-    description:
-      'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
-    avatar: 'maks_s.jpg',
-  },
-  {
-    name: 'Alexey H.',
-    position: 'International Mission Specialist',
-    description:
-      'Intergalactic diplomat who speaks several alien languages. He is in constant search of new life forms outside our galaxy in order to establish contact and exchange resources.',
-    avatar: 'alex_h.jpg',
-  },
-  {
-    name: 'Viktoria M.',
-    position: 'Astronaut Interaction Specialist',
-    description:
-      'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
-    avatar: 'viktoria_m.jpg',
-  },
-  {
-    name: 'Alexandr S.',
-    position: 'Mission Support Officer',
-    description:
-      'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
-    avatar: 'sasha_s.jpg',
-  },
-];
 
 export const team = [
   {
@@ -855,13 +816,6 @@ export const team = [
         avatar: 'yara_m.jpg',
       },
       {
-        name: 'Mykhailo O.',
-        position: 'Full-stack js Corvette Capt',
-        description:
-          'Space Meteor.js Developer who has logged around 700 hours of moonwalk time on Upwork over five successful Meteor Shuttle missions.',
-        avatar: 'michael_rich.jpg',
-      },
-      {
         name: 'Taras Y.',
         position: 'Full-stack js Corvette Capt',
         description:
@@ -869,7 +823,7 @@ export const team = [
         avatar: 'taras_y.jpg',
       },
       {
-        name: 'Serhiy S.',
+        name: 'Serhii S.',
         position: 'Full-stack js Corvette Capt ',
         description:
           'Super friendly, quiet and hard-working astronaut.',
