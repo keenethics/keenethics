@@ -15,6 +15,7 @@
     "classnames": "^2.2.5",
     "express": "^4.16.3",
     "express-uncapitalize": "^1.0.0",
+    "googleapis": "^32.0.0",
     "isomorphic-fetch": "^2.2.1",
     "micro": "^9.0.2",
     "nanoid": "^1.0.1",
