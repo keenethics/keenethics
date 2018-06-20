@@ -1120,4 +1120,13 @@ export const works = [
     },
     description: 'Stop losing your stuff',
   },
+  {
+    title: 'Banker Advisor',
+    href: '/project-banker-advisor',
+    imgSrc: 'Banker-Advisor.png',
+    category: {
+      main: ['Consumer apps'],
+    },
+    description: 'Investment banking tool',
+  },
 ];
