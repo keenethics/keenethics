@@ -86,11 +86,11 @@ const ProjectBankerAdvisor = ({ url }) => (
               alt="Banker Advisor"
               className="image-gaps"
             />
-            <div className="double-collumn-wrapper retreat">
-              <div className="collumn banker-advisor-collumn">
+            <div className="double-column-wrapper retreat">
+              <div className="column column-no-padding">
                 <div className="project-content-chapter">
-                  <p className="chapter-title banker-advisor-paragraph">How it works:</p>
-                  <p className="chapter-paragraph banker-advisor-paragraph">
+                  <p className="chapter-title">How it works:</p>
+                  <p className="chapter-paragraph">
                     The application provides a flexible search by banking services and
                     industry sectors with the opportunity to sort results by rate and
                     most reviews. A user may add a rated review with recommendations
@@ -98,14 +98,14 @@ const ProjectBankerAdvisor = ({ url }) => (
                     a new listing or claim the existing one by setting
                     premium accounts using Stripe service.
                   </p>
-                  <p className="chapter-title banker-advisor-paragraph">Reliability first:</p>
-                  <p className="chapter-paragraph banker-advisor-paragraph">
+                  <p className="chapter-title">Reliability first:</p>
+                  <p className="chapter-paragraph">
                     To protect a bank owner from unfair feedback, spam and bots we use reCAPTCHA.
                     Also, all users have to log in via LinkedIn to verify their accounts.
                   </p>
                 </div>
               </div>
-              <div className="collumn">
+              <div className="column">
                 <img src="static/images/project/banker-advisor-how-it-works.jpg" alt="How Banker Advisor works" />
               </div>
             </div>
@@ -127,8 +127,8 @@ const ProjectBankerAdvisor = ({ url }) => (
               alt="Banker Advisor"
               className="image-gaps"
             />
-            <div className="double-collumn-wrapper retreat">
-              <div className="collumn banker-advisor-collumn">
+            <div className="double-column-wrapper retreat">
+              <div className="column">
                 <div className="project-content-chapter">
                   <p className="chapter-title chapter-title-upper">Data Collection:</p>
                   <p className="chapter-paragraph">
@@ -145,7 +145,7 @@ const ProjectBankerAdvisor = ({ url }) => (
                   </p>
                 </div>
               </div>
-              <div className="collumn">
+              <div className="column">
                 <img src="static/images/project/banker-advisor-personas.jpg" alt="Banker Advisor personas" />
               </div>
             </div>
