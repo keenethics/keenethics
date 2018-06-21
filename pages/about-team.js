@@ -1,4 +1,5 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
+/* global BACKEND_URL, fetch */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -8,9 +9,9 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Ship from '../components/pages/about/ship-item';
 
-import { spaceships, team } from '../main.config';
+import { spaceships } from '../main.config';
 
-function splitTo(arr, n) {
+const splitTo = (arr, n) => {
   const plen = Math.ceil(arr.length / n);
 
   return arr.reduce((p, c, i) => {
@@ -21,21 +22,41 @@ function splitTo(arr, n) {
 
     return p;
   }, []);
-}
+};
+
+const getSpaceships = team => team.map((t) => {
+  const spaceship = spaceships[t.key];
+  const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
+  const parade = splitTo(t.people, numberOfShips);
+
+  return parade.map(p => (
+    p.map(worker => (<Ship
+      key={nanoid()}
+      ship={t}
+      worker={worker}
+    />))
+  ));
+});
 
 export default class AboutTeam extends React.Component {
-  getSpaceships = () => team.map((t) => {
-    const spaceship = spaceships[t.key];
-    const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
-    const parade = splitTo(t.people, numberOfShips);
+  static propTypes = {
+    url: PropTypes.object,
+    team: PropTypes.array,
+  };
 
-    return parade.map(p => (
-      p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} />)
-    ));
-  })
+  static defaultProps = {
+    url: {},
+    team: [],
+  };
+
+  static getInitialProps = async () => {
+    const res = await fetch(`${BACKEND_URL}/team`);
+    const team = await res.json();
+    return { team };
+  };
 
   render() {
-    const { url } = this.props;
+    const { url, team } = this.props;
 
     return (
       <Layout currentURL={url}>
@@ -44,7 +65,7 @@ export default class AboutTeam extends React.Component {
             <h1 className="team-page-title">Team <span>Astronaut office</span></h1>
             <div className="ships">
               <div className="ship-columns">
-                {this.getSpaceships()}
+                {getSpaceships(team)}
               </div>
             </div>
           </div>
@@ -54,9 +75,3 @@ export default class AboutTeam extends React.Component {
     );
   }
 }
-AboutTeam.propTypes = {
-  url: PropTypes.object,
-};
-AboutTeam.defaultProps = {
-  url: {},
-};
