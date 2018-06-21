@@ -40,11 +40,11 @@ const ProjectWorkbooking = ({ url }) => (
 	      <p className="chapter-paragraph">Our task was to develop and release easy and fast platform with the search and calander available for any devices.</p>
 	    </div>
 
-	    <div className="double-collumn-wrapper">
-	      <div className="collumn">
+	    <div className="double-column-wrapper">
+	      <div className="column">
 		<img className="" src="static/images/project/workbooking-persona.png" />
 	      </div>
-	      <div className="collumn">
+	      <div className="column">
 		<div className="project-content-chapter">
 		  <p className="chapter-title">User personas</p>
 		  <p className="chapter-paragraph">In current case, we had 2 user personas, which represent 2 major user groups, there are Customers and Professionals. Focused on the needs and expectations of these user personas, we figured out a clear picture of user’s expectations and how they are likely to use the site.</p>
@@ -54,23 +54,23 @@ const ProjectWorkbooking = ({ url }) => (
 
 	    <div className="project-content-chapter">
 	      <p className="chapter-title custom">Wireframes</p>
-	      <p className="chapter-paragraph">We used wireframing to provide a visual understanding of a platform early in a project. 
+	      <p className="chapter-paragraph">We used wireframing to provide a visual understanding of a platform early in a project.
 		A website service was separated at the structural level. Content and functionality were laid out on the platform with taking into account user needs and user journeys.</p>
 	      <p className="chapter-paragraph">We use this practice early in the development process to establish the basic structure of the website before visual design and content is added. </p>
 	    </div>
-	    
+
           </div>
-	  
+
 	  <div className="project-content-summary custom" style={{ background: baseColor }}>
-	    <div className="three-collumn-wrapper">
-	      <img className="collumn" src="static/images/project/workbooking-1-1.png" />
-	      <img className="collumn" src="static/images/project/workbooking-1-2.png" />
-	      <img className="collumn" src="static/images/project/workbooking-1-3.png" />
+	    <div className="three-column-wrapper">
+	      <img className="column" src="static/images/project/workbooking-1-1.png" />
+	      <img className="column" src="static/images/project/workbooking-1-2.png" />
+	      <img className="column" src="static/images/project/workbooking-1-3.png" />
 	    </div>
-	    <div className="three-collumn-wrapper">
-	      <img className="collumn" src="static/images/project/workbooking-2-1.png" />
-	      <img className="collumn" src="static/images/project/workbooking-2-2.png" />
-	      <img className="collumn" src="static/images/project/workbooking-2-3.png" />	      
+	    <div className="three-column-wrapper">
+	      <img className="column" src="static/images/project/workbooking-2-1.png" />
+	      <img className="column" src="static/images/project/workbooking-2-2.png" />
+	      <img className="column" src="static/images/project/workbooking-2-3.png" />
 	    </div>
           </div>
 
@@ -85,22 +85,22 @@ const ProjectWorkbooking = ({ url }) => (
 		</div>
 	      </div>
 	    </div>
-	    
+
 	    <div className="project-content-chapter">
 	      <img className="chapter-image" src="static/images/project/workbooking-people.png" />
 	    </div>
 
 	    <div className="project-content-chapter custom">
 	      <p className="chapter-title">Challenges</p>
-	      <div className="double-collumn-wrapper">
-		<div className="collumn">
+	      <div className="double-column-wrapper">
+		<div className="column">
 		  <div className="project-content-chapter">
 		    <p className="chapter-subtitle">Customers</p>
 		    <p className="chapter-paragraph">iSimplify finding occasional demand of some services for businesses, NGOs and private sector. As well as provide guarantees of quality and reliability of these services.</p>
 		    <img className="chapter-image" src="static/images/project/workbooking-chalanges-1.png" />
 		  </div>
 		</div>
-		<div className="collumn">
+		<div className="column">
 		  <div className="project-content-chapter">
 		    <p className="chapter-subtitle">Professionals</p>
 		    <p className="chapter-paragraph">Provide oportunities for existing market of people who are looking for a part-time job on regular and flexible basis as well as increasing a number of clients.</p>
@@ -120,7 +120,7 @@ const ProjectWorkbooking = ({ url }) => (
 		</ul>
 	      </div>
 	    </div>
-	    
+
 	    <div className="project-content-chapter custom">
 	      <img className="chapter-image" src="static/images/project/workbooking-monitors.png" />
 	    </div>
