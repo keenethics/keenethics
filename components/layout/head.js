@@ -19,6 +19,7 @@ import {
   techBackEnd,
   techDatabase,
   techApiIntegration,
+  works,
 } from '../../main.config';
 
 Router.onRouteChangeStart = () => NProgress.start();
@@ -58,6 +59,7 @@ const LayoutHead = (props) => {
         techBackEnd(),
         techDatabase(),
         techApiIntegration(),
+        works,
       );
 
     subnavigation.forEach((point) => {
@@ -76,7 +78,7 @@ const LayoutHead = (props) => {
   }
 
   if (currentPoint) {
-    title = currentPoint.metaTitle || currentPoint.name;
+    title = currentPoint.metaTitle || currentPoint.name || currentPoint.title;
     description = currentPoint.metaDescription || currentPoint.description;
   }
 

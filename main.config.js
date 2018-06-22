@@ -265,7 +265,7 @@ export const config = {
       points: [
         {
           name: 'Team',
-          description: 'Meat our Squad',
+          description: 'Meet our Squad',
           href: '/about-team',
           icon: {
             name: 'team',
