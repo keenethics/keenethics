@@ -11,7 +11,7 @@ const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
-const getTeam = require('./update-team-vacancies');
+const getTeam = require('./get-info-from-googleapis');
 
 
 const Router = require('./routes').Router;

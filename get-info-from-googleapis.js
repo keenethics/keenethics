@@ -1,10 +1,12 @@
 const { google } = require('googleapis');
 const path = require('path');
 
+//FIXME: export to env variables
 const TEAM_SHEET_ID = '1CF43Hi_vxS-kk2WGQ0km7rUEm5IMbTuD9QoFfsWW7B4';
 const TEAM_RANGE = 'Sheet1';
 const CREDS_FILE = 'dauntless-theme-207811-a063c4c9e36d.json';
 const scopes = ['https://www.googleapis.com/auth/drive.readonly'];
+const TIME_TO_LIVE = 30 * 60 * 1000;
 
 
 const team = [
@@ -272,19 +274,23 @@ const arrayOfArraysToCollection = (arr) => {
     });
     return obj;
   });
-}
+};
+
+let teamCache = null;
+let lastUpdateTime = null;
+const isFreshData = (updateTime, timeToLive = TIME_TO_LIVE) => {
+  return !updateTime || +new Date() - updateTime > timeToLive;
+};
 
 async function getTeam() {
-  console.log( 'getTeam started'  );
+  if (isFreshData(lastUpdateTime)) {
+    return Promise.resolve(teamCache);
+  }
+
   const client = await google.auth.getClient({
     keyFile: path.join(__dirname, CREDS_FILE),
     scopes,
   });
-
-  // const drive = google.drive({
-  //   version: 'v2',
-  //   auth: client,
-  // });
 
   const sheets = google.sheets('v4');
 
@@ -294,15 +300,12 @@ async function getTeam() {
     range: TEAM_RANGE,
   });
 
-  console.log(table.data);
-
-  let {values} = table.data;
+  let { values } = table.data;
+  // Filter out empty lines
   values = values.filter(v => v.length > 0);
-
-  // const driveFiles = await drive.files.list();
-  // console.log(res.data);
-  return Promise.resolve(arrayOfArraysToCollection(values));
-
+  teamCache = arrayOfArraysToCollection(values);
+  lastUpdateTime = +new Date();
+  return Promise.resolve(teamCache);
 }
 
 
