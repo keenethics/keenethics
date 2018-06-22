@@ -9,34 +9,9 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Ship from '../components/pages/about/ship-item';
 
-import { spaceships } from '../main.config';
-
-const splitTo = (arr, n) => {
-  const plen = Math.ceil(arr.length / n);
-
-  return arr.reduce((p, c, i) => {
-    if (i % plen === 0) {
-      p.push([]);
-    }
-    p[p.length - 1].push(c);
-
-    return p;
-  }, []);
-};
-
-const getSpaceships = team => team.map((t) => {
-  const spaceship = spaceships[t.key];
-  const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
-  const parade = splitTo(t.people, numberOfShips);
-
-  return parade.map(p => (
-    p.map(worker => (<Ship
-      key={nanoid()}
-      ship={t}
-      worker={worker}
-    />))
-  ));
-});
+const getSpaceships = team => team.map((t) => <Ship key={nanoid()}
+                                                    ship={t}
+                                                    worker={t}/>);
 
 export default class AboutTeam extends React.Component {
   static propTypes = {

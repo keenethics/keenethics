@@ -1,10 +1,10 @@
 const { google } = require('googleapis');
-// const path = require('path');
-//
-// const TEAM_SHEET_ID = '1CF43Hi_vxS-kk2WGQ0km7rUEm5IMbTuD9QoFfsWW7B4';
-// const TEAM_RANGE = 'Sheet1';
-// const CREDS_FILE = 'dauntless-theme-207811-a063c4c9e36d.json';
-// const scopes = ['https://www.googleapis.com/auth/drive.readonly'];
+const path = require('path');
+
+const TEAM_SHEET_ID = '1CF43Hi_vxS-kk2WGQ0km7rUEm5IMbTuD9QoFfsWW7B4';
+const TEAM_RANGE = 'Sheet1';
+const CREDS_FILE = 'dauntless-theme-207811-a063c4c9e36d.json';
+const scopes = ['https://www.googleapis.com/auth/drive.readonly'];
 
 
 const team = [
@@ -260,34 +260,50 @@ const team = [
   },
 ];
 
-async function getTeam() {
-
-  return Promise.resolve(team);
-  // console.log( 'xxx'  );
-  // const client = await google.auth.getClient({
-  //   // keyFile: path.join(__dirname, CREDS_FILE),
-  //   // scopes,
-  // });
-  //
-  // // const drive = google.drive({
-  // //   version: 'v2',
-  // //   auth: client,
-  // // });
-  //
-  // const sheets = google.sheets('v4');
-  //
-  // const table = await sheets.spreadsheets.values.get({
-  //   auth: client,
-  //   spreadsheetId: TEAM_SHEET_ID,
-  //   range: TEAM_RANGE,
-  // });
-  //
-  // console.log(table.data);
-
-  // const res = await drive.files.list();
-  // console.log(res.data);
+// Because we get data from Google Spreadsheets as array of arrays
+const arrayOfArraysToCollection = (arr) => {
+  const INDEX_PROPERTIES_ROW = 0;
+  const properties = arr[INDEX_PROPERTIES_ROW];
+  const values = arr.slice(INDEX_PROPERTIES_ROW + 1);
+  return values.map((v) => {
+    const obj = {};
+    properties.forEach((property, index) => {
+      obj[property] = v[index];
+    });
+    return obj;
+  });
 }
 
-// runSample().catch(console.error);
+async function getTeam() {
+  console.log( 'getTeam started'  );
+  const client = await google.auth.getClient({
+    keyFile: path.join(__dirname, CREDS_FILE),
+    scopes,
+  });
+
+  // const drive = google.drive({
+  //   version: 'v2',
+  //   auth: client,
+  // });
+
+  const sheets = google.sheets('v4');
+
+  const table = await sheets.spreadsheets.values.get({
+    auth: client,
+    spreadsheetId: TEAM_SHEET_ID,
+    range: TEAM_RANGE,
+  });
+
+  console.log(table.data);
+
+  let {values} = table.data;
+  values = values.filter(v => v.length > 0);
+
+  // const driveFiles = await drive.files.list();
+  // console.log(res.data);
+  return Promise.resolve(arrayOfArraysToCollection(values));
+
+}
+
 
 module.exports = getTeam;
