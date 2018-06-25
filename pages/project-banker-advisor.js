@@ -32,7 +32,7 @@ const ProjectBankerAdvisor = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
-            <div className="title">Our part:</div>
+            <div className="title">Our part</div>
             <p>
               Prior to cooperating with any bank, a buyer needs to learn about bank fees,
               interest rates, and customer services. Asking an expert for advice could make
@@ -54,7 +54,7 @@ const ProjectBankerAdvisor = ({ url }) => (
               alt="Banker Advisor"
               className="image-gaps"
             />
-            <div className="title">Customer’s story:</div>
+            <div className="title">Customer’s story</div>
             <p>
               Mike Casey has more than 30 years of experience in the financial and operational
               leadership. Having served as CFO in several leading public software and technology
@@ -66,7 +66,7 @@ const ProjectBankerAdvisor = ({ url }) => (
             <div className="project-content-chapter">
               <p className="chapter-paragraph italic quote">“There was no way for them to get an unbiased and insightful advice.”</p>
             </div>
-            <div className="title">Challenge:</div>
+            <div className="title">Challenge</div>
             <p>
               Keenethics have been hired to develop a solution that helps buyers
               see the realistic picture of the investment banking market by providing
@@ -89,7 +89,7 @@ const ProjectBankerAdvisor = ({ url }) => (
             <div className="double-column-wrapper retreat">
               <div className="column column-no-padding">
                 <div className="project-content-chapter">
-                  <p className="chapter-title">How it works:</p>
+                  <p className="chapter-title">How it works</p>
                   <p className="chapter-paragraph">
                     The application provides a flexible search by banking services and
                     industry sectors with the opportunity to sort results by rate and
@@ -98,7 +98,7 @@ const ProjectBankerAdvisor = ({ url }) => (
                     a new listing or claim the existing one by setting
                     premium accounts using Stripe service.
                   </p>
-                  <p className="chapter-title">Reliability first:</p>
+                  <p className="chapter-title">Reliability first</p>
                   <p className="chapter-paragraph">
                     To protect a bank owner from unfair feedback, spam and bots we use reCAPTCHA.
                     Also, all users have to log in via LinkedIn to verify their accounts.
@@ -109,12 +109,12 @@ const ProjectBankerAdvisor = ({ url }) => (
                 <img src="static/images/project/banker-advisor-how-it-works.jpg" alt="How Banker Advisor works" />
               </div>
             </div>
-            <div className="title">Background </div>
+            <div className="title">Background</div>
             <p>
               <span className="semi-bold">We wanted to create an app that would simplify the search for the most convenient bank.</span>
             </p>
             <div className="project-content-chapter">
-              <p className="chapter-title chapter-title-upper">Research:</p>
+              <p className="chapter-title chapter-title-upper">Research</p>
               <p className="chapter-paragraph">
                 Our clients thoroughly researched the demand for the service they
                 wanted to have developed. The market niche was not yet taken.
@@ -130,14 +130,14 @@ const ProjectBankerAdvisor = ({ url }) => (
             <div className="double-column-wrapper retreat">
               <div className="column">
                 <div className="project-content-chapter">
-                  <p className="chapter-title chapter-title-upper">Data Collection:</p>
+                  <p className="chapter-title chapter-title-upper">Data Collection</p>
                   <p className="chapter-paragraph">
                     For this application, we went through the vast amounts of information to
                     examine the peculiarities of the financial market and investment funds.
                     We created the separate Customer Journey Maps for buyers and
                     bankers to determine the target audience.
                   </p>
-                  <p className="chapter-title chapter-title-upper">Prototyping:</p>
+                  <p className="chapter-title chapter-title-upper">Prototyping</p>
                   <p className="chapter-paragraph">
                     We used prototyping to model the user’s interaction with the application.
                     At this stage, we went through building a project architecture
@@ -150,12 +150,12 @@ const ProjectBankerAdvisor = ({ url }) => (
               </div>
             </div>
             <img
-              src="/static/images/project/banker-advisor-prew-5.jpg"
+              src="/static/images/project/banker-advisor-prew-5.png"
               alt="Banker Advisor"
               className="image-gaps"
             />
             <div className="project-content-chapter">
-              <p className="chapter-title chapter-title-upper">UX/UI Design:</p>
+              <p className="chapter-title chapter-title-upper">UX/UI Design</p>
               <p className="chapter-paragraph">
                 In the end, we developed a user-friendly interface and ensured an excellent
                 user experience based on the results of the previous steps.
@@ -173,12 +173,12 @@ const ProjectBankerAdvisor = ({ url }) => (
               payment platform. Moreover, we have implemented "complex search" and will
               work on intelligence search and smart recommendations in the next version.
             </p>
-            <div className="title">Result:</div>
+            <div className="title">Result</div>
             <div className="project-content-chapter">
               <p className="chapter-paragraph italic bigger">A user-friendly app with more than 1000 trusted bank reviews.</p>
             </div>
             <div className="project-achievements">
-              <h3>BankerAdvisor main features:</h3>
+              <h3>BankerAdvisor main features</h3>
               <ul>
                 <li>Flexible search</li>
                 <li>Add rating and review transaction basing on your experience</li>
@@ -193,7 +193,7 @@ const ProjectBankerAdvisor = ({ url }) => (
               Ultimately, BankerAdvisor will help the app users to save a lot of time
               and resources and make the industry more trustworthy.
             </p>
-            <div className="title">Technologies used in making the app:</div>
+            <div className="title">Technologies used in making the app</div>
             <div className="tags tags--big">
               <div className="tag">Keystonejs</div>
               <div className="tag">React</div>
@@ -206,7 +206,7 @@ const ProjectBankerAdvisor = ({ url }) => (
               <div className="tag">AWS (SES, SNS, S3, EC2)</div>
             </div>
             <img
-              src="/static/images/project/banker-advisor-prew-3.jpg"
+              src="/static/images/project/banker-advisor-prew-3.png"
               alt="Banker Advisor"
               className="image-gaps"
             />
