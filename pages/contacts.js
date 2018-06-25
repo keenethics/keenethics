@@ -35,10 +35,12 @@ export default class Contacts extends React.Component {
       },
       isPending: false,
       status: '',
+      activeContactForm: true,
     };
 
     this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
   onSubmit(e) {
     e.preventDefault();
@@ -74,6 +76,9 @@ export default class Contacts extends React.Component {
       },
     });
   }
+  onClick({ target }) {
+    this.setState({ activeContactForm: target.name === 'contact-form-btn' });
+  }
   render() {
     const { url } = this.props;
     const {
@@ -93,9 +98,11 @@ export default class Contacts extends React.Component {
             <div className="title-page">
               <h1 className="title">Contact Us</h1>
             </div>
-            <div className="contacts-block" itemScope itemType="http://schema.org/Organization">
+            <div className={this.state.activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
-              <div className="contacts-mail" />
+              {this.state.activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
+              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn active' : 'contacts-form-btn contact-form-btn'}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn active' : 'contacts-form-btn estimate-form-btn'}>Estimate your project</button>
               <ul className="contacts-list">
                 <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
@@ -119,68 +126,74 @@ export default class Contacts extends React.Component {
                   </a>
                 </li>
               </ul>
-              <div className="contacts-form">
-                <form onSubmit={this.onSubmit}>
-                  <div className="contacts-title">Say hello</div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={firstname.error ? 'error' : null}
-                        name="firstname"
-                        placeholder="First Name"
-                        type="text"
+              { this.state.activeContactForm ?
+                <div className="contacts-form">
+                  <form onSubmit={this.onSubmit}>
+                    <div className="contacts-title">Say hello</div>
+                    <div className="input-cols">
+                      <div className="input-wrap input-wrap-2">
+                        <input
+                          className={firstname.error ? 'error' : null}
+                          name="firstname"
+                          placeholder="First Name"
+                          type="text"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                      <div className="input-wrap input-wrap-2">
+                        <input
+                          className={lastname.error ? 'error' : null}
+                          name="lastname"
+                          placeholder="Last Name"
+                          type="text"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="input-cols">
+                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                        <input
+                          className={email.error ? 'error' : null}
+                          name="email"
+                          placeholder="Your Email"
+                          type="mail"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                        <input
+                          className={phone.error ? 'error' : null}
+                          name="phone"
+                          placeholder="Your Phone"
+                          type="tel"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="input-wrap input-wrap-2 input-wrap-ta">
+                      <textarea
+                        className={message.error ? 'error' : null}
+                        name="message"
+                        placeholder="Message"
                         onChange={this.onChange}
                       />
                     </div>
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={lastname.error ? 'error' : null}
-                        name="lastname"
-                        placeholder="Last Name"
-                        type="text"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={email.error ? 'error' : null}
-                        name="email"
-                        placeholder="Your Email"
-                        type="mail"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={phone.error ? 'error' : null}
-                        name="phone"
-                        placeholder="Your Phone"
-                        type="tel"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-wrap input-wrap-2 input-wrap-ta">
-                    <textarea
-                      className={message.error ? 'error' : null}
-                      name="message"
-                      placeholder="Message"
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  {status ? (
-                    <div className="form-status">{status}</div>
+                    {status ? (
+                      <div className="form-status">{status}</div>
                   ) : null}
-                  <button
-                    type="submit"
-                    className={isPending ? 'button button-send pending' : 'button button-send'}
-                  >
-                    <img src="/static/images/svg/send.svg" alt="send" />
-                  </button>
-                </form>
-              </div>
+                    <button
+                      type="submit"
+                      className={isPending ? 'button button-send pending' : 'button button-send'}
+                    >
+                      <img src="/static/images/svg/send.svg" alt="send" />
+                    </button>
+                  </form>
+                </div> :
+                <div className="estimate-form">
+                  <form onSubmit={this.onSubmit}>
+                    <div className="contacts-title">let us Estimate your project</div>
+                  </form>
+                </div>}
             </div>
           </div>
           <Background />
