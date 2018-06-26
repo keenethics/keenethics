@@ -33,9 +33,17 @@ export default class Contacts extends React.Component {
         value: '',
         error: false,
       },
+      stage: {
+        value: '',
+        error: false,
+      },
+      services: {
+        value: '',
+        error: false,
+      },
       isPending: false,
       status: '',
-      activeContactForm: true,
+      activeContactForm: false,
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -101,8 +109,8 @@ export default class Contacts extends React.Component {
             <div className={this.state.activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               {this.state.activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn active' : 'contacts-form-btn contact-form-btn'}>Say Hello</button>
-              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn active' : 'contacts-form-btn estimate-form-btn'}>Estimate your project</button>
+              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn active' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn active' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
               <ul className="contacts-list">
                 <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
@@ -191,7 +199,230 @@ export default class Contacts extends React.Component {
                 </div> :
                 <div className="estimate-form">
                   <form onSubmit={this.onSubmit}>
-                    <div className="contacts-title">let us Estimate your project</div>
+                    <div className="contacts-title estimate-title">let us Estimate your project</div>
+                    <div className="question-title"><span className="question-number">01</span> Stage</div>
+                    <div className="estimate-input-cols">
+                      <div className="input-radio-wrap">
+                        <input
+                          name="stage"
+                          type="radio"
+                          value="new"
+                          id="new"
+                          onChange={this.onChange}
+                        />
+                        <label htmlFor="new" className="label-for-radio-btn">
+                            <p className="radio-lable-title">New app</p>
+                            to be built from scratch
+                        </label>
+                      </div>
+                      <div className="input-radio-wrap">
+                        <input
+                          name="stage"
+                          type="radio"
+                          value="existing"
+                          id="existing"
+                          onChange={this.onChange}
+                          checked
+                        />
+                        <label htmlFor="existing" className="label-for-radio-btn">
+                          <p className="radio-lable-title">Existing app</p>
+                          continue development
+                        </label>
+                      </div>
+                    </div>
+                    <div className="question-title"><span className="question-number">02</span> What services are you interested in?</div>
+                    <div className="estimate-input-cols">
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="web"
+                          id="web"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="web" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Web app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="ios"
+                          id="ios"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="ios" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>IOS app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="linux"
+                          id="linux"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="linux" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Linux app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="server-side"
+                          id="ssd"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="ssd" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Server-side development</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="windows"
+                          id="windows"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="windows" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Windows app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="qa"
+                          id="qa"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="qa" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>QA testing</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="android"
+                          id="android"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="android" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Android app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="macos"
+                          id="macos"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="macos" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>MacOS app</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="design"
+                          id="design"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="design" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Design</span>
+                        </label>
+                      </div>
+                      <div className="input-checkbox-wrap">
+                        <input
+                          name="services"
+                          type="checkbox"
+                          value="other"
+                          id="other"
+                          onChange={this.onChange}
+                          className="check"
+                        />
+                        <label htmlFor="other" className="label-for-checkbox-btn">
+                          <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1" />
+                            </svg>
+                          </span> <span>Other</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="question-title"><span className="question-number">03</span>
+                      <input
+                        name="pm"
+                        type="checkbox"
+                        value="pm"
+                        id="pm"
+                        onChange={this.onChange}
+                        className="check"
+                      />
+                      <label htmlFor="pm" className="label-for-checkbox-btn">
+                        <span>
+                          <svg width="12px" height="10px" viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1" />
+                          </svg>
+                        </span>
+                        <span className="question-checkbox-title">Do you require PM/Product manager to save your time for tasks' description,
+                          tasks' assignment and tasks' assignment prioritizing?
+                        </span>
+                      </label>
+                    </div>
                   </form>
                 </div>}
             </div>
