@@ -27,7 +27,6 @@ let teamCache = null;
 let lastUpdateTime = null;
 const isFreshData = (updateTime, timeToLive = TIME_TO_LIVE) => {
   const diffBetweenLastUpdateAndNow = +new Date() - updateTime;
-  console.log(diffBetweenLastUpdateAndNow, timeToLive  );
   return updateTime && (diffBetweenLastUpdateAndNow < timeToLive);
 };
 
