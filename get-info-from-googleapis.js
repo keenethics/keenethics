@@ -50,11 +50,8 @@ class DataStore {
     this.updateTime = +new Date();
   }
 
-  sanitizeSheet(valueRanges, rangeName) {
-    // Make sure that all columns of data are filled out
-    const values = valueRanges.find(v => v.range === rangeName).values;
-    const TITLE_ROW_LENGTH = values[TITLE_COLUMN_INDEX].length;
-    return values.filter(v => v.length === TITLE_ROW_LENGTH);
+  getSheetValues(valueRanges, rangeName) {
+    return valueRanges.find(v => v.range === rangeName).values;
   }
 
   async getData() {
@@ -77,8 +74,8 @@ class DataStore {
       });
 
 
-      const team = this.sanitizeSheet(table.data.valueRanges, TEAM_RANGE);
-      const careers = this.sanitizeSheet(table.data.valueRanges, CAREERS_RANGE);
+      const team = this.getSheetValues(table.data.valueRanges, TEAM_RANGE);
+      const careers = this.getSheetValues(table.data.valueRanges, CAREERS_RANGE);
 
       const data = {
         team: arrayOfArraysToCollection(team),
