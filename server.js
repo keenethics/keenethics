@@ -300,12 +300,12 @@ app.prepare().then(() => {
       });
     }
   });
-  server.get('/team', async (req, res) => {
+  server.get('/team-list', async (req, res) => {
     const team = await getTeam();
     res.send(JSON.stringify(team));
   });
 
-  server.get('/careers', async (req, res) => {
+  server.get('/careers-list', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
   });
