@@ -109,8 +109,8 @@ export default class Contacts extends React.Component {
             <div className={this.state.activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               {this.state.activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn active' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
-              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn active' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
+              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
               <ul className="contacts-list">
                 <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
@@ -198,7 +198,7 @@ export default class Contacts extends React.Component {
                   </form>
                 </div> :
                 <div className="estimate-form">
-                  <form onSubmit={this.onSubmit}>
+                  <form onSubmit={this.onSubmit} className="estimate-form-inputs">
                     <div className="contacts-title estimate-title">let us Estimate your project</div>
                     <div className="question-title"><span className="question-number">01</span> Stage</div>
                     <div className="estimate-input-cols">
@@ -211,7 +211,7 @@ export default class Contacts extends React.Component {
                           onChange={this.onChange}
                         />
                         <label htmlFor="new" className="label-for-radio-btn">
-                            <p className="radio-lable-title">New app</p>
+                          <p className="radio-lable-title">New app</p>
                             to be built from scratch
                         </label>
                       </div>
@@ -403,7 +403,7 @@ export default class Contacts extends React.Component {
                         </label>
                       </div>
                     </div>
-                    <div className="question-title"><span className="question-number">03</span>
+                    <div className="question-title"><span className="question-number qn-check">03</span>
                       <input
                         name="pm"
                         type="checkbox"
@@ -413,7 +413,7 @@ export default class Contacts extends React.Component {
                         className="check"
                       />
                       <label htmlFor="pm" className="label-for-checkbox-btn">
-                        <span>
+                        <span className="pm-check">
                           <svg width="12px" height="10px" viewBox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1" />
                           </svg>
@@ -423,6 +423,88 @@ export default class Contacts extends React.Component {
                         </span>
                       </label>
                     </div>
+                    <div className="question-title"><span className="question-number">04</span> Expected budget</div>
+                    <div className="estimate-input-cols">
+                      <div className="input-select-wrap">
+                        <select className="input-select">
+                          <option value="not-sure">I`m not sure</option>
+                          <option value="<10000">Under $10000</option>
+                          <option value="10000<30000">$10000-$30000</option>
+                          <option value=">30000">$30000 and above</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="question-title"><span className="question-number">05</span> Timeframe</div>
+                    <div className="estimate-input-cols">
+                      <div className="input-select-wrap">
+                        <select className="input-select">
+                          <option value="<1">Less than 1 month </option>
+                          <option value="1-3">1 to 3 months</option>
+                          <option value="3-6">3 to 6 months</option>
+                          <option value=">6">Above 6 months</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="question-title"><span className="question-number">06</span> Start</div>
+                    <div className="estimate-input-cols">
+                      <div className="input-select-wrap">
+                        <select className="input-select">
+                          <option value="asap">ASAP</option>
+                          <option value="iacod">in a couple of days</option>
+                          <option value="iaw">in a week</option>
+                          <option value="iacow">in a couple of weeks</option>
+                          <option value="iamol">in a month or later</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="input-cols">
+                      <div className="input-wrap input-wrap-2">
+                        <input
+                          className={firstname.error ? 'error' : null}
+                          name="firstname"
+                          placeholder="First Name"
+                          type="text"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                        <input
+                          className={phone.error ? 'error' : null}
+                          name="phone"
+                          placeholder="Your Phone"
+                          type="tel"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="input-cols">
+                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                        <input
+                          className={email.error ? 'error' : null}
+                          name="email"
+                          placeholder="Your Email"
+                          type="mail"
+                          onChange={this.onChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="input-wrap input-wrap-2 input-wrap-ta">
+                      <textarea
+                        className={message.error ? 'error' : null}
+                        name="message"
+                        placeholder="Message"
+                        onChange={this.onChange}
+                      />
+                    </div>
+                    {status ? (
+                      <div className="form-status">{status}</div>
+                  ) : null}
+                    <button
+                      type="submit"
+                      className={isPending ? 'button button-send pending' : 'button button-send'}
+                    >
+                      <img src="/static/images/svg/send.svg" alt="send" />
+                    </button>
                   </form>
                 </div>}
             </div>
