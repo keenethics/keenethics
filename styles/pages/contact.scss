@@ -87,7 +87,7 @@
 
 .estimate-block-background {
     background-color: #282473 !important;
-    height: 1100px !important;
+    height: 1110px !important;
     padding: 0px !important;
 }
 
@@ -142,6 +142,7 @@
         z-index: 100;
     }
     .contact-form-btn {
+        width: 383px;
         left: 45px;
         top: 39px;
     }
@@ -152,7 +153,7 @@
     .disabled {
         background-color:rgba(84, 145,245, 0.25);
         &:hover {
-            background-color:rgba(84, 145,245, 0.75)
+            background-color:rgba(84, 145,245, 0.75);
         }
     }
 }
@@ -232,7 +233,7 @@
     height: 100%;
 
 
-    .input-wrap-ta {
+    .input-wrap-2-ta {
         margin-bottom: 20px;
     }
     .btn-send img {
@@ -275,7 +276,7 @@
     .estimate-form-inputs {
         position: absolute;
         left: -92px;
-        width: 612px; //652px
+        width: 652px; //652px
         top: 40px;
         z-index: 300;
     }
@@ -285,7 +286,7 @@
     .question-title {
         color: #12103e;
         font-family: Raleway;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         letter-spacing: 1.12px;
         margin-bottom: 15px;
@@ -293,7 +294,7 @@
         .question-number {
             color: #dc5052;
             font-family: Raleway;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 400;
             letter-spacing: 1.6px;
             margin-right: 5px;
@@ -337,12 +338,12 @@
         position: relative;
         width: 180px;
         height: 37px;
-        font-size: 14px;
+        font-size: 13px;
         border-radius: 10px;
         border: 1px solid #acacac;
         background-color: #f6f6f6;
         .radio-lable-title {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             margin-bottom: 5px;
         }
@@ -427,11 +428,11 @@
     .input-select-wrap {
         .input-select {
             background: transparent;
-            width: 500px;
+            width: 540px;
             padding: 5px;
             padding-left: 25px;
-            margin-left: 10px;
-            font-size: 16px;
+            margin-left: 5px;
+            font-size: 15px;
             line-height: 1;
             border: 0;
             border-radius: 0;
@@ -441,7 +442,6 @@
             border-bottom: 1px solid #acacac;
             outline: none;
             font-family: Raleway;
-            font-size: 17px;
             font-weight: 400;
             letter-spacing: 0.24px;
             option {
@@ -461,6 +461,124 @@
             transform: scale(.9);
         }
     }
+    .input-contacts {
+        display: inline-block;
+        margin-left: 45px;
+        input {
+            border: 0;
+            width: 239px;
+            border-bottom: 1px solid #acacac;
+            margin-bottom: 15px;
+            margin-top: 35px;
+            outline: none;
+            padding: 5px;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #13243c;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.24px;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: #13243c;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.24px;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: #13243c;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.24px;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: #13243c;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.24px;
+            }
+        }
+    }
+    .input-email {
+        input {
+            width: 533px;
+            margin-top: 0px;
+        }
+    }
+    .input-textarea {
+        margin-bottom: 10px;
+        .input-textarea-title {
+            color: #13243c;
+            font-family: Raleway;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.24px;
+            margin-left: 50px;
+        }
+        textarea {
+            margin-top: 7px;
+            margin-left: 45px;
+            width: 523px;
+            padding: 10px;
+            height: 90px;
+            outline: none;
+            border-radius: 3px;
+            line-height: 1.3;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.24px;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.24px;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.24px;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.24px;
+            }
+        }
+    }
+    .form-footer {
+        margin-bottom: 20px;
+        .touch-screen {
+            float: left;
+            margin-left: 50px;
+            width: 30px;
+            margin-right: 10px;
+        }
+        .form-footer-text {
+            width: 591px;
+            color: #12103e;
+            font-family: Raleway;
+            line-height: 1.2;
+            font-size: 15px;
+            span {
+                font-weight: 600;
+            }
+            a {
+                color: #5491f5;
+            }
+        }
+    }
+    .estimate-button {
+        position: absolute;
+        right: 70px;
+    }
 }
 
 .contacts-title {
@@ -468,10 +586,11 @@
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .estimate-title {
     padding-left: 5px;
+    text-align: center;
 }
 
 .btn-send {
@@ -516,7 +635,7 @@
 .contacts-file {
     position: absolute;
     z-index: 400;
-    left: 139px;
+    left: 146px;
     top: 44%;
     margin-top: -83px;
     width: 270px;

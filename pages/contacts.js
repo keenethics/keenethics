@@ -458,50 +458,60 @@ export default class Contacts extends React.Component {
                       </div>
                     </div>
                     <div className="input-cols">
-                      <div className="input-wrap input-wrap-2">
+                      <div className="input-contacts">
                         <input
                           className={firstname.error ? 'error' : null}
                           name="firstname"
-                          placeholder="First Name"
+                          placeholder="Name:"
                           type="text"
                           onChange={this.onChange}
                         />
                       </div>
-                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                      <div className="input-contacts">
                         <input
                           className={phone.error ? 'error' : null}
                           name="phone"
-                          placeholder="Your Phone"
+                          placeholder="Phone:"
                           type="tel"
                           onChange={this.onChange}
                         />
                       </div>
                     </div>
                     <div className="input-cols">
-                      <div className="input-wrap input-wrap-2 input-wrap-l">
+                      <div className="input-contacts input-email">
                         <input
                           className={email.error ? 'error' : null}
                           name="email"
-                          placeholder="Your Email"
+                          placeholder="Email:"
                           type="mail"
                           onChange={this.onChange}
                         />
                       </div>
                     </div>
-                    <div className="input-wrap input-wrap-2 input-wrap-ta">
-                      <textarea
-                        className={message.error ? 'error' : null}
-                        name="message"
-                        placeholder="Message"
-                        onChange={this.onChange}
-                      />
+                    <div className="input-cols">
+                      <div className="input-textarea">
+                      <div className="input-textarea-title">Message:</div>
+                        <textarea
+                          className={message.error ? 'error' : null}
+                          name="message"
+                          placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
+                          onChange={this.onChange}
+                        />
+                      </div>
+                    </div>
+                    <div className="form-footer">
+                      <img src="/static/images/touch-screen.png" className="touch-screen" alt="touch-screen" />
+                      <p className="form-footer-text">
+                        Fill out additional information about your project and <span>get up to 50%</span> discount
+                        for project specification’s elaboration - <a href="#">follow link</a>
+                      </p>
                     </div>
                     {status ? (
                       <div className="form-status">{status}</div>
                   ) : null}
                     <button
                       type="submit"
-                      className={isPending ? 'button button-send pending' : 'button button-send'}
+                      className={isPending ? 'button button-send pending estimate-button' : 'button button-send estimate-button'}
                     >
                       <img src="/static/images/svg/send.svg" alt="send" />
                     </button>
