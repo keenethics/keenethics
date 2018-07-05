@@ -258,6 +258,7 @@
     padding-top: 40px;
     height: 100%;
     box-sizing: border-box;
+    border-radius: 10px;
     &:after {
         clear: none;
         content: "";
@@ -472,6 +473,10 @@
             margin-top: 35px;
             outline: none;
             padding: 5px;
+            color: #5591f5;
+            font-family: "Open Sans";
+            font-size: 16px;
+            letter-spacing: 0.28px;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 color: #13243c;
                 font-family: Raleway;
@@ -527,6 +532,10 @@
             outline: none;
             border-radius: 3px;
             line-height: 1.3;
+            color: #5591f5;
+            font-family: "Open Sans";
+            font-size: 16px;
+            letter-spacing: 0.28px;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 font-family: Raleway;
                 font-weight: 400;
@@ -575,9 +584,13 @@
             }
         }
     }
-    .estimate-button {
-        position: absolute;
-        right: 70px;
+    .submit-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 70px;
+    }
+    .form-status {
+        font-size: 12px;
     }
 }
 

@@ -41,13 +41,47 @@ export default class Contacts extends React.Component {
         value: '',
         error: false,
       },
+      pm: {
+        value: '',
+        error: false,
+      },
+      budget: {
+        value: 'I`m not sure',
+        error: false,
+      },
+      timeframe: {
+        value: 'I`m not sure',
+        error: false,
+      },
+      start: {
+        value: 'ASAP',
+        error: false,
+      },
+      name: {
+        value: '',
+        error: false,
+      },
+      phoneEstimate: {
+        value: '',
+        error: false,
+      },
+      emailEstimate: {
+        value: '',
+        error: false,
+      },
+      messageEstimate: {
+        value: '',
+        error: false,
+      },
       isPending: false,
       status: '',
       activeContactForm: false,
     };
 
     this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmit2 = this.onSubmit2.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onChange2 = this.onChange2.bind(this);
     this.onClick = this.onClick.bind(this);
   }
   onSubmit(e) {
@@ -76,6 +110,32 @@ export default class Contacts extends React.Component {
       this.setState(state);
     });
   }
+  onSubmit2(e) {
+    e.preventDefault();
+
+    this.setState({
+      isPending: true,
+    });
+
+    fetch('/estimate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state),
+    }).then(response => response.json()).then((json) => {
+      const state = {
+        isPending: false,
+        status: json.status.toString(),
+      };
+
+      if (json && json.errorField) {
+        Object.assign(state, json.errorField);
+      }
+
+      this.setState(state);
+    });
+  }
   onChange({ target }) {
     this.setState({
       [target.name]: {
@@ -84,12 +144,28 @@ export default class Contacts extends React.Component {
       },
     });
   }
+  onChange2({ target }) {
+    const { services } = this.form;
+
+    const checkboxArray = [].slice.call(services);
+    const checkedCheckboxes = checkboxArray.filter(input => input.checked);
+    const checkedCheckboxesValues = checkedCheckboxes.map(input => input.value);
+
+    target.name === 'services' ? this.setState({ services: { value: checkedCheckboxesValues } }) :
+      this.setState({
+        [target.name]: {
+          value: target.value,
+          error: '',
+        },
+      });
+  }
   onClick({ target }) {
     this.setState({ activeContactForm: target.name === 'contact-form-btn' });
   }
   render() {
     const { url } = this.props;
     const {
+      activeContactForm,
       isPending,
       status,
       firstname,
@@ -97,6 +173,8 @@ export default class Contacts extends React.Component {
       email,
       phone,
       message,
+      emailEstimate,
+      name,
     } = this.state;
 
     return (
@@ -106,11 +184,11 @@ export default class Contacts extends React.Component {
             <div className="title-page">
               <h1 className="title">Contact Us</h1>
             </div>
-            <div className={this.state.activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
+            <div className={activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
-              {this.state.activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button onClick={this.onClick} name="contact-form-btn" className={this.state.activeContactForm ? 'contacts-form-btn contact-form-btn' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
-              <button onClick={this.onClick} name="estimate-form-btn" className={!this.state.activeContactForm ? 'contacts-form-btn estimate-form-btn' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
+              {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
+              <button onClick={this.onClick} name="contact-form-btn" className={activeContactForm ? 'contacts-form-btn contact-form-btn' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={!activeContactForm ? 'contacts-form-btn estimate-form-btn' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
               <ul className="contacts-list">
                 <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
@@ -198,7 +276,7 @@ export default class Contacts extends React.Component {
                   </form>
                 </div> :
                 <div className="estimate-form">
-                  <form onSubmit={this.onSubmit} className="estimate-form-inputs">
+                  <form onSubmit={this.onSubmit2} className="estimate-form-inputs" ref={form => this.form = form}>
                     <div className="contacts-title estimate-title">let us Estimate your project</div>
                     <div className="question-title"><span className="question-number">01</span> Stage</div>
                     <div className="estimate-input-cols">
@@ -206,9 +284,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="stage"
                           type="radio"
-                          value="new"
+                          value="New app"
                           id="new"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                         />
                         <label htmlFor="new" className="label-for-radio-btn">
                           <p className="radio-lable-title">New app</p>
@@ -219,10 +297,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="stage"
                           type="radio"
-                          value="existing"
+                          value="Existing app"
                           id="existing"
-                          onChange={this.onChange}
-                          checked
+                          onChange={this.onChange2}
                         />
                         <label htmlFor="existing" className="label-for-radio-btn">
                           <p className="radio-lable-title">Existing app</p>
@@ -236,9 +313,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="web"
+                          value="Web app"
                           id="web"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="web" className="label-for-checkbox-btn">
@@ -253,9 +330,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="ios"
+                          value="IOS app"
                           id="ios"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="ios" className="label-for-checkbox-btn">
@@ -270,9 +347,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="linux"
+                          value="Linux app"
                           id="linux"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="linux" className="label-for-checkbox-btn">
@@ -287,9 +364,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="server-side"
+                          value="Server-side development"
                           id="ssd"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="ssd" className="label-for-checkbox-btn">
@@ -304,9 +381,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="windows"
+                          value="Windows app"
                           id="windows"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="windows" className="label-for-checkbox-btn">
@@ -321,9 +398,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="qa"
+                          value="QA testing"
                           id="qa"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="qa" className="label-for-checkbox-btn">
@@ -338,9 +415,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="android"
+                          value="Android app"
                           id="android"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="android" className="label-for-checkbox-btn">
@@ -355,9 +432,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="macos"
+                          value="MacOS app"
                           id="macos"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="macos" className="label-for-checkbox-btn">
@@ -372,9 +449,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="design"
+                          value="Design"
                           id="design"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="design" className="label-for-checkbox-btn">
@@ -389,9 +466,9 @@ export default class Contacts extends React.Component {
                         <input
                           name="services"
                           type="checkbox"
-                          value="other"
+                          value="Other"
                           id="other"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                           className="check"
                         />
                         <label htmlFor="other" className="label-for-checkbox-btn">
@@ -407,9 +484,9 @@ export default class Contacts extends React.Component {
                       <input
                         name="pm"
                         type="checkbox"
-                        value="pm"
+                        value="PM/Product manager is required"
                         id="pm"
-                        onChange={this.onChange}
+                        onChange={this.onChange2}
                         className="check"
                       />
                       <label htmlFor="pm" className="label-for-checkbox-btn">
@@ -426,65 +503,65 @@ export default class Contacts extends React.Component {
                     <div className="question-title"><span className="question-number">04</span> Expected budget</div>
                     <div className="estimate-input-cols">
                       <div className="input-select-wrap">
-                        <select className="input-select">
-                          <option value="not-sure">I`m not sure</option>
-                          <option value="<10000">Under $10000</option>
-                          <option value="10000<30000">$10000-$30000</option>
-                          <option value=">30000">$30000 and above</option>
+                        <select name="budget" className="input-select" onChange={this.onChange}>
+                          <option value="I`m not sure">I`m not sure</option>
+                          <option value="Under $10000">Under $10000</option>
+                          <option value="$10000-$30000">$10000-$30000</option>
+                          <option value="$30000 and above">$30000 and above</option>
                         </select>
                       </div>
                     </div>
                     <div className="question-title"><span className="question-number">05</span> Timeframe</div>
                     <div className="estimate-input-cols">
                       <div className="input-select-wrap">
-                        <select className="input-select">
-                          <option value="<1">Less than 1 month </option>
-                          <option value="1-3">1 to 3 months</option>
-                          <option value="3-6">3 to 6 months</option>
-                          <option value=">6">Above 6 months</option>
+                        <select name="timeframe" className="input-select" onChange={this.onChange2}>
+                          <option value="I`m not sure">I`m not sure</option>
+                          <option value="Less than 1 month">Less than 1 month</option>
+                          <option value="1 to 3 months">1 to 3 months</option>
+                          <option value="3 to 6 months">3 to 6 months</option>
+                          <option value="Above 6 months">Above 6 months</option>
                         </select>
                       </div>
                     </div>
                     <div className="question-title"><span className="question-number">06</span> Start</div>
                     <div className="estimate-input-cols">
                       <div className="input-select-wrap">
-                        <select className="input-select">
-                          <option value="asap">ASAP</option>
-                          <option value="iacod">in a couple of days</option>
-                          <option value="iaw">in a week</option>
-                          <option value="iacow">in a couple of weeks</option>
-                          <option value="iamol">in a month or later</option>
+                        <select name="start" className="input-select" onChange={this.onChange2}>
+                          <option value="ASAP">ASAP</option>
+                          <option value="in a couple of days">in a couple of days</option>
+                          <option value="in a week">in a week</option>
+                          <option value="in a couple of weeks">in a couple of weeks</option>
+                          <option value="in a month or later">in a month or later</option>
                         </select>
                       </div>
                     </div>
                     <div className="input-cols">
                       <div className="input-contacts">
                         <input
-                          className={firstname.error ? 'error' : null}
-                          name="firstname"
+                          className={name.error ? 'error' : null}
+                          name="name"
                           placeholder="Name:"
                           type="text"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                         />
                       </div>
                       <div className="input-contacts">
                         <input
-                          className={phone.error ? 'error' : null}
-                          name="phone"
+                          name="phoneEstimate"
                           placeholder="Phone:"
                           type="tel"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                         />
                       </div>
                     </div>
                     <div className="input-cols">
                       <div className="input-contacts input-email">
                         <input
-                          className={email.error ? 'error' : null}
-                          name="email"
+                          className={emailEstimate.error ? 'error' : null}
+                          name="emailEstimate"
                           placeholder="Email:"
                           type="mail"
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                         />
                       </div>
                     </div>
@@ -492,10 +569,9 @@ export default class Contacts extends React.Component {
                       <div className="input-textarea">
                       <div className="input-textarea-title">Message:</div>
                         <textarea
-                          className={message.error ? 'error' : null}
-                          name="message"
+                          name="messageEstimate"
                           placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
-                          onChange={this.onChange}
+                          onChange={this.onChange2}
                         />
                       </div>
                     </div>
@@ -509,12 +585,14 @@ export default class Contacts extends React.Component {
                     {status ? (
                       <div className="form-status">{status}</div>
                   ) : null}
-                    <button
-                      type="submit"
-                      className={isPending ? 'button button-send pending estimate-button' : 'button button-send estimate-button'}
-                    >
-                      <img src="/static/images/svg/send.svg" alt="send" />
-                    </button>
+                    <div className="submit-btn">
+                      <button
+                        type="submit"
+                        className={isPending ? 'button button-send pending' : 'button button-send'}
+                      >
+                        <img src="/static/images/svg/send.svg" alt="send" />
+                      </button>
+                    </div>
                   </form>
                 </div>}
             </div>
