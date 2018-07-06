@@ -87,7 +87,7 @@
 
 .estimate-block-background {
     background-color: #282473 !important;
-    height: 1110px !important;
+    height: 1125px !important;
     padding: 0px !important;
 }
 
@@ -232,7 +232,98 @@
     width: 510px;
     height: 100%;
 
-
+    .input-wrap {
+        position: relative;
+        input {
+            line-height: 42px;
+            padding: 30px 8px 14px 8px;
+            width: 100%;
+            color: #6d669f;
+            font-size: 15px;
+            background: none;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            outline: none;
+            border-bottom: 1px solid #6d669f;
+            box-sizing: border-box;
+        
+            &.error {
+                color: red;
+                border-color: red;
+            }
+        }
+        label {
+            color: #757575;
+            font-family: Arial;
+            font-weight:normal;
+            font-size: 14px;
+            letter-spacing: 0.24px;
+            position:absolute;
+            pointer-events:none;
+            left:8px;
+            bottom: 8px;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        input:focus ~ label, input:valid ~ label {
+            bottom: 32px;
+            font-size:12px;
+            color:#6d669f;
+        }
+        .bar    { 
+            position:relative; 
+            display:block; 
+            width:100%;
+        }
+        .bar:before, .bar:after {
+            content:'';
+            height:2px; 
+            width:0;
+            bottom:0px; 
+            position:absolute;
+            background:#6d669f;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        .bar:before {
+            left:50%;
+        }
+        .bar:after {
+            right:50%; 
+        }
+        input:focus ~ .bar:before, input:focus ~ .bar:after {
+            width:50%;
+        }
+        .highlight {
+            position:absolute;
+            height:70%; 
+            width:190px; 
+            bottom:0%; 
+            left:0;
+            pointer-events:none;
+            opacity:0.5;
+        }
+        input:focus ~ .highlight {
+            -webkit-animation:inputHighlighter 0.3s ease;
+            -moz-animation:inputHighlighter 0.3s ease;
+            animation:inputHighlighter 0.3s ease;
+        }
+        @-webkit-keyframes inputHighlighter {
+            from { background:#6d669f; }
+            to    { width:0; background:transparent; }
+        }
+        @-moz-keyframes inputHighlighter {
+            from { background:#6d669f; }
+            to    { width:0; background:transparent; }
+        }
+        @keyframes inputHighlighter {
+            from { background:#6d669f; }
+            to    { width:0; background:transparent; }
+        }
+    }
     .input-wrap-2-ta {
         margin-bottom: 20px;
     }
@@ -463,13 +554,14 @@
         }
     }
     .input-contacts {
+        position: relative;
         display: inline-block;
         margin-left: 45px;
         input {
             border: 0;
             width: 239px;
             border-bottom: 1px solid #acacac;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             margin-top: 35px;
             outline: none;
             padding: 5px;
@@ -477,34 +569,92 @@
             font-family: "Open Sans";
             font-size: 16px;
             letter-spacing: 0.28px;
-            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: #13243c;
-                font-family: Raleway;
-                font-weight: 400;
-                font-size: 16px;
-                letter-spacing: 0.24px;
+        }
+        label {
+            color: #13243c;
+            font-family: Raleway;
+            font-weight:normal;
+            font-size: 16px;
+            letter-spacing: 0.24px;
+            position:absolute;
+            pointer-events:none;
+            left:5px;
+            bottom: 22px;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        input:focus ~ label, input:valid ~ label {
+            bottom: 50px;
+            font-size:13px;
+            color:#5591f5;
+        }
+        .bar    { 
+            position:relative; 
+            display:block; 
+            width:250px;
+        }
+        .bar:before, .bar:after {
+            content:'';
+            height:2px; 
+            width:0;
+            bottom:19px; 
+            position:absolute;
+            background:#5591f5;
+            transition:0.2s ease all; 
+            -moz-transition:0.2s ease all; 
+            -webkit-transition:0.2s ease all;
+        }
+        .bar:before {
+            left:50%;
+        }
+        .bar:after {
+            right:50%; 
+        }
+        input:focus ~ .bar:before, input:focus ~ .bar:after {
+            width:50%;
+        }
+        .highlight {
+            position:absolute;
+            height:40%; 
+            width:100px; 
+            bottom:25%; 
+            left:0;
+            pointer-events:none;
+            opacity:0.5;
+        }
+        input[type="mail"] ~ {
+            .highlight {
+                position:absolute;
+                height:70%; 
+                width:190px; 
+                bottom:40%; 
+                left:0;
+                pointer-events:none;
+                opacity:0.5;
             }
-            &::-moz-placeholder { /* Firefox 19+ */
-                color: #13243c;
-                font-family: Raleway;
-                font-weight: 400;
-                font-size: 16px;
-                letter-spacing: 0.24px;
+            .bar    { 
+                position:relative; 
+                display:block; 
+                width:545px;
             }
-            &:-ms-input-placeholder { /* IE 10+ */
-                color: #13243c;
-                font-family: Raleway;
-                font-weight: 400;
-                font-size: 16px;
-                letter-spacing: 0.24px;
-            }
-            &:-moz-placeholder { /* Firefox 18- */
-                color: #13243c;
-                font-family: Raleway;
-                font-weight: 400;
-                font-size: 16px;
-                letter-spacing: 0.24px;
-            }
+        }
+        input:focus ~ .highlight {
+            -webkit-animation:inputHighlighter 0.3s ease;
+            -moz-animation:inputHighlighter 0.3s ease;
+            animation:inputHighlighter 0.3s ease;
+        }
+        @-webkit-keyframes inputHighlighter {
+            from { background:#5591f5; }
+            to    { width:0; background:transparent; }
+        }
+        @-moz-keyframes inputHighlighter {
+            from { background:#5591f5; }
+            to    { width:0; background:transparent; }
+        }
+        @keyframes inputHighlighter {
+            from { background:#5591f5; }
+            to    { width:0; background:transparent; }
         }
     }
     .input-email {

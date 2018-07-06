@@ -75,7 +75,7 @@ export default class Contacts extends React.Component {
       },
       isPending: false,
       status: '',
-      activeContactForm: false,
+      activeContactForm: true,
     };
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -221,19 +221,25 @@ export default class Contacts extends React.Component {
                         <input
                           className={firstname.error ? 'error' : null}
                           name="firstname"
-                          placeholder="First Name"
                           type="text"
                           onChange={this.onChange}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="emailEstimate">First Name</label>
                       </div>
                       <div className="input-wrap input-wrap-2">
                         <input
                           className={lastname.error ? 'error' : null}
                           name="lastname"
-                          placeholder="Last Name"
                           type="text"
                           onChange={this.onChange}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="emailEstimate">Last Name</label>
                       </div>
                     </div>
                     <div className="input-cols">
@@ -241,19 +247,25 @@ export default class Contacts extends React.Component {
                         <input
                           className={email.error ? 'error' : null}
                           name="email"
-                          placeholder="Your Email"
                           type="mail"
                           onChange={this.onChange}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="emailEstimate">Your Email</label>
                       </div>
                       <div className="input-wrap input-wrap-2 input-wrap-l">
                         <input
                           className={phone.error ? 'error' : null}
                           name="phone"
-                          placeholder="Your Phone"
                           type="tel"
                           onChange={this.onChange}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="emailEstimate">Your Phone</label>
                       </div>
                     </div>
                     <div className="input-wrap input-wrap-2 input-wrap-ta">
@@ -540,18 +552,26 @@ export default class Contacts extends React.Component {
                         <input
                           className={name.error ? 'error' : null}
                           name="name"
-                          placeholder="Name:"
+                          id="name"
                           type="text"
                           onChange={this.onChange2}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="name">Name:</label>
                       </div>
                       <div className="input-contacts">
                         <input
                           name="phoneEstimate"
-                          placeholder="Phone:"
+                          id="phoneEstimate"
                           type="tel"
                           onChange={this.onChange2}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="phoneEstimate">Phone:</label>
                       </div>
                     </div>
                     <div className="input-cols">
@@ -559,10 +579,13 @@ export default class Contacts extends React.Component {
                         <input
                           className={emailEstimate.error ? 'error' : null}
                           name="emailEstimate"
-                          placeholder="Email:"
                           type="mail"
                           onChange={this.onChange2}
+                          required
                         />
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label htmlFor="emailEstimate">Email:</label>
                       </div>
                     </div>
                     <div className="input-cols">
