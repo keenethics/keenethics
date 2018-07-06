@@ -221,25 +221,27 @@ export default class Contacts extends React.Component {
                         <input
                           className={firstname.error ? 'error' : null}
                           name="firstname"
+                          id="firstname"
                           type="text"
                           onChange={this.onChange}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label htmlFor="emailEstimate">First Name</label>
+                        <span className="highlight" />
+                        <span className="bar" />
+                        <label htmlFor="firstname">First Name</label>
                       </div>
                       <div className="input-wrap input-wrap-2">
                         <input
                           className={lastname.error ? 'error' : null}
                           name="lastname"
+                          id="lastname"
                           type="text"
                           onChange={this.onChange}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label htmlFor="emailEstimate">Last Name</label>
+                        <span className="highlight" />
+                        <span className="bar" />
+                        <label htmlFor="lastname">Last Name</label>
                       </div>
                     </div>
                     <div className="input-cols">
@@ -247,25 +249,27 @@ export default class Contacts extends React.Component {
                         <input
                           className={email.error ? 'error' : null}
                           name="email"
+                          id="email"
                           type="mail"
                           onChange={this.onChange}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label htmlFor="emailEstimate">Your Email</label>
+                        <span className="highlight" />
+                        <span className="bar" />
+                        <label htmlFor="email">Your Email</label>
                       </div>
                       <div className="input-wrap input-wrap-2 input-wrap-l">
                         <input
                           className={phone.error ? 'error' : null}
                           name="phone"
+                          id="phone"
                           type="tel"
                           onChange={this.onChange}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label htmlFor="emailEstimate">Your Phone</label>
+                        <span className="highlight" />
+                        <span className="bar" />
+                        <label htmlFor="phone">Your Phone</label>
                       </div>
                     </div>
                     <div className="input-wrap input-wrap-2 input-wrap-ta">
@@ -315,7 +319,7 @@ export default class Contacts extends React.Component {
                         />
                         <label htmlFor="existing" className="label-for-radio-btn">
                           <p className="radio-lable-title">Existing app</p>
-                          continue development
+                            continue development
                         </label>
                       </div>
                     </div>
@@ -557,8 +561,8 @@ export default class Contacts extends React.Component {
                           onChange={this.onChange2}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
+                        <span className="highlight" />
+                        <span className="bar" />
                         <label htmlFor="name">Name:</label>
                       </div>
                       <div className="input-contacts">
@@ -569,8 +573,8 @@ export default class Contacts extends React.Component {
                           onChange={this.onChange2}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
+                        <span className="highlight" />
+                        <span className="bar" />
                         <label htmlFor="phoneEstimate">Phone:</label>
                       </div>
                     </div>
@@ -583,8 +587,8 @@ export default class Contacts extends React.Component {
                           onChange={this.onChange2}
                           required
                         />
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
+                        <span className="highlight" />
+                        <span className="bar" />
                         <label htmlFor="emailEstimate">Email:</label>
                       </div>
                     </div>

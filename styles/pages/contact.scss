@@ -96,7 +96,7 @@
     @include clearfix;
     position: relative;
     height: 500px;
-    padding: 55px 40px 0 0;
+    padding: 0px 40px 0 0;
     position: relative;
     background: #fff url(/static/images/contacts-bg.png) no-repeat 0 0;
 
@@ -125,7 +125,7 @@
     .contacts-form-btn {
         position: absolute;
         height: 40px;
-        width: 365px;
+        width: 351px;
         padding-left: 15px;
         color: #fff;
         outline: none;
@@ -138,11 +138,10 @@
         text-transform: uppercase;
         letter-spacing: 1.39px;
         text-align: left;
-        cursor: pointer;
         z-index: 100;
     }
     .contact-form-btn {
-        width: 383px;
+        width: 387px;
         left: 45px;
         top: 39px;
     }
@@ -154,6 +153,8 @@
         background-color:rgba(84, 145,245, 0.25);
         &:hover {
             background-color:rgba(84, 145,245, 0.75);
+            cursor: pointer;
+            
         }
     }
 }
@@ -231,15 +232,37 @@
     float: right;
     width: 510px;
     height: 100%;
+    padding-top: 55px;
+    .contacts-title, .input-cols, .button-send {
+        position: relative;
+        z-index: 300;
+    }
+    &:after {
+        clear: none;
+        content: "";
+        display: block;
+        height: 90%;
+        width: 100%;
+        background: url(/static/images/3.png)!important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: absolute;
+        top: 0;
+        left: -173px;
+        z-index: 200;
+        pointer-events: none;
+        }
 
     .input-wrap {
         position: relative;
+        z-index: 300;
         input {
             line-height: 42px;
             padding: 30px 8px 14px 8px;
             width: 100%;
             color: #6d669f;
-            font-size: 15px;
+            font-family: "Open Sans";
+            font-size: 16px;
             background: none;
             border-left: none;
             border-right: none;
@@ -247,7 +270,7 @@
             outline: none;
             border-bottom: 1px solid #6d669f;
             box-sizing: border-box;
-        
+            letter-spacing: .28px;
             &.error {
                 color: red;
                 border-color: red;
@@ -255,7 +278,7 @@
         }
         label {
             color: #757575;
-            font-family: Arial;
+            font-family: Raleway;
             font-weight:normal;
             font-size: 14px;
             letter-spacing: 0.24px;
@@ -269,7 +292,7 @@
         }
         input:focus ~ label, input:valid ~ label {
             bottom: 32px;
-            font-size:12px;
+            font-size:13px;
             color:#6d669f;
         }
         .bar    { 
@@ -322,6 +345,47 @@
         @keyframes inputHighlighter {
             from { background:#6d669f; }
             to    { width:0; background:transparent; }
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 5px 8px;
+            margin: 16px 0 0;
+            font-size: 14px;
+            border: 1px solid #6d669f;
+            color: #6d669f;
+            box-sizing: border-box;
+            background: none;
+            outline: none;
+            border-radius: 3px;
+            line-height: 1.3;
+            font-family: "Open Sans";
+            font-size: 15px;
+            letter-spacing: 0.28px;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                font-family: Raleway;
+                font-weight: 400;
+                letter-spacing: 0.28px;
+                font-size: 13px;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                font-family: Raleway;
+                font-weight: 400;
+                letter-spacing: 0.28px;
+                font-size: 16px;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                font-family: Raleway;
+                font-weight: 400;
+                letter-spacing: 0.28px;
+                font-size: 13px;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                font-family: Raleway;
+                font-weight: 400;
+                letter-spacing: 0.28px;
+                font-size: 13px;
+            }
         }
     }
     .input-wrap-2-ta {
@@ -378,7 +442,7 @@
     .question-title {
         color: #12103e;
         font-family: Raleway;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         letter-spacing: 1.12px;
         margin-bottom: 15px;
@@ -397,6 +461,7 @@
         .pm-check {
             vertical-align: top !important;
             margin-top: 4px;
+            margin-left: 3px;
         }
         .question-checkbox-title {
             line-height: 1.3;
@@ -426,7 +491,6 @@
         margin-bottom: 5px;
         margin-right: 25px;
         text-align: center;
-        box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
         position: relative;
         width: 180px;
         height: 37px;
@@ -434,8 +498,11 @@
         border-radius: 10px;
         border: 1px solid #acacac;
         background-color: #f6f6f6;
+        &:hover { 
+            border-color: #00539a;;
+        }
         .radio-lable-title {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             margin-bottom: 5px;
         }
@@ -444,6 +511,7 @@
         border: 1px solid #00539a;
         background-color: #accbff;
         opacity: 0.9;
+        cursor: auto;
     }
     input[type="checkbox"] {
         display:none;
@@ -524,7 +592,7 @@
             padding: 5px;
             padding-left: 25px;
             margin-left: 5px;
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1;
             border: 0;
             border-radius: 0;
@@ -561,7 +629,7 @@
             border: 0;
             width: 239px;
             border-bottom: 1px solid #acacac;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             margin-top: 35px;
             outline: none;
             padding: 5px;
@@ -574,7 +642,7 @@
             color: #13243c;
             font-family: Raleway;
             font-weight:normal;
-            font-size: 16px;
+            font-size: 14px;
             letter-spacing: 0.24px;
             position:absolute;
             pointer-events:none;
@@ -585,20 +653,20 @@
             -webkit-transition:0.2s ease all;
         }
         input:focus ~ label, input:valid ~ label {
-            bottom: 50px;
+            bottom: 48px;
             font-size:13px;
             color:#5591f5;
         }
         .bar    { 
             position:relative; 
             display:block; 
-            width:250px;
+            width:100%;
         }
         .bar:before, .bar:after {
             content:'';
             height:2px; 
             width:0;
-            bottom:19px; 
+            bottom:18px; 
             position:absolute;
             background:#5591f5;
             transition:0.2s ease all; 
@@ -636,7 +704,7 @@
             .bar    { 
                 position:relative; 
                 display:block; 
-                width:545px;
+                width:100%;
             }
         }
         input:focus ~ .highlight {
@@ -669,7 +737,7 @@
             color: #13243c;
             font-family: Raleway;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 14px;
             letter-spacing: 0.24px;
             margin-left: 50px;
         }
@@ -684,7 +752,7 @@
             line-height: 1.3;
             color: #5591f5;
             font-family: "Open Sans";
-            font-size: 16px;
+            font-size: 15px;
             letter-spacing: 0.28px;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 font-family: Raleway;
@@ -776,7 +844,7 @@
 
 .contacts-mail {
   position: absolute;
-  z-index: 1;
+  z-index: 400;
   left: 300px;
   top: 50%;
   margin-top: -83px;
@@ -798,7 +866,7 @@
 .contacts-file {
     position: absolute;
     z-index: 400;
-    left: 146px;
+    left: 147px;
     top: 44%;
     margin-top: -83px;
     width: 270px;
