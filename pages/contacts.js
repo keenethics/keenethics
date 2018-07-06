@@ -246,30 +246,34 @@ export default class Contacts extends React.Component {
                     </div>
                     <div className="input-cols">
                       <div className="input-wrap input-wrap-2 input-wrap-l">
-                        <input
-                          className={email.error ? 'error' : null}
-                          name="email"
-                          id="email"
-                          type="mail"
-                          onChange={this.onChange}
-                          required
-                        />
-                        <span className="highlight" />
-                        <span className="bar" />
-                        <label htmlFor="email">Your Email</label>
+                        <div className="input-email">
+                          <input
+                            className={email.error ? 'error' : null}
+                            name="email"
+                            id="email"
+                            type="mail"
+                            onChange={this.onChange}
+                            required
+                          />
+                          <span className="highlight" />
+                          <span className="bar" />
+                          <label htmlFor="email">Your Email</label>
+                        </div>
                       </div>
                       <div className="input-wrap input-wrap-2 input-wrap-l">
-                        <input
-                          className={phone.error ? 'error' : null}
-                          name="phone"
-                          id="phone"
-                          type="tel"
-                          onChange={this.onChange}
-                          required
-                        />
-                        <span className="highlight" />
-                        <span className="bar" />
-                        <label htmlFor="phone">Your Phone</label>
+                        <div className="input-phone">
+                          <input
+                            className={phone.error ? 'error' : null}
+                            name="phone"
+                            id="phone"
+                            type="tel"
+                            onChange={this.onChange}
+                            required
+                          />
+                          <span className="highlight" />
+                          <span className="bar" />
+                          <label htmlFor="phone">Your Phone</label>
+                        </div>
                       </div>
                     </div>
                     <div className="input-wrap input-wrap-2 input-wrap-ta">
