@@ -744,8 +744,22 @@
         }
     }
     .input-select-wrap {
+        position: relative;
         @media (max-width: 700px){
             margin-right: 45px;
+        }
+        &::after {
+            content: '﹀';
+            font: 17px "Consolas", monospace;
+            color: #00539a;
+            right: 12%;
+            top: 15px;
+            padding: 0 0 2px;
+            position: absolute;
+            pointer-events: none;
+            @media (max-width: 700px){
+                right: 2%;
+            }
         }
         .input-select {
             background: transparent;
