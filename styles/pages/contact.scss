@@ -91,7 +91,7 @@
 
     @media (max-width: 1200px){
         border-radius: 0;
-        padding: 255px 60px 30px;
+        padding: 265px 60px 30px;
         height: auto;
         background: #fff url(/static/images/contacts-bg-mid.png) no-repeat 50% 0;
         background-size: 1650px auto !important;
@@ -126,8 +126,9 @@
         padding: 255px 60px 30px;
         height: auto;
         background: #fff url(/static/images/contacts-bg-mid.png) no-repeat 50% 0;
-        background-size: 1550px auto;
+        background-size: 1650px auto;
         background-position: 0 -100px;
+        border-radius: 22px;
         min-height: calc(100vh - 170px);
     }
 
@@ -163,7 +164,8 @@
         text-align: left;
         z-index: 100;
         @media (max-width: 1200px){
-            height: 70px;
+            padding-top: 10px;
+            padding-bottom: 65px;
             width: 240px;
             text-align: center;
         }
@@ -174,7 +176,8 @@
         }
         @media (max-width: 475px) {
             width: 150px !important;
-            height: 59px;
+            padding-top: 10px;
+            padding-bottom: 55px;
             font-size: 13px;
             top: 200px !important;
         }
@@ -192,7 +195,7 @@
         @media (max-width: 900px){
             left: auto;
             right: 3%;
-            top: 177px;
+            top: 187px;
         }
         @media (max-width: 600px){
             right: 0%;
@@ -207,7 +210,7 @@
         }
         @media (max-width: 900px){
             left: 3%;
-            top: 177px;
+            top: 187px;
         }
         @media (max-width: 600px){
             left: 0%;
@@ -379,7 +382,7 @@
             -webkit-transition:0.2s ease all;
         }
         input:focus ~ label, input:valid ~ label {
-            bottom: 32px;
+            bottom: 29px;
             font-size:13px;
             color:#6d669f;
         }
@@ -548,6 +551,7 @@
             left: -61px;
             z-index: 200;
             pointer-events: none;
+            
         }
         @media (max-width: 900px) {
             width: 114%;
@@ -846,7 +850,7 @@
             }
         }
         input:focus ~ label, input:valid ~ label {
-            bottom: 48px;
+            bottom: 45px;
             font-size:13px;
             color:#5591f5;
             @media (max-width: 700px){
