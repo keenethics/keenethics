@@ -46,7 +46,6 @@ class EstimateForm extends React.Component {
       value: '',
       error: false,
     },
-
   })
   onSubmit = (e) => {
     e.preventDefault();
