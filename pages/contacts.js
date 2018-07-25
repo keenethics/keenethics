@@ -1,81 +1,22 @@
-/* global fetch */
-
-import 'whatwg-fetch';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
+import ContactForm from '../components/contacts/contact-form';
 
 export default class Contacts extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      firstname: {
-        value: '',
-        error: false,
-      },
-      lastname: {
-        value: '',
-        error: false,
-      },
-      email: {
-        value: '',
-        error: false,
-      },
-      phone: {
-        value: '',
-        error: false,
-      },
-      message: {
-        value: '',
-        error: false,
-      },
       isPending: false,
       status: '',
       activeContactForm: true,
     };
 
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onChange = this.onChange.bind(this);
     this.onClick = this.onClick.bind(this);
-  }
-  onSubmit(e) {
-    e.preventDefault();
-
-    this.setState({
-      isPending: true,
-    });
-
-    fetch('/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.state),
-    }).then(response => response.json()).then((json) => {
-      const state = {
-        isPending: false,
-        status: json.status.toString(),
-      };
-
-      if (json && json.errorField) {
-        Object.assign(state, json.errorField);
-      }
-
-      this.setState(state);
-    });
-  }
-  onChange({ target }) {
-    this.setState({
-      [target.name]: {
-        value: target.value,
-        error: '',
-      },
-    });
   }
   onClick({ target }) {
     this.setState({ activeContactForm: target.name === 'contact-form-btn' });
@@ -86,11 +27,6 @@ export default class Contacts extends React.Component {
       activeContactForm,
       isPending,
       status,
-      firstname,
-      lastname,
-      email,
-      phone,
-      message,
     } = this.state;
 
     return (
@@ -129,88 +65,11 @@ export default class Contacts extends React.Component {
                 </li>
               </ul>
               { this.state.activeContactForm ? (
-                <div className="contacts-form">
-                  <form onSubmit={this.onSubmit}>
-                    <div className="contacts-title">Say hello</div>
-                    <div className="input-cols">
-                      <div className="input-wrap input-wrap-2">
-                        <input
-                          className={firstname.error ? 'error' : null}
-                          name="firstname"
-                          id="firstname"
-                          type="text"
-                          onChange={this.onChange}
-                          required
-                        />
-                        <span className="highlight" />
-                        <span className="bar" />
-                        <label htmlFor="firstname">First Name</label>
-                      </div>
-                      <div className="input-wrap input-wrap-2">
-                        <input
-                          className={lastname.error ? 'error' : null}
-                          name="lastname"
-                          id="lastname"
-                          type="text"
-                          onChange={this.onChange}
-                          required
-                        />
-                        <span className="highlight" />
-                        <span className="bar" />
-                        <label htmlFor="lastname">Last Name</label>
-                      </div>
-                    </div>
-                    <div className="input-cols">
-                      <div className="input-wrap input-wrap-2 input-wrap-l">
-                        <div className="input-email">
-                          <input
-                            className={email.error ? 'error' : null}
-                            name="email"
-                            id="email"
-                            type="mail"
-                            onChange={this.onChange}
-                            required
-                          />
-                          <span className="highlight" />
-                          <span className="bar" />
-                          <label htmlFor="email">Your Email</label>
-                        </div>
-                      </div>
-                      <div className="input-wrap input-wrap-2 input-wrap-l">
-                        <div className="input-phone">
-                          <input
-                            className={phone.error ? 'error' : null}
-                            name="phone"
-                            id="phone"
-                            type="tel"
-                            onChange={this.onChange}
-                            required
-                          />
-                          <span className="highlight" />
-                          <span className="bar" />
-                          <label htmlFor="phone">Your Phone</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="input-wrap input-wrap-2 input-wrap-ta">
-                      <textarea
-                        className={message.error ? 'error' : null}
-                        name="message"
-                        placeholder="Message"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    {status ? (
-                      <div className="form-status">{status}</div>
-                    ) : null}
-                    <button
-                      type="submit"
-                      className={isPending ? 'button button-send pending' : 'button button-send'}
-                    >
-                      <img src="/static/images/svg/send.svg" alt="send" />
-                    </button>
-                  </form>
-                </div>
+                <ContactForm
+                  isPending={isPending}
+                  status={status}
+                  callback={state => this.setState(state)}
+                />
               ) : (
                 <EstimateForm
                   isPending={isPending}
