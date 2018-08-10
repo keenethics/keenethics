@@ -19,14 +19,15 @@ import {
   techBackEnd,
   techDatabase,
   techApiIntegration,
+  works,
 } from '../../main.config';
 
 Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-const DEFAULT_DESCRIPTION = 'Custom Software Development Company - Keenethics';
-const DEFAULT_TITLE = 'Keenethics is an Eastern European software development company, that provides custom software development for your business';
+const DEFAULT_DESCRIPTION = 'Keenethics is an Eastern European software development company, that provides custom software development for your business';
+const DEFAULT_TITLE = 'Custom Software Development Company - Keenethics';
 
 const LayoutHead = (props) => {
   const { navigation } = config;
@@ -58,6 +59,7 @@ const LayoutHead = (props) => {
         techBackEnd(),
         techDatabase(),
         techApiIntegration(),
+        works,
       );
 
     subnavigation.forEach((point) => {
@@ -76,7 +78,7 @@ const LayoutHead = (props) => {
   }
 
   if (currentPoint) {
-    title = currentPoint.metaTitle || currentPoint.name;
+    title = currentPoint.metaTitle || currentPoint.name || currentPoint.title;
     description = currentPoint.metaDescription || currentPoint.description;
   }
 

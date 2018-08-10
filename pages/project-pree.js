@@ -19,7 +19,7 @@ const ProjectPrix = ({ url }) => (
                 Stop losing your stuff
               </p>
               <div className="tags">
-                <div className="tag">Feentech</div>
+                <div className="tag">Fintech</div>
                 <div className="tag">E-Commerce</div>
                 <div className="tag">Education</div>
               </div>
