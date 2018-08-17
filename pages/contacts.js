@@ -15,19 +15,37 @@ export default class Contacts extends React.Component {
       status: '',
       activeContactForm: true,
     };
-
-    this.onClick = this.onClick.bind(this);
   }
-  onClick({ target }) {
+
+  onClick = ({ target }) => {
     this.setState({ activeContactForm: target.name === 'contact-form-btn' });
   }
-  render() {
-    const { url } = this.props;
+
+  renderContactOrEstimatedForm = () => {
     const {
       activeContactForm,
       isPending,
       status,
     } = this.state;
+    const renderForm = activeContactForm ? (
+      <ContactForm
+        isPending={isPending}
+        status={status}
+        callback={state => this.setState(state)}
+      />
+    ) : (
+      <EstimateForm
+        isPending={isPending}
+        status={status}
+        callback={state => this.setState(state)}
+      />
+    );
+    return renderForm;
+  }
+
+  render() {
+    const { url } = this.props;
+    const { activeContactForm } = this.state;
 
     return (
       <Layout currentURL={url}>
@@ -64,19 +82,7 @@ export default class Contacts extends React.Component {
                   </a>
                 </li>
               </ul>
-              { this.state.activeContactForm ? (
-                <ContactForm
-                  isPending={isPending}
-                  status={status}
-                  callback={state => this.setState(state)}
-                />
-              ) : (
-                <EstimateForm
-                  isPending={isPending}
-                  status={status}
-                  callback={state => this.setState(state)}
-                />
-              )}
+              { this.renderContactOrEstimatedForm() }
             </div>
           </div>
           <Background />
