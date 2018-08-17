@@ -1,9 +1,9 @@
 Author: Max Savonin
-Title: Mid-summer 2018 Top 10 Alexa Skills
-Subtitle: Startup guide
-Meta title: A successful way to get from idea to production by completing 5 easy steps for turning your invention ideas into a product. Tips for starting a business in practical startup guide: 5 steps from idea to production
-Meta description: A successful way to get from idea to production by completing 5 easy steps for turning your invention ideas into a product. Tips for starting a business in practical startup guide: 5 steps from idea to production
-Preview image: /static/posts/close-up-composition-cup.jpg
+Title: Best Amazon Alexa Skills Mid-summer 2018
+Subtitle: Best Amazon Alexa Skills Mid-summer 2018
+Meta title: Best Amazon Alexa Skills 2018 | Top 10 Cool and Useful Things Alexa Can Do
+Meta description: Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
+Preview image: /static/posts/alexa-post-images/alexa.jpg
 
 Amazon’s Echo devices have taken over our homes as well as our hearts, and Alexa is becoming the most helpful member of many families. Alexa comes preloaded with many great features, but to get the most out of your smart home device you would want to “dress it up” with additional apps, aka skills. We’ve tested a few of them out, and present to you a list of our top ten best Amazon Alexa skills you didn’t know you need.
 
