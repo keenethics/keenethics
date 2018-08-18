@@ -1,9 +1,11 @@
 Author: Max Savonin
 Title: Best Amazon Alexa Skills Mid-summer 2018
 Subtitle: Best Amazon Alexa Skills Mid-summer 2018
-Meta title: Best Amazon Alexa Skills 2018 | Top 10 Cool and Useful Things Alexa Can Do
+Meta title: Best Amazon Alexa Skills Mid-summer 2018 | Top 10 Cool and Useful Things Alexa Can Do. Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
 Meta description: Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
 Preview image: /static/posts/alexa-post-images/alexa.jpg
+
+![Alexa](/static/posts/alexa-post-images/alexa.jpg)
 
 Amazon’s Echo devices have taken over our homes as well as our hearts, and Alexa is becoming the most helpful member of many families. Alexa comes preloaded with many great features, but to get the most out of your smart home device you would want to “dress it up” with additional apps, aka skills. We’ve tested a few of them out, and present to you a list of our top ten best Amazon Alexa skills you didn’t know you need.
 
@@ -127,5 +129,3 @@ Alexa’s My Dietitian skill is not quite what you expect it to be. Its primary 
 
 It’s the end of summer and we try to pretend that we never made that New Year’s resolution to workout every day. With Amazon’s Workout Coach skill it only takes 10 minutes to do a full workout. The skill is fully customizable: you can pick exercises you want, their order and difficulty, set background music, and even pick your coach (do you want to go with an inspirational yogi or a drill sergeant). It’s everything you love about a home workout without the hassle of remotes and computers, just use your voice to ask Alexa to repeat a previous exercise or to go to the next one. The Workout Coach skill keeps track of how many times you’ve worked out, and there are achievements you can earn along the way.  No more excuses, just say “Alexa, open Workout Coach”!  
 You can find the featured Alexa skills on Amazon’s website, they are free to enable and are voice activated apps that will sure to make your life easier and more fulfilling.
-
-![Alexa](/static/posts/alexa-post-images/alexa.jpg)
