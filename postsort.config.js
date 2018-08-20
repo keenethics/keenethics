@@ -13,7 +13,8 @@ const postsDatePair = [
   { createdAt: 1521631041972, filename: '1521631041972-the-importance-of-mockups.md' },
   { createdAt: 1521640519375, filename: '1521640519375-cultural-factors-in-design.md' },
   { createdAt: 1522827874762, filename: '1522827874762-another-stellar-review-on-clutch.md' },
-  { createdAt: 1523533985420, filename: '1523533985420-startup-guide.md' }
+  { createdAt: 1523533985420, filename: '1523533985420-startup-guide.md' },
+  { createdAt: 1534505495576, filename: '1534505495576-mid-summer-2018-top-10-alexa-skills.md' },
 ];
 
 module.exports.postsDatePair = postsDatePair;
