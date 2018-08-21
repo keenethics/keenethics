@@ -152,6 +152,103 @@ app.prepare().then(() => {
 
     sendContactToHubSpot(hubSpotParameters);
   });
+  server.post('/estimate', (req, res) => {
+    const {
+      stage,
+      services,
+      pm,
+      budget,
+      timeframe,
+      start,
+      name,
+      phoneEstimate,
+      emailEstimate,
+      messageEstimate,
+    } = req.body;
+
+    let servicesEstimate;
+
+    name.value = name.value.replace(/\s+/g, ' ');
+    phoneEstimate.value = phoneEstimate.value.replace(/\s+/g, ' ');
+    messageEstimate.value = messageEstimate.value.replace(/\s+/g, ' ');
+    if (services.value) servicesEstimate = services.value.join(', ');
+
+    if (!formatValidation.validate({ min: 3, max: 25 }, name.value)) {
+      name.error = true;
+
+      res.send({
+        errorField: { name },
+        status: 'Wrong name length',
+      });
+      return;
+    }
+
+    if (!formatValidation.validate({ type: 'email' }, emailEstimate.value)) {
+      emailEstimate.error = true;
+
+      res.send({
+        errorField: { emailEstimate },
+        status: 'Wrong email address',
+      });
+      return;
+    }
+    if (!formatValidation.validate({ max: 25 }, phoneEstimate.value)) {
+      phoneEstimate.error = true;
+
+      res.send({
+        errorField: { phoneEstimate },
+        status: 'Wrong phone length',
+      });
+      return;
+    }
+    if (!formatValidation.validate({ max: 800 }, messageEstimate.value)) {
+      messageEstimate.error = true;
+
+      res.send({
+        errorField: { messageEstimate },
+        status: 'Wrong message length',
+      });
+      return;
+    }
+
+    const html = `
+      <p>${name.value}</p>
+      <p>Email: ${emailEstimate.value}</p>
+      <p>Phone: ${phoneEstimate.value}</p>
+      <p>Stage: ${stage.value}</p>
+      <p>Services: ${servicesEstimate}</p>
+      <p>Require PM/Product manager: ${pm.value}</p>
+      <p>Budget: ${budget.value}</p>
+      <p>Timeframe: ${timeframe.value}</p>
+      <p>Start: ${start.value}</p>
+      <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${messageEstimate.value}</div>
+    `;
+
+    const mailOptions = {
+      from: 'no-reply@keenethics.com',
+      to: 'founders@keenethics.com',
+      subject: `New message from ${emailEstimate.value}`,
+      html,
+    };
+
+    transporter.sendMail(mailOptions, (err) => {
+      if (err) {
+        throw err;
+      }
+      res.send({
+        errorField: {},
+        status: 'Message sent',
+      });
+    });
+
+    const hubSpotParameters = {
+      name: name.value,
+      email: emailEstimate.value,
+      phone: phoneEstimate.value.toString(),
+    };
+
+    sendContactToHubSpot(hubSpotParameters);
+  });
   server.post('/careers', (req, res) => {
     const {
       name,
