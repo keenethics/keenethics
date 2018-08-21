@@ -221,7 +221,7 @@
         &:hover {
             background-color:rgba(84, 145,245, 0.75);
             cursor: pointer;
-            
+
         }
     }
 }
@@ -332,7 +332,7 @@
             left: -61px;
             z-index: 200;
             pointer-events: none;
-        }   
+        }
         @media (max-width: 900px) {
             width: 126%;
             top: -45px;
@@ -377,8 +377,8 @@
             pointer-events:none;
             left:8px;
             bottom: 8px;
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
+            transition:0.2s ease all;
+            -moz-transition:0.2s ease all;
             -webkit-transition:0.2s ease all;
         }
         input:focus ~ label, input:valid ~ label {
@@ -386,36 +386,36 @@
             font-size:13px;
             color:#6d669f;
         }
-        .bar    { 
-            position:relative; 
-            display:block; 
+        .bar    {
+            position:relative;
+            display:block;
             width:100%;
         }
         .bar:before, .bar:after {
             content:'';
-            height:2px; 
+            height:2px;
             width:0;
-            bottom:0px; 
+            bottom:0px;
             position:absolute;
             background:#6d669f;
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
+            transition:0.2s ease all;
+            -moz-transition:0.2s ease all;
             -webkit-transition:0.2s ease all;
         }
         .bar:before {
             left:50%;
         }
         .bar:after {
-            right:50%; 
+            right:50%;
         }
         input:focus ~ .bar:before, input:focus ~ .bar:after {
             width:50%;
         }
         .highlight {
             position:absolute;
-            height:70%; 
-            width:190px; 
-            bottom:0%; 
+            height:70%;
+            width:190px;
+            bottom:0%;
             left:0;
             pointer-events:none;
             opacity:0.5;
@@ -425,11 +425,11 @@
             -moz-animation:inputHighlighter 0.3s ease;
             animation:inputHighlighter 0.3s ease;
         }
-        @-webkit-keyframes inputHighlighter {
+        @keyframes inputHighlighter {
             from { background:#6d669f; }
             to    { width:0; background:transparent; }
         }
-        @-moz-keyframes inputHighlighter {
+        @keyframes inputHighlighter {
             from { background:#6d669f; }
             to    { width:0; background:transparent; }
         }
@@ -551,7 +551,7 @@
             left: -61px;
             z-index: 200;
             pointer-events: none;
-            
+
         }
         @media (max-width: 900px) {
             width: 114%;
@@ -561,7 +561,7 @@
             width: 120%;
             top: -26px;
         }
-    }   
+    }
     .estimate-form-inputs {
         position: absolute;
         left: -92px;
@@ -580,7 +580,7 @@
             margin: 10px;
             padding: 10px;
         }
-        
+
     }
     .estimate-input-cols {
         padding-left: 40px;
@@ -660,7 +660,7 @@
         border-radius: 10px;
         border: 1px solid #acacac;
         background-color: #f6f6f6;
-        &:hover { 
+        &:hover {
             border-color: #00539a;;
         }
         .radio-lable-title {
@@ -677,7 +677,7 @@
     }
     input[type="checkbox"] {
         display:none;
-    }    
+    }
     .label-for-checkbox-btn {
         margin: auto;
         -webkit-user-select: none;
@@ -726,7 +726,7 @@
                 padding-left: 3px;
             }
         }
-        &:hover span:first-child { 
+        &:hover span:first-child {
             border-color: #00539a;;
         }
     }
@@ -829,7 +829,7 @@
                 width: 100%;
                 display: block;
                 padding: 5px 0px;
-                
+
             }
         }
         label {
@@ -842,8 +842,8 @@
             pointer-events:none;
             left:5px;
             bottom: 22px;
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
+            transition:0.2s ease all;
+            -moz-transition:0.2s ease all;
             -webkit-transition:0.2s ease all;
             @media (max-width: 700px){
                 bottom: 8px;
@@ -857,36 +857,36 @@
                 bottom: 36px;
             }
         }
-        .bar    { 
-            position:relative; 
-            display:block; 
+        .bar    {
+            position:relative;
+            display:block;
             width:100%;
         }
         .bar:before, .bar:after {
             content:'';
-            height:2px; 
+            height:2px;
             width:0;
-            bottom:18px; 
+            bottom:18px;
             position:absolute;
             background:#5591f5;
-            transition:0.2s ease all; 
-            -moz-transition:0.2s ease all; 
+            transition:0.2s ease all;
+            -moz-transition:0.2s ease all;
             -webkit-transition:0.2s ease all;
         }
         .bar:before {
             left:50%;
         }
         .bar:after {
-            right:50%; 
+            right:50%;
         }
         input:focus ~ .bar:before, input:focus ~ .bar:after {
             width:50%;
         }
         .highlight {
             position:absolute;
-            height:40%; 
-            width:100px; 
-            bottom:25%; 
+            height:40%;
+            width:100px;
+            bottom:25%;
             left:0;
             pointer-events:none;
             opacity:0.5;
@@ -894,9 +894,9 @@
         input[type="mail"] ~ {
             .highlight {
                 position:absolute;
-                height:70%; 
-                width:190px; 
-                bottom:40%; 
+                height:70%;
+                width:190px;
+                bottom:40%;
                 left:0;
                 pointer-events:none;
                 opacity:0.5;
@@ -904,23 +904,23 @@
                     width: 100%;
                 }
             }
-            .bar    { 
-                position:relative; 
-                display:block; 
+            .bar    {
+                position:relative;
+                display:block;
                 width:100%;
             }
-            
+
         }
         input:focus ~ .highlight {
             -webkit-animation:inputHighlighter 0.3s ease;
             -moz-animation:inputHighlighter 0.3s ease;
             animation:inputHighlighter 0.3s ease;
         }
-        @-webkit-keyframes inputHighlighter {
+        @keyframes inputHighlighter {
             from { background:#5591f5; }
             to    { width:0; background:transparent; }
         }
-        @-moz-keyframes inputHighlighter {
+        @keyframes inputHighlighter {
             from { background:#5591f5; }
             to    { width:0; background:transparent; }
         }
@@ -1097,7 +1097,7 @@
 .contacts-file {
     position: absolute;
     z-index: 400;
-    left: 163px; 
+    left: 163px;
     top: 39%;
     margin-top: -83px;
     width: 270px;
