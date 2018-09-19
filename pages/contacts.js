@@ -36,7 +36,7 @@ export default class Contacts extends React.Component {
             <div className="title-page">
               <h1 className="title">Contact Us</h1>
             </div>
-            <div className={activeContactForm ? 'contacts-block' : 'contacts-block estimate-block-background'} itemScope itemType="http://schema.org/Organization">
+            <div className={activeContactForm ? 'contacts-block' : 'estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
               <button onClick={this.onClick} name="contact-form-btn" className={activeContactForm ? 'contacts-form-btn contact-form-btn' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
