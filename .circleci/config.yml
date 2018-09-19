@@ -26,5 +26,5 @@ jobs:
             - "MD5:04:13:38:a4:16:d4:ac:10:99:a7:4c:b4:4e:62:96:1b"
       - run:
           name: Install rsync
-          command: sudo apt install rsync
+          command: sudo apt-get update && sudo apt install rsync
       - run: yarn deploy

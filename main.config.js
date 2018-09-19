@@ -265,7 +265,7 @@ export const config = {
       points: [
         {
           name: 'Team',
-          description: 'Meat our Squad',
+          description: 'Meet our Squad',
           href: '/about-team',
           icon: {
             name: 'team',
@@ -830,7 +830,7 @@ export const team = [
         avatar: 'serhii_s.jpg',
       },
       {
-        name: 'Yanul M.',
+        name: 'Maryna Y.',
         position: 'Full-stack js Corvette Capt',
         description:
           'Space hot fire-show amateur, got an honors diploma in the flight school, acts as a hot second pilot in the hot shuttle mission.',
@@ -865,7 +865,7 @@ export const team = [
         avatar: 'arsen_t.jpg',
       },
       {
-        name: 'Golomb Y.',
+        name: 'Yuriy G.',
         position: 'Full-stack js Corvette Capt',
         description:
           'Participated in large battles as a Rookie and dreams about leading his own squad',
