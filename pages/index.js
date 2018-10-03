@@ -101,7 +101,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <div className="home-page-social">
+          <div className="social-icons home-page-social">
             <SocialButton />
           </div>
           <div className="home-page-background">
