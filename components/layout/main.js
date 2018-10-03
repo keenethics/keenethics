@@ -48,12 +48,16 @@ export default class Layout extends React.Component {
       noMenu,
     } = this.props;
 
+    const style = { height: this.state.dimensions.height };
+    if (noMenu) {
+      style.width = '100vw';
+    }
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
         {noMenu ? null : <Navigation currentURL={currentURL} />}
         <div className="content">
-          <div className="content-inner" style={{ height: this.state.dimensions.height }}>
+          <div className="content-inner" style={style}>
             { children }
           </div>
         </div>
