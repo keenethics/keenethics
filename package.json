@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Official company website",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server/index.js",
     "build": "next build && node convert-scss.js",
-    "start": "cross-env NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "lint": "eslint . --ext .jsx,.js; true",
     "analyze": "cross-env ANALYZE=1 next build",
     "deploy": "bash deploy"

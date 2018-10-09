@@ -3,15 +3,16 @@
 import 'whatwg-fetch';
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames'
 
 class EstimateForm extends React.Component {
-  state = ({
+  state = {
     stage: {
-      value: '',
+      value: 'New app',
       error: false,
     },
     services: {
-      value: '',
+      value: ['Web app'],
       error: false,
     },
     pm: {
@@ -46,12 +47,12 @@ class EstimateForm extends React.Component {
       value: '',
       error: false,
     },
-  })
+  }
   onSubmit = (e) => {
     e.preventDefault();
-    const { callback } = this.props;
+    const { updateState } = this.props;
 
-    callback({ isPending: true });
+    updateState({ isPending: true });
 
     fetch('/estimate', {
       method: 'POST',
@@ -69,7 +70,9 @@ class EstimateForm extends React.Component {
         Object.assign(state, json.errorField);
       }
 
-      callback(state);
+      this.setState(json.errorField);
+
+      updateState(state);
     });
   }
   onChange = ({ target: { name, value, form: { services } } }) => {
@@ -93,6 +96,7 @@ class EstimateForm extends React.Component {
     const {
       emailEstimate,
       name,
+      services
     } = this.state;
     const { isPending, status } = this.props;
     return (
@@ -108,6 +112,7 @@ class EstimateForm extends React.Component {
                 value="New app"
                 id="new"
                 onChange={this.onChange}
+                checked={this.state.stage.value === 'New app'}
               />
               <label htmlFor="new" className="label-for-radio-btn">
                 <p className="radio-lable-title">New app</p>
@@ -121,6 +126,7 @@ class EstimateForm extends React.Component {
                 value="Existing app"
                 id="existing"
                 onChange={this.onChange}
+                checked={this.state.stage.value === 'Existing app'}
               />
               <label htmlFor="existing" className="label-for-radio-btn">
                 <p className="radio-lable-title">Existing app</p>
@@ -138,9 +144,10 @@ class EstimateForm extends React.Component {
                 id="web"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Web app')}
               />
               <label htmlFor="web" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -155,9 +162,10 @@ class EstimateForm extends React.Component {
                 id="ios"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('IOS app')}
               />
               <label htmlFor="ios" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -172,9 +180,10 @@ class EstimateForm extends React.Component {
                 id="linux"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Linux app')}
               />
               <label htmlFor="linux" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -189,9 +198,10 @@ class EstimateForm extends React.Component {
                 id="ssd"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Server-side development')}
               />
               <label htmlFor="ssd" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -206,9 +216,10 @@ class EstimateForm extends React.Component {
                 id="windows"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Windows app')}
               />
               <label htmlFor="windows" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -223,9 +234,10 @@ class EstimateForm extends React.Component {
                 id="qa"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('QA testing')}
               />
               <label htmlFor="qa" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -240,9 +252,10 @@ class EstimateForm extends React.Component {
                 id="android"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Android app')}
               />
               <label htmlFor="android" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -257,9 +270,10 @@ class EstimateForm extends React.Component {
                 id="macos"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('MacOS app')}
               />
               <label htmlFor="macos" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -274,9 +288,10 @@ class EstimateForm extends React.Component {
                 id="design"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Design')}
               />
               <label htmlFor="design" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -291,9 +306,10 @@ class EstimateForm extends React.Component {
                 id="other"
                 onChange={this.onChange}
                 className="check"
+                checked={services.value.includes('Other')}
               />
               <label htmlFor="other" className="label-for-checkbox-btn">
-                <span>
+                <span className={classnames('custom-checkbox', { error: services.error })}>
                   <svg width="12px" height="10px" viewBox="0 0 12 10">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
@@ -301,7 +317,7 @@ class EstimateForm extends React.Component {
               </label>
             </div>
           </div>
-          <div className="question-title"><span className="question-number qn-check">03</span>
+          <div className="question-title align-flex-start"><span className="question-number qn-check">03</span>
             <input
               name="pm"
               type="checkbox"
@@ -310,7 +326,7 @@ class EstimateForm extends React.Component {
               onChange={this.onChange}
               className="check"
             />
-            <label htmlFor="pm" className="label-for-checkbox-btn">
+            <label htmlFor="pm" className="label-for-checkbox-btn third-point">
               <span className="pm-check">
                 <svg width="12px" height="10px" viewBox="0 0 12 10">
                   <polyline points="1.5 6 4.5 9 10.5 1" />
@@ -359,7 +375,7 @@ class EstimateForm extends React.Component {
           <div className="input-cols">
             <div className="input-contacts">
               <input
-                className={name.error ? 'error' : null}
+                className={classnames({ error: name.error})}
                 name="name"
                 id="name"
                 type="text"
@@ -386,7 +402,7 @@ class EstimateForm extends React.Component {
           <div className="input-cols">
             <div className="input-contacts input-email">
               <input
-                className={emailEstimate.error ? 'error' : null}
+                className={classnames({ error: emailEstimate.error })}
                 name="emailEstimate"
                 type="mail"
                 onChange={this.onChange}
@@ -418,7 +434,7 @@ class EstimateForm extends React.Component {
           <div className="submit-btn">
             <button
               type="submit"
-              className={isPending ? 'button button-send pending' : 'button button-send'}
+              className={classnames('button button-send', { pending: isPending })}
             >
               <img src="/static/images/svg/send.svg" alt="send" />
             </button>
@@ -431,7 +447,7 @@ class EstimateForm extends React.Component {
 EstimateForm.propTypes = {
   isPending: PropTypes.bool.isRequired,
   status: PropTypes.string.isRequired,
-  callback: PropTypes.func.isRequired,
+  updateState: PropTypes.func.isRequired,
 };
 
 export default EstimateForm;

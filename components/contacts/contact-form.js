@@ -1,11 +1,20 @@
-/* global fetch */
-
 import 'whatwg-fetch';
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
+const handleStatusResponse = (response) => {
+  if (response.status >= 200 && response.status < 300) {
+    return response;
+  }
+
+  const error = new Error(response.statusText);
+  error.response = response;
+  throw error;
+};
 
 class ContactForm extends React.Component {
-  state = ({
+  state = {
     firstname: {
       value: '',
       error: false,
@@ -26,12 +35,12 @@ class ContactForm extends React.Component {
       value: '',
       error: false,
     },
-  })
+  }
   onSubmit = (e) => {
     e.preventDefault();
-    const { callback } = this.props;
+    const { updateState } = this.props;
 
-    callback({ isPending: true });
+    updateState({ isPending: true });
 
     fetch('/contact', {
       method: 'POST',
@@ -39,18 +48,22 @@ class ContactForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(this.state),
-    }).then(response => response.json()).then((json) => {
-      const state = {
-        isPending: false,
-        status: json.status.toString(),
-      };
+    }).then(handleStatusResponse)
+      .then(response => response.json()).then((json) => {
+        const state = {
+          isPending: false,
+          status: json.status.toString(),
+        };
 
-      if (json && json.errorField) {
-        Object.assign(state, json.errorField);
-      }
+        if (json && json.errorField) {
+          Object.assign(state, json.errorField);
+        }
 
-      callback(state);
-    });
+        this.setState(json.errorField);
+
+        updateState(state);
+      })
+      .catch(err => console.error(err));
   }
   onChange = ({ target: { name, value } }) => {
     this.setState({
@@ -68,15 +81,16 @@ class ContactForm extends React.Component {
       phone,
       message,
     } = this.state;
+
     const { isPending, status } = this.props;
     return (
       <div className="contacts-form">
         <form onSubmit={this.onSubmit}>
           <div className="contacts-title">Say hello</div>
           <div className="input-cols">
-            <div className="input-wrap input-wrap-2">
+            <div className="input-wrap">
               <input
-                className={firstname.error ? 'error' : null}
+                className={classnames({ error: firstname.error })}
                 name="firstname"
                 id="firstname"
                 type="text"
@@ -87,9 +101,9 @@ class ContactForm extends React.Component {
               <span className="bar" />
               <label htmlFor="firstname">First Name</label>
             </div>
-            <div className="input-wrap input-wrap-2">
+            <div className="input-wrap">
               <input
-                className={lastname.error ? 'error' : null}
+                className={classnames({ error: lastname.error })}
                 name="lastname"
                 id="lastname"
                 type="text"
@@ -102,10 +116,10 @@ class ContactForm extends React.Component {
             </div>
           </div>
           <div className="input-cols">
-            <div className="input-wrap input-wrap-2 input-wrap-l">
+            <div className="input-wrap">
               <div className="input-email">
                 <input
-                  className={email.error ? 'error' : null}
+                  className={classnames({ error: email.error })}
                   name="email"
                   id="email"
                   type="mail"
@@ -117,10 +131,10 @@ class ContactForm extends React.Component {
                 <label htmlFor="email">Your Email</label>
               </div>
             </div>
-            <div className="input-wrap input-wrap-2 input-wrap-l">
+            <div className="input-wrap">
               <div className="input-phone">
                 <input
-                  className={phone.error ? 'error' : null}
+                  className={classnames({ error: phone.error })}
                   name="phone"
                   id="phone"
                   type="tel"
@@ -133,11 +147,12 @@ class ContactForm extends React.Component {
               </div>
             </div>
           </div>
-          <div className="input-wrap input-wrap-2 input-wrap-ta">
+          <div className="input-wrap input-wrap-ta">
             <textarea
-              className={message.error ? 'error' : null}
+              className={classnames({ error: message.error })}
               name="message"
               placeholder="Message"
+              className="messege-textarea"
               onChange={this.onChange}
             />
           </div>
@@ -156,7 +171,7 @@ class ContactForm extends React.Component {
 ContactForm.propTypes = {
   isPending: PropTypes.bool.isRequired,
   status: PropTypes.string.isRequired,
-  callback: PropTypes.func.isRequired,
+  updateState: PropTypes.func.isRequired,
 };
 
 export default ContactForm;

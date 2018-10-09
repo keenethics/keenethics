@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -39,8 +40,8 @@ export default class Contacts extends React.Component {
             <div className={activeContactForm ? 'contacts-block' : 'estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button onClick={this.onClick} name="contact-form-btn" className={activeContactForm ? 'contacts-form-btn contact-form-btn' : 'contacts-form-btn contact-form-btn disabled'}>Say Hello</button>
-              <button onClick={this.onClick} name="estimate-form-btn" className={!activeContactForm ? 'contacts-form-btn estimate-form-btn' : 'contacts-form-btn estimate-form-btn disabled'}>Estimate your project</button>
+              <button onClick={this.onClick} name="contact-form-btn" className={classnames('contacts-form-btn contact-form-btn', { disabled: !activeContactForm })}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={classnames('contacts-form-btn estimate-form-btn', { disabled: activeContactForm })}>Estimate your project</button>
               <ul className="contacts-list">
                 <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                   <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
@@ -68,13 +69,13 @@ export default class Contacts extends React.Component {
                 <ContactForm
                   isPending={isPending}
                   status={status}
-                  callback={state => this.setState(state)}
+                  updateState={state => this.setState(state)}
                 />
               ) : (
                 <EstimateForm
                   isPending={isPending}
                   status={status}
-                  callback={state => this.setState(state)}
+                  updateState={state => this.setState(state)}
                 />
               )}
             </div>

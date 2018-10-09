@@ -11,6 +11,7 @@ const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
+const { checkRequiredEstimateFields } = require('./validator')
 
 const Router = require('./routes').Router;
 
@@ -172,6 +173,14 @@ app.prepare().then(() => {
     phoneEstimate.value = phoneEstimate.value.replace(/\s+/g, ' ');
     messageEstimate.value = messageEstimate.value.replace(/\s+/g, ' ');
     if (services.value) servicesEstimate = services.value.join(', ');
+
+    const [missedField] = checkRequiredEstimateFields(req.body);
+
+    if (missedField) {
+      res.send(missedField);
+
+      return;
+    }
 
     if (!formatValidation.validate({ min: 3, max: 25 }, name.value)) {
       name.error = true;
