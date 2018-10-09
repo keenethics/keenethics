@@ -1,1 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3536.909 12485.998 186.908 186.873"><defs><style>.cls-1{fill:#3f47cc;opacity:.3}.cls-2{fill:#4c5ca2}.cls-3{fill:#fff}.cls-4{fill:#7e92cb}.cls-5{fill:#7383bf}.cls-6{fill:#e7f3fc}.cls-7{filter:url(#Shadow)}</style><filter id="Shadow" x="-3536.909" y="12485.998" width="186.908" height="186.873" filterUnits="userSpaceOnUse"><feOffset dy="10"/><feGaussianBlur stdDeviation="10" result="blur"/><feFlood flood-color="#3f47cc"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter></defs><g id="Mail_icon" data-name="Mail icon" transform="translate(-3506.914 12505.999)"><g class="cls-7" transform="translate(3506.91 -12506)"><path id="Shadow-2" data-name="Shadow" class="cls-1" d="M125.9 126.873H.279a.361.361 0 0 1-.047 0H0v-70l13.126-12.221V19.688h26.826L59.381 1.6a5.972 5.972 0 0 1 8.145 0l19.429 18.088h26.827v24.964l13.126 12.221v70h-.236a.38.38 0 0 1-.048 0z" transform="translate(-3506.91 12506)"/></g><path id="Path_4860" data-name="Path 4860" class="cls-2" d="M113.782 20.413v19.458L63.455 67.612 13.129 39.871V20.413L0 32.632v70h126.91v-70z" transform="translate(0 24.238)"/><g id="Group_1631" data-name="Group 1631" transform="translate(13.129 19.685)"><path id="Path_4864" data-name="Path 4864" class="cls-3" d="M56.327 81.165l50.327-27.742V9H6v44.423z" transform="translate(-6 -9)"/></g><path id="Path_4861" data-name="Path 4861" class="cls-2" d="M65.264 19.686L45.834 1.6a5.981 5.981 0 0 0-8.146 0L18.259 19.686z" transform="translate(21.694 -.001)"/><path id="Path_4862" data-name="Path 4862" class="cls-4" d="M.2 26.059l125.84 69.367-.136.523H.282A.283.283 0 0 1 0 95.667V26.178a.134.134 0 0 1 .2-.119z" transform="translate(0 30.922)"/><path id="Path_4863" data-name="Path 4863" class="cls-5" d="M92.256 26.059L29 60.928l62.584 34.5-.136.523h.724a.283.283 0 0 0 .282-.282V26.175a.134.134 0 0 0-.198-.116z" transform="translate(34.455 30.922)"/><path id="Path_4865" data-name="Path 4865" class="cls-6" d="M40.317 19.375H27.188a2.187 2.187 0 1 1 0-4.375h13.129a2.187 2.187 0 1 1 0 4.375z" transform="translate(29.703 17.81)"/><path id="Path_4866" data-name="Path 4866" class="cls-6" d="M50.5 34.375H35.188a2.187 2.187 0 1 1 0-4.375H50.5a2.187 2.187 0 1 1 0 4.375z" transform="translate(39.208 35.622)"/><path id="Path_4867" data-name="Path 4867" class="cls-6" d="M28.129 26.375H17.188a2.187 2.187 0 1 1 0-4.375h10.941a2.187 2.187 0 1 1 0 4.375z" transform="translate(17.822 26.122)"/><path id="Path_4868" data-name="Path 4868" class="cls-6" d="M47.693 26.375h-17.5a2.187 2.187 0 1 1 0-4.375h17.5a2.187 2.187 0 1 1 0 4.375z" transform="translate(33.267 26.122)"/><path id="Path_4869" data-name="Path 4869" class="cls-6" d="M26.188 26.36A2.167 2.167 0 0 1 24 24.173a2.241 2.241 0 0 1 .635-1.553 2.292 2.292 0 0 1 3.107 0 2.251 2.251 0 0 1 .635 1.553 2.167 2.167 0 0 1-2.188 2.187z" transform="translate(28.515 26.137)"/><path id="Path_4870" data-name="Path 4870" class="cls-6" d="M43.069 34.375H21.188a2.187 2.187 0 1 1 0-4.375h21.881a2.187 2.187 0 1 1 0 4.375z" transform="translate(22.574 35.622)"/><path id="Path_4871" data-name="Path 4871" class="cls-6" d="M17.188 34.36a2.209 2.209 0 0 1-1.554-.634A2.3 2.3 0 0 1 15 32.173a2.157 2.157 0 0 1 .635-1.553 2.291 2.291 0 0 1 3.107 0 2.25 2.25 0 0 1 .635 1.553 2.167 2.167 0 0 1-2.188 2.187z" transform="translate(17.822 35.637)"/><path id="Path_4872" data-name="Path 4872" class="cls-6" d="M42.188 26.36A2.167 2.167 0 0 1 40 24.173a2.241 2.241 0 0 1 .635-1.553 2.2 2.2 0 0 1 3.107 3.106 2.312 2.312 0 0 1-1.554.634z" transform="translate(47.524 26.137)"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 186.9 186.9" style="enable-background:new 0 0 186.9 186.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;fill:#3F47CC;enable-background:new    ;}
+	.st1{fill:#4C5CA2;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#7E92CB;}
+	.st4{fill:#7383BF;}
+	.st5{fill:#E7F3FC;}
+	.st6{fill:#518EF8;}
+	.st7{fill:#3A5BBC;}
+	.st8{fill:#ACD1FC;}
+</style>
+<g id="Mail_icon" transform="translate(-3506.914 12505.999)">
+	<g transform="translate(3506.91 -12506)">
+		<path id="Shadow-2" class="st0" d="M155.9,146.9H30.3c0,0,0,0,0,0H30v-70l13.1-12.2v-25H70l19.4-18.1c2.3-2.1,5.9-2.1,8.1,0
+			L117,39.7h26.8v25l13.1,12.2v70h-0.2c0,0,0,0,0,0H155.9z"/>
+	</g>
+	<path id="Path_4860" class="st1" d="M3650.7-12441.3v19.5l-50.3,27.7l-50.3-27.7v-19.5l-13.1,12.2v70h126.9v-70L3650.7-12441.3z"/>
+	<g id="Group_1631" transform="translate(13.129 19.685)">
+		<path id="Path_4864" class="st2" d="M3587.2-12413.8l50.3-27.7v-44.4h-100.7v44.4L3587.2-12413.8z"/>
+	</g>
+	<path id="Path_4861" class="st1" d="M3623.9-12466.3l-19.4-18.1c-2.3-2.1-5.9-2.1-8.1,0l-19.4,18.1H3623.9z"/>
+	<path id="Path_4862" class="st3" d="M3537.1-12429l125.8,69.4l-0.1,0.5h-125.6c-0.2,0-0.3-0.1-0.3-0.3v-69.5
+		C3536.9-12429,3537-12429,3537.1-12429C3537.1-12429,3537.1-12429,3537.1-12429z"/>
+	<path id="Path_4863" class="st4" d="M3663.6-12429l-63.3,34.9l62.6,34.5l-0.1,0.5h0.7c0.2,0,0.3-0.1,0.3-0.3v-69.5
+		C3663.8-12429,3663.8-12429,3663.6-12429C3663.7-12429,3663.6-12429,3663.6-12429z"/>
+	<path id="Path_4865" class="st5" d="M3606.9-12448.8h-13.1c-1.2,0-2.2-1-2.2-2.2s1-2.2,2.2-2.2h13.1c1.2,0,2.2,1,2.2,2.2
+		S3608.1-12448.8,3606.9-12448.8z"/>
+	<path id="Path_4866" class="st5" d="M3626.6-12416h-15.3c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2h15.3c1.2,0,2.2,1,2.2,2.2
+		C3628.8-12417,3627.8-12416,3626.6-12416z"/>
+	<path id="Path_4867" class="st5" d="M3582.9-12433.5h-10.9c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2h10.9c1.2,0,2.2,1,2.2,2.2
+		C3585-12434.5,3584.1-12433.5,3582.9-12433.5z"/>
+	<path id="Path_4868" class="st5" d="M3617.9-12433.5h-17.5c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2h17.5c1.2,0,2.2,1,2.2,2.2
+		C3620.1-12434.5,3619.1-12433.5,3617.9-12433.5L3617.9-12433.5z"/>
+	<path id="Path_4869" class="st5" d="M3591.6-12433.5c-1.2,0-2.2-0.9-2.2-2.1c0,0,0,0,0,0c0-0.6,0.2-1.1,0.6-1.6
+		c0.9-0.8,2.2-0.8,3.1,0c0.4,0.4,0.6,1,0.6,1.6C3593.8-12434.5,3592.9-12433.5,3591.6-12433.5
+		C3591.6-12433.5,3591.6-12433.5,3591.6-12433.5L3591.6-12433.5z"/>
+	<path id="Path_4870" class="st5" d="M3602.6-12416h-21.9c-1.2,0-2.2-1-2.2-2.2c0-1.2,1-2.2,2.2-2.2h21.9c1.2,0,2.2,1,2.2,2.2
+		C3604.7-12417,3603.8-12416,3602.6-12416z"/>
+	<path id="Path_4871" class="st5" d="M3571.9-12416c-0.6,0-1.1-0.2-1.6-0.6c-0.4-0.4-0.6-1-0.6-1.6c0-0.6,0.2-1.1,0.6-1.6
+		c0.9-0.8,2.2-0.8,3.1,0c0.4,0.4,0.6,1,0.6,1.6C3574.1-12417,3573.2-12416,3571.9-12416C3571.9-12416,3571.9-12416,3571.9-12416
+		L3571.9-12416z"/>
+	<path id="Path_4872" class="st5" d="M3626.6-12433.5c-1.2,0-2.2-0.9-2.2-2.1c0,0,0,0,0,0c0-0.6,0.2-1.1,0.6-1.6
+		c0.9-0.8,2.3-0.7,3.1,0.2c0.7,0.8,0.7,2.1,0,2.9C3627.8-12433.7,3627.2-12433.5,3626.6-12433.5z"/>
+</g>
+</svg>
