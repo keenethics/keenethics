@@ -42,29 +42,31 @@ export default class Contacts extends React.Component {
               {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
               <button onClick={this.onClick} name="contact-form-btn" className={classnames('contacts-form-btn contact-form-btn', { disabled: !activeContactForm })}>Say Hello</button>
               <button onClick={this.onClick} name="estimate-form-btn" className={classnames('contacts-form-btn estimate-form-btn', { disabled: activeContactForm })}>Estimate your project</button>
-              <ul className="contacts-list">
-                <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                  <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                    <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
-                    <div itemProp="streetAddress">3 Lytvynenka Street</div>
-                    <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+380968147266">
-                    <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
-                    <div itemProp="telephone">+38 (096) 814 72 66</div>
-                    <span>Give Us a Call</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:founders@keenethics.com">
-                    <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
-                    <div>founders@keenethics.com</div>
-                    <span>Drop Us a Letter</span>
-                  </a>
-                </li>
-              </ul>
+              <address>
+                <ul className="contacts-list">
+                  <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                    <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                      <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
+                      <div itemProp="streetAddress">Kulparkivska St, 59</div>
+                      <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+380968147266">
+                      <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
+                      <div itemProp="telephone">+38 (096) 814 72 66</div>
+                      <span>Give Us a Call</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:founders@keenethics.com">
+                      <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
+                      <div>founders@keenethics.com</div>
+                      <span>Drop Us a Letter</span>
+                    </a>
+                  </li>
+                </ul>
+              </address>
               { this.state.activeContactForm ? (
                 <ContactForm
                   isPending={isPending}
