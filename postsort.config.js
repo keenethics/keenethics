@@ -15,6 +15,7 @@ const postsDatePair = [
   { createdAt: 1522827874762, filename: '1522827874762-another-stellar-review-on-clutch.md' },
   { createdAt: 1523533985420, filename: '1523533985420-startup-guide.md' },
   { createdAt: 1534505495576, filename: '1534505495576-mid-summer-2018-top-10-alexa-skills.md' },
+  { createdAt: 1539840666250, filename: '1539840666250-best-smart-speakers-2018.md' },
 ];
 
 module.exports.postsDatePair = postsDatePair;
