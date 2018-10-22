@@ -26,7 +26,13 @@
 }
 .blog-page-posts {
   overflow: hidden;
-  margin: 0 25px;
+  padding: 0 25px;
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 40px 25px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    overflow: visible;
+  }
 }
 .blog-page-post {
   float: left;
@@ -38,7 +44,9 @@
   overflow: hidden;
   text-decoration: none;
   transition: all .2s;
-
+  @supports (display: grid) {
+    margin: 0 auto;
+  }
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 16px 8px -4px rgba(0, 0, 0, .1);
