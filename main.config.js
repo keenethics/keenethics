@@ -15,10 +15,11 @@ const maskMapper = (t) => {
 export const COMPANY_LINKS = {
   linkedin: 'https://www.linkedin.com/company/keen-ethics',
   github: 'https://github.com/keenethics',
-  googlePlus: 'https://plus.google.com/103030720036135400511/about',
+  // googlePlus: 'https://plus.google.com/112805808227871069931',
   twitter: 'https://twitter.com/keen_ethics',
   upwork: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
   facebook: 'https://www.facebook.com/KeenEthics.development',
+  instagram: 'https://www.instagram.com/keen_ethics',
 };
 
 export const config = {
@@ -372,11 +373,11 @@ export const config = {
       class: 'soc-3',
       href: COMPANY_LINKS.github,
     },
-    {
-      name: 'GooglePlus',
-      class: 'soc-4',
-      href: COMPANY_LINKS.googlePlus,
-    },
+    // {
+    //   name: 'GooglePlus',
+    //   class: 'soc-4',
+    //   href: COMPANY_LINKS.googlePlus,
+    // },
     {
       name: 'Twitter',
       class: 'soc-5',
@@ -386,6 +387,11 @@ export const config = {
       name: 'Upwork',
       class: 'soc-6',
       href: COMPANY_LINKS.upwork,
+    },
+    {
+      name: 'Instagram',
+      class: 'soc-instagram',
+      href: COMPANY_LINKS.instagram,
     },
   ],
 };

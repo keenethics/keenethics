@@ -25,7 +25,7 @@ const companyData = {
   description: 'Custom Software Development Company',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3 Lytvynenka Street',
+    streetAddress: 'Kulparkivska St, 59',
     addressLocality: 'Lviv',
     postalCode: '79000',
     addressCountry: 'Ukraine',
@@ -78,8 +78,8 @@ export default class Index extends React.Component {
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
-                <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                  <span itemProp="streetAddress">3 Lytvynenka Street</span>
+                <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                  <span itemProp="streetAddress">Kulparkivska St, 59</span>
                 </a>
                 <i><span itemProp="addressLocality">Lviv</span>, <span itemProp="addressRegion">Ukraine</span></i>
               </div>
@@ -101,7 +101,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <div className="home-page-social">
+          <div className="social-icons home-page-social">
             <SocialButton />
           </div>
           <div className="home-page-background">
