@@ -267,8 +267,13 @@ app.prepare().then(() => {
           const metaTitle = (/Meta title: (.*?)\n/g).exec(text)[1];
           const metaDescription = (/Meta description: (.*?)\n/g).exec(text)[1];
           let image = (/Preview image: (.*?)\n/g).exec(text);
-          const date = req.params.name.split('-')[0];
-
+          let date = req.params.name.split('-')[0];
+          const newDate = (/New Date: (.*?)\n/g).exec(text);
+          
+          if (newDate && newDate[1]) {
+            date = newDate[1];
+          }
+          
           if (image && image[1]) {
             image = image[1];
           } else {
