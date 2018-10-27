@@ -25,14 +25,6 @@ export default class Post extends React.Component {
 
     return { post: json };
   }
-  constructor(props) {
-    super(props);
-
-    
-
-    this.state = {
-    };
-  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.post.title !== this.props.post.title) {
