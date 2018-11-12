@@ -28,7 +28,7 @@ export default class Navigation extends React.Component {
         {config.social.map(i => (
           <li className={i.class} key={i.name}>
             <Link href={i.href}>
-              <a rel="noopener noreferrer" target="_blank">{i.name}</a>
+              <a rel="noopener noreferrer" target="_blank" title={i.name}>{i.name}</a>
             </Link>
           </li>
         ))}
