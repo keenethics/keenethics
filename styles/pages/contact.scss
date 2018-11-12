@@ -1,9 +1,255 @@
+$lg: 1200px;
+
 .contacts-page {
   position: relative;
   background: linear-gradient(135deg, #071e40 0%, #662938 80%);
-  z-index: 600;
+  z-index: 100;
   min-height: 100vh;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .page-background {
+    z-index: 0;
+  }
+
+  .contacts-conteiner {
+    position: relative;
+    padding: 90px 10px 10px;
+    z-index: 1;
+    max-width: 1070px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .contacts-title {
+    position: relative;
+    z-index: 1;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 700;
+
+    @media (max-width: $lg) {
+      padding-left: 60px;
+    }
+  }
+
+  .contacts-content {
+    position: relative;
+    background-color: #282473;
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    border-radius: 10px;
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+      padding-left: 0;
+    }
+  }
+
+  .company-info {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-right: 70px;
+    padding-left: 40px;
+    padding-bottom: 80px;
+
+    @media (max-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .contacts-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    li {
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background: url('/static/images/svg/con-star.svg') no-repeat;
+      background-size: 100% 100%;
+
+      animation: flyStar 10s ease-in-out infinite;
+
+      &:nth-child(1) {
+        top: 10%;
+        left: 32%;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        left: 3%;
+        animation-name: flyStar2;
+      }
+
+      &:nth-child(3) {
+        top: 88%;
+        left: 20%;
+        animation-name: flyStar2;
+      }
+
+      &:nth-child(4) {
+        top: 65%;
+        left: 30%;
+      }
+
+      @media (max-width: 1200px){
+        &:nth-child(1) {
+          top: 15%;
+          left: 15%;
+        }
+
+        &:nth-child(2) {
+          top: 1%;
+          left: 35%;
+        }
+
+        &:nth-child(3) {
+          top: 20%;
+          left:65%;
+        }
+
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .company-info-item {
+    white-space: nowrap;
+    min-width: 200px;
+    margin-top: 110px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @media (max-width: $lg) {
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .ico {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .company-info-link {
+    position: relative;
+    padding-left: 33px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .company-info-title {
+    color: #de4f4f;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .company-info-subtitle {
+    display: block;
+    color: #d0d5ed;
+  }
+
+  .contacts-form-container {
+    flex: 1 1 60%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media (max-width: $lg) {
+      padding-left: 40px;
+    }
+  }
+
+  .contacts-form-background {
+    height: 100%;
+    width: calc(100% + 120px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('/static/images/contact-white-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media (max-width: $lg) {
+      background-image: url('/static/images/contacts-bg-white-mid.png');
+      width: 100%;
+    }
+  }
+
+  .contacts-mail {
+    position: absolute;
+    z-index: 3;
+    left: -146px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('/static/images/svg/mail.svg') no-repeat;
+    width: 166px;
+    height: 166px;
+    z-index: 3;
+
+    @media (max-width: $lg) {
+      left: 50%;
+      transform: translate(-50%, -50px);
+      top: 0;
+    }
+  }
+
+  .contacts-form {
+    position: relative;
+    z-index: 2;
+    max-width: 510px;
+    flex-basis: 100%;
+
+    @media (max-width: $lg) {
+      max-width: 100%;
+    }
+  }
+
+  .contacts-form-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #12233d;
+  }
 
   .button {
     border-radius: 35px;
@@ -28,14 +274,20 @@
     &.button-send {
       width: 100px;
 
-      img {
+      .button-svg {
         width: 26px;
         margin-top: -6px;
+
+        @media (max-width: $lg) {
+          margin-top: 10px;
+        }
       }
     }
+
     &:hover {
       box-shadow: 0px 5px 20px 0px rgba(203, 55, 55, 0.4);
     }
+
     &.pending {
       background-image: linear-gradient(90deg, #aaa 0%, #ccc 100%);
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
@@ -45,306 +297,24 @@
       }
     }
   }
-
-  h1.title {
-    position: relative;
-    z-index: 600;
-    font-size: 26px;
-    color: #fff;
-    font-weight: 700;
-
-    span {
-      display: block;
-      color: #b9bce5;
-      font-size: 14px;
-      line-height: 17px;
-      font-weight: 400;
-      padding: 12px 0 0;
-    }
-  }
-}
-.contacts-block {
-  position: relative;
-  z-index: 600;
-  box-sizing: border-box;
-}
-.contacts-socket {
-    width: 1050px;
-    margin: 0 auto;
-    padding: 0 0 80px;
-
-    .title-page {
-        padding: 100px 0 90px;
-    }
-
-    @media (max-width: 1200px){
-        width: auto;
-
-        .title-page {
-            padding-left:60px;
-        }
-    }
 }
 
-.contacts-block {
-    border-radius: 10px;
-    @include clearfix;
-    position: relative;
-    height: 500px;
-    padding: 55px 40px 0 0;
-    position: relative;
-    background: #fff url(/static/images/contacts-bg.png) no-repeat 0 0;
 
-    @media (max-width: 1200px){
-        border-radius: 0;
-        padding: 255px 60px 30px;
-        height: auto;
-        background: #fff url(/static/images/contacts-bg-mid.png) no-repeat 50% 0;
-        background-size: 1200px auto;
-        background-position: 0 -100px;
-        min-height: calc(100vh - 170px);
-    }
-
-    @media (max-width: 650px){
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @media (max-width: 550px){
-        background: #fff url(/static/images/contacts-bg-2.png) no-repeat 50% 0;
-    }
-
-    @media (max-width: 375px){
-        background: #fff url(/static/images/contacts-bg-3.png) no-repeat 50% 0;
-    }
-}
-
-.contacts-list {
-    position: absolute;
-    left: 73px;
-    top: 82px;
-
-    li {
-        height: 150px;
-        white-space: nowrap;
-        min-width: 200px;
-
-        .ico {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        a {
-            position: relative;
-            padding-left: 33px;
-            text-decoration: none;
-            display: block;
-        }
-
-        div {
-            color: #de4f4f;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        span {
-            display: block;
-            color: #d0d5ed;
-        }
-    }
-
-    @media (max-width: 1200px){
-        left: 60px;
-        right: 60px;
-        top: 48px;
-
-        li {
-            width: 33.3%;
-            height: 85px;
-            float: left;
-        }
-    }
-
-    @media (max-width: 550px){
-        left: 30px;
-        right: 0;
-
-        li {
-            width: 50% !important;
-        }
-    }
-
-    @media (max-width: 475px){
-        top: 24px;
-
-        li {
-            width: auto !important;
-            float: none;
-            height: auto;
-            margin-bottom: 23px;
-        }
-    }
-}
-
-.contacts-form {
-    position: relative;
-    float: right;
-    width: 510px;
-    height: 100%;
-
-    .input-wrap-ta {
-      margin-bottom: 20px;
-    }
-    .btn-send img {
-      width: 25px;
-      padding: 13px 0;
-    }
-    .form-status {
-      font-size: 12px;
-      padding: 0 0 10px;
-    }
-    @media (max-width: 1200px){
-        width: auto;
-        float: none;
-    }
-}
-
-.contacts-title {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-}
-
-.btn-send {
-    width: 90px;
-    height: 57px;
-
-    .btn-inner  {
-        height: 57px;
-
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -12px 0 0 -13px;
-            width: 26px;
-            height: 25px;
-        }
-    }
-}
-
-.contacts-mail {
-  position: absolute;
-  z-index: 1;
-  left: 300px;
-  top: 50%;
-  margin-top: -83px;
-  width: 166px;
-  height: 166px;
-  background: url('/static/images/svg/mail.svg') no-repeat;
-  background-size: 100% 100%;
-
-  @media (max-width: 1200px) {
-    top: 130px;
-    left: 50%;
-    margin: 0 0 0 -70px;
-  }
-  @media (max-width: 550px) {
-    display: none;
-  }
-}
-
-.contacts-stars {
-
-    li {
-        position: absolute;
-        width: 11px;
-        height: 11px;
-        background: url(/static/images/svg/con-star.svg) no-repeat;
-        background-size: 100% 100%;
-
-        animation: flyStar 10s ease-in-out infinite;
-
-        &:nth-child(1) {
-            top: 10%;
-            left: 32%;
-        }
-
-        &:nth-child(2) {
-            top: 50%;
-            left: 3%;
-            animation-name: flyStar2;
-        }
-
-        &:nth-child(3) {
-            top: 88%;
-            left: 20%;
-            animation-name: flyStar2;
-        }
-
-        &:nth-child(4) {
-            top: 65%;
-            left: 30%;
-        }
-
-        @media (max-width: 1200px){
-
-            &:nth-child(1) {
-                top: 15%;
-                left: 15%;
-            }
-
-            &:nth-child(2) {
-                top: 1%;
-                left: 35%;
-            }
-
-            &:nth-child(3) {
-                top: 20%;
-                left:65%;
-            }
-
-            &:nth-child(4) {
-                display: none;
-            }
-        }
-    }
-}
 
 @keyframes flyStar {
-    0%, 100% {
-        transform: translate(10px, -10px);
-    }
-    50% {
-        transform: translate(0, 0);
-    }
+  0%, 100% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes flyStar2 {
-    0%, 100% {
-        transform: translate(-8px, 13px);
-    }
-    50% {
-        transform: translate(0, 0);
-    }
-}
-.skype_button {
-  display: inline;
-  p {
-    display: inline !important;
+  0%, 100% {
+    transform: translate(-8px, 13px);
   }
-  a {
-    display: inline;
-    padding: 0;
-  }
-  .skype-button {
-    display: none;
-  }
-  img {
-    margin: 3px 0 0 5px !important;
-    vertical-align: middle !important;
+  50% {
+    transform: translate(0, 0);
   }
 }

@@ -7,6 +7,9 @@
       "jsx": true
     }
   },
+  "globals" : {
+    "fetch": true
+  },
   "rules": {
     "semi": 2,
     "class-methods-use-this": 0,

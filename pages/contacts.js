@@ -1,5 +1,3 @@
-/* global fetch */
-
 import 'whatwg-fetch';
 
 import React from 'react';
@@ -7,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
+import ContactForm from '../components/contact/contact-form';
 
 export default class Contacts extends React.Component {
   constructor(props) {
@@ -76,110 +75,43 @@ export default class Contacts extends React.Component {
   }
   render() {
     const { url } = this.props;
-    const {
-      isPending,
-      status,
-      firstname,
-      lastname,
-      email,
-      phone,
-      message,
-    } = this.state;
 
     return (
       <Layout currentURL={url}>
         <div className="contacts-page">
-          <div className="contacts-socket">
-            <div className="title-page">
-              <h1 className="title">Contact Us</h1>
+          <div className="contacts-conteiner">
+            <div className="contacts-title">
+              <h1 className="title-text">Contact Us</h1>
             </div>
-            <div className="contacts-block" itemScope itemType="http://schema.org/Organization">
+            <div className="contacts-content" itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
-              <div className="contacts-mail" />
-              <ul className="contacts-list">
-                <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                  <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+              <ul className="company-info">
+                <li className="company-info-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                  <a className="company-info-link" href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
                     <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
-                    <div itemProp="streetAddress">Kulparkivska St, 59</div>
-                    <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
+                    <p className="company-info-title" itemProp="streetAddress">Kulparkivska St, 59</p>
+                    <span className="company-info-subtitle"><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
                   </a>
                 </li>
-                <li>
-                  <a href="tel:+380968147266">
+                <li className="company-info-item">
+                  <a className="company-info-link" href="tel:+380968147266">
                     <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
-                    <div itemProp="telephone">+38 (096) 814 72 66</div>
-                    <span>Give Us a Call</span>
+                    <p className="company-info-title" itemProp="telephone">+38 (096) 814 72 66</p>
+                    <span className="company-info-subtitle">Give Us a Call</span>
                   </a>
                 </li>
-                <li>
-                  <a href="mailto:founders@keenethics.com">
+                <li className="company-info-item">
+                  <a className="company-info-link" href="mailto:founders@keenethics.com">
                     <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
-                    <div>founders@keenethics.com</div>
-                    <span>Drop Us a Letter</span>
+                    <p className="company-info-title">founders@keenethics.com</p>
+                    <span className="company-info-subtitle">Drop Us a Letter</span>
                   </a>
                 </li>
               </ul>
-              <div className="contacts-form">
-                <form onSubmit={this.onSubmit}>
-                  <div className="contacts-title">Say hello</div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={firstname.error ? 'error' : null}
-                        name="firstname"
-                        placeholder="First Name"
-                        type="text"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={lastname.error ? 'error' : null}
-                        name="lastname"
-                        placeholder="Last Name"
-                        type="text"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={email.error ? 'error' : null}
-                        name="email"
-                        placeholder="Your Email"
-                        type="mail"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={phone.error ? 'error' : null}
-                        name="phone"
-                        placeholder="Your Phone"
-                        type="tel"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-wrap input-wrap-2 input-wrap-ta">
-                    <textarea
-                      className={message.error ? 'error' : null}
-                      name="message"
-                      placeholder="Message"
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  {status ? (
-                    <div className="form-status">{status}</div>
-                  ) : null}
-                  <button
-                    type="submit"
-                    className={isPending ? 'button button-send pending' : 'button button-send'}
-                  >
-                    <img src="/static/images/svg/send.svg" alt="send" />
-                  </button>
-                </form>
+              <div className="contacts-form-container">
+                <div className="contacts-form-background" />
+                <div className="contacts-mail" />
+                <ContactForm />
               </div>
             </div>
           </div>
