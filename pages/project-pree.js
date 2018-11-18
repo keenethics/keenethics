@@ -214,10 +214,8 @@ const ProjectPrix = ({ url }) => (
             />
             <div className="project-feedback">
               <h3>Client’s Feedback</h3>
-              <p>
-                I am really impressed with the different tools and tips that we also got to bring
-                with us, extremely useful.
-              </p>
+              <p>Committed team for a starter.</p>
+              <div className="project-customer">Ahmed-Jacob Aly, Germany</div>
             </div>
             <a
               href="https://www.prix.ai"
