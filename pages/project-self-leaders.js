@@ -176,12 +176,12 @@ const ProjectPlutio = ({ url }) => (
               alt="Self Leaders" 
               className="image-gaps"
             />
-            <div className="project-feedback">
+            {/* <div className="project-feedback">
               <h3>Client’s Feedback</h3>
               <p>
                 I am really impressed with the different tools and tips that we also got to bring with us, extremely useful.
               </p>
-            </div>
+            </div> */}
             <a
               href="http://selfleaders.com"
               rel="noopener noreferrer"
