@@ -1,4 +1,7 @@
 $lg: 1200px;
+$mb: 576px;
+
+$point-number: #dc5052;
 
 .contacts-page {
   position: relative;
@@ -22,8 +25,8 @@ $lg: 1200px;
     position: relative;
     padding: 90px 10px 10px;
     z-index: 1;
-    max-width: 1070px;
-    width: 100%;
+    max-width: 2100px;
+    width: auto;
 
     @media (max-width: 1200px) {
       padding-left: 0;
@@ -58,9 +61,50 @@ $lg: 1200px;
     }
   }
 
+  .contacts-content-left {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+    padding-top: 10px;    
+  }
+
+  .contacts-button-estimate,
+  .contacts-button-hello {
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Raleway;
+    letter-spacing: 1.22px;
+    line-height: 2em;
+    text-align: left;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #4d5b98;
+    background-color: #5491f5;
+    cursor: pointer;
+
+    &.disabled {
+      background-color:rgba(84, 145, 245, 0.25);
+      
+      &:hover {
+        background-color:rgba(84, 145, 245, 0.75);
+       }
+    }
+  }
+
   .company-info {
     display: flex;
-    flex: 1 1 40%;
     flex-direction: column;
     padding-top: 80px;
     padding-right: 70px;
@@ -71,6 +115,11 @@ $lg: 1200px;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+    }
+
+    @media (max-width: $mb) {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -113,7 +162,7 @@ $lg: 1200px;
         left: 30%;
       }
 
-      @media (max-width: 1200px){
+      @media (max-width: $lg){
         &:nth-child(1) {
           top: 15%;
           left: 15%;
@@ -146,10 +195,10 @@ $lg: 1200px;
     }
 
     @media (max-width: $lg) {
-      margin-top: 10px;
+      margin-top: 20px;
 
       &:first-child {
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
   }
@@ -196,7 +245,7 @@ $lg: 1200px;
 
   .contacts-form-background {
     height: 100%;
-    width: calc(100% + 120px);
+    width: calc(100% + 155px);
     position: absolute;
     top: 0;
     right: 0;
@@ -206,10 +255,13 @@ $lg: 1200px;
     background-repeat: no-repeat;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    pointer-events: none;
 
     @media (max-width: $lg) {
       background-image: url('/static/images/contacts-bg-white-mid.png');
       width: 100%;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 
@@ -229,11 +281,16 @@ $lg: 1200px;
       transform: translate(-50%, -50px);
       top: 0;
     }
+
+    @media (max-width: $mb) {
+      display: none;
+    }
   }
 
   .contacts-form {
     position: relative;
     z-index: 2;
+    width: 510px;
     max-width: 510px;
     flex-basis: 100%;
 
@@ -274,13 +331,13 @@ $lg: 1200px;
     &.button-send {
       width: 100px;
 
+      @media (max-width: $lg) {
+        margin-top: 10px;
+      }
+
       .button-svg {
         width: 26px;
         margin-top: -6px;
-
-        @media (max-width: $lg) {
-          margin-top: 10px;
-        }
       }
     }
 
@@ -296,6 +353,54 @@ $lg: 1200px;
         box-shadow: none;
       }
     }
+  }
+
+  .estimate-form-container {
+    z-index: 2;
+  }
+
+  .estimate-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .estimate-title {
+    text-align: left;
+    color: #12103e;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 65.58px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+  }
+
+  .estimate-point-container {
+    display: flex;
+  }
+
+  .estimate-point-number {
+    flex: 1 0 50px;
+    color: $point-number;
+    font-family: Raleway;
+    font-size: 40px; // TODO: check size(maybe 32 will be better)
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 1.6px;
+  }
+
+  .estimate-point-content {
+    flex: 1 1 calc(100% - 50px);
+    padding-left: 25px;
+  }
+
+  .point-content-header {
+    color: #12103e;
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 65.58px;
+    letter-spacing: 1.12px;
   }
 }
 
