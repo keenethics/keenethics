@@ -37,7 +37,6 @@
 .blog-page-post {
   float: left;
   width: 220px;
-  height: 280px;
   margin: 15px 15px 40px;
   background: #fff;
   border-radius: 8px;
@@ -63,13 +62,13 @@
 .blog-page-post-header {
   background: #fff;
   padding: 15px 10px;
-  height: 140px;
   text-align: center;
   box-sizing: border-box;
 
   .date {
     color: #6f6f89;
     margin-bottom: 15px;
+    font-size: 14px;
   }
   .title {
     color: #000;
