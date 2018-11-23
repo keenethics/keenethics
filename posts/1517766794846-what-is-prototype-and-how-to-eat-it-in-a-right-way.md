@@ -15,7 +15,9 @@ Has it ever happened to you that you see a familiar word but you have a feeling 
 
 ## Why Do I Need to Know The Difference?
 
-Prototyping can be an important part of product development process. According to [Quora](https://www.quora.com/How-many-apps-are-submitted-to-Apples-App-Store-on-an-average-day), a knowledge sharing platform, there are at least 1000 apps submitted per day, and each one of them had to go through prototyping stage before reaching the final product. Not knowing the exact meaning of the word in certain situations can lead to misunderstandings when communicating with a development team, resulting in wasted time and resources, or at the very least you wouldn’t want to appear ignorant.
+<p>
+   Prototyping can be an important part of product development process. According to <a href="https://www.quora.com/How-many-apps-are-submitted-to-Apples-App-Store-on-an-average-day" target="_blank" rel="noreferrer noopener">Quora</a>, a knowledge sharing platform, there are at least 1000 apps submitted per day, and each one of them had to go through prototyping stage before reaching the final product. Not knowing the exact meaning of the word in certain situations can lead to misunderstandings when communicating with a development team, resulting in wasted time and resources, or at the very least you wouldn’t want to appear ignorant.
+</p>
 
 The information we will share with you is not a well kept secret, but it does tend to slip through the cracks from time to time. Let us save you some time by unwrapping the two main meanings of the word “prototype”, the importance of prototyping and what it can be confused with. 
 
@@ -30,7 +32,15 @@ Imagine this conversation:
 In the above scenario a person is talking about a prototype that is basically pictures of your app's interface with buttons. As a variation, you could also hear 
 “Clickable Prototype”, which is a prototype that allows you to go from one screen to another by clicking on buttons, to demonstrate user flows.
 
-InVision is a popular online service, often used by UX designers to create a prototype and share it by copying a link. Some other service platforms that do similar things include  [Marvel](https://marvelapp.com/), [Webflow](https://webflow.com/), [Proto.io](https://proto.io/), [Justinmind](https://www.justinmind.com/), [Origami Studio](https://origami.design/), InVision is simply one of the more popular prototyping tools around.
+<p>
+   InVision is a popular online service, often used by UX designers to create a prototype and share it by copying a link. Some other service platforms that do similar things include
+   <a href="https://marvelapp.com/" target="_blank" rel="noreferrer noopener">Marvel</a>,
+   <a href="https://webflow.com/" target="_blank" rel="noreferrer noopener">Webflow</a>,
+   <a href="https://proto.io/" target="_blank" rel="noreferrer noopener">Proto.io</a>,
+   <a href="https://www.justinmind.com/" target="_blank" rel="noreferrer noopener">Justinmind</a>,
+   <a href="https://origami.design/" target="_blank" rel="noreferrer noopener">Origami Studio</a>,
+   InVision is simply one of the more popular prototyping tools around.
+</p>
 
 ## Timeframe
 
@@ -75,4 +85,6 @@ To sum it up, a prototype can mean  two things: first, a set of images made in
 
 To put it simply, in our opinion, if your app is more than just a registration form – you should start with a clickable prototype. As a company you should evaluate the importance of prototyping for your needs and then reach out to a trusted company for help. Most development agencies and design studios will offer you an entire spectrum of their services including making a prototype.
 
-When you need a Clickable Prototype contact us for a free consultation at [Keenethics.com](https://keenethics.com/).
+<p>
+   When you need a Clickable Prototype contact us for a free consultation at <a href="https://keenethics.com/" target="_blank" rel="noreferrer noopener">Keenethics.com</a>.
+</p>
