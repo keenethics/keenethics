@@ -3,7 +3,7 @@ Title: Stop Losing Your Staff
 Subtitle: Stop Losing Your Staff
 Meta title: Stop Losing Your Staff
 Meta description: Stop Losing Your Staff
-Preview image: /static/posts/pree-preview.png
+Preview image: /static/posts/pree-preview.jpg
 
 ![Heroes](/static/posts/pree-in-article.png)
 
