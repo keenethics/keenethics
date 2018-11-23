@@ -3,7 +3,7 @@ Title: Docker: 5 Cases when You shouldn't Use it
 Subtitle: Docker: 5 Cases when You shouldn't Use it
 Meta title: Docker: 5 Cases when You shouldn't Use it
 Meta description: Docker: 5 Cases when You shouldn't Use it
-Preview image: /static/posts/docker-preview.png
+Preview image: /static/posts/docker-preview.jpg
 
 ![Heroes](/static/posts/docker-in-article.jpg)
 
