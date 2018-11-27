@@ -17,6 +17,14 @@ $point-number: #dc5052;
     box-sizing: border-box;
   }
 
+  .input-wrap {
+    margin-bottom: 15px;
+  }
+
+  .display-off {
+    display: none;
+  }
+
   .page-background {
     z-index: 0;
   }
@@ -31,6 +39,7 @@ $point-number: #dc5052;
     @media (max-width: 1200px) {
       padding-left: 0;
       padding-right: 0;
+      width: 100%;
     }
   }
 
@@ -63,6 +72,7 @@ $point-number: #dc5052;
 
   .contacts-content-left {
     flex: 1 1 40%;
+    min-width: 360px;
     display: flex;
     flex-direction: column;
   }
@@ -72,20 +82,29 @@ $point-number: #dc5052;
     flex-direction: column;
     align-items: flex-end;
     z-index: 1;
-    padding-top: 10px;    
+    padding-top: 10px;
+    margin-top: 25px;
+
+    @media (max-width: $lg) {
+      order: 2;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 
   .contacts-button-estimate,
   .contacts-button-hello {
     width: 100%;
-    margin-top: 20px;
-    padding: 5px 20px;
+    margin-top: 15px;
+    padding: 5px 10px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     font-family: Raleway;
     letter-spacing: 1.22px;
-    line-height: 2em;
+    line-height: 1.5em;
     text-align: left;
     text-transform: uppercase;
     outline: none;
@@ -101,12 +120,25 @@ $point-number: #dc5052;
         background-color:rgba(84, 145, 245, 0.75);
        }
     }
+
+    @media (max-width: $lg) {
+      width: 260px;
+      text-align: center;
+      padding-bottom: 40px;
+      padding-top: 8px;
+    }
+  }
+
+  .contacts-button-estimate {
+    @media (max-width: $lg) {
+      order: 1
+    }
   }
 
   .company-info {
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
+    padding-top: 50px;
     padding-right: 70px;
     padding-left: 40px;
     padding-bottom: 80px;
@@ -240,12 +272,13 @@ $point-number: #dc5052;
 
     @media (max-width: $lg) {
       padding-left: 40px;
+      margin-top: -75px;
     }
   }
 
   .contacts-form-background {
     height: 100%;
-    width: calc(100% + 155px);
+    width: calc(100% + 130px);
     position: absolute;
     top: 0;
     right: 0;
@@ -355,6 +388,20 @@ $point-number: #dc5052;
     }
   }
 
+  .estimate-contact {
+    .contacts-form-container {
+      flex: 1 1 70%;
+    }
+
+    .contacts-content-left {
+      flex: 1 1 30%;
+    }
+
+    .contacts-form-background {
+      width: calc(100% + 200px);
+    }
+  }
+
   .estimate-form-container {
     z-index: 2;
   }
@@ -377,6 +424,7 @@ $point-number: #dc5052;
 
   .estimate-point-container {
     display: flex;
+    margin-top: 10px;
   }
 
   .estimate-point-number {
@@ -385,7 +433,7 @@ $point-number: #dc5052;
     font-family: Raleway;
     font-size: 40px; // TODO: check size(maybe 32 will be better)
     font-weight: 400;
-    line-height: 66px;
+    line-height: 56px;
     letter-spacing: 1.6px;
   }
 
@@ -402,9 +450,262 @@ $point-number: #dc5052;
     line-height: 65.58px;
     letter-spacing: 1.12px;
   }
+
+  .estimate-stage {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .stage-button-label {
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #acacac;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .stage-input:checked + .stage-button-label {
+    border: 1px solid #00539a;
+    background-color: #accbff;
+    opacity: 0.9;
+  }
+
+  .stage-button-main-text {
+    color: #13243c;
+    font-family: Raleway;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.96px;
+  }
+
+  .estimate-services {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .estimate-services-checkbox {
+    flex: 1 1 33%;
+    margin-top: 10px;
+  }
+
+  .estimate-services-checkbox-label {
+    margin: auto;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .checkbox-container {
+    cursor: pointer;
+
+    &:hover .custom-checkbox {
+      border-color: #00539a;;
+    }
+  }
+
+  .custom-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0,0,0);
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098A9;
+    transition: all .2s ease;
+    margin-right: 5px;
+  }
+
+  .checkbox-svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #00539a;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all .3s ease;
+    transition-delay: .1s;
+    transform: translate3d(0,0,0);
+  }
+
+  .check:checked + .checkbox-container {
+    .checkbox-svg {
+      opacity: 1;
+      stroke-dashoffset: 0;
+    }
+
+    .custom-checkbox {
+      background-color: #b4d0ff;
+      border-color: #00539a;
+      animation: wave .4s ease;
+
+      &:before {
+        transform: scale(3.5);
+        opacity: 0;
+        transition: all .6s ease;
+      }
+    }
+  }
+
+  .pm-need {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pm-checkobox {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+  }
+
+  .pm-title {
+    color: #12103e;
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.28px;
+  }
+
+  .pm-check {
+    min-width: 18px;
+    margin-top: 7px;
+  }
+
+  .select__control {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      border-color: #00539a;
+    }
+  }
+
+  .select__indicator-separator {
+    opacity: 0;
+  }
+
+  .select__single-value {
+    transition: 0.3s;
+  }
+
+  .time-select,
+  .start-select,
+  .budget-select {
+    cursor: pointer;
+
+    &> span {
+      display: none !important;
+    }
+
+    &:hover {
+      .select__single-value {
+        color: #00539a;
+      }
+    }
+  }
+
+  .select__dropdown-indicator {
+    svg {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      background-image: url('/static/images/arrow-down.svg');
+      width: 24px;
+      height: 14px;
+      cursor: pointer;
+
+    }
+  }
+
+  .select__control--is-focused {
+    box-shadow: none;
+  }
+
+  .estimate-footer {
+    padding-left: 78px;
+  }
+
+  .main-person-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  .main-person-name,
+  .main-person-phone {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+
+  $placeholder: #12233d;
+
+  .phone-input,
+  .email-input,
+  .name-input {
+    color: #528ef8;
+  }
+  
+  .estimate-footer {
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $placeholder;
+      opacity: 1; /* Firefox */
+    }
+  
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $placeholder;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $placeholder;
+    }
+  }
+
+  .estimate-message {
+    color: #000;
+  }
+
+  .additional-info {
+    display: flex;
+  }
+
+  .touch-screen {
+    width: 55px;
+    height: 63px;
+  }
+
+  .additional-info-text {
+    padding-left: 15px;
+    color: #12103e;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+  }
+
+  .send-svg {
+
+  }
 }
-
-
 
 @keyframes flyStar {
   0%, 100% {

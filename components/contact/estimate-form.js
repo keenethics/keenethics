@@ -2,6 +2,7 @@ import 'whatwg-fetch';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import Select from 'react-select';
 
 const PointContainer = ({ point, children }) => (
   <div className="estimate-point-container">
@@ -69,7 +70,11 @@ class EstimateForm extends React.Component {
       value: '',
       error: false,
     },
+    selectedBudget: { label: 'I`m not sure', value: 'I`m not sure' },
+    selectedTime: { label: 'I`m not sure', value: 'I`m not sure' },
+    selectedStart: { label: 'ASAP', value: 'ASAP' },
   }
+
   onSubmit = (e) => {
     e.preventDefault();
     const { updateState } = this.props;
@@ -92,6 +97,7 @@ class EstimateForm extends React.Component {
       updateState(state);
     });
   }
+
   onChange = ({ target: { name, value, form: { services } } }) => {
     const checkedCheckboxesValues = [...services]
       .filter(({ checked }) => checked)
@@ -108,6 +114,44 @@ class EstimateForm extends React.Component {
       });
     }
   }
+
+  onSelect = type => value => this.setState({ [`selected${type}`]: value })
+
+  servicesList = [
+    'Web app',
+    'IOS app',
+    'Linux app',
+    'Server-side development',
+    'Windows app',
+    'QA testing',
+    'Android app',
+    'MacOS app',
+    'Design',
+    'Other',
+  ]
+
+  budgetList = [
+    { label: 'I`m not sure', value: 'I`m not sure' },
+    { label: 'Under $10000', value: 'Under $10000' },
+    { label: '$10000-$30000', value: '$10000-$30000' },
+    { label: '$30000 and above', value: '$30000 and above' },
+  ]
+
+  timeList = [
+    { label: 'I`m not sure', value: 'I`m not sure' },
+    { label: 'Less than 1 month', value: 'Less than 1 month' },
+    { label: '1 to 3 months', value: '1 to 3 months' },
+    { label: '3 to 6 months', value: '3 to 6 months' },
+    { label: 'Above 6 months', value: 'Above 6 months' },
+  ]
+
+  startList = [
+    { label: 'ASAP', value: 'ASAP' },
+    { label: 'In a couple of days', value: 'in a couple of days' },
+    { label: 'In a week', value: 'in a week' },
+    { label: 'In a couple of weeks', value: 'in a couple of weeks' },
+    { label: 'In a month or later', value: 'in a month or later' },
+  ]
 
   render = () => {
     const {
@@ -126,32 +170,34 @@ class EstimateForm extends React.Component {
             <PointContent
               head="Stage"
             >
-              <div className="estimate-input-cols">
-                <div className="input-radio-wrap">
+              <div className="estimate-stage">
+                <div className="stage-button">
                   <input
                     name="stage"
                     type="radio"
                     value="New app"
                     id="new"
+                    className="stage-input display-off"
                     onChange={this.onChange}
                     checked={this.state.stage.value === 'New app'}
                   />
-                  <label htmlFor="new" className="label-for-radio-btn">
-                    <p className="radio-lable-title">New app</p>
+                  <label htmlFor="new" className="stage-button-label">
+                    <p className="stage-button-main-text">New app</p>
                       to be built from scratch
                   </label>
                 </div>
-                <div className="input-radio-wrap">
+                <div className="stage-button">
                   <input
                     name="stage"
                     type="radio"
                     value="Existing app"
                     id="existing"
+                    className="stage-input display-off"
                     onChange={this.onChange}
                     checked={this.state.stage.value === 'Existing app'}
                   />
-                  <label htmlFor="existing" className="label-for-radio-btn">
-                    <p className="radio-lable-title">Existing app</p>
+                  <label htmlFor="existing" className="stage-button-label">
+                    <p className="stage-button-main-text">Existing app</p>
                       continue development
                   </label>
                 </div>
@@ -162,207 +208,50 @@ class EstimateForm extends React.Component {
             <PointContent
               head="What services are you interested in?"
             >
-              <div className="estimate-input-cols">
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Web app"
-                    id="web"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Web app')}
-                  />
-                  <label htmlFor="web" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Web app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="IOS app"
-                    id="ios"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('IOS app')}
-                  />
-                  <label htmlFor="ios" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>IOS app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Linux app"
-                    id="linux"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Linux app')}
-                  />
-                  <label htmlFor="linux" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Linux app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Server-side development"
-                    id="ssd"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Server-side development')}
-                  />
-                  <label htmlFor="ssd" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Server-side development</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Windows app"
-                    id="windows"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Windows app')}
-                  />
-                  <label htmlFor="windows" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Windows app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="QA testing"
-                    id="qa"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('QA testing')}
-                  />
-                  <label htmlFor="qa" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>QA testing</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Android app"
-                    id="android"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Android app')}
-                  />
-                  <label htmlFor="android" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Android app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="MacOS app"
-                    id="macos"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('MacOS app')}
-                  />
-                  <label htmlFor="macos" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>MacOS app</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Design"
-                    id="design"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Design')}
-                  />
-                  <label htmlFor="design" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Design</span>
-                  </label>
-                </div>
-                <div className="input-checkbox-wrap">
-                  <input
-                    name="services"
-                    type="checkbox"
-                    value="Other"
-                    id="other"
-                    onChange={this.onChange}
-                    className="check"
-                    checked={services.value.includes('Other')}
-                  />
-                  <label htmlFor="other" className="label-for-checkbox-btn">
-                    <span className={classnames('custom-checkbox', { error: services.error })}>
-                      <svg width="12px" height="10px" viewBox="0 0 12 10">
-                        <polyline points="1.5 6 4.5 9 10.5 1" />
-                      </svg>
-                    </span> <span>Other</span>
-                  </label>
-                </div>
+              <div className="estimate-services">
+                {
+                  this.servicesList.map(service => (
+                    <div className="estimate-services-checkbox">
+                      <input
+                        name="services"
+                        type="checkbox"
+                        value={service}
+                        id={`${service}-id`}
+                        onChange={this.onChange}
+                        className="check display-off"
+                        checked={services.value.includes(service)}
+                      />
+                      <label htmlFor={`${service}-id`} className="estimate-services-checkbox-label checkbox-container">
+                        <span className={classnames('custom-checkbox', { error: services.error })}>
+                          <svg width="12px" height="10px" viewBox="0 0 12 10" className="checkbox-svg">
+                            <polyline points="1.5 6 4.5 9 10.5 1" />
+                          </svg>
+                        </span>
+                        <span className="estimate-services-checkbox-label-text">{service}</span>
+                      </label>
+                    </div>
+                  ))
+                }
               </div>
             </PointContent>
           </PointContainer>
-          <PointContainer point="02">
-            <div className="question-title align-flex-start">
+          <PointContainer point="03">
+            <div className="pm-need align-flex-start">
               <input
                 name="pm"
                 type="checkbox"
                 value="PM/Product manager is required"
                 id="pm"
                 onChange={this.onChange}
-                className="check"
+                className="check display-off"
               />
-              <label htmlFor="pm" className="label-for-checkbox-btn third-point">
-                <span className="pm-check">
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
+              <label htmlFor="pm" className="pm-checkobox checkbox-container">
+                <span className="pm-check custom-checkbox">
+                  <svg width="12px" height="10px" viewBox="0 0 12 10" className="checkbox-svg">
                     <polyline points="1.5 6 4.5 9 10.5 1" />
                   </svg>
                 </span>
-                <span className="question-checkbox-title">Do you require PM/Product manager to save your time for tasks' description,
+                <span className="pm-title">Do you require PM/Product manager to save your time for tasks' description,
                   tasks' assignment and tasks' assignment prioritizing?
                 </span>
               </label>
@@ -374,12 +263,13 @@ class EstimateForm extends React.Component {
             >
               <div className="estimate-input-cols">
                 <div className="input-select-wrap">
-                  <select name="budget" className="input-select" onChange={this.onChange}>
-                    <option value="I`m not sure">I`m not sure</option>
-                    <option value="Under $10000">Under $10000</option>
-                    <option value="$10000-$30000">$10000-$30000</option>
-                    <option value="$30000 and above">$30000 and above</option>
-                  </select>
+                  <Select
+                    className="budget-select"
+                    classNamePrefix="select"
+                    options={this.budgetList}
+                    onChange={this.onSelect('Budget')}
+                    value={this.state.selectedBudget}
+                  />
                 </div>
               </div>
             </PointContent>
@@ -390,13 +280,13 @@ class EstimateForm extends React.Component {
             >
               <div className="estimate-input-cols">
                 <div className="input-select-wrap">
-                  <select name="timeframe" className="input-select" onChange={this.onChange}>
-                    <option value="I`m not sure">I`m not sure</option>
-                    <option value="Less than 1 month">Less than 1 month</option>
-                    <option value="1 to 3 months">1 to 3 months</option>
-                    <option value="3 to 6 months">3 to 6 months</option>
-                    <option value="Above 6 months">Above 6 months</option>
-                  </select>
+                  <Select
+                    className="time-select"
+                    classNamePrefix="select"
+                    options={this.timeList}
+                    onChange={this.onSelect('Time')}
+                    value={this.state.selectedTime}
+                  />
                 </div>
               </div>
             </PointContent>
@@ -407,83 +297,81 @@ class EstimateForm extends React.Component {
             >
               <div className="estimate-input-cols">
                 <div className="input-select-wrap">
-                  <select name="start" className="input-select" onChange={this.onChange}>
-                    <option value="ASAP">ASAP</option>
-                    <option value="in a couple of days">in a couple of days</option>
-                    <option value="in a week">in a week</option>
-                    <option value="in a couple of weeks">in a couple of weeks</option>
-                    <option value="in a month or later">in a month or later</option>
-                  </select>
+                  <Select
+                    className="start-select"
+                    classNamePrefix="select"
+                    options={this.startList}
+                    onChange={this.onSelect('Start')}
+                    value={this.state.selectedStart}
+                  />
                 </div>
               </div>
             </PointContent>
           </PointContainer>
-          <div className="input-cols">
-            <div className="input-contacts">
-              <input
-                className={classnames({ error: name.error })}
-                name="name"
-                id="name"
-                type="text"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="name">Name:</label>
+          <div className="estimate-footer">
+            <div className="main-person-info">
+              <div className="input-wrap main-person-name">
+                <input
+                  className={classnames('name-input', { error: name.error })}
+                  name="name"
+                  id="name"
+                  type="text"
+                  onChange={this.onChange}
+                  placeholder="Name:"
+                  required
+                />
+              </div>
+              <div className="input-wrap main-person-phone">
+                <input
+                  name="phoneEstimate"
+                  id="phoneEstimate"
+                  type="tel"
+                  placeholder="Phone:"
+                  className="phone-input"
+                  onChange={this.onChange}
+                  required
+                />
+              </div>
             </div>
-            <div className="input-contacts">
-              <input
-                name="phoneEstimate"
-                id="phoneEstimate"
-                type="tel"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="phoneEstimate">Phone:</label>
+            <div className="input-cols">
+              <div className="input-wrap">
+                <input
+                  className={classnames('email-input', { error: emailEstimate.error })}
+                  name="emailEstimate"
+                  type="mail"
+                  onChange={this.onChange}
+                  placeholder="Email:"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div className="input-cols">
-            <div className="input-contacts input-email">
-              <input
-                className={classnames({ error: emailEstimate.error })}
-                name="emailEstimate"
-                type="mail"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="emailEstimate">Email:</label>
+            <div className="input-cols">
+              <div className="input-wrap">
+                <div className="input-textarea-title">Message:</div>
+                <textarea
+                  name="messageEstimate"
+                  className="estimate-message"
+                  placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
+                  onChange={this.onChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="input-cols">
-            <div className="input-textarea">
-              <div className="input-textarea-title">Message:</div>
-              <textarea
-                name="messageEstimate"
-                placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
-                onChange={this.onChange}
-              />
+            <div className="additional-info">
+              <img src="/static/images/touch-screen.png" className="touch-screen" alt="touch-screen" />
+              <p className="additional-info-text">
+                Fill out additional information about your project and <span>get up to 50%</span> discount
+                for project specification’s elaboration - <a href="#">follow link</a>
+              </p>
             </div>
-          </div>
-          <div className="form-footer">
-            <img src="/static/images/touch-screen.png" className="touch-screen" alt="touch-screen" />
-            <p className="form-footer-text">
-              Fill out additional information about your project and <span>get up to 50%</span> discount
-              for project specification’s elaboration - <a href="#">follow link</a>
-            </p>
-          </div>
-          {status && <div className="form-status">{status}</div>}
-          <div className="submit-btn">
-            <button
-              type="submit"
-              className={classnames('button button-send', { pending: isPending })}
-            >
-              <img src="/static/images/svg/send.svg" alt="send" />
-            </button>
+            {status && <div className="form-status">{status}</div>}
+            <div className="submit-btn">
+              <button
+                type="submit"
+                className={classnames('button button-send', { pending: isPending })}
+              >
+                <img className="send-svg" src="/static/images/svg/send.svg" alt="send" />
+              </button>
+            </div>
           </div>
         </form>
       </div>

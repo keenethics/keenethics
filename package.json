@@ -31,6 +31,7 @@
     "react-dom": "^16.4",
     "react-html-parser": "^2.0.1",
     "react-markdown": "^2.5.0",
+    "react-select": "^2.1.2",
     "react-slick": "^0.15.4",
     "string-format-validation": "^2.0.2",
     "tinytime": "^0.2.6",

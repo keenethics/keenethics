@@ -94,7 +94,7 @@ export default class Contacts extends React.Component {
             <div className="contacts-title">
               <h1 className="title-text">Contact Us</h1>
             </div>
-            <div className="contacts-content" itemScope itemType="http://schema.org/Organization">
+            <div className={classnames('contacts-content', { 'estimate-contact': !isHelloForm })} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
               <div className="contacts-content-left">
                 <div className="contacts-buttons">
