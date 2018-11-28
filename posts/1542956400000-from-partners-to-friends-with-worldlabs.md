@@ -5,7 +5,7 @@ Meta title: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta description: The story of one business partnership: from working extra hours under limited resources to taking part in a major business event in London.
 Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
 
-![Prototype](/static/posts/from-partners-to-friends-with-worldlabs.jpg)
+![Worldlabs](/static/posts/from-partners-to-friends-with-worldlabs.jpg)
 
 
 
