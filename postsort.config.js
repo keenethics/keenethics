@@ -18,6 +18,7 @@ const postsDatePair = [
   { createdAt: 1540884600000, filename: '1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way.md' },
   { createdAt: 1542178800000, filename: '1542178800000-best-amazon-alexa-skills-mid-autumn-2018.md' },
   { createdAt: 1542956400000, filename: '1542956400000-from-partners-to-friends-with-worldlabs.md' },
+  { createdAt: 1543388400000, filename: '1543388400000-your-data-is-safe-in-ukraine.md' },
 ];
 
 module.exports.postsDatePair = postsDatePair;
