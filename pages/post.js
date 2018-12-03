@@ -11,7 +11,7 @@ import 'isomorphic-fetch';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Error from './_error';
-import { Router } from '../routes';
+import { Router } from '../server/routes';
 
 const dateTemplate = tinytime('{YYYY} {MMMM} {DD}');
 const timeTemplate = tinytime('{h}:{mm} {a}');
@@ -24,14 +24,6 @@ export default class Post extends React.Component {
     const json = await res.json();
 
     return { post: json };
-  }
-  constructor(props) {
-    super(props);
-
-    
-
-    this.state = {
-    };
   }
 
   componentWillReceiveProps(nextProps) {

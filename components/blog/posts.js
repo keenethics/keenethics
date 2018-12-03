@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tinytime from 'tinytime';
 
-import { Router } from '../../routes';
+import { Router } from '../../server/routes';
 
 const dateTemplate = tinytime('{YYYY} {MMMM} {DD} – {h}:{mm} {a}');
 

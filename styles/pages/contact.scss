@@ -84,51 +84,51 @@
 }
 
 .contact-wrapper {
-	@include clearfix;
-	position: relative;
-	border-radius: 22px;
-	z-index: 600;
-	box-sizing: border-box;
-	background: #fff url(/static/images/contacts-bg.png) no-repeat 0 0;
+    @include clearfix;
+    position: relative;
+    border-radius: 22px;
+    z-index: 600;
+    box-sizing: border-box;
+    background: #fff url(/static/images/contacts-bg.png) no-repeat 0 0;
 
-	.contacts-form-btn {
-		position: absolute;
-		height: 40px;
-		width: 351px;
-		padding-left: 15px;
-		color: #fff;
-		outline: none;
-		border-radius: 5px;
-		border: 1px solid #4d5b98;
-		background-color: #5491f5;
-		font-family: Raleway;
-		font-size: 15px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1.39px;
-		text-align: left;
+    .contacts-form-btn {
+        position: absolute;
+        height: 40px;
+        width: 351px;
+        padding-left: 15px;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #4d5b98;
+        background-color: #5491f5;
+        font-family: Raleway;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.39px;
+        text-align: left;
         z-index: 100;
 
-		@media (max-width: 1200px){
-				padding-top: 10px;
-				padding-bottom: 65px;
-				width: 240px;
-				text-align: center;
+        @media (max-width: 1200px){
+            padding-top: 10px;
+            padding-bottom: 65px;
+            width: 240px;
+            text-align: center;
         }
 
-		@media (max-width: 900px){
-				padding-left: 5px;
-				font-size: 14px;
-				width: 220px;
+        @media (max-width: 900px){
+                padding-left: 5px;
+                font-size: 14px;
+                width: 220px;
         }
 
-		@media (max-width: 475px) {
-				width: 150px;
-				padding-top: 10px;
-				padding-bottom: 55px;
-				font-size: 13px;
-				top: 200px;
-		}
+        @media (max-width: 475px) {
+                width: 150px;
+                padding-top: 10px;
+                padding-bottom: 55px;
+                font-size: 13px;
+                top: 200px;
+        }
     }
     .contact-form-btn {
         width: 387px;

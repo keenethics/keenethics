@@ -2,8 +2,8 @@ const errorMessages = ({ value }, field) => {
   const errorField = {
     [field]: {
       value,
-      error: true
-    }
+      error: true,
+    },
   };
 
   return {
@@ -30,6 +30,6 @@ const checkRequiredEstimateFields = (body) => {
   }
 
   return [];
-}
+};
 
 module.exports = { checkRequiredEstimateFields };

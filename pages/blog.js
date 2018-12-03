@@ -1,4 +1,5 @@
-/* global BACKEND_URL, fetch */
+/* global BACKEND_URL, fetch, document */
+import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,7 +10,7 @@ import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
 
-export default class Blog extends React.Component {
+class Blog extends React.Component {
   static async getInitialProps() {
     const res = await fetch(`${BACKEND_URL}/posts`);
     const json = await res.json();
@@ -28,9 +29,9 @@ export default class Blog extends React.Component {
     document.body.style.overflowY = 'initial';
   }
   render() {
-    const { url, posts } = this.props;
+    const { router, posts } = this.props;
     return (
-      <Layout currentURL={url}>
+      <Layout currentURL={router.current}>
         <div className="blog-page">
           <Background className="blog-page-background" />
           <div className="blog-page-content">
@@ -46,11 +47,13 @@ export default class Blog extends React.Component {
 }
 
 Blog.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
   posts: PropTypes.array,
 };
 
 Blog.defaultProps = {
-  url: {},
+  router: {},
   posts: [],
 };
+
+export default withRouter(Blog);

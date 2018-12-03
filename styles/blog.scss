@@ -26,19 +26,26 @@
 }
 .blog-page-posts {
   overflow: hidden;
-  margin: 0 25px;
+  padding: 0 25px;
+  @supports (display: grid) {
+    display: grid;
+    grid-gap: 40px 25px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    overflow: visible;
+  }
 }
 .blog-page-post {
   float: left;
   width: 220px;
-  height: 280px;
   margin: 15px 15px 40px;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
   transition: all .2s;
-
+  @supports (display: grid) {
+    margin: 0 auto;
+  }
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 16px 8px -4px rgba(0, 0, 0, .1);
@@ -54,14 +61,14 @@
 }
 .blog-page-post-header {
   background: #fff;
-  padding: 15px;
-  height: 140px;
+  padding: 15px 10px;
   text-align: center;
   box-sizing: border-box;
 
   .date {
     color: #6f6f89;
     margin-bottom: 15px;
+    font-size: 14px;
   }
   .title {
     color: #000;

@@ -95,6 +95,17 @@ const ProjectTheCheckNetwork = ({ url }) => (
               Overall, The Check Network is a great service for the businesses, web stores, and brands as
               it enables them to achieve much better results.
             </p>
+            <div className="project-feedback">
+              <h3>Feedback</h3>
+              <p>
+                Keenethics’s is a young company that may need to hone its message but their high level of technical
+                expertise, friendly staff, and cost-conscious approach stood out compared to the competition. They
+                are thoughtful in their suggestions and feedback. They feel like a business partner.
+              </p>
+              <div className="project-customer">
+                Maarten Pieter Overvliet, the Netherlands
+              </div>
+            </div>
             <a
               href="http://thechecknetwork.com"
               rel="noopener noreferrer"

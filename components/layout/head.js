@@ -1,7 +1,7 @@
-/* global BACKEND_URL, fetch */
+/* global fetch */
 
 import Head from 'next/head';
-import Router from 'next/router';
+import Router, { withRouter } from 'next/router';
 
 import 'isomorphic-fetch';
 
@@ -31,7 +31,11 @@ const DEFAULT_TITLE = 'Custom Software Development Company - Keenethics';
 
 const LayoutHead = (props) => {
   const { navigation } = config;
-  const { currentURL, meta } = props;
+  const { router, meta } = props;
+
+  const currentURL = {
+    pathname: router.pathname,
+  };
 
   let currentPoint = null;
 
@@ -119,13 +123,13 @@ const LayoutHead = (props) => {
 };
 
 LayoutHead.propTypes = {
-  currentURL: PropTypes.object,
+  router: PropTypes.object,
   meta: PropTypes.object,
 };
 
 LayoutHead.defaultProps = {
-  currentURL: {},
+  router: {},
   meta: {},
 };
 
-export default LayoutHead;
+export default withRouter(LayoutHead);

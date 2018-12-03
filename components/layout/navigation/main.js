@@ -1,6 +1,7 @@
 /* global window, document */
 
 import Link from 'next/link';
+import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -113,7 +114,9 @@ class Navigation extends React.Component {
   }
   render() {
     const { showSidebar, dimensions } = this.state;
-    const { currentURL } = this.props;
+    const { router } = this.props;
+
+    const currentURL = router;
 
     const { navigation } = config;
     const height = `${100 / navigation.filter(n => !n.type && n.type !== 'hidden').length}%`;
@@ -177,11 +180,11 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  currentURL: PropTypes.object,
+  router: PropTypes.object,
 };
 
 Navigation.defaultProps = {
-  currentURL: {},
+  router: {},
 };
 
-export default ClickOutside(Navigation);
+export default withRouter(ClickOutside(Navigation));
