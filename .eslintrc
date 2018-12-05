@@ -33,5 +33,10 @@
   "extends": [
     "plugin:jsx-a11y/recommended",
     "airbnb"
-  ]
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  }
 }

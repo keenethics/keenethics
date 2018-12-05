@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { works } from '../../main.config';
 
 const Navigation = ({ url }) => {
-  const { navigation } = works;
   const project = {
     prev: {},
     current: {},
@@ -36,16 +35,20 @@ const Navigation = ({ url }) => {
   return (
     <div className="project-navigation">
       <div className="project-navigation-inner">
-        {project.prev.href && <Link href={project.prev.href}>
-          <a className="project-navigation-prev">
-            {project.prev.title}
-          </a>
-        </Link>}
-        {project.next.href && <Link href={project.next.href}>
-          <a className="project-navigation-next">
-            {project.next.title}
-          </a>
-                              </Link>}
+        {project.prev.href && (
+          <Link href={project.prev.href}>
+            <a className="project-navigation-prev">
+              {project.prev.title}
+            </a>
+          </Link>
+        )}
+        {project.next.href && (
+          <Link href={project.next.href}>
+            <a className="project-navigation-next">
+              {project.next.title}
+            </a>
+          </Link>
+        )}
       </div>
     </div>
   );
