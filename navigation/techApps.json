@@ -1,0 +1,39 @@
+[
+  {
+    "href": "/tech-apps-phonegap",
+    "name": "PhoneGap",
+    "description": "Framework for building mobile applications reusing existing codebase",
+    "icon": "icon-pg"
+  },
+  {
+    "href": "/tech-apps-electron",
+    "name": "Electron",
+    "description": "JS-application on your desktop",
+    "icon": "icon-en"
+  },
+  {
+    "href": "/tech-apps-accelerated-mobile-pages",
+    "name": "Accelerated Mobile Pages (AMP)",
+    "metaTitle": "Accelerated Mobile Pages (AMP) Development Company - Keenethics",
+    "description": "Accelerated Mobile Pages improve user experience and load instantly within search results page in mobile devices. Contact Keenethics team for AMP Website Design and Development Services.",
+    "icon": "icon-acc"
+  },
+  {
+    "href": "/tech-apps-progressive-web-apps",
+    "name": "Progressive Web Apps",
+    "description": "Working with web-applications offline",
+    "icon": "icon-prog"
+  },
+  {
+    "href": "/tech-apps-react-native",
+    "name": "React Native",
+    "description": "Using native mobile UI-elements with crossplatform JS-code",
+    "icon": "icon-rn"
+  },
+  {
+    "href": "/tech-apps-cordova",
+    "name": "Cordova",
+    "description": "Open-source framework for cross-platform mobile applications",
+    "icon": "icon-cv"
+  }
+]

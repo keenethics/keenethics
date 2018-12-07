@@ -8,9 +8,9 @@ const errorMessages = ({ value }, field) => {
 
   return {
     errorField,
-    status: `Wrong ${field}`
-  }
-}
+    status: `Wrong ${field}`,
+  };
+};
 
 const checkRequiredEstimateFields = (body) => {
   const requiredFields = ['stage', 'services', 'budget', 'timeframe', 'start', 'name', 'phoneEstimate', 'emailEstimate'];

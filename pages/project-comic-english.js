@@ -43,7 +43,7 @@ const ProjectComicEnglish = ({ url }) => (
             <p>
               ComicEnglish uses gamification and motivation. Rewards and other fun features make
               users feel more engaged. They have fun playing games and thus become more motivated
-              to achieve new language goals. 
+              to achieve new language goals.
             </p>
             <div className="title">Idea behind ComicEnglish</div>
             <p>

@@ -1,7 +1,16 @@
 /* global page */
 
 var mainNavigation = require('../navigation/main.json');
-var servicesWebDevelopment = require('../navigation/servicesWebDevelopment.json');
+var servicesWebDevelopmentElements = require('../navigation/servicesWebDevelopment.json');
+var servicesMobileDevelopmentElements = require('../navigation/servicesMobileDevelopment.json');
+var servicesOutstaffingElements = require('../navigation/servicesOutstaffing.json');
+var techAppsElements = require('../navigation/techApps.json');
+var techFrontEndElements = require('../navigation/techFrontEnd.json');
+var techBackEndElements = require('../navigation/techBackEnd.json');
+var techDatabaseElements = require('../navigation/techDatabase.json');
+var techApiIntegrationElements = require('../navigation/techApiIntegration.json');
+var worksElements = require('../navigation/works.json');
+var blog = require('../server/postsort.config.js').postsDatePair;
 
 var navigation = ['/'];
 
@@ -16,7 +25,16 @@ var getRoadmap = function(elements) {
 };
 
 getRoadmap(mainNavigation);
-getRoadmap(servicesWebDevelopment);
+getRoadmap(servicesWebDevelopmentElements);
+getRoadmap(servicesMobileDevelopmentElements);
+getRoadmap(servicesOutstaffingElements);
+getRoadmap(techAppsElements);
+getRoadmap(techFrontEndElements);
+getRoadmap(techBackEndElements);
+getRoadmap(techDatabaseElements);
+getRoadmap(techApiIntegrationElements);
+getRoadmap(worksElements);
+getRoadmap(blog);
 
 describe('Page rendering', () => {
   navigation.forEach((nav) => {

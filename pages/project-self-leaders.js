@@ -34,24 +34,24 @@ const ProjectPlutio = ({ url }) => (
           </div>
           <div className="project-content-more">
             <p className="center">
-              SelfLeaders is a Swedish company that helps their customers create strong cultures where co 
-              workers are engaged, drive development and take care of themselves and each other. 
+              SelfLeaders is a Swedish company that helps their customers create strong cultures where co
+              workers are engaged, drive development and take care of themselves and each other.
             </p>
             <div className="title">How it works</div>
             <p>
-              Understanding personal values is the key to understanding your own motivation. Ever since 
-              the start of SelfLeaders in 2009, this method has been central in our approach to working 
+              Understanding personal values is the key to understanding your own motivation. Ever since
+              the start of SelfLeaders in 2009, this method has been central in our approach to working
               with individual and organizational transformation.
             </p>
-            <p>SelfLeaders delivers trainings to businesses, NGOs and the public sector with the aim to 
-              help them to become truly value-based. SelfLeaders workshops would be impossible without 
-              application which we made. This application is a tool for facilitators and participants of 
-              workshops. Tool’s functionality helps to conduct workshop with interacting materials, videos, 
+            <p>SelfLeaders delivers trainings to businesses, NGOs and the public sector with the aim to
+              help them to become truly value-based. SelfLeaders workshops would be impossible without
+              application which we made. This application is a tool for facilitators and participants of
+              workshops. Tool’s functionality helps to conduct workshop with interacting materials, videos,
               presentations, etc.
             </p>
-            <img 
-              src="/static/images/project/self-leaders-prew-1.jpg" 
-              alt="Self Leaders" 
+            <img
+              src="/static/images/project/self-leaders-prew-1.jpg"
+              alt="Self Leaders"
               className="image-gaps"
             />
             <div className="title">Technology</div>
@@ -61,9 +61,9 @@ const ProjectPlutio = ({ url }) => (
               <div className="tag">React</div>
               <div className="tag">Blaze</div>
             </div>
-            <img 
-              src="/static/images/project/self-leaders-prew-2.jpg" 
-              alt="Self Leaders" 
+            <img
+              src="/static/images/project/self-leaders-prew-2.jpg"
+              alt="Self Leaders"
               className="image-gaps"
             />
             <div className="project-achievements">
@@ -102,23 +102,23 @@ const ProjectPlutio = ({ url }) => (
                     <span className="semi-bold">We grow fast!</span>
                     We have started development with only one full stacker and after 3 months, we expanded to three decent developers, QA and a Project Manager to handle the project flow.
                   </p>
-                  </div>
                 </div>
-                <div className="col-1-2">
-                  <div className="pree-grid-text">
-                    <p>
-                      <span className="semi-bold">We love agility!</span>
-                      Self Leaders is the best example of the agile methodology successfully running on the project. Scrum attributes with all their features were integrated into the project development process. 
-                    </p>
-                  </div>
+              </div>
+              <div className="col-1-2">
+                <div className="pree-grid-text">
+                  <p>
+                    <span className="semi-bold">We love agility!</span>
+                      Self Leaders is the best example of the agile methodology successfully running on the project. Scrum attributes with all their features were integrated into the project development process.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="title">Development</div>
             <div className="grid sl-grid">
               <div className="col-1-3">
                 <div className="grid-img-wrap">
-                  <img 
-                    src="/static/images/project/self-leaders-development-icon-sprint-cycle.png" 
+                  <img
+                    src="/static/images/project/self-leaders-development-icon-sprint-cycle.png"
                     alt="Sprint Cycle"
                   />
                 </div>
@@ -130,8 +130,8 @@ const ProjectPlutio = ({ url }) => (
               </div>
               <div className="col-1-3">
                 <div className="grid-img-wrap">
-                  <img 
-                    src="/static/images/project/self-leaders-development-icon-scrum-poker.png" 
+                  <img
+                    src="/static/images/project/self-leaders-development-icon-scrum-poker.png"
                     alt="Scrum Poker"
                   />
                 </div>
@@ -143,8 +143,8 @@ const ProjectPlutio = ({ url }) => (
               </div>
               <div className="col-1-3">
                 <div className="grid-img-wrap">
-                  <img 
-                    src="/static/images/project/self-leaders-development-icon-team.png" 
+                  <img
+                    src="/static/images/project/self-leaders-development-icon-team.png"
                     alt="Team"
                   />
                 </div>
@@ -171,9 +171,9 @@ const ProjectPlutio = ({ url }) => (
             <p>
               QA reveals some bugs and moves Task back to Sprint.
             </p>
-            <img 
-              src="/static/images/project/self-leaders-prew-3.jpg" 
-              alt="Self Leaders" 
+            <img
+              src="/static/images/project/self-leaders-prew-3.jpg"
+              alt="Self Leaders"
               className="image-gaps"
             />
             {/* <div className="project-feedback">

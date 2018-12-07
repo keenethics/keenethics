@@ -3,7 +3,7 @@
 import 'whatwg-fetch';
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames'
+import classnames from 'classnames';
 
 class EstimateForm extends React.Component {
   state = {
@@ -96,7 +96,7 @@ class EstimateForm extends React.Component {
     const {
       emailEstimate,
       name,
-      services
+      services,
     } = this.state;
     const { isPending, status } = this.props;
     return (
@@ -375,7 +375,7 @@ class EstimateForm extends React.Component {
           <div className="input-cols">
             <div className="input-contacts">
               <input
-                className={classnames({ error: name.error})}
+                className={classnames({ error: name.error })}
                 name="name"
                 id="name"
                 type="text"

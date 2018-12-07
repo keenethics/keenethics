@@ -1,0 +1,50 @@
+[
+  {
+    "href": "/tech-front-end-react",
+    "name": "React",
+    "description": "Library for blazing-fast UI-rendering va virtual-DOM",
+    "icon": "icon-rn"
+  },
+  {
+    "href": "/tech-front-end-redux",
+    "name": "Redux",
+    "description": "Organizing state in React-applciation",
+    "icon": "icon-redux"
+  },
+  {
+    "href": "/tech-front-end-angular",
+    "name": "Angular",
+    "description": "Google-backed frontend-framework",
+    "icon": "icon-ang"
+  },
+  {
+    "href": "/tech-front-end-aurelia",
+    "name": "Aurelia",
+    "description": "Ambitious Angular-competitor by one of former Angular-deveopers",
+    "icon": "icon-aurelia"
+  },
+  {
+    "href": "/tech-front-end-react-native",
+    "name": "React Native",
+    "description": "Speeding up hybrid mobile-apps by using native mobile UI-elements",
+    "icon": "icon-rn"
+  },
+  {
+    "href": "/tech-front-end-angular-2",
+    "name": "Angular 2.0",
+    "description": "Next-generation frontend-framework",
+    "icon": "icon-ang"
+  },
+  {
+    "href": "/tech-front-end-vue",
+    "name": "Vue JS",
+    "description": "Popular lightweight library for UI",
+    "icon": "icon-vue"
+  },
+  {
+    "href": "/tech-front-end-next",
+    "name": "Next JS",
+    "description": "Fullstack framework aiming simplicity combined with powerful features",
+    "icon": "icon-next"
+  }
+]

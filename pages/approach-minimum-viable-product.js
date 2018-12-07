@@ -52,7 +52,7 @@ const ApproachMinimumValProduct = ({ url }) => (
         Today, testing is paramount because, without proper analysis, it’s hard to predict the success
         rate of the product. Thus, prior to developing an application or even just testing out new ideas,
         it's critical to keep in mind the MVP development program. Without it, chances of gaining
-        recognition, as well as selling your service are low. 
+        recognition, as well as selling your service are low.
       </p>
     </div>
   </Layout>

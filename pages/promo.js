@@ -70,7 +70,7 @@ const PromoPage = ({ url }) => {
             </section>
           </div>
         </div>
-        
+
         <footer className="footer">
           <div className="social-icons">
             <SocialButton />
