@@ -36,7 +36,8 @@ const ProjectBankerAdvisor = ({ url }) => (
             <p>
               Prior to cooperating with any bank, a buyer needs to learn about bank fees,
               interest rates, and customer services. Asking an expert for advice could make
-              one’s business up and running. What if we could bring an expert opinion into the smartphone?
+              one&apos;s business up and running. What if we could bring an expert opinion
+              into the smartphone?
             </p>
             <p>
               The idea behind BankerAdvisor was to create an efficient investment banking
@@ -47,7 +48,8 @@ const ProjectBankerAdvisor = ({ url }) => (
             </p>
             <p>
               For us, this app is an opportunity to make the investment banking more efficient by
-              providing unbiased reviews and showing the advisory services their weaknesses and strengths.
+              providing unbiased reviews and showing the advisory services their weaknesses and
+              strengths.
             </p>
             <img
               src="/static/images/project/banker-advisor-prew-1.jpg"
@@ -170,7 +172,7 @@ const ProjectBankerAdvisor = ({ url }) => (
             </p>
             <p>
               The website has flexible payment plans and works in sync with the Stripe
-              payment platform. Moreover, we have implemented "complex search" and will
+              payment platform. Moreover, we have implemented &ldquo;complex search&rdquo; and will
               work on intelligence search and smart recommendations in the next version.
             </p>
             <div className="title">Result</div>

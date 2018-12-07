@@ -149,10 +149,12 @@ class ContactForm extends React.Component {
           </div>
           <div className="input-wrap input-wrap-ta">
             <textarea
-              className={classnames({ error: message.error })}
+              className={classnames({
+                'message-textarea': true,
+                error: message.error,
+              })}
               name="message"
               placeholder="Message"
-              className="messege-textarea"
               onChange={this.onChange}
             />
           </div>

@@ -63,8 +63,18 @@ const PromoPage = ({ url }) => {
                   <div className="quote">— This is what is really unique about them. They feel like a business partner</div>
                 </div>
                 <div className="quotes-column -right">
-                  <div className="quote">"Keenethics was reliable in meeting tight deadlines, delivering high-quality work on time and within budget. They offered a broad range of proficiency and skills as well as friendly, personable customer service. They had no difficulty in meeting requirements and provided additional support as needed".</div>
-                  <div className="quote">"Keenethics have a good network of resources and are able to bring in the best people for each job".</div>
+                  <div className="quote">
+                    &ldquo;Keenethics was reliable in meeting tight deadlines, delivering
+                    high-quality
+                    work on time and within budget. They offered a broad range of proficiency
+                    and skills as well as friendly, personable customer service. They had no
+                    difficulty in meeting requirements and provided additional support as
+                    needed.&rdquo;
+                  </div>
+                  <div className="quote">
+                    &ldquo;Keenethics have a good network of resources and are able to bring
+                    in the best people for each job&rdquo;.
+                  </div>
                 </div>
               </div>
             </section>

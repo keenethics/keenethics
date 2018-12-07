@@ -332,8 +332,9 @@ class EstimateForm extends React.Component {
                   <polyline points="1.5 6 4.5 9 10.5 1" />
                 </svg>
               </span>
-              <span className="question-checkbox-title">Do you require PM/Product manager to save your time for tasks' description,
-                tasks' assignment and tasks' assignment prioritizing?
+              <span className="question-checkbox-title">
+                Do you require PM/Product manager to save your time for tasks description,
+                tasks assignment and tasks assignment prioritizing?
               </span>
             </label>
           </div>
@@ -426,8 +427,8 @@ class EstimateForm extends React.Component {
           <div className="form-footer">
             <img src="/static/images/touch-screen.png" className="touch-screen" alt="touch-screen" />
             <p className="form-footer-text">
-              Fill out additional information about your project and <span>get up to 50%</span> discount
-              for project specification’s elaboration - <a href="#">follow link</a>
+              Fill out additional information about your project and <span>get up to 50%</span>
+              &nbsp;discount for project specification’s elaboration - <a href="#">follow link</a>
             </p>
           </div>
           {status && <div className="form-status">{status}</div>}

@@ -37,8 +37,8 @@ const ProjectComicEnglish = ({ url }) => (
             <div className="title">Chatbot that helps you learn English</div>
             <p>
               The application of chatbot technology in language learning is not new. Chatbots are
-              often applied for providing users with individual personalized language practice whenever
-              they feel like studying. This is a great way to improve language skills.
+              often applied for providing users with individual personalized language practice
+              whenever they feel like studying. This is a great way to improve language skills.
             </p>
             <p>
               ComicEnglish uses gamification and motivation. Rewards and other fun features make
@@ -56,19 +56,21 @@ const ProjectComicEnglish = ({ url }) => (
             <p>
               If people like games, why not to create a game that would help users acquire skills
               that could later be applied in real life? That was the idea behind ComicEnglish.
-              The service was developed to make the language learning easy, engaging, and entertaining.
+              The service was developed to make the language learning easy, engaging, and
+              entertaining.
             </p>
             <div className="title">Main features</div>
             <p>
               Every user had to create a profile in the system to start playing. Throughout the
-              experience, the users were encouraged to apply their English skills to win. ComicEnglish
-              incorporated various language learning resources and tools: English lessons, study cards,
-              daily games, chat rooms. ComicEnglish also provided daily updates to keep the users engaged.
+              experience, the users were encouraged to apply their English skills to win.
+              ComicEnglish incorporated various language learning resources and tools: English
+              lessons, study cards, daily games, chat rooms. ComicEnglish also provided daily
+              updates to keep the users engaged.
             </p>
             <div className="title">Contribution of Keenethics</div>
             <p>
-              Keenethics participated in developing MVP. Our team managed to complete required tasks on
-              time. The website is currently offline.
+              Keenethics participated in developing MVP. Our team managed to complete
+              required tasks on time. The website is currently offline.
             </p>
           </div>
           <Navigation url={url} />

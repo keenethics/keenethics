@@ -1,4 +1,4 @@
-/* global BACKEND_URL, fetch */
+/* global fetch */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -14,7 +14,8 @@ const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(existCategory =>
-    chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
+    chosenCategory.filter(category =>
+      category.toLowerCase() === existCategory.toLowerCase()).length);
 
   return categories.length ? categories : existCategories;
 };
@@ -147,10 +148,8 @@ export default class Portfolio extends React.Component {
 
 Portfolio.propTypes = {
   url: PropTypes.object,
-  works: PropTypes.array,
 };
 
 Portfolio.defaultProps = {
   url: {},
-  works: [],
 };

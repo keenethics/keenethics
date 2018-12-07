@@ -54,8 +54,11 @@ const ProjectWorkbooking = ({ url }) => (
 
             <div className="project-content-chapter">
               <p className="chapter-title custom">Wireframes</p>
-              <p className="chapter-paragraph">We used wireframing to provide a visual understanding of a platform early in a project.
-                A website service was separated at the structural level. Content and functionality were laid out on the platform with
+              <p className="chapter-paragraph">
+                We used wireframing to provide a visual understanding of a platform
+                early in a project.
+                A website service was separated at the structural level. Content and
+                functionality were laid out on the platform with
                 taking into account user needs and user journeys.
               </p>
               <p className="chapter-paragraph">We use this practice early in the development process to establish the basic structure of the website before visual design and content is added. </p>
@@ -65,14 +68,14 @@ const ProjectWorkbooking = ({ url }) => (
 
           <div className="project-content-summary custom" style={{ background: baseColor }}>
             <div className="three-column-wrapper">
-              <img className="column" src="static/images/project/workbooking-1-1.png" />
-              <img className="column" src="static/images/project/workbooking-1-2.png" />
-              <img className="column" src="static/images/project/workbooking-1-3.png" />
+              <img className="column" src="static/images/project/workbooking-1-1.png" alt="Workbooking" />
+              <img className="column" src="static/images/project/workbooking-1-2.png" alt="Workbooking" />
+              <img className="column" src="static/images/project/workbooking-1-3.png" alt="Workbooking" />
             </div>
             <div className="three-column-wrapper">
-              <img className="column" src="static/images/project/workbooking-2-1.png" />
-              <img className="column" src="static/images/project/workbooking-2-2.png" />
-              <img className="column" src="static/images/project/workbooking-2-3.png" />
+              <img className="column" src="static/images/project/workbooking-2-1.png" alt="Workbooking" />
+              <img className="column" src="static/images/project/workbooking-2-2.png" alt="Workbooking" />
+              <img className="column" src="static/images/project/workbooking-2-3.png" alt="Workbooking" />
             </div>
           </div>
 
@@ -89,7 +92,7 @@ const ProjectWorkbooking = ({ url }) => (
             </div>
 
             <div className="project-content-chapter">
-              <img className="chapter-image" src="static/images/project/workbooking-people.png" />
+              <img className="chapter-image" src="static/images/project/workbooking-people.png" alt="Workbooking" />
             </div>
 
             <div className="project-content-chapter custom">
@@ -99,14 +102,14 @@ const ProjectWorkbooking = ({ url }) => (
                   <div className="project-content-chapter">
                     <p className="chapter-subtitle">Customers</p>
                     <p className="chapter-paragraph">iSimplify finding occasional demand of some services for businesses, NGOs and private sector. As well as provide guarantees of quality and reliability of these services.</p>
-                    <img className="chapter-image" src="static/images/project/workbooking-chalanges-1.png" />
+                    <img className="chapter-image" src="static/images/project/workbooking-chalanges-1.png" alt="Workbooking" />
                   </div>
                 </div>
                 <div className="column">
                   <div className="project-content-chapter">
                     <p className="chapter-subtitle">Professionals</p>
                     <p className="chapter-paragraph">Provide oportunities for existing market of people who are looking for a part-time job on regular and flexible basis as well as increasing a number of clients.</p>
-                    <img className="chapter-image" src="static/images/project/workbooking-chalanges-2.png" />
+                    <img className="chapter-image" src="static/images/project/workbooking-chalanges-2.png" alt="Workbooking" />
                   </div>
                 </div>
               </div>
@@ -118,22 +121,28 @@ const ProjectWorkbooking = ({ url }) => (
                 <ul>
                   <li>Developed a platform for professionals who are looking for part-time job.</li>
                   <li>Developed feature for managing schedule of professionals.</li>
-                  <li>Developed easy search of appropriate candidates among different fields for a range of goals diversity at one place.</li>
+                  <li>
+                    Developed easy search of appropriate candidates among different
+                    fields for a range of goals diversity at one place.
+                  </li>
                 </ul>
               </div>
             </div>
 
             <div className="project-content-chapter custom">
-              <img className="chapter-image" src="static/images/project/workbooking-monitors.png" />
+              <img className="chapter-image" src="static/images/project/workbooking-monitors.png" alt="Workbooking" />
             </div>
 
             <div className="project-content-chapter custom">
-              <p className="chapter-title">Client's feedback</p>
-              <p className="chapter-paragraph italic short">"I am really impressed with the different tools and tips that we also got to bring with us, extremely useful."</p>
+              <p className="chapter-title">Client&apos;s feedback</p>
+              <p className="chapter-paragraph italic short">
+                &ldquo;I am really impressed with the different tools and tips that we also got
+                to bring with us, extremely useful.&rdquo;
+              </p>
             </div>
 
             <div className="project-content-chapter custom">
-              <img className="chapter-image" src="static/images/project/workbooking-leptop.png" />
+              <img className="chapter-image" src="static/images/project/workbooking-leptop.png" alt="Workbooking" />
             </div>
           </div>
           <Navigation url={url} />
