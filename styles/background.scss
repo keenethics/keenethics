@@ -52,7 +52,7 @@
       width: 12px;
       height: 12px;
       background: url('/static/images/svg/star.svg') no-repeat center;
-      animation: spin 10s infinite linear;
+      // animation: spin 10s infinite linear;
     }
 
     &:nth-child(2) {
@@ -88,7 +88,7 @@
   height: 360px;
   margin: -180px 0 0 -180px;
   box-sizing: border-box;
-  animation: spin 20s infinite linear;
+  // animation: spin 20s infinite linear;
 
   &:before {
     content: '';
@@ -173,7 +173,7 @@ $shadows-big-2: multiple-box-shadow-red(15);
   width: 3px;
   height: 3px;
   box-shadow: $shadows-medium;
-  animation: animStar 110s linear infinite;
+  // animation: animStar 110s linear infinite;
 
   &:after {
     width: 3px;
@@ -185,7 +185,7 @@ $shadows-big-2: multiple-box-shadow-red(15);
   width: 1px;
   height: 1px;
   box-shadow: $shadows-small;
-  animation: animStar 150s linear infinite;
+  // animation: animStar 150s linear infinite;
 
   &:after {
     width: 1px;
@@ -197,7 +197,7 @@ $shadows-big-2: multiple-box-shadow-red(15);
   width: 4px;
   height: 4px;
   box-shadow: $shadows-big;
-  animation: animStar 130s linear infinite;
+  // animation: animStar 130s linear infinite;
 
   &:after {
     width: 4px;
@@ -209,7 +209,7 @@ $shadows-big-2: multiple-box-shadow-red(15);
   width: 2px;
   height: 2px;
   box-shadow: $shadows-big-2;
-  animation: animStar 200s linear infinite;
+  // animation: animStar 200s linear infinite;
 
   &:after {
     width: 2px;
