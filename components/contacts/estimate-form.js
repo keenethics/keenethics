@@ -424,13 +424,19 @@ class EstimateForm extends React.Component {
               />
             </div>
           </div>
-          <div className="form-footer">
-            <img src="/static/images/touch-screen.png" className="touch-screen" alt="touch-screen" />
-            <p className="form-footer-text">
-              Fill out additional information about your project and <span>get up to 50%</span>
-              &nbsp;discount for project specification’s elaboration - <a href="#">follow link</a>
-            </p>
-          </div>
+          {/*
+            <div className="form-footer">
+              <img
+                src="/static/images/touch-screen.png"
+                className="touch-screen"
+                alt="touch-screen"
+              />
+              <p className="form-footer-text">
+                Fill out additional information about your project and <span>get up to 50%</span>
+                &nbsp;discount for project specification’s elaboration - <a href="#">follow link</a>
+              </p>
+            </div>
+          */}
           {status && <div className="form-status">{status}</div>}
           <div className="submit-btn">
             <button
