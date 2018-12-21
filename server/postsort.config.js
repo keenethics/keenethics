@@ -99,6 +99,11 @@ const postsDatePair = [
     filename: '1543388400000-your-data-is-safe-in-ukraine.md',
     href: '/blog/1543388400000-your-data-is-safe-in-ukraine',
   },
+  {
+    createdAt: 1545289200000,
+    filename: '1545289200000-why-should-you-choose-agencies-over-freelancers-in-outsourcing.md',
+    href: '/blog/1545289200000-why-should-you-choose-agencies-over-freelancers-in-outsourcing',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
