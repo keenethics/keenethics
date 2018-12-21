@@ -42,7 +42,7 @@ This change has shaken the IT world as it made all the companies considerably al
 
 Another growing concern with a regard to doing business in Ukraine is the unstable political situation in the state and the ongoing war in the East. Vendors express their concern with their data being physically blocked or destroyed in case something happens in the city where their outsourcing company is located. However, it is crucial to understand that no modern-day IT company stores data on a local, physically present in its office server, and neither do we. Instead, all of us use cloud technologies for the business and its partners to be able to access the necessary information 24/7.
 
-![Data](/static/posts/your-data-is-safe-in-ukraine-1.jpg)
+![Data](/static/posts/your-data-is-safe-in-ukraine-2.jpg)
 
 <div>
   <h2 style="font-weight: 600; font-size: 22px; color: rgba(0,0,0,0.75)">KeenEthics Team on Guard of Your Data</h2>
