@@ -13,10 +13,6 @@ Outsourcing is an effective strategy for business development but only when it i
 “Hold on”, you may say. “I haven’t decided yet which outsourcing route to choose. Should I partner with a freelancer or with a professional agency?”
 Alright, let’s look for the answer together.
 
-<div align="center">
-  <div style="font-weight: 600">Freelancers vs. Agencies (0:0)</div>
-</div>
-
 <div><h2 style="font-weight: 600; font-size: 22px">Reliability:</h2></div>
 
 To get a job offer, a freelancer may exaggerate their skills or experiences, so be ready to run a risk. Also, if a person suddenly receives an outstanding full-time job offer, they simply move on and leave you alone with your ideas and problems. Besides, a freelancer is a sole player, which means that they have no backup, and should they experience an emergency or get sick, your project will be on hold.
