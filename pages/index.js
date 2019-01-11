@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
@@ -71,6 +71,9 @@ export default class Index extends React.Component {
             </div>
             <h1>Ethical<br />development<br />of keen web-apps</h1>
             <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
+            <Link href="/contacts?activeContactForm=false">
+              <a className="button">Free estimate</a>
+            </Link>
             <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
               <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                 <div className="contact-item-icon">

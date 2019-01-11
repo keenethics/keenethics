@@ -10,13 +10,13 @@ import ContactForm from '../components/contacts/contact-form';
 export default class Contacts extends React.Component {
   constructor(props) {
     super(props);
-
+    const query = props.url.query;
     this.state = {
       isPending: false,
       status: '',
-      activeContactForm: true,
+      activeContactForm: query.activeContactForm !== 'false',
     };
-
+    props.url.push('/contacts');
     this.onClick = this.onClick.bind(this);
   }
   onClick({ target }) {

@@ -17,6 +17,11 @@ const dateTemplate = tinytime('{YYYY} {MMMM} {DD}');
 const timeTemplate = tinytime('{h}:{mm} {a}');
 
 export default class Post extends React.Component {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.post.title !== this.props.post.title) {
+      document.querySelector('.content-inner').scrollTo(0, 0);
+    }
+  }
   static async getInitialProps(p) {
     const name = p.query.name;
 
@@ -25,13 +30,6 @@ export default class Post extends React.Component {
 
     return { post: json };
   }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.post.title !== this.props.post.title) {
-      document.querySelector('.content-inner').scrollTo(0, 0);
-    }
-  }
-
   render() {
     const { url, post } = this.props;
     const { hrefToPreviousPost, hrefToNextPost } = post;
