@@ -69,7 +69,7 @@ export default class Index extends React.Component {
                 5-stars rated company at Clutch
               </a>
             </div>
-            <h1>Ethical<br />development<br />of keen web-apps</h1>
+            <h1>Keen & Ethical<br />Software <br />Development</h1>
             <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
             <Link href="/contacts?activeContactForm=false">
               <a className="button">Free estimate</a>
