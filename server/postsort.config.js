@@ -109,6 +109,11 @@ const postsDatePair = [
     filename: '1545998400000-applications-business-tools-of-the-year.md',
     href: '/blog/1545998400000-applications-business-tools-of-the-year',
   },
+  {
+    createdAt: 1548151200000,
+    filename: '1548151200000-voice-app-development.md',
+    href: '/blog/1548151200000-voice-app-development',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
