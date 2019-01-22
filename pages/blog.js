@@ -11,12 +11,6 @@ import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
 
 class Blog extends React.Component {
-  static async getInitialProps() {
-    const res = await fetch(`${BACKEND_URL}/posts`);
-    const json = await res.json();
-
-    return { posts: json };
-  }
   constructor(props) {
     super(props);
 
@@ -27,6 +21,12 @@ class Blog extends React.Component {
   }
   componentWillUnmount() {
     document.body.style.overflowY = 'initial';
+  }
+  static async getInitialProps() {
+    const res = await fetch(`${BACKEND_URL}/posts`);
+    const json = await res.json();
+
+    return { posts: json };
   }
   render() {
     const { router, posts } = this.props;
