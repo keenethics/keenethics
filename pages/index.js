@@ -71,7 +71,7 @@ export default class Index extends React.Component {
             </div>
             <h1>Keen & Ethical<br />Software <br />Development</h1>
             <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
-            <Link href="/contacts?activeContactForm=false">
+            <Link href="/contacts?activeForm=estimate">
               <a className="button">Free estimate</a>
             </Link>
             <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
