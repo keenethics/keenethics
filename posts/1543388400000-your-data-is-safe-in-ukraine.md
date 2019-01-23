@@ -7,8 +7,6 @@ Preview image: /static/posts/your-data-is-safe-in-ukraine-1-prew.jpg
 
 ![Data](/static/posts/your-data-is-safe-in-ukraine-1.jpg)
 
-Data safety through the prism of the economic, social, and political situation in Ukraine are the key reasons why a business may hesitate about collaborating with Ukrainian software developers. Yet, you should not have doubts whether to outsource to KeenEthics since we are ready to stand on guard of your information. We care about the safety of our office and network, make sure that no part of our data can be stolen, falsified, destroyed, or accessed unwarrantedly, train our employees on cyber security, and follow all the Ukrainian and European data safety legal requirements.
-
 <div align="center">
   <h1 style="font-weight: 600; color: rgba(0,0,0,0.75)">Your Data is Safe in Ukraine</h1>
 </div>
