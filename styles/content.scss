@@ -97,14 +97,14 @@
     color: #444;
     margin: 0 0 14px;
     padding: 0 0 2px 24px;
-    line-height: 1.5;
+    line-height: 24px;
     background-size: 16px;
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 12px;
       margin-top: -6px;
       display: block;
       width: 5px;
