@@ -5,7 +5,7 @@ Meta title: Voice App Development - Keenethics Blog
 Meta description: Let us tell you how Keenethics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
 Preview image: /static/posts/voice-app-development-prew.jpg
 
-![Heroes](/static/posts/voice-app-development.jpg)
+![Voice App Development](/static/posts/voice-app-development.jpg)
 
 <div><h1 style="font-weight: 600; margin-top: 30px" align="center">Voice App Development</h1></div>
 
