@@ -114,6 +114,11 @@ const postsDatePair = [
     filename: '1548151200000-voice-app-development.md',
     href: '/blog/1548151200000-voice-app-development',
   },
+  {
+    createdAt: 1548831600000,
+    filename: '1548831600000-creating-corporate-culture.md',
+    href: '/blog/1548831600000-creating-corporate-culture',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
