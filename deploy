@@ -1,7 +1,7 @@
 #!/bin/bash
-yarn build
+npm run build
 ssh root@107.170.121.178 pm2 stop server
 ssh root@107.170.121.178 rm -rf /home/keenethics
-rsync -a ../keenethics/ root@107.170.121.178:/home/keenethics
-sleep 5s
+rsync -a --progress --exclude "node_modules" ../keenethics/ root@107.170.121.178:/home/keenethics
+ssh root@107.170.121.178 "cd /home/keenethics ; npm i"
 ssh root@107.170.121.178 "cd /home/keenethics ; pm2 restart server.sh"
