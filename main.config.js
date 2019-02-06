@@ -203,7 +203,7 @@ export const team = [
       },
       {
         name: 'Alexandr S.',
-        position: 'Project Manager and QA Specialis',
+        position: 'Project Manager and QA Specialist',
         description: 'My main job is to prevent project issues from occurring and to detect them if any have yet slipped through. My KeenEthics life is full of fun and various opportunities, which turns this company into something more important than a mere place of employment.',
         avatar: 'sasha_s.jpg',
       },
@@ -252,8 +252,7 @@ export const team = [
       {
         name: 'Vlad O.',
         position: 'Senior Software Developer',
-        description:
-          'y central objective is to create, educate, and motivate acceptance and appreciation of interests and ideas. Courage to take on challenges is the feature I enjoy and appreciate about KeenEthics the most.',
+        description: 'My central objective is to create, educate, and motivate acceptance and appreciation of interests and ideas. Courage to take on challenges is the feature I enjoy and appreciate about KeenEthics the most.',
         avatar: 'vlad_o.jpg',
       },
       {
@@ -301,7 +300,7 @@ export const team = [
         name: 'Max F.',
         position: 'Full-Stack Software Developer',
         description:
-          'writing a high-quality code is both my job and my passion. The fact that KeenEthics promotes the idea of a healthy lifestyle is what I like about the company the most.',
+          'Writing a high-quality code is both my job and my passion. The fact that KeenEthics promotes the idea of a healthy lifestyle is what I like about the company the most.',
         avatar: 'maksym_f.jpg',
       },
       {
@@ -391,7 +390,7 @@ export const team = [
       {
         name: 'Anton M.',
         position: 'Full-Stack Software Developer',
-        description: 'my job is to provide maintainable clean code for the projects I am assigned to and to make sure that it is timely tested. The KeenEthics team is always willing to change for the sake of our common good and for the benefit of our partners. Fresh fruits in our kitchen are also a huge plus!',
+        description: 'My job is to provide maintainable clean code for the projects I am assigned to and to make sure that it is timely tested. The KeenEthics team is always willing to change for the sake of our common good and for the benefit of our partners. Fresh fruits in our kitchen are also a huge plus!',
         avatar: 'astronauts.jpg',
       },
       {
@@ -410,12 +409,6 @@ export const team = [
         name: 'Ilona-Mariia Sh.',
         position: 'Full-Stack Software Developer',
         description: 'Communication with clients and marketing activities are my major job objectives. I am responsible for communicating with the broad audience through Instagram, and I am glad to show people how fun and cozy the atmosphere in our team is. KeenEthics inspires me with an excellent atmosphere, great relationships between people, flexibility, and the ability to develop myself personally and professionally.',
-        avatar: 'astronauts.jpg',
-      },
-      {
-        name: 'Max F.',
-        position: 'Full-Stack Software Developer',
-        description: 'writing a high-quality code is both my job and my passion. The fact that KeenEthics promotes the idea of a healthy lifestyle is what I like about the company the most.',
         avatar: 'astronauts.jpg',
       },
       {
@@ -439,7 +432,7 @@ export const team = [
       {
         name: 'Bohdana K.',
         position: 'Head of Business Development',
-        description: 'my major duties include lead generation, communication with potential and existing customers, and social media content marketing. KeenEthics is appealing to me due to a responsible approach and an honest attitude to every customer and the agility of our team.',
+        description: 'My major duties include lead generation, communication with potential and existing customers, and social media content marketing. KeenEthics is appealing to me due to a responsible approach and an honest attitude to every customer and the agility of our team.',
         avatar: 'astronauts.jpg',
       },
       {
@@ -463,7 +456,7 @@ export const team = [
       {
         name: 'Tania M.',
         position: 'Content Writer',
-        description: 'my job is to communicate the ideas and vision of KeenEthics to the broad audience through various articles, newsletters, social media posts, and brochures. In each and every piece of writing, I strive to prove that the KeenEthics team is determined to get the job done without compromising deadlines or quality.',
+        description: 'My job is to communicate the ideas and vision of KeenEthics to the broad audience through various articles, newsletters, social media posts, and brochures. In each and every piece of writing, I strive to prove that the KeenEthics team is determined to get the job done without compromising deadlines or quality.',
         avatar: 'astronauts.jpg',
       },
     ],
