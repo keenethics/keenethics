@@ -5,7 +5,7 @@ Meta title: Best Amazon Alexa Skills Mid-Winter 2019 - Keenethics Blog
 Meta description: KeenEthics team compiled the list of top 10 Alexa skills, both useful and entertaining, Amazon’s voice assistant learned this winter.
 Preview image: /static/posts/alexa-post-images/mid-winter-2019/best-amazon-alexa-skills-mid-winter-2019-prew.jpeg
 
-![Creating Corporate Culture](/static/posts/alexa-post-images/mid-winter-2019/best-amazon-alexa-skills-mid-winter-2019.jpeg)
+![Best Amazon Alexa Skills Mid-Winter 2019](/static/posts/alexa-post-images/mid-winter-2019/best-amazon-alexa-skills-mid-winter-2019.jpeg)
 
 <div><h1 style="font-weight: 600; margin-top: 30px" align="center">Best Amazon Alexa Skills Mid-Winter 2018</h1></div>
 
