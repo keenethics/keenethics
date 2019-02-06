@@ -210,7 +210,7 @@ export const team = [
       {
         name: 'Ihor F.',
         position: 'Recruitment Manager',
-        description: 'my job is to bring the best talents into the company, to timely fill all the vacancies, to find advisors and efficient lecturers, and to strengthen the team. I organize various social and business events and help the developer community to improve the company’s brand. I am inspired by the dynamic development of KeenEthics and active involvement of each team member in this process. We highly value each person and treat them as our most important project.',
+        description: 'My job is to bring the best talents into the company, to timely fill all the vacancies, to find advisors and efficient lecturers, and to strengthen the team. I organize various social and business events and help the developer community to improve the company’s brand. I am inspired by the dynamic development of KeenEthics and active involvement of each team member in this process. We highly value each person and treat them as our most important project.',
         avatar: 'ihor_f.jpg',
       },
       {
