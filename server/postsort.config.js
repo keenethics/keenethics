@@ -119,6 +119,11 @@ const postsDatePair = [
     filename: '1548831600000-creating-corporate-culture.md',
     href: '/blog/1548831600000-creating-corporate-culture',
   },
+  {
+    createdAt: 1549436400000,
+    filename: '1549436400000-best-amazon-alexa-skills-mid-winter-2019.md',
+    href: '/blog/1549436400000-best-amazon-alexa-skills-mid-winter-2019',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
