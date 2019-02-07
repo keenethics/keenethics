@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import tinytime from 'tinytime';
+import Moment from 'react-moment';
 import { Link } from 'next-url-prettifier';
 
 import 'isomorphic-fetch';
@@ -12,9 +12,6 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Error from './_error';
 import { Router } from '../server/routes';
-
-const dateTemplate = tinytime('{YYYY} {MMMM} {DD}');
-const timeTemplate = tinytime('{h}:{mm} {a}');
 
 export default class Post extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -56,8 +53,8 @@ export default class Post extends React.Component {
                   <span>{post.author}</span>
                 </div>
                 <div className="blog-post-page-date">
-                  <span>{dateTemplate.render(new Date(+post.date))}</span>
-                  <span>{timeTemplate.render(new Date(+post.date))}</span>
+                  <span><Moment format="YYYY MMMM DD">{new Date(+post.date)}</Moment></span>
+                  <span><Moment format="h:mm a">{new Date(+post.date)}</Moment></span>
                 </div>
               </div>
               <Background className="open-source-page-background" />

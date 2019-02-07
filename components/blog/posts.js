@@ -2,11 +2,9 @@ import { Link } from 'next-url-prettifier';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import tinytime from 'tinytime';
+import Moment from 'react-moment';
 
 import { Router } from '../../server/routes';
-
-const dateTemplate = tinytime('{YYYY} {MMMM} {DD} – {h}:{mm} {a}');
 
 const Posts = ({ posts }) => (
   <div className="blog-page-posts">
@@ -17,7 +15,7 @@ const Posts = ({ posts }) => (
             <img src={post.image} alt={post.title} />
           </div>
           <div className="blog-page-post-header">
-            <div className="date">{dateTemplate.render(new Date(parseInt(post.date, 10)))}</div>
+            <div className="date"><Moment format="YYYY MMMM DD - h:mm a">{new Date(+post.date)}</Moment></div>
             <div className="title">{post.title}</div>
           </div>
         </a>
