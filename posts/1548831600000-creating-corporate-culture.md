@@ -7,7 +7,7 @@ Preview image: /static/posts/creating-corporate-culture-prew.jpg
 
 ![Creating Corporate Culture](/static/posts/creating-corporate-culture.jpg)
 
-<div><h1 style="font-weight: 600; margin-top: 30px" align="center">Voice App Development</h1></div>
+<div><h1 style="font-weight: 600; margin-top: 30px" align="center">Creating Corporate Culture</h1></div>
 
 ## Defining Corporate Culture and Its Importance
 
@@ -21,7 +21,7 @@ While the question “WHY to create a corporate culture?” seems to be pretty s
 
 Here, you find a few vital recommendations as for how to create a strong corporate culture in your organization.
 
-## Creating Corporate Culture
+## Tips on How to Create Corporate Culture
 
 First and foremost, there has to be a well-thought-out and clearly formulated organizational strategy and corporate culture with comprehensively determined values, mission, vision, structure, and communication principles. This has to be done from the very beginning when a business is being launched. If a company, for some reason, did not manage to fulfill this task in time, they have to take it on as soon as they realize the mistake.
 
