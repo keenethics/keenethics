@@ -5,6 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Checkbox from '../form/checkbox';
+
 class EstimateForm extends React.Component {
   state = {
     stage: {
@@ -104,6 +106,7 @@ class EstimateForm extends React.Component {
         <form onSubmit={this.onSubmit} className="estimate-form-inputs">
           <div className="contacts-title estimate-title">let us Estimate your project</div>
           <div className="question-title"><span className="question-number">01</span> Stage</div>
+          <Checkbox text="Web app" name="form" />
           <div className="estimate-input-cols">
             <div className="input-radio-wrap">
               <input
