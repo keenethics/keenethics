@@ -16,6 +16,7 @@ export default class Checkbox extends PureComponent {
     const {
       className,
       text,
+      value,
       name,
       onChange,
       isChecked,
@@ -37,6 +38,7 @@ export default class Checkbox extends PureComponent {
         <input
           id={this.id}
           type="checkbox"
+          value={value}
           name={name}
           onChange={onChange}
           {...checkboxComputedAttributes}
@@ -56,6 +58,7 @@ Checkbox.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   text: PropTypes.string,
+  value: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
   isChecked: PropTypes.bool,
@@ -66,6 +69,7 @@ Checkbox.defaultProps = {
   id: null,
   className: null,
   text: 'Checkbox',
+  value: '',
   name: '',
   onChange: null,
   isChecked: false,
