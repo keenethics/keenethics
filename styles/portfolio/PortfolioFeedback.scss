@@ -51,6 +51,7 @@
       transform: translate(-30%, -50%);
       background: url(/static/portfolio/icons/quotes.svg) center center no-repeat;
       background-size: contain;
+      z-index: -1;
     }
   }
   .feedback--link {
@@ -66,6 +67,10 @@
     border: 1px solid #3e47ca;
     line-height: 18px;
     padding: 10px 25px;
+    transition: background-color .1s ease-in-out;
+    &:hover {
+      background-color: rgba(#3e47ca, .05);
+    }
     img {
       display: inline-block;
       margin-left: 10px;
