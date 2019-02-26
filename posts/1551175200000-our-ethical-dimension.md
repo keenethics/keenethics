@@ -22,6 +22,8 @@ Choosing a title which would represent our vision was a tough nut to crack. We b
 
 Eventually, out of 60 options, we were left with the one and only “KeenEthics”, where “Keen” stands for curiosity and enthusiasm, while “Ethics”... Well, ethics is just ethics.
 
+![Keenethics Team](/static/posts/our-ethical-dimension-3.jpg)
+
 ## Ethical Values
 
 Since we are so confident in our ethics that we included them in our brand name, what ethical values do we actually hold dear?
@@ -55,6 +57,8 @@ We strive to share our knowledge and expertise with those who need a professiona
 ### *Quality and Excellence*
 
 We are devoted to solving business challenges and providing excellent BA, design, development, and product support services. We conduct regular training and knowledge sharing programs, both external ones, such as various meetups or the annual Hacktoberfest, and internal tech talks. We carry out performance evaluations, practice pair programming and team brainstorming, visit external educational events, invite competent speakers from outside ― all for the sake of constantly improving our competence and ensuring the highest quality.
+
+![Keenethics Team](/static/posts/our-ethical-dimension-2.jpg)
 
 ## Our Team
 
