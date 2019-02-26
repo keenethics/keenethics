@@ -121,7 +121,7 @@ const ProjectPrix = ({ url }) => (
               <a
                 href="https://github.com/don/cordova-plugin-ble-central"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 cordova-plugin-ble-central
               </a>
@@ -219,7 +219,7 @@ const ProjectPrix = ({ url }) => (
             </div>
             <a
               href="https://www.prix.ai"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}

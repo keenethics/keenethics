@@ -15,26 +15,26 @@ Voice devices and applications are a major AI advancement, which enables us to u
 
 <div>
   <p>
-    According to <a href="https://techcrunch.com/2017/11/08/voice-enabled-smart-speakers-to-reach-55-of-u-s-households-by-2022-says-report/" target="_blank" rel="noopener noreferrer">Techcrunch</a>, “smart devices like the Amazon Echo, Google Home and Sonos One will be installed in a majority – that is, 55 percent – of U.S. households by the year 2022”. Only in the last year, the number of voice services users in the United States has grown by 128.9 percent.
+    According to <a href="https://techcrunch.com/2017/11/08/voice-enabled-smart-speakers-to-reach-55-of-u-s-households-by-2022-says-report/" target="_blank" rel="noopener noreferrer nofollow">Techcrunch</a>, “smart devices like the Amazon Echo, Google Home and Sonos One will be installed in a majority – that is, 55 percent – of U.S. households by the year 2022”. Only in the last year, the number of voice services users in the United States has grown by 128.9 percent.
   </p>
 </div>
 
 <div>
   <p>
-    <a href="" target="_blank" rel="noopener noreferrer"></a>
-    The number of voice assistants available today is overwhelming. Have you already met <a href="https://www.nuance.com/omni-channel-customer-engagement/digital/virtual-assistant/nina.html" target="_blank" rel="noopener noreferrer">Nina</a>, <a href="http://www.silvia.ai/" target="_blank" rel="noopener noreferrer">Silvia</a>, <a href="https://www.nuance.com/dragon/dragon-anywhere.html" target="_blank" rel="noopener noreferrer">Dragon</a>, <a href="https://www.jibo.com/" target="_blank" rel="noopener noreferrer">Jibo</a>, <a href="http://www.vokulnation.com/" target="_blank" rel="noopener noreferrer">Vokul</a>, <a href="https://www.samsung.com/us/explore/bixby/" target="_blank" rel="noopener noreferrer">Samsung Bixby</a>, <a href="https://yandex.com/company/blog/say-privet-to-alice-yandex-s-intelligent-assistant" target="_blank" rel="noopener noreferrer">Alice</a>, or <a href="https://www.brainasoft.com/braina/" target="_blank" rel="noopener noreferrer">Braina</a>? If not, you must have heard about <a href="https://www.microsoft.com/en-us/cortana" target="_blank" rel="noopener noreferrer">Cortana</a> for Windows, <a href="https://www.apple.com/siri/" target="_blank" rel="noopener noreferrer">Siri</a> for IOS, <a href="https://assistant.google.com/intl/en_uk/#?modal_active=none" target="_blank" rel="noopener noreferrer">Google Assistant</a> for Android, and <a href="https://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&node=9818047011" target="_blank" rel="noopener noreferrer">Alexa</a> for Amazon ― they are undisputed leaders in the field. 
+    <a href="" target="_blank" rel="noopener noreferrer nofollow"></a>
+    The number of voice assistants available today is overwhelming. Have you already met <a href="https://www.nuance.com/omni-channel-customer-engagement/digital/virtual-assistant/nina.html" target="_blank" rel="noopener noreferrer nofollow">Nina</a>, <a href="http://www.silvia.ai/" target="_blank" rel="noopener noreferrer nofollow">Silvia</a>, <a href="https://www.nuance.com/dragon/dragon-anywhere.html" target="_blank" rel="noopener noreferrer nofollow">Dragon</a>, <a href="https://www.jibo.com/" target="_blank" rel="noopener noreferrer nofollow">Jibo</a>, <a href="http://www.vokulnation.com/" target="_blank" rel="noopener noreferrer nofollow">Vokul</a>, <a href="https://www.samsung.com/us/explore/bixby/" target="_blank" rel="noopener noreferrer nofollow">Samsung Bixby</a>, <a href="https://yandex.com/company/blog/say-privet-to-alice-yandex-s-intelligent-assistant" target="_blank" rel="noopener noreferrer nofollow">Alice</a>, or <a href="https://www.brainasoft.com/braina/" target="_blank" rel="noopener noreferrer nofollow">Braina</a>? If not, you must have heard about <a href="https://www.microsoft.com/en-us/cortana" target="_blank" rel="noopener noreferrer nofollow">Cortana</a> for Windows, <a href="https://www.apple.com/siri/" target="_blank" rel="noopener noreferrer nofollow">Siri</a> for IOS, <a href="https://assistant.google.com/intl/en_uk/#?modal_active=none" target="_blank" rel="noopener noreferrer nofollow">Google Assistant</a> for Android, and <a href="https://www.amazon.com/Amazon-Echo-And-Alexa-Devices/b?ie=UTF8&node=9818047011" target="_blank" rel="noopener noreferrer nofollow">Alexa</a> for Amazon ― they are undisputed leaders in the field. 
   </p>
 </div>
 
 <div>
   <p>
-    They may be accessed via <a href="https://keenethics.com/blog/1539840666250-best-smart-speakers-2018" target="_blank" rel="noopener noreferrer">stand-alone devices</a>, for instance, Alexa Echo or Google Home, or via a smartphone, a laptop, a smart TV set, or a tablet. Users connect to a voice assistant using a keyword, such as “Hey Siri” or “Ok Google”.
+    They may be accessed via <a href="https://keenethics.com/blog/1539840666250-best-smart-speakers-2018" target="_blank" rel="noopener noreferrer nofollow">stand-alone devices</a>, for instance, Alexa Echo or Google Home, or via a smartphone, a laptop, a smart TV set, or a tablet. Users connect to a voice assistant using a keyword, such as “Hey Siri” or “Ok Google”.
   </p>
 </div>
 
 <div>
   <p>
-    One of the most impressive representatives in the field is <a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer">Google Duplex</a>. The personal assistant from Google has been recently upgraded, and now, it can make a restaurant reservation or order a pizza for you. In fact, your assistant will sound utterly life-like: with “umms” and “aahs”, he or she will be easily mistaken for an actual person. The ultimate example of AI using voice technology is Sophia the Robot. Sounds quite impressive, doesn’t she?
+    One of the most impressive representatives in the field is <a href="https://ai.googleblog.com/" target="_blank" rel="noopener noreferrer nofollow">Google Duplex</a>. The personal assistant from Google has been recently upgraded, and now, it can make a restaurant reservation or order a pizza for you. In fact, your assistant will sound utterly life-like: with “umms” and “aahs”, he or she will be easily mistaken for an actual person. The ultimate example of AI using voice technology is Sophia the Robot. Sounds quite impressive, doesn’t she?
   </p>
 </div>
 

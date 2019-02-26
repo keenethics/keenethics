@@ -94,7 +94,7 @@ const ProjectMyGrassGrowth = ({ url }) => (
             </div>
             <a
               href="http://52.48.81.242/signIn"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}

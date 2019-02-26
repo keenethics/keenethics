@@ -27,7 +27,7 @@ Was it love at first sight? No, it surely was not. Worldlabs had negative experi
   <h3 style="font-weight: 600; font-size: 18px; color: rgba(0,0,0,0.75)">Never Heard of WorldLabs?</h3>
   <p>
     WordLabs is a social media networking platform, which offers people to push forward their innovative ideas, meet like-minded peers, collaborate on projects, find sponsors, and crowdsource undertakings. It also enables employers to look for exceptional and yet undiscovered talents. They prioritize societal and technological progress, freedom of speech and action, socially conscious and sustainable business.
-    <a href="https://www.worldlabs.org/" target="_blank" rel="noreferrer noopener">Check out the link.</a>
+    <a href="https://www.worldlabs.org/" target="_blank" rel="noreferrer noopener nofollow">Check out the link.</a>
   </p>
 </div>
 
@@ -56,11 +56,11 @@ As a result of the fruitful cooperation with the WorldLabs team, we developed fo
 </div>
 
 <p>
-  Not only we introduced an opportunity for the innovators to share their ideas and meet like-minded people, but we also made new friends ourselves. Having cooperated under the pressure of approaching deadlines and growing ambitions, two separate groups of people from WorldLabs and KeenEthics gradually turned into a united and powerful <a href="https://www.worldlabs.org/team/" target="_blank" rel="noreferrer noopener">team</a>. Through the continuous communication, we brought together Worldlabs excellence and Keenethics creativity, which enabled us to achieve outstanding results.
+  Not only we introduced an opportunity for the innovators to share their ideas and meet like-minded people, but we also made new friends ourselves. Having cooperated under the pressure of approaching deadlines and growing ambitions, two separate groups of people from WorldLabs and KeenEthics gradually turned into a united and powerful <a href="https://www.worldlabs.org/team/" target="_blank" rel="noreferrer noopener nofollow">team</a>. Through the continuous communication, we brought together Worldlabs excellence and Keenethics creativity, which enabled us to achieve outstanding results.
 </p>
 
 <p>
-  You may be wondering whether WorldLabs also share our point of view on the success of this project. Have no doubt! The COO and co-founder of World Labs, Andreas Feller, left the feedback about our cooperation on the Clutch platform, <a href="https://clutch.co/profile/keenethics#review-638770/" target="_blank" rel="noreferrer noopener">feel free to check it out via the following link</a>. He says that the KeenEthics team are an ideal software developer, which provides all the needed resources timely and efficiently.
+  You may be wondering whether WorldLabs also share our point of view on the success of this project. Have no doubt! The COO and co-founder of World Labs, Andreas Feller, left the feedback about our cooperation on the Clutch platform, <a href="https://clutch.co/profile/keenethics#review-638770/" target="_blank" rel="noreferrer noopener nofollow">feel free to check it out via the following link</a>. He says that the KeenEthics team are an ideal software developer, which provides all the needed resources timely and efficiently.
 </p>
 
 <div style="max-width: 550px; margin-left: auto">
@@ -77,7 +77,7 @@ Such a positive feedback is the greatest award and the ultimate motivation for o
 </div>
 
 <p>
-  This weekend, on November 24th, the WorldLabs hold a conference attended by over 600 entrepreneurs or investors and by more than 50 startups presenting their initiative. <a href="https://www.worldlabs.org/competition/elevating-ideas/" target="_blank" rel="noreferrer noopener">Elevating Ideas</a> 2018 is a huge business event in London where the participants will get a chance to meet like-minded people or potential partners, to present themselves to the public, and to push forward their unique ideas. Before the conference, the organizers introduced a list of ten most promising and outstanding start-ups, which will be given a chance to pitch for their initiative in front of the amazing audience. At the end of the day, the judges will select and announce the best start-up of the year. The Elevating Ideas Competition Winner will be given a £50,000 award, which they may use for the launch of their initiative.
+  This weekend, on November 24th, the WorldLabs hold a conference attended by over 600 entrepreneurs or investors and by more than 50 startups presenting their initiative. <a href="https://www.worldlabs.org/competition/elevating-ideas/" target="_blank" rel="noreferrer noopener nofollow">Elevating Ideas</a> 2018 is a huge business event in London where the participants will get a chance to meet like-minded people or potential partners, to present themselves to the public, and to push forward their unique ideas. Before the conference, the organizers introduced a list of ten most promising and outstanding start-ups, which will be given a chance to pitch for their initiative in front of the amazing audience. At the end of the day, the judges will select and announce the best start-up of the year. The Elevating Ideas Competition Winner will be given a £50,000 award, which they may use for the launch of their initiative.
 </p>
 
 KeenEthics will also take an active part in this major business world event as a technical partner and sponsor. We will also be there simply as friends of the WorldLabs team to encourage them and to provide support. We will be glad to meet new people and to present ourselves to the public as long as we are always open for new connections, willing to make great friends, and striving to help another company to reach enviable success.

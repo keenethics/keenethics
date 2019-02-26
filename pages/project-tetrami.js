@@ -60,7 +60,7 @@ const ProjectTetrami = ({ url }) => (
             </div>
             <a
               href="http://web.tetrami.com/login"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor, color: '#222' }}

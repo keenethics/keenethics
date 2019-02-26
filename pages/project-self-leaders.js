@@ -195,7 +195,7 @@ const ProjectPlutio = ({ url }) => (
             </div> */}
             <a
               href="http://selfleaders.com"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}
