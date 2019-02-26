@@ -124,6 +124,11 @@ const postsDatePair = [
     filename: '1549436400000-best-amazon-alexa-skills-mid-winter-2019.md',
     href: '/blog/1549436400000-best-amazon-alexa-skills-mid-winter-2019',
   },
+  {
+    createdAt: 1551175200000,
+    filename: '1551175200000-our-ethical-dimension.md',
+    href: '/blog/1551175200000-our-ethical-dimension',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
