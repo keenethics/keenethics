@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#dffd35';
 const accentColor = '#222';
@@ -23,11 +24,10 @@ const ProjectTetrami = ({ url }) => (
               <p className="description">
                 Online discounting
               </p>
-              <div className="tags">
-                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Meteor</div>
-                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Angular 1.3</div>
-                <div className="tag" style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}>Ionic 1.2</div>
-              </div>
+              <PortfolioTechnologyTags
+                tags={['Meteor', 'Angular 1.3', 'Ionic 1.2']}
+                style={{ color: accentColor, borderColor: 'rgba(34, 34, 34, 0.5)' }}
+              />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">

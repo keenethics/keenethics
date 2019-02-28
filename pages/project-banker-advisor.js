@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#0c2fdf';
 
@@ -18,10 +19,7 @@ const ProjectBankerAdvisor = ({ url }) => (
               <p className="description">
                 Investment banking tool
               </p>
-              <div className="tags">
-                <div className="tag">Business Digitalization</div>
-                <div className="tag">MVP</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Business Digitalization', 'MVP']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -196,17 +194,7 @@ const ProjectBankerAdvisor = ({ url }) => (
               and resources and make the industry more trustworthy.
             </p>
             <div className="title">Technologies used in making the app</div>
-            <div className="tags tags--big">
-              <div className="tag">Keystonejs</div>
-              <div className="tag">React</div>
-              <div className="tag">Redux</div>
-              <div className="tag">Express</div>
-              <div className="tag">Node.js</div>
-              <div className="tag">SCSS</div>
-              <div className="tag">Mongodb</div>
-              <div className="tag">Mongoose</div>
-              <div className="tag">AWS (SES, SNS, S3, EC2)</div>
-            </div>
+            <PortfolioTechnologyTags tags={['Keystonejs', 'React', 'Redux', 'Express', 'Node.js', 'SCSS', 'Mongodb', 'Mongoose', 'AWS (SES, SNS, S3, EC2)']} />
             <img
               src="/static/images/project/banker-advisor-prew-3.png"
               alt="Banker Advisor"

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#ab2e6b';
 
@@ -21,11 +22,7 @@ const ProjectPhenix = ({ url }) => (
               <p className="description">
                 Online video-streaming
               </p>
-              <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">React</div>
-                <div className="tag">Redux</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'React', 'Redux']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">

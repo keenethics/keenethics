@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#261353';
 
@@ -18,11 +19,7 @@ const ProjectPlutio = ({ url }) => (
               <p className="description">
                 Personal Growth Tool
               </p>
-              <div className="tags">
-                <div className="tag">Fintech</div>
-                <div className="tag">E-Commerce</div>
-                <div className="tag">Education</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Fintech', 'E-Commerce', 'Education']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -57,12 +54,7 @@ const ProjectPlutio = ({ url }) => (
               className="image-gaps"
             />
             <div className="title">Technology</div>
-            <div className="tags tags--big">
-              <div className="tag">Meteor</div>
-              <div className="tag">GraphQL</div>
-              <div className="tag">React</div>
-              <div className="tag">Blaze</div>
-            </div>
+            <PortfolioTechnologyTags tags={['Meteor', 'GraphQL', 'React', 'Blaze']} />
             <img
               src="/static/images/project/self-leaders-prew-2.jpg"
               alt="Self Leaders"
