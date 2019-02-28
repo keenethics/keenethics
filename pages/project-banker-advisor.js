@@ -5,6 +5,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#0c2fdf';
 
@@ -30,6 +31,12 @@ const ProjectBankerAdvisor = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              title="Mike Casey, USA"
+              photo="static/portfolio/client-banker-advisor.jpeg"
+              feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high quality product & ensuring their continued engagement. KeenEthics’ skillset was exactly what was needed, & despite a language difference, communications never suffered."
+              link="https://clutch.co/profile/keenethics#review-339220"
+            />
             <div className="title">Our part</div>
             <p>
               Prior to cooperating with any bank, a buyer needs to learn about bank fees,
@@ -200,18 +207,6 @@ const ProjectBankerAdvisor = ({ url }) => (
               alt="Banker Advisor"
               className="image-gaps"
             />
-            <div className="title">Client’s Feedback</div>
-            <div className="project-content-chapter">
-              <p className="chapter-paragraph italic quote">
-                “Due to their responsiveness & patience, the collaboration itself progressed
-                smoothly from start to finish, resulting in a high-quality product & ensuring
-                their continued engagement. KeenEthics’ skill set was exactly what was needed,
-                & despite a language difference, communications never suffered.”
-              </p>
-            </div>
-            <p>
-              <span className="semi-bold">The project mastermind Mike Casey about working with Keen.Ethics</span>
-            </p>
             <a
               href="http://bankeradvisor.com"
               rel="noopener noreferrer nofollow"

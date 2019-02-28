@@ -5,6 +5,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#289e94';
 
@@ -27,6 +28,9 @@ const ProjectWorkbooking = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              feedback="I am really impressed with the different tools and tips that we also got to bring with us, extremely useful."
+            />
             <div className="project-content-chapter">
               <p className="chapter-title">What is the purpose of the app?</p>
               <p className="chapter-paragraph">Workbooking introduces new service with benefits for all audiences.</p>
@@ -123,14 +127,6 @@ const ProjectWorkbooking = ({ url }) => (
 
             <div className="project-content-chapter custom">
               <img className="chapter-image" src="static/images/project/workbooking-monitors.png" alt="Workbooking" />
-            </div>
-
-            <div className="project-content-chapter custom">
-              <p className="chapter-title">Client&apos;s feedback</p>
-              <p className="chapter-paragraph italic short">
-                &ldquo;I am really impressed with the different tools and tips that we also got
-                to bring with us, extremely useful.&rdquo;
-              </p>
             </div>
 
             <div className="project-content-chapter custom">
