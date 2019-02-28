@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#258b49';
 
@@ -37,6 +38,12 @@ const ProjectTheCheckNetwork = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              title="Maarten Pieter Overvliet, the Netherlands"
+              photo="static/portfolio/client_the-check-network.jpeg"
+              feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high-quality product & ensuring their continued engagement. KeenEthics’ skill set was exactly"
+              link="https://clutch.co/profile/keenethics#review-184570"
+            />
             <div className="title">E-Commerce Platform for Effective SEO Optimization</div>
             <p>
               The Check Network is a unique company. It presents an all-encompassing solution for
@@ -108,19 +115,6 @@ const ProjectTheCheckNetwork = ({ url }) => (
               businesses, web stores, and brands as
               it enables them to achieve much better results.
             </p>
-            <div className="project-feedback">
-              <h3>Feedback</h3>
-              <p>
-                Keenethics’s is a young company that may need to hone its message
-                but their high level of technical
-                expertise, friendly staff, and cost-conscious approach stood out
-                compared to the competition. They
-                are thoughtful in their suggestions and feedback. They feel like a business partner.
-              </p>
-              <div className="project-customer">
-                Maarten Pieter Overvliet, the Netherlands
-              </div>
-            </div>
             <a
               href="http://thechecknetwork.com"
               rel="noopener noreferrer"

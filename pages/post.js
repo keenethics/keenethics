@@ -61,7 +61,7 @@ export default class Post extends React.Component {
             </div>
           </div>
           <div className="blog-post-page-content content-block">
-            <ReactMarkdown source={post.content} />
+            <ReactMarkdown source={post.content} escapeHtml={false} />
           </div>
           <div className="blog-post-navigation">
             {hrefToPreviousPost ? (

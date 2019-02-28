@@ -640,6 +640,7 @@
         letter-spacing: 1.12px;
         margin-bottom: 15px;
         margin-top: 15px;
+        margin-right: 10px;
 
         display: flex;
         align-items: flex-end;
@@ -674,6 +675,7 @@
 
         .qn-check {
             vertical-align: top;
+            margin-right: 7px;
         }
 
         .pm-check {
@@ -810,7 +812,7 @@
                     content: "";
                     width: 100%;
                     height: 100%;
-                    background: #00539a;;
+                    background: #00539a;
                     display: block;
                     transform: scale(0);
                     opacity: 1;

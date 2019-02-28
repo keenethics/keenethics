@@ -5,6 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Checkbox from '../form/checkbox';
+
 class EstimateForm extends React.Component {
   state = {
     stage: {
@@ -97,7 +99,11 @@ class EstimateForm extends React.Component {
       emailEstimate,
       name,
       services,
+      pm,
     } = this.state;
+
+    console.log(pm);
+
     const { isPending, status } = this.props;
     return (
       <div className="estimate-form">
@@ -137,206 +143,116 @@ class EstimateForm extends React.Component {
           <div className="question-title"><span className="question-number">02</span> What services are you interested in?</div>
           <div className="estimate-input-cols">
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Web app"
                 name="services"
-                type="checkbox"
-                value="Web app"
                 id="web"
+                value="Web app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Web app')}
+                isChecked={services.value.includes('Web app')}
               />
-              <label htmlFor="web" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Web app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="IOS app"
                 name="services"
-                type="checkbox"
-                value="IOS app"
                 id="ios"
+                value="IOS app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('IOS app')}
+                isChecked={services.value.includes('IOS app')}
               />
-              <label htmlFor="ios" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>IOS app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Linux app"
                 name="services"
-                type="checkbox"
-                value="Linux app"
                 id="linux"
+                value="Linux app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Linux app')}
+                isChecked={services.value.includes('Linux app')}
               />
-              <label htmlFor="linux" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Linux app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Server-side development"
                 name="services"
-                type="checkbox"
-                value="Server-side development"
                 id="ssd"
+                value="Server-side development"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Server-side development')}
+                isChecked={services.value.includes('Server-side development')}
               />
-              <label htmlFor="ssd" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Server-side development</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Windows app"
                 name="services"
-                type="checkbox"
-                value="Windows app"
                 id="windows"
+                value="Windows app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Windows app')}
+                isChecked={services.value.includes('Windows app')}
               />
-              <label htmlFor="windows" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Windows app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="QA testing"
                 name="services"
-                type="checkbox"
-                value="QA testing"
                 id="qa"
+                value="QA testing"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('QA testing')}
+                isChecked={services.value.includes('QA testing')}
               />
-              <label htmlFor="qa" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>QA testing</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Android app"
                 name="services"
-                type="checkbox"
-                value="Android app"
                 id="android"
+                value="Android app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Android app')}
+                isChecked={services.value.includes('Android app')}
               />
-              <label htmlFor="android" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Android app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="MacOS app"
                 name="services"
-                type="checkbox"
-                value="MacOS app"
                 id="macos"
+                value="MacOS app"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('MacOS app')}
+                isChecked={services.value.includes('MacOS app')}
               />
-              <label htmlFor="macos" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>MacOS app</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Design"
                 name="services"
-                type="checkbox"
-                value="Design"
                 id="design"
+                value="Design"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Design')}
+                isChecked={services.value.includes('Design')}
               />
-              <label htmlFor="design" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Design</span>
-              </label>
             </div>
             <div className="input-checkbox-wrap">
-              <input
+              <Checkbox
+                text="Other"
                 name="services"
-                type="checkbox"
-                value="Other"
                 id="other"
+                value="Other"
                 onChange={this.onChange}
-                className="check"
-                checked={services.value.includes('Other')}
+                isChecked={services.value.includes('Other')}
               />
-              <label htmlFor="other" className="label-for-checkbox-btn">
-                <span className={classnames('custom-checkbox', { error: services.error })}>
-                  <svg width="12px" height="10px" viewBox="0 0 12 10">
-                    <polyline points="1.5 6 4.5 9 10.5 1" />
-                  </svg>
-                </span> <span>Other</span>
-              </label>
             </div>
           </div>
           <div className="question-title align-flex-start"><span className="question-number qn-check">03</span>
-            <input
-              name="pm"
-              type="checkbox"
-              value="PM/Product manager is required"
+            <Checkbox
+              text="Do you require PM/Product manager to save your time for tasks description,
+              tasks assignment and tasks assignment prioritizing?"
+              name="services"
               id="pm"
+              value="PM/Product manager is required"
               onChange={this.onChange}
-              className="check"
+              isChecked={services.value.includes('PM/Product manager is required')}
             />
-            <label htmlFor="pm" className="label-for-checkbox-btn third-point">
-              <span className="pm-check">
-                <svg width="12px" height="10px" viewBox="0 0 12 10">
-                  <polyline points="1.5 6 4.5 9 10.5 1" />
-                </svg>
-              </span>
-              <span className="question-checkbox-title">
-                Do you require PM/Product manager to save your time for tasks description,
-                tasks assignment and tasks assignment prioritizing?
-              </span>
-            </label>
           </div>
           <div className="question-title"><span className="question-number">04</span> Expected budget</div>
           <div className="estimate-input-cols">
