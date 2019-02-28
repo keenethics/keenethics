@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#28b293';
 
@@ -33,6 +34,10 @@ const ProjectMyGrassGrowth = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              title="Wim Honkoop, Bedrijfsplanning B.V. The Netherlands"
+              feedback="Despite the physical distance and never meeting each other in person, Keenethics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward."
+            />
             <p>
               The main purpose of the app is to show a prognosis for the farmer&apos;s and help them
               manage the feeding their herds, grazing and mowing their paddocks, based on by
@@ -80,17 +85,6 @@ const ProjectMyGrassGrowth = ({ url }) => (
                   Added possibility to generate .pdf reports of inputted data and prognosis.
                 </li>
               </ul>
-            </div>
-            <div className="project-feedback">
-              <h3>Feedback</h3>
-              <p>
-                Despite the physical distance and never meeting each other in person, Keenethics
-                has built a complicated dairy industry related webapp for us. I found the
-                cooperation in the development of this tool good, honest and straightforward.
-              </p>
-              <div className="project-customer">
-                Wim Honkoop, Bedrijfsplanning B.V. The Netherlands
-              </div>
             </div>
             <a
               href="http://52.48.81.242/signIn"
