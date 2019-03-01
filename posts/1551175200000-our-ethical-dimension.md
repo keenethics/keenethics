@@ -1,14 +1,14 @@
 Author: Tetiana Matviiok
-Title: Our ethical dimension
-Subtitle: Our ethical dimension - Keenethics Blog
-Meta title: Our ethical dimension - Keenethics Blog
+Title: KeenEthics: Our Ethical Dimension
+Subtitle: KeenEthics: Our Ethical Dimension - Keenethics Blog
+Meta title: KeenEthics: Our Ethical Dimension - Keenethics Blog
 Meta description: KeenEthics: We tell a short story of our brand name and highlight the major ethical values we believe in. Find out what "Ethics" stands for!
 Preview image: /static/posts/our-ethical-dimension-1-prew.jpg
 
 ![Keenethics Team](/static/posts/our-ethical-dimension-1.jpg)
 
 <div>
-  <h1 style="font-weight: 600; margin: 30px 0 10px 0; text-align: center;">Our Ethical Dimension</h1>
+  <h1 style="font-weight: 600; margin: 30px 0 10px 0; text-align: center;">KeenEthics: Our Ethical Dimension</h1>
   <p style="margin: 0; font-style: italic; text-align: center; font-size: 20px;">Keen & Ethical Software Development</p>
 </div>
 

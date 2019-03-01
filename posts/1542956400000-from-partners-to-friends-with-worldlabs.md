@@ -1,7 +1,7 @@
 Author: Max Savonin
-Title: From Partners to Friends with WorldLabs
-Subtitle: From Partners to Friends with WorldLabs - Keenethics Blog
-Meta title: From Partners to Friends with WorldLabs - Keenethics Blog
+Title: Case Study: From Partners to Friends with WorldLabs
+Subtitle: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
+Meta title: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta description: The story of one business partnership: from working extra hours under limited resources to taking part in a major business event in London.
 Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
 
@@ -12,7 +12,7 @@ Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
 The story of our business partnership and friendship with WorldLabs: from working extra hours under limited resources in order to launch the platform on time to organizing a major business event in London. On November 24th, 2018, Elevating Ideas 2018 brings 600+ investors and 50+ startups to London. Here at KeenEthics, we are proud to be technical partners and sponsors of this outstanding event.
 
 <div align="center">
-  <h1 style="font-weight: 600; color: rgba(0,0,0,0.75)">From Partners to Friends with WorldLabs</h1>
+  <h1 style="font-weight: 600; color: rgba(0,0,0,0.75)">Case Study: From Partners to Friends with WorldLabs</h1>
 </div>
 
 <div>
