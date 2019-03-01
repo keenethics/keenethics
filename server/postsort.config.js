@@ -55,11 +55,6 @@ const postsDatePair = [
     href: '/blog/1521640519375-cultural-factors-in-design',
   },
   {
-    createdAt: 1522827874762,
-    filename: '1522827874762-another-stellar-review-on-clutch.md',
-    href: '/blog/1522827874762-another-stellar-review-on-clutch',
-  },
-  {
     createdAt: 1523533985420,
     filename: '1523533985420-startup-guide.md',
     href: '/blog/1523533985420-startup-guide',
