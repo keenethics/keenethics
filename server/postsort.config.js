@@ -129,6 +129,11 @@ const postsDatePair = [
     filename: '1551175200000-our-ethical-dimension.md',
     href: '/blog/1551175200000-our-ethical-dimension',
   },
+  {
+    createdAt: 1551391200000,
+    filename: '1551391200000-redline13-and-keenethics.md',
+    href: '/blog/1551391200000-redline13-and-keenethics',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;

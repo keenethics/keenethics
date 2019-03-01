@@ -90,6 +90,9 @@
   }
   ul, ol {
     margin: 26px 10px;
+    @media screen and (max-width: 500px) {
+      margin: 26px 5px;
+    }
   }
   ul li, ol li {
     position: relative;
