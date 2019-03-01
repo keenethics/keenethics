@@ -1,59 +1,41 @@
 Author: Max Savonin
-Title: Meetups. Community Development Way
-Subtitle: Meetups. Community Development Way
-Meta title: Technological Meetups. Community Development Way
+Title: Advancing Developer Community in Ukraine: Meetups
+Subtitle: Advancing Developer Community in Ukraine: Meetups - Keenethics Blog
+Meta title: Technological Advancing Developer Community in Ukraine: Meetups - Keenethics Blog
 Meta description: Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace.
-Preview image: https://cdn-images-1.medium.com/max/800/1*xhu7sN4K3xTsoX0kSC-B6Q.jpeg
+Preview image: /static/posts/meetups-prew.jpeg
 
-![way](https://cdn-images-1.medium.com/max/800/1*xhu7sN4K3xTsoX0kSC-B6Q.jpeg)
+![way](/static/posts/meetups.jpeg)
 
-Recently a lot of new technologies in web-development have been appearing. Some of them look promising. However, when you choose either one of them for commercial development you automatically face such issues:
+<h1 style="text-align: center;">Advancing Developer Community in Ukraine: Meetups</h1>
 
-1. Constant changing of architecture and work principles of technology;
-2. Lack of documentation;
-3. Lack of use-cases;
-4. Lack of programmers-followers, articles etc.
+Nowadays, a lot of new technologies in web-development are appearing, and some of them look truly promising. However, choosing either one for the commercial development, you automatically face such issues:
 
-You have two options:
+- Constantly changing technology architecture and work principles;
+- Lack of documentation or use cases;
+- Lack of programmers ready to share experiences, articles, knowledge sources etc.
 
-1. Try to figure out all the pitfalls of new technology Yourselves and to wait until the technology “flies” and the number of innovators generating a lot of content grows (this will substantially save your time and nerves).
-2. Participate and develop a community of innovators of this technology and take advantage of the growth in the number of like-minded people.
+To figure out all the pitfalls of a new technology, you do not need to wait for the general developer community to grow. Instead, participate and develop a community of innovators yourself and take advantage of the growth in the number of like-minded people.
 
-And there are a lot of advantages in developed community around the technology. They are, for example:
+As for the advantages in developing the technology community, there are such opportunities:
 
-1. an opportunity to consult with a large number of developers;
-2. using written open-source packages, facilitating the development;
-3. availability of developers to implement projects, and hence which leads to potential employers.
+- to consult with a large number of developers;
+- to use written open-source packages, facilitating the development;
+- to implement projects and generate potential employers;
+- to create an even greater number of projects in this technology and further develop it.
 
-Such circulation creates an even greater number of projects in this technology and further develops it.
+<p>In the summer of 2015, we needed to reinforce our projects in <a href="//www.meteor.com/" target="_blank" rel="noopener noreferrer nofollow">Meteor</a> but had no people in Lviv with the experience of working with this technology. A lot of people have heard about it but never used it. The reason  was  the lack of successful use cases and the insufficient understanding of Meteor benefits.</p>
 
-When, in the end of summer of 2015, we needed reinforcement to our projects in [Meteor](https://www.meteor.com/), there just weren’t people who had had an experience working with it to be found in [Lviv](http://lviv.travel/en/index). Many people have heard about it, but never used it. The reason — the lack of successful use-cases and understanding of the benefits of this technology.
+And we have found a keen and ethical way to sort it out.
+ 
+We have started advancing Meteor developer community in Ukraine and put the interests of developers in the first place leaving the company benefits aside. Programmers have joined the community not as an initiative of a particular company but as full-fledged partners.
 
-We sorted it out in ethical way. We have started advancing Meteor developers community in Ukraine. We had put interests of developers on the first place, and company benefits were left as a side effect.
+<p>The <a href="//www.meetup.com/Lviv-Meteor-Meetup" target="_blank" rel="noopener noreferrer nofollow">first meetup</a> took place in Lviv in September, 2015. Our CTO <a href="://www.youtube.com/watch?v=2GgLVnVXclE" target="_blank" rel="noopener noreferrer nofollow">Oleksiy Pletnov</a> volunteered to be a speaker, and we announced the topic of our meetup on Facebook and Meetup.com. Most of the 22 registered showed up, so we held a successful event. A few days later, we organized another Lviv event —  a Meteor hackathon. The third meetup was related to Meteor and React native. About 100 people registered, and the community made a considerable leap in growth. The following spring, we conducted the expansion to the capital. The Kyiv community was dormant so we took the organization of the meetup into our own hands. In March 2016, <a href="//www.meetup.com/ru-RU/Meteor-Kiev/events/229456481/" target="_blank" rel="noopener noreferrer nofollow">Kyiv meetup</a> was held.</p>
 
-It was keen approach. Programmers have joined the community not as an initiative of a particular company, they have joined their “buddies”.
+During the six month period of community development and these events in particular, we derived the three key components of success:
 
-[First meetup](http://www.meetup.com/Lviv-Meteor-Meetup/) was held in September 2015 in its native city of Lviv. Topic of the report had been announced (our CTO was the speaker), we ordered pizza, made stickers, set up a meeting on Meetup.com. Almost 50% of the 22 registered showed up. Facebook served as a main advertisement.
+- One meetup in a few months
+- A hot topic with an efficient speaker
+- A good advertisement
 
-![way](https://cdn-images-1.medium.com/max/800/1*twBIsNtseD0ovuIfDQt2-A.jpeg)
-
-A few days later we organised Lviv cell of world’s famous hackathon on our technology. Unfortunately the turnout was below 20%. We concluded from this particular experience that meetings with speakers work more effectively.
-
-The third meetup’s top theme was connected with Meteor and React native. About 100 people registered and the community made considerable leap in growth. I’ll note that this time we had advertised in all sorts of social groups and thematic mailing lists. The most effective was DOU’s mailing list.
-
-Our group (besides Meetup service, we are on [Facebook](https://www.facebook.com/meteor.ukraine/?fref=ts), [LinkedIn](https://www.linkedin.com/groups/8464233) and [YouTube](https://www.youtube.com/channel/UCC2gBvTs_lNgMzCmhQCK2kg)) initially was started in English. It attracts foreign programmers and customers who desire to hire cool programmers. CEO and CTO of Chicago startup, who came to Lviv to look for a team of developers, took part in our fourth meetup.
-
-In spring, we conducted the expansion to the capital. Kyiv Community was dormant so we took the organisation of the meetup into our own hands. In March of this year, [Kyiv meetup](http://www.meetup.com/Meteor-Kiev/events/229456481/) was held.
-
-<https://youtu.be/2GgLVnVXclE/>
-
-During the six month period of community development based on 5 meetups, we derived 5 key components of success:
-
-1. One meetup each couple of months
-2. hot topic with good speaker
-3. good announcement
-4. pizza afterwards
-
-## Bottom Line:
-
-Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace. Programmers see use-cases at those meetups, talk to more experienced colleagues and they are able to find work with most interesting employers. Well-held meetups generate new speakers and even more followers of the new technology.
+Because of holding technological meetups, the community has increased significantly, and it keeps growing at a steady pace. Programmers see use cases at those meetups, talk to more experienced colleagues, and are able to find a job with interesting employers. Well-held meetups generate new speakers and even more followers of the new technology.
