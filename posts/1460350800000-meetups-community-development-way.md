@@ -5,7 +5,7 @@ Meta title: Technological Advancing Developer Community in Ukraine: Meetups - Ke
 Meta description: Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace.
 Preview image: /static/posts/meetups-prew.jpeg
 
-![way](/static/posts/meetups.jpeg)
+![Meetup](/static/posts/meetups.jpeg)
 
 <h1 style="text-align: center;">Advancing Developer Community in Ukraine: Meetups</h1>
 
