@@ -66,6 +66,9 @@ We created the app with the ability to:
 
 Also, we developed two modes for PREE device: ‘close by’ (strict) and ‘normal’ (not strict), which depends on the distance to your PREE device.
 
+![PREE Final Product](/static/posts/pree-2.jpg)
+
+
 ## Conclusion
 
 To sum up, it was a huge experience for our KeenEthics team to develop this hybrid application. Although we have faced some problems on both platforms, the established connection works on an acceptable level, and we still keep developing this app and trying to improve the connection. This case proves that, sometimes, hybrid apps can be more appropriate than native.
