@@ -34,10 +34,11 @@ const ProjectBankerAdvisor = ({ url }) => (
           </div>
           <div className="project-content-more">
             <PortfolioFeedback
-              title="Mike Casey, USA"
+              title="Mike Casey, Georgia, USA"
               photo="static/portfolio/client-banker-advisor.jpeg"
               feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high quality product & ensuring their continued engagement. KeenEthics’ skillset was exactly what was needed, & despite a language difference, communications never suffered."
               link="https://clutch.co/profile/keenethics#review-339220"
+              style={{ titleWidth: '100px' }}
             />
             <div className="title">Our part</div>
             <p>
