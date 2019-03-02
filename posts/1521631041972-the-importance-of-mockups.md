@@ -1,8 +1,8 @@
 Author: Alexey Hermann
-Title: The Importance of Mockups
-Subtitle: The Importance of Mockups
-Meta title: The Importance of Mockups
-Meta description: The Importance of Mockups
+Title: What is a Mockup and Why Do We Need It
+Subtitle: What is a Mockup and Why Do We Need It - Keenethics Blog
+Meta title: What is a Mockup and Why Do We Need It - Keenethics Blog
+Meta description: Up to 50% of your budget will be spent on application design. The most basic app that takes 160 hours to code can easily take as much time to prepare a custom design. Please be aware that we are talking about custom design, not just 3 USD theme bought on market-place. That’s the case for another article.
 Preview image: /static/posts/mockup.png
 
 ![Heroes](/static/posts/mockup.png)
@@ -31,9 +31,7 @@ Sketch or Photoshop.
 
 ## How long?
 
-Wowowow, hold your horses. Before we answer that question I’m going to
-ask you once again WHAT IS IT THAT YOU WANT? Of course you want it to
-“look nice”. Well I’ve got bad news for you it doesn't work like that.
+Before we estimate the time needed to create a mockup, we should understand the following:
 
 1\) Can you tell how many pages or screens will the UI designer need to
 draw?
@@ -101,5 +99,5 @@ as simple as possible.
 Example 3: if you are building a prototype or an MVP and functionality
 matter much much much more than the looks, you can ask your developer to
 simply use the material UI kit, it will look rather generic, but clean
-and accurate. BAM! 50\$ - 4800\$ per month saved!
+and accurate. 50\$ - 4800\$ per month saved!
 

@@ -1,14 +1,14 @@
 Author: Tetiana Matviiok
-Title: Best Amazon Alexa Skills Mid-autumn 2018
-Subtitle: Best Amazon Alexa Skills Mid-autumn 2018 - Keenethics Blog
-Meta title: Best Amazon Alexa Skills Mid-autumn 2018 - Keenethics Blog
+Title: Best Amazon Alexa Skills: Mid-Autumn 2018
+Subtitle: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
+Meta title: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
 Meta description: Want to give a second life to your Alexa? This fall, the renowned smart speaker learned 10 new ways to conquer your heart.
 Preview image: /static/posts/alexa-post-images/mid-autumn/best-amazon-alexa-skills-mid-autumn-2018-prew.jpg
 
 ![Prototype](/static/posts/alexa-post-images/mid-autumn/best-amazon-alexa-skills-mid-autumn-2018.jpg)
 
 <div align="center">
-  <h1 style="font-weight: 600">Best Amazon Alexa Skills Mid-autumn 2018</h1>
+  <h1 style="font-weight: 600">Best Amazon Alexa Skills: Mid-Autumn 2018</h1>
 </div>
 
 Siri, Cortana, and Alexa have won over lots of people from around the world. Each of them has a one-of-a-kind personality: they speak in a unique voice, they offer hilarious jokes and games (not Siri though), they demonstrate outstanding skills and talents. This fall, **Alexa learned 10 new ways to conquer your heart**.

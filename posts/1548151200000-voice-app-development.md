@@ -1,7 +1,7 @@
 Author: Volodymyr Andrushchak
-Title: Voice App Development
-Subtitle: Voice App Development - Keenethics Blog
-Meta title: Voice App Development - Keenethics Blog
+Title: Voice App Development: Opportunities and Challenges
+Subtitle: Voice App Development: Opportunities and Challenges - Keenethics Blog
+Meta title: Voice App Development: Opportunities and Challenges - Keenethics Blog
 Meta description: Let us tell you how Keenethics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
 Preview image: /static/posts/voice-app-development-prew.jpg
 
@@ -64,7 +64,7 @@ Voice app development is quite simple in theory but rather challenging and time-
   <p style="margin-bottom: 0">User: Whatcha the weathe’ in Nu York on weekn’?</p>
   <p style="margin-bottom: 0">Assistant: I’m having a bit of trouble here. Please try again.</p>
 </div>
-    
+
 Another important issue lies in NLU (Natural Language Understanding), which is defined as the **post-processing of perceived text**. At this point, the technology has to extract the basic entities from a given context (when, where, what, and who). 
 
 <div style="text-align: center; font-style: italic;margin-bottom: 14px;">
@@ -107,7 +107,7 @@ Today, those features do not seem as miraculous as they used to be since most mo
 
 Therefore, the topical question is to improve the functionality of voice technologies to the extent where they become indispensable. And they can become such in the areas where people need a voice assistant because their hands are busy, dirty, or wet or when interruptions badly affect performance and productivity. Voice apps will help drivers not to get distracted from the road and to keep hands on a steering wheel. Chefs in restaurants will use voice apps to check recipes, add items to the “To Order” list, and review or close orders. Workers at a plant may operate machinery with the help of their voice to ensure safety of the manufacturing process and boost productivity. The list of opportunities is endless. The problem is that the ideas are limited.
 
-<div style="padding-left: 6%">
+<div style="padding-left: 6%; font-style: italic">
   <p>
     Food for thought: would you want your voice assistant to understand when you start speaking a different language and to switch to it together with you? Imagine, you talk to your app in English but cannot remember a word. You name it in Spanish, and your assistant responds with no hesitation. What a great language learning tool would it be! We are definitely excited about this opportunity ― another idea to consider.
   </p>
@@ -127,7 +127,7 @@ The next step is to create a concise database of dialogue samples: keywords and 
 However, our work is not over even after the application has been completed and released. To make your voice service stand out and improve its quality, we need to obtain more 5-star reviews and record 'failed' requests ―  those that didn't result in an action or triggered a wrong answer.  
 
 
-You Have an Idea? We Have a Solution!
+__You Have an Idea? We Have a Solution!__
 
 Keenethics is a software developer with almost 2 years of experience in voice app development on multiple projects. We have integrated various chatbots with Alexa and Google Assistant to develop voice bots. In the scope of another large project, we have launched a web-powered and Skype-powered information search voice chatbot. We have also developed numerous Alexa skills for our personal use and for the customers.
 
