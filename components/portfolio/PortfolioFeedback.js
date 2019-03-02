@@ -6,6 +6,7 @@ const PortfolioFeedback = ({
   photo,
   feedback,
   link,
+  style,
 }) => (
   <div className="feedback">
     {
@@ -14,7 +15,7 @@ const PortfolioFeedback = ({
           {
             photo && <img src={photo} alt={title} className="feedback--client-img" />
           }
-          <p className="feedback--client-title">{title}</p>
+          <p className="feedback--client-title" style={{ maxWidth: style.titleWidth }}>{title}</p>
         </div>
       )
     }
@@ -39,9 +40,11 @@ PortfolioFeedback.propTypes = {
   photo: PropTypes.string,
   feedback: PropTypes.string.isRequired,
   link: PropTypes.string,
+  style: PropTypes.object,
 };
 PortfolioFeedback.defaultProps = {
   title: '',
   photo: '',
   link: '',
+  style: { titleWidth: '160px' },
 };

@@ -35,8 +35,10 @@ const ProjectMyGrassGrowth = ({ url }) => (
           </div>
           <div className="project-content-more">
             <PortfolioFeedback
-              title="Wim Honkoop, Bedrijfsplanning B.V. The Netherlands"
+              title="Wim Honkoop, the Netherlands"
+              photo="/static/portfolio/client-my-grass-growth.jpeg"
               feedback="Despite the physical distance and never meeting each other in person, Keenethics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward."
+              style={{ titleWidth: '110px' }}
             />
             <p>
               The main purpose of the app is to show a prognosis for the farmer&apos;s and help them
