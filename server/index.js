@@ -334,6 +334,8 @@ app.prepare().then(() => {
         const author = (/Author: (.*?)\n/g).exec(text)[1];
         const title = (/Title: (.*?)\n/g).exec(text)[1];
         const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
+        const tagsString = (/Tags: (.*?)\n/g).exec(text)[1];
+        const tags = tagsString.split(', ');
         let image = (/Preview image: (.*?)\n/g).exec(text);
         const date = file.createdAt;
 
@@ -350,6 +352,7 @@ app.prepare().then(() => {
           href: file.filename.slice(0, -3),
           image,
           date,
+          tags,
         };
       })
       .filter(v => v !== null);

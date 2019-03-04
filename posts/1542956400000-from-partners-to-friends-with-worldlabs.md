@@ -3,11 +3,10 @@ Title: Case Study: From Partners to Friends with WorldLabs
 Subtitle: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta title: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta description: The story of one business partnership: from working extra hours under limited resources to taking part in a major business event in London.
+Tags: From KeenEthics
 Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
 
 ![Worldlabs](/static/posts/from-partners-to-friends-with-worldlabs.jpg)
-
-
 
 The story of our business partnership and friendship with WorldLabs: from working extra hours under limited resources in order to launch the platform on time to organizing a major business event in London. On November 24th, 2018, Elevating Ideas 2018 brings 600+ investors and 50+ startups to London. Here at KeenEthics, we are proud to be technical partners and sponsors of this outstanding event.
 

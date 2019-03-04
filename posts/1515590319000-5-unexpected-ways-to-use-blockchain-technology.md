@@ -3,6 +3,7 @@ Title: 5 Unexpected Ways to Use Blockchain Technology
 Subtitle: How Does Blockchain Technology Work? What Can Be Done With Blockchain? Blockchain Tech Is Actually Rather Easy to Understand at Its Core.
 Meta title: 5 Unexpected Ways to Use Blockchain Technology - Guide From Keenethics.com
 Meta description: How Does Blockchain Technology Work? What Can Be Done With Blockchain? Blockchain Tech Is Actually Rather Easy to Understand At Its Core.
+Tags: Tech
 Preview image: /static/posts/blockchain-technology-prew.jpg
 
 ![Blockchain Technology](/static/posts/blockchain-technology.jpg)

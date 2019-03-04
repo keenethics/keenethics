@@ -3,6 +3,7 @@ Title: Docker: 5 Cases When You Should Not Use it
 Subtitle: Docker: 5 Cases When You Should Not Use it - Keenethics Blog
 Meta title: Docker: 5 Cases When You Should Not Use it - Keenethics Blog
 Meta description: There are many good things about Docker. This containerization fellow manages to pack, ship, and run applications as a lightweight, portable, self-sufficient LXC container. Docker is great for businesses of all sizes.
+Tags: Tech
 Preview image: /static/posts/docker-preview.jpg
 
 ![Heroes](/static/posts/docker-in-article.jpg)

@@ -9,12 +9,27 @@ import 'isomorphic-fetch';
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
+import TagsFilter from '../components/tags-filter/TagsFilter';
+
+const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
+
+const transformateCategories = (chosenCategory, existCategories) => {
+  const categories = existCategories.filter(existCategory =>
+    chosenCategory.filter(category =>
+      category.toLowerCase() === existCategory.toLowerCase()).length);
+
+  return categories.length ? categories : existCategories;
+};
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      ...this.getGategoriesList(props.url),
+    };
     this.posts = [];
+    this.postsCountFor = this.postsCountFor.bind(this);
+    this.filterOnChange = this.filterOnChange.bind(this);
   }
   componentDidMount() {
     document.body.style.overflowY = 'hidden';
@@ -28,7 +43,33 @@ class Blog extends React.Component {
 
     return { posts: json };
   }
+
+  getGategoriesList(url) {
+    const { posts } = this.props;
+    const chosenCategory = url.query.chosen;
+    const categories = posts
+      .map(post => post.tags)
+      .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
+    const uniqCategories = [...new Set(categories)];
+
+    const selectedPosts = chosenCategory && chosenCategory !== 'All'
+      ? transformateCategories(chosenCategory.split(','), uniqCategories)
+      : uniqCategories;
+
+    return { selectedPosts, categorisList: uniqCategories };
+  }
+
+  postsCountFor(post) {
+    const { selectedPosts } = this.state;
+    return post.tags.filter(category => selectedPosts.includes(category)).length;
+  }
+
+  filterOnChange(selectedPosts) {
+    this.setState({ selectedPosts });
+  }
+
   render() {
+    const { categorisList, selectedPosts } = this.state;
     const { router, posts } = this.props;
     return (
       <Layout currentURL={router.current}>
@@ -38,7 +79,13 @@ class Blog extends React.Component {
             <div className="blog-page-header">
               <h1 className="blog-page-title">Blog</h1>
             </div>
-            {!posts.length ? <div className="blog-loading">Loading...</div> : <Posts posts={posts} />}
+            <TagsFilter
+              categorisList={categorisList}
+              selectedCategories={selectedPosts}
+              filterOnChange={this.filterOnChange}
+              pageTitle="blog"
+            />
+            {!posts.length ? <div className="blog-loading">Loading...</div> : <Posts posts={posts.filter(this.postsCountFor)} />}
           </div>
         </div>
       </Layout>
@@ -49,11 +96,13 @@ class Blog extends React.Component {
 Blog.propTypes = {
   router: PropTypes.object,
   posts: PropTypes.array,
+  url: PropTypes.object,
 };
 
 Blog.defaultProps = {
   router: {},
   posts: [],
+  url: {},
 };
 
 export default withRouter(Blog);

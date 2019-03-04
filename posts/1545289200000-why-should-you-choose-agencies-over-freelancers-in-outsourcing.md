@@ -3,6 +3,7 @@ Title: Ousourcing: Freelancers vs. Agencies
 Subtitle: Ousourcing: Freelancers vs. Agencies - Keenethics Blog
 Meta title: Ousourcing: Freelancers vs. Agencies - Keenethics Blog
 Meta description: Professional agencies vs. Freelancers: the title of the best outsourcing partner goes to...
+Tags: Business guide
 Preview image: /static/posts/why-should-you-choose-agencies-1-preview.jpg
 
 ![Why should you choose agencies](/static/posts/why-should-you-choose-agencies-1.jpg)

@@ -3,6 +3,7 @@ Title: Sharing Experiences: From Meteor App to HTTP/2
 Subtitle: Sharing Experiences: From Meteor App to HTTP/2 - Keenethics Blog
 Meta title: Sharing Experiences: From Meteor App to HTTP/2 - Keenethics Blog
 Meta description: Did You Hear About HTTP/2? What Do You Know About Its Benefits? Read on Keenethics Corporate Blog!
+Tags: Tech, From KeenEthics
 Preview image: https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png
 
 ![HTTP2](https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png)

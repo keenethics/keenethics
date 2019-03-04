@@ -3,6 +3,7 @@ Title: RedLine13 and KeenEthics: The Story of Our Partnership
 Subtitle: RedLine13 and KeenEthics: The Story of Our Partnership - Keenethics Blog
 Meta title: RedLine13 and KeenEthics: The Story of Our Partnership - Keenethics Blog
 Meta description: A brief story of KeenEthics’ partnership with RedLine 13 – an optimal load testing service and an ultimate QA saver.
+Tags: From KeenEthics
 Preview image: /static/posts/redline13-and-keenethics-prew.jpg
 
 ![Keenethics and RedLine13](/static/posts/redline13-and-keenethics.jpg)

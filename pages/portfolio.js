@@ -7,6 +7,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 
 import Works from '../components/portfolio/works';
+import TagsFilter from '../components/tags-filter/TagsFilter';
 
 import { works } from '../main.config';
 
@@ -29,9 +30,7 @@ export default class Portfolio extends React.Component {
     };
 
     this.worksCountFor = this.worksCountFor.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.showAllWorks = this.showAllWorks.bind(this);
-    this.disabledBtn = this.disabledBtn.bind(this);
+    this.filterOnChange = this.filterOnChange.bind(this);
   }
 
   componentDidMount() {
@@ -56,62 +55,16 @@ export default class Portfolio extends React.Component {
 
   worksCountFor(work) {
     const { selectedWorks } = this.state;
-
     return work.category.main.filter(category => selectedWorks.includes(category)).length;
   }
 
-  handleClick(e) {
-    const selectedWorks = this.state.selectedWorks.slice();
-    const category = e.target.innerHTML;
-    const position = selectedWorks.indexOf(category);
-
-    if (position === -1) {
-      selectedWorks.push(category);
-    } else {
-      if (selectedWorks.length === 1) {
-        this.disabledBtn(e.target);
-        return;
-      }
-      selectedWorks.splice(position, 1);
-    }
-
-    const url = `/portfolio?chosen=${selectedWorks.join(',')}`;
-    window.history.replaceState({ url }, '', url);
-
+  filterOnChange(selectedWorks) {
     this.setState({ selectedWorks });
-  }
-
-  showAllWorks(e) {
-    const selectedWorks = this.state.selectedWorks.slice();
-    const { categorisList } = this.state;
-
-    if (selectedWorks.length === categorisList.length) {
-      this.disabledBtn(e.target);
-      return;
-    }
-
-    this.setState({ selectedWorks: categorisList });
-  }
-
-  disabledBtn(btn) {
-    btn.classList.add('-disabled');
-    setTimeout(() => btn.classList.remove('-disabled'), 500);
   }
 
   render() {
     const { url } = this.props;
     const { selectedWorks, categorisList } = this.state;
-    const FilterBtn = ({ category }) => (
-      <li className="filter__item">
-        <button
-          className={`filter__btn ${selectedWorks.indexOf(category) !== -1 ? '-red' : ''}`}
-          onClick={this.handleClick}
-        >
-          {category}
-        </button>
-      </li>
-    );
-
     return (
       <Layout currentURL={url}>
         <section className="portfolio">
@@ -119,21 +72,12 @@ export default class Portfolio extends React.Component {
           <div className="portfolio__header">
             <h1 className="portfolio__title">Portfolio</h1>
           </div>
-          <div className="filter">
-            <div className="filter__show-all">
-              <button
-                onClick={this.showAllWorks}
-                className={`filter__btn -show-all ${selectedWorks.length !== categorisList.length ? '-active' : ''}`}
-              >
-                Show all
-              </button>
-            </div>
-            <ul className="filter__list">
-              {categorisList.map(category => (
-                <FilterBtn category={category} key={category} />
-              ))}
-            </ul>
-          </div>
+          <TagsFilter
+            categorisList={categorisList}
+            selectedCategories={selectedWorks}
+            filterOnChange={this.filterOnChange}
+            pageTitle="portfolio"
+          />
           {
             works.length
               ? <Works works={works.filter(this.worksCountFor)} />
