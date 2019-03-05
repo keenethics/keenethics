@@ -3,7 +3,7 @@ Title: Voice App Development: Opportunities and Challenges
 Subtitle: Voice App Development: Opportunities and Challenges - Keenethics Blog
 Meta title: Voice App Development: Opportunities and Challenges - Keenethics Blog
 Meta description: Let us tell you how Keenethics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
-Tags: Tech
+Categories: Tech
 Preview image: /static/posts/voice-app-development-prew.jpg
 
 ![Voice App Development](/static/posts/voice-app-development.jpg)

@@ -9,7 +9,7 @@ import 'isomorphic-fetch';
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
-import TagsFilter from '../components/tags-filter/TagsFilter';
+import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 
 const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
@@ -17,7 +17,7 @@ const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(existCategory =>
     chosenCategory.filter(category =>
       category.toLowerCase() === existCategory.toLowerCase()).length);
-
+      
   return categories.length ? categories : existCategories;
 };
 
@@ -25,7 +25,7 @@ class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...this.getGategoriesList(props.url),
+      ...this.getCategoriesList(props.url),
     };
     this.posts = [];
     this.postsCountFor = this.postsCountFor.bind(this);
@@ -44,24 +44,22 @@ class Blog extends React.Component {
     return { posts: json };
   }
 
-  getGategoriesList(url) {
+  getCategoriesList(url) {
     const { posts } = this.props;
     const chosenCategory = url.query.chosen;
     const categories = posts
-      .map(post => post.tags)
+      .map(post => post.categories)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
     const uniqCategories = [...new Set(categories)];
-
-    const selectedPosts = chosenCategory && chosenCategory !== 'All'
+    const selectedPosts = chosenCategory
       ? transformateCategories(chosenCategory.split(','), uniqCategories)
       : uniqCategories;
-
     return { selectedPosts, categorisList: uniqCategories };
   }
 
   postsCountFor(post) {
     const { selectedPosts } = this.state;
-    return post.tags.filter(category => selectedPosts.includes(category)).length;
+    return post.categories.filter(category => selectedPosts.includes(category)).length;
   }
 
   filterOnChange(selectedPosts) {
@@ -79,7 +77,7 @@ class Blog extends React.Component {
             <div className="blog-page-header">
               <h1 className="blog-page-title">Blog</h1>
             </div>
-            <TagsFilter
+            <CategoriesFilter
               categorisList={categorisList}
               selectedCategories={selectedPosts}
               filterOnChange={this.filterOnChange}

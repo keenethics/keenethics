@@ -7,7 +7,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 
 import Works from '../components/portfolio/works';
-import TagsFilter from '../components/tags-filter/TagsFilter';
+import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 
 import { works } from '../main.config';
 
@@ -26,7 +26,7 @@ export default class Portfolio extends React.Component {
     super(props);
 
     this.state = {
-      ...this.getGategoriesList(props.url),
+      ...this.getCategoriesList(props.url),
     };
 
     this.worksCountFor = this.worksCountFor.bind(this);
@@ -39,15 +39,14 @@ export default class Portfolio extends React.Component {
     subnavigation.parentElement.classList.add('is-link');
   }
 
-  getGategoriesList(url) {
+  getCategoriesList(url) {
     const chosenCategory = url.query.chosen;
     const categories = works
       .map(work => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
     const uniqCategories = [...new Set(categories)];
 
-    const selectedWorks = chosenCategory && chosenCategory !== 'All'
-      ? transformateCategories(chosenCategory.split(','), uniqCategories)
+    const selectedWorks = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
       : uniqCategories;
 
     return { selectedWorks, categorisList: uniqCategories };
@@ -72,7 +71,7 @@ export default class Portfolio extends React.Component {
           <div className="portfolio__header">
             <h1 className="portfolio__title">Portfolio</h1>
           </div>
-          <TagsFilter
+          <CategoriesFilter
             categorisList={categorisList}
             selectedCategories={selectedWorks}
             filterOnChange={this.filterOnChange}

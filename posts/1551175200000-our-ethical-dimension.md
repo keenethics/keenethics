@@ -3,7 +3,7 @@ Title: KeenEthics: Our Ethical Dimension
 Subtitle: KeenEthics: Our Ethical Dimension - Keenethics Blog
 Meta title: KeenEthics: Our Ethical Dimension - Keenethics Blog
 Meta description: KeenEthics: We tell a short story of our brand name and highlight the major ethical values we believe in. Find out what "Ethics" stands for!
-Tags: From KeenEthics
+Categories: From KeenEthics
 Preview image: /static/posts/our-ethical-dimension-1-prew.jpg
 
 ![Keenethics Team](/static/posts/our-ethical-dimension-1.jpg)

@@ -4,7 +4,7 @@ Subtitle: What Is Prototyping and Why Do We Need It - Keenethics Blog
 New Date: 1540884600000
 Meta title: What Is Prototyping and Why Do We Need It - Keenethics Blog
 Meta description: What is Prototype and why prototyping is important? Benefits of using prototyping.
-Tags: Tech
+Categories: Tech
 Preview image: /static/posts/prototype-prew.jpg
 
 ![Prototype](/static/posts/prototype.jpg)

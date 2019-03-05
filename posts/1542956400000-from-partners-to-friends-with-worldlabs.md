@@ -3,7 +3,7 @@ Title: Case Study: From Partners to Friends with WorldLabs
 Subtitle: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta title: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
 Meta description: The story of one business partnership: from working extra hours under limited resources to taking part in a major business event in London.
-Tags: From KeenEthics
+Categories: From KeenEthics
 Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
 
 ![Worldlabs](/static/posts/from-partners-to-friends-with-worldlabs.jpg)
