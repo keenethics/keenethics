@@ -3,6 +3,7 @@ Title: KeenEthics Study: Two Monitors or One Ultrawide
 Subtitle: KeenEthics Study: Two Monitors or One Ultrawide - Keenethics Blog
 Meta title: KeenEthics Study: Two Monitors or One Ultrawide New Way of Improving Productivity - Keenethics Blog
 Meta description: New Way of Improving Productivity - Read on Keenethics Corporate Blog!
+Categories: Tech, From KeenEthics
 Preview image: /static/posts/two-monitors-or-one-ultrawide-1-prew.jpg
 
 ![Two Monitors or One Ultrawide](/static/posts/two-monitors-or-one-ultrawide-1.jpg)

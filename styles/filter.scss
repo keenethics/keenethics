@@ -2,10 +2,16 @@
    margin-bottom: 30px;
    display: flex;
    align-items: center;
-   max-width: 870px;
-   margin: 0 auto;
+   margin: 0 auto 10px auto;
+   padding: 15px;
    @media (max-width: 1200px ) {
       flex-direction: column;
+   }
+   &--blog {
+      max-width: 980px;
+   }
+   &--portfolio {
+      max-width: 900px;
    }
 }
 .filter__show-all {
@@ -17,14 +23,14 @@
    }
 }
 .filter__list {
-   margin: 0 -15px;
+   margin: 0 -10px;
    display: flex;
    justify-content: center;
    list-style: none;
    flex-wrap: wrap;
 }
 .filter__item {
-   padding: 15px;
+   padding: 10px;
 }
 .filter__btn {
    padding: 12px 32.5px;
