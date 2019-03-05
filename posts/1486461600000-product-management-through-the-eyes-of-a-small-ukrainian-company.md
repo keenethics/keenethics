@@ -4,6 +4,7 @@ Subtitle: Product Management in a Small Ukrainian Company - Keenethics Blog
 New Date: 1540623000000
 Meta title: Product Management in a Small Ukrainian Company - Keenethics Blog
 Meta description: This Article is to Show Some of the Harsh Realities We Have to Face, as Opposed to the Way It’s Done in Bigger Companies
+Categories: Outsourcing, Business guide
 Preview image: /static/posts/product-management-prew.jpg
 
 ![Team](/static/posts/product-management.jpg)

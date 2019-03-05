@@ -3,6 +3,7 @@ Title: Cultural Factors in Design: A Product for Everyone
 Subtitle: Cultural Factors in Design: A Product for Everyone - Keenethics Blog
 Meta title: Cultural Factors in Design: A Product for Everyone - Keenethics Blog
 Meta description: Cultural factors in design or how to make your product accessible to everyone?
+Categories: Tech
 Preview image: /static/posts/apple-imac-ipad-workplace-38568.jpeg
 
 ![Heroes](/static/posts/ipad-tablet-technology-touch.jpg)

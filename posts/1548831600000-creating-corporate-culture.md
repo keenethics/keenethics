@@ -3,6 +3,7 @@ Title: How to Create a Sound Corporate Culture
 Subtitle: How to Create a Sound Corporate Culture - Keenethics Blog
 Meta title: How to Create a Sound Corporate Culture - Keenethics Blog
 Meta description: Corporate culture is the soul of your organization since any business is defined by people working there. To maintain a healthy atmosphere in the office, think of implementing the following steps.
+Categories: Business guide
 Preview image: /static/posts/creating-corporate-culture-prew.jpg
 
 ![How to Create a Sound Corporate Culture](/static/posts/creating-corporate-culture.jpg)

@@ -3,6 +3,7 @@ Title: Best Amazon Alexa Skills: Mid-Autumn 2018
 Subtitle: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
 Meta title: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
 Meta description: Want to give a second life to your Alexa? This fall, the renowned smart speaker learned 10 new ways to conquer your heart.
+Categories: Tech, Productivity
 Preview image: /static/posts/alexa-post-images/mid-autumn/best-amazon-alexa-skills-mid-autumn-2018-prew.jpg
 
 ![Prototype](/static/posts/alexa-post-images/mid-autumn/best-amazon-alexa-skills-mid-autumn-2018.jpg)
