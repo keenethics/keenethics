@@ -17,7 +17,6 @@ const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(existCategory =>
     chosenCategory.filter(category =>
       category.toLowerCase() === existCategory.toLowerCase()).length);
-      
   return categories.length ? categories : existCategories;
 };
 
