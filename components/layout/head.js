@@ -27,7 +27,7 @@ Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
 const DEFAULT_DESCRIPTION = 'Keenethics is an Eastern European software development company, that provides custom software development for your business';
-const DEFAULT_TITLE = 'Custom Software Development Company - Keenethics';
+const DEFAULT_TITLE = 'Careers - Keenethics';
 
 const LayoutHead = (props) => {
   const { navigation } = config;
