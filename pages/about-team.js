@@ -29,8 +29,8 @@ export default class AboutTeam extends React.Component {
     const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
     const parade = splitTo(t.people, numberOfShips);
 
-    return parade.map(p => (
-      p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} />)
+    return parade.map((p, i) => (
+      p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} i={i} />)
     ));
   })
 

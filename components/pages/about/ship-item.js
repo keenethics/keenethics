@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 export default class ShipItem extends React.Component {
   constructor(props) {
     super(props);
-
+    const isFirstItem = this.props.ship.key === 'spaceship' && this.props.i === 0;
     this.state = {
-      showPopup: false,
+      isFirstItem,
+      showPopup: isFirstItem,
     };
-
     this.onMouseOver = this.onMouseOver.bind(this);
     this.onMouseOut = this.onMouseOut.bind(this);
   }
@@ -19,7 +19,7 @@ export default class ShipItem extends React.Component {
   }
   onMouseOut() {
     this.setState({
-      showPopup: false,
+      showPopup: this.state.isFirstItem || false,
     });
   }
   render() {
@@ -57,8 +57,10 @@ export default class ShipItem extends React.Component {
 ShipItem.propTypes = {
   ship: PropTypes.object,
   worker: PropTypes.object,
+  i: PropTypes.number,
 };
 ShipItem.defaultProps = {
   ship: {},
   worker: {},
+  i: null,
 };
