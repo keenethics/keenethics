@@ -260,7 +260,7 @@ export const team = [
         name: 'Andrii T.',
         position: 'Project Manager',
         description: 'My job is to get everything done leaving everyone happy and facilitate communication. I help my team to achieve our goals with all the support I can provide. The opportunity to work in an open and friendly environment is what I value about KeenEthics the most.',
-        avatar: 'andrii_t.jpg',
+        avatar: 'astronauts.jpg',
       },
     ],
   },
@@ -424,22 +424,10 @@ export const team = [
         avatar: 'borys_k.jpg',
       },
       {
-        name: 'Bohdana K.',
-        position: 'Head of Business Development',
-        description: 'My major duties include lead generation, communication with potential and existing customers, and social media content marketing. KeenEthics is appealing to me due to a responsible approach and an honest attitude to every customer and the agility of our team.',
-        avatar: 'bohdana_k.jpg',
-      },
-      {
         name: 'Oleg Z.',
         position: 'Full-Stack Software Developer',
         description: 'I handle all the stages of creating a product, from managing databases and servers to engineering a system and communicating with a client. As I see it, amazing people and a friendly approach to partners and customers is the key to KeenEthics success.',
         avatar: 'oleh_zz.jpg',
-      },
-      {
-        name: 'Yulia B.',
-        position: 'Graphic Web Designer',
-        description: 'My job is to create visual content for Keenethics: various logos, brochures, presentations, UI etc. I am relatively new to the team, but these friendly people have already conquered my heart.',
-        avatar: 'yulia_b.jpg',
       },
       {
         name: 'Oksana V.',
