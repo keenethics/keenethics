@@ -6,7 +6,6 @@ export default class ShipItem extends React.Component {
     super(props);
     const isFirstItem = this.props.ship.key === 'spaceship' && this.props.i === 0;
     this.state = {
-      // isFirstItem,
       showPopup: isFirstItem,
     };
     this.onMouseOver = this.onMouseOver.bind(this);
