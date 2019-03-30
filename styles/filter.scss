@@ -28,6 +28,9 @@
    justify-content: center;
    list-style: none;
    flex-wrap: wrap;
+   @media (max-width: 1200px ) {
+      max-width: 900px;
+   }
 }
 .filter__item {
    padding: 10px;
