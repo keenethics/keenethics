@@ -129,6 +129,11 @@ const postsDatePair = [
     filename: '1551391200000-redline13-and-keenethics.md',
     href: '/blog/1551391200000-redline13-and-keenethics',
   },
+  {
+    createdAt: 1553896800000,
+    filename: '1553896800000-how-to-monitor-your-project-distantly.md',
+    href: '/blog/1553896800000-how-to-monitor-your-project-distantly',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
