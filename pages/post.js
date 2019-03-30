@@ -69,7 +69,7 @@ export default class Post extends React.Component {
               </Link>
             ) : null}
             <Link route={Router.linkPage(hrefToNextPost ? 'post' : 'blog', { name: hrefToNextPost })}>
-              <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blogs list'}</div>
+              <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
           </div>
         </div>
