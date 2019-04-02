@@ -139,6 +139,11 @@ const postsDatePair = [
     filename: '1554163400000-delegation.md',
     href: '/blog/1554163400000-delegation',
   },
+  {
+    createdAt: 1554243600000,
+    filename: '1554243600000-open-source.md',
+    href: '/blog/1554243600000-open-source',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
