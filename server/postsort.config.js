@@ -134,6 +134,11 @@ const postsDatePair = [
     filename: '1553896800000-how-to-monitor-your-project-distantly.md',
     href: '/blog/1553896800000-how-to-monitor-your-project-distantly',
   },
+  {
+    createdAt: 1554163400000,
+    filename: '1554163400000-delegation.md',
+    href: '/blog/1554163400000-delegation',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
