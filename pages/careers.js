@@ -236,7 +236,7 @@ export default class Careers extends React.Component {
     }
 
     return (
-      <Layout currentURL={url}>
+      <Layout currentURL={url} meta={{ title: 'Careers - Keenethics' }}>
         <div className="careers-page">
           <div className="careers-page-header">
             <h1 className="title">Careers - Open Positions</h1>
