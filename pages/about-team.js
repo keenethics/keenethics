@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -24,13 +23,27 @@ function splitTo(arr, n) {
 }
 
 export default class AboutTeam extends React.Component {
-  getSpaceships = () => team.map((t) => {
-    const spaceship = spaceships[t.key];
-    const numberOfShips = Math.ceil(t.people.length / spaceship.capacity);
-    const parade = splitTo(t.people, numberOfShips);
+  state = {
+    activeId: 'first',
+  }
 
-    return parade.map((p, i) => (
-      p.map(worker => <Ship key={nanoid()} ship={t} worker={worker} i={i} />)
+  setActiveId = activeId => this.setState({ activeId })
+
+  getSpaceships = () => team.map((subteam) => {
+    const spaceship = spaceships[subteam.key];
+    const numberOfShips = Math.ceil(subteam.people.length / spaceship.capacity);
+    const parade = splitTo(subteam.people, numberOfShips);
+
+    return parade.map((p, index) => (
+      p.map(worker => (<Ship
+        key={`${worker.name}-${index}`}
+        ship={subteam}
+        worker={worker}
+        isFirstItem={subteam.key === 'spaceship' && index === 0}
+        id={`${worker.name}-${index}`}
+        activeId={this.state.activeId}
+        changeId={this.setActiveId}
+      />))
     ));
   })
 

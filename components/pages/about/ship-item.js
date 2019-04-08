@@ -2,28 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class ShipItem extends React.Component {
-  constructor(props) {
-    super(props);
-    const isFirstItem = this.props.ship.key === 'spaceship' && this.props.i === 0;
-    this.state = {
-      showPopup: isFirstItem,
-    };
-    this.onMouseOver = this.onMouseOver.bind(this);
-    this.onMouseOut = this.onMouseOut.bind(this);
+  onMouseOver = () => {
+    this.props.changeId(this.props.id);
   }
-  onMouseOver() {
-    this.setState({
-      showPopup: true,
-    });
-  }
-  onMouseOut() {
-    this.setState({
-      showPopup: false,
-    });
+  onMouseOut = () => {
+    this.props.changeId('');
   }
   render() {
-    const { ship, worker } = this.props;
-    const { showPopup } = this.state;
+    const {
+      ship, worker, id, activeId, isFirstItem,
+    } = this.props;
 
     return (
       <div
@@ -37,7 +25,7 @@ export default class ShipItem extends React.Component {
           <div className="ship-image">
             <img src={`/static/images/ships/${ship.key}.svg`} alt="ship" />
           </div>
-          <div className={showPopup ? 'ship-content-wrapper show' : 'ship-content-wrapper'}>
+          <div className={id === activeId || (isFirstItem && activeId === 'first') ? 'ship-content-wrapper show' : 'ship-content-wrapper'}>
             <div className="ship-content">
               <div className="ship-content-user-avatar">
                 <img src={`/static/images/team/${worker.avatar}`} alt="avatar" />
@@ -56,10 +44,13 @@ export default class ShipItem extends React.Component {
 ShipItem.propTypes = {
   ship: PropTypes.object,
   worker: PropTypes.object,
-  i: PropTypes.number,
+  isFirstItem: PropTypes.bool,
+  changeId: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  activeId: PropTypes.string.isRequired,
 };
 ShipItem.defaultProps = {
   ship: {},
   worker: {},
-  i: null,
+  isFirstItem: false,
 };
