@@ -59,7 +59,7 @@ Coding is involved in creating this prototype. Depending on the complexity of yo
 
 *Confusion 1*
 
-A prototype can be confused with an MVP (Minimum Viable Product). MVP is not a final product yet, but it works as if it is. It is needed to roll out the product on the market and start usability testing and getting the first feedback from users. In order to cut costs when building and designing an MVP, the product owners would pick and focus on the most important functions of their app, which is a wise thing to do. Think of it as the very basic version of the finished product. Unlike prototype, an MVP works properly and has no bugs. Sometimes, an app can be so simple that no additional functionality needs to be added after the MVP is released.
+A prototype can be confused with an MVP ([Minimum Viable Product](/approach-minimum-viable-product)). MVP is not a final product yet, but it works as if it is. It is needed to roll out the product on the market and start usability testing and getting the first feedback from users. In order to cut costs when building and designing an MVP, the product owners would pick and focus on the most important functions of their app, which is a wise thing to do. Think of it as the very basic version of the finished product. Unlike prototype, an MVP works properly and has no bugs. Sometimes, an app can be so simple that no additional functionality needs to be added after the MVP is released.
 
 *Confusion 2*
 

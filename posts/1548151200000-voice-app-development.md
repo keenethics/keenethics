@@ -39,7 +39,7 @@ Voice devices and applications are a major AI advancement, which enables us to u
   </p>
 </div>
 
-For us as the developers and businesses using voice technology, its major importance lies in the opportunity to transform traditional messenger bots into voice chatbots, which are more appealing to the end user.
+For us as the developers and businesses using voice technology, its major importance lies in the opportunity to transform traditional messenger bots into voice [chatbots](/services-web-development-chatbot), which are more appealing to the end user.
 
 ## Major Industry Challenges
 
@@ -87,7 +87,7 @@ Another important issue related to voice apps lies in NLU (Natural Language Unde
   <p style="margin-bottom: 0">Assistant: I’m pretty fine, thanks. And you?</p>
 </div>
 
-**Context** is a true headache for the people busy with voice application development. The voice assistant has to be taught not only to decode a certain message but also to take into account all the phrases it received during the current conversation as well as the situational context of the communication: date, location, etc. 
+**Context** is a true headache for the people busy with [voice application development](/services-web-development-programmable-voice). The voice assistant has to be taught not only to decode a certain message but also to take into account all the phrases it received during the current conversation as well as the situational context of the communication: date, location, etc. 
 
 <div style="text-align: center; font-style: italic;margin-bottom: 14px;">
   <p style="margin-bottom: 0">User: What is the weather in New York <b>this</b> weekend?</p>

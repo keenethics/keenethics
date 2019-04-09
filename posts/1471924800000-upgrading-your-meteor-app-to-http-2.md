@@ -97,7 +97,7 @@ server {
 }
 `
 
-Value of proxy_pass must be address of your meteor application plus $request_uri.
+Value of proxy_pass must be address of your [meteor application](/services-web-development-meteor) plus $request_uri.
 
 Restart Nginx again to apply last changes.
 
