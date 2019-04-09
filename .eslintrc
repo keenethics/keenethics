@@ -7,6 +7,9 @@
       "jsx": true
     }
   },
+  "globals": {
+    "fetch": true
+  },
   "rules": {
     "semi": 2,
     "class-methods-use-this": 0,
@@ -21,6 +24,7 @@
     }],
     "jsx-a11y/anchor-is-valid": 0,
     "prefer-destructuring": 0,
+    "jsx-a11y/label-has-for": ["error", {"components": ["Label"], "required": {"every": ["id"]}}]
   },
   "plugins": [
     "jsx-a11y",
@@ -30,5 +34,10 @@
   "extends": [
     "plugin:jsx-a11y/recommended",
     "airbnb"
-  ]
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  }
 }

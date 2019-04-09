@@ -1,89 +1,33 @@
-/* global fetch */
-
-import 'whatwg-fetch';
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
+import EstimateForm from '../components/contacts/estimate-form';
+import ContactForm from '../components/contacts/contact-form';
 
 export default class Contacts extends React.Component {
   constructor(props) {
     super(props);
-
+    const query = props.url.query;
     this.state = {
-      firstname: {
-        value: '',
-        error: false,
-      },
-      lastname: {
-        value: '',
-        error: false,
-      },
-      email: {
-        value: '',
-        error: false,
-      },
-      phone: {
-        value: '',
-        error: false,
-      },
-      message: {
-        value: '',
-        error: false,
-      },
       isPending: false,
       status: '',
+      activeContactForm: query.activeForm !== 'estimate',
     };
-
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onChange = this.onChange.bind(this);
+    props.url.push('/contacts');
+    this.onClick = this.onClick.bind(this);
   }
-  onSubmit(e) {
-    e.preventDefault();
-
-    this.setState({
-      isPending: true,
-    });
-
-    fetch('/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(this.state),
-    }).then(response => response.json()).then((json) => {
-      const state = {
-        isPending: false,
-        status: json.status.toString(),
-      };
-
-      if (json && json.errorField) {
-        Object.assign(state, json.errorField);
-      }
-
-      this.setState(state);
-    });
-  }
-  onChange({ target }) {
-    this.setState({
-      [target.name]: {
-        value: target.value,
-        error: '',
-      },
-    });
+  onClick({ target }) {
+    this.setState({ activeContactForm: target.name === 'contact-form-btn' });
   }
   render() {
     const { url } = this.props;
     const {
+      activeContactForm,
       isPending,
       status,
-      firstname,
-      lastname,
-      email,
-      phone,
-      message,
     } = this.state;
 
     return (
@@ -93,94 +37,49 @@ export default class Contacts extends React.Component {
             <div className="title-page">
               <h1 className="title">Contact Us</h1>
             </div>
-            <div className="contacts-block" itemScope itemType="http://schema.org/Organization">
+            <div className={activeContactForm ? 'contacts-block' : 'estimate-block-background'} itemScope itemType="http://schema.org/Organization">
               <ul className="contacts-stars"><li /><li /><li /><li /></ul>
-              <div className="contacts-mail" />
-              <ul className="contacts-list">
-                <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                  <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                    <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
-                    <div itemProp="streetAddress">3 Lytvynenka Street</div>
-                    <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+380968147266">
-                    <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
-                    <div itemProp="telephone">+38 (096) 814 72 66</div>
-                    <span>Give Us a Call</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:founders@keenethics.com">
-                    <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
-                    <div>founders@keenethics.com</div>
-                    <span>Drop Us a Letter</span>
-                  </a>
-                </li>
-              </ul>
-              <div className="contacts-form">
-                <form onSubmit={this.onSubmit}>
-                  <div className="contacts-title">Say hello</div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={firstname.error ? 'error' : null}
-                        name="firstname"
-                        placeholder="First Name"
-                        type="text"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    <div className="input-wrap input-wrap-2">
-                      <input
-                        className={lastname.error ? 'error' : null}
-                        name="lastname"
-                        placeholder="Last Name"
-                        type="text"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-cols">
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={email.error ? 'error' : null}
-                        name="email"
-                        placeholder="Your Email"
-                        type="mail"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                    <div className="input-wrap input-wrap-2 input-wrap-l">
-                      <input
-                        className={phone.error ? 'error' : null}
-                        name="phone"
-                        placeholder="Your Phone"
-                        type="tel"
-                        onChange={this.onChange}
-                      />
-                    </div>
-                  </div>
-                  <div className="input-wrap input-wrap-2 input-wrap-ta">
-                    <textarea
-                      className={message.error ? 'error' : null}
-                      name="message"
-                      placeholder="Message"
-                      onChange={this.onChange}
-                    />
-                  </div>
-                  {status ? (
-                    <div className="form-status">{status}</div>
-                  ) : null}
-                  <button
-                    type="submit"
-                    className={isPending ? 'button button-send pending' : 'button button-send'}
-                  >
-                    <img src="/static/images/svg/send.svg" alt="send" />
-                  </button>
-                </form>
-              </div>
+              {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
+              <button onClick={this.onClick} name="contact-form-btn" className={classnames('contacts-form-btn contact-form-btn', { disabled: !activeContactForm })}>Say Hello</button>
+              <button onClick={this.onClick} name="estimate-form-btn" className={classnames('contacts-form-btn estimate-form-btn', { disabled: activeContactForm })}>Estimate your project</button>
+              <address>
+                <ul className="contacts-list">
+                  <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                    <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                      <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
+                      <div itemProp="streetAddress">Kulparkivska St, 59</div>
+                      <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+380968147266">
+                      <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
+                      <div itemProp="telephone">+38 (096) 814 72 66</div>
+                      <span>Give Us a Call</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:founders@keenethics.com">
+                      <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
+                      <div>founders@keenethics.com</div>
+                      <span>Drop Us a Letter</span>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              { this.state.activeContactForm ? (
+                <ContactForm
+                  isPending={isPending}
+                  status={status}
+                  updateState={state => this.setState(state)}
+                />
+              ) : (
+                <EstimateForm
+                  isPending={isPending}
+                  status={status}
+                  updateState={state => this.setState(state)}
+                />
+              )}
             </div>
           </div>
           <Background />

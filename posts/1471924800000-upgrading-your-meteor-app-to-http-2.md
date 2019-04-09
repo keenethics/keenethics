@@ -1,8 +1,9 @@
 Author: Oleh Zymnytskiy
-Title: Upgrading Your Meteor App to HTTP/2
-Subtitle: Upgrading Your Meteor App to HTTP/2
-Meta title: Upgrading Your Meteor app to HTTP/2 - Keenethics Corporate Blog
+Title: Sharing Experiences: From Meteor App to HTTP/2
+Subtitle: Sharing Experiences: From Meteor App to HTTP/2 - Keenethics Blog
+Meta title: Sharing Experiences: From Meteor App to HTTP/2 - Keenethics Blog
 Meta description: Did You Hear About HTTP/2? What Do You Know About Its Benefits? Read on Keenethics Corporate Blog!
+Categories: Tech, From KeenEthics
 Preview image: https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png
 
 ![HTTP2](https://cdn-images-1.medium.com/max/800/1*k_Q-w8RE2ZhEKbyKVZas0g.png)
@@ -142,11 +143,3 @@ By default nginx doesn’t proxy websockets. But you can change it. Just add man
 ## Results
 
 Our site’s download time has decreased from 411ms to 123ms for primary content (main html, js and css) and from 7s to 5s for secondary content added by JavaScript. This result may be improved if use the server-side rendering.
-
-## Finally
-
-Thank you for reading. Bye
-
-## Post scriptum
-
-Original image from <http://thehackernews.com/2015/02/http2-fast-websites.html/>

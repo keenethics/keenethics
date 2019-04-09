@@ -1,3 +1,14 @@
+import mainNavigation from './navigation/main.json';
+import servicesWebDevelopmentElements from './navigation/servicesWebDevelopment.json';
+import servicesMobileDevelopmentElements from './navigation/servicesMobileDevelopment.json';
+import servicesOutstaffingElements from './navigation/servicesOutstaffing.json';
+import techAppsElements from './navigation/techApps.json';
+import techFrontEndElements from './navigation/techFrontEnd.json';
+import techBackEndElements from './navigation/techBackEnd.json';
+import techDatabaseElements from './navigation/techDatabase.json';
+import techApiIntegrationElements from './navigation/techApiIntegration.json';
+import worksElements from './navigation/works.json';
+
 const maskTitle = technology => `${technology} Development`;
 const maskDescription = technology => `Looking to hire ${technology} developers?
   Keenethics, a ${technology} development company, specializes in ${technology} development services.
@@ -15,285 +26,16 @@ const maskMapper = (t) => {
 export const COMPANY_LINKS = {
   linkedin: 'https://www.linkedin.com/company/keen-ethics',
   github: 'https://github.com/keenethics',
-  googlePlus: 'https://plus.google.com/103030720036135400511/about',
+  // googlePlus: 'https://plus.google.com/112805808227871069931',
   twitter: 'https://twitter.com/keen_ethics',
   upwork: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
   facebook: 'https://www.facebook.com/KeenEthics.development',
+  instagram: 'https://www.instagram.com/keen_ethics',
 };
 
 export const config = {
   navigationMinPointsHeight: 90,
-  navigation: [
-    {
-      name: 'Services',
-      points: [
-        {
-          name: 'Web Development',
-          description: 'Responsive and user-oriented web coding',
-          metaTitle: 'Custom Web Development Company - Keenethics',
-          metaDescription: 'Looking to hire web developers? Keenethics, a web development company, specializes in web development services. Hire our web developers today',
-          href: '/services-web-development',
-          icon: {
-            name: 'web',
-            alt: 'Web development',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Desktop Applications',
-          description: 'Native applications with flawless workflow',
-          metaTitle: 'Desktop Application Development Company & Desktop Software App Development - Keenethics',
-          metaDescription: 'Looking to hire Desktop Application developers? Keenethics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today',
-          href: '/services-desktop-applications',
-          icon: {
-            name: 'dapp',
-            alt: 'Desktop applications',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Mobile Development',
-          description: 'Slick and fast iOS and Android apps for your needs',
-          metaTitle: 'Mobile App Development | Professional App Development Company - Keenethics',
-          metaDescription: 'Looking to hire mobile app developers? Keenethics, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today',
-          href: '/services-mobile-development',
-          icon: {
-            name: 'mdev',
-            alt: 'Mobile development',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Outstaffing',
-          description: 'Process of using by one company another`s company staff',
-          metaTitle: 'Outstaffing company that helps to find highly qualified developers - Keenethics',
-          metaDescription: '',
-          href: '/services-outstaffing',
-          icon: {
-            name: 'outs',
-            alt: 'Outstaffing',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Proof of Concept',
-	        metaTitle: 'The Proof Of Concept Solution - Keenethics',
-          description:
-            'Realization of a certain method or idea in order to demonstrate its feasibility',
-          href: '/services-proof',
-          icon: {
-            name: 'pcon',
-            alt: 'Proof of concept',
-          },
-          type: 'icon',
-        },
-      ],
-    },
-    {
-      name: 'Approach',
-      points: [
-        {
-          name: 'Lean Approach',
-          description: 'Systematic method for the elimination of waste',
-          href: '/approach-lean-approach',
-          icon: {
-            name: 'lean',
-            alt: 'Lean approach',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Agile Project Management',
-          description:
-            'Alterative, incremental method of managing the design and build activities of engineering',
-          href: '/approach-agile-project-management',
-          metaTitle: 'Agile project management companies',
-          metaDescription: 'Agile Project Management services and Agile solutions from Keenethics services help deliver your business software on time and on budget.',
-          icon: {
-            name: 'agile',
-            alt: 'Agile project management',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Minimum Viable Product',
-          description:
-            'A product with just enough features to gather validated learning about the product',
-          metaTitle: 'MVP development company',
-          metaDescription: 'Outsource your MVP development and let us build a product your customers will love. We do prototyping, design (UX/UI) and everything in between.',
-          href: '/approach-minimum-viable-product',
-          icon: {
-            name: 'min-valuable',
-            alt: 'Minimum viable product',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Cutting Edge Technologies',
-          description:
-            'We use only the best and the most up-to-date technologies',
-          href: '/approach-cutting-edge',
-          icon: {
-            name: 'cutting',
-            alt: 'Cutting edge technologies',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'High Performance',
-          description: 'Why our team is very creative and productive',
-          href: '/approach-high-performance',
-          icon: {
-            name: 'high-performance',
-            alt: 'High performance',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'High Quality Software',
-          description: 'Well-tested, carefully-crafted masterpiece',
-          href: '/approach-high-quality',
-          icon: {
-            name: 'high-quality',
-            alt: 'High quality software',
-          },
-          type: 'icon',
-        },
-      ],
-    },
-    {
-      name: 'Technologies',
-      points: [
-        {
-          name: 'Apps',
-          description: 'Slick mobile apps for both, Android and iOS',
-          href: '/tech-apps',
-          icon: {
-            name: 'apps',
-            alt: 'Apps',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Front-End',
-          description:
-            'Front-end development is a process of the creation site’s client-side',
-          href: '/tech-front-end',
-          icon: {
-            name: 'front-end',
-            alt: 'Front-end',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Back-End',
-          description: 'Flawless code with no exceptions',
-          href: '/tech-back-end',
-          icon: {
-            name: 'back-end',
-            alt: 'Back-end',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'DataBase',
-          description: 'Tons of information precisely used and securely stored',
-          href: '/tech-data-base',
-          icon: {
-            name: 'data-base',
-            alt: 'Database',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'API Integration',
-          description: 'We will integrate everything you need',
-          href: '/tech-api-integration',
-          icon: {
-            name: 'API-integration',
-            alt: 'API integration',
-          },
-          type: 'icon',
-        },
-      ],
-    },
-    {
-      name: 'Portfolio',
-      description: '???',
-      metaTitle: 'Portfolio Keenethics',
-      metaDescription: '???',
-      href: '/portfolio',
-      points: [
-        {
-          name: 'All',
-          href: '/portfolio?chosen=All',
-        },
-        {
-          name: 'Business apps',
-          href: '/portfolio?chosen=Business apps',
-        },
-        {
-          name: 'Educational apps',
-          href: '/portfolio?chosen=Educational apps',
-        },
-        {
-          name: 'Consumer apps',
-          href: '/portfolio?chosen=Consumer apps',
-        },
-        {
-          name: 'Other',
-          href: '/portfolio?chosen=Other',
-        },
-      ],
-    },
-    {
-      name: 'Blog',
-      description: 'Articles based on our experience',
-      metaTitle: 'Web Development News & Ideas - Blog Keenethics',
-      metaDescription: 'Read the latest news and opinions about software development from Keenethics Blog - all articles are based on our experience!',
-      href: '/blog',
-    },
-    {
-      name: 'Careers',
-      description: '',
-      metaTitle: 'Careers at Software Development Company - Keenethics',
-      metaDescription: 'Careers at software development company Keenethics',
-      href: '/careers',
-    },
-    {
-      name: 'About',
-      points: [
-        {
-          name: 'Team',
-          description: 'Meet our Squad',
-          href: '/about-team',
-          icon: {
-            name: 'team',
-            alt: 'Team',
-          },
-          type: 'icon',
-        },
-        {
-          name: 'Open Source',
-          description: 'Ethical support for the community',
-          href: '/about-open-source',
-          icon: {
-            name: 'open-source',
-            alt: 'Open source',
-          },
-          type: 'icon',
-        },
-      ],
-    },
-    {
-      name: 'Contacts',
-      description: 'Have an idea? We can`t wait to help you implement it!',
-      metaTitle: 'Contacts - Office And Locations - Keenethics',
-      metaDescription: 'Have an idea? We can`t wait to help you implement it! Contact Keenethics software development company to get a professional insight into your business idea!',
-      href: '/contacts',
-      type: 'hidden',
-    },
-  ],
+  navigation: mainNavigation,
   careers: [
     {
       position: 'Full Stack js Capt-lieutenant',
@@ -372,11 +114,11 @@ export const config = {
       class: 'soc-3',
       href: COMPANY_LINKS.github,
     },
-    {
-      name: 'GooglePlus',
-      class: 'soc-4',
-      href: COMPANY_LINKS.googlePlus,
-    },
+    // {
+    //   name: 'GooglePlus',
+    //   class: 'soc-4',
+    //   href: COMPANY_LINKS.googlePlus,
+    // },
     {
       name: 'Twitter',
       class: 'soc-5',
@@ -387,308 +129,33 @@ export const config = {
       class: 'soc-6',
       href: COMPANY_LINKS.upwork,
     },
+    {
+      name: 'Instagram',
+      class: 'soc-instagram',
+      href: COMPANY_LINKS.instagram,
+    },
   ],
 };
-export const servicesWebDevelopmentTabs = () => {
-  const elements = [
-    {
-      href: '/services-web-development-e-commerce',
-      name: 'E-Commerce',
-      metaTitle: 'eCommerce Software Development Company | eCommerce Developers - Keenethics',
-      description: 'Building amazing e-commerce products',
-      icon: 'icon-e',
-    },
-    {
-      href: '/services-web-development-chatbot',
-      name: 'Chat Bots',
-      metaTitle: 'Chatbot Development Company | Microsoft Bot Framework Development - Keenethics',
-      description: 'Talking to AI was never that easy',
-      icon: 'icon-chat-bots',
-    },
-    {
-      href: '/services-web-development-node',
-      name: 'Website Node JS',
-      metaTitle: 'Node.Js Development Company | Node.js Website Development - Keenethics',
-      description: 'Leading and rule-breaking technology',
-      icon: 'icon-node',
-    },
-    {
-      href: '/services-web-development-meteor',
-      name: 'Meteor.js',
-      metaTitle: 'Meteor JS Development Company‎ - Keenethics',
-      description: 'An ambitious fullstack-framework',
-      icon: 'icon-meteor',
-    },
-    {
-      href: '/services-web-development-programmable-voice',
-      name: 'Programmable Voice',
-      metaTitle: 'Programmable Voice Development - Keenethics',
-      description: 'When computer can replace a human',
-      icon: 'icon-voice',
-    },
-  ];
-  return elements.map(e => ({
-    ...e,
-    metaDescription: maskDescription(e.name),
-  }));
-};
+export const servicesWebDevelopmentTabs = () => servicesWebDevelopmentElements.map(e => ({
+  ...e,
+  metaDescription: maskDescription(e.name),
+}));
 
-export const servicesMobileDevelopment = () => {
-  const elements = [
-    {
-      href: '/services-mobile-development-apple',
-      name: 'iOS development',
-      name2: 'iOS',
-      metaTitle: 'iOS Development Company | App Design & Development‎ - Keenethics',
-      tabsDescription: '14 apps developed',
-      description: 'Mobile applications for popular platform',
-      icon: 'icon-apple',
-    },
-    {
-      href: '/services-mobile-development-android',
-      name: 'Android development',
-      name2: 'Android',
-      metaTitle: 'Android App Development Company - Keenethics',
-      tabsDescription: '23 apps developed',
-      description: 'Most popular Linux-based mobile OS',
-      icon: 'icon-android',
-    },
-  ];
-  return elements.map(e => ({
-    ...e,
-    metaDescription: maskDescription(e.name2),
-  }));
-};
+export const servicesMobileDevelopment = () => servicesMobileDevelopmentElements.map(e => ({
+  ...e,
+  metaDescription: maskDescription(e.name2),
+}));
 
-export const servicesOutstaffing = () => {
-  const elements = [
-    {
-      href: '/services-outstaffing-senior',
-      name: 'Senior developer',
-      name2: 'Senior',
-      metaTitle: 'Outstaffing company that helps to find highly qualified Senior developers - Keenethics',
-      tabsDescription: '4 in our team',
-      description: 'Best skills and expertise',
-      icon: 'icon-o-1',
-    },
-    {
-      href: '/services-outstaffing-team',
-      name: 'Dedicated team',
-      name2: 'Dedicated team',
-      metaTitle: 'Dedicated Team Of Developers. Offshore Outsourcing Software Development‎ - Keenethics',
-      tabsDescription: '4-8 people',
-      description: 'Great developers who already have multiple projects behind',
-      icon: 'icon-o-2',
-    },
-    {
-      href: '/services-outstaffing-technical-consultancy',
-      name: 'Technical consultancy',
-      name2: 'Technical consultancy',
-      metaTitle: 'Technical consulting | Technical consultancy‎ - Keenethics',
-      tabsDescription: '24 hours for an answer',
-      description: '24 hours for an answer',
-      icon: 'icon-o-3',
-    },
-  ];
+export const servicesOutstaffing = () => servicesOutstaffingElements.map(e => ({
+  ...e,
+  metaDescription: maskDescription(e.name2),
+}));
 
-  return elements.map(e => ({
-    ...e,
-    metaDescription: maskDescription(e.name2),
-  }));
-};
-
-export const techApps = () => {
-  const elements = [
-    {
-      href: '/tech-apps-phonegap',
-      name: 'PhoneGap',
-      description:
-        'Framework for building mobile applications reusing existing codebase',
-      icon: 'icon-pg',
-    },
-    {
-      href: '/tech-apps-electron',
-      name: 'Electron',
-      description: 'JS-application on your desktop',
-      icon: 'icon-en',
-    },
-    {
-      href: '/tech-apps-accelerated-mobile-pages',
-      name: 'Accelerated Mobile Pages (AMP)',
-      metaTitle: 'Accelerated Mobile Pages (AMP) Development Company - Keenethics',
-      description: 'Accelerated Mobile Pages improve user experience and load instantly within search results page in mobile devices. Contact Keenethics team for AMP Website Design and Development Services.',
-      icon: 'icon-acc',
-    },
-    {
-      href: '/tech-apps-progressive-web-apps',
-      name: 'Progressive Web Apps',
-      description: 'Working with web-applications offline',
-      icon: 'icon-prog',
-    },
-    {
-      href: '/tech-apps-react-native',
-      name: 'React Native',
-      description: 'Using native mobile UI-elements with crossplatform JS-code',
-      icon: 'icon-rn',
-    },
-    {
-      href: '/tech-apps-cordova',
-      name: 'Cordova',
-      description:
-        'Open-source framework for cross-platform mobile applications',
-      icon: 'icon-cv',
-    },
-  ];
-  return elements.map(maskMapper);
-};
-
-export const techFrontEnd = () => {
-  const elements = [
-    {
-      href: '/tech-front-end-react',
-      name: 'React',
-      description: 'Library for blazing-fast UI-rendering va virtual-DOM',
-      icon: 'icon-rn',
-    },
-    {
-      href: '/tech-front-end-redux',
-      name: 'Redux',
-      description: 'Organizing state in React-applciation',
-      icon: 'icon-redux',
-    },
-    {
-      href: '/tech-front-end-angular',
-      name: 'Angular',
-      description: 'Google-backed frontend-framework',
-      icon: 'icon-ang',
-    },
-    {
-      href: '/tech-front-end-aurelia',
-      name: 'Aurelia',
-      description:
-        'Ambitious Angular-competitor by one of former Angular-deveopers',
-      icon: 'icon-aurelia',
-    },
-    {
-      href: '/tech-front-end-react-native',
-      name: 'React Native',
-      description:
-        'Speeding up hybrid mobile-apps by using native mobile UI-elements',
-      icon: 'icon-rn',
-    },
-    {
-      href: '/tech-front-end-angular-2',
-      name: 'Angular 2.0',
-      description: 'Next-generation frontend-framework',
-      icon: 'icon-ang',
-    },
-    {
-      href: '/tech-front-end-vue',
-      name: 'Vue JS',
-      description: 'Popular lightweight library for UI',
-      icon: 'icon-vue',
-    },
-    {
-      href: '/tech-front-end-next',
-      name: 'Next JS',
-      description:
-        'Fullstack framework aiming simplicity combined with powerful features',
-      icon: 'icon-next',
-    },
-  ];
-  return elements.map(maskMapper);
-};
-
-export const techBackEnd = () => {
-  const elements = [
-    {
-      href: '/tech-back-end-express',
-      name: 'Express',
-      description: 'Most popular backend framework on top of node.js',
-      icon: 'icon-ex',
-    },
-    {
-      href: '/tech-back-end-meteor',
-      name: 'Meteor',
-      description: 'Fullstack real-time framework',
-      icon: 'icon-meteor_',
-    },
-    {
-      href: '/tech-back-end-hapi',
-      name: 'HAPI',
-      description: 'node.js-based backend framework',
-      icon: 'icon-hapi',
-    },
-  ];
-  return elements.map(maskMapper);
-};
-
-export const techDatabase = () => {
-  const elements = [
-    {
-      href: '/tech-data-base-mongo',
-      name: 'Mongo',
-      description: 'Fast noSQL database',
-      icon: 'icon-mongo',
-    },
-    {
-      href: '/tech-data-base-mysql',
-      name: 'MySQL',
-      description: 'Most popular SQL-database',
-      icon: 'icon-mysql',
-    },
-    {
-      href: '/tech-data-base-postgresql',
-      name: 'PostgreSQL',
-      description: 'SQL-database with advanced features',
-      icon: 'icon-post',
-    },
-  ];
-  return elements.map(maskMapper);
-};
-
-export const techApiIntegration = () => {
-  const elements = [
-    {
-      href: '/tech-api-integration-rest',
-      name: 'REST',
-      description: 'Organizing your backend endpoints',
-      icon: 'icon-rest',
-    },
-    {
-      href: '/tech-api-integration-paypal',
-      name: 'PayPal',
-      description: 'Sending and receiving money online',
-      icon: 'icon-paypal',
-    },
-    {
-      href: '/tech-api-integration-graphql',
-      name: 'GraphQL',
-      description: 'Smart organizing of dataflow between frontend and backend',
-      icon: 'icon-grap',
-    },
-    {
-      href: '/tech-api-integration-braintree',
-      name: 'Braintree',
-      description:
-        'Solution for accepting, splitting andprocessing payments online',
-      icon: 'icon-brain',
-    },
-    {
-      href: '/tech-api-integration-elastic-search',
-      name: 'Elastic Search',
-      description: 'Popular search-engine',
-      icon: 'icon-el',
-    },
-    {
-      href: '/tech-api-integration-stripe',
-      name: 'Stripe',
-      description: 'Developer-friendly payments service',
-      icon: 'icon-stripe',
-    },
-  ];
-  return elements.map(maskMapper);
-};
+export const techApps = () => techAppsElements.map(maskMapper);
+export const techFrontEnd = () => techFrontEndElements.map(maskMapper);
+export const techBackEnd = () => techBackEndElements.map(maskMapper);
+export const techDatabase = () => techDatabaseElements.map(maskMapper);
+export const techApiIntegration = () => techApiIntegrationElements.map(maskMapper);
 
 export const spaceships = {
   astronaut: {
@@ -717,70 +184,16 @@ export const team = [
     key: 'spaceship',
     people: [
       {
-        name: 'Oleksiy P.',
-        position: 'Chief of Meteor Flight Research Center',
-        description: 'He has spent the third-longest time in Meteor.js space of any person. He supervises research and development of Meteor flights.',
-        avatar: 'alex_p.jpg',
-      },
-      {
         name: 'Max S.',
-        position: 'Chief of The Astronaut Office',
-        description: 'His responsibilities are coordination, scheduling, and control of all Keenethics astronauts activities.',
+        position: 'Chief Executive Officer',
+        description: 'I represent KeenEthics to the world. I define the business development strategy and make sure that it is working. KeenEthics has become my life, not my work, primarily due to our amazing team. These are the people striving to do their job to the best of their possibilities.',
         avatar: 'maks_s.jpg',
       },
       {
-        name: 'Viktoria M.',
-        position: 'Astronaut Interaction Specialist',
-        description: 'Victoria keeps track of all the movement between the missions, helps new Astronauts adopt and remain in shape over the course of their journey on our ship.',
-        avatar: 'viktoria_m.jpg',
-      },
-      {
-        name: 'Alexandr S.',
-        position: 'Mission Support Officer',
-        description: 'Knows the structure of the ship by heart. He has a unique feeling that helps him find breakages and ensure astronauts safety.',
-        avatar: 'sasha_s.jpg',
-      },
-      {
-        name: 'Ihor F.',
-        position: 'Recruitment&Brand Mission Specialist',
-        description: 'Knows no boundaries, he will find anyone anywhere. Don’t even try to hide from him.',
-        avatar: 'ihor_f.jpg',
-      },
-      {
-        name: 'Oksana P.',
-        position: 'Space Pixel Commander',
-        description: 'Can turn a few words or a code line into something beautiful.',
-        avatar: 'oksana_p.jpg',
-      },
-      {
-        name: 'Liuba S.',
-        position: 'Spaceflight Mission Specialist',
-        description: 'Discipline is her forte, she is the most punctual astronaut.',
-        avatar: 'liuba_s.jpg',
-      },
-      {
-        name: 'Artem S.',
-        position: 'Mission Support Officer',
-        description: '',
-        avatar: 'artem_s.jpg',
-      },
-      {
-        name: 'Ulyana L.',
-        position: 'Space Talants Searcher',
-        description: '',
-        avatar: 'ulyana_l.jpg',
-      },
-      {
-        name: 'Anna D.',
-        position: 'Spaceflight Mission Specialist',
-        description: '',
-        avatar: 'anna_d.jpg',
-      },
-      {
-        name: 'Tamara A.',
-        position: 'Space Office Manager',
-        description: '',
-        avatar: 'tamara_a.jpg',
+        name: 'Oleksiy P.',
+        position: 'Chief Technical Officer',
+        description: 'I am responsible for setting up development processes, ensuring code quality, mentoring both newbies and experienced developers, and choosing optimal stack and best architecture for incoming projects. I am devoted to our ambitious team, and I am passionate about the goals we pursue.',
+        avatar: 'alex_p.jpg',
       },
     ],
   },
@@ -790,343 +203,246 @@ export const team = [
     people: [
       {
         name: 'Vlad O.',
-        position: 'Full-stack js Frigate Captain',
-        description:
-          'Has a medal "For Merit in Space Exploration" for achievements in outer space researching, development and reconnaissance.',
+        position: 'Senior Software Developer',
+        description: 'My central objective is to create, educate, and motivate acceptance and appreciation of interests and ideas. Courage to take on challenges is the feature I enjoy and appreciate about KeenEthics the most.',
         avatar: 'vlad_o.jpg',
       },
       {
         name: 'Sergey G.',
-        position: 'Full-stack js Frigate captain',
+        position: 'Full-Stack Software Developer',
         description:
-          'A Strong pilot with cool UX and UI feeling and game development background. Leads gamification at Keenethics flagship.',
+          'My strengths include React, Node, Meteor, and chit-chatting. No wonder that I like to talk: KeenEthics is the best company ever with the most outstanding people.',
         avatar: 'sergei_g.jpg',
+      },
+      {
+        name: 'Viktoria M.',
+        position: 'HR manager',
+        description: 'I ensure that onboarding processes are smooth, and each member feels valued. I am also responsible for training, consulting, and assisting KeenEthics people. I love the opportunity to generate new ideas and to work with the best team.',
+        avatar: 'viktoria_m.jpg',
+      },
+      {
+        name: 'Alexandr S.',
+        position: 'Project Manager and QA Specialist',
+        description: 'My main job is to prevent project issues from occurring and to detect them if any have yet slipped through. My KeenEthics life is full of fun and various opportunities, which turns this company into something more important than a mere place of employment.',
+        avatar: 'sasha_s.jpg',
+      },
+      {
+        name: 'Ihor F.',
+        position: 'Recruitment Manager',
+        description: 'My job is to bring the best talents into the company, find efficient lecturers, strengthen the team, and organize various events to improve the company’s brand. I am inspired by the dynamic development of KeenEthics and active involvement of each team member in this process.',
+        avatar: 'ihor_f.jpg',
+      },
+      {
+        name: 'Oksana P.',
+        position: 'UI/UX Designer',
+        description: 'My job is to understand the business requirements of a client and the needs of their users, to transform them into an exceptional User Experience and a beautiful clean design. KeenEthics wins me over with open-mindedness, receptiveness to new ideas, and readiness to expand horizons.',
+        avatar: 'oksana_p.jpg',
+      },
+      {
+        name: 'Artem S.',
+        position: 'Quality Assurance Engineer',
+        description: 'I aim at determining, negotiating, and agreeing on in-house quality procedures, standards, and specifications. We as a KeenEthics team strive to maintain healthy relationships and to balance our personal and professional connections.',
+        avatar: 'artem_s.jpg',
+      },
+      {
+        name: 'Ulyana L.',
+        position: 'Talent Researcher',
+        description: 'My job is to look for smart and intelligent people to join our amazing team. In fact, these people are actually my most favorite part about working for KeenEthics, and I am always glad to help them make their first steps in the company.',
+        avatar: 'ulyana_l.jpg',
+      },
+      {
+        name: 'Tamara A.',
+        position: 'Office Manager',
+        description: 'My responsibility is to keep our team members warm, fed, and comfortable. I am also the one to extinguish the fire should it happen, but fortunately, there was no any yet. The loyalty of our team members and leaders is what makes KeenEthics stand out among other companies.',
+        avatar: 'tamara_a.jpg',
+      },
+      {
+        name: 'Andrii T.',
+        position: 'Project Manager',
+        description: 'My job is to get everything done leaving everyone happy and facilitate communication. I help my team to achieve our goals with all the support I can provide. The opportunity to work in an open and friendly environment is what I value about KeenEthics the most.',
+        avatar: 'astronauts.jpg',
       },
     ],
   },
   {
     position: 'Corvette capt',
-    key: 'corvette_captain',
+    key: 'frigate_captain',
     people: [
       {
         name: 'Yara M.',
-        position: 'Full-stack js Corvette Capt',
+        position: 'Full-Stack Software Developer',
         description:
-          'She is the first woman to have flown in Keenethics space, having been selected from more than five finalists to pilot Keen project applicants.',
+          'I write a high-quality, reusable, and maintainable code following the business idea of a client. With the KeenEthics team, there is not a single challenge that cannot be solved.',
         avatar: 'yara_m.jpg',
       },
       {
         name: 'Taras Y.',
-        position: 'Full-stack js Corvette Capt',
+        position: 'Middle JS Developer',
         description:
-          'Was chosen from a final pool of 13 candidates to fly on Reaction Commerce first manned space mission.',
+          'I am creating and working with web applications. I like Keenethics because of the people working here, ethical principles and values we cherish, interesting projects we work on, and flexible working hours.',
         avatar: 'taras_y.jpg',
       },
       {
         name: 'Serhii S.',
-        position: 'Full-stack js Corvette Capt ',
+        position: 'Back-End Software Developer',
         description:
-          'Super friendly, quiet and hard-working astronaut.',
+          'I am making sure that everything between the database and the browser works as efficiently as possible. Flexibility, personal freedom, professional development, and challenging tasks are the most outstanding benefits of working for KeenEthics.',
         avatar: 'serhii_s.jpg',
       },
       {
         name: 'Maryna Y.',
-        position: 'Full-stack js Corvette Capt',
+        position: 'Middle JS Developer',
         description:
-          'Space hot fire-show amateur, got an honors diploma in the flight school, acts as a hot second pilot in the hot shuttle mission.',
+          'I develop a clean, efficient, and reusable code, which would meet all the requirements and expectations of the client. I am always ready to back up my team since I truly enjoy what I am doing and the positive people I am working with.',
         avatar: 'maryna_y.png',
       },
       {
-        name: 'Andrij T.',
-        position: 'Full-stack js Corvette Capt',
-        description:
-          'Ph. D, he has firm and scientific approach to problem-solving and he used to be a pilot on several shuttle missions.',
-        avatar: 'andrew_t.jpg',
-      },
-      {
         name: 'Max F.',
-        position: 'Full-stack js Corvette Capt',
+        position: 'Full-Stack Software Developer',
         description:
-          'Space gamer. He is also one of the pilots who flies on one of the biggest Meteor Shuttle mission in the world.',
+          'Writing a high-quality code is both my job and my passion. The fact that KeenEthics promotes the idea of a healthy lifestyle is what I like about the company the most.',
         avatar: 'maksym_f.jpg',
       },
       {
-        name: 'Mykhailo F.',
-        position: 'Full-stack js Corvette Capt',
-        description:
-          'Has space banking background and is good at front-end and mobile fields.',
-        avatar: 'misha_f.jpg',
-      },
-      {
         name: 'Arsen T.',
-        position: 'Full-stack js Corvette Capt',
+        position: 'Full-Stack Software Developer',
         description:
-          'Space sweet Karmaman astronaut. He knows how to keep your Karma clean.',
+          'My job is to write a clean and efficient code, which would meet all the expectations of a client. The KeenEthics team is what inspires me to wake up early in the morning and to spend long hours working hard on our mutual projects.',
         avatar: 'arsen_t.jpg',
-      },
-      {
-        name: 'Yuriy G.',
-        position: 'Full-stack js Corvette Capt',
-        description:
-          'Participated in large battles as a Rookie and dreams about leading his own squad',
-        avatar: 'ura_g.jpg',
       },
     ],
   },
   {
     position: 'Capt-lieutenant',
-    key: 'capt_lieutenant',
+    key: 'frigate_captain',
     people: [
       {
         name: 'Ihor V.',
-        position: 'Full-stack js Capt-lieutenant',
+        position: 'Middle Full-Stack Software Developer',
         description:
-          'The youngest midshipman from outer space. Cool and steady even when approaching black hole.',
+          'My job is to implement the ideas of a client in an effective code. Flexibility is what I value the most about working for KeenEthics.',
         avatar: 'igor_v.jpg',
       },
       {
         name: 'Yuriy S.',
-        position: 'Full-stack js Capt-lieutenant',
+        position: 'Full Stack Developer',
         description:
-          'Was able to capture new alien ship on his first flight. Due to excellent communicative skills, first comes into contact with unknown galactic creatures.',
+          'My major duties include developing software, managing a team, estimating projects, and carrying out meetings. Yet, my favorite things about KeenEthics are the feeling of support provided by our outstanding CEO and CTO and the professionals I get to meet on a daily basis.',
         avatar: 'yurii_s.jpg',
       },
       {
         name: 'Volodymyr A.',
-        position: 'Full-stack js Capt-lieutenant',
+        position: 'Full-Stack Software Developer',
         description:
-          'He was able to transform his shuttle into cluster of micro-ships that are able to self-repair. This cluster is the most resilient fleet in the world.',
+          'I design, develop, and maintain a software product on all the stages of its lifecycle. At KeenEthics, I appreciate flexible hours, a comfortable office, and understandable executives.',
         avatar: 'volodiy_a.jpg',
       },
       {
         name: 'Taras P.',
-        position: 'Full-stack js Capt-lieutenant',
+        position: 'Full-Stack JS Developer',
         description:
-          'He has a diligent approach to every task. He is patient having long commutes to the station every day. Fond of remote missions in deep space.',
+          'My primary responsibility is to write clean and efficient code and estimate incoming projects. Readiness to pursue innovative ideas is my most favorite things about working for KeenEthics.',
         avatar: 'taras_p.jpg',
       },
       {
-        name: 'Rostyslav T.',
-        position: 'Full-stack js Capt-lieutenant',
-        description:
-          'Was create AI-bots powered space craft. You may never be sure whether you are talking to him, or to his AI.',
-        avatar: 'rostyk_t.jpg',
-      },
-      {
         name: 'Vlad E.',
-        position: 'Full-stack js Capt-lieutenant',
+        position: 'Software Engineer',
         description:
-          'Literally knows what «with fire and sword» means.',
+          'This position has enabled me to turn my passion for coding into a dream job. The opportunity to freely manage my working day and week is the most appealing to me thing in KeenEthics.',
         avatar: 'vlad_e.jpg',
       },
     ],
   },
   {
     position: 'Midshipman',
-    key: 'midshipman',
+    key: 'frigate_captain',
     people: [
     ],
   },
   {
     position: 'Astronaut',
-    key: 'astronaut',
+    key: 'frigate_captain',
     people: [
       {
-        name: 'Taras K.',
-        position: 'Full-stack js Astronaut',
-        description: '',
-        avatar: 'taras_k.jpg',
-      },
-      {
         name: 'Oleh K.',
-        position: 'Full-stack js Astronaut',
-        description: '',
+        position: 'Full-Stack JavaScript Developer',
+        description: 'Creating software that will meet all the expectations and requirements is my central objective. There is not a single thing I find imperfect about working for KeenEthics. So far, so good.',
         avatar: 'oleh_k.jpg',
       },
       {
         name: 'Max S.',
-        position: 'Full-stack js Astronaut',
-        description: '',
+        position: 'HTML Coder',
+        description: 'All the tasks related to the development of web interfaces lie upon my shoulders. Friendly team and flexible working hours are what motivates me to keep going as a part of the KeenEthics team.',
         avatar: 'max_s.jpg',
       },
       {
-        name: 'Vadym S.',
-        position: 'Full-stack js Astronaut',
-        description: '',
-        avatar: 'vadym_s.jpg',
+        name: 'Dmytro P.',
+        position: 'Full-Stack Software Developer',
+        description: 'My central objective is to achieve an optimal result. At KeenEthics, I find the personal and professional freedom to be the most valuable benefit, which inspires and motivates me to devote myself to the common goal.',
+        avatar: 'dmytro_p.jpg',
       },
       {
-        name: 'Dmytro P.',
-        position: 'Full-stack js Astronaut',
-        description: '',
-        avatar: 'dmytro_p.jpg',
+        name: 'Anton M.',
+        position: 'Full-Stack Software Developer',
+        description: 'My job is to provide maintainable clean code for the projects I am assigned to and to make sure that it is timely tested. The KeenEthics team is always willing to change for the sake of our common good and for the benefit of our partners.',
+        avatar: 'anton_m.jpg',
+      },
+      {
+        name: 'Iryna K.',
+        position: 'Lead Generation Manager',
+        description: 'I am responsible for lead generation and communication, marketing activities, and content management on LinkedIn and Twitter. I like that the KeenEthics team members are always open for a small chat during the coffee break and ready to provide professional help.',
+        avatar: 'iryna_k.jpg',
+      },
+      {
+        name: 'Marian Y.',
+        position: 'Quality Assurance Engineer',
+        description: 'I test software and make sure that our products are bug-free. My most favorite thing about KeenEthics is the professionalism of our team. The atmosphere in the office is favorable for creative thinking, brainstorming, learning, and advancing professional expertise.',
+        avatar: 'marian_y.jpg',
+      },
+      {
+        name: 'Ilona-Mariia Sh.',
+        position: 'Lead Generation Manager',
+        description: 'Communication with clients and marketing activities are my major job objectives. KeenEthics inspires me with an excellent atmosphere, great relationships between people, flexibility, and the ability to develop myself personally and professionally.',
+        avatar: 'ilona_sh.jpg',
+      },
+      {
+        name: 'Oleksandra G.',
+        position: 'Quality Assurance Engineer',
+        description: 'I am a person dealing with software testing and case writing processes. Great teamwork and readiness of each member to give a helping hand are what ensures the excellence of the KeenEthics services and a pleasant atmosphere in the office.',
+        avatar: 'oleksandra_g.jpg',
+      },
+      {
+        name: 'Valerii Sh.',
+        position: 'Quality Assurance Engineer',
+        description: 'I am searching for bugs and issues in code. The greatest thing about working for KeenEthics are the people I am working here with because each team member is an outstanding, interesting, and talented person.',
+        avatar: 'valerii_sh.jpg',
+      },
+      {
+        name: 'Borys K.',
+        position: 'Full-Stack Software Developer',
+        description: 'I am creating and managing clean applications. Each member of the KeenEthics team is an important and highly valued part, and the voice of every person matters. This is what makes KeenEthics stand out as a great employer and a reliable partner.',
+        avatar: 'borys_k.jpg',
+      },
+      {
+        name: 'Oleg Z.',
+        position: 'Full-Stack Software Developer',
+        description: 'I handle all the stages of creating a product, from managing databases and servers to engineering a system and communicating with a client. As I see it, amazing people and a friendly approach to partners and customers is the key to KeenEthics success.',
+        avatar: 'oleh_zz.jpg',
+      },
+      {
+        name: 'Oksana V.',
+        position: 'Project Manager',
+        description: 'I coordinate the project team, communicate with clients, and bear principal responsibility for the execution of project deliverables. Here at KeenEthics, each team member is always heard because all the opinions matter.',
+        avatar: 'oksana_v.jpg',
+      },
+      {
+        name: 'Tania M.',
+        position: 'Content Writer',
+        description: 'My job is to communicate the vision of KeenEthics to the broad audience through various articles, newsletters, social media posts, and brochures. In my writing, I strive to prove that the KeenEthics team is determined to get the job done without compromising deadlines or quality.',
+        avatar: 'tania_m.jpg',
       },
     ],
   },
 ];
 
-export const works = [
-  {
-    title: 'Knotel',
-    href: '/project-knotel',
-    imgSrc: 'Knotel.jpg',
-    category: {
-      main: ['Consumer apps'],
-      additional: ['Real Estate'],
-    },
-    description: 'Headquarters as a Service',
-  },
-  {
-    title: 'The Check Network',
-    href: '/project-the-check-network',
-    imgSrc: 'The-Check-Network.jpg',
-    category: {
-      main: ['Consumer apps'],
-      additional: ['E-commerce'],
-    },
-    description: 'Commerce platform for effective SEO , It also allows for combining of several commerce platforms in one',
-  },
-  {
-    title: 'Pollen',
-    href: '/project-pollen',
-    imgSrc: 'Pollen.jpg',
-    category: {
-      main: ['Educational apps'],
-    },
-    description: 'Organizing social-campaigns via Gmail contacts',
-  },
-  {
-    title: 'Wargaming',
-    href: '/project-wargaming',
-    category: {
-      main: ['Business apps'],
-    },
-    imgSrc: 'Wargaming.jpg',
-    description: 'Platform for forecasting and validation of business strategies for companies.',
-  },
-  {
-    title: 'BarFrogs',
-    href: '/project-barfrogs',
-    category: {
-      main: ['Consumer apps'],
-    },
-    imgSrc: 'BarFrogs.jpg',
-    description: 'Find an event you are interested in',
-  },
-  {
-    title: 'Black Book',
-    href: '/project-black-book',
-    category: {
-      main: ['Business apps'],
-    },
-    imgSrc: 'Black-Book.jpg',
-    description: 'Display the statistics of company employees',
-  },
-  {
-    title: 'ComicEnglish',
-    href: '/project-comic-english',
-    imgSrc: 'ComicEnglish.jpg',
-    category: {
-      main: ['Educational apps'],
-      additional: ['E-Learning'],
-    },
-    description: 'Learn English while chatting with AI',
-  },
-  {
-    title: 'Paceup',
-    href: '/project-paceup',
-    imgSrc: 'paceup.png',
-    category: {
-      main: ['Business apps'],
-      additional: ['AI'],
-    },
-    description: 'Increasing loyalty of existing clients',
-  },
-  {
-    title: 'Knote',
-    href: '/project-knote',
-    imgSrc: 'Knote.jpg',
-    category: {
-      main: ['Business apps'],
-      additional: ['Team collaboration tool'],
-    },
-    description: 'A tool for online collaboration and task-management',
-  },
-  {
-    title: 'My Grass Growth',
-    href: '/project-my-grass-growth',
-    imgSrc: 'My-Grass-Growth.jpg',
-    category: {
-      main: ['Business apps'],
-      additional: ['Farming'],
-    },
-    description: 'Keep you cows healthy and well-fed',
-  },
-  {
-    title: 'WorkBooking',
-    href: '/project-workbooking',
-    imgSrc: 'Workbooking.jpg',
-    category: {
-      main: ['Consumer apps'],
-      additional: ['Job platform'],
-    },
-    description: 'Get hired or find someone to do the job for you',
-  },
-  {
-    title: 'Tetrami',
-    href: '/project-tetrami',
-    imgSrc: 'Tetrami.jpg',
-    category: {
-      main: ['Consumer apps'],
-      additional: ['E-commerce'],
-    },
-    description: 'Online discounting',
-  },
-  {
-    title: 'Phenix',
-    href: '/project-phenix',
-    imgSrc: 'Phenix.jpg',
-    category: {
-      main: ['Business apps'],
-    },
-    description: 'Online video-streaming',
-  },
-  {
-    title: 'Plutio',
-    href: '/project-plutio',
-    imgSrc: 'Plutio.jpg',
-    category: {
-      main: ['Business apps'],
-    },
-    description: 'Business management platform',
-  },
-  {
-    title: 'SelfLeaders',
-    href: '/project-self-leaders',
-    imgSrc: 'SelfLeaders.jpg',
-    category: {
-      main: ['Educational apps'],
-      additional: ['E-Learning'],
-    },
-    description: 'Personal Growth Tool',
-  },
-  {
-    title: 'Pree',
-    href: '/project-pree',
-    imgSrc: 'Pree.jpg',
-    category: {
-      main: ['Consumer apps'],
-      additional: ['IoT'],
-    },
-    description: 'Stop losing your stuff',
-  },
-  {
-    title: 'Banker Advisor',
-    href: '/project-banker-advisor',
-    imgSrc: 'Banker-Advisor.png',
-    category: {
-      main: ['Consumer apps'],
-    },
-    description: 'Investment banking tool',
-  },
-];
+export const works = worksElements;

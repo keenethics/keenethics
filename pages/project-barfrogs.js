@@ -46,8 +46,10 @@ const ProjectBarfrogs = ({ url }) => (
               There are a couple of reasons why using Bar Frogs app is better than checking
               out the events on Facebook or using Google Maps. Both platforms are convenient
               and user-friendly, but in order to find something either in Google or on Facebook,
-              the user needs to put it in the search query. Bar Frogs app functions a bit differently
-              and the main benefit that it provides is the customization. The user chooses what he or
+              the user needs to put it in the search query. Bar Frogs app functions a bit
+              differently
+              and the main benefit that it provides is the customization. The user chooses
+              what he or
               she wants to do, and the app offers the suggestions that match the preferences.
             </p>
             <p>

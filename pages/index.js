@@ -1,8 +1,6 @@
-/* global Skype */
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
@@ -25,7 +23,7 @@ const companyData = {
   description: 'Custom Software Development Company',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '3 Lytvynenka Street',
+    streetAddress: 'Kulparkivska St, 59',
     addressLocality: 'Lviv',
     postalCode: '79000',
     addressCountry: 'Ukraine',
@@ -71,15 +69,18 @@ export default class Index extends React.Component {
                 5-stars rated company at Clutch
               </a>
             </div>
-            <h1>Ethical<br />development<br />of keen web-apps</h1>
+            <h1>Keen & Ethical<br />Software <br />Development</h1>
             <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
+            <Link href="/contacts?activeForm=estimate">
+              <a className="button">Free estimate</a>
+            </Link>
             <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
               <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
-                <a href="https://goo.gl/maps/yYJjPymkW7w" rel="noopener noreferrer" target="_blank">
-                  <span itemProp="streetAddress">3 Lytvynenka Street</span>
+                <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                  <span itemProp="streetAddress">Kulparkivska St, 59</span>
                 </a>
                 <i><span itemProp="addressLocality">Lviv</span>, <span itemProp="addressRegion">Ukraine</span></i>
               </div>
@@ -101,7 +102,7 @@ export default class Index extends React.Component {
               </div>
             </div>
           </div>
-          <div className="home-page-social">
+          <div className="social-icons home-page-social">
             <SocialButton />
           </div>
           <div className="home-page-background">

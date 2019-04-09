@@ -1,0 +1,120 @@
+.checkbox {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 26px;
+  margin: 4px 0;
+  min-height: 18px;
+
+  label {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: url('/static/images/svg/checkbox.svg');
+      background-size: 14px;
+      background-repeat: no-repeat;
+      transition: all 0.2s;
+      z-index: 10;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        transition: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1px solid #9098a9;
+      z-index: 1;
+    }
+
+    &:hover {
+      &::after {
+        border-color: #00539a;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      &::after {
+        transition: none;
+      }
+    }
+  }
+
+  &.loading {
+    label::after {
+      border: 1px solid transparent;
+      animation: pulse 2s infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      label::after {
+        animation: none;
+      }
+    }
+  }
+
+  [type='checkbox'] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    visibility: hidden;
+
+    &:checked {
+      + label::before {
+        display: block;
+      }
+      + label::after {
+        background-color: #b4d0ff;
+        border-color: #00539a;
+      }
+    }
+
+    &:disabled {
+      + label {
+        color: #eee;
+        cursor: auto;
+      }
+
+      + label::before {
+        opacity: 0.6;
+      }
+
+      + label::after {
+        background-color: #eee;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: #eee;
+    }
+
+    50% {
+      background-color: #eee;
+    }
+
+    100% {
+      background-color: #eee;
+    }
+  }
+}

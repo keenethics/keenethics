@@ -94,6 +94,29 @@
       }
     }
   }
+  .button {
+    border-radius: 35px;
+    padding: 18px 60px;
+    margin-top: 58px;
+    display: inline-block;
+    height: 52px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background: 0 0;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, #de3535 0%, #e3621d 100%);
+    box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 17px;
+  }
 }
 .home-page-content-link a {
   font-size: 14px;
@@ -128,7 +151,7 @@
   width: 100%;
   overflow: hidden;
   padding: 30px 0 40px;
-  margin: 90px 0 0;
+  margin: 35px 0 0;
 
   .contact-item {
     float: left;
@@ -194,19 +217,26 @@
     }
   }
 }
-.home-page-social {
-  position: absolute;
-  width: 30px;
-  height: 100%;
-  right: 20px;
-  top: 0;
-  font-size: 0;
-  z-index: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
+.social-icons {
+  &.home-page-social {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: 20px;
+    top: 0;
+    font-size: 0;
+    z-index: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a {
+      opacity: .15;
+      &:hover {
+        opacity: .35;
+      }
+    }
+  }
   span {
     display: inline-block;
     vertical-align: top;
@@ -224,13 +254,8 @@
         display: block;
         width: 30px;
         height: 30px;
-        opacity: .3;
         background-size: 100%;
         margin: 0 0 10px;
-
-        &:hover {
-          opacity: 1;
-        }
       }
       &.soc-1 a {
         background: url('/static/images/svg/soc-1.svg') no-repeat;
@@ -252,6 +277,9 @@
       }
       &.soc-7 a {
         background: url('/static/images/svg/soc-7.svg') no-repeat;
+      }
+      &.soc-instagram a {
+        background: url('/static/images/svg/soc-instagram.svg') no-repeat;
       }
     }
   }
@@ -682,6 +710,7 @@
     box-sizing: border-box;
     background: none;
     outline: none;
+    resize: none;
   }
 }
 .career-form-status {

@@ -1,67 +1,87 @@
-Author: Alexey Hermann
-Title: Prototype
-Subtitle: Prototype
-Meta title: Prototype
-Meta description: What is Prototype and How to Eat it in a Right Way
-Preview image: /static/posts/prototype-preview.png
+Author: Max Savonin
+Title: What Is Prototyping and Why Do We Need It
+Subtitle: What Is Prototyping and Why Do We Need It - Keenethics Blog
+New Date: 1540884600000
+Meta title: What Is Prototyping and Why Do We Need It - Keenethics Blog
+Meta description: What is Prototype and why prototyping is important? Benefits of using prototyping.
+Categories: Tech
+Preview image: /static/posts/prototype-prew.jpg
 
-![Heroes](/static/posts/prototype-in-article.png)
+![Prototype](/static/posts/prototype.jpg)
 
-Has it ever occured to you that you see a familiar word but it feels like it has a different meaning in certain cases?
+<h1 style="text-align: center;">What Is Prototyping and Why Do We Need It</h1>
 
-## Why Do I Need to Know That?
-Not knowing this term can lead to misunderstandings when communicating with a development team you may lose time and also appear ignorant.
+<p>The word “Prototype” is a fairly common word, but since it has been adopted by the IT community, it acquired additional meanings. Prototyping can be an important part of the product development process. According to <a href="//www.quora.com/How-many-apps-are-submitted-to-Apples-App-Store-on-an-average-day" target="_blank" rel="noopener noreferrer nofollow">Quora</a>, a knowledge sharing platform, there are at least 1000 apps submitted per day, and each one of them had to go through the prototyping stage before reaching the final product.</p>
 
-This information is no secret to anyone, but for some reason it is usually learned from a word of mouth. Let's save you time figuring it out.
+The information we will share with you is not a well-kept secret, but it does tend to slip through the cracks from time to time. Let us save you some time by unwrapping the two main meanings of the word “prototype”, the importance of prototyping, and what it can be confused with.
 
-According to [Quora](https://www.quora.com/How-many-apps-are-submitted-to-Apples-App-Store-on-an-average-day) these days, at least 1000 apps are submitted per day and all of them went through the prototyping stage.
+## What is Prototyping
 
-## What it is.
-_Meaning 1_
-1. Have you got the prototype ready?
-2. Yes. We will send you the link to “invision”.
+*Meaning 1*
 
-In this dialogue a person is talking about prototype that is basically pictures of your app's interface with buttons. You can hear both versions «Prototype» and «Clickable Prototype».  The second one allows to go from one screen to another when buttons are clicked to demonstrate user flows.
+Imagine this conversation:
 
-Invision means the popular online service [Invision](https://www.invisionapp.com/). It is often used by UX Designers to make prototype and share it by copying a link. There are many more other services similar to [InVision](https://www.invisionapp.com/): [Marvel](https://marvelapp.com/), [Webflow](https://webflow.com/), [Proto.io](https://proto.io/), [Justinmind](https://www.justinmind.com/), [Origami Studio](https://origami.design/)
+<p style="font-style: italic; text-align: center;">
+   “Do you have the prototype ready?”</br>
+   “Yes, we will send you the link to InVision.”
+</p>
 
-InVision is just one of the most popular prototyping tools around.
+In the above scenario, a person is talking about a prototype that is basically pictures of your app's interface with buttons. As a variation, you could also hear “Clickable Prototype”, which is a prototype that allows you to go from one screen to another by clicking on buttons to understand user flows.
 
-## How Long?
-No coding involved, just drawing in one of mentioned above applications.
-It should take very few additional hours on top of design work. If your designer says you need to pay him double for the prototype of what you already have as the design then it’s a lie.
+<p>
+   InVision is a popular online service, often used by UX designers to create a prototype and share it by copying a link. Some other similar service platforms include
+   <a href="//marvelapp.com/" target="_blank" rel="noreferrer noopener nofollow">Marvel</a>,
+   <a href="//webflow.com/" target="_blank" rel="noreferrer noopener nofollow">Webflow</a>,
+   <a href="//proto.io/" target="_blank" rel="noreferrer noopener nofollow">Proto.io</a>,
+   <a href="//www.justinmind.com/" target="_blank" rel="noreferrer noopener nofollow">Justinmind</a>,
+   <a href="//origami.design/" target="_blank" rel="noreferrer noopener nofollow">Origami Studio</a>.
+</p>
 
-_Meaning 2_
-1. Have you got the prototype ready?
-2. Yes we are testing it now, it's a little buggy, but we're getting there.
+## Timeframe
 
-In this dialogue a prototype refers to a very basic version of your app that hardly works. It should never see the world at this stage. It is only for internal use on the production site or among close friends, showing it to strangers is like leaving your house without doing your buttons up – pointless, rude and socially unacceptable.
+The main point to remember here is that no coding is involved in creating the prototype, only drawing using one of the applications mentioned above. It should take very few additional hours on top of the main design process. Be wary if your designer says you need to pay him double for a prototype of something you already have, he might be trying to play you out of extra cash.
 
-## How Long?
+*Meaning 2*
+<p style="font-style: italic; text-align: center;">
+   “Do you have the prototype ready?”</br>
+   “Yes, we are testing it now, it's a little buggy, but we're getting there.”
+</p>
 
-Coding is involved. Depending on the complexity of an app a prototype in this meaning would take considerably more time than the design + actual design. In reality even more.
+In this dialogue, the word “prototype” refers to a very basic version of your website or mobile app, which is not a final product. It should never see the world at this stage. It’s intended for internal use on the production site only or to be shared with close friends.
 
-## What it can Be Confused With.
- _Confusion 1_
+Showing this preliminary model of your product to strangers is like leaving your house with your fly down – socially unacceptable and doesn’t make sense.
 
-It can be confused with an MVP (Minimum Viable Product). MVP is needed to roll out the product on the market and start getting the first feedback from users. So in order to cut costs the product owners would limit themselves only to the most important functionality when building an MVP, which is a wise thing to do, but unlike prototype it works properly and has no bugs. An app can be so simple no functionality will be added after the MVP is released.
+## Timeframe
 
-_Confusion 2_
+Coding is involved in creating this prototype. Depending on the complexity of your website or mobile app, this prototype would take considerably more time on top of the design process.
 
-It can also be confused with a mockup. Mockup is just an image. It would not show animations of transitioning between pages for example. Buttons cannot be clicked. No movement whatsoever.
+## What It Can Be Confused With
 
-## Why Prototype is Important.
-1. Shareholders can get the taste of your application so that you can justify the funding.
-2. Frontend Developers will look at the invision like prototype and implement it in a form of code. Also there are pictures, icons that make a front end developer's life much easier. However a mockup would do just as fine guiding a developer.
-3. [Usability Testing.](https://usabilitygeek.com/usability-testing-prototypes/) Testing your app at this stage of development allows to avoid mistakes and spot bugs very early. It’s like making corrections in a plan of a building instead of rebuilding an actual house after it has already been built.
-4. Quick Market Validation. The idea can be assessed and compared to existing competitors.
-5. A lot of ideas can come to you because a prototype is  the working model of the end product and it feels like a real application.
+*Confusion 1*
 
-## How to Save on This/When can I Avoid This Step?
-Most development agencies and design studios will offer you entire spectrum of their services.
+A prototype can be confused with an MVP (Minimum Viable Product). MVP is not a final product yet, but it works as if it is. It is needed to roll out the product on the market and start usability testing and getting the first feedback from users. In order to cut costs when building and designing an MVP, the product owners would pick and focus on the most important functions of their app, which is a wise thing to do. Think of it as the very basic version of the finished product. Unlike prototype, an MVP works properly and has no bugs. Sometimes, an app can be so simple that no additional functionality needs to be added after the MVP is released.
 
-If your app is more than just a registration form – you should start with a clickable prototype.
+*Confusion 2*
 
-So a prototype can mean  —  set of images made in an Invision like online service that allows users to click buttons and go from one screen of an app to another OR a roughly working version of your app, that is not for the end-customer.
+It can also be confused with a mockup. A mockup is just an image. It would not show animations of transitioning between pages, for example, buttons can’t be clicked, there is no movement whatsoever.
 
-When you need a Clickable Prototype contact us for free consultation at [Keenethics.com](https://keenethics.com/)
+## Reasons Why Prototyping is Important
+
+The importance of prototyping in product development process can’t be overstated. We’ve listed some of the prototyping benefits below.
+
+1. Shareholders and potential investors can get the taste of your application and get a basic understanding of the product faster and cheaper so that you can secure the funding.
+2. Frontend Developers will use a working prototype to implement it in a form of a code. A prototype would have pictures and icons that make a front end developer's task much easier. However, a mockup would do just as good guiding a developer.
+3. The importance of prototyping shows in Usability Testing. Testing your app at this stage of development allows avoiding mistakes and spotting bugs very early in the process. Making corrections to a working prototype is like making corrections in the architectural plan of a building instead of fixing the house after it has already been built.
+4. Your idea can be quickly assessed and compared to existing competitors thanks to a prototype.
+5. Because a prototype is a working model of the end product and it feels like a real application, it creates solid ground for your ideas to take flight.
+6. Making a prototype could be the best way to determine the final specifications of your finished product based on a preliminary model.
+
+## Do I really need to create a prototype?
+
+To sum it up, a prototype can mean  two things: first, a set of images made in an InVision-type online service, which allows users to click buttons and go from one screen of an app to another; and second, a somewhat working version of your app, that is not intended for the end-customer.
+
+In our opinion, if your app is more than just a registration form – you should start with a clickable prototype. As a company, you should evaluate the importance of prototyping for your needs and then reach out to a trusted company for help. Most development agencies and design studios will offer you an entire spectrum of their services including making a prototype.
+
+<p>
+   When you need a Clickable Prototype, contact us for a free consultation at <a href="/" target="_blank" rel="noreferrer noopener">Keenethics.com</a>.
+</p>

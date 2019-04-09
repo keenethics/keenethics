@@ -109,10 +109,10 @@ const TechAppsAcc = ({ url }) => (
 );
 
 TechAppsAcc.propTypes = {
-  url: PropTypes.object
+  url: PropTypes.object,
 };
 TechAppsAcc.defaultProps = {
-  url: {}
+  url: {},
 };
 
 export default TechAppsAcc;

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#0c2fdf';
 
@@ -32,11 +33,19 @@ const ProjectBankerAdvisor = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              title="Mike Casey, Georgia, USA"
+              photo="static/portfolio/client-banker-advisor.jpeg"
+              feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high quality product & ensuring their continued engagement. KeenEthics’ skillset was exactly what was needed, & despite a language difference, communications never suffered."
+              link="https://clutch.co/profile/keenethics#review-339220"
+              style={{ titleWidth: '100px' }}
+            />
             <div className="title">Our part</div>
             <p>
               Prior to cooperating with any bank, a buyer needs to learn about bank fees,
               interest rates, and customer services. Asking an expert for advice could make
-              one’s business up and running. What if we could bring an expert opinion into the smartphone?
+              one&apos;s business up and running. What if we could bring an expert opinion
+              into the smartphone?
             </p>
             <p>
               The idea behind BankerAdvisor was to create an efficient investment banking
@@ -47,7 +56,8 @@ const ProjectBankerAdvisor = ({ url }) => (
             </p>
             <p>
               For us, this app is an opportunity to make the investment banking more efficient by
-              providing unbiased reviews and showing the advisory services their weaknesses and strengths.
+              providing unbiased reviews and showing the advisory services their weaknesses and
+              strengths.
             </p>
             <img
               src="/static/images/project/banker-advisor-prew-1.jpg"
@@ -170,7 +180,7 @@ const ProjectBankerAdvisor = ({ url }) => (
             </p>
             <p>
               The website has flexible payment plans and works in sync with the Stripe
-              payment platform. Moreover, we have implemented "complex search" and will
+              payment platform. Moreover, we have implemented &ldquo;complex search&rdquo; and will
               work on intelligence search and smart recommendations in the next version.
             </p>
             <div className="title">Result</div>
@@ -210,18 +220,6 @@ const ProjectBankerAdvisor = ({ url }) => (
               alt="Banker Advisor"
               className="image-gaps"
             />
-            <div className="title">Client’s Feedback</div>
-            <div className="project-content-chapter">
-              <p className="chapter-paragraph italic quote">
-                “Due to their responsiveness & patience, the collaboration itself progressed
-                smoothly from start to finish, resulting in a high-quality product & ensuring
-                their continued engagement. KeenEthics’ skill set was exactly what was needed,
-                & despite a language difference, communications never suffered.”
-              </p>
-            </div>
-            <p>
-              <span className="semi-bold">The project mastermind Mike Casey about working with Keen.Ethics</span>
-            </p>
             <a
               href="http://bankeradvisor.com"
               rel="noopener noreferrer"

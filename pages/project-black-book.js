@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#3c67ab';
 
@@ -15,7 +16,7 @@ const ProjectBlackBook = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">Black Book</h2>
-              <h3 className="duration"><span>Duration:</span> 6 months, one month left. 1 developer.</h3>
+              <h3 className="duration"><span>Duration:</span> 7 months. 1 developer.</h3>
               <p className="description">
                 Display the statistics of company employees
               </p>
@@ -35,6 +36,10 @@ const ProjectBlackBook = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              feedback="The team was multi-cultural and able to address any communication challenges before they became a problem. Keenethics provided various solutions to problems and consulted on the benefits of each. They have a good network of resources and are able to bring in the best people for each job."
+              link="https://clutch.co/profile/keenethics#review-183862"
+            />
             <p>
               An app helps track statistics on company employees around the world in real time. An
               enterprise solution for a company with numerous employees.

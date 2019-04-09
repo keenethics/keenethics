@@ -16,7 +16,7 @@ const Works = ({ works }) => (
                   <h3 className="portfolio__item-title">{work.title}</h3>
                   <ul className="portfolio__item-categories">
                     {
-                      work.category.main && work.category.main != 'Other'
+                      work.category.main && work.category.main !== 'Other'
                         ? work.category.main.map(category => (<li className="portfolio__item-category" key={category}>{category}</li>))
                         : null
                     }

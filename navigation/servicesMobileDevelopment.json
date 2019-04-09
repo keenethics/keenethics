@@ -1,0 +1,20 @@
+[
+  {
+    "href": "/services-mobile-development-apple",
+    "name": "iOS development",
+    "name2": "iOS",
+    "metaTitle": "iOS Development Company | App Design & Development‎ - Keenethics",
+    "tabsDescription": "14 apps developed",
+    "description": "Mobile applications for popular platform",
+    "icon": "icon-apple"
+  },
+  {
+    "href": "/services-mobile-development-android",
+    "name": "Android development",
+    "name2": "Android",
+    "metaTitle": "Android App Development Company - Keenethics",
+    "tabsDescription": "23 apps developed",
+    "description": "Most popular Linux-based mobile OS",
+    "icon": "icon-android"
+  }
+]

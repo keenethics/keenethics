@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#4d48b4';
 
@@ -33,6 +34,11 @@ const ProjectPrix = ({ url }) => (
             <Background />
           </div>
           <div className="project-content-more">
+            <PortfolioFeedback
+              title="Ahmed-Jacob Aly, Germany"
+              photo="static/portfolio/client-pree.jpg"
+              feedback="Committed team for a starter."
+            />
             <div className="title">What is the purpose of the app?</div>
             <p>
               Suppose you often lose your keys and afterwards you spend a lot of time looking for
@@ -212,13 +218,6 @@ const ProjectPrix = ({ url }) => (
               alt="Pree site"
               className="image-gaps"
             />
-            <div className="project-feedback">
-              <h3>Client’s Feedback</h3>
-              <p>
-                I am really impressed with the different tools and tips that we also got to bring
-                with us, extremely useful.
-              </p>
-            </div>
             <a
               href="https://www.prix.ai"
               rel="noopener noreferrer"

@@ -3,15 +3,25 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Ship from '../components/pages/about/ship-item';
 
-const getSpaceships = team => team.map((t) => <Ship key={nanoid()}
-                                                    ship={t}
-                                                    worker={t}/>);
+import { spaceships } from '../main.config';
+
+function splitTo(arr, n) {
+  const plen = Math.ceil(arr.length / n);
+
+  return arr.reduce((p, c, i) => {
+    if (i % plen === 0) {
+      p.push([]);
+    }
+    p[p.length - 1].push(c);
+
+    return p;
+  }, []);
+}
 
 export default class AboutTeam extends React.Component {
   static propTypes = {
@@ -24,11 +34,35 @@ export default class AboutTeam extends React.Component {
     team: [],
   };
 
+  state = {
+    activeId: 'first',
+  }
+
   static getInitialProps = async () => {
     const response = await fetch(`${BACKEND_URL}/team-list`);
     const team = await response.json();
     return { team };
   };
+
+  setActiveId = activeId => this.setState({ activeId })
+
+  getSpaceships = team => team.map((subteam) => {
+    const spaceship = spaceships[subteam.key];
+    const numberOfShips = Math.ceil(subteam.people.length / spaceship.capacity);
+    const parade = splitTo(subteam.people, numberOfShips);
+
+    return parade.map((p, index) => (
+      p.map(worker => (<Ship
+        key={`${worker.name}-${index}`}
+        ship={subteam}
+        worker={worker}
+        isFirstItem={subteam.key === 'spaceship' && index === 0}
+        id={`${worker.name}-${index}`}
+        activeId={this.state.activeId}
+        changeId={this.setActiveId}
+      />))
+    ));
+  });
 
   render() {
     const { url, team } = this.props;
@@ -40,7 +74,7 @@ export default class AboutTeam extends React.Component {
             <h1 className="team-page-title">Team <span>Astronaut office</span></h1>
             <div className="ships">
               <div className="ship-columns">
-                {getSpaceships(team)}
+                {this.getSpaceships(team)}
               </div>
             </div>
           </div>
