@@ -3,7 +3,7 @@ Title: Indoor Positioning in Retail
 Subtitle: Indoor Positioning in Retail - Keenethics Blog
 Meta title: Indoor Positioning in Retail - Keenethics Blog
 Meta description: For a retailer, it opens unlimited marketing opportunities and boosts engagement. For a customer, it makes shopping easier, faster, and more efficient.
-Categories: Business guide
+Categories: Business guide, Tech
 Preview image: /static/posts/indoor-positioning-in-retail/indoor-positioning-in-retail-prew.jpg
 
 ![Indoor Positioning in Retail](/static/posts/indoor-positioning-in-retail/indoor-positioning-in-retail.jpg)
