@@ -15,7 +15,7 @@ import Layout from '../components/layout/main';
 export default class Careers extends React.Component {
   static propTypes = {
     url: PropTypes.object,
-    team: PropTypes.array,
+    careers: PropTypes.array,
   };
 
   static defaultProps = {
@@ -24,7 +24,7 @@ export default class Careers extends React.Component {
   };
 
   static getInitialProps = async () => {
-    const response = await fetch(`${BACKEND_URL}/careers-list`);
+    const response = await fetch(`${BACKEND_URL}/careers-list`, { cache: 'no-cache' });
     const careers = await response.json();
     return { careers };
   };
@@ -135,7 +135,7 @@ export default class Careers extends React.Component {
   }
   getCareersItems(even) {
     const { activeItemIndex } = this.state;
-    // const { careers } = this.props;
+    const { careers } = this.props;
 
     return careers.reduce((acc, item, i) => {
       const element = (
@@ -250,7 +250,6 @@ export default class Careers extends React.Component {
   }
   render() {
     const { url, careers } = this.props;
-
     const { sliderIsActive, activeItemIndex } = this.state;
 
     if (this.slider && !activeItemIndex) {

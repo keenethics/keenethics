@@ -46,23 +46,14 @@ export default class AboutTeam extends React.Component {
 
   setActiveId = activeId => this.setState({ activeId })
 
-  getSpaceships = team => team.map((subteam) => {
-    const spaceship = spaceships[subteam.key];
-    const numberOfShips = Math.ceil(subteam.people.length / spaceship.capacity);
-    const parade = splitTo(subteam.people, numberOfShips);
-
-    return parade.map((p, index) => (
-      p.map(worker => (<Ship
-        key={`${worker.name}-${index}`}
-        ship={subteam}
-        worker={worker}
-        isFirstItem={subteam.key === 'spaceship' && index === 0}
-        id={`${worker.name}-${index}`}
-        activeId={this.state.activeId}
-        changeId={this.setActiveId}
-      />))
-    ));
-  });
+  getSpaceships = (team = []) => team.map((worker, index) => (<Ship
+    key={`${worker.name}-${index}`}
+    worker={worker}
+    isFirstItem={worker.key === 'spaceship' && index === 0}
+    id={`${worker.name}-${index}`}
+    activeId={this.state.activeId}
+    changeId={this.setActiveId}
+  />));
 
   render() {
     const { url, team } = this.props;

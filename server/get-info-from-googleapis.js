@@ -1,12 +1,11 @@
 const { google } = require('googleapis');
-const path = require('path');
+const { spreadSheet } = require('./config');
 
-// FIXME: export to env variables
-const TEAM_SHEET_ID = '18PXulnsVlgrHFHh7YLz6bkxypTlir8tZLeZWHNiGiyI';
-const CREDS_FILE = 'dauntless-theme-207811-a063c4c9e36d.json';
+const TEAM_SHEET_ID = spreadSheet.id;
+const CREDS_FILE = spreadSheet.securityFile;
 const scopes = ['https://www.googleapis.com/auth/drive.readonly'];
-const TEAM_RANGE = 'team!A1:Z999';
-const CAREERS_RANGE = 'careers!A1:Z999';
+const TEAM_RANGE = spreadSheet.teamRange;
+const CAREERS_RANGE = spreadSheet.careersRange;
 
 const ranges = [TEAM_RANGE, CAREERS_RANGE];
 
@@ -51,7 +50,7 @@ class DataStore {
   }
 
   getSheetValues(valueRanges, rangeName) {
-    return valueRanges.find(v => v.range === rangeName).values;
+    return valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
   }
 
   async getData() {
@@ -61,7 +60,7 @@ class DataStore {
 
     try {
       const client = await google.auth.getClient({
-        keyFile: path.join(__dirname, CREDS_FILE),
+        keyFile: CREDS_FILE,
         scopes,
       });
 
