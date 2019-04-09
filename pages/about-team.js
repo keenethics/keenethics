@@ -8,21 +8,6 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Ship from '../components/pages/about/ship-item';
 
-import { spaceships } from '../main.config';
-
-function splitTo(arr, n) {
-  const plen = Math.ceil(arr.length / n);
-
-  return arr.reduce((p, c, i) => {
-    if (i % plen === 0) {
-      p.push([]);
-    }
-    p[p.length - 1].push(c);
-
-    return p;
-  }, []);
-}
-
 export default class AboutTeam extends React.Component {
   static propTypes = {
     url: PropTypes.object,

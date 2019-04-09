@@ -23,12 +23,6 @@ export default class Careers extends React.Component {
     careers: [],
   };
 
-  static getInitialProps = async () => {
-    const response = await fetch(`${BACKEND_URL}/careers-list`, { cache: 'no-cache' });
-    const careers = await response.json();
-    return { careers };
-  };
-
   constructor(props) {
     super(props);
 
@@ -133,6 +127,13 @@ export default class Careers extends React.Component {
       },
     });
   }
+
+  static getInitialProps = async () => {
+    const response = await fetch(`${BACKEND_URL}/careers-list`, { cache: 'no-cache' });
+    const careers = await response.json();
+    return { careers };
+  };
+
   getCareersItems(even) {
     const { activeItemIndex } = this.state;
     const { careers } = this.props;
