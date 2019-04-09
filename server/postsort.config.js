@@ -55,11 +55,6 @@ const postsDatePair = [
     href: '/blog/1521640519375-cultural-factors-in-design',
   },
   {
-    createdAt: 1522827874762,
-    filename: '1522827874762-another-stellar-review-on-clutch.md',
-    href: '/blog/1522827874762-another-stellar-review-on-clutch',
-  },
-  {
     createdAt: 1523533985420,
     filename: '1523533985420-startup-guide.md',
     href: '/blog/1523533985420-startup-guide',
@@ -128,6 +123,41 @@ const postsDatePair = [
     createdAt: 1551175200000,
     filename: '1551175200000-our-ethical-dimension.md',
     href: '/blog/1551175200000-our-ethical-dimension',
+  },
+  {
+    createdAt: 1551391200000,
+    filename: '1551391200000-redline13-and-keenethics.md',
+    href: '/blog/1551391200000-redline13-and-keenethics',
+  },
+  {
+    createdAt: 1553896800000,
+    filename: '1553896800000-how-to-monitor-your-project-distantly.md',
+    href: '/blog/1553896800000-how-to-monitor-your-project-distantly',
+  },
+  {
+    createdAt: 1554163400000,
+    filename: '1554163400000-delegation.md',
+    href: '/blog/1554163400000-delegation',
+  },
+  {
+    createdAt: 1554243600000,
+    filename: '1554243600000-open-source.md',
+    href: '/blog/1554243600000-open-source',
+  },
+  {
+    createdAt: 1554333100000,
+    filename: '1554333100000-solving-new-tasks.md',
+    href: '/blog/1554333100000-solving-new-tasks',
+  },
+  {
+    createdAt: 1554420300000,
+    filename: '1554420300000-estimates.md',
+    href: '/blog/1554420300000-estimates',
+  },
+  {
+    createdAt: 1554420300000,
+    filename: '1554572000000-refactoring.md',
+    href: '/blog/1554572000000-refactoring',
   },
 ];
 

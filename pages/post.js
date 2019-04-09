@@ -53,8 +53,7 @@ export default class Post extends React.Component {
                   <span>{post.author}</span>
                 </div>
                 <div className="blog-post-page-date">
-                  <span><Moment format="YYYY MMMM DD">{new Date(+post.date)}</Moment></span>
-                  <span><Moment format="h:mm a">{new Date(+post.date)}</Moment></span>
+                  <span><Moment format="MMMM DD YYYY">{new Date(+post.date)}</Moment></span>
                 </div>
               </div>
               <Background className="open-source-page-background" />
@@ -70,7 +69,7 @@ export default class Post extends React.Component {
               </Link>
             ) : null}
             <Link route={Router.linkPage(hrefToNextPost ? 'post' : 'blog', { name: hrefToNextPost })}>
-              <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blogs list'}</div>
+              <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
           </div>
         </div>

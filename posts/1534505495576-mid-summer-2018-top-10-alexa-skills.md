@@ -1,13 +1,14 @@
 Author: Max Savonin
-Title: Best Amazon Alexa Skills Mid-summer 2018
-Subtitle: Best Amazon Alexa Skills Mid-summer 2018
-Meta title: Best Amazon Alexa Skills Mid-summer 2018 | Top 10 Cool and Useful Things Alexa Can Do. Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
+Title: Best Amazon Alexa Skills: Mid-Summer 2018 2018
+Subtitle: Best Amazon Alexa Skills: Mid-Summer 2018 2018
+Meta title: Best Amazon Alexa Skills: Mid-Summer 2018 2018 | Top 10 Cool and Useful Things Alexa Can Do. Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
 Meta description: Amazon's virtual assistant can do everything from finding deals and ordering pizza to tuning your guitar. Here are the best skills available
+Categories: Tech, Productivity
 Preview image: /static/posts/alexa-post-images/alexa-prew.jpg
 
 ![Alexa](/static/posts/alexa-post-images/alexa.jpg)
 
-Amazon’s Echo devices have taken over our homes as well as our hearts, and Alexa is becoming the most helpful member of many families. Alexa comes preloaded with many great features, but to get the most out of your smart home device you would want to “dress it up” with additional apps, aka skills. We’ve tested a few of them out, and present to you a list of our top ten best Amazon Alexa skills you didn’t know you need.
+Amazon’s Echo devices have taken over our homes and our hearts, and Alexa is becoming the most helpful member of many families. Alexa comes preloaded with a lot of great features, but to get the most out of your smart home device, you would want to “dress it up” with additional apps, so-called skills. We have tested a few of them, and present a list of our top ten best Amazon Alexa skills.
 
 <div align="center">
   <h1>#1: Next Book</h1>

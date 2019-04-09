@@ -1,8 +1,9 @@
 Author: Maryna Yanul
-Title: SVG Animation
-Subtitle: SVG Animation (Scalable Vector Graphics)
-Meta title: SVG Animation (Scalable Vector Graphics)
+Title: Sharing Experiences: Why We are Using SVG
+Subtitle: Sharing Experiences: Why We are Using SVG - Keenethics Blog
+Meta title: Sharing Experiences: Why We are Using SVG - Keenethics Blog
 Meta description: Why We Are Using SVG - Read on Keenethics Corporate Blog!
+Categories: Tech, From KeenEthics
 Preview image: https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.
 
 Fast and Practical Animating of SVG Images.
@@ -76,4 +77,4 @@ Still, with the help of simple and trivial css animation interesting projects ca
 
 <https://github.com/maryna-yanul/duck-the-princess/> — repository of the project.
 
-So basically in order to avoid overloading the project with “heavy” libraries all you literally need is CSS and good mood ;)
+So in order to avoid overloading the project with “heavy” libraries, all you literally need is CSS and good mood ;)

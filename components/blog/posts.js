@@ -15,7 +15,7 @@ const Posts = ({ posts }) => (
             <img src={post.image} alt={post.title} />
           </div>
           <div className="blog-page-post-header">
-            <div className="date"><Moment format="YYYY MMMM DD - h:mm a">{new Date(+post.date)}</Moment></div>
+            <div className="date"><Moment format="MMMM DD YYYY">{new Date(+post.date)}</Moment></div>
             <div className="title">{post.title}</div>
           </div>
         </a>

@@ -39,7 +39,7 @@ const ProjectTheCheckNetwork = ({ url }) => (
             <PortfolioFeedback
               title="Maarten Pieter Overvliet, the Netherlands"
               photo="static/portfolio/client_the-check-network.jpeg"
-              feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high-quality product & ensuring their continued engagement. KeenEthics’ skill set was exactly"
+              feedback="Due to their responsiveness & patience, the collaboration itself progressed smoothly from start to finish, resulting in a high-quality product & ensuring their continued engagement."
               link="https://clutch.co/profile/keenethics#review-184570"
             />
             <div className="title">E-Commerce Platform for Effective SEO Optimization</div>

@@ -1,8 +1,9 @@
 Author: Volodymyr Andrushchak
-Title: Voice App Development
-Subtitle: Voice App Development - Keenethics Blog
-Meta title: Voice App Development - Keenethics Blog
+Title: Voice App Development: Opportunities and Challenges
+Subtitle: Voice App Development: Opportunities and Challenges - Keenethics Blog
+Meta title: Voice App Development: Opportunities and Challenges - Keenethics Blog
 Meta description: Let us tell you how Keenethics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
+Categories: Tech
 Preview image: /static/posts/voice-app-development-prew.jpg
 
 ![Voice App Development](/static/posts/voice-app-development.jpg)
@@ -15,7 +16,7 @@ Voice devices and applications are a major AI advancement, which enables us to u
 
 <div>
   <p>
-    According to <a href="https://techcrunch.com/2017/11/08/voice-enabled-smart-speakers-to-reach-55-of-u-s-households-by-2022-says-report/" target="_blank" rel="noopener noreferrer nofollow">Techcrunch</a>, “smart devices like the Amazon Echo, Google Home and Sonos One will be installed in a majority – that is, 55 percent – of U.S. households by the year 2022”. Only in the last year, the number of voice services users in the United States has grown by 128.9 percent.
+    According to <a href="https://techcrunch.com/2017/11/08/voice-enabled-smart-speakers-to-reach-55-of-u-s-households-by-2022-says-report/" target="_blank" rel="noopener noreferrer nofollow">Techcrunch</a>, “smart devices like the Amazon Echo, Google Home and Sonos One will be installed in a majority – that is, 55 percent – of U.S. households by the year 2022”. Only in the last year, the number of voice platforms users in the United States has grown by 128.9 percent.
   </p>
 </div>
 
@@ -42,7 +43,7 @@ For us as the developers and businesses using voice technology, its major import
 
 ## Major Industry Challenges
 
-Voice app development is quite simple in theory but rather challenging and time-consuming in practice. The first and most commonly cited risk associated with voice assistants is that they fail to properly understand and decode what has been said. **Misunderstandings** happen because an automatic voice recognition technology often fails to perceive language variations: accents, dialects, or sociolects. A single speech mistake makes a phrase indecipherable, which turns the usage of a voice app into an immense challenge for people with speech disorders. Most proper names, especially those rarely used, are almost never decoded properly. Finally, voice apps cannot be used by speakers of most less popular languages, such as Ukrainian, Albanian, Belarusian, Hungarian, or Mongolian. 
+Voice app development is quite simple in theory but rather challenging and time-consuming in practice. The first and most commonly cited risk associated with voice assistants is that they fail to properly understand and decode what has been said. **Misunderstandings** happen because an automatic voice interface recognition technology often fails to perceive language variations: accents, dialects, or sociolects. A single speech mistake makes a phrase indecipherable for a voice platform, which turns the usage of a voice app into an immense challenge for people with speech disorders. Most proper names, especially those rarely used, are almost never decoded properly. Finally, voice apps cannot be used by speakers of most less popular languages, such as Ukrainian, Albanian, Belarusian, Hungarian, or Mongolian. 
 
 <div style="text-align: center; font-style: italic;margin-bottom: 14px;">
   <p style="margin-bottom: 0">User: What is the weather in New York, chiquita?</p>
@@ -64,8 +65,8 @@ Voice app development is quite simple in theory but rather challenging and time-
   <p style="margin-bottom: 0">User: Whatcha the weathe’ in Nu York on weekn’?</p>
   <p style="margin-bottom: 0">Assistant: I’m having a bit of trouble here. Please try again.</p>
 </div>
-    
-Another important issue lies in NLU (Natural Language Understanding), which is defined as the **post-processing of perceived text**. At this point, the technology has to extract the basic entities from a given context (when, where, what, and who). 
+
+Another important issue related to voice apps lies in NLU (Natural Language Understanding), which is defined as the **post-processing of perceived text**. At this point, the technology has to extract the basic entities from a given context (when, where, what, and who). 
 
 <div style="text-align: center; font-style: italic;margin-bottom: 14px;">
   <p style="margin-bottom: 0">User: Can you remind me tomorrow to meet Ann at 7 pm?</p>
@@ -86,7 +87,7 @@ Another important issue lies in NLU (Natural Language Understanding), which is d
   <p style="margin-bottom: 0">Assistant: I’m pretty fine, thanks. And you?</p>
 </div>
 
-**Context** is a true headache for the voice app developers. The voice assistant has to be taught not only to decode a certain message but also to take into account all the phrases it received during the current conversation as well as the situational context of the communication: date, location, etc. 
+**Context** is a true headache for the people busy with voice application development. The voice assistant has to be taught not only to decode a certain message but also to take into account all the phrases it received during the current conversation as well as the situational context of the communication: date, location, etc. 
 
 <div style="text-align: center; font-style: italic;margin-bottom: 14px;">
   <p style="margin-bottom: 0">User: What is the weather in New York <b>this</b> weekend?</p>
@@ -97,7 +98,7 @@ And the ultimate concern of voice technology users is **data safety**. If a voic
 
 ## The Opportunities Voice Services Provide You With
 
-The newest and best-developed technologies can recognize the age, gender, and mood of a person in order to give the most relevant and appropriate answer. They also may be used as a security measure since they can distinguish the voice patterns of a certain person. For instance, even the voices of two young women will be told apart.
+The newest and best-developed voice interface technologies can recognize the age, gender, and mood of a person in order to give the most relevant and appropriate answer. They also may be used as a security measure since they can distinguish the voice patterns of a certain person. For instance, even the voices of two young women will be told apart.
 
 Voice assistants may be both helpful and entertaining. They may be used to get an answer for a general question, to listen to a news brief, to check out the schedule for the day, or to run a smart home. Voice assistants also make shopping easier as they enable a user to place, track, and cancel online orders.
 
@@ -105,30 +106,30 @@ Fascinated? Yes, we were. A few years ago.
 
 Today, those features do not seem as miraculous as they used to be since most modern people got used to them. These functions seem helpful, but one can easily do without them. Be honest with yourself, how often do you talk to your voice assistant because you really need to?  
 
-Therefore, the topical question is to improve the functionality of voice technologies to the extent where they become indispensable. And they can become such in the areas where people need a voice assistant because their hands are busy, dirty, or wet or when interruptions badly affect performance and productivity. Voice apps will help drivers not to get distracted from the road and to keep hands on a steering wheel. Chefs in restaurants will use voice apps to check recipes, add items to the “To Order” list, and review or close orders. Workers at a plant may operate machinery with the help of their voice to ensure safety of the manufacturing process and boost productivity. The list of opportunities is endless. The problem is that the ideas are limited.
+Therefore, the topical question is to improve the functionality of voice technologies to the extent where they become indispensable. And they can become such in the areas where people need a voice assistant because their hands are busy, dirty, or wet or when interruptions badly affect performance and productivity. A voice platform will help drivers not to get distracted from the road and to keep hands on a steering wheel. Chefs in restaurants will use voice apps to check recipes, add items to the “To Order” list, and review or close orders. Workers at a plant may operate machinery with the help of voice applications to ensure safety of the manufacturing process and boost productivity. The list of opportunities is endless. The problem is that the ideas are limited.
 
-<div style="padding-left: 6%">
+<div style="padding-left: 6%; font-style: italic">
   <p>
     Food for thought: would you want your voice assistant to understand when you start speaking a different language and to switch to it together with you? Imagine, you talk to your app in English but cannot remember a word. You name it in Spanish, and your assistant responds with no hesitation. What a great language learning tool would it be! We are definitely excited about this opportunity ― another idea to consider.
   </p>
 </div>
 
-## Stages of Voice Chatbots Development 
+## Stages of Voice Application Development 
 
 <div>
-  <img style="margin: 15px auto;" src="/static/posts/photo_2019-01-22 12.35.38.jpeg" alt="Stages of voice chat dev"/>
+  <img style="margin: 15px auto;" src="/static/posts/photo_2019-01-22 12.35.38.jpeg" alt="Stages of Voice Application Development"/>
 </div>
 
 As in the case of any other project, the first step of voice app development is a sound and comprehensive research. You cannot execute a project unless you fully understand its purpose, complexity, and expected user experience.  
-The second level of voice application project development consists in creating UML diagrams for a more efficient representation of all the elements and processes of the future system.  
-Subsequently, it is necessary to choose the technology that the voice chatbot will work with. Should it be a web-based application or the one connected to a certain platform, such as Slack or Facebook Messenger? After that, the prototypes of the future app are developed and agreed with the clients upon. 
+The second level of voice application development consists in creating UML diagrams for a more efficient representation of all the elements and processes of the future system.
+Subsequently, it is necessary to choose the technology that the voice applications will work with. Should it be a web-based application or the one connected to a certain platform, such as Slack or Facebook Messenger? After that, the prototypes of the future app are developed and agreed with the clients upon. 
 The next step is to create a concise database of dialogue samples: keywords and phrases that the voice assistant has to react to and a set of programmed responses it will choose from. And only after all the brainstorming and planning, the development itself begins.
 
 However, our work is not over even after the application has been completed and released. To make your voice service stand out and improve its quality, we need to obtain more 5-star reviews and record 'failed' requests ―  those that didn't result in an action or triggered a wrong answer.  
 
 
-You Have an Idea? We Have a Solution!
+__You Have an Idea? We Have a Solution!__
 
-Keenethics is a software developer with almost 2 years of experience in voice app development on multiple projects. We have integrated various chatbots with Alexa and Google Assistant to develop voice bots. In the scope of another large project, we have launched a web-powered and Skype-powered information search voice chatbot. We have also developed numerous Alexa skills for our personal use and for the customers.
+Keenethics is a software developer with almost 2 years of experience in voice app development on multiple projects. We have integrated various chatbots with Alexa and Google Assistant to develop voice applications. In the scope of another large project, we have launched a web-powered and Skype-powered information search voice chatbot. We have also developed numerous Alexa skills for our personal use and for the customers.
 
-Basically, what we offer is UX chatbots for any platforms or devices since the logic is pretty similar regardless of the chosen technology. If you have ideas, we will be glad to help you implement them.
+Basically, what we offer is UX chatbots for any voice platforms or devices since the logic is pretty similar regardless of the chosen technology. If you have ideas, we will be glad to help you implement them.
