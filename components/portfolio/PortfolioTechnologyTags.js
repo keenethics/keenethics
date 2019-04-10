@@ -1,49 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const links = {
+  meteor: 'tech-back-end-meteor',
+  react: 'tech-front-end-react',
+  reactnative: 'tech-front-end-react-native',
+  mongo: 'tech-data-base-mongo',
+  express: 'tech-back-end-express',
+  redux: 'tech-front-end-redux',
+  nodejs: 'services-web-development-node',
+  cordova: 'tech-apps-cordova',
+  angular: 'tech-front-end-angular',
+  angular2: 'tech-front-end-angular-2',
+  android: 'services-mobile-development-android',
+};
+
 const PortfolioTechnologyTags = ({ tags, style }) => (
   <div className="technology-tags-wrap">
     <ul className="technology-tags--list">
       {
         tags.map((tag) => {
-          let href = '';
-          switch (tag.toLowerCase()) {
-            case 'meteor':
-              href = 'tech-back-end-meteor';
-              break;
-            case 'react':
-              href = 'tech-front-end-react';
-              break;
-            case 'react native':
-              href = 'tech-front-end-react-native';
-              break;
-            case 'mongo':
-              href = 'tech-data-base-mongo';
-              break;
-            case 'express':
-              href = 'tech-back-end-express';
-              break;
-            case 'redux':
-              href = 'tech-front-end-redux';
-              break;
-            case 'node js':
-              href = 'services-web-development-node';
-              break;
-            case 'cordova':
-              href = 'tech-apps-cordova';
-              break;
-            case 'angular':
-              href = 'tech-front-end-angular';
-              break;
-            case 'angular 2':
-              href = 'tech-front-end-angular-2';
-              break;
-            case 'android':
-              href = 'services-mobile-development-android';
-              break;
-            default:
-              break;
-          }
+          const href = links[tag.toLowerCase().replace(' ', '')];
           return (
             <li className="technology-tags--item" key={tag}>
               {
