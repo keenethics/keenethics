@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#4d48b4';
@@ -19,11 +20,7 @@ const ProjectPrix = ({ url }) => (
               <p className="description">
                 Stop losing your stuff
               </p>
-              <div className="tags">
-                <div className="tag">Fintech</div>
-                <div className="tag">E-Commerce</div>
-                <div className="tag">Education</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Fintech', 'E-Commerce', 'Education']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -107,19 +104,9 @@ const ProjectPrix = ({ url }) => (
             </div>
             <div className="tags-blog">
               <p>Technology stack for backend:</p>
-              <div className="tags">
-                <div className="tag">Node.js</div>
-                <div className="tag">Express</div>
-                <div className="tag">Mongo</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Node js', 'Express', 'Mongo']} />
               <p>Technology stack for Android and IOS:</p>
-              <div className="tags">
-                <div className="tag">Ionic</div>
-                <div className="tag">Cordova</div>
-                <div className="tag">BLE</div>
-                <div className="tag">Google Maps</div>
-                <div className="tag">Geolocation</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Ionic', 'Cordova', 'BLE', 'Google Maps', 'Geolocation']} />
             </div>
             <p>
               The whole implementation of the app is possible thank to the open source
@@ -127,7 +114,7 @@ const ProjectPrix = ({ url }) => (
               <a
                 href="https://github.com/don/cordova-plugin-ble-central"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
               >
                 cordova-plugin-ble-central
               </a>
@@ -220,7 +207,7 @@ const ProjectPrix = ({ url }) => (
             />
             <a
               href="https://www.prix.ai"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}

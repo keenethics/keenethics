@@ -16,7 +16,7 @@ We asked our colleagues about their most favorite software updates and discoveri
   <img src="/static/posts/applications-business-tools-of-the-year/ihor.png" alt="Ihor, Recruitment Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px">
   <p style="text-align: center;">Recommended by Ihor, Recruitment Manager</p>
   <div>
-    <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.proven.com/" target="_blank" rel="noopener noreferrer">Proven</a> - the optimal assistant in hiring.</h2>
+    <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.proven.com/" target="_blank" rel="noopener noreferrer nofollow">Proven</a> - the optimal assistant in hiring.</h2>
     <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/proven.png" alt="Proven">
   </div>
 </div>
@@ -26,7 +26,7 @@ Proven gives me valuable hints and tools on how to create a unique job post and 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/bohdana.png" alt="Bohdana, Head of Business Development" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Bohdana, Head of Business Development</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.hotjar.com/?utm_expid=.sSZOlqUJShi7mFBr8IoXEA.0&utm_referrer=https%3A%2F%2Fwww.hotjar.com%2Freferral%3Fr%3Dr5a7a33" target="_blank" rel="noopener noreferrer">HotJar</a> - a one-of-a-kind tool that helps you understand your website visitors.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.hotjar.com/?utm_expid=.sSZOlqUJShi7mFBr8IoXEA.0&utm_referrer=https%3A%2F%2Fwww.hotjar.com%2Freferral%3Fr%3Dr5a7a33" target="_blank" rel="noopener noreferrer nofollow">HotJar</a> - a one-of-a-kind tool that helps you understand your website visitors.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/hotjar.png" alt="HotJar"/>
 </div>
 
@@ -35,7 +35,7 @@ Instead of complex databases, statistics, and charts, HotJar offers a simple but
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/vika.png" alt="Vika, HR Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Vika, HR Manager</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.rescuetime.com/features" target="_blank" rel="noopener noreferrer">RescueTime</a> - an effective time management tool.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.rescuetime.com/features" target="_blank" rel="noopener noreferrer nofollow">RescueTime</a> - an effective time management tool.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/rescue-time.png" alt="RescueTime"/>
 </div>
 
@@ -44,7 +44,7 @@ If you are as well-familiar with procrastination and over-multitasking as I am, 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/ilona.png" alt="Ilona, Business Development Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Ilona, Business Development Manager</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="http://myminutesapp.com/" target="_blank" rel="noopener noreferrer">MyMinutes</a> - strengthening accountability to oneself.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="http://myminutesapp.com/" target="_blank" rel="noopener noreferrer nofollow">MyMinutes</a> - strengthening accountability to oneself.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/my-minutes.png" alt="MyMinutes"/>
 </div>
 
@@ -54,7 +54,7 @@ I have been looking for something super simple but effective to motivate me to b
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/max.png" alt="Max, CEO" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Max, CEO</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.committo3.com/" target="_blank" rel="noopener noreferrer">CommitTo3</a> - productivity and accountability trigger.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.committo3.com/" target="_blank" rel="noopener noreferrer nofollow">CommitTo3</a> - productivity and accountability trigger.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/commit-to3.png" alt="CommitTo3"/>
 </div>
 
@@ -63,7 +63,7 @@ CommitTo3 is a great tool for managers and business leaders to boost the corpora
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/oksana.png" alt="Oksana, UI/UX Designer" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Oksana, UI/UX Designer</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.canva.com/graphs/" target="_blank" rel="noopener noreferrer">Canva</a> - a magic wand for outstanding visuals and graphics.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.canva.com/graphs/" target="_blank" rel="noopener noreferrer nofollow">Canva</a> - a magic wand for outstanding visuals and graphics.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/canva.png" alt="HotJar"/>
 </div>
 
@@ -72,7 +72,7 @@ Creating effective visual aids and appealing infographics used to be a complicat
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/liuba.png" alt="Liuba, Project Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Liuba, Project Manager</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.getharvest.com/features/team" target="_blank" rel="noopener noreferrer">Harvest</a> - a time & expenses tracker.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.getharvest.com/features/team" target="_blank" rel="noopener noreferrer nofollow">Harvest</a> - a time & expenses tracker.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/harvest.png" alt="Harvest"/>
 </div>
 
@@ -81,7 +81,7 @@ Managing a project and keeping a hand on the pulse of the entire team is a compl
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/iryna.png" alt="Iryna, Business Development Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Iryna, Business Development Manager</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://coschedule.com/" target="_blank" rel="noopener noreferrer">CoSchedule</a> - a tool for business communication, corporate file exchange, and project management.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://coschedule.com/" target="_blank" rel="noopener noreferrer nofollow">CoSchedule</a> - a tool for business communication, corporate file exchange, and project management.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/co-schedule.png" alt="CoSchedule"/>
 </div>
 
@@ -90,7 +90,7 @@ The marketing process is easy and free of mess with CoSchedule ― an efficient 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/yurii.png" alt="Yurii, Team Lead and Full Stack Developer" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Yurii, Team Lead and Full Stack Developer</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://basecamp.com/how-it-works" target="_blank" rel="noopener noreferrer">Basecamp</a> - a project management lifesaver.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://basecamp.com/how-it-works" target="_blank" rel="noopener noreferrer nofollow">Basecamp</a> - a project management lifesaver.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/basecamp.png" alt="Basecamp"/>
 </div>
 
@@ -99,7 +99,7 @@ I love Basecamp because it enables me to create a task, assign a certain group o
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/oleh.png" alt="Oleh, Full-Stack Software Developer" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Oleh, Full-Stack Software Developer</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://slack.com/" target="_blank" rel="noopener noreferrer">Slack</a> - team communication booster.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://slack.com/" target="_blank" rel="noopener noreferrer nofollow">Slack</a> - team communication booster.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/slack.png" alt="Slack"/>
 </div>
 
@@ -108,7 +108,7 @@ Slack is a trusted business communication platform, which, in 2018, united over 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/alex.png" alt="Alex, Project Manager" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Alex, Project Manager</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://trello.com/" target="_blank" rel="noopener noreferrer">Trello</a> - dashboards for managing effective teamwork.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://trello.com/" target="_blank" rel="noopener noreferrer nofollow">Trello</a> - dashboards for managing effective teamwork.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/trello.png" alt="Trello"/>
 </div>
 
@@ -117,7 +117,7 @@ Trello is a renown platform for teamwork organization and for personal planning.
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/oleksiy.png" alt="Oleksiy, CTO" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Oleksiy, CTO</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.blinkist.com/" target="_blank" rel="noopener noreferrer">Blinkist</a> - a perfect tool for avid readers.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.blinkist.com/" target="_blank" rel="noopener noreferrer nofollow">Blinkist</a> - a perfect tool for avid readers.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/blinkist.png" alt="Blinkist"/>
 </div>
 
@@ -126,7 +126,7 @@ I am keen to discover new facts and ideas, but a tough schedule does not let me 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/taras.png" alt="Taras, Full-Stack Software Developer" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Taras, Full-Stack Software Developer</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.proofhub.com/?utm_source=ProofHub.com%2Farticles&utm_medium=Refrerral&utm_campaign=Collaboration%20tool&utm_term=Content&utm_content=11%20best%20online%20collaboration%20tools%20of%202017%20for%20business" target="_blank" rel="noopener noreferrer">ProofHub</a> - a business management and communication tool.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.proofhub.com/?utm_source=ProofHub.com%2Farticles&utm_medium=Refrerral&utm_campaign=Collaboration%20tool&utm_term=Content&utm_content=11%20best%20online%20collaboration%20tools%20of%202017%20for%20business" target="_blank" rel="noopener noreferrer nofollow">ProofHub</a> - a business management and communication tool.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/proof-hub.png" alt="ProofHub"/>
 </div>
 
@@ -135,7 +135,7 @@ If you like the features offered by all the aforementioned apps but want to see 
 <div style="margin-top: 50px">
   <img src="/static/posts/applications-business-tools-of-the-year/serhiy.png" alt="Serhiy, Full-Stack Software Developer" style="width: 125px; border-radius: 50%; border: 3px solid #fff; box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15); margin-bottom: 10px"/>
   <p style="text-align: center;">Recommended by Serhiy, Full-Stack Software Developer</p>
-  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.notion.so/product" target="_blank" rel="noopener noreferrer">Notion</a> - a simple but elegant app that runs by the rule “All in one place”.</h2>
+  <h2 style="font-size: 20px; font-weight: 600; margin: 13px 0;"><a style="text-decoration: none; color: inherit;" href="https://www.notion.so/product" target="_blank" rel="noopener noreferrer nofollow">Notion</a> - a simple but elegant app that runs by the rule “All in one place”.</h2>
   <img style="max-width: 250px; max-height: 100px; margin: 15px auto;" src="/static/posts/applications-business-tools-of-the-year/notion.png" alt="Notion"/>
 </div>
 

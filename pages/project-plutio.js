@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#4b44b7';
 
@@ -21,10 +22,7 @@ const ProjectPlutio = ({ url }) => (
               <p className="description">
                 Business management platform
               </p>
-              <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">React</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'React']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -60,7 +58,7 @@ const ProjectPlutio = ({ url }) => (
             </div>
             <a
               href="https://plutio.com"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}
