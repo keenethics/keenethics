@@ -1,0 +1,37 @@
+.technology-tags-wrap {
+   margin: 15px 0 15px;
+   .technology-tags--list {
+      margin: -8px;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      list-style: none;
+   }
+   .technology-tags--item {
+      padding: 7px;
+      margin: 0;
+      &:before {
+         display: none;
+      }
+   }
+   .technology-tag {
+      font-size: 12px;
+      padding: 5px 20px;
+      display: inline-block;
+      color: #fff;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, .3);
+      text-decoration: none;
+   }
+}
+.project-content-more {
+   .technology-tag {
+      border-color: rgba(#11233d, .3);
+      color: #12233D;
+      @media screen and (min-width: 600px) {
+         font-size: 15px;
+         padding: 7px 20px;
+      }
+   }
+}

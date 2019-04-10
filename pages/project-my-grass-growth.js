@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#28b293';
@@ -20,10 +21,7 @@ const ProjectMyGrassGrowth = ({ url }) => (
               <p className="description">
                 Keep you cows healthy and well-fed
               </p>
-              <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">Blaze</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'Blaze']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -90,7 +88,7 @@ const ProjectMyGrassGrowth = ({ url }) => (
             </div>
             <a
               href="http://52.48.81.242/signIn"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
               style={{ background: baseColor }}

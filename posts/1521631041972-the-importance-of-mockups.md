@@ -97,7 +97,7 @@ Example 2: Let’s say your app’s purpose is to locate a Bluetooth device,
 it’s not the kind of app a user will be staring at for long, it can be
 as simple as possible.
 
-Example 3: if you are building a prototype or an MVP and functionality
+Example 3: if you are building a prototype or an [MVP](/approach-minimum-viable-product) and functionality
 matter much much much more than the looks, you can ask your developer to
 simply use the material UI kit, it will look rather generic, but clean
 and accurate. 50\$ - 4800\$ per month saved!

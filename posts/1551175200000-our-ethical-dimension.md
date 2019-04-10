@@ -36,7 +36,7 @@ We highly value people who choose to trust us with their projects, who rely upon
 ### *Ethical Attitude to Team Members*
 
 <p>
-  We highly value our pool of talents and make sure that each person feels not as an employee but as a team member. The atmosphere in our office is always friendly and warm, our routine is varied in social events, hackathons, and knowledge sharing sessions. Birthday greetings and celebrations, parties, and outings are also an important constituent of <a href="//keenethics.com/blog/1548831600000-creating-corporate-culture" target="_blank" rel="noopener noreferrer">our corporate culture</a>. We deeply care about our office environment and make sure that every team member enjoys the time they spend among their colleagues.
+  We highly value our pool of talents and make sure that each person feels not as an employee but as a team member. The atmosphere in our office is always friendly and warm, our routine is varied in social events, hackathons, and knowledge sharing sessions. Birthday greetings and celebrations, parties, and outings are also an important constituent of <a href="//keenethics.com/blog/1548831600000-creating-corporate-culture" target="_blank" rel="noopener noreferrer nofollow">our corporate culture</a>. We deeply care about our office environment and make sure that every team member enjoys the time they spend among their colleagues.
 </p>
 
 ### *Sustainability*

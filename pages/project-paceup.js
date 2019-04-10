@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#20cc97';
 
@@ -21,9 +22,7 @@ const ProjectPrix = ({ url }) => (
               <p className="description">
                 Increasing loyalty of existing clients
               </p>
-              <div className="tags">
-                <div className="tag">React</div>
-              </div>
+              <PortfolioTechnologyTags tags={['React']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
