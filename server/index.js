@@ -415,7 +415,7 @@ app.prepare().then(() => {
       });
     }
   });
-  server.get('/team-list', async (req, res) => {
+  server.get('/astronauts', async (req, res) => {
     const team = await getTeam();
     res.send(JSON.stringify(team));
   });

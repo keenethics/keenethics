@@ -24,7 +24,7 @@ export default class AboutTeam extends React.Component {
   }
 
   static getInitialProps = async () => {
-    const response = await fetch(`${BACKEND_URL}/team-list`);
+    const response = await fetch(`${BACKEND_URL}/astronauts`);
     const team = await response.json();
     return { team };
   };

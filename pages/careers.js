@@ -129,7 +129,7 @@ export default class Careers extends React.Component {
   }
 
   static getInitialProps = async () => {
-    const response = await fetch(`${BACKEND_URL}/careers-list`, { cache: 'no-cache' });
+    const response = await fetch(`${BACKEND_URL}/careers-list`);
     const careers = await response.json();
     return { careers };
   };

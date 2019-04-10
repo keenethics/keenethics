@@ -1,5 +1,6 @@
 const { google } = require('googleapis');
 const { spreadSheet } = require('./config');
+const _ = require('lodash');
 
 const TEAM_SHEET_ID = spreadSheet.id;
 const CREDS_FILE = spreadSheet.securityFile;
@@ -11,94 +12,77 @@ const ranges = [TEAM_RANGE, CAREERS_RANGE];
 
 const TITLE_COLUMN_INDEX = 0;
 
+let dataStore = null;
+let updateTime = null;
+const timeToLive = 10 * 60 * 1000; // 10min
+
 const arrayOfArraysToCollection = (arr) => {
   const properties = arr[TITLE_COLUMN_INDEX];
   return arr.slice(TITLE_COLUMN_INDEX + 1)
-    .map((v) => {
-      const obj = {};
-      properties.forEach((property, index) => {
-        obj[property] = v[index];
-      });
-      return obj;
-    });
+    .map(v => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
-class DataStore {
-  constructor() {
-    this.dataStore = null;
-    this.updateTime = null;
-    this.timeToLive = 30 * 60 * 1000;
+const isValidData = () => {
+  if (!dataStore || !updateTime) {
+    return false;
   }
 
-  init() {
-    this.getData();
+  const diffTime = +new Date() - updateTime;
+  return diffTime < timeToLive;
+};
+
+const updateData = (data) => {
+  dataStore = data;
+  updateTime = +new Date();
+};
+
+const getSheetValues = (valueRanges, rangeName) =>
+  valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
+
+const getData = async () => {
+  if (isValidData()) {
+    return Promise.resolve(dataStore);
   }
 
-  isValidData() {
-    const { dataStore, updateTime, timeToLive } = this;
-    if (!dataStore || !updateTime) {
-      return false;
-    }
+  try {
+    const client = await google.auth.getClient({
+      keyFile: CREDS_FILE,
+      scopes,
+    });
 
-    const diffTime = +new Date() - updateTime;
-    return diffTime < timeToLive;
+    const sheets = google.sheets('v4');
+
+    const table = await sheets.spreadsheets.values.batchGet({
+      auth: client,
+      spreadsheetId: TEAM_SHEET_ID,
+      ranges,
+    });
+
+
+    const team = getSheetValues(table.data.valueRanges, TEAM_RANGE);
+    const careers = getSheetValues(table.data.valueRanges, CAREERS_RANGE);
+
+    const data = {
+      team: arrayOfArraysToCollection(team),
+      careers: arrayOfArraysToCollection(careers),
+    };
+
+    updateData(data);
+    return Promise.resolve(dataStore);
+  } catch (e) {
+    console.error(e);
+    return null;
   }
+};
 
-  updateData(data) {
-    this.dataStore = data;
-    this.updateTime = +new Date();
-  }
-
-  getSheetValues(valueRanges, rangeName) {
-    return valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
-  }
-
-  async getData() {
-    if (this.isValidData()) {
-      return Promise.resolve(this.dataStore);
-    }
-
-    try {
-      const client = await google.auth.getClient({
-        keyFile: CREDS_FILE,
-        scopes,
-      });
-
-      const sheets = google.sheets('v4');
-
-      const table = await sheets.spreadsheets.values.batchGet({
-        auth: client,
-        spreadsheetId: TEAM_SHEET_ID,
-        ranges,
-      });
-
-
-      const team = this.getSheetValues(table.data.valueRanges, TEAM_RANGE);
-      const careers = this.getSheetValues(table.data.valueRanges, CAREERS_RANGE);
-
-      const data = {
-        team: arrayOfArraysToCollection(team),
-        careers: arrayOfArraysToCollection(careers),
-      };
-
-      this.updateData(data);
-      return Promise.resolve(this.dataStore);
-    } catch (e) {
-      console.error(e);
-      return null;
-    }
-  }
-}
-
-const ds = new DataStore();
-ds.getData();
+getData();
 
 const getTeam = async () => {
-  const d = await ds.getData();
+  const d = await getData();
   return d.team;
 };
 const getCareers = async () => {
-  const d = await ds.getData();
+  const d = await getData();
   return d.careers;
 };
 
