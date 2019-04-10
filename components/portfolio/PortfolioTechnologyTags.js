@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const links = {
-  meteor: 'tech-back-end-meteor',
-  react: 'tech-front-end-react',
-  reactnative: 'tech-front-end-react-native',
-  mongo: 'tech-data-base-mongo',
-  express: 'tech-back-end-express',
-  redux: 'tech-front-end-redux',
-  nodejs: 'services-web-development-node',
-  cordova: 'tech-apps-cordova',
-  angular: 'tech-front-end-angular',
-  angular2: 'tech-front-end-angular-2',
-  android: 'services-mobile-development-android',
+  meteor: '/tech-back-end-meteor',
+  react: '/tech-front-end-react',
+  reactnative: '/tech-front-end-react-native',
+  mongo: '/tech-data-base-mongo',
+  express: '/tech-back-end-express',
+  redux: '/tech-front-end-redux',
+  nodejs: '/services-web-development-node',
+  cordova: '/tech-apps-cordova',
+  angular: '/tech-front-end-angular',
+  angular2: '/tech-front-end-angular-2',
+  android: '/services-mobile-development-android',
 };
 
 const PortfolioTechnologyTags = ({ tags, style }) => (
@@ -27,7 +27,7 @@ const PortfolioTechnologyTags = ({ tags, style }) => (
                 href ? (
                   <a
                     className="technology-tag"
-                    href={`/${href}`}
+                    href={href}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={style}
