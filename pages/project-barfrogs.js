@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#1b9c19';
 
@@ -19,10 +20,7 @@ const ProjectBarfrogs = ({ url }) => (
               <p className="description">
                 Find the Place to Hang out with Bar Frogs
               </p>
-              <div className="tags">
-                <div className="tag">Express</div>
-                <div className="tag">React</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Express', 'React']} />
             </div>
             <Background />
           </div>

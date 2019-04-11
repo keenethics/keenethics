@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#3c67ab';
@@ -20,12 +21,7 @@ const ProjectBlackBook = ({ url }) => (
               <p className="description">
                 Display the statistics of company employees
               </p>
-              <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">Ionic</div>
-                <div className="tag">Angular 2</div>
-                <div className="tag">D3</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'Ionic', 'Angular 2', 'D3']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -67,7 +63,7 @@ const ProjectBlackBook = ({ url }) => (
               </p>
               <a
                 href="http://bb-ipad.herokuapp.com"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 target="_blank"
                 className="link"
                 style={{ background: baseColor }}

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 
 const baseColor = '#867dd0';
 
@@ -25,10 +26,7 @@ const ProjectWargaming = ({ url }) => (
                 market-processes. Sophisticated algorithm shows possible steps, history of previous
                 actions and allows to perform retrospective analysis.
               </p>
-              <div className="tags">
-                <div className="tag">Meteor</div>
-                <div className="tag">React</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'React']} />
             </div>
             <Background />
           </div>

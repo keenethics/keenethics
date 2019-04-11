@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
+import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#289e94';
@@ -16,10 +17,7 @@ const ProjectWorkbooking = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">WorkBooking</h2>
-              <div className="tags">
-                <div className="tag">Consumer apps</div>
-                <div className="tag">Job platform</div>
-              </div>
+              <PortfolioTechnologyTags tags={['Consumer apps', 'Job platform']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -86,13 +84,7 @@ const ProjectWorkbooking = ({ url }) => (
           <div className="project-content-more">
             <div className="project-content-chapter">
               <p className="chapter-title">Technology</p>
-              <div className="chapter-paragraph">
-                <div className="tags">
-                  <div className="tag incontent">Meteor</div>
-                  <div className="tag incontent">React</div>
-                  <div className="tag incontent">Mongo</div>
-                </div>
-              </div>
+              <PortfolioTechnologyTags tags={['Meteor', 'React', 'Mongo']} />
             </div>
 
             <div className="project-content-chapter">

@@ -78,7 +78,7 @@ export default class AboutTeam extends React.Component {
               Some even treat open-source as their hobby and build truly amazing projects just via
               their enthusiasm.
             </p>
-            <a href="https://github.com/keenethics" target="_blank" rel="noopener noreferrer" className="open-source-button">
+            <a href="https://github.com/keenethics" target="_blank" rel="noopener noreferrer nofollow" className="open-source-button">
               <img width="20" src="/static/images/svg/ico-git.svg" alt="" />
               Visit our Github
             </a>

@@ -12,7 +12,7 @@ Preview image: /static/posts/alexa-post-images/mid-winter-2019/best-amazon-alexa
 
 <div style="margin-bottom: 30px">
   <p>
-    Alexa is an unquestionable leader in terms of functionality among all voice assistants. Yet, it lives by the rule “Do not compare yourself to others, compare yourself to what you were yesterday”. Therefore, the skills and features of Amazon’s voice assistant are being constantly developed. In turn, we are not breaking the tradition of sharing our most favorite updates with you as we did last <a href="/blog/1542178800000-best-amazon-alexa-skills-mid-autumn-2018" target="_blank" rel="noopener noreferrer">summer</a> and <a href="/blog/1534505495576-mid-summer-2018-top-10-alexa-skills" target="_blank" rel="noopener noreferrer">fall</a>. So please welcome the list of <b>10 best features, both useful and entertaining, which Alexa learned this winter</b>.
+    Alexa is an unquestionable leader in terms of functionality among all voice assistants. Yet, it lives by the rule “Do not compare yourself to others, compare yourself to what you were yesterday”. Therefore, the skills and features of Amazon’s voice assistant are being constantly developed. In turn, we are not breaking the tradition of sharing our most favorite updates with you as we did last <a href="//blog/1542178800000-best-amazon-alexa-skills-mid-autumn-2018" target="_blank" rel="noopener noreferrer nofollow">summer</a> and <a href="//blog/1534505495576-mid-summer-2018-top-10-alexa-skills" target="_blank" rel="noopener noreferrer nofollow">fall</a>. So please welcome the list of <b>10 best features, both useful and entertaining, which Alexa learned this winter</b>.
   </p>
 </div>
 
@@ -23,7 +23,7 @@ Preview image: /static/posts/alexa-post-images/mid-winter-2019/best-amazon-alexa
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Capital-One-Commercial-Trends/dp/B07MHMKBJN/ref=sr_1_4?s=digital-skills&ie=UTF8&qid=1547729575&sr=1-4&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Capital-One-Commercial-Trends/dp/B07MHMKBJN/ref=sr_1_4?s=digital-skills&ie=UTF8&qid=1547729575&sr=1-4&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Commercial Trends
     </a>
   </h3>
@@ -37,7 +37,7 @@ Do you feel like there is nobody around to share your interest in economics and 
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/h0psing-Inspirational-Speeches/dp/B07M9H6LJZ/ref=sr_1_9?s=digital-skills&ie=UTF8&qid=1548064394&sr=1-9&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/h0psing-Inspirational-Speeches/dp/B07M9H6LJZ/ref=sr_1_9?s=digital-skills&ie=UTF8&qid=1548064394&sr=1-9&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Inspirational Speeches
     </a>
   </h3>
@@ -51,7 +51,7 @@ Do you feel down in the mouth because of a mishap at work? New Year resolutions 
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/HeyHon-Mindful-Couple/dp/B07KP76WJC/ref=sr_1_3?fst=as%3Aoff&ie=UTF8&qid=1548066494&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-3" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/HeyHon-Mindful-Couple/dp/B07KP76WJC/ref=sr_1_3?fst=as%3Aoff&ie=UTF8&qid=1548066494&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-3" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Mindful Couple
     </a>
   </h3>
@@ -65,7 +65,7 @@ Positive thinking is a useful skill to develop to feel happy and satisfied with 
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Laviosa-Prod-Idioms-Builder/dp/B07JHK5N5S/ref=sr_1_3?keywords=idiom&qid=1548060684&s=Alexa+Skills&sr=1-3-catcorr" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Laviosa-Prod-Idioms-Builder/dp/B07JHK5N5S/ref=sr_1_3?keywords=idiom&qid=1548060684&s=Alexa+Skills&sr=1-3-catcorr" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Idioms Builder
     </a>
   </h3>
@@ -79,7 +79,7 @@ Do you sometimes feel like you can’t find that special word? Are you worried a
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Capital-One-Commercial-Trends/dp/B07MHMKBJN/ref=sr_1_4?s=digital-skills&ie=UTF8&qid=1547729575&sr=1-4&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Capital-One-Commercial-Trends/dp/B07MHMKBJN/ref=sr_1_4?s=digital-skills&ie=UTF8&qid=1547729575&sr=1-4&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Nutrition Library
     </a>
   </h3>
@@ -94,7 +94,7 @@ Alexa is your friend – a friend who wants to help you have a healthy and happy
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Adassa-Innovations-Rhyme-It/dp/B07GQN1G53/ref=sr_1_53?s=digital-skills&ie=UTF8&qid=1547736158&sr=1-53&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Adassa-Innovations-Rhyme-It/dp/B07GQN1G53/ref=sr_1_53?s=digital-skills&ie=UTF8&qid=1547736158&sr=1-53&refinements=p_n_date%3A14284926011" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Rhyme It
     </a>
   </h3>
@@ -108,7 +108,7 @@ All work and no play makes Jack a dull boy. Have fun with your friends and famil
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/srhntyln-History-of-Today/dp/B07MBN1VP1/ref=sr_1_92?fst=as%3Aoff&ie=UTF8&qid=1548054791&refinements=p_n_date%3A14284926011&rnid=14284924011&s=Alexa+Skills&sr=1-92" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/srhntyln-History-of-Today/dp/B07MBN1VP1/ref=sr_1_92?fst=as%3Aoff&ie=UTF8&qid=1548054791&refinements=p_n_date%3A14284926011&rnid=14284924011&s=Alexa+Skills&sr=1-92" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       History of Today
     </a>
   </h3>
@@ -122,7 +122,7 @@ Do you wonder sometimes how many things are happening all over the world at a pa
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Roman-Berla-ComplimentBot/dp/B07MM3PNKV/ref=sr_1_67?fst=as%3Aoff&ie=UTF8&qid=1548065805&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-67" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Roman-Berla-ComplimentBot/dp/B07MM3PNKV/ref=sr_1_67?fst=as%3Aoff&ie=UTF8&qid=1548065805&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-67" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       ComplimentBot
     </a>
   </h3>
@@ -136,7 +136,7 @@ If you don’t know how to start a conversation with a person you like or making
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Pick-who-rides-Front-Seat/dp/B07BZKF35C/ref=sr_1_41?fst=as%3Aoff&ie=UTF8&qid=1548054628&refinements=p_n_date%3A14284926011&rnid=14284924011&s=Alexa+Skills&sr=1-41" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Pick-who-rides-Front-Seat/dp/B07BZKF35C/ref=sr_1_41?fst=as%3Aoff&ie=UTF8&qid=1548054628&refinements=p_n_date%3A14284926011&rnid=14284924011&s=Alexa+Skills&sr=1-41" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Pick who rides in the Front Seat
     </a>
   </h3>
@@ -150,7 +150,7 @@ Do you often have family quarrels about who is going to ride in the front seat? 
 
 <div>
   <h3 style="font-weight: 600; font-size: 18px; margin-bottom: 10px">
-    <a href="//amazon.com/Andrea-Daily-Good-Morning/dp/B07MQ4VFY3/ref=sr_1_63?fst=as%3Aoff&ie=UTF8&qid=1548065742&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-63" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer">
+    <a href="//amazon.com/Andrea-Daily-Good-Morning/dp/B07MQ4VFY3/ref=sr_1_63?fst=as%3Aoff&ie=UTF8&qid=1548065742&refinements=p_n_date%3A14284926011&rnid=13727922011&s=Alexa+Skills&sr=1-63" style="color: #12233d; text-decoration: none" target="_blank" rel="noopener noreferrer nofollow">
       Daily Good Morning
     </a>
   </h3>

@@ -54,7 +54,7 @@ export default class Index extends React.Component {
                 href="https://www.upwork.com/agencies/~0106b5437592391f94"
                 className="link link-upwork"
                 target="_blank"
-                rel="noreferrer noopener"
+                rel="noreferrer noopener nofollow"
               >
                 Top rated Upwork agency
               </a>
@@ -64,7 +64,7 @@ export default class Index extends React.Component {
                 href="https://clutch.co/profile/keenethics"
                 className="link link-clutch"
                 target="_blank"
-                rel="noreferrer noopener"
+                rel="noreferrer noopener nofollow"
               >
                 5-stars rated company at Clutch
               </a>
@@ -79,7 +79,7 @@ export default class Index extends React.Component {
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
-                <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
                   <span itemProp="streetAddress">Kulparkivska St, 59</span>
                 </a>
                 <i><span itemProp="addressLocality">Lviv</span>, <span itemProp="addressRegion">Ukraine</span></i>

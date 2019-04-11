@@ -45,7 +45,7 @@ export default class Contacts extends React.Component {
               <address>
                 <ul className="contacts-list">
                   <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                    <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer" target="_blank">
+                    <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
                       <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
                       <div itemProp="streetAddress">Kulparkivska St, 59</div>
                       <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>

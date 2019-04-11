@@ -155,9 +155,14 @@ const postsDatePair = [
     href: '/blog/1554420300000-estimates',
   },
   {
-    createdAt: 1554420300000,
+    createdAt: 1554572000000,
     filename: '1554572000000-refactoring.md',
     href: '/blog/1554572000000-refactoring',
+  },
+  {
+    createdAt: 1554793200000,
+    filename: '1554793200000-indoor-positioning-in-retail.md',
+    href: '/blog/1554793200000-indoor-positioning-in-retail',
   },
 ];
 
