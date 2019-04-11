@@ -415,12 +415,12 @@ app.prepare().then(() => {
       });
     }
   });
-  server.get('/astronauts', async (req, res) => {
+  server.get('/api/astronauts', async (req, res) => {
     const team = await getTeam();
     res.send(JSON.stringify(team));
   });
 
-  server.get('/careers-list', async (req, res) => {
+  server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
   });
