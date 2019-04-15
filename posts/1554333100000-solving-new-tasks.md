@@ -1,9 +1,9 @@
 Author: Alex Pletnov
-Title: How to Solve Tasks You Have Never Solved Before?
+Title:  Have Never Solved Before?
 Subtitle: How to Solve Tasks You Have Never Solved Before? - Keenethics Blog
 Meta title: How to Solve Tasks You Have Never Solved Before? - Keenethics Blog
 Meta description: Tips on solving uncommon tasks
-Categories: From KeenEthics
+Categories: Business guide, Productivity
 Preview image: /static/posts/solving-new-tasks-prew.jpeg
 
 ![How to Solve Tasks](/static/posts/solving-new-tasks.jpeg)
