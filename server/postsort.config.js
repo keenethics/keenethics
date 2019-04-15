@@ -164,6 +164,11 @@ const postsDatePair = [
     filename: '1554793200000-indoor-positioning-in-retail.md',
     href: '/blog/1554793200000-indoor-positioning-in-retail',
   },
+  {
+    createdAt: 1555077600000,
+    filename: '1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website.md',
+    href: '/blog/1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;

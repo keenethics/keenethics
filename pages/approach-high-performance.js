@@ -22,7 +22,7 @@ const ApproachHighPerformance = ({ url }) => (
             <div className="perfomance-column left">
               <div className="perfomance-text">
                 <span>
-                  These tables help our workers not to get tires during the
+                  These tables help our workers not to get tired during the
                   coding adventures
                 </span>
               </div>
