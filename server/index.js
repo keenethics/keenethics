@@ -14,8 +14,6 @@ const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 
-const Router = require('./routes').Router;
-
 const dev = process.env.NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
 
@@ -55,12 +53,6 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
-
-  Router.forEachPattern((page, pattern, defaultParams) => (
-    server.get(pattern, (req, res) => (
-      app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params))
-    ))
-  ));
 
   server.post('/contact', (req, res) => {
     const {
@@ -326,9 +318,9 @@ app.prepare().then(() => {
   });
   server.get('/posts', (req, res) => {
     const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
+
     const result = sortedPosts
       .map((file) => {
-        console.log(path.resolve(__dirname, `../posts/${file.filename}`));
         const fileStat = fs.existsSync(path.resolve(__dirname, `../posts/${file.filename}`));
         if (!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
         const text = fs.readFileSync(path.resolve(__dirname, `../posts/${file.filename}`), 'utf8');

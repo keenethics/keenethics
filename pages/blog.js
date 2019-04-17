@@ -68,6 +68,7 @@ class Blog extends React.Component {
   render() {
     const { categorisList, selectedPosts } = this.state;
     const { router, posts } = this.props;
+
     return (
       <Layout currentURL={router.current}>
         <div className="blog-page">
