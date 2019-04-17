@@ -28,7 +28,7 @@ export default class ShipItem extends React.Component {
           <div className={id === activeId || (isFirstItem && activeId === 'first') ? 'ship-content-wrapper show' : 'ship-content-wrapper'}>
             <div className="ship-content">
               <div className="ship-content-user-avatar">
-                <img src={`/static/images/team/${worker.avatar}`} alt="avatar" />
+                <img src={worker.avatar} alt="avatar" />
               </div>
               <div className="ship-content-user-name">{worker.name}</div>
               <div className="ship-content-user-position">{worker.position}</div>
