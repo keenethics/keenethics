@@ -1,4 +1,4 @@
-import { Link } from 'next-url-prettifier';
+import Link from 'next/link';
 
 import React from 'react';
 import PropTypes from 'prop-types';

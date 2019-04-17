@@ -1,15 +1,14 @@
-import { Link } from 'next-url-prettifier';
+import Link from 'next/link';
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
-import { Router } from '../../server/routes';
 
 const Posts = ({ posts }) => (
   <div className="blog-page-posts">
     {posts.map(post => (
-      <Link route={Router.linkPage('post', { name: post.href })} key={post.title}>
+      <Link href={`/post?name=${post.href}`} key={post.title}>
         <a className="blog-page-post">
           <div className="blog-page-post-img">
             <img src={post.image} alt={post.title} />
