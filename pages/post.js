@@ -4,14 +4,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
-import { Link } from 'next-url-prettifier';
+import Link from 'next/link';
 
 import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Error from './_error';
-import { Router } from '../server/routes';
 
 export default class Post extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -20,7 +19,7 @@ export default class Post extends React.Component {
     }
   }
   static async getInitialProps(p) {
-    const name = p.query.name;
+    const { name } = p.query;
 
     const res = await fetch(`${BACKEND_URL}/post/${name}`);
     const json = await res.json();
@@ -64,11 +63,11 @@ export default class Post extends React.Component {
           </div>
           <div className="blog-post-navigation">
             {hrefToPreviousPost ? (
-              <Link route={Router.linkPage('post', { name: hrefToPreviousPost })}>
+              <Link href={`/post?name=${hrefToPreviousPost}`}>
                 <div className="prev-arrow">{'<'} Previous</div>
               </Link>
             ) : null}
-            <Link route={Router.linkPage(hrefToNextPost ? 'post' : 'blog', { name: hrefToNextPost })}>
+            <Link href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}>
               <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
           </div>
