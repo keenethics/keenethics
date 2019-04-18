@@ -11,6 +11,7 @@ const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
+const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 
 const Router = require('./routes').Router;
@@ -413,6 +414,15 @@ app.prepare().then(() => {
         }
       });
     }
+  });
+  server.get('/api/astronauts', async (req, res) => {
+    const team = await getTeam();
+    res.send(JSON.stringify(team));
+  });
+
+  server.get('/api/careers', async (req, res) => {
+    const careers = await getCareers();
+    res.send(JSON.stringify(careers));
   });
 
   server.get('*', (req, res) => handle(req, res));
