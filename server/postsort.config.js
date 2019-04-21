@@ -169,6 +169,11 @@ const postsDatePair = [
     filename: '1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website.md',
     href: '/blog/1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website',
   },
+  {
+    createdAt: 1555916400000,
+    filename: '1555916400000-cto-as-a-service-for-startups.md',
+    href: '/blog/1555916400000-cto-as-a-service-for-startups',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
