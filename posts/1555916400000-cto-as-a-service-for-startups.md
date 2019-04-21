@@ -3,7 +3,7 @@ Title: CTO as a Service for Startups
 Subtitle: CTO as a Service for Startups - Keenethics Blog
 Meta title: CTO as a Service for Startups - Keenethics Blog
 Meta description: Who is a CTO, why to hire a CTO, what is CTO as a service, and how to be a CTO – all these questions answered.
-Categories: Tech, From KeenEthics
+Categories: From KeenEthics
 Preview image: /static/posts/cto-as-a-service-for-startups-prew.jpeg
 
 ![Handshake](/static/posts/cto-as-a-service-for-startups.jpeg)
