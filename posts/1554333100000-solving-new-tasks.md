@@ -1,12 +1,12 @@
 Author: Alex Pletnov
-Title:  Have Never Solved Before?
+Title:  How to Solve Tasks You Have Never Solved Before?
 Subtitle: How to Solve Tasks You Have Never Solved Before? - Keenethics Blog
 Meta title: How to Solve Tasks You Have Never Solved Before? - Keenethics Blog
 Meta description: Tips on solving uncommon tasks
 Categories: Business guide, Productivity
-Preview image: /static/posts/solving-new-tasks-prew.jpeg
+Preview image: /static/posts/solving-new-tasks-prew.jpg
 
-![How to Solve Tasks](/static/posts/solving-new-tasks.jpeg)
+![How to Solve Tasks](/static/posts/solving-new-tasks.jpg)
 
 When choosing a person for a certain job, we are interested in how relevant the experience they have is. We check CVs and make sure that the person is well-educated and properly trained for the job. Usually, this approach has to work. However, what if I tell you that, besides the traditional approach, there is a scientific one, which might work better for you?
 
