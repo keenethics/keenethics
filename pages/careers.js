@@ -1,4 +1,4 @@
-/* global BACKEND_URL, fetch */
+/* global fetch */
 
 import 'whatwg-fetch';
 
@@ -11,18 +11,9 @@ import Background from '../components/content/background';
 
 import Layout from '../components/layout/main';
 
+import { config } from '../main.config';
 
 export default class Careers extends React.Component {
-  static propTypes = {
-    url: PropTypes.object,
-    careers: PropTypes.array,
-  };
-
-  static defaultProps = {
-    url: {},
-    careers: [],
-  };
-
   constructor(props) {
     super(props);
 
@@ -79,15 +70,12 @@ export default class Careers extends React.Component {
       ],
     };
   }
-
-
   onSubmit(e) {
     e.preventDefault();
 
     const { activeItemIndex } = this.state;
-    const { careers } = this.props;
 
-    const position = careers[activeItemIndex].position;
+    const position = config.careers[activeItemIndex].position;
 
     this.setState({
       isPending: true,
@@ -127,18 +115,10 @@ export default class Careers extends React.Component {
       },
     });
   }
-
-  static getInitialProps = async () => {
-    const response = await fetch(`${BACKEND_URL}/api/careers`);
-    const careers = await response.json();
-    return { careers };
-  };
-
   getCareersItems(even) {
     const { activeItemIndex } = this.state;
-    const { careers } = this.props;
 
-    return careers.reduce((acc, item, i) => {
+    return config.careers.reduce((acc, item, i) => {
       const element = (
         <div
           key={item.position}
@@ -171,9 +151,7 @@ export default class Careers extends React.Component {
       message,
       status,
     } = this.state;
-    const { careers } = this.props;
-
-    const { position, experience, description } = careers[activeItemIndex];
+    const { position, experience, description } = config.careers[activeItemIndex];
 
     return (
       <div className="careers-page-position-inner">
@@ -250,7 +228,7 @@ export default class Careers extends React.Component {
     });
   }
   render() {
-    const { url, careers } = this.props;
+    const { url } = this.props;
     const { sliderIsActive, activeItemIndex } = this.state;
 
     if (this.slider && !activeItemIndex) {
@@ -267,7 +245,7 @@ export default class Careers extends React.Component {
           <div className="careers-page-content">
             <div className={sliderIsActive && this.slider ? 'careers-page-slider' : 'careers-page-slider loading'}>
               <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
-                {careers.map(item => (
+                {config.careers.map(item => (
                   <div className="careers-page-slider-ship" key={item.position}>
                     <div className="careers-page-slider-ship-img">
                       <img src={`/static/images/ships/${item.image}.svg`} className={item.image} alt={item.position} />
@@ -286,3 +264,11 @@ export default class Careers extends React.Component {
     );
   }
 }
+
+Careers.propTypes = {
+  url: PropTypes.object,
+};
+
+Careers.defaultProps = {
+  url: {},
+};
