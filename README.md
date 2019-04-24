@@ -3,7 +3,8 @@
 1. Clone repository
 2. [Install Yarn](https://yarnpkg.com/en/docs/install)
 3. Install dependencies via `yarn` command
-4. Start development server via `yarn dev` command
+4. Edit `.env.example` file
+5. Start development server via `yarn dev` command
 
 ## Make build
 
@@ -21,6 +22,12 @@
 
 1. Start build via `yarn deploy` command
 2. Enjoy
+
+### Other way
+
+Now we use [CircleCI](https://circleci.com/) for deploying.
+
+**Note:** for correct works you need set `process.env.ENV_PATH` and all vars on production must be saved here.
 
 ### Note for deploy:
 If you deploy to production and see that your changes didn't implement, but in localhost all works. You can try command `killall node` on prod.
