@@ -174,6 +174,11 @@ const postsDatePair = [
     filename: '1555916400000-cto-as-a-service-for-startups.md',
     href: '/blog/1555916400000-cto-as-a-service-for-startups',
   },
+  {
+    createdAt: 1556089200000,
+    filename: '1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter.md',
+    href: '/blog/1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;

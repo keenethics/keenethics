@@ -38,7 +38,7 @@ Now let's try to automate it.
 If we check DOM tree again, we will see that parent container content gets changed each time when we click on the "Skip" button. Let's use MutationObserver to track child list changes. The code sample is here:
 
 <div style="margin-bottom: 25px;">
-  <iframe width="100%" height="300" src="//jsfiddle.net/maxsoloviov/g3fv5oe4/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+  <iframe width="100%" height="250" src="//jsfiddle.net/maxsoloviov/g3fv5oe4/2/embedded/js/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 </div>
 
 There are multiple ways of how to run this code automatically: using some kind of a user-script, like devtools-sources-snippet, or an existing extension, like Grease/Tampermonkey. We may also create a simple extension that will use content scripts to inject that code. Yet, take into account that, if you use a method that doesn't have access to page scope (like extension content script), you will need to load jQuery or to rewrite this code slightly to vanilla js.
