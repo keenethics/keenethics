@@ -13,6 +13,7 @@ You may spend a lot of time each day visiting random sites to feed your brain wi
 Let’s make it even tastier – and search for some bugs just for fun and new knowledge!
 
 ## Autologin URLs – What Is It, and Why Is It a Bad Idea?
+
 The site I check, which I am not going to name for ethical purposes, sends marketing emails with different kind of images or URLs. If you click on them even when you aren’t logged in to this website, you will be logged in automatically. Also, for some reason, that URL does not expire, so I have used an almost 3-years-old one to check it and it still works.
 
 Why is it bad?
