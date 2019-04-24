@@ -1,7 +1,18 @@
-const express = require('express');
-const expressUncapitalize = require('express-uncapitalize');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv-safe');
+
+const { NODE_ENV, ENV_PATH } = process.env;
+const envDefaultPath = path.resolve(__dirname, '../.env');
+const pathToEnvFile =
+  (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath) && envDefaultPath);
+
+if (pathToEnvFile) {
+  dotenv.config({ path: pathToEnvFile });
+}
+
+const express = require('express');
+const expressUncapitalize = require('express-uncapitalize');
 const next = require('next');
 const fetch = require('node-fetch');
 const querystring = require('querystring');
@@ -14,7 +25,7 @@ const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 
-const dev = process.env.NODE_ENV !== 'production';
+const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
 
 const app = next({ dev });

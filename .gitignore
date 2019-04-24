@@ -9,3 +9,4 @@ private.config.js
 
 /static/main.css
 .css.map
+.env
