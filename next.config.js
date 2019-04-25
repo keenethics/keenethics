@@ -20,6 +20,7 @@ module.exports = () => {
 
   return {
     entry: 'server/index.js',
+    generateBuildId: async () => `build-${Date.now()}`,
     module: {
       rules: [
         {
