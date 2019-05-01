@@ -62,11 +62,9 @@ export default class Post extends React.Component {
             <ReactMarkdown source={post.content} escapeHtml={false} />
           </div>
           <div className="blog-post-navigation">
-            {hrefToPreviousPost ? (
-              <Link href={`/post?name=${hrefToPreviousPost}`}>
-                <div className="prev-arrow">{'<'} Previous</div>
-              </Link>
-            ) : null}
+            <Link href={hrefToPreviousPost ? `/post?name=${hrefToPreviousPost}` : '/blog'}>
+              <div className="prev-arrow">{'< '}{hrefToPreviousPost ? 'Previous' : 'Back to the blog'}</div>
+            </Link>
             <Link href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}>
               <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
