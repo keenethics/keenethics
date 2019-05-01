@@ -179,6 +179,11 @@ const postsDatePair = [
     filename: '1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter.md',
     href: '/blog/1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter',
   },
+  {
+    createdAt: 1556614800000,
+    filename: '1556614800000-find-the-same.md',
+    href: '/blog/1556614800000-find-the-same',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;

@@ -67,7 +67,7 @@ Instead, we want to provide you with a few practical pieces of advice from our C
 
 <div>
   <figure>
-    <img src="/static/posts/oleksiy-pletnov.jpg" alt="Oleksiy Pletnov CTO" style="margin: 0 0 15px auto">
+    <img src="/static/posts/oleksiy-pletnov.jpg" alt="Oleksiy Pletnov CTO" style="margin: 0 0 15px auto;border-radius: 50%;border: 3px solid #fff;box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 6px 0 rgba(0,0,0,.15);">
     <figcaption style="text-align: right;">Oleksiy Pletnov – KeenEthics CTO</figcaption>
   </figure>
 </div>
