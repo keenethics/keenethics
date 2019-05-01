@@ -22,7 +22,9 @@ const ProjectPrix = ({ url }) => (
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
                 <img src="/static/images/project/macbook.png" alt="macbook" className="macbook" />
-                <img src="/static/images/project/pree.png" alt="Prix" className="screen" />
+                <div className="macbook--screen">
+                  <img src="/static/portfolio/one-remission/one-remission.jpg" alt="OneRemission" />
+                </div>
               </div>
             </div>
             <Background />
@@ -79,10 +81,12 @@ const ProjectPrix = ({ url }) => (
               </p>
             </div>
           </div>
-
+          <div style={{ backgroundColor: '#f5f5f5', marginBottom: '20px' }}>
+            <img src="/static/portfolio/one-remission/oneremission-img-2.png" alt="OneRemission App" style={{ marginLeft: 0 }} />
+          </div>
           <div className="project-content-more">
             <h2 className="title">Our Cooperation</h2>
-            <div style={{ paddingLeft: '10%' }}>
+            <div>
               <h3><b>Challenges</b></h3>
               <p>When we started our partnership, we had two major objectives: to upgrade BotPress
                 and to refactor the code. These measures were to optimize the performance of the
@@ -100,7 +104,7 @@ const ProjectPrix = ({ url }) => (
               <PortfolioTechnologyTags tags={['Node js', 'Mongo', 'Wit.ai', 'BotPress', 'WebSocket']} />
             </div>
           </div>
-          <img src="/static/portfolio/one-remission/oneremission-img-3.jpg" alt="OneRemission app" />
+          <img src="/static/portfolio/one-remission/oneremission-img-3.jpg" alt="OneRemission App" />
           <div className="project-content-more">
             <a
               href="//oneremission.com/"
