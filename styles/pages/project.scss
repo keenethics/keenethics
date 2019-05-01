@@ -84,12 +84,32 @@
   margin: 0 auto;
   max-width: 500px;
   overflow: hidden;
+  z-index: 999;
 
   .macbook {
     position: relative;
     display: block;
     width: 100%;
     z-index: 200;
+  }
+  .macbook--screen {
+    position: absolute;
+    top: 15.25%;
+    left: 18.5%;
+    width: 63%;
+    height: 53.5%;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      height: 100%;
+      top: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+      position: absolute;
+      max-width: unset;
+    }
   }
   .screen {
     position: absolute;
@@ -375,6 +395,7 @@
   }
   img {
     max-width: 950px;
+    width: 100%;
     margin: 0 auto;
   }
 }
