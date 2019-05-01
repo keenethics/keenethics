@@ -102,15 +102,6 @@ const ProjectKnotel = ({ url }) => (
               Although Knotel is a relatively new company, they see further growth, and
               more opportunities are yet to come for this aspiring venture.
             </p>
-            <a
-              href="https://knotel.com"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
           </div>
           <Navigation url={url} />
         </div>
