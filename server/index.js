@@ -1,7 +1,18 @@
-const express = require('express');
-const expressUncapitalize = require('express-uncapitalize');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv-safe');
+
+const { NODE_ENV, ENV_PATH } = process.env;
+const envDefaultPath = path.resolve(__dirname, '../.env');
+const pathToEnvFile =
+  (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath) && envDefaultPath);
+
+if (pathToEnvFile) {
+  dotenv.config({ path: pathToEnvFile, allowEmptyValues: true });
+}
+
+const express = require('express');
+const expressUncapitalize = require('express-uncapitalize');
 const next = require('next');
 const fetch = require('node-fetch');
 const querystring = require('querystring');
@@ -11,11 +22,10 @@ const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
+const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 
-const Router = require('./routes').Router;
-
-const dev = process.env.NODE_ENV !== 'production';
+const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
 
 const app = next({ dev });
@@ -54,12 +64,6 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
-
-  Router.forEachPattern((page, pattern, defaultParams) => (
-    server.get(pattern, (req, res) => (
-      app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params))
-    ))
-  ));
 
   server.post('/contact', (req, res) => {
     const {
@@ -323,11 +327,11 @@ app.prepare().then(() => {
       });
     });
   });
-  server.get('/posts', (req, res) => {
+  server.get('/api/posts', (req, res) => {
     const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
+
     const result = sortedPosts
       .map((file) => {
-        console.log(path.resolve(__dirname, `../posts/${file.filename}`));
         const fileStat = fs.existsSync(path.resolve(__dirname, `../posts/${file.filename}`));
         if (!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
         const text = fs.readFileSync(path.resolve(__dirname, `../posts/${file.filename}`), 'utf8');
@@ -358,7 +362,7 @@ app.prepare().then(() => {
       .filter(v => v !== null);
     res.send(result);
   });
-  server.get('/post/:name', (req, res) => {
+  server.get('/api/posts/:name', (req, res) => {
     if (req.params && req.params.name) {
       fs.stat(path.resolve(__dirname, `../posts/${req.params.name}.md`), (err) => {
         if (err == null) {
@@ -413,6 +417,18 @@ app.prepare().then(() => {
         }
       });
     }
+  });
+
+  server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
+
+  server.get('/api/astronauts', async (req, res) => {
+    const team = await getTeam();
+    res.send(JSON.stringify(team));
+  });
+
+  server.get('/api/careers', async (req, res) => {
+    const careers = await getCareers();
+    res.send(JSON.stringify(careers));
   });
 
   server.get('*', (req, res) => handle(req, res));

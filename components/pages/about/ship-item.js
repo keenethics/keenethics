@@ -10,7 +10,7 @@ export default class ShipItem extends React.Component {
   }
   render() {
     const {
-      ship, worker, id, activeId, isFirstItem,
+      worker, id, activeId, isFirstItem,
     } = this.props;
 
     return (
@@ -21,14 +21,14 @@ export default class ShipItem extends React.Component {
         onFocus={this.onMouseOver}
         onBlur={this.onMouseOut}
       >
-        <div className={`ship ${ship.key}`}>
+        <div className={`ship ${worker.key}`}>
           <div className="ship-image">
-            <img src={`/static/images/ships/${ship.key}.svg`} alt="ship" />
+            <img src={`/static/images/ships/${worker.key}.svg`} alt="ship" />
           </div>
           <div className={id === activeId || (isFirstItem && activeId === 'first') ? 'ship-content-wrapper show' : 'ship-content-wrapper'}>
             <div className="ship-content">
               <div className="ship-content-user-avatar">
-                <img src={`/static/images/team/${worker.avatar}`} alt="avatar" />
+                <img src={worker.avatar} alt="avatar" />
               </div>
               <div className="ship-content-user-name">{worker.name}</div>
               <div className="ship-content-user-position">{worker.position}</div>
@@ -42,7 +42,6 @@ export default class ShipItem extends React.Component {
 }
 
 ShipItem.propTypes = {
-  ship: PropTypes.object,
   worker: PropTypes.object,
   isFirstItem: PropTypes.bool,
   changeId: PropTypes.func.isRequired,
@@ -50,7 +49,6 @@ ShipItem.propTypes = {
   activeId: PropTypes.string.isRequired,
 };
 ShipItem.defaultProps = {
-  ship: {},
   worker: {},
   isFirstItem: false,
 };

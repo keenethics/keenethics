@@ -4,14 +4,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
-import { Link } from 'next-url-prettifier';
+import Link from 'next/link';
 
 import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Error from './_error';
-import { Router } from '../server/routes';
 
 export default class Post extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -20,9 +19,9 @@ export default class Post extends React.Component {
     }
   }
   static async getInitialProps(p) {
-    const name = p.query.name;
+    const { name } = p.query;
 
-    const res = await fetch(`${BACKEND_URL}/post/${name}`);
+    const res = await fetch(`${BACKEND_URL}/api/posts/${name}`);
     const json = await res.json();
 
     return { post: json };
@@ -63,12 +62,16 @@ export default class Post extends React.Component {
             <ReactMarkdown source={post.content} escapeHtml={false} />
           </div>
           <div className="blog-post-navigation">
-            {hrefToPreviousPost ? (
-              <Link route={Router.linkPage('post', { name: hrefToPreviousPost })}>
-                <div className="prev-arrow">{'<'} Previous</div>
-              </Link>
-            ) : null}
-            <Link route={Router.linkPage(hrefToNextPost ? 'post' : 'blog', { name: hrefToNextPost })}>
+            <Link
+              href={hrefToPreviousPost ? `/post?name=${hrefToPreviousPost}` : '/blog'}
+              as={`/blog${hrefToPreviousPost ? `/${hrefToPreviousPost}` : ''}`}
+            >
+              <div className="prev-arrow">{'< '}{hrefToPreviousPost ? 'Previous' : 'Back to the blog'}</div>
+            </Link>
+            <Link
+              href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}
+              as={`/blog${hrefToNextPost ? `/${hrefToNextPost}` : ''}`}
+            >
               <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
           </div>

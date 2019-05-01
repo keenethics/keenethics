@@ -169,6 +169,21 @@ const postsDatePair = [
     filename: '1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website.md',
     href: '/blog/1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website',
   },
+  {
+    createdAt: 1555916400000,
+    filename: '1555916400000-cto-as-a-service-for-startups.md',
+    href: '/blog/1555916400000-cto-as-a-service-for-startups',
+  },
+  {
+    createdAt: 1556089200000,
+    filename: '1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter.md',
+    href: '/blog/1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter',
+  },
+  {
+    createdAt: 1556614800000,
+    filename: '1556614800000-find-the-same.md',
+    href: '/blog/1556614800000-find-the-same',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;

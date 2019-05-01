@@ -37,7 +37,7 @@ class Blog extends React.Component {
     document.body.style.overflowY = 'initial';
   }
   static async getInitialProps() {
-    const res = await fetch(`${BACKEND_URL}/posts`);
+    const res = await fetch(`${BACKEND_URL}/api/posts`);
     const json = await res.json();
 
     return { posts: json };
@@ -68,6 +68,7 @@ class Blog extends React.Component {
   render() {
     const { categorisList, selectedPosts } = this.state;
     const { router, posts } = this.props;
+
     return (
       <Layout currentURL={router.current}>
         <div className="blog-page">
