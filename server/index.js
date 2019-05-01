@@ -8,7 +8,7 @@ const pathToEnvFile =
   (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath) && envDefaultPath);
 
 if (pathToEnvFile) {
-  dotenv.config({ path: pathToEnvFile });
+  dotenv.config({ path: pathToEnvFile, allowEmptyValues: true });
 }
 
 const express = require('express');
@@ -327,7 +327,7 @@ app.prepare().then(() => {
       });
     });
   });
-  server.get('/posts', (req, res) => {
+  server.get('/api/posts', (req, res) => {
     const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
 
     const result = sortedPosts
@@ -362,7 +362,7 @@ app.prepare().then(() => {
       .filter(v => v !== null);
     res.send(result);
   });
-  server.get('/post/:name', (req, res) => {
+  server.get('/api/posts/:name', (req, res) => {
     if (req.params && req.params.name) {
       fs.stat(path.resolve(__dirname, `../posts/${req.params.name}.md`), (err) => {
         if (err == null) {
@@ -418,6 +418,9 @@ app.prepare().then(() => {
       });
     }
   });
+
+  server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
+
   server.get('/api/astronauts', async (req, res) => {
     const team = await getTeam();
     res.send(JSON.stringify(team));

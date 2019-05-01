@@ -21,7 +21,7 @@ export default class Post extends React.Component {
   static async getInitialProps(p) {
     const { name } = p.query;
 
-    const res = await fetch(`${BACKEND_URL}/post/${name}`);
+    const res = await fetch(`${BACKEND_URL}/api/posts/${name}`);
     const json = await res.json();
 
     return { post: json };
@@ -63,11 +63,14 @@ export default class Post extends React.Component {
           </div>
           <div className="blog-post-navigation">
             {hrefToPreviousPost ? (
-              <Link href={`/post?name=${hrefToPreviousPost}`}>
+              <Link href={`/post?name=${hrefToPreviousPost}`} as={`/blog/${hrefToPreviousPost}`}>
                 <div className="prev-arrow">{'<'} Previous</div>
               </Link>
             ) : null}
-            <Link href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}>
+            <Link
+              href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}
+              as={`/blog${hrefToNextPost ? `/${hrefToNextPost}` : ''}`}
+            >
               <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
             </Link>
           </div>
