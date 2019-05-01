@@ -1,5 +1,20 @@
 [
   {
+    "title": "OneRemission",
+    "href": "/project-one-remission",
+    "imgSrc": "one-remission/one-remission.jpg",
+    "category": {
+      "main": [
+        "Consumer apps"
+      ],
+      "additional": [
+        "E-Commerce",
+        "Healhcare"
+      ]
+    },
+    "description": "Making the lives of cancer survivors easier"
+  },
+  {
     "title": "Pree",
     "href": "/project-pree",
     "imgSrc": "Pree.jpg",
