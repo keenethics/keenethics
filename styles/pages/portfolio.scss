@@ -68,12 +68,21 @@
    box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
    transition: box-shadow .2s ease-in-out;
    &:hover {
-      // transform: scale(1.01);
       box-shadow: 3px 3px 25px rgba(0, 0, 0, .7);
    }
 }
+.portfolio__item-figure-img-wrap {
+   height: 155px;
+   position: relative;
+}
 .portfolio__item-img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    width: 100%;
+   min-width: 100%;
+   min-height: 100%;
 }
 .portfolio__figcaption {
    display: flex;
