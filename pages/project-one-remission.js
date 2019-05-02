@@ -107,7 +107,7 @@ const ProjectPrix = ({ url }) => (
           <img src="/static/portfolio/one-remission/oneremission-img-3.jpg" alt="OneRemission App" />
           <div className="project-content-more">
             <a
-              href="//oneremission.com/"
+              href="http://oneremission.com/"
               rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
