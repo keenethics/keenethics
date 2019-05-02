@@ -72,7 +72,7 @@ const ProjectPrix = ({ url }) => (
               consultant and financial advisor in one application.
             </p>
             <div className="title">Paceup for Your Business</div>
-            <div className="project-achievements">
+            <div>
               <ul>
                 <li>
                   Forecasting in Real-time
@@ -86,7 +86,7 @@ const ProjectPrix = ({ url }) => (
               you can
               adjust your pricing for each segment, room-category, and a night spent in your hotel.
             </p>
-            <div className="project-achievements">
+            <div>
               <ul>
                 <li>
                   Actualizing price sensitivity
@@ -102,7 +102,7 @@ const ProjectPrix = ({ url }) => (
               is extended
               on each and every point of the booking curve.
             </p>
-            <div className="project-achievements">
+            <div>
               <ul>
                 <li>
                   Gorgeous intuitive interface

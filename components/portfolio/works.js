@@ -11,7 +11,9 @@ const Works = ({ works }) => (
           <Link href={work.href}>
             <a className="portfolio__item-link">
               <figure className="portfolio__item-figure">
-                <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
+                <div className="portfolio__item-figure-img-wrap">
+                  <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
+                </div>
                 <figcaption className="portfolio__figcaption">
                   <h3 className="portfolio__item-title">{work.title}</h3>
                   <ul className="portfolio__item-categories">
