@@ -98,11 +98,6 @@ const LayoutHead = (props) => {
         name="description"
         content={description}
       /> : null}
-      {/* <link
-        type="text/css"
-        rel="stylesheet"
-        href="/static/main.css"
-      /> */}
       <link
         type="image/vnd.microsoft.icon"
         rel="icon"
