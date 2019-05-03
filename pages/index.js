@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
+import '../styles/main.scss';
+
 const JsonLd = ({ data }) => (
   <script
     type="application/ld+json"
