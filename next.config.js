@@ -1,6 +1,7 @@
 const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
+  generateBuildId: async () => `build-${Date.now()}`,
   webpack(config) {
     const { rules } = config.module;
 
