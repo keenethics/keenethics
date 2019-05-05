@@ -8,7 +8,7 @@ import { servicesMobileDevelopment } from '../main.config';
 
 const ServicesWebDevelopmentAndroid = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="android" points={servicesMobileDevelopment()} />
+    <ContentNavigation image="android" points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>Android App Development Services</h1>
       <p>

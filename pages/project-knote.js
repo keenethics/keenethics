@@ -16,7 +16,11 @@ const ProjectKnotel = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">Knote</h2>
-              <h3 className="duration"><span>Duration:</span> Developing since May 2015</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+Developing since May 2015
+              </h3>
               <p className="description">
                 A tool for online collaboration and task-management
               </p>

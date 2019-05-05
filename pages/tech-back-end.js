@@ -9,7 +9,7 @@ import { techBackEnd } from '../main.config';
 
 const TechBackEnd = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="be" />
+    <ContentNavigation image="be" />
     <PageTabs points={techBackEnd()} />
     <div className="content-block">
       <h1>Back-End</h1>

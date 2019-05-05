@@ -10,7 +10,6 @@ const TechDataBaseNeo4j = ({ url }) => (
   <Layout currentURL={url}>
     <div className="content-wrap">
       <ContentNavigation
-        url={url}
         image="be"
         points={techDatabase()}
       />

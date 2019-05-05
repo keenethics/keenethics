@@ -9,7 +9,7 @@ import { techApiIntegration } from '../main.config';
 
 const TechApiIntegration = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="be" />
+    <ContentNavigation image="be" />
     <PageTabs points={techApiIntegration()} />
     <div className="content-block">
       <h1>API Integration Services</h1>

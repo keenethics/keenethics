@@ -14,9 +14,7 @@ import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
-  const categories = existCategories.filter(existCategory =>
-    chosenCategory.filter(category =>
-      category.toLowerCase() === existCategory.toLowerCase()).length);
+  const categories = existCategories.filter(existCategory => chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
   return categories.length ? categories : existCategories;
 };
 
@@ -30,12 +28,15 @@ class Blog extends React.Component {
     this.postsCountFor = this.postsCountFor.bind(this);
     this.filterOnChange = this.filterOnChange.bind(this);
   }
+
   componentDidMount() {
     document.body.style.overflowY = 'hidden';
   }
+
   componentWillUnmount() {
     document.body.style.overflowY = 'initial';
   }
+
   static async getInitialProps() {
     const res = await fetch(`${BACKEND_URL}/api/posts`);
     const json = await res.json();

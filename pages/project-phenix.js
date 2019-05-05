@@ -17,7 +17,9 @@ const ProjectPhenix = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Phenix</h2>
               <h3 className="duration">
-                <span>Duration:</span> 5 months, project continues
+                <span>Duration:</span>
+                {' '}
+5 months, project continues
               </h3>
               <p className="description">
                 Online video-streaming

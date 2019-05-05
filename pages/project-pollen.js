@@ -16,7 +16,11 @@ const ProjectPollen = ({ url }) => (
           <div className="project-content-summary full-width" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">Pollen</h2>
-              <h3 className="duration"><span>Duration:</span> 4 months</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+4 months
+              </h3>
               <p className="description">
                 Organizing social-campaigns via Gmail contacts
               </p>

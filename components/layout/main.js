@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 
 import Promise from 'promise-polyfill';
 
+import '../../styles/main.scss';
+
 import Head from './head';
 import Navigation from './navigation/main';
 
@@ -24,14 +26,17 @@ export default class Layout extends React.Component {
 
     this.updateDimensions = this.updateDimensions.bind(this);
   }
+
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
 
     this.updateDimensions();
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions);
   }
+
   updateDimensions() {
     this.setState({
       dimensions: {
@@ -40,7 +45,11 @@ export default class Layout extends React.Component {
       },
     });
   }
+
   render() {
+    const {
+      dimensions,
+    } = this.state;
     const {
       children,
       currentURL,
@@ -48,7 +57,7 @@ export default class Layout extends React.Component {
       noMenu,
     } = this.props;
 
-    const style = { height: this.state.dimensions.height };
+    const style = { height: dimensions.height };
     if (noMenu) {
       style.width = '100vw';
     }

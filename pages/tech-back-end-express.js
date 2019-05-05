@@ -9,7 +9,6 @@ import { techBackEnd } from '../main.config';
 const TechBackEndExpress = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="be"
       points={techBackEnd()}
     />

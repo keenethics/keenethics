@@ -9,6 +9,7 @@ export default class AboutValues extends React.Component {
 
     this.state = {};
   }
+
   render() {
     const { url } = this.props;
 
@@ -22,7 +23,10 @@ export default class AboutValues extends React.Component {
             </div>
             <div className="orbit-wrap inner">
               <ul className="orbit">
-                <li /><li /><li /><li />
+                <li />
+                <li />
+                <li />
+                <li />
               </ul>
               <div className="orbit-star orbit-star-1">
                 <span />

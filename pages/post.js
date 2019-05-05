@@ -18,6 +18,7 @@ export default class Post extends React.Component {
       document.querySelector('.content-inner').scrollTo(0, 0);
     }
   }
+
   static async getInitialProps(p) {
     const { name } = p.query;
 
@@ -26,6 +27,7 @@ export default class Post extends React.Component {
 
     return { post: json };
   }
+
   render() {
     const { url, post } = this.props;
     const { hrefToPreviousPost, hrefToNextPost } = post;
@@ -66,7 +68,10 @@ export default class Post extends React.Component {
               href={hrefToPreviousPost ? `/post?name=${hrefToPreviousPost}` : '/blog'}
               as={`/blog${hrefToPreviousPost ? `/${hrefToPreviousPost}` : ''}`}
             >
-              <div className="prev-arrow">{'< '}{hrefToPreviousPost ? 'Previous' : 'Back to the blog'}</div>
+              <div className="prev-arrow">
+                {'< '}
+                {hrefToPreviousPost ? 'Previous' : 'Back to the blog'}
+              </div>
             </Link>
             <Link
               href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}

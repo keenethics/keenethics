@@ -9,7 +9,6 @@ import { techFrontEnd } from '../main.config';
 const TechFrontEndRedux = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="fe"
       points={techFrontEnd()}
     />

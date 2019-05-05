@@ -103,11 +103,13 @@ export default class PageTabs extends React.Component {
       ],
     };
   }
+
   sliderInit() {
     this.setState({
       sliderIsActive: true,
     });
   }
+
   render() {
     const { points } = this.props;
     const { sliderIsActive } = this.state;

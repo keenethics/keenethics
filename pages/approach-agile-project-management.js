@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachAgileProject = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="agile" />
+    <ContentNavigation image="agile" />
     <div className="content-block">
       <h1>Agile Project Management Services</h1>
       <p>

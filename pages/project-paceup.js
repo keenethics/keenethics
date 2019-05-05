@@ -17,7 +17,9 @@ const ProjectPrix = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Paceup</h2>
               <h3 className="duration">
-                <span>Duration:</span> 1 month. 1 developer. Full cycle of React web app.
+                <span>Duration:</span>
+                {' '}
+1 month. 1 developer. Full cycle of React web app.
               </h3>
               <p className="description">
                 Increasing loyalty of existing clients

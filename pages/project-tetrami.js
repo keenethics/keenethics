@@ -18,7 +18,9 @@ const ProjectTetrami = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title" style={{ color: accentColor }}>Tetrami</h2>
               <h3 className="duration" style={{ color: accentColor }}>
-                <span>Duration:</span> 4 months, nearly done, will be on google play and app store
+                <span>Duration:</span>
+                {' '}
+4 months, nearly done, will be on google play and app store
                 soon
               </h3>
               <p className="description">

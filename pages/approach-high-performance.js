@@ -6,7 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachHighPerformance = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="high" />
+    <ContentNavigation image="high" />
     <div className="content-block">
       <div className="perfomance-wrap">
         <div className="line" />

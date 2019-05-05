@@ -9,7 +9,7 @@ import { servicesWebDevelopmentTabs } from '../main.config';
 
 const ServicesWebDevelopment = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="web_development" />
+    <ContentNavigation image="web_development" />
     <PageTabs points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>Web Development Services</h1>

@@ -17,7 +17,9 @@ const ProjectPlutio = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Plutio</h2>
               <h3 className="duration">
-                <span>Duration:</span> 3 months (beginning 2017)
+                <span>Duration:</span>
+                {' '}
+3 months (beginning 2017)
               </h3>
               <p className="description">
                 Business management platform

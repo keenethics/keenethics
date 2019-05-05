@@ -16,7 +16,11 @@ const ProjectBarfrogs = ({ url }) => (
           <div className="project-content-summary full-width" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">BarFrogs</h2>
-              <h3 className="duration"><span>Duration:</span> 5 months, 1 developer</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+5 months, 1 developer
+              </h3>
               <p className="description">
                 Find the Place to Hang out with Bar Frogs
               </p>

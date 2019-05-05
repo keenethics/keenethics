@@ -13,6 +13,7 @@ export default class CategoriesFilter extends Component {
     this.buttonClick = this.buttonClick.bind(this);
     this.showAllWorks = this.showAllWorks.bind(this);
   }
+
   buttonClick(category) {
     const { filterOnChange, selectedCategories, pageTitle } = this.props;
     const selectedItems = selectedCategories.slice();

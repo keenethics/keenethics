@@ -9,7 +9,6 @@ import { techApps } from '../main.config';
 const TechAppsProg = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="app"
       points={techApps()}
     />

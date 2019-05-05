@@ -17,7 +17,11 @@ const ProjectMyGrassGrowth = ({ url }) => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">My Grass Growth</h2>
-              <h3 className="duration"><span>Duration:</span> 6 months</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+6 months
+              </h3>
               <p className="description">
                 Keep you cows healthy and well-fed
               </p>

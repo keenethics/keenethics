@@ -9,7 +9,7 @@ import { techDatabase } from '../main.config';
 
 const TechDataBase = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="db" />
+    <ContentNavigation image="db" />
     <PageTabs points={techDatabase()} />
     <div className="content-block">
       <h1>Database Development Services</h1>

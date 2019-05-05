@@ -9,7 +9,6 @@ import { techApiIntegration } from '../main.config';
 const TechApiIntegrationRest = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="be"
       points={techApiIntegration()}
     />

@@ -9,12 +9,16 @@ import { techApps } from '../main.config';
 
 const TechApps = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="app" />
+    <ContentNavigation image="app" />
     <PageTabs points={techApps()} />
     <div className="content-block">
       <h1>App Development Services</h1>
       <p>
-        Maybe, there are a few businesses left that can successfully {'function'} without any web
+        Maybe, there are a few businesses left that can successfully
+        {' '}
+        {'function'}
+        {' '}
+without any web
         and software products. But most companies can significantly improve and grow their
         business with a help of desktop and mobile app development, chatbots, machine learning
         and artificial intelligence projects, and a lot of more.

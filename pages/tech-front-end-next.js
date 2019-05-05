@@ -8,7 +8,7 @@ import { techFrontEnd } from '../main.config';
 
 const TechFrontEndNext = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" points={techFrontEnd()} />
+    <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h2>Next.js Development Services</h2>
       <p>

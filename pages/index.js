@@ -4,8 +4,6 @@ import Link from 'next/link';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
-import '../styles/main.scss';
-
 const JsonLd = ({ data }) => (
   <script
     type="application/ld+json"
@@ -43,6 +41,7 @@ export default class Index extends React.Component {
 
     this.state = {};
   }
+
   render() {
     const { url } = this.props;
 
@@ -71,8 +70,18 @@ export default class Index extends React.Component {
                 5-stars rated company at Clutch
               </a>
             </div>
-            <h1>Keen & Ethical<br />Software <br />Development</h1>
-            <h2>You have a keen idea<span className="dash" />we have a keen approach</h2>
+            <h1>
+              Keen &amp; Ethical
+              <br />
+              Software
+              <br />
+              Development
+            </h1>
+            <h2>
+              You have a keen idea
+              <span className="dash" />
+              we have a keen approach
+            </h2>
             <Link href="/contacts?activeForm=estimate">
               <a className="button">Free estimate</a>
             </Link>
@@ -84,7 +93,12 @@ export default class Index extends React.Component {
                 <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
                   <span itemProp="streetAddress">Kulparkivska St, 59</span>
                 </a>
-                <i><span itemProp="addressLocality">Lviv</span>, <span itemProp="addressRegion">Ukraine</span></i>
+                <i>
+                  <span itemProp="addressLocality">Lviv</span>
+,
+                  {' '}
+                  <span itemProp="addressRegion">Ukraine</span>
+                </i>
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
@@ -92,7 +106,9 @@ export default class Index extends React.Component {
                 </div>
                 <a href="mailto:founders@keenethics.com">founders@keenethics.com</a>
                 <i>
-                  Drop Us a Letter or <a href="skype:maxsav28?chat" className="skype-link">Call</a>
+                  Drop Us a Letter or
+                  {' '}
+                  <a href="skype:maxsav28?chat" className="skype-link">Call</a>
                 </i>
               </div>
               <div className="contact-item">

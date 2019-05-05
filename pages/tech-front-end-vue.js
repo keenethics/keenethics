@@ -8,7 +8,7 @@ import { techFrontEnd } from '../main.config';
 
 const TechFrontEndVue = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" points={techFrontEnd()} />
+    <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h1>Vue.js development services</h1>
       <p>

@@ -17,7 +17,9 @@ const ProjectWargaming = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Wargaming</h2>
               <h3 className="duration">
-                <span>Duration:</span> 7 months so far, planned one more year, then Keenethics will
+                <span>Duration:</span>
+                {' '}
+7 months so far, planned one more year, then Keenethics will
                 be supporting the project.
               </h3>
               <p className="description">

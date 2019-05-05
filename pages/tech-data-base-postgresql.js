@@ -9,7 +9,6 @@ import { techDatabase } from '../main.config';
 const TechDataBasePostgresql = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="be"
       points={techDatabase()}
     />

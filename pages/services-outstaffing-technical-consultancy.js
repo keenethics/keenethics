@@ -9,7 +9,6 @@ import { servicesOutstaffing } from '../main.config';
 const ServicesOutstaffingTechnical = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="outstaffing_tc"
       points={servicesOutstaffing()}
     />

@@ -16,7 +16,11 @@ const ProjectComicEnglish = ({ url }) => (
           <div className="project-content-summary full-width" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">ComicEnglish</h2>
-              <h3 className="duration"><span>Duration:</span> 5 months</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+5 months
+              </h3>
               <p className="description">
                 Learn English while chatting with AI
               </p>

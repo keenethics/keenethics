@@ -9,7 +9,6 @@ import { techFrontEnd } from '../main.config';
 const TechFrontEndAngular2 = ({ url }) => (
   <Layout currentURL={url}>
     <ContentNavigation
-      url={url}
       image="fe"
       points={techFrontEnd()}
     />

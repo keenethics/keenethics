@@ -14,9 +14,7 @@ import { works } from '../main.config';
 const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
-  const categories = existCategories.filter(existCategory =>
-    chosenCategory.filter(category =>
-      category.toLowerCase() === existCategory.toLowerCase()).length);
+  const categories = existCategories.filter(existCategory => chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
 
   return categories.length ? categories : existCategories;
 };

@@ -9,7 +9,7 @@ import { techFrontEnd } from '../main.config';
 
 const ServicesOutstaffing = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" />
+    <ContentNavigation image="fe" />
     <PageTabs points={techFrontEnd()} />
     <div className="content-block">
       <h1>Front-End</h1>

@@ -19,9 +19,11 @@ export default class Contacts extends React.Component {
     props.url.push('/contacts');
     this.onClick = this.onClick.bind(this);
   }
+
   onClick({ target }) {
     this.setState({ activeContactForm: target.name === 'contact-form-btn' });
   }
+
   render() {
     const { url } = this.props;
     const {
@@ -38,7 +40,12 @@ export default class Contacts extends React.Component {
               <h1 className="title">Contact Us</h1>
             </div>
             <div className={activeContactForm ? 'contacts-block' : 'estimate-block-background'} itemScope itemType="http://schema.org/Organization">
-              <ul className="contacts-stars"><li /><li /><li /><li /></ul>
+              <ul className="contacts-stars">
+                <li />
+                <li />
+                <li />
+                <li />
+              </ul>
               {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
               <button onClick={this.onClick} name="contact-form-btn" className={classnames('contacts-form-btn contact-form-btn', { disabled: !activeContactForm })}>Say Hello</button>
               <button onClick={this.onClick} name="estimate-form-btn" className={classnames('contacts-form-btn estimate-form-btn', { disabled: activeContactForm })}>Estimate your project</button>
@@ -48,7 +55,12 @@ export default class Contacts extends React.Component {
                     <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
                       <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
                       <div itemProp="streetAddress">Kulparkivska St, 59</div>
-                      <span><span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>, <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span></span>
+                      <span>
+                        <span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>
+,
+                        {' '}
+                        <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span>
+                      </span>
                     </a>
                   </li>
                   <li>

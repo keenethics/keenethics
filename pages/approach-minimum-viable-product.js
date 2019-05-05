@@ -7,7 +7,7 @@ import ContentNavigation from '../components/content/navigation';
 
 const ApproachMinimumValProduct = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="min" />
+    <ContentNavigation image="min" />
     <div className="content-block">
       <h1 style={{ marginBottom: 0 }}>
         Minimum Viable Product: Between an Idea and the Product
@@ -201,7 +201,8 @@ const ApproachMinimumValProduct = ({ url }) => (
       </section>
       <p style={{ fontWeight: 700 }}>
         If you are interested in MVP development services, please, feel free to
-        <Link href="/contacts">contact us</Link>.
+        <Link href="/contacts">contact us</Link>
+.
       </p>
     </div>
   </Layout>

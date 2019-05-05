@@ -8,7 +8,7 @@ import { techFrontEnd } from '../main.config';
 
 const TechFrontEndReactNative = ({ url }) => (
   <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" points={techFrontEnd()} />
+    <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h1>React Native Developers</h1>
       <p>

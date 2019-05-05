@@ -119,6 +119,7 @@ export default class Careers extends React.Component {
       this.setState(responseState);
     });
   }
+
   onChange({ target }) {
     this.setState({
       [target.name]: {
@@ -161,6 +162,7 @@ export default class Careers extends React.Component {
       return acc;
     }, []);
   }
+
   getCareersItem() {
     const {
       activeItemIndex,
@@ -226,6 +228,7 @@ export default class Careers extends React.Component {
       </div>
     );
   }
+
   itemClick(activeItemIndex) {
     this.slider.slickGoTo(activeItemIndex);
 
@@ -233,22 +236,26 @@ export default class Careers extends React.Component {
       activeItemIndex,
     });
   }
+
   sliderChange(activeItemIndex) {
     this.setState({
       activeItemIndex,
       showApplyForm: false,
     });
   }
+
   sliderInit() {
     this.setState({
       sliderIsActive: true,
     });
   }
+
   toggleApplyForm() {
     this.setState({
       showApplyForm: !this.state.showApplyForm,
     });
   }
+
   render() {
     const { url, careers } = this.props;
     const { sliderIsActive, activeItemIndex } = this.state;
