@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#3c67ab';
 
-const ProjectBlackBook = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectBlackBook = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -76,17 +75,11 @@ const ProjectBlackBook = ({ url }) => (
               </a>
             </div>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectBlackBook.propTypes = {
-  url: PropTypes.object,
-};
-ProjectBlackBook.defaultProps = {
-  url: {},
-};
 
 export default ProjectBlackBook;

@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesMobileDevelopment } from '../main.config';
 
-const ServicesWebDevelopmentAndroid = ({ url }) => (
-  <Layout currentURL={url}>
+const ServicesWebDevelopmentAndroid = () => (
+  <Layout>
     <ContentNavigation image="android" points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>Android App Development Services</h1>
@@ -54,12 +53,5 @@ const ServicesWebDevelopmentAndroid = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesWebDevelopmentAndroid.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopmentAndroid.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopmentAndroid;

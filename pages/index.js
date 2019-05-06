@@ -43,10 +43,8 @@ export default class Index extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
-
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <JsonLd data={companyData} />
         <div className="home-page">
           <div className="home-page-content">
@@ -145,11 +143,3 @@ export default class Index extends React.Component {
     );
   }
 }
-
-Index.propTypes = {
-  url: PropTypes.object,
-};
-
-Index.defaultProps = {
-  url: {},
-};

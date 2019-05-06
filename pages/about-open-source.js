@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -12,10 +11,8 @@ export default class AboutTeam extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
-
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="open-source-page page">
           <div className="open-source-page-header page-header">
             <div className="open-source-page-title page-title">
@@ -96,11 +93,3 @@ Open Source?
     );
   }
 }
-
-AboutTeam.propTypes = {
-  url: PropTypes.object,
-};
-
-AboutTeam.defaultProps = {
-  url: {},
-};

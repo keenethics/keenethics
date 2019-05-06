@@ -20,7 +20,9 @@ const arrayOfArraysToCollection = (arr) => {
     .map(v => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
-const getSheetValues = (valueRanges, rangeName) => valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
+const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
+  v => new RegExp(rangeName).test(v.range),
+).values;
 
 const getClient = async (keyFile, scopes) => google.auth.getClient({
   keyFile,

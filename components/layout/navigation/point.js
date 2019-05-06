@@ -29,7 +29,7 @@ export default class NavigationPoint extends React.Component {
     const { element: { href } } = this.props;
 
     return href ? (
-      <Link href={href} as={href} prefetch>
+      <Link href={href} prefetch>
         <a className="navigation-point">{this.renderPointContent()}</a>
       </Link>
     ) : (

@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techFrontEnd } from '../main.config';
 
-const TechFrontEndReactNative = ({ url }) => (
-  <Layout currentURL={url}>
+const TechFrontEndReactNative = () => (
+  <Layout>
     <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h1>React Native Developers</h1>
@@ -60,12 +59,5 @@ const TechFrontEndReactNative = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechFrontEndReactNative.propTypes = {
-  url: PropTypes.object,
-};
-TechFrontEndReactNative.defaultProps = {
-  url: {},
-};
 
 export default TechFrontEndReactNative;

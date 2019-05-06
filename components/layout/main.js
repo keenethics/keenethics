@@ -1,5 +1,7 @@
 /* global window */
 
+import { withRouter } from 'next/router';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,7 +15,7 @@ import Navigation from './navigation/main';
 if (typeof window !== 'undefined' && !window.Promise) {
   window.Promise = Promise;
 }
-export default class Layout extends React.Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props);
 
@@ -52,10 +54,12 @@ export default class Layout extends React.Component {
     } = this.state;
     const {
       children,
-      currentURL,
+      router,
       meta,
       noMenu,
     } = this.props;
+
+    const currentURL = router.route;
 
     const style = { height: dimensions.height };
     if (noMenu) {
@@ -80,14 +84,16 @@ Layout.propTypes = {
     PropTypes.element,
     PropTypes.array,
   ]),
-  currentURL: PropTypes.object,
+  router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
 };
 
 Layout.defaultProps = {
   children: null,
-  currentURL: {},
+  router: {},
   meta: {},
   noMenu: false,
 };
+
+export default withRouter(Layout);

@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachHighPerformance = ({ url }) => (
-  <Layout currentURL={url}>
+const ApproachHighPerformance = () => (
+  <Layout>
     <ContentNavigation image="high" />
     <div className="content-block">
       <div className="perfomance-wrap">
@@ -85,12 +84,5 @@ const ApproachHighPerformance = ({ url }) => (
     </div>
   </Layout>
 );
-
-ApproachHighPerformance.propTypes = {
-  url: PropTypes.object,
-};
-ApproachHighPerformance.defaultProps = {
-  url: {},
-};
 
 export default ApproachHighPerformance;

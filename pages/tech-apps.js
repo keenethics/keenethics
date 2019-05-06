@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,8 +6,8 @@ import PageTabs from '../components/content/tabs';
 
 import { techApps } from '../main.config';
 
-const TechApps = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApps = () => (
+  <Layout>
     <ContentNavigation image="app" />
     <PageTabs points={techApps()} />
     <div className="content-block">
@@ -105,12 +104,5 @@ without any web
     </div>
   </Layout>
 );
-
-TechApps.propTypes = {
-  url: PropTypes.object,
-};
-TechApps.defaultProps = {
-  url: {},
-};
 
 export default TechApps;

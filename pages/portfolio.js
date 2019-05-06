@@ -1,4 +1,4 @@
-/* global fetch */
+import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -14,17 +14,21 @@ import { works } from '../main.config';
 const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
-  const categories = existCategories.filter(existCategory => chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
+  const categories = existCategories.filter(
+    existCategory => chosenCategory.filter(
+      category => category.toLowerCase() === existCategory.toLowerCase(),
+    ).length,
+  );
 
   return categories.length ? categories : existCategories;
 };
 
-export default class Portfolio extends React.Component {
+class Portfolio extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      ...this.getCategoriesList(props.url),
+      ...this.getCategoriesList(props.router),
     };
 
     this.worksCountFor = this.worksCountFor.bind(this);
@@ -60,10 +64,10 @@ export default class Portfolio extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
     const { selectedWorks, categorisList } = this.state;
+
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <section className="portfolio">
           <Background className="portfolio__background" />
           <div className="portfolio__header">
@@ -86,11 +90,11 @@ export default class Portfolio extends React.Component {
   }
 }
 
-
 Portfolio.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
+};
+Portfolio.defaultProps = {
+  router: {},
 };
 
-Portfolio.defaultProps = {
-  url: {},
-};
+export default withRouter(Portfolio);

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,8 +7,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#ee521d';
 
-const ProjectComicEnglish = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectComicEnglish = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -75,17 +74,11 @@ const ProjectComicEnglish = ({ url }) => (
               required tasks on time. The website is currently offline.
             </p>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectComicEnglish.propTypes = {
-  url: PropTypes.object,
-};
-ProjectComicEnglish.defaultProps = {
-  url: {},
-};
 
 export default ProjectComicEnglish;

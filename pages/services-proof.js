@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ServicesProof = ({ url }) => (
-  <Layout currentURL={url}>
+const ServicesProof = () => (
+  <Layout>
     <ContentNavigation image="proof" />
     <div className="content-block">
       <h1>Proof of Technology Solution</h1>
@@ -75,11 +74,5 @@ const ServicesProof = ({ url }) => (
     </div>
   </Layout>
 );
-ServicesProof.propTypes = {
-  url: PropTypes.object,
-};
-ServicesProof.defaultProps = {
-  url: {},
-};
 
 export default ServicesProof;

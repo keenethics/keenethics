@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techFrontEnd } from '../main.config';
 
-const TechFrontEndNext = ({ url }) => (
-  <Layout currentURL={url}>
+const TechFrontEndNext = () => (
+  <Layout>
     <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h2>Next.js Development Services</h2>
@@ -67,12 +66,5 @@ const TechFrontEndNext = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechFrontEndNext.propTypes = {
-  url: PropTypes.object,
-};
-TechFrontEndNext.defaultProps = {
-  url: {},
-};
 
 export default TechFrontEndNext;

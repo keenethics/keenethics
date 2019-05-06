@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techBackEnd } from '../main.config';
 
-const TechBackEndHapi = ({ url }) => (
-  <Layout currentURL={url}>
+const TechBackEndHapi = () => (
+  <Layout>
     <ContentNavigation
       image="be"
       points={techBackEnd()}
@@ -70,12 +69,5 @@ const TechBackEndHapi = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechBackEndHapi.propTypes = {
-  url: PropTypes.object,
-};
-TechBackEndHapi.defaultProps = {
-  url: {},
-};
 
 export default TechBackEndHapi;

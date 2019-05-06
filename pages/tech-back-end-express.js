@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techBackEnd } from '../main.config';
 
-const TechBackEndExpress = ({ url }) => (
-  <Layout currentURL={url}>
+const TechBackEndExpress = () => (
+  <Layout>
     <ContentNavigation
       image="be"
       points={techBackEnd()}
@@ -64,12 +63,5 @@ const TechBackEndExpress = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechBackEndExpress.propTypes = {
-  url: PropTypes.object,
-};
-TechBackEndExpress.defaultProps = {
-  url: {},
-};
 
 export default TechBackEndExpress;

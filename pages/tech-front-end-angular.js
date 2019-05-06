@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techFrontEnd } from '../main.config';
 
-const TechFrontEndAngular = ({ url }) => (
-  <Layout currentURL={url}>
+const TechFrontEndAngular = () => (
+  <Layout>
     <ContentNavigation
       image="fe"
       points={techFrontEnd()}
@@ -64,12 +63,5 @@ const TechFrontEndAngular = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechFrontEndAngular.propTypes = {
-  url: PropTypes.object,
-};
-TechFrontEndAngular.defaultProps = {
-  url: {},
-};
 
 export default TechFrontEndAngular;

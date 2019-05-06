@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegrationElastic = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApiIntegrationElastic = () => (
+  <Layout>
     <ContentNavigation
       image="be"
       points={techApiIntegration()}
@@ -72,12 +71,5 @@ const TechApiIntegrationElastic = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegrationElastic.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegrationElastic.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegrationElastic;

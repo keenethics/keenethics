@@ -10,12 +10,10 @@ import Ship from '../components/pages/about/ship-item';
 
 export default class AboutTeam extends React.Component {
   static propTypes = {
-    url: PropTypes.object,
     team: PropTypes.array,
   };
 
   static defaultProps = {
-    url: {},
     team: [],
   };
 
@@ -43,10 +41,10 @@ export default class AboutTeam extends React.Component {
   ));
 
   render() {
-    const { url, team } = this.props;
+    const { team } = this.props;
 
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="team-page page">
           <div className="team-page-content">
             <h1 className="team-page-title">

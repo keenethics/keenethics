@@ -1,3 +1,5 @@
+import { withRouter } from 'next/router';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -7,25 +9,27 @@ import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
 
-export default class Contacts extends React.Component {
+class Contacts extends React.Component {
   constructor(props) {
     super(props);
-    const query = props.url.query;
+    const query = props.router.query;
+
     this.state = {
       isPending: false,
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
     };
-    props.url.push('/contacts');
+
     this.onClick = this.onClick.bind(this);
   }
 
   onClick({ target }) {
-    this.setState({ activeContactForm: target.name === 'contact-form-btn' });
+    this.setState({
+      activeContactForm: target.name === 'contact-form-btn',
+    });
   }
 
   render() {
-    const { url } = this.props;
     const {
       activeContactForm,
       isPending,
@@ -33,7 +37,7 @@ export default class Contacts extends React.Component {
     } = this.state;
 
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="contacts-page">
           <div className="contacts-socket">
             <div className="title-page">
@@ -47,8 +51,32 @@ export default class Contacts extends React.Component {
                 <li />
               </ul>
               {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button onClick={this.onClick} name="contact-form-btn" className={classnames('contacts-form-btn contact-form-btn', { disabled: !activeContactForm })}>Say Hello</button>
-              <button onClick={this.onClick} name="estimate-form-btn" className={classnames('contacts-form-btn estimate-form-btn', { disabled: activeContactForm })}>Estimate your project</button>
+              <button
+                onClick={this.onClick}
+                name="contact-form-btn"
+                className={classnames(
+                  'contacts-form-btn contact-form-btn',
+                  {
+                    disabled: !activeContactForm,
+                  },
+                )}
+                type="button"
+              >
+                Say Hello
+              </button>
+              <button
+                onClick={this.onClick}
+                name="estimate-form-btn"
+                className={classnames(
+                  'contacts-form-btn estimate-form-btn',
+                  {
+                    disabled: activeContactForm,
+                  },
+                )}
+                type="button"
+              >
+                Estimate your project
+              </button>
               <address>
                 <ul className="contacts-list">
                   <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
@@ -57,8 +85,7 @@ export default class Contacts extends React.Component {
                       <div itemProp="streetAddress">Kulparkivska St, 59</div>
                       <span>
                         <span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>
-,
-                        {' '}
+                        ,&nbsp;
                         <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span>
                       </span>
                     </a>
@@ -102,9 +129,10 @@ export default class Contacts extends React.Component {
 }
 
 Contacts.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
+};
+Contacts.defaultProps = {
+  router: {},
 };
 
-Contacts.defaultProps = {
-  url: {},
-};
+export default withRouter(Contacts);

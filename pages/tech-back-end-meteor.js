@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techBackEnd } from '../main.config';
 
-const TechBackEndMeteor = ({ url }) => (
-  <Layout currentURL={url}>
+const TechBackEndMeteor = () => (
+  <Layout>
     <ContentNavigation
       image="be"
       points={techBackEnd()}
@@ -61,12 +60,5 @@ const TechBackEndMeteor = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechBackEndMeteor.propTypes = {
-  url: PropTypes.object,
-};
-TechBackEndMeteor.defaultProps = {
-  url: {},
-};
 
 export default TechBackEndMeteor;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,8 +7,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#6f727d';
 
-const ProjectPollen = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectPollen = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -109,17 +108,11 @@ const ProjectPollen = ({ url }) => (
               the advertising into a completely hands-free experience.
             </p>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectPollen.propTypes = {
-  url: PropTypes.object,
-};
-ProjectPollen.defaultProps = {
-  url: {},
-};
 
 export default ProjectPollen;

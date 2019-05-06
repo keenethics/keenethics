@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesOutstaffing } from '../main.config';
 
-const ServicesOutstaffingSenior = ({ url }) => (
-  <Layout currentURL={url}>
+const ServicesOutstaffingSenior = () => (
+  <Layout>
     <ContentNavigation
       image="outstaffing_s"
       points={servicesOutstaffing()}
@@ -69,12 +68,5 @@ const ServicesOutstaffingSenior = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesOutstaffingSenior.propTypes = {
-  url: PropTypes.object,
-};
-ServicesOutstaffingSenior.defaultProps = {
-  url: {},
-};
 
 export default ServicesOutstaffingSenior;

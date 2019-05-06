@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techDatabase } from '../main.config';
 
-const TechDataBaseMongo = ({ url }) => (
-  <Layout currentURL={url}>
+const TechDataBaseMongo = () => (
+  <Layout>
     <ContentNavigation
       image="be"
       points={techDatabase()}
@@ -85,12 +84,5 @@ const TechDataBaseMongo = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechDataBaseMongo.propTypes = {
-  url: PropTypes.object,
-};
-TechDataBaseMongo.defaultProps = {
-  url: {},
-};
 
 export default TechDataBaseMongo;

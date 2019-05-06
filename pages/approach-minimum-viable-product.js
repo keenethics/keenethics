@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachMinimumValProduct = ({ url }) => (
-  <Layout currentURL={url}>
+const ApproachMinimumValProduct = () => (
+  <Layout>
     <ContentNavigation image="min" />
     <div className="content-block">
       <h1 style={{ marginBottom: 0 }}>
@@ -201,18 +200,13 @@ const ApproachMinimumValProduct = ({ url }) => (
       </section>
       <p style={{ fontWeight: 700 }}>
         If you are interested in MVP development services, please, feel free to
-        <Link href="/contacts">contact us</Link>
+        <Link href="/contacts">
+          <a>contact us</a>
+        </Link>
 .
       </p>
     </div>
   </Layout>
 );
-
-ApproachMinimumValProduct.propTypes = {
-  url: PropTypes.object,
-};
-ApproachMinimumValProduct.defaultProps = {
-  url: {},
-};
 
 export default ApproachMinimumValProduct;

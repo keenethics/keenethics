@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 
@@ -11,10 +10,8 @@ export default class AboutValues extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
-
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="content-wrap content-wrap-bg">
           <div className="content-socket content-socket-v">
             <div className="title-page">
@@ -150,9 +147,3 @@ export default class AboutValues extends React.Component {
     );
   }
 }
-AboutValues.propTypes = {
-  url: PropTypes.object,
-};
-AboutValues.defaultProps = {
-  url: {},
-};

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 
@@ -11,10 +10,8 @@ export default class AboutSocialSide extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
-
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="content-wrap content-wrap-bg">
           <div className="content-socket content-socket-a">
             <div className="title-page">
@@ -125,9 +122,3 @@ Website backend development process is a web programming, the
     );
   }
 }
-AboutSocialSide.propTypes = {
-  url: PropTypes.object,
-};
-AboutSocialSide.defaultProps = {
-  url: {},
-};

@@ -29,7 +29,7 @@ export default class Post extends React.Component {
   }
 
   render() {
-    const { url, post } = this.props;
+    const { post } = this.props;
     const { hrefToPreviousPost, hrefToNextPost } = post;
 
     if (post && post.statusCode && post.statusCode === 404) {
@@ -44,7 +44,7 @@ export default class Post extends React.Component {
     }
 
     return (
-      <Layout currentURL={url} meta={meta}>
+      <Layout meta={meta}>
         <div className="blog-post-page page">
           <div className="blog-post-page-header page-header">
             <div className="blog-post-page-title page-title">
@@ -87,11 +87,8 @@ export default class Post extends React.Component {
 }
 
 Post.propTypes = {
-  url: PropTypes.object,
   post: PropTypes.object,
 };
-
 Post.defaultProps = {
-  url: {},
   post: {},
 };

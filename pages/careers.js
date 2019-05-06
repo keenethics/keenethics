@@ -224,7 +224,15 @@ export default class Careers extends React.Component {
             </form>
           </div>
         )}
-        {showApplyForm || <button className="button" onClick={this.toggleApplyForm}>Apply</button>}
+        {showApplyForm || (
+          <button
+            className="button"
+            onClick={this.toggleApplyForm}
+            type="button"
+          >
+            Apply
+          </button>
+        )}
       </div>
     );
   }
@@ -251,13 +259,13 @@ export default class Careers extends React.Component {
   }
 
   toggleApplyForm() {
-    this.setState({
-      showApplyForm: !this.state.showApplyForm,
-    });
+    this.setState(({ showApplyForm }) => ({
+      showApplyForm: !showApplyForm,
+    }));
   }
 
   render() {
-    const { url, careers } = this.props;
+    const { careers } = this.props;
     const { sliderIsActive, activeItemIndex } = this.state;
 
     if (this.slider && !activeItemIndex) {
@@ -265,7 +273,7 @@ export default class Careers extends React.Component {
     }
 
     return (
-      <Layout currentURL={url} meta={{ title: 'Careers - Keenethics' }}>
+      <Layout meta={{ title: 'Careers - Keenethics' }}>
         <div className="careers-page">
           <div className="careers-page-header">
             <h1 className="title">Careers - Open Positions</h1>

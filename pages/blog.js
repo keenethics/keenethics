@@ -1,4 +1,5 @@
 /* global BACKEND_URL, fetch, document */
+
 import { withRouter } from 'next/router';
 
 import React from 'react';
@@ -14,7 +15,11 @@ import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
-  const categories = existCategories.filter(existCategory => chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase()).length);
+  const categories = existCategories.filter(
+    existCategory => chosenCategory.filter(
+      category => category.toLowerCase() === existCategory.toLowerCase(),
+    ).length,
+  );
   return categories.length ? categories : existCategories;
 };
 
@@ -22,7 +27,7 @@ class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...this.getCategoriesList(props.url),
+      ...this.getCategoriesList(props.router),
     };
     this.posts = [];
     this.postsCountFor = this.postsCountFor.bind(this);
@@ -95,13 +100,11 @@ class Blog extends React.Component {
 Blog.propTypes = {
   router: PropTypes.object,
   posts: PropTypes.array,
-  url: PropTypes.object,
 };
 
 Blog.defaultProps = {
   router: {},
   posts: [],
-  url: {},
 };
 
 export default withRouter(Blog);

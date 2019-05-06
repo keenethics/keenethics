@@ -4,7 +4,9 @@ const dotenv = require('dotenv-safe');
 
 const { NODE_ENV, ENV_PATH } = process.env;
 const envDefaultPath = path.resolve(__dirname, '../.env');
-const pathToEnvFile = (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath) && envDefaultPath);
+const pathToEnvFile = (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath)
+  && envDefaultPath
+);
 
 if (pathToEnvFile) {
   dotenv.config({ path: pathToEnvFile, allowEmptyValues: true });
