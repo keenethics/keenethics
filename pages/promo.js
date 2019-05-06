@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import React from 'react';
-
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
 
