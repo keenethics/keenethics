@@ -12,7 +12,7 @@ import ContactForm from '../components/contacts/contact-form';
 class Contacts extends React.Component {
   constructor(props) {
     super(props);
-    const query = props.router.query;
+    const { query } = props.router;
 
     this.state = {
       isPending: false,
