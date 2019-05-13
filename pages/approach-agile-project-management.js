@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachAgileProject = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="agile" />
+const ApproachAgileProject = () => (
+  <Layout>
+    <ContentNavigation image="agile" />
     <div className="content-block">
       <h1>Agile Project Management Services</h1>
       <p>
@@ -59,12 +58,5 @@ const ApproachAgileProject = ({ url }) => (
     </div>
   </Layout>
 );
-
-ApproachAgileProject.propTypes = {
-  url: PropTypes.object,
-};
-ApproachAgileProject.defaultProps = {
-  url: {},
-};
 
 export default ApproachAgileProject;

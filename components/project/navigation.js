@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { works } from '../../main.config';
 
-const Navigation = ({ url }) => {
+const Navigation = ({ router }) => {
   const project = {
     prev: {},
     current: {},
@@ -13,7 +14,7 @@ const Navigation = ({ url }) => {
   };
 
   works.forEach((work, i) => {
-    const index = work.href === url.pathname.substring(1) ? i : -1;
+    const index = work.href === router.pathname.substring(1) ? i : -1;
 
     if (index > -1) {
       project.current = works[index];
@@ -55,10 +56,10 @@ const Navigation = ({ url }) => {
 };
 
 Navigation.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
 };
 Navigation.defaultProps = {
-  url: {},
+  router: {},
 };
 
-export default Navigation;
+export default withRouter(Navigation);

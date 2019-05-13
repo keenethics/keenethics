@@ -1,5 +1,3 @@
-/* global fetch */
-
 import Head from 'next/head';
 import Router, { withRouter } from 'next/router';
 
@@ -94,15 +92,12 @@ const LayoutHead = (props) => {
         name="viewport"
         content="initial-scale=1.0, user-scalable=no, width=device-width"
       />
-      {description && description.length ? <meta
-        name="description"
-        content={description}
-      /> : null}
-      <link
-        type="text/css"
-        rel="stylesheet"
-        href="/static/main.css"
-      />
+      {description && description.length ? (
+        <meta
+          name="description"
+          content={description}
+        />
+      ) : null}
       <link
         type="image/vnd.microsoft.icon"
         rel="icon"

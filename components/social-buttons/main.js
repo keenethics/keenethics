@@ -14,11 +14,13 @@ export default class Navigation extends React.Component {
 
     this.showButtons = this.showButtons.bind(this);
   }
+
   showButtons() {
     this.setState({
       showButtons: true,
     });
   }
+
   render() {
     const { showButtons } = this.state;
 

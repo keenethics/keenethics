@@ -1,52 +1,23 @@
-/* eslint no-param-reassign: ["error", { "props": false }] */
+const withSass = require('@zeit/next-sass');
 
-const path = require('path');
+module.exports = withSass({
+  generateBuildId: async () => `build-${Date.now()}`,
+  webpack(config) {
+    const { rules } = config.module;
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+    const scssTestIndex = rules.findIndex(el => el.test.test('.scss'));
 
-const { ANALYZE } = process.env;
+    if (scssTestIndex > -1) {
+      const scssTest = rules[scssTestIndex];
+      const cssLoaderIndex = scssTest.use.findIndex(el => el.loader && el.loader === 'css-loader');
 
-module.exports = () => {
-  const plugins = [];
+      if (cssLoaderIndex > -1) {
+        const cssLoader = scssTest.use[cssLoaderIndex];
 
-  if (ANALYZE) {
-    plugins.push(new BundleAnalyzerPlugin({
-      analyzerMode: 'server',
-      analyzerPort: 8888,
-      openAnalyzer: true,
-    }));
-  }
+        delete cssLoader.options.minimize;
+      }
+    }
 
-  return {
-    entry: 'server/index.js',
-    generateBuildId: async () => `build-${Date.now()}`,
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          loader: 'emit-file-loader',
-          options: {
-            name: '[path][name].[ext]',
-          },
-        },
-        {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: ['css-loader', 'postcss-loader', 'sass-loader'],
-          }),
-          include: [
-            path.resolve(__dirname, 'styles'),
-            path.resolve(__dirname, 'node_modules'),
-            path.resolve(__dirname, 'static'),
-          ],
-        },
-      ],
-    },
-    plugins: [
-      ...plugins,
-      new ExtractTextPlugin('[name]'),
-    ],
-  };
-};
+    return config;
+  },
+});

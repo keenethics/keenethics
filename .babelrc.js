@@ -13,10 +13,7 @@ module.exports = {
   "env": {
     "test": {
       "plugins": [
-        ['transform-runtime', {
-          polyfill: false,
-          regenerator: true,
-        }],
+        "@babel/plugin-transform-runtime",
       ]
     }
   }

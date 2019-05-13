@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApps } from '../main.config';
 
-const TechAppsAcc = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="app" points={techApps()} />
+const TechAppsAcc = () => (
+  <Layout>
+    <ContentNavigation image="app" points={techApps()} />
     <div className="content-block">
       <h1>AMP Web Design and Development Services</h1>
       <p>
@@ -61,20 +60,26 @@ const TechAppsAcc = ({ url }) => (
       </p>
       <ul>
         <li>
-          <strong>Faster website loading times</strong> - By eliminating useless
+          <strong>Faster website loading times</strong>
+          {' '}
+- By eliminating useless
           elements, the page becomes less bloated and the overall load time is
           reduced. Visitors to your site will enjoy the fact that the layout is
           clear and responsive;
         </li>
         <li>
-          <strong>Increased mobile ranking</strong> - Despite the fact that AMP
+          <strong>Increased mobile ranking</strong>
+          {' '}
+- Despite the fact that AMP
           is not a ranking booster, it still has an impact on the rank of the
           website because your pages load faster. If by any chance Google starts
           to prioritize AMP-powered pages, your SERP rank will increase
           dramatically;
         </li>
         <li>
-          <strong>Improved server response</strong> - If your business
+          <strong>Improved server response</strong>
+          {' '}
+- If your business
           experience a huge influx of users, the stress they put on the server
           will essentially be reduced. This will lead to reduced expenses as you
           server maintenance procedures will be cut in half. Not to mention the
@@ -82,12 +87,16 @@ const TechAppsAcc = ({ url }) => (
           site;
         </li>
         <li>
-          <strong>Improved SEO</strong> - The need for customized content will
+          <strong>Improved SEO</strong>
+          {' '}
+- The need for customized content will
           be reduced and you will able to gather data much faster. Moreover,
           your page will show up in the search engine more frequently;
         </li>
         <li>
-          <strong>No need for a dedicated map site</strong> - you don&apos;t have to
+          <strong>No need for a dedicated map site</strong>
+          {' '}
+- you don&apos;t have to
           create an XML file for your site as Google will pick them for you.
         </li>
       </ul>
@@ -107,12 +116,5 @@ const TechAppsAcc = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechAppsAcc.propTypes = {
-  url: PropTypes.object,
-};
-TechAppsAcc.defaultProps = {
-  url: {},
-};
 
 export default TechAppsAcc;

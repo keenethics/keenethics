@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegrationBraintree = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApiIntegrationBraintree = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techApiIntegration()}
     />
@@ -78,12 +76,5 @@ const TechApiIntegrationBraintree = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegrationBraintree.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegrationBraintree.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegrationBraintree;

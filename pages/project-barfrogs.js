@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,15 +7,19 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#1b9c19';
 
-const ProjectBarfrogs = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectBarfrogs = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
           <div className="project-content-summary full-width" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">BarFrogs</h2>
-              <h3 className="duration"><span>Duration:</span> 5 months, 1 developer</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+5 months, 1 developer
+              </h3>
               <p className="description">
                 Find the Place to Hang out with Bar Frogs
               </p>
@@ -87,17 +90,11 @@ const ProjectBarfrogs = ({ url }) => (
               company, watch the statistics, and therefore make their business more effective.
             </p>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectBarfrogs.propTypes = {
-  url: PropTypes.object,
-};
-ProjectBarfrogs.defaultProps = {
-  url: {},
-};
 
 export default ProjectBarfrogs;

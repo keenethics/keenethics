@@ -1,7 +1,7 @@
 const { google } = require('googleapis');
-const { spreadSheet } = require('./config');
 const _ = require('lodash');
 const memoize = require('lodash/memoize');
+const { spreadSheet } = require('./config');
 
 const TEAM_SHEET_ID = spreadSheet.id;
 const CREDS_FILE = spreadSheet.securityFile;
@@ -20,8 +20,9 @@ const arrayOfArraysToCollection = (arr) => {
     .map(v => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
-const getSheetValues = (valueRanges, rangeName) =>
-  valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
+const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
+  v => new RegExp(rangeName).test(v.range),
+).values;
 
 const getClient = async (keyFile, scopes) => google.auth.getClient({
   keyFile,

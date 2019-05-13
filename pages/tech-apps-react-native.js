@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApps } from '../main.config';
 
-const TechAppsRN = ({ url }) => (
-  <Layout currentURL={url}>
+const TechAppsRN = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="app"
       points={techApps()}
     />
@@ -64,12 +62,5 @@ const TechAppsRN = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechAppsRN.propTypes = {
-  url: PropTypes.object,
-};
-TechAppsRN.defaultProps = {
-  url: {},
-};
 
 export default TechAppsRN;

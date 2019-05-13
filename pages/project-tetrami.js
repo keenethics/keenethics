@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 const baseColor = '#dffd35';
 const accentColor = '#222';
 
-const ProjectTetrami = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectTetrami = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -18,7 +17,9 @@ const ProjectTetrami = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title" style={{ color: accentColor }}>Tetrami</h2>
               <h3 className="duration" style={{ color: accentColor }}>
-                <span>Duration:</span> 4 months, nearly done, will be on google play and app store
+                <span>Duration:</span>
+                {' '}
+4 months, nearly done, will be on google play and app store
                 soon
               </h3>
               <p className="description">
@@ -68,17 +69,11 @@ const ProjectTetrami = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectTetrami.propTypes = {
-  url: PropTypes.object,
-};
-ProjectTetrami.defaultProps = {
-  url: {},
-};
 
 export default ProjectTetrami;

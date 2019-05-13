@@ -36,6 +36,7 @@ class ContactForm extends React.Component {
       error: false,
     },
   }
+
   onSubmit = (e) => {
     e.preventDefault();
     const { updateState } = this.props;
@@ -65,6 +66,7 @@ class ContactForm extends React.Component {
       })
       .catch(err => console.error(err));
   }
+
   onChange = ({ target: { name, value } }) => {
     this.setState({
       [name]: {
@@ -73,6 +75,7 @@ class ContactForm extends React.Component {
       },
     });
   }
+
   render = () => {
     const {
       firstname,

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,8 +7,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#867dd0';
 
-const ProjectWargaming = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectWargaming = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -17,7 +16,9 @@ const ProjectWargaming = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Wargaming</h2>
               <h3 className="duration">
-                <span>Duration:</span> 7 months so far, planned one more year, then Keenethics will
+                <span>Duration:</span>
+                {' '}
+7 months so far, planned one more year, then Keenethics will
                 be supporting the project.
               </h3>
               <p className="description">
@@ -54,17 +55,11 @@ const ProjectWargaming = ({ url }) => (
               </ul>
             </div>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectWargaming.propTypes = {
-  url: PropTypes.object,
-};
-ProjectWargaming.defaultProps = {
-  url: {},
-};
 
 export default ProjectWargaming;

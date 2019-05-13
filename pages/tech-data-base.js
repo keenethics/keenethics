@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { techDatabase } from '../main.config';
 
-const TechDataBase = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="db" />
+const TechDataBase = () => (
+  <Layout>
+    <ContentNavigation image="db" />
     <PageTabs points={techDatabase()} />
     <div className="content-block">
       <h1>Database Development Services</h1>
@@ -76,12 +75,5 @@ const TechDataBase = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechDataBase.propTypes = {
-  url: PropTypes.object,
-};
-TechDataBase.defaultProps = {
-  url: {},
-};
 
 export default TechDataBase;

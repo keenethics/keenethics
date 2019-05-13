@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#258b49';
 
-const ProjectTheCheckNetwork = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectTheCheckNetwork = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -18,7 +17,9 @@ const ProjectTheCheckNetwork = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">The Check Network</h2>
               <h3 className="duration">
-                <span>Duration:</span> 7 months so far, planned one more year, then Keenethics will
+                <span>Duration:</span>
+                {' '}
+7 months so far, planned one more year, then Keenethics will
                 be supporting the project
               </h3>
               <p className="description">
@@ -123,17 +124,11 @@ const ProjectTheCheckNetwork = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectTheCheckNetwork.propTypes = {
-  url: PropTypes.object,
-};
-ProjectTheCheckNetwork.defaultProps = {
-  url: {},
-};
 
 export default ProjectTheCheckNetwork;

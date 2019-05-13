@@ -13,6 +13,7 @@ export default class CategoriesFilter extends Component {
     this.buttonClick = this.buttonClick.bind(this);
     this.showAllWorks = this.showAllWorks.bind(this);
   }
+
   buttonClick(category) {
     const { filterOnChange, selectedCategories, pageTitle } = this.props;
     const selectedItems = selectedCategories.slice();
@@ -69,7 +70,14 @@ export default class CategoriesFilter extends Component {
         <div className="filter__show-all">
           <button
             onClick={this.showAllWorks}
-            className={classnames('filter__btn -show-all', { '-active': selectedCategories.length !== categorisList.length, '-disabled': disabledBtnAnimation === 'all' })}
+            className={classnames(
+              'filter__btn -show-all',
+              {
+                '-active': selectedCategories.length !== categorisList.length,
+                '-disabled': disabledBtnAnimation === 'all',
+              },
+            )}
+            type="button"
           >
               Show all
           </button>

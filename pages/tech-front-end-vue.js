@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techFrontEnd } from '../main.config';
 
-const TechFrontEndVue = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" points={techFrontEnd()} />
+const TechFrontEndVue = () => (
+  <Layout>
+    <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h1>Vue.js development services</h1>
       <p>
@@ -67,12 +66,5 @@ const TechFrontEndVue = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechFrontEndVue.propTypes = {
-  url: PropTypes.object,
-};
-TechFrontEndVue.defaultProps = {
-  url: {},
-};
 
 export default TechFrontEndVue;

@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApps } from '../main.config';
 
-const TechAppsCordova = ({ url }) => (
-  <Layout currentURL={url}>
+const TechAppsCordova = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="app"
       points={techApps()}
     />
@@ -78,12 +76,5 @@ const TechAppsCordova = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechAppsCordova.propTypes = {
-  url: PropTypes.object,
-};
-TechAppsCordova.defaultProps = {
-  url: {},
-};
 
 export default TechAppsCordova;

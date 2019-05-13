@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegrationPayPal = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApiIntegrationPayPal = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techApiIntegration()}
     />
@@ -70,12 +68,5 @@ const TechApiIntegrationPayPal = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegrationPayPal.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegrationPayPal.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegrationPayPal;

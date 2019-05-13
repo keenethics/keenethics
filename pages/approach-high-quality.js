@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachHighQuality = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="lean" />
+const ApproachHighQuality = () => (
+  <Layout>
+    <ContentNavigation image="lean" />
     <div className="content-block">
       <h1>High quality software</h1>
       <p>
@@ -40,12 +39,5 @@ const ApproachHighQuality = ({ url }) => (
     </div>
   </Layout>
 );
-
-ApproachHighQuality.propTypes = {
-  url: PropTypes.object,
-};
-ApproachHighQuality.defaultProps = {
-  url: {},
-};
 
 export default ApproachHighQuality;

@@ -27,7 +27,9 @@ const PortfolioFeedback = ({
         rel="noopener noreferrer"
         className="feedback--link"
       >
-        {link ? 'See full review' : 'See all reviews'} <img src="/static/portfolio/icons/clutch.png" alt="clutch" />
+        {link ? 'See full review' : 'See all reviews'}
+        {' '}
+        <img src="/static/portfolio/icons/clutch.png" alt="clutch" />
       </a>
     </div>
   </div>

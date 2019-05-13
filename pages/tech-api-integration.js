@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegration = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="be" />
+const TechApiIntegration = () => (
+  <Layout>
+    <ContentNavigation image="be" />
     <PageTabs points={techApiIntegration()} />
     <div className="content-block">
       <h1>API Integration Services</h1>
@@ -79,12 +78,5 @@ const TechApiIntegration = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegration.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegration.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegration;
