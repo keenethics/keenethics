@@ -16,7 +16,6 @@ export default class Contacts extends React.Component {
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
     };
-    props.url.push('/contacts');
     this.onClick = this.onClick.bind(this);
   }
   onClick({ target }) {
