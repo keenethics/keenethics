@@ -116,6 +116,9 @@
     box-sizing: border-box;
     font-weight: 700;
     font-size: 17px;
+    @include for-mobile {
+      padding: 18px 40px;
+    }
   }
 }
 .home-page-content-link a {

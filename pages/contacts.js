@@ -19,7 +19,6 @@ class Contacts extends React.Component {
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
     };
-
     this.onClick = this.onClick.bind(this);
   }
 
