@@ -13,13 +13,20 @@ export default class NavigationPoint extends React.Component {
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
   }
+
   componentDidMount() {
-    if (this.props.currentSubpoint) {
-      this.props.scroll(document.getElementById('current-subpoint').offsetTop);
+    const {
+      currentSubpoint,
+      scroll,
+    } = this.props;
+
+    if (currentSubpoint) {
+      scroll(document.getElementById('current-subpoint').offsetTop);
     }
   }
+
   renderPoint() {
-    const { href } = this.props.element;
+    const { element: { href } } = this.props;
 
     return href ? (
       <Link href={href} prefetch>
@@ -31,13 +38,16 @@ export default class NavigationPoint extends React.Component {
       </span>
     );
   }
+
   renderPointContent() {
     const {
-      name,
-      icon,
-      number,
-      type,
-    } = this.props.element;
+      element: {
+        name,
+        icon,
+        number,
+        type,
+      },
+    } = this.props;
 
     switch (type) {
       case 'icon': return (
@@ -61,8 +71,13 @@ export default class NavigationPoint extends React.Component {
       );
     }
   }
+
   render() {
-    if (!this.props.element.name) return null;
+    const {
+      element: { name },
+    } = this.props;
+
+    if (!name) return null;
 
     const {
       children,

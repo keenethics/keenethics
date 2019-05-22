@@ -5,9 +5,11 @@ export default class ShipItem extends React.Component {
   onMouseOver = () => {
     this.props.changeId(this.props.id);
   }
+
   onMouseOut = () => {
     this.props.changeId('');
   }
+
   render() {
     const {
       worker, id, activeId, isFirstItem,

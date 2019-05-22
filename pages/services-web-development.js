@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { servicesWebDevelopmentTabs } from '../main.config';
 
-const ServicesWebDevelopment = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="web_development" />
+const ServicesWebDevelopment = () => (
+  <Layout>
+    <ContentNavigation image="web_development" />
     <PageTabs points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>Web Development Services</h1>
@@ -56,12 +55,5 @@ const ServicesWebDevelopment = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesWebDevelopment.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopment.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopment;

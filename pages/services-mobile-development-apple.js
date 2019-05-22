@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesMobileDevelopment } from '../main.config';
 
-const ServicesWebDevelopmentApple = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="apple" points={servicesMobileDevelopment()} />
+const ServicesWebDevelopmentApple = () => (
+  <Layout>
+    <ContentNavigation image="apple" points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>iOS Development Services</h1>
       <p>
@@ -59,12 +58,5 @@ const ServicesWebDevelopmentApple = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesWebDevelopmentApple.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopmentApple.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopmentApple;

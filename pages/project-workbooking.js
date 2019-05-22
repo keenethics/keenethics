@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#289e94';
 
-const ProjectWorkbooking = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectWorkbooking = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -133,17 +132,11 @@ const ProjectWorkbooking = ({ url }) => (
               <img className="chapter-image" src="static/images/project/workbooking-leptop.png" alt="Workbooking" />
             </div>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectWorkbooking.propTypes = {
-  url: PropTypes.object,
-};
-ProjectWorkbooking.defaultProps = {
-  url: {},
-};
 
 export default ProjectWorkbooking;

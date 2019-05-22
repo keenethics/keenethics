@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#4d48b4';
 
-const ProjectPrix = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectPrix = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -215,17 +214,11 @@ const ProjectPrix = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectPrix.propTypes = {
-  url: PropTypes.object,
-};
-ProjectPrix.defaultProps = {
-  url: {},
-};
 
 export default ProjectPrix;

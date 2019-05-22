@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,8 +7,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#20cc97';
 
-const ProjectPrix = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectPrix = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -17,7 +16,9 @@ const ProjectPrix = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Paceup</h2>
               <h3 className="duration">
-                <span>Duration:</span> 1 month. 1 developer. Full cycle of React web app.
+                <span>Duration:</span>
+                {' '}
+1 month. 1 developer. Full cycle of React web app.
               </h3>
               <p className="description">
                 Increasing loyalty of existing clients
@@ -129,17 +130,11 @@ const ProjectPrix = ({ url }) => (
               We are delighted to know that the client was completely satisfied with our work.
             </p>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectPrix.propTypes = {
-  url: PropTypes.object,
-};
-ProjectPrix.defaultProps = {
-  url: {},
-};
 
 export default ProjectPrix;

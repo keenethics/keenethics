@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegrationRest = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApiIntegrationRest = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techApiIntegration()}
     />
@@ -66,12 +64,5 @@ const TechApiIntegrationRest = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegrationRest.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegrationRest.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegrationRest;

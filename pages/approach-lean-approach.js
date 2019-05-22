@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachLeanApproach = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="lean" />
+const ApproachLeanApproach = () => (
+  <Layout>
+    <ContentNavigation image="lean" />
     <div className="content-block">
       <h1>Lean Approach</h1>
       <p>
@@ -92,12 +91,5 @@ const ApproachLeanApproach = ({ url }) => (
     </div>
   </Layout>
 );
-
-ApproachLeanApproach.propTypes = {
-  url: PropTypes.object,
-};
-ApproachLeanApproach.defaultProps = {
-  url: {},
-};
 
 export default ApproachLeanApproach;

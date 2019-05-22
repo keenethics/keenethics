@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techDatabase } from '../main.config';
 
-const TechDataBasePostgresql = ({ url }) => (
-  <Layout currentURL={url}>
+const TechDataBasePostgresql = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techDatabase()}
     />
@@ -89,12 +87,5 @@ const TechDataBasePostgresql = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechDataBasePostgresql.propTypes = {
-  url: PropTypes.object,
-};
-TechDataBasePostgresql.defaultProps = {
-  url: {},
-};
 
 export default TechDataBasePostgresql;

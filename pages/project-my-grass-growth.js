@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,15 +8,19 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#28b293';
 
-const ProjectMyGrassGrowth = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectMyGrassGrowth = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">My Grass Growth</h2>
-              <h3 className="duration"><span>Duration:</span> 6 months</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+6 months
+              </h3>
               <p className="description">
                 Keep you cows healthy and well-fed
               </p>
@@ -96,17 +99,11 @@ const ProjectMyGrassGrowth = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectMyGrassGrowth.propTypes = {
-  url: PropTypes.object,
-};
-ProjectMyGrassGrowth.defaultProps = {
-  url: {},
-};
 
 export default ProjectMyGrassGrowth;

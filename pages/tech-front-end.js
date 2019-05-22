@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { techFrontEnd } from '../main.config';
 
-const ServicesOutstaffing = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" />
+const ServicesOutstaffing = () => (
+  <Layout>
+    <ContentNavigation image="fe" />
     <PageTabs points={techFrontEnd()} />
     <div className="content-block">
       <h1>Front-End</h1>
@@ -57,12 +56,5 @@ const ServicesOutstaffing = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesOutstaffing.propTypes = {
-  url: PropTypes.object,
-};
-ServicesOutstaffing.defaultProps = {
-  url: {},
-};
 
 export default ServicesOutstaffing;

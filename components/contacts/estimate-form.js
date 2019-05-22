@@ -50,6 +50,7 @@ class EstimateForm extends React.Component {
       error: false,
     },
   }
+
   onSubmit = (e) => {
     e.preventDefault();
     const { updateState } = this.props;
@@ -77,6 +78,7 @@ class EstimateForm extends React.Component {
       updateState(state);
     });
   }
+
   onChange = ({ target: { name, value, form: { services } } }) => {
     const checkedCheckboxesValues = [...services]
       .filter(({ checked }) => checked)
@@ -94,6 +96,7 @@ class EstimateForm extends React.Component {
       });
     }
   }
+
   render = () => {
     const {
       emailEstimate,
@@ -109,7 +112,11 @@ class EstimateForm extends React.Component {
       <div className="estimate-form">
         <form onSubmit={this.onSubmit} className="estimate-form-inputs">
           <div className="contacts-title estimate-title">let us Estimate your project</div>
-          <div className="question-title"><span className="question-number">01</span> Stage</div>
+          <div className="question-title">
+            <span className="question-number">01</span>
+            {' '}
+Stage
+          </div>
           <div className="estimate-input-cols">
             <div className="input-radio-wrap">
               <input
@@ -140,7 +147,11 @@ class EstimateForm extends React.Component {
               </label>
             </div>
           </div>
-          <div className="question-title"><span className="question-number">02</span> What services are you interested in?</div>
+          <div className="question-title">
+            <span className="question-number">02</span>
+            {' '}
+What services are you interested in?
+          </div>
           <div className="estimate-input-cols">
             <div className="input-checkbox-wrap">
               <Checkbox
@@ -243,7 +254,8 @@ class EstimateForm extends React.Component {
               />
             </div>
           </div>
-          <div className="question-title align-flex-start"><span className="question-number qn-check">03</span>
+          <div className="question-title align-flex-start">
+            <span className="question-number qn-check">03</span>
             <Checkbox
               text="Do you require PM/Product manager to save your time for tasks description,
               tasks assignment and tasks assignment prioritizing?"
@@ -254,7 +266,11 @@ class EstimateForm extends React.Component {
               isChecked={services.value.includes('PM/Product manager is required')}
             />
           </div>
-          <div className="question-title"><span className="question-number">04</span> Expected budget</div>
+          <div className="question-title">
+            <span className="question-number">04</span>
+            {' '}
+Expected budget
+          </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
               <select name="budget" className="input-select" onChange={this.onChange}>
@@ -265,7 +281,11 @@ class EstimateForm extends React.Component {
               </select>
             </div>
           </div>
-          <div className="question-title"><span className="question-number">05</span> Timeframe</div>
+          <div className="question-title">
+            <span className="question-number">05</span>
+            {' '}
+Timeframe
+          </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
               <select name="timeframe" className="input-select" onChange={this.onChange}>
@@ -277,7 +297,11 @@ class EstimateForm extends React.Component {
               </select>
             </div>
           </div>
-          <div className="question-title"><span className="question-number">06</span> Start</div>
+          <div className="question-title">
+            <span className="question-number">06</span>
+            {' '}
+Start
+          </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
               <select name="start" className="input-select" onChange={this.onChange}>

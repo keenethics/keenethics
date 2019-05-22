@@ -40,7 +40,7 @@ describe('Page rendering', () => {
   navigation.forEach((nav) => {
     it(nav, async () => {
       await page.goto(`http://localhost:3000${nav}`);
-      await expect(page).toMatchElement('.navigation');
+      await expect(page).toMatchElement('body');
     });
   });
 });

@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesWebDevelopmentTabs } from '../main.config';
 
-const ServicesWebDevelopmentVoice = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
+const ServicesWebDevelopmentVoice = () => (
+  <Layout>
+    <ContentNavigation image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>Programmable Voice Development Services</h1>
       <p>
@@ -87,12 +86,5 @@ const ServicesWebDevelopmentVoice = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesWebDevelopmentVoice.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopmentVoice.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopmentVoice;

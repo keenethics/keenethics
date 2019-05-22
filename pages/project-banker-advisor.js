@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -9,8 +8,8 @@ import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#0c2fdf';
 
-const ProjectBankerAdvisor = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectBankerAdvisor = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -218,17 +217,11 @@ const ProjectBankerAdvisor = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectBankerAdvisor.propTypes = {
-  url: PropTypes.object,
-};
-ProjectBankerAdvisor.defaultProps = {
-  url: {},
-};
 
 export default ProjectBankerAdvisor;

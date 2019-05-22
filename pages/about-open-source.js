@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -10,20 +9,26 @@ export default class AboutTeam extends React.Component {
 
     this.state = {};
   }
-  render() {
-    const { url } = this.props;
 
+  render() {
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="open-source-page page">
           <div className="open-source-page-header page-header">
             <div className="open-source-page-title page-title">
-              <h1>Open Source <span>We contribute a whole lot</span></h1>
+              <h1>
+Open Source
+                <span>We contribute a whole lot</span>
+              </h1>
               <Background className="open-source-page-background" />
             </div>
           </div>
           <div className="open-source-page-content content-block">
-            <h1>Why do we support<br />Open Source?</h1>
+            <h1>
+Why do we support
+              <br />
+Open Source?
+            </h1>
             <p>
               Whether you want it or not, businesses and regular users rely on open source
               software. Most of the servers and super-computers run Linux. Android-phones gained
@@ -88,11 +93,3 @@ export default class AboutTeam extends React.Component {
     );
   }
 }
-
-AboutTeam.propTypes = {
-  url: PropTypes.object,
-};
-
-AboutTeam.defaultProps = {
-  url: {},
-};
