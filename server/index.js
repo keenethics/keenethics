@@ -2,9 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv-safe');
 
-let cachedShipTeam = [];
-let cachedCareers = [];
-
 const { NODE_ENV, ENV_PATH } = process.env;
 const envDefaultPath = path.resolve(__dirname, '../.env');
 const pathToEnvFile = (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath)
@@ -429,23 +426,11 @@ app.prepare().then(() => {
 
     let team = await getTeam();
 
-    if (team.length) {
-      cachedShipTeam = team;
-    } else {
-      team = cachedShipTeam;
-    }
-
     res.send(JSON.stringify(team));
   });
 
   server.get('/api/careers', async (req, res) => {
     let careers = await getCareers();
-
-    if (careers.length) {
-      cachedCareers = careers;
-    } else {
-      careers = cachedCareers;
-    }
 
     res.send(JSON.stringify(careers));
   });
