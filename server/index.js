@@ -424,13 +424,11 @@ app.prepare().then(() => {
 
   server.get('/api/astronauts', async (req, res) => {
     const team = await getTeam();
-
     res.send(JSON.stringify(team));
   });
 
   server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
-
     res.send(JSON.stringify(careers));
   });
 
