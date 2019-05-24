@@ -29,7 +29,7 @@ const getClient = async (keyFile, scopes) => google.auth.getClient({
   scopes,
 });
 
-let cashedTeam = [];
+let cashedSheetData = [];
 
 class CustomMap extends Map {
   async get(key) {
@@ -73,14 +73,16 @@ const getData = async (rangeName, sheetId) => {
   try {
     const sheetData = await getSheets(sheetId);
 
-    const team = getSheetValues(sheetData.valueRanges, rangeName);
-    cashedTeam = team;
+    cashedSheetData = sheetData;
 
-    return arrayOfArraysToCollection(team);
+    const data = getSheetValues(sheetData.valueRanges, rangeName);
+
+    return arrayOfArraysToCollection(data);
   } catch (err) {
     console.error(err);
 
-    return arrayOfArraysToCollection(cashedTeam);
+    const cashedData = getSheetValues(cashedSheetData.valueRanges, rangeName);
+    return arrayOfArraysToCollection(cashedData);
   }
 };
 

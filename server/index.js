@@ -423,14 +423,13 @@ app.prepare().then(() => {
   server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
 
   server.get('/api/astronauts', async (req, res) => {
-
-    let team = await getTeam();
+    const team = await getTeam();
 
     res.send(JSON.stringify(team));
   });
 
   server.get('/api/careers', async (req, res) => {
-    let careers = await getCareers();
+    const careers = await getCareers();
 
     res.send(JSON.stringify(careers));
   });
