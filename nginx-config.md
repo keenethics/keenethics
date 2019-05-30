@@ -30,6 +30,7 @@
       rewrite ^/(([^/]+/)*)index\.html?$ https://keenethics.com/$1 redirect;
       rewrite ^/(([^/]+/)*)index\.php?$ https://keenethics.com/$1 redirect;
       rewrite ^/(([^/]+/)*)default\.html?$ https://keenethics.com/$1 redirect;
+      rewrite ^/post?name=(.*)$ https://keenethics.com/blog/$1 permanent;
       rewrite ^/(.*)/$ /$1 permanent;
     }
   }
