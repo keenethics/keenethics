@@ -184,6 +184,11 @@ const postsDatePair = [
     filename: '1556614800000-find-the-same.md',
     href: '/blog/1556614800000-find-the-same',
   },
+  {
+    createdAt: 1559196000000,
+    filename: '1559196000000-node-js-inject.md',
+    href: '/blog/1559196000000-node-js-inject',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
