@@ -69,3 +69,15 @@ Unfortunately, one universal solution does not exist, but if all the features ar
 If your audience is quite large, you can involve users for translations. Facebook and WhatsApp are translated in such a way, and Google translate uses the same approach.
 
 It is essential to develop a sense of empathy for the user since even the smallest mistake may disrupt the interaction of native speakers with your product.
+
+<div>
+    <p>Keep in mind. KeenEthics is an experienced web design company with <a href="/portfolio">multiple success stories</a>. We are recognized as a <a href="//www.designrush.com/agency/website-design-development" target="_blank" rel="noopener noreferrer nofollow">Top Website Design Agency</a> on DesignRush Written by <a href="//www.linkedin.com/in/oksana-pleten-636014138/" target="_blank" rel="noopener noreferrer nofollow">Oksana Pleten, UI UX Designer</a> @ KeenEthics</p>
+</div>
+
+<div>
+  <h2 style="text-align: center;margin-top: 25px;">Need Assistance with Design?</h2>
+</div>
+
+<div style="display: flex; justify-content: space-around; justify-content: space-evenly; flex-wrap: wrap; margin-top: 25px;">
+  <a href="//calendly.com/keenethics" target="_blank" rel="noopener noreferrer nofollow"><button style="cursor: pointer; font-size: 16px; border-radius: 18px; padding: 10px 20px; background: linear-gradient(90deg,#de3535 0%,#e3621d 100%); color: #fff; border: 0;">Schedule a call</button></a>
+</div>
