@@ -1,5 +1,7 @@
 /* eslint no-nested-ternary: 0 */
 
+import { withRouter } from 'next/router';
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import nanoid from 'nanoid';
@@ -8,7 +10,7 @@ import Layout from '../components/layout/main';
 
 import { config } from '../main.config';
 
-export default class Error extends React.Component {
+class Error extends React.Component {
   static getInitialProps({ res, jsonPageRes }) {
     const statusCode = res ? res.statusCode : (jsonPageRes ? jsonPageRes.status : null);
 
@@ -16,7 +18,7 @@ export default class Error extends React.Component {
   }
 
   render() {
-    const { url } = this.props;
+    const { router } = this.props;
     const baseURLs = [];
 
     config.navigation.forEach((p) => {
@@ -53,7 +55,16 @@ export default class Error extends React.Component {
                 <img src="/static/images/404.png" alt="404" />
               </div>
               <p>Looks like you are going the wrong way</p>
-              <a href="/" onClick={(e) => { e.preventDefault(); url.back(); }} className="btn-e">
+              <a
+                href="/"
+                onClick={(e) => {
+                  if (typeof window !== 'undefined') {
+                    e.preventDefault();
+                    router.back();
+                  }
+                }}
+                className="btn-e"
+              >
                 <span>return back</span>
               </a>
               <div className="base-urls">
@@ -69,8 +80,10 @@ export default class Error extends React.Component {
 }
 
 Error.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
 };
 Error.defaultProps = {
-  url: {},
+  router: {},
 };
+
+export default withRouter(Error);

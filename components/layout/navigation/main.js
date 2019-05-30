@@ -19,6 +19,7 @@ class Navigation extends React.Component {
       inner.scrollTop = scroll;
     }
   }
+
   constructor(props) {
     super(props);
 
@@ -36,14 +37,17 @@ class Navigation extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
   }
+
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
 
     this.updateDimensions();
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions);
   }
+
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
 
@@ -81,6 +85,7 @@ class Navigation extends React.Component {
 
     return null;
   }
+
   getPointHeight(numberOfPoints) {
     const { height } = this.state.dimensions;
 
@@ -90,11 +95,13 @@ class Navigation extends React.Component {
 
     return '90px';
   }
+
   showSidebar() {
     this.setState({
       showSidebar: true,
     });
   }
+
   handleClickOutside() {
     if (!this.state.showSidebar) {
       return;
@@ -104,6 +111,7 @@ class Navigation extends React.Component {
       showSidebar: false,
     });
   }
+
   updateDimensions() {
     this.setState({
       dimensions: {
@@ -112,6 +120,7 @@ class Navigation extends React.Component {
       },
     });
   }
+
   render() {
     const { showSidebar, dimensions } = this.state;
     const { router } = this.props;

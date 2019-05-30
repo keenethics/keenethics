@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ServicesDesktopApplications = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="desktop" />
+const ServicesDesktopApplications = () => (
+  <Layout>
+    <ContentNavigation image="desktop" />
     <div className="content-block">
       <h1>Desktop Application Development Services</h1>
       <p>
@@ -51,12 +50,5 @@ const ServicesDesktopApplications = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesDesktopApplications.propTypes = {
-  url: PropTypes.object,
-};
-ServicesDesktopApplications.defaultProps = {
-  url: {},
-};
 
 export default ServicesDesktopApplications;

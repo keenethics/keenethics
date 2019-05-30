@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachCuttingEdge = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="cut" />
+const ApproachCuttingEdge = () => (
+  <Layout>
+    <ContentNavigation image="cut" />
     <div className="content-block">
       <h1>Cutting Edge Technologies</h1>
       <p>
@@ -41,12 +40,5 @@ const ApproachCuttingEdge = ({ url }) => (
     </div>
   </Layout>
 );
-
-ApproachCuttingEdge.propTypes = {
-  url: PropTypes.object,
-};
-ApproachCuttingEdge.defaultProps = {
-  url: {},
-};
 
 export default ApproachCuttingEdge;

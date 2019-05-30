@@ -1,7 +1,7 @@
 const { google } = require('googleapis');
-const { spreadSheet } = require('./config');
 const _ = require('lodash');
 const memoize = require('lodash/memoize');
+const { spreadSheet } = require('./config');
 
 const TEAM_SHEET_ID = spreadSheet.id;
 const CREDS_FILE = spreadSheet.securityFile;
@@ -20,13 +20,16 @@ const arrayOfArraysToCollection = (arr) => {
     .map(v => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
-const getSheetValues = (valueRanges, rangeName) =>
-  valueRanges.find(v => new RegExp(rangeName).test(v.range)).values;
+const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
+  v => new RegExp(rangeName).test(v.range),
+).values;
 
 const getClient = async (keyFile, scopes) => google.auth.getClient({
   keyFile,
   scopes,
 });
+
+let cashedSheetData = [];
 
 class CustomMap extends Map {
   async get(key) {
@@ -70,13 +73,16 @@ const getData = async (rangeName, sheetId) => {
   try {
     const sheetData = await getSheets(sheetId);
 
-    const team = getSheetValues(sheetData.valueRanges, rangeName);
+    cashedSheetData = sheetData;
 
-    return arrayOfArraysToCollection(team);
+    const data = getSheetValues(sheetData.valueRanges, rangeName);
+
+    return arrayOfArraysToCollection(data);
   } catch (err) {
     console.error(err);
 
-    return [];
+    const cashedData = getSheetValues(cashedSheetData.valueRanges, rangeName);
+    return arrayOfArraysToCollection(cashedData);
   }
 };
 

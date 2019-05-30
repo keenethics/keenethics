@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { techBackEnd } from '../main.config';
 
-const TechBackEnd = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="be" />
+const TechBackEnd = () => (
+  <Layout>
+    <ContentNavigation image="be" />
     <PageTabs points={techBackEnd()} />
     <div className="content-block">
       <h1>Back-End</h1>
@@ -47,12 +46,5 @@ const TechBackEnd = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechBackEnd.propTypes = {
-  url: PropTypes.object,
-};
-TechBackEnd.defaultProps = {
-  url: {},
-};
 
 export default TechBackEnd;

@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techDatabase } from '../main.config';
 
-const TechDataBaseMysql = ({ url }) => (
-  <Layout currentURL={url}>
+const TechDataBaseMysql = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techDatabase()}
     />
@@ -70,12 +68,5 @@ const TechDataBaseMysql = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechDataBaseMysql.propTypes = {
-  url: PropTypes.object,
-};
-TechDataBaseMysql.defaultProps = {
-  url: {},
-};
 
 export default TechDataBaseMysql;

@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesWebDevelopmentTabs } from '../main.config';
 
-const ServicesWebDevelopmentE = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
+const ServicesWebDevelopmentE = () => (
+  <Layout>
+    <ContentNavigation image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>eCommerce Software Development Services</h1>
       <p>
@@ -59,12 +58,5 @@ const ServicesWebDevelopmentE = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesWebDevelopmentE.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopmentE.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopmentE;

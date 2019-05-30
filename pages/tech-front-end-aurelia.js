@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techFrontEnd } from '../main.config';
 
-const TechFrontEndAurelia = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="fe" points={techFrontEnd()} />
+const TechFrontEndAurelia = () => (
+  <Layout>
+    <ContentNavigation image="fe" points={techFrontEnd()} />
     <div className="content-block">
       <h1>Aurelia Development Services</h1>
       <p>
@@ -72,12 +71,5 @@ const TechFrontEndAurelia = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechFrontEndAurelia.propTypes = {
-  url: PropTypes.object,
-};
-TechFrontEndAurelia.defaultProps = {
-  url: {},
-};
 
 export default TechFrontEndAurelia;

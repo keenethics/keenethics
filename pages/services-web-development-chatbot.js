@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { servicesWebDevelopmentTabs } from '../main.config';
 
-const ServicesWebDevelopmentChat = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="web_development" points={servicesWebDevelopmentTabs()} />
+const ServicesWebDevelopmentChat = () => (
+  <Layout>
+    <ContentNavigation image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <h1>Chatbot Development Services</h1>
       <p>
@@ -74,11 +73,5 @@ const ServicesWebDevelopmentChat = ({ url }) => (
     </div>
   </Layout>
 );
-ServicesWebDevelopmentChat.propTypes = {
-  url: PropTypes.object,
-};
-ServicesWebDevelopmentChat.defaultProps = {
-  url: {},
-};
 
 export default ServicesWebDevelopmentChat;

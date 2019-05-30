@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 
@@ -9,11 +8,10 @@ export default class AboutSocialSide extends React.Component {
 
     this.state = {};
   }
-  render() {
-    const { url } = this.props;
 
+  render() {
     return (
-      <Layout currentURL={url}>
+      <Layout>
         <div className="content-wrap content-wrap-bg">
           <div className="content-socket content-socket-a">
             <div className="title-page">
@@ -22,7 +20,10 @@ export default class AboutSocialSide extends React.Component {
             </div>
             <div className="orbit-wrap inner">
               <ul className="orbit">
-                <li /><li /><li /><li />
+                <li />
+                <li />
+                <li />
+                <li />
               </ul>
               <div className="orbit-star orbit-star-1">
                 <span />
@@ -85,7 +86,9 @@ export default class AboutSocialSide extends React.Component {
                 Backend development - is the process of programming the site and filling it with
                 functional. Creating a core site, site development platform, filling it with basic
                 functionality and creation of the administrative area - this is the backend
-                development.<br />Website backend development process is a web programming, the
+                development.
+                <br />
+Website backend development process is a web programming, the
                 purpose of which is to implement server-side of site, integrate database connect it
                 with user&apos;s (front-end) side. Backend development also includes software setup
                 on a server.
@@ -119,9 +122,3 @@ export default class AboutSocialSide extends React.Component {
     );
   }
 }
-AboutSocialSide.propTypes = {
-  url: PropTypes.object,
-};
-AboutSocialSide.defaultProps = {
-  url: {},
-};

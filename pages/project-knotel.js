@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,15 +7,19 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#fc634d';
 
-const ProjectKnotel = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectKnotel = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">Knotel</h2>
-              <h3 className="duration"><span>Duration:</span> In development since April 2016</h3>
+              <h3 className="duration">
+                <span>Duration:</span>
+                {' '}
+In development since April 2016
+              </h3>
               <p className="description">
                 Knotel - the Innovative Platform for Workspace Management
               </p>
@@ -103,17 +106,11 @@ const ProjectKnotel = ({ url }) => (
               more opportunities are yet to come for this aspiring venture.
             </p>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectKnotel.propTypes = {
-  url: PropTypes.object,
-};
-ProjectKnotel.defaultProps = {
-  url: {},
-};
 
 export default ProjectKnotel;

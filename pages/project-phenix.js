@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -8,8 +7,8 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 
 const baseColor = '#ab2e6b';
 
-const ProjectPhenix = ({ url }) => (
-  <Layout currentURL={url}>
+const ProjectPhenix = () => (
+  <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
         <div className="project-content">
@@ -17,7 +16,9 @@ const ProjectPhenix = ({ url }) => (
             <div className="project-content-summary-inner">
               <h2 className="title">Phenix</h2>
               <h3 className="duration">
-                <span>Duration:</span> 5 months, project continues
+                <span>Duration:</span>
+                {' '}
+5 months, project continues
               </h3>
               <p className="description">
                 Online video-streaming
@@ -65,17 +66,11 @@ const ProjectPhenix = ({ url }) => (
               Look at the project
             </a>
           </div>
-          <Navigation url={url} />
+          <Navigation />
         </div>
       </div>
     </div>
   </Layout>
 );
-ProjectPhenix.propTypes = {
-  url: PropTypes.object,
-};
-ProjectPhenix.defaultProps = {
-  url: {},
-};
 
 export default ProjectPhenix;

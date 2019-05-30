@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-const ApproachMinimumValProduct = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="min" />
+const ApproachMinimumValProduct = () => (
+  <Layout>
+    <ContentNavigation image="min" />
     <div className="content-block">
       <h1 style={{ marginBottom: 0 }}>
         Minimum Viable Product: Between an Idea and the Product
@@ -200,18 +199,11 @@ const ApproachMinimumValProduct = ({ url }) => (
         </p>
       </section>
       <p style={{ fontWeight: 700 }}>
-        If you are interested in MVP development services, please, feel free to
-        <Link href="/contacts">contact us</Link>.
+        If you are interested in MVP development services, please, feel free
+        to <Link href="/contacts">contact us</Link>.
       </p>
     </div>
   </Layout>
 );
-
-ApproachMinimumValProduct.propTypes = {
-  url: PropTypes.object,
-};
-ApproachMinimumValProduct.defaultProps = {
-  url: {},
-};
 
 export default ApproachMinimumValProduct;

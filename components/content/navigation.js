@@ -1,3 +1,4 @@
+import { withRouter } from 'next/router';
 import Link from 'next/link';
 
 import React from 'react';
@@ -7,7 +8,7 @@ import ContentNavigationBackground from './background';
 
 import { config } from '../../main.config';
 
-export default class ContentNavigation extends React.Component {
+class ContentNavigation extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,8 +16,9 @@ export default class ContentNavigation extends React.Component {
 
     this.getPoints = this.getPoints.bind(this);
   }
+
   getPoints() {
-    const { url, points } = this.props;
+    const { router, points } = this.props;
     const currentPoints = {
       prev: {},
       current: {},
@@ -25,7 +27,7 @@ export default class ContentNavigation extends React.Component {
 
     if (points && points.length) {
       points.forEach((navigation, i) => {
-        const index = navigation.href === url.pathname ? i : -1;
+        const index = navigation.href === router.pathname ? i : -1;
 
         if (index > -1) {
           currentPoints.current = points[index];
@@ -45,10 +47,10 @@ export default class ContentNavigation extends React.Component {
       });
     }
 
-    if (url && url.pathname) {
+    if (router && router.pathname) {
       config.navigation.forEach((navigation, i) => {
         if (navigation.points) {
-          const index = navigation.points.map(point => point.href).indexOf(url.pathname);
+          const index = navigation.points.map(point => point.href).indexOf(router.pathname);
 
           if (index > -1) {
             const currentNav = config.navigation[i].points;
@@ -73,6 +75,7 @@ export default class ContentNavigation extends React.Component {
 
     return currentPoints;
   }
+
   render() {
     const { image } = this.props;
 
@@ -121,12 +124,14 @@ export default class ContentNavigation extends React.Component {
 }
 
 ContentNavigation.propTypes = {
-  url: PropTypes.object,
+  router: PropTypes.object,
   image: PropTypes.string,
   points: PropTypes.array,
 };
 ContentNavigation.defaultProps = {
-  url: {},
+  router: {},
   image: '',
   points: [],
 };
+
+export default withRouter(ContentNavigation);

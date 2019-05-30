@@ -1,15 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import { techApiIntegration } from '../main.config';
 
-const TechApiIntegrationGraphql = ({ url }) => (
-  <Layout currentURL={url}>
+const TechApiIntegrationGraphql = () => (
+  <Layout>
     <ContentNavigation
-      url={url}
       image="be"
       points={techApiIntegration()}
     />
@@ -77,12 +75,5 @@ const TechApiIntegrationGraphql = ({ url }) => (
     </div>
   </Layout>
 );
-
-TechApiIntegrationGraphql.propTypes = {
-  url: PropTypes.object,
-};
-TechApiIntegrationGraphql.defaultProps = {
-  url: {},
-};
 
 export default TechApiIntegrationGraphql;

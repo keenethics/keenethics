@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
@@ -7,9 +6,9 @@ import PageTabs from '../components/content/tabs';
 
 import { servicesMobileDevelopment } from '../main.config';
 
-const ServicesMobileDevelopment = ({ url }) => (
-  <Layout currentURL={url}>
-    <ContentNavigation url={url} image="mobile_development" />
+const ServicesMobileDevelopment = () => (
+  <Layout>
+    <ContentNavigation image="mobile_development" />
     <PageTabs points={servicesMobileDevelopment()} />
     <div className="content-block">
       <h1>Mobile App Development Services</h1>
@@ -60,12 +59,5 @@ const ServicesMobileDevelopment = ({ url }) => (
     </div>
   </Layout>
 );
-
-ServicesMobileDevelopment.propTypes = {
-  url: PropTypes.object,
-};
-ServicesMobileDevelopment.defaultProps = {
-  url: {},
-};
 
 export default ServicesMobileDevelopment;
