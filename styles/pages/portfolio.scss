@@ -36,94 +36,104 @@
    font-size: 30px;
    color: #E3504E;
 }
-.portfolio__list {
-   margin: 0 -15px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   list-style: none;
-}
-.portfolio__item {
-   box-sizing: border-box;
-   padding: 15px;
-   width: 300px;
-   transition: transform .1s ease-in-out;
-   
-   @media (max-width: 350px) {
-      width: 100%;
+.portfolio-works {
+   .portfolio__list {
+      margin: 0 -15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
    }
-}
-.portfolio__item-link {
-   display: block;
-   text-decoration: none;
-   height: 100%;
-}
-.portfolio__item-figure {
-   background: #fff;
-   border-radius: 8px;
-   overflow: hidden;
-   display: flex;
-   flex-direction: column;
-   height: 100%;
-   box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
-   transition: box-shadow .2s ease-in-out;
-   &:hover {
-      box-shadow: 3px 3px 25px rgba(0, 0, 0, .7);
-   }
-}
-.portfolio__item-figure-img-wrap {
-   height: 155px;
-   position: relative;
-}
-.portfolio__item-img {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 100%;
-   min-width: 100%;
-   min-height: 100%;
-}
-.portfolio__figcaption {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 15px;
-   flex-grow: 1;
-}
-.portfolio__item-title {
-   margin-bottom: 10px;
-   color: rgba($color: #000, $alpha: .9);
-   font-size: 24px;
-   font-weight: 600;
-}
-.portfolio__item-categories {
-   margin: 0 -5px 15px -5px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   font-size: 14px;
-}
-.portfolio__item-category {
-   padding: 2px 12px 2px 5px;
-   color: rgba($color: #000, $alpha: .7);
-   position: relative;
-   &:after {
-      content: '/';
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-   }
-   &:last-child {
-      padding-right: 5px;
-      &:after {
+   .portfolio__item {
+      box-sizing: border-box;
+      padding: 15px;
+      width: 300px;
+      margin: 0;
+      transition: transform .1s ease-in-out;
+      &:before {
          display: none;
       }
+      @media (max-width: 350px) {
+         width: 100%;
+      }
    }
-}
-.portfolio__item-descr {
-   color: rgba($color: #000, $alpha: .9);;
-   text-align: center;
-   line-height: 1.2;
+   .portfolio__item-link {
+      display: block;
+      text-decoration: none;
+      height: 100%;
+   }
+   .portfolio__item-figure {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
+      transition: box-shadow .2s ease-in-out;
+      &:hover {
+         box-shadow: 3px 3px 25px rgba(0, 0, 0, .7);
+      }
+   }
+   .portfolio__item-figure-img-wrap {
+      height: 155px;
+      position: relative;
+   }
+   .portfolio__item-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+   }
+   .portfolio__figcaption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 15px 25px 15px;
+      flex-grow: 1;
+   }
+   .portfolio__item-title {
+      margin: 0 0 10px 0 !important;
+      color: rgba($color: #000, $alpha: .9);
+      font-size: 24px;
+      font-weight: 600;
+   }
+   .portfolio__item-categories {
+      margin: 0 -5px 0 -5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 14px;
+   }
+   .portfolio__item-category {
+      padding: 2px 12px 2px 5px;
+      color: rgba($color: #000, $alpha: .7);
+      margin: 0;
+      font-size: 14px;
+      position: relative;
+      &:before {
+         display: none;
+      }
+      &:after {
+         content: '/';
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translateY(-50%);
+      }
+      &:last-child {
+         padding-right: 5px;
+         &:after {
+            display: none;
+         }
+      }
+   }
+   .portfolio__item-descr {
+      color: rgba($color: #000, $alpha: .9);;
+      text-align: center;
+      line-height: 1.2;
+   }
 }

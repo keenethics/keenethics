@@ -28,7 +28,7 @@ const Works = ({ works }) => (
                         : null
                     }
                   </ul>
-                  <p className="portfolio__item-descr">{work.descr}</p>
+                  {work.descr && <p className="portfolio__item-descr">{work.descr}</p>}
                 </figcaption>
               </figure>
             </a>
