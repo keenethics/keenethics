@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 export default function CallToActionButton({ title, href }) {
   return (
-    <div className="primary-gradient-btn-wrap">
+    <div className="call-to-cation-btn-wrap">
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer nofollow"
       >
-        <button className="primary-gradient-btn" type="button">{title}</button>
+        <button className="call-to-cation-btn" type="button">{title}</button>
       </a>
     </div>
   );

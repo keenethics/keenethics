@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/layout/main';
@@ -5,42 +6,45 @@ import ContentNavigation from '../components/content/navigation';
 import PageTabs from '../components/content/tabs';
 
 import { servicesMobileDevelopment, works } from '../main.config';
+
+import './services-mobile-development.scss';
+
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import CalendlyIframe from '../components/content/CalendlyIframe';
+import FeaturesList from '../components/content/FeaturesList';
 
-/* eslint-disable */
-const ServicesMobileDevelopment = () =>  {
+const ServicesMobileDevelopment = () => {
   const whyShouldYouGoMobile = [
     {
       icon: '/static/services/everywhere.svg',
       alt: 'everywhere icon',
-      iconTitle: 'Phones are everywhere.',
-      description: <p>Laptops and desktops are used mainly for education or work, while for all the other purposes, from shopping to socializing, people prefer using smartphones. As smartphones grow even “smarter”, sorry for the paradox, they seem to have the potential to completely squeeze computers out of everyday use.</p>,
+      description: 'Phones are everywhere.',
+      additionalText: <p>Laptops and desktops are used mainly for education or work, while for all the other purposes, from shopping to socializing, people prefer using smartphones. As smartphones grow even “smarter”, sorry for the paradox, they seem to have the potential to completely squeeze computers out of everyday use.</p>,
     },
     {
       icon: '/static/services/dislike.svg',
       alt: 'dislike icon',
-      iconTitle: 'Nobody is surprised by a mobile app.',
-      description: <p>The absolute majority of applications if AppStore or Google Play are installed, opened once, and deleted because they are regular, there is nothing interesting about them, or, what is worse, they do not function as supposed to.</p>,
+      description: 'Nobody is surprised by a mobile app.',
+      additionalText: <p>The absolute majority of applications if AppStore or Google Play are installed, opened once, and deleted because they are regular, there is nothing interesting about them, or, what is worse, they do not function as supposed to.</p>,
     },
     {
       icon: '/static/services/like.svg',
       alt: 'like icon',
-      iconTitle: 'But your app can surprise everyone.',
-      description: <p>Your app will leave the rows of install-open-and-delete applications if you trust your idea to a reliable partner. A company providing high-quality custom mobile application development services can help you to enter this market and to firmly establish yourself in it.</p>,
+      description: 'But your app can surprise everyone.',
+      additionalText: <p>Your app will leave the rows of install-open-and-delete applications if you trust your idea to a reliable partner. A company providing high-quality custom mobile application development services can help you to enter this market and to firmly establish yourself in it.</p>,
     },
     {
       icon: '/static/services/fast-forward.svg',
       alt: 'fast forward icon',
-      iconTitle: 'Don’t stop here.',
-      description: <p>Hire a company that will help you <Link href="/blog/1548151200000-voice-app-development"><a >develop a voice chatbot</a></Link> or integrate your application with your smartwatch, fitness bracelet, smart clock, kettle, lamp, or whatever it is that you need. Explore the possibilities that the world of mobile development and IoT provides you with.</p>,
+      description: 'Don’t stop here.',
+      additionalText: <p>Hire a company that will help you <Link href="/blog/1548151200000-voice-app-development"><a >develop a voice chatbot</a></Link> or integrate your application with your smartwatch, fitness bracelet, smart clock, kettle, lamp, or whatever it is that you need. Explore the possibilities that the world of mobile development and IoT provides you with.</p>,
     },
     {
       icon: '/static/services/search.svg',
       alt: 'search icon',
-      iconTitle: 'Do you doubt whether your business idea is worth implementing?',
-      description: <p>Let our developers create a <Link href="/services-proof"><a>Proof of Concept</a></Link> for you, and you will have this question answered by your users themselves.</p>,
+      description: 'Do you doubt whether your business idea is worth implementing?',
+      additionalText: <p>Let our developers create a <Link href="/services-proof"><a>Proof of Concept</a></Link> for you, and you will have this question answered by your users themselves.</p>,
     },
   ];
   const servicesList = [
@@ -75,9 +79,7 @@ const ServicesMobileDevelopment = () =>  {
       <div className="content-block">
         <section>
           <h1 className="text-center">Mobile App Development Services</h1>
-          <p className="text-center text-italic">
-            We offer exactly the applications that you need.
-          </p>
+          <p className="text-center text-italic">We offer exactly the applications that you need.</p>
           <CallToActionButton />
         </section>
         <section>
@@ -90,46 +92,50 @@ const ServicesMobileDevelopment = () =>  {
 
         <section>
           <h2>Why Should You Go Mobile?</h2>
-          <ul className="services-icons--list">
+          <FeaturesList list={whyShouldYouGoMobile} />
+          <CallToActionButton title="Request a proof of concept" />
+        </section>
+
+        <section>
+          <h2>What Mobile App Development Services Do We Offer?</h2>
+          <ul className="mobile-development-list">
             {
-              whyShouldYouGoMobile.map(({ icon, alt, iconTitle, description }, key) => (
-                <li key={key} className="services-icons--item">
-                  <figure className="services-icons--figure">
-                    <div>
-                      <img src={icon} alt={alt} className="services-icons--img" />
-                      <h3>{iconTitle}</h3>
-                    </div>
-                    <figcaption className="services-icons--figcaption">
-                      {description}
+              servicesList.map(({ icon, title, href }) => (
+                <li className="mobile-development-item">
+                  <figure>
+                    <img src={icon} alt={title} />
+                    <figcaption className="mobile-development-figcaption">
+                      {
+                        href ? <Link href={href}>{title}</Link> : title
+                      }
                     </figcaption>
                   </figure>
                 </li>
               ))
             }
           </ul>
-          <CallToActionButton title="Request a proof of concept" />
         </section>
 
         <section>
           <h2>Why KeenEthics?</h2>
           <p>As a custom mobile app development company, we offer exactly the applications that you need.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Cutting edge.</h3>  
+          <h3 className="red-italic-title">Cutting edge.</h3>  
           <p>As nobody is surprised by an average mobile app, we offer you a progressive one. Progressive web applications combine the best functions of mobile and web apps, all for the best experience of the user. Fast, reliable, and engaging, easily-developed and resource-efficient — our apps will become the optimal solution both for your business and for your users.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Well-designed.</h3>  
+          <h3 className="red-italic-title">Well-designed.</h3>  
           <p>People are judged by their appearance, and so are mobile applications. Our UI/UX designers are eager and ready to develop a unique outstanding design for your application.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Perfectly functional.</h3>  
+          <h3 className="red-italic-title">Perfectly functional.</h3>  
           <p>Nothing can spoil the user experience more than an annoying software bug or an excessively long loading time. Not only we look for the best mobile app development solutions, but also we provide continuous maintenance and support to constantly improve the app.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Relevant.</h3>  
+          <h3 className="red-italic-title">Relevant.</h3>  
           <p>Creating a perfect technical solution is not enough for the app to be loved and popular. To ensure the best user experience and to provide all the necessary features and services without overloading the app with unnecessary stuff, our mobile app development team conducts a comprehensive discovery stage.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Social.</h3>  
+          <h3 className="red-italic-title">Social.</h3>  
           <p>The importance of Facebook, Instagram, and Twitter is the one you cannot deny. We make sure that all your wishes and expectations on the social integration of your app are fulfilled.</p>
 
-          <h3 style={{ margin: '0 0 5px 0', color: '#d62c2c', fontSize: '16px' }}>Compatible.</h3>  
+          <h3 className="red-italic-title">Compatible.</h3>  
           <p>You can see hundreds of people a day wearing smartwatches or fitness trackers, so why don’t you use it in your favor?  Wearable devices have already become a usual thing, and an ideal mobile application is the one that uses them to provide a better, more personalized service to the user.</p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
@@ -139,6 +145,6 @@ const ServicesMobileDevelopment = () =>  {
       </div>
     </Layout>
   );
-}
+};
 
 export default ServicesMobileDevelopment;
