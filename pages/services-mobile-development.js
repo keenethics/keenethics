@@ -120,22 +120,22 @@ const ServicesMobileDevelopment = () => {
           <h2>Why KeenEthics?</h2>
           <p>As a custom mobile app development company, we offer exactly the applications that you need.</p>
 
-          <h3 className="red-italic-title">Cutting edge.</h3>  
+          <h3 className="red-italic-title">Cutting edge.</h3>
           <p>As nobody is surprised by an average mobile app, we offer you a progressive one. Progressive web applications combine the best functions of mobile and web apps, all for the best experience of the user. Fast, reliable, and engaging, easily-developed and resource-efficient — our apps will become the optimal solution both for your business and for your users.</p>
 
-          <h3 className="red-italic-title">Well-designed.</h3>  
+          <h3 className="red-italic-title">Well-designed.</h3>
           <p>People are judged by their appearance, and so are mobile applications. Our UI/UX designers are eager and ready to develop a unique outstanding design for your application.</p>
 
-          <h3 className="red-italic-title">Perfectly functional.</h3>  
+          <h3 className="red-italic-title">Perfectly functional.</h3>
           <p>Nothing can spoil the user experience more than an annoying software bug or an excessively long loading time. Not only we look for the best mobile app development solutions, but also we provide continuous maintenance and support to constantly improve the app.</p>
 
-          <h3 className="red-italic-title">Relevant.</h3>  
+          <h3 className="red-italic-title">Relevant.</h3>
           <p>Creating a perfect technical solution is not enough for the app to be loved and popular. To ensure the best user experience and to provide all the necessary features and services without overloading the app with unnecessary stuff, our mobile app development team conducts a comprehensive discovery stage.</p>
 
-          <h3 className="red-italic-title">Social.</h3>  
+          <h3 className="red-italic-title">Social.</h3>
           <p>The importance of Facebook, Instagram, and Twitter is the one you cannot deny. We make sure that all your wishes and expectations on the social integration of your app are fulfilled.</p>
 
-          <h3 className="red-italic-title">Compatible.</h3>  
+          <h3 className="red-italic-title">Compatible.</h3>
           <p>You can see hundreds of people a day wearing smartwatches or fitness trackers, so why don’t you use it in your favor?  Wearable devices have already become a usual thing, and an ideal mobile application is the one that uses them to provide a better, more personalized service to the user.</p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
