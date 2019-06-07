@@ -68,9 +68,7 @@ const ServicesMobileDevelopment = () => {
     },
   ];
 
-  const mobileDevelopmentWorks = works.filter(({ title }) => {
-    return ['Pree', 'ParkQX', 'Tetrami'].includes(title);
-  });
+  const mobileDevelopmentWorks = works.filter(({ title }) => ['Pree', 'ParkQX', 'Tetrami'].includes(title));
 
   return (
     <Layout>

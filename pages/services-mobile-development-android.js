@@ -55,9 +55,7 @@ const whyAndroid = [
   },
 ];
 
-const androidWorks = works.filter(({ title }) => {
-  return ['Pree', 'ParkQX', 'Tetrami'].includes(title);
-});
+const androidWorks = works.filter(({ title }) => ['Pree', 'ParkQX', 'Tetrami'].includes(title));
 
 const ServicesWebDevelopmentAndroid = () => (
   <Layout>

@@ -104,9 +104,7 @@ const ServicesWebDevelopmentNode = () => {
     },
   ];
 
-  const nodeJsWorks = works.filter(({ title }) => {
-    return ['OneRemission', 'Pree', 'SelfLeaders'].includes(title);
-  });
+  const nodeJsWorks = works.filter(({ title }) => ['OneRemission', 'Pree', 'SelfLeaders'].includes(title));
 
   return (
     <Layout>
