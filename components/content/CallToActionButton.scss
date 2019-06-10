@@ -1,0 +1,19 @@
+.call-to-cation-btn-wrap {
+  text-align: center;
+  margin: 50px 0;
+  @media (max-width: 500px) {
+    margin: 40px 0;
+  }
+  .call-to-cation-btn {
+    padding: 13px 28px;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg,#de3535 0%,#e3621d 100%);
+    box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
+    cursor: pointer;
+    border-radius: 23px;
+  }
+}
