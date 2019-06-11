@@ -1,5 +1,9 @@
 .call-to-cation-btn-wrap {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 50px 0;
   @media (max-width: 500px) {
     margin: 40px 0;
@@ -15,5 +19,8 @@
     box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
     cursor: pointer;
     border-radius: 23px;
+  }
+  a {
+    margin: 0;
   }
 }

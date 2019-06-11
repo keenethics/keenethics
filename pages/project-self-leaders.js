@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import CallToActionButton from '../components/content/CallToActionButton'
 
 const baseColor = '#261353';
 
@@ -14,10 +16,8 @@ const ProjectPlutio = () => (
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
-              <h2 className="title">SelfLeaders</h2>
-              <p className="description">
-                Personal Growth Tool
-              </p>
+              <h1 className="title">SelfLeaders</h1>
+              <p className="description">Personal Growth Tool</p>
               <PortfolioTechnologyTags tags={['Fintech', 'E-Commerce', 'Education']} />
             </div>
             <div className="project-content-preview">
@@ -29,170 +29,152 @@ const ProjectPlutio = () => (
             <Background />
           </div>
           <div className="project-content-more">
-            <p className="center">
-              SelfLeaders is a Swedish company that helps their customers create strong
-              cultures where co workers are engaged, drive development and take care of
-              themselves and each other.
+            <p className="center text-italic" style={{ marginBottom: '40px' }}>
+              A Swedish company helping its customers drive personal
+              development and create a sound corporate culture.
             </p>
-            <div className="title">How it works</div>
-            <p>
-              Understanding personal values is the key to understanding your own motivation.
-              Ever since the start of SelfLeaders in 2009, this method has been central in
-              our approach to working with individual and organizational transformation.
-            </p>
-            <p>
-              SelfLeaders delivers trainings to businesses, NGOs and the public sector with
-              the aim to help them to become truly value-based. SelfLeaders workshops would
-              be impossible without application which we made. This application is a tool
-              for facilitators and participants of workshops. Tool’s functionality helps to
-              conduct workshop with interacting materials, videos, presentations, etc.
-            </p>
-            <img
-              src="/static/images/project/self-leaders-prew-1.jpg"
-              alt="Self Leaders"
-              className="image-gaps"
-            />
-            <div className="title">Technology</div>
-            <PortfolioTechnologyTags tags={['Meteor', 'GraphQL', 'React', 'Blaze']} />
-            <img
-              src="/static/images/project/self-leaders-prew-2.jpg"
-              alt="Self Leaders"
-              className="image-gaps"
-            />
-            <div className="project-achievements">
-              <h3>Achievements</h3>
-              <ul>
-                <li>
-                  Implemented a lot of new core functionality;
+            <section>
+              <h2 className="title">What Is SelfLeaders?</h2>
+              <p>
+                Understanding your values is the key to understanding your motivation.
+                Ever since the launch of SelfLeaders in 2009, this truth has defined
+                their approach to working with individual and organizational transformation.
+                SelfLeaders delivers training events and workshops for professional and
+                personal development in self-leadership. The target companies include
+                businesses of different sizes, NGOs, and the public sector. SelfLeaders is
+                working by a 1:1 principle: for every paid user of their service,
+                they offer a free leadership development account for a student or
+                an NGO employee. This is how they make a large impact with minor efforts.
+              </p>
+              <img
+                src="/static/images/project/self-leaders-prew-1.jpg"
+                alt="Self Leaders"
+                className="image-gaps"
+              />
+            </section>
+            <section>
+              <h2 className="title">Our Cooperation</h2>
+              <p>
+                Understanding your values is the key to understanding your motivation.
+                Ever since the launch of SelfLeaders in 2009, this truth has defined
+                their approach to working with individual and organizational transformation.
+                SelfLeaders delivers training events and workshops for professional and
+                personal development in self-leadership. The target companies include
+                businesses of different sizes, NGOs, and the public sector. SelfLeaders is
+                working by a 1:1 principle: for every paid user of their service,
+                they offer a free leadership development account for a student or
+                an NGO employee. This is how they make a large impact with minor efforts.
+              </p>
+              <h3 className="red-italic-title">Challenges</h3>
+              <p>
+                SelfLeaders would not be able to pursue its mission without the application.
+                This app is a set of personal growth tools for the people who organize and
+                participate in educational events. It provides an opportunity to conduct
+                workshops with interactive materials, videos, presentations, etc.
+              </p>
+              <p>
+                We continue working on this project and constantly improving the applications
+                for the best interest of the end users. As of now, we have fully refactored
+                the code, replaced Blaze with React and Meteor DDP pub/sub with Apollo/GraphQL.
+                Moreover, we have implemented a new design, and developed a lot of new functions.
+              </p>
+
+              <h3 className="red-italic-title">Our Team</h3>
+              <p>
+                The team working on the SelfLeaders app currently includes four
+                full-stack developers, one QA specialist, and one Project Manager.
+              </p>
+
+              <h3 className="red-italic-title">Technologies</h3>
+              <p>
+                The tools for personal growth have been developed both for mobile
+                <Link href="/services-mobile-development-android"><span style={{ margin: '0 .25em' }}>Android</span></Link>
+                and
+                <Link href="/services-mobile-development-apple"><span style={{ margin: '0 .25em' }}>iOS</span></Link>
+                platforms and for desktop. The tech stack we have used includes
+                <Link href="/tech-back-end-meteor"><span style={{ marginLeft: '.25em' }}>Meteor</span></Link>
+                ,
+                <Link href="/tech-api-integration-graphql"><span style={{ marginLeft: '.25em' }}>GraphQL</span></Link>
+                , and
+                <Link href="/tech-front-end-react"><span style={{ marginLeft: '.25em' }}>React</span></Link>
+                .
+              </p>
+              <ul className="technologies-list -selfleaders">
+                <li className="technologies-item">
+                  <img src="/static/portfolio/selfleaders/android.png" alt="android" />
                 </li>
-                <li>
-                  Replaced Blaze with React in most of app;
+                <li className="technologies-item">
+                  <img src="/static/portfolio/selfleaders/ios.png" alt="ios" />
                 </li>
-                <li>
-                  Use Apollo/GraphQL instead of Meteor DDP pub/sub;
+                <li className="technologies-item">
+                  <img src="/static/portfolio/selfleaders/meteor.jpg" alt="meteor" />
                 </li>
-                <li>
-                  Merge two client&apos;s applications (WIP);
+                <li className="technologies-item">
+                  <img src="/static/portfolio/selfleaders/graphql.png" alt="graphql" />
                 </li>
-                <li>
-                  Implement new design;
-                </li>
-                <li>
-                  Full app refactoring;
-                </li>
-                <li>
-                  Over course of the past 10 months the company has grown, acquired new clients,
-                  went international and signed a contract with Spotify for a workshop of 300
-                  people.
+                <li className="technologies-item">
+                  <img src="/static/portfolio/selfleaders/react.png" alt="react" />
                 </li>
               </ul>
-            </div>
-            <div className="title">How we managed it</div>
-            <div className="grid sl-grid">
-              <div className="col-1-2">
-                <div>
-                  <p>
-                    <span className="semi-bold">We grow fast!</span>
-                    We have started development with only one full stacker
-                    and after 3 months, we expanded to three decent developers, QA and a
-                    Project Manager to handle the project flow.
-                  </p>
-                </div>
-              </div>
-              <div className="col-1-2">
-                <div className="pree-grid-text">
-                  <p>
-                    <span className="semi-bold">We love agility!</span>
-                      Self Leaders is the best example of the agile methodology successfully
-                      running on the project. Scrum attributes with all their features were
-                      integrated into the project development process.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="title">Development</div>
-            <div className="grid sl-grid">
-              <div className="col-1-3">
-                <div className="grid-img-wrap">
-                  <img
-                    src="/static/images/project/self-leaders-development-icon-sprint-cycle.png"
-                    alt="Sprint Cycle"
-                  />
-                </div>
-                <div>
-                  <p>
-                    We follow a well-known sprint cycle to ship increments on a bi-weekly
-                    basis. We implemented two-week sprint in order to have more frequent
-                    demos, more frequent retrospectives.
-                  </p>
-                </div>
-              </div>
-              <div className="col-1-3">
-                <div className="grid-img-wrap">
-                  <img
-                    src="/static/images/project/self-leaders-development-icon-scrum-poker.png"
-                    alt="Scrum Poker"
-                  />
-                </div>
-                <div className="pree-grid-text">
-                  <p>
-                    We use gamified technique called “Scrum Poker” which helps to create a
-                    productive and fun work environment at sprint planning.
-                  </p>
-                </div>
-              </div>
-              <div className="col-1-3">
-                <div className="grid-img-wrap">
-                  <img
-                    src="/static/images/project/self-leaders-development-icon-team.png"
-                    alt="Team"
-                  />
-                </div>
-                <div className="pree-grid-text">
-                  <p>
-                    We see retrospective as an opportunity for the team to inspect and
-                    create a plan for improvements to be enacted during the next sprint.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="title">Flow</div>
-            <p>
-              Developer moves task which he/she works on.
-            </p>
-            <p>
-              Task is completed by developer. Pull request created. Task is reviewed by teammate.
-            </p>
-            <p>
-              Task is pushed to staging. Task is ready for testing.
-            </p>
-            <p>
-              Task is considered as a bug-free, and labels as Done.
-            </p>
-            <p>
-              QA reveals some bugs and moves Task back to Sprint.
-            </p>
-            <img
-              src="/static/images/project/self-leaders-prew-3.jpg"
-              alt="Self Leaders"
-              className="image-gaps"
-            />
-            {/* <div className="project-feedback">
-              <h3>Client’s Feedback</h3>
+
+              <h3 className="red-italic-title">Methodology</h3>
               <p>
-                I am really impressed with the different tools and tips that we
-                also got to bring with us, extremely useful.
+                We use Scrum since the project is being continuously developed and we
+                closely communicate with the client. Self Leaders is the best example
+                of the Agile methodology successfully running on the project.
               </p>
-            </div> */}
-            <a
-              href="http://selfleaders.com"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
+            </section>
+
+            <section>
+              <h2>What Makes SelfLeaders Special?</h2>
+              <p>
+                The company aims to create “a more conscious, sustainable, and prosperous world”
+                where everyone is a leader. SelfLeaders strives to leave the limits of traditions
+                and conventionality and to become self-organized, self-reliant, and self-sufficient.
+                It abandons the managerial hierarchy in its classical meaning and encourages other
+                individuals and companies to discover their own potential and stimulate their own
+                personal fulfillment. SelfLeaders is dedicated to helping others and highly values
+                clarity, devotion, empathy, and freedom.
+              </p>
+              <p>
+                Over the course of the past year, the SelfLeaders company has grown, acquired new
+                clients,gone global, and signed a contract with
+                <a style={{ margin: '0 .25em' }} href="//www.spotify.com/" target="_blank" rel="noopener noreferrer nofollow">Spotify</a>
+                for a workshop including 300 people. They sold tools for personal growth and
+                conducted leadership development training sessions for multiple companies from
+                Sweden and all over the world, including
+                <a style={{ marginLeft: '.25em' }} href="//www.bonnierforlagen.se/" target="_blank" rel="noopener noreferrer nofollow">Bonnierförlagen</a>
+                ,
+                <a style={{ marginLeft: '.25em' }} href="//www.ricoh.com/" target="_blank" rel="noopener noreferrer nofollow">Ricoh</a>
+                , and
+                <a style={{ marginLeft: '.25em' }} href="//sebgroup.com/" target="_blank" rel="noopener noreferrer nofollow">SEB</a>
+                . One of the most popular applications that SelfLeaders offers is
+                <a style={{ margin: '0 .25em' }} href="//valuestree.com/login" target="_blank" rel="noopener noreferrer nofollow">The Values Tree</a>
+                – a simple personal growth reflection tool for personal development and a proactive
+                mindset. Since its launch in 2016, it has been used by 26 000+ employees from all
+                over the world. It enables a user to build their own tree of values while choosing
+                among numerous options offered here.
+              </p>
+              <img
+                src="/static/images/project/self-leaders-prew-3.jpg"
+                alt="Self Leaders"
+                className="image-gaps"
+              />
+            </section>
+
+            <CallToActionButton
+              buttonBefore={(
+                <a
+                  href="http://selfleaders.com"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  className="link"
+                  style={{ background: baseColor }}
+                >
+                  Look at the project
+                </a>
+              )}
+            />
           </div>
           <Navigation />
         </div>

@@ -64,7 +64,7 @@ const ProjectTetrami = () => (
               rel="noopener noreferrer nofollow"
               target="_blank"
               className="link"
-              style={{ background: baseColor, color: '#222' }}
+              style={{ background: baseColor, color: '#222', border: '1px solid rgba(34, 34, 34, 0.5)' }}
             >
               Look at the project
             </a>
