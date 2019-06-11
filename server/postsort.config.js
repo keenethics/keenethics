@@ -189,6 +189,11 @@ const postsDatePair = [
     filename: '1559196000000-node-js-inject.md',
     href: '/blog/1559196000000-node-js-inject',
   },
+  {
+    createdAt: 1560258000000,
+    filename: '1560258000000-silvertown-technologies-announces-partnership-with-keenethics.md',
+    href: '/blog/1560258000000-silvertown-technologies-announces-partnership-with-keenethics',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
