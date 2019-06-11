@@ -220,6 +220,7 @@
     cursor: pointer;
     border-radius: 23px;
     margin: 10px 0;
+    font-family: Arial;
   }
   .title {
     font-size: 24px;
@@ -254,6 +255,15 @@
         }
         @media (max-width: 380px) {
           width: 50%;
+        }
+      }
+    }
+    &.-comic-english {
+      .technologies-item {
+        @media (max-width: 525px) {
+          width: 50%;
+        }
+        @media (max-width: 380px) {
         }
       }
     }

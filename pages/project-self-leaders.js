@@ -5,7 +5,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
-import CallToActionButton from '../components/content/CallToActionButton'
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#261353';
 
@@ -88,32 +88,32 @@ const ProjectPlutio = () => (
               <h3 className="red-italic-title">Technologies</h3>
               <p>
                 The tools for personal growth have been developed both for mobile
-                <Link href="/services-mobile-development-android"><span style={{ margin: '0 .25em' }}>Android</span></Link>
+                <span style={{ margin: '0 .25em' }}><Link href="/services-mobile-development-android">Android</Link></span>
                 and
-                <Link href="/services-mobile-development-apple"><span style={{ margin: '0 .25em' }}>iOS</span></Link>
+                <span style={{ margin: '0 .25em' }}><Link href="/services-mobile-development-apple">iOS</Link></span>
                 platforms and for desktop. The tech stack we have used includes
-                <Link href="/tech-back-end-meteor"><span style={{ marginLeft: '.25em' }}>Meteor</span></Link>
+                <span style={{ marginLeft: '.25em' }}><Link href="/tech-back-end-meteor">Meteor</Link></span>
                 ,
-                <Link href="/tech-api-integration-graphql"><span style={{ marginLeft: '.25em' }}>GraphQL</span></Link>
+                <span style={{ marginLeft: '.25em' }}><Link href="/tech-api-integration-graphql">GraphQL</Link></span>
                 , and
-                <Link href="/tech-front-end-react"><span style={{ marginLeft: '.25em' }}>React</span></Link>
+                <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-react">React</Link></span>
                 .
               </p>
               <ul className="technologies-list -selfleaders">
                 <li className="technologies-item">
-                  <img src="/static/portfolio/selfleaders/android.png" alt="android" />
+                  <img src="/static/portfolio/technologies/android.png" alt="android" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/selfleaders/ios.png" alt="ios" />
+                  <img src="/static/portfolio/technologies/ios.png" alt="ios" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/selfleaders/meteor.jpg" alt="meteor" />
+                  <img src="/static/portfolio/technologies/meteor.jpg" alt="meteor" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/selfleaders/graphql.png" alt="graphql" />
+                  <img src="/static/portfolio/technologies/graphql.png" alt="graphql" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/selfleaders/react.png" alt="react" />
+                  <img src="/static/portfolio/technologies/react.png" alt="react" />
                 </li>
               </ul>
 
