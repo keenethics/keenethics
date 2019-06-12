@@ -194,6 +194,11 @@ const postsDatePair = [
     filename: '1560268800000-silvertown-technologies-announces-partnership-with-keenethics.md',
     href: '/blog/1560268800000-silvertown-technologies-announces-partnership-with-keenethics',
   },
+  {
+    createdAt: 1560358800000,
+    filename: '1560358800000-business-of-apps.md',
+    href: '/blog/1560358800000-business-of-apps',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
