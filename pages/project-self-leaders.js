@@ -99,13 +99,15 @@ const ProjectPlutio = () => (
                 <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-react">React</Link></span>
                 .
               </p>
-              <ul className="technologies-list -selfleaders">
+              <ul className="technologies-list">
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/android.png" alt="android" />
                 </li>
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/ios.png" alt="ios" />
                 </li>
+              </ul>
+              <ul className="technologies-list">
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/meteor.jpg" alt="meteor" />
                 </li>
@@ -168,10 +170,10 @@ const ProjectPlutio = () => (
                   href="http://selfleaders.com"
                   rel="noopener noreferrer nofollow"
                   target="_blank"
-                  className="link"
-                  style={{ background: baseColor }}
                 >
-                  Look at the project
+                  <button type="button" className="call-to-cation-btn -secondary">
+                    Look at the project
+                  </button>
                 </a>
               )}
             />

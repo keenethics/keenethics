@@ -19,6 +19,11 @@
     box-shadow: 0 5px 20px 0 rgba(203,55,55,.3);
     cursor: pointer;
     border-radius: 23px;
+    font-weight: 600;
+    &.-secondary {
+      box-shadow: 0 5px 20px 0 rgba(#b9bce5, .3);
+      background: #b9bce5;
+    }
   }
   .link {
     margin: 0;
