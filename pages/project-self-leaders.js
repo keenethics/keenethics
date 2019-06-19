@@ -54,17 +54,6 @@ const ProjectPlutio = () => (
             </section>
             <section>
               <h2 className="title">Our Cooperation</h2>
-              <p>
-                Understanding your values is the key to understanding your motivation.
-                Ever since the launch of SelfLeaders in 2009, this truth has defined
-                their approach to working with individual and organizational transformation.
-                SelfLeaders delivers training events and workshops for professional and
-                personal development in self-leadership. The target companies include
-                businesses of different sizes, NGOs, and the public sector. SelfLeaders is
-                working by a 1:1 principle: for every paid user of their service,
-                they offer a free leadership development account for a student or
-                an NGO employee. This is how they make a large impact with minor efforts.
-              </p>
               <h3 className="red-italic-title">Challenges</h3>
               <p>
                 SelfLeaders would not be able to pursue its mission without the application.

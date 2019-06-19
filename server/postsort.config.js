@@ -199,6 +199,11 @@ const postsDatePair = [
     filename: '1560358800000-business-of-apps.md',
     href: '/blog/1560358800000-business-of-apps',
   },
+  {
+    createdAt: 1560934800000,
+    filename: '1560934800000-buy-or-develop-educational-app.md',
+    href: '/blog/1560934800000-buy-or-develop-educational-app',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
