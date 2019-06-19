@@ -71,9 +71,9 @@ const ProjectComicEnglish = () => (
 
               <h3 className="red-italic-title">Our Team</h3>
               <p>
-                Two of our best software developers have been working on the project. To meet the
-                bestneeds and possibilities of the client. They did not only develop the app but
-                also tested it and managed the overall project.
+                Two of our best software developers have been working on the project. To meet
+                the best needs and possibilities of the client, they did not only develop the
+                app but also tested it and managed the overall project.
               </p>
 
               <h3 className="red-italic-title">Technologies</h3>
@@ -103,7 +103,7 @@ const ProjectComicEnglish = () => (
                 </li>
               </ul>
 
-              <h3 className="red-italic-title">Our Team</h3>
+              <h3 className="red-italic-title">Methodology</h3>
               <p>
                 We used Kanban because the team working on the project was quite small
                 and the requirements for this English bot were constantly changing.
