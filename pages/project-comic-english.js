@@ -86,13 +86,15 @@ const ProjectComicEnglish = () => (
                 <span style={{ margin: '0 .25em' }}><Link href="/services-web-development-meteor">Meteor</Link></span>
                 and Ionic.
               </p>
-              <ul className="technologies-list -comic-english">
+              <ul className="technologies-list">
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/android.png" alt="android" />
                 </li>
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/ios.png" alt="ios" />
                 </li>
+              </ul>
+              <ul className="technologies-list">
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/meteor.jpg" alt="meteor" />
                 </li>
@@ -124,12 +126,9 @@ const ProjectComicEnglish = () => (
             <CallToActionButton
               buttonBefore={(
                 <Link href="/portfolio">
-                  <span
-                    className="link"
-                    style={{ background: baseColor, textTransform: 'uppercase' }}
-                  >
+                  <button type="button" className="call-to-cation-btn -secondary">
                     Other case studies
-                  </span>
+                  </button>
                 </Link>
               )}
             />

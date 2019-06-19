@@ -249,25 +249,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    &.-selfleaders {
-      .technologies-item {
-        @media (max-width: 650px) {
-          width: 33.33%;
-        }
-        @media (max-width: 380px) {
-          width: 50%;
-        }
-      }
-    }
-    &.-comic-english {
-      .technologies-item {
-        @media (max-width: 525px) {
-          width: 50%;
-        }
-        @media (max-width: 380px) {
-        }
-      }
-    }
     .technologies-item {
       padding: 10px;
       margin: 0;
@@ -276,8 +257,12 @@
         display: none;
       }
       img {
-        max-width: 120px;
-        max-height: 40px;
+        max-width: 175px;
+        max-height: 60px;
+        @media (max-width: 500px) {
+          max-width: 120px;
+          max-height: 40px;
+        }
       }
     }
   }
