@@ -29,12 +29,24 @@
       {
         "name": "Mobile Development",
         "description": "Slick and fast iOS and Android apps for your needs",
-        "metaTitle": "Mobile App Development | Professional App Development Company - Keenethics",
+        "metaTitle": "Mobile App Development Company - Keenethics",
         "metaDescription": "Looking to hire mobile app developers? Keenethics, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today",
         "href": "/services-mobile-development",
         "icon": {
           "name": "mdev",
           "alt": "Mobile development"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Education Software Development",
+        "description": "Revolutionizing the world of personal, academic, and professional development",
+        "metaTitle": "Education Software Development Services – KeenEthic",
+        "metaDescription": "Revolutionizing the world of personal, academic, and professional development",
+        "href": "/services-education-software-development",
+        "icon": {
+          "name": "esd",
+          "alt": "Education Software Development"
         },
         "type": "icon"
       },

@@ -10,8 +10,9 @@ Preview image: /static/posts/buy-or-develop-educational-app/buy-or-develop-educa
   <img src="/static/posts/buy-or-develop-educational-app/buy-or-develop-educational-app.jpg" alt="buy or develop educational app">
 </div>
 
-<div>
-  <p style="font-style: italic; text-align: center;">Running a risk or saving time and effort?</p>
+<div style="text-align: center">
+  <div style="font-size: 21px; margin: 28px 0 15px;font-weight: 600;">What Is Better: Developing an Educational App or Buying a Ready-made One?</div>
+  <p style="font-style: italic;">Running a risk or saving time and effort?</p>
 </div>
 
 Developing an educational app can be a lengthy and often expensive process, which, however, necessarily pays off as students get more engaged and motivated. Generation Z children were born with smartphones in their hands, and letting them keep these smartphones while studying is the best way to boost their learning performance.
@@ -53,6 +54,10 @@ _* The price of a ready-made app will depend on the product type, platform, and 
 
 ## Building Your Own Educational App
 
+<div class="text-center" style="margin: 40px 0">
+  <img src="/static/posts/buy-or-develop-educational-app/building-your-own-educational-app.jpg" alt="building your own educational app">
+</div>
+
 <div>
   <h3 style="margin: 25px 0 10px 0; font-size: 16px; color: #d62c2c; font-style: italic;text-align: center;">#1. Keep up with the trends</h3>
   <p>The software market is extending at a rapid pace, and the number of technologies, functions, solutions is growing rapidly. Are you willing to implement one of those newest decisions? Most probably, there are no ready-made software solutions yet, but you can create your own education app. Later, you might even sell it to other people. So hurry up and enter this niche while it is still vacant!</p>
@@ -91,9 +96,9 @@ _* The price of building your own app will depend on the product type, platform,
 ## Do you have an idea for an educational app?
 
 <div class="call-to-cation-btn-wrap" style="margin-top: 30px">
-  <!-- <a href="/contacts" target="_blank" rel="noopener noreferrer">
-    <button class="call-to-cation-btn" type="button">LEARN HOW TO STARTeducation services</button>
-  </a> -->
+  <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer">
+    <button class="call-to-cation-btn -secondary" type="button">LEARN HOW TO START</button>
+  </a>
   <a href="//calendly.com/keenethics" target="_blank" rel="noopener noreferrer">
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>
