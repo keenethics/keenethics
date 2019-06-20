@@ -10,8 +10,9 @@ Preview image: /static/posts/buy-or-develop-educational-app/buy-or-develop-educa
   <img src="/static/posts/buy-or-develop-educational-app/buy-or-develop-educational-app.jpg" alt="buy or develop educational app">
 </div>
 
-<div>
-  <p style="font-style: italic; text-align: center;">Running a risk or saving time and effort?</p>
+<div style="text-align: center">
+  <div style="font-size: 21px; margin: 28px 0 15px;font-weight: 600;">What Is Better: Developing an Educational App or Buying a Ready-made One?</div>
+  <p style="font-style: italic;">Running a risk or saving time and effort?</p>
 </div>
 
 Developing an educational app can be a lengthy and often expensive process, which, however, necessarily pays off as students get more engaged and motivated. Generation Z children were born with smartphones in their hands, and letting them keep these smartphones while studying is the best way to boost their learning performance.
@@ -52,6 +53,10 @@ Well, why to incorporate an educational app into your learning process is not in
 _* The price of a ready-made app will depend on the product type, platform, and functionality._
 
 ## Building Your Own Educational App
+
+<div class="text-center" style="margin: 40px 0">
+  <img src="/static/posts/buy-or-develop-educational-app/building-your-own-educational-app.jpg" alt="building your own educational app">
+</div>
 
 <div>
   <h3 style="margin: 25px 0 10px 0; font-size: 16px; color: #d62c2c; font-style: italic;text-align: center;">#1. Keep up with the trends</h3>

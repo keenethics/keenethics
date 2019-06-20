@@ -1,5 +1,16 @@
 [
   {
+    "title": "Education System Platform",
+    "href": "/project-education-system-platform",
+    "imgSrc": "education-system-platform.jpg",
+    "category": {
+      "main": [
+        "Educational apps"
+      ]
+    },
+    "description": "Analysis and optimization of the federal education system"
+  },
+  {
     "title": "OneRemission",
     "href": "/project-one-remission",
     "imgSrc": "one-remission/one-remission.jpg",
