@@ -96,9 +96,9 @@ _* The price of building your own app will depend on the product type, platform,
 ## Do you have an idea for an educational app?
 
 <div class="call-to-cation-btn-wrap" style="margin-top: 30px">
-  <!-- <a href="/contacts" target="_blank" rel="noopener noreferrer">
-    <button class="call-to-cation-btn" type="button">LEARN HOW TO STARTeducation services</button>
-  </a> -->
+  <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer">
+    <button class="call-to-cation-btn -secondary" type="button">LEARN HOW TO START</button>
+  </a>
   <a href="//calendly.com/keenethics" target="_blank" rel="noopener noreferrer">
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>
