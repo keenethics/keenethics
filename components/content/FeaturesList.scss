@@ -1,6 +1,6 @@
 .features-icons--list {
   list-style: none;
-  margin: 20px 0;
+  margin: 20px 0 !important;
   .features-icons--item {
     margin-bottom: 30px;
     padding: 0;
@@ -17,9 +17,9 @@
   }
   .features-icons--img {
     width: 40px;
+    padding-right: 20px;
   }
   .features-icons--figcaption {
-    padding-left: 20px;
     width: calc(100% - 40px);
     p {
       margin: 0;

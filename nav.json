@@ -40,6 +40,18 @@
           "type": "icon"
         },
         {
+          "name": "Education Software Development",
+          "description": "Slick and fast iOS and Android apps for your needs",
+          "metaTitle": "Education Software Development Services – KeenEthics",
+          "metaDescription": "KeenEthics offering you exactly the mobile application that you need.",
+          "href": "/services-education-software-development",
+          "icon": {
+            "name": "esd",
+            "alt": "Education Software Development"
+          },
+          "type": "icon"
+        },
+        {
           "name": "Outstaffing",
           "description": "Process of using by one company another`s company staff",
           "metaTitle": "Outstaffing company that helps to find highly qualified developers - Keenethics",
