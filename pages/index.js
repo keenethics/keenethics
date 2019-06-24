@@ -102,7 +102,7 @@ export default class Index extends React.Component {
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-mail.svg" alt="mail" />
                 </div>
-                <a href="mailto:founders@keenethics.com">founders@keenethics.com</a>
+                <a href="mailto:business@keenethics.com">business@keenethics.com</a>
                 <i>
                   Drop Us a Letter or
                   {' '}
