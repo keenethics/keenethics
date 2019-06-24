@@ -84,7 +84,7 @@ Open Source?
               their enthusiasm.
             </p>
             <a href="https://github.com/keenethics" target="_blank" rel="noopener noreferrer nofollow" className="open-source-button">
-              <img width="20" src="/static/images/svg/ico-git.svg" alt="" />
+              <img width="20" src="/static/images/svg/ico-git.svg" alt="git" />
               Visit our Github
             </a>
           </div>

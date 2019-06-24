@@ -85,8 +85,8 @@ class ContentNavigation extends React.Component {
           {!image || (
             <div className="content-navigation-image">
               <div className="content-navigation-image-inner">
-                <img className="image-top" src={`/static/images/figures/${image}_top.png`} alt="" />
-                <img className="image-bottom" src={`/static/images/figures/${image}_btm.png`} alt="" />
+                <img className="image-top" src={`/static/images/figures/${image}_top.png`} alt="to top" />
+                <img className="image-bottom" src={`/static/images/figures/${image}_btm.png`} alt="to bottom" />
               </div>
             </div>
           )}

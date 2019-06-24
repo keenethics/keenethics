@@ -80,7 +80,7 @@ class Contacts extends React.Component {
                 <ul className="contacts-list">
                   <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                     <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
-                      <img width="15" src="/static/images/svg/con-map.svg" alt="" className="ico" />
+                      <img width="15" src="/static/images/svg/con-map.svg" alt="location" className="ico" />
                       <div itemProp="streetAddress">Kulparkivska St, 59</div>
                       <span>
                         <span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>
@@ -91,15 +91,15 @@ class Contacts extends React.Component {
                   </li>
                   <li>
                     <a href="tel:+380968147266">
-                      <img width="15" src="/static/images/svg/con-tel.svg" alt="" className="ico" />
+                      <img width="15" src="/static/images/svg/con-tel.svg" alt="Call" className="ico" />
                       <div itemProp="telephone">+38 (096) 814 72 66</div>
                       <span>Give Us a Call</span>
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:founders@keenethics.com">
-                      <img width="15" src="/static/images/svg/con-mail.svg" alt="" className="ico" />
-                      <div>founders@keenethics.com</div>
+                    <a href="mailto:business@keenethics.com">
+                      <img width="15" src="/static/images/svg/con-mail.svg" alt="email" className="ico" />
+                      <div>business@keenethics.com</div>
                       <span>Drop Us a Letter</span>
                     </a>
                   </li>
