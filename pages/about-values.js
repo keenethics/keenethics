@@ -47,25 +47,25 @@ export default class AboutValues extends React.Component {
             <ul className="value-tabs">
               <li>
                 <div className="ico">
-                  <img width={45} src="/static/images/svg/ico-heart.svg" alt="" />
+                  <img width={45} src="/static/images/svg/ico-heart.svg" alt="Сonscience" />
                 </div>
                 <span>Сonscience</span>
               </li>
               <li>
                 <div className="ico">
-                  <img width={60} src="/static/images/svg/ico-pred.svg" alt="" />
+                  <img width={60} src="/static/images/svg/ico-pred.svg" alt="Predictability" />
                 </div>
                 <span>Predictability</span>
               </li>
               <li>
                 <div className="ico">
-                  <img width={70} src="/static/images/svg/ico-trans.svg" alt="" />
+                  <img width={70} src="/static/images/svg/ico-trans.svg" alt="Transparency to the Customer" />
                 </div>
                 <span>Transparency to the Customer</span>
               </li>
               <li>
                 <div className="ico">
-                  <img width={45} src="/static/images/svg/ico-health.svg" alt="" />
+                  <img width={45} src="/static/images/svg/ico-health.svg" alt="Healthy Lifestyle" />
                 </div>
                 <span>Healthy Lifestyle</span>
               </li>
@@ -74,7 +74,7 @@ export default class AboutValues extends React.Component {
           <div className="articles">
             <article className="article">
               <div className="image">
-                <img src="/static/images/art-1.jpg" alt="" />
+                <img src="/static/images/art-1.jpg" alt="art" />
               </div>
               <section>
                 <p>
@@ -97,7 +97,7 @@ export default class AboutValues extends React.Component {
             </article>
             <article className="article">
               <div className="image">
-                <img src="/static/images/art-2.jpg" alt="" />
+                <img src="/static/images/art-2.jpg" alt="art" />
               </div>
               <section>
                 <p>
@@ -120,7 +120,7 @@ export default class AboutValues extends React.Component {
             </article>
             <article className="article">
               <div className="image">
-                <img src="/static/images/art-1.jpg" alt="" />
+                <img src="/static/images/art-1.jpg" alt="art" />
               </div>
               <section>
                 <p>
