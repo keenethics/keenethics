@@ -134,7 +134,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'founders@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
     };
@@ -240,7 +240,7 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'founders@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
     };

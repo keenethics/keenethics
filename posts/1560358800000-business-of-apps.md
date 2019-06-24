@@ -44,7 +44,15 @@ Since 2015, the company has been providing its customers with **high-quality ser
 
 *“KeenEthics is a Ukraine-based full cycle software development company with extensive expertise in mobile and desktop software development. For the last 4+ years, the company has completed dozens of projects in web, mobile, and desktop app development, as well as AI, Machine Learning, Chatbots, voice-interface, UI/UX design, business analytics, CTO as a service, and support & tech consultancy. One of the features that sets KeenEthics apart is its commitment to follow high ethical norms and respect user privacy.”*
 
-The original version of this press release can be found here <a href="//www.pr.com/press-release/786797" target="_blank" rel="noopener noreferrer nofollow">Keenethics Ranks in Best Mobile App Development Companies (2018)</a>
+<div>
+  <p>The original version of this press release can be found here <a href="//www.pr.com/press-release/786797" target="_blank" rel="noopener noreferrer nofollow">Keenethics Ranks in Best Mobile App Development Companies (2018)</a></p>
+</div>
+
+<div style="text-align: center; margin-top: 25px;">
+  <p>
+    We have been featured as <a href="//www.softwaredevelopmentcompany.co/2019/06/04/what-are-the-advantages-of-custom-software-development/" target="_blank" rel="noopener noreferrer nofollow">Top Custom Software Development Company</a> on SoftwareDevelopmentCompany.co
+  </p>
+</div>
 
 <div style="text-align: center;max-width: 465px; margin: 40px auto 0 auto;">
   <p>KeenEthics is also praised as the Top Rated <a href="//www.upwork.com/agencies/~0106b5437592391f94" target="_blank" rel="noopener noreferrer nofollow">Upwork Agency</a> and a 5-Stars Rated Company at <a href="//clutch.co/profile/keenethics" target="_blank" rel="noopener noreferrer nofollow">Clutch</a>.</p>
