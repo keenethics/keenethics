@@ -369,11 +369,12 @@ app.prepare().then(() => {
         if (err == null) {
           const filename = `${req.params.name}.md`;
           const sortedPosts = postsDatePair
-            .sort((a, b) => b.createdAt - a.createdAt)
-            .map(post => post.filename);
-          const postIndex = sortedPosts.indexOf(filename);
-          const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].replace('.md', '')}`;
-          const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].replace('.md', '')}`;
+            .sort((a, b) => b.createdAt - a.createdAt);
+
+
+          const postIndex = sortedPosts.map(({ filename }) => filename).indexOf(filename);
+          const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].filename.replace('.md', '')}`;
+          const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].filename.replace('.md', '')}`;
           const text = fs.readFileSync(path.resolve(__dirname, `../posts/${req.params.name}.md`), 'utf8');
 
           const content = text.substring(text.indexOf('\n\n'));
@@ -383,7 +384,8 @@ app.prepare().then(() => {
           const metaTitle = (/Meta title: (.*?)\n/g).exec(text)[1];
           const metaDescription = (/Meta description: (.*?)\n/g).exec(text)[1];
           let image = (/Preview image: (.*?)\n/g).exec(text);
-          let date = req.params.name.split('-')[0];
+
+          let date = sortedPosts[postIndex].createdAt;
           const newDate = (/New Date: (.*?)\n/g).exec(text);
 
           if (newDate && newDate[1]) {
