@@ -4,6 +4,10 @@
     z-index: 600;
     min-height: 100vh;
 
+    .submit-btn {
+        display: flex;
+        justify-content: flex-end;
+    }
     .button {
         border-radius: 35px;
         padding: 16px 28px;
@@ -23,6 +27,8 @@
         background-image: linear-gradient(90deg, rgb(222,53,53) 0%, rgb(227,98,29) 100%);
         box-shadow: 0px 5px 20px 0px rgba(203, 55, 55, 0.3);
         cursor: pointer;
+        min-width: 150px;
+        margin-top: 15px;
 
         &.button-send {
             width: 100px;
@@ -624,7 +630,7 @@
             width: 100%;
             left: auto;
             margin: 10px;
-            padding: 10px;
+            padding: 10px 10px 20px 10px;
         }
     }
 
@@ -1208,8 +1214,6 @@
     }
 
     .submit-btn {
-        display: flex;
-        justify-content: flex-end;
         margin-right: 70px;
     }
 
