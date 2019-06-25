@@ -162,12 +162,14 @@ class ContactForm extends React.Component {
             />
           </div>
           {status && <div className="form-status">{status}</div>}
-          <button
-            type="submit"
-            className={isPending ? 'button button-send pending' : 'button button-send'}
-          >
-            <img src="/static/images/svg/send.svg" alt="send" />
-          </button>
+          <div className="submit-btn">
+            <button
+              type="submit"
+              className={isPending ? 'button button-send pending' : 'button button-send'}
+            >
+              <img src="/static/images/svg/send.svg" alt="send" />
+            </button>
+          </div>
         </form>
       </div>
     );

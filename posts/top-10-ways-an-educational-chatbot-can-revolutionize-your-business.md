@@ -25,7 +25,7 @@ Here, these are the essential benefits that a chatbot for education may provide 
 
 <div class="text-center" style="margin: 40px 0;">
   <img
-    style="max-width: 600px;"
+    style="max-width: 600px; width: 100%;"
     src="/static/posts/educational-chatbot/5-opportunities-for-users.jpg"
     alt="5 opportunities for users"
   >
@@ -59,7 +59,7 @@ What are the benefits that such a software solution would provide you as a busin
 
 <div class="text-center" style="margin: 40px 0;">
   <img
-    style="max-width: 600px;"
+    style="max-width: 600px; width: 100%;"
     src="/static/posts/educational-chatbot/5-opportunities-for-business.jpg"
     alt="5 opportunities for business"
   >
