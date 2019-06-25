@@ -372,7 +372,7 @@ app.prepare().then(() => {
             .sort((a, b) => b.createdAt - a.createdAt);
 
 
-          const postIndex = sortedPosts.map(s => s.filename).indexOf(filename);
+          const postIndex = sortedPosts.map(({ filename }) => filename).indexOf(filename);
           const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].filename.replace('.md', '')}`;
           const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].filename.replace('.md', '')}`;
           const text = fs.readFileSync(path.resolve(__dirname, `../posts/${req.params.name}.md`), 'utf8');
