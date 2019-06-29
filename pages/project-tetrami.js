@@ -1,19 +1,17 @@
 import React from 'react';
 
 import Link from 'next/link';
+import Slider from 'react-slick';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import CallToActionButton from '../components/content/CallToActionButton';
-import Slider from 'react-slick';
 
 const baseColor = 'linear-gradient(135deg,#071e40 0%,#662938 80%)';
 
 const sliderSettings = {
   swipe: true,
-  dots: true,
-  arrows: false,
   slidesToShow: 1,
 };
 
@@ -42,10 +40,18 @@ const ProjectTetrami = () => (
             <section>
               <h2 className="title">What Is Tetrami?</h2>
               <p>
-                While sales and discounts are major marketing strategies to increase sales and win customer loyalty, they are also a great chance for ordinary people to save a lot of money. People love discounts since they bring more satisfaction from shopping. Tetrami enables people to do what they love, so it is no surprise that the users love Tetrami back.
+                While sales and discounts are major marketing strategies to increase sales and win
+                customer loyalty, they are also a great chance for ordinary people to save a lot
+                of money. People love discounts since they bring more satisfaction from shopping.
+                Tetrami enables people to do what they love, so it is no surprise that the
+                users love Tetrami back.
               </p>
               <p>
-                Tetrami is a brand new “deal” shopping project with a unique discounting method, headquartered in King Of Prussia, PA, but serving the customers from all over the world. While Tetrami offers delivery only to the USA addresses, it does accept orders from international users on a condition they organize the shipping out of the United States on their own.
+                Tetrami is a brand new “deal” shopping project with a unique discounting method,
+                headquartered in King Of Prussia, PA, but serving the customers from all over
+                the world. While Tetrami offers delivery only to the USA addresses, it does accept
+                orders from international users on a condition they organize the shipping
+                out of the United States on their own.
               </p>
             </section>
             <div className="iphone-slider-wrap">
@@ -71,12 +77,17 @@ const ProjectTetrami = () => (
               <h2 className="title">Our Cooperation</h2>
               <h3 className="red-italic-title">Challenges</h3>
               <p>
-                We have built the app from scratch, tested it, and deployed it. In fact, a great amount of work has been done as we optimized major app functions, and secured the online payment system. Moreover, Tetrami has decided to change horses midstream and go with an entirely different design and functionality. Eventually, we have managed to revamp and launch the app into production.
+                We have built the app from scratch, tested it, and deployed it. In fact, a great
+                amount of work has been done as we optimized major app functions, and secured
+                the online payment system. Moreover, Tetrami has decided to change horses midstream
+                and go with an entirely different design and functionality. Eventually,
+                we have managed to revamp and launch the app into production.
               </p>
 
               <h3 className="red-italic-title">Our Team</h3>
               <p>
-                Our three leading software developers, one QA specialist, and one project manager have been helping Tetrami implement the idea.
+                Our three leading software developers, one QA specialist, and one
+                project manager have been helping Tetrami implement the idea.
               </p>
 
               <h3 className="red-italic-title">Technologies</h3>
@@ -120,17 +131,28 @@ const ProjectTetrami = () => (
 
               <h3 className="red-italic-title">Methodology</h3>
               <p>
-                We have used Kanban because the app has been developed from scratch, our team has been quite small. In addition, the customer has been eager to take an active part in the development process.
+                We have used Kanban because the app has been developed from scratch, our team has
+                been quite small. In addition, the customer has been eager to take
+                an active part in the development process.
               </p>
             </section>
 
             <section>
               <h2>What Makes Tetrami Special?</h2>
               <p>
-                A customer chooses a product from the list of suggested ones. These products include but are not limited to various electronic devices, such as voice assistant speakers, electric dental brushes, cameras, TVs, wireless earphones, or home appliances, as well as jewelry, makeup, gift cards, and a lot of other popular items. The list of offered goods and services is regularly updated, so monitoring it carefully, people can find the product of their dream and try to purchase it with a considerable discount.
+                A customer chooses a product from the list of suggested ones. These products include
+                but are not limited to various electronic devices, such as voice assistant speakers,
+                electric dental brushes, cameras, TVs, wireless earphones, or home appliances, as
+                well as jewelry, makeup, gift cards, and a lot of other popular items. The list of
+                offered goods and services is regularly updated, so monitoring it carefully, people
+                can find the product of their dream and try to purchase it with a
+                considerable discount.
               </p>
               <p>
-                To do so, a person creates a special 4-characters-long promo code, challenges other users, and watches the discount dynamically grow. The promo code is made of 4 given variables, and each time a different user offers another one that does not match, the challenger receives a certain discount.
+                To do so, a person creates a special 4-characters-long promo code, challenges
+                other users, and watches the discount dynamically grow. The promo code is made
+                of 4 given variables, and each time a different user offers another one that
+                does not match, the challenger receives a certain discount.
               </p>
               <img
                 src="/static/portfolio/tetrami/tetrami-content.jpg"
@@ -138,10 +160,15 @@ const ProjectTetrami = () => (
                 className="image-gaps"
               />
               <p>
-                As soon as the user is satisfied, he or she can make a purchase at a bargain price. However, once someone else creates the same promo code, the challenger’s one becomes unavailable.
+                As soon as the user is satisfied, he or she can make a purchase at a bargain price.
+                However, once someone else creates the same promo code, the challenger’s
+                one becomes unavailable.
               </p>
               <p>
-                Each user is given 50 chances per day to participate in challenges. Once they are out of lives, they can earn additional ones by watching adds, responding to surveys, or sharing invitations via social media. All the payments are processed via PayPal – a popular online payments system.
+                Each user is given 50 chances per day to participate in challenges. Once they are
+                out of lives, they can earn additional ones by watching adds, responding to surveys,
+                or sharing invitations via social media. All the payments are processed via PayPal –
+                a popular online payments system.
               </p>
               <p>
                 To sign up for Tetrami, one may use their
@@ -150,7 +177,9 @@ const ProjectTetrami = () => (
                 <span style={{ marginLeft: '.25em' }}><a href="//twitter.com/tetramideals" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></span>
                 , or
                 <span style={{ margin: '0 .25em' }}><a href="//www.instagram.com/tetramideals/" target="_blank" rel="noopener noreferrer nofollow">Twitter</a></span>
-                accounts. Respectively, the platform has its accounts on all of these three networks, so feel free to check their Facebook, Twitter, and Instagram to learn more!
+                accounts. Respectively, the platform has its accounts on all of these three
+                networks, so feel free to check their Facebook, Twitter, and Instagram
+                to learn more!
               </p>
             </section>
 

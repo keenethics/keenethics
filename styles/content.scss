@@ -208,6 +208,26 @@
       transform: translate(-50%, -50%);
       width: 87%;
     }
+    .slick-slider {
+      position: relative;
+      overflow: visible;
+    }
+    .slick-arrow {
+      transform: translateY(-50%);
+      margin: 0;
+      top: 50%;
+      @media (max-width: 450px) {
+        display: none !important;
+      }
+      &.slick-prev {
+        right: 110%;
+        left: unset;
+      }
+      &.slick-next {
+        left: 110%;
+        right: unset;
+      }
+    }
     .slick-dots {
       top: unset;
       bottom: 0;
