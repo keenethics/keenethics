@@ -311,6 +311,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+   <url>
+    <loc>https://keenethics.com/blog/how-to-choose-your-optimal-development-methodology</loc>
+    <lastmod>2019-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://keenethics.com/careers</loc>
     <lastmod>2018-06-15</lastmod>
@@ -403,7 +409,7 @@
   </url>
   <url>
     <loc>https://keenethics.com/project-tetrami</loc>
-    <lastmod>2018-06-15</lastmod>
+    <lastmod>2019-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
