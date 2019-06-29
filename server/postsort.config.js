@@ -209,6 +209,11 @@ const postsDatePair = [
     filename: 'top-10-ways-an-educational-chatbot-can-revolutionize-your-business.md',
     href: '/blog/top-10-ways-an-educational-chatbot-can-revolutionize-your-business',
   },
+  {
+    createdAt: 1561791600000,
+    filename: 'how-to-choose-your-optimal-development-methodology.md',
+    href: '/blog/how-to-choose-your-optimal-development-methodology',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
