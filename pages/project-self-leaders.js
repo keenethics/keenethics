@@ -90,15 +90,15 @@ const ProjectPlutio = () => (
               </p>
               <ul className="technologies-list">
                 <li className="technologies-item">
-                  <img src="/static/portfolio/technologies/android.png" alt="android" />
+                  <img src="/static/portfolio/technologies/android.svg" alt="android" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/technologies/ios.png" alt="ios" />
+                  <img src="/static/portfolio/technologies/ios.svg" alt="ios" />
                 </li>
               </ul>
               <ul className="technologies-list">
                 <li className="technologies-item">
-                  <img src="/static/portfolio/technologies/meteor.jpg" alt="meteor" />
+                  <img src="/static/portfolio/technologies/meteor.svg" alt="meteor" />
                 </li>
                 <li className="technologies-item">
                   <img src="/static/portfolio/technologies/graphql.png" alt="graphql" />
