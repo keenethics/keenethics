@@ -82,7 +82,12 @@ Since 2015, the company has been providing its customers with high-quality servi
 <div style="margin-top: 50px;">
   <h3 style="text-align: center;">Interested in Our Company?</h3>
   <div class="call-to-cation-btn-wrap" style="margin-top: 30px">
-    <a href="/contacts" target="_blank" rel="noopener noreferrer">
+    <a
+      href="/contacts"
+      target="_blank"
+      className="contacts-goal"
+      rel="noopener noreferrer"
+    >
       <button class="call-to-cation-btn" type="button">Learn more about KeenEthics</button>
     </a>
   </div>
