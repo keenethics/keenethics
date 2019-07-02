@@ -81,7 +81,7 @@ export default class Index extends React.Component {
               we have a keen approach
             </h2>
             <Link href="/contacts?activeForm=estimate">
-              <a className="button">Free estimate</a>
+              <a className="button contacts-goal">Free estimate</a>
             </Link>
             <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
               <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">

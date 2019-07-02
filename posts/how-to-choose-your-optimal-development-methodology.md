@@ -412,7 +412,12 @@ If you have a small project with clear deliverables that are not likely to chang
 If you are still not sure which technology would work best for you, feel free to consult KeenEthics specialists. Our professional Project Managers will be happy to share their experience and knowledge with you. Schedule a call with our technical expert, and they will be glad to provide you with their best help.
 
 <div class="call-to-cation-btn-wrap" style="margin-top: 30px">
-  <a href="//calendly.com/iryna-keenethics/intro-call" target="_blank" rel="noopener noreferrer">
+  <a
+    href="//calendly.com/iryna-keenethics/intro-call"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="calendly-goal"
+  >
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>
 </div>
