@@ -78,6 +78,13 @@ It is essential to develop a sense of empathy for the user since even the smalle
   <h2 style="text-align: center;margin-top: 25px;">Need Assistance with Design?</h2>
 </div>
 
-<div style="display: flex; justify-content: space-around; justify-content: space-evenly; flex-wrap: wrap; margin-top: 25px;">
-  <a href="//calendly.com/keenethics" target="_blank" rel="noopener noreferrer nofollow"><button style="cursor: pointer; font-size: 16px; border-radius: 18px; padding: 10px 20px; background: linear-gradient(90deg,#de3535 0%,#e3621d 100%); color: #fff; border: 0;">Schedule a call</button></a>
+<div class="call-to-cation-btn-wrap" style="margin-top: 30px">
+  <a
+    href="//calendly.com/iryna-keenethics/intro-call"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="calendly-goal"
+  >
+    <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
+  </a>
 </div>
