@@ -1,5 +1,19 @@
 [
   {
+    "title": "ParkQX",
+    "href": "/parkqx-c2c-e-commerce",
+    "imgSrc": "parkqx/parkqx.jpg",
+    "category": {
+      "main": [
+        "Consumer apps"
+      ],
+      "additional": [
+        "E-Commerce"
+      ]
+    },
+    "description": "A C2C e-commerce app, which makes parking routine easy, hassle-free, and convenient."
+  },
+  {
     "title": "Education System Platform",
     "href": "/project-education-system-platform",
     "imgSrc": "education-system-platform.jpg",

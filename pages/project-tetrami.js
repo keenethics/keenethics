@@ -58,16 +58,16 @@ const ProjectTetrami = () => (
               <div className="iphone-slider">
                 <Slider {...sliderSettings}>
                   <div>
-                    <img src="/static/portfolio/tetrami/slide-1.jpg" alt="" />
+                    <img src="/static/portfolio/tetrami/slide-1.jpg" alt="tetrami screenshot" />
                   </div>
                   <div>
-                    <img src="/static/portfolio/tetrami/slide-2.jpg" alt="" />
+                    <img src="/static/portfolio/tetrami/slide-2.jpg" alt="tetrami screenshot" />
                   </div>
                   <div>
-                    <img src="/static/portfolio/tetrami/slide-3.jpg" alt="" />
+                    <img src="/static/portfolio/tetrami/slide-3.jpg" alt="tetrami screenshot" />
                   </div>
                   <div>
-                    <img src="/static/portfolio/tetrami/slide-4.jpg" alt="" />
+                    <img src="/static/portfolio/tetrami/slide-4.jpg" alt="tetrami screenshot" />
                   </div>
                 </Slider>
               </div>
