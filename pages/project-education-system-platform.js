@@ -151,15 +151,13 @@ const ProjectPrix = () => (
             </p>
             <CallToActionButton
               buttonBefore={(
-                <a
+                <Link
                   href="/portfolio"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
                 >
                   <button type="button" className="call-to-cation-btn -secondary">
                     Other case studies
                   </button>
-                </a>
+                </Link>
               )}
             />
           </div>
