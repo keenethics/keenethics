@@ -223,7 +223,7 @@ The key principle of Kanban is to reduce waste to a minimum and to prevent unnec
   </figure>
   <div style="display: flex; align-items: flex-start;">
     <img style="width: 50px;" src="/static/portfolio/icons/quotes.svg" alt="quotes">
-    <p style="font-style: italic; padding-left: 15px;">On OneReach, we use Kanban because this methodology allows us to focus on consistent delivery of newly developed functions without spending too much time on discussions. Also, due to visualization as one of the major principles of Kanban, we can timely identify project bottlenecks and eliminate them.</p>
+    <p style="font-style: italic; padding-left: 15px;">On the project, we use Kanban because this methodology allows us to focus on consistent delivery of newly developed functions without spending too much time on discussions. Also, due to visualization as one of the major principles of Kanban, we can timely identify project bottlenecks and eliminate them.</p>
   </div>
 </div>
 
