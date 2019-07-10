@@ -63,6 +63,8 @@ Since 2015, the company has been providing its customers with high-quality servi
 - business analytics / CTO as a service
 - support & tech consultancy
 
+<p>We have been featured as <a href="//www.softwaredevelopmentcompany.co/2019/07/01/10-best-practices-for-developing-enterprise-software-applications/" target="_blank" rel="noopener noreferrer nofollow">Top Enterprise Software Development Company</a> and <a href="//www.softwaredevelopmentcompany.co/2019/07/01/software-development-life-cycle-a-complete-checklist/" target="_blank" rel="noopener noreferrer nofollow">Top Custom Software Development Company</a> on SoftwareDevelopmentCompany.co.</p>
+
 <div style="text-align: center;max-width: 465px; margin: 40px auto 0 auto;">
   <p>KeenEthics is also praised as the Top Rated <a href="//www.upwork.com/agencies/~0106b5437592391f94" target="_blank" rel="noopener noreferrer nofollow">Upwork Agency</a> and a 5-Stars Rated Company at <a href="//clutch.co/profile/keenethics" target="_blank" rel="noopener noreferrer nofollow">Clutch</a>.</p>
 </div>
