@@ -23,7 +23,7 @@ const ProjectPrix = () => (
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
               <h2 className="title">ParkQX</h2>
-              <p className="description">Parking at your fingertips</p>
+              <p className="description">ParkQX helps drivers find, reserve, and pay for a parking spot both in advance and on the go with a few simple taps.</p>
               <PortfolioTechnologyTags tags={['E-Commerce']} />
             </div>
             <div className="project-content-preview">
@@ -71,14 +71,18 @@ const ProjectPrix = () => (
             <h3 className="red-italic-title">Technologies</h3>
             <p>
               The application has been developed for the
-              <span style={{ margin: '0 .25em' }}><Link href="https://keenethics.com/services-mobile-development-android">Android</Link></span>
+              <span style={{ margin: '0 .25em' }}><Link href="/services-mobile-development-android">Android</Link></span>
               and
-              <span style={{ margin: '0 .25em' }}><Link href="https://keenethics.com/services-mobile-development-apple">iOS</Link></span>
-              platforms. As for the development technologies, we use Redux,
-              <span style={{ marginLeft: '.25em' }}><Link href="https://keenethics.com/services-web-development-node">Node.js</Link></span>
+              <span style={{ margin: '0 .25em' }}><Link href="/services-mobile-development-apple">iOS</Link></span>
+              platforms. As for the development technologies, we use
+              <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-redux">Redux</Link></span>
               ,
-              <span style={{ marginLeft: '.25em' }}><Link href="https://keenethics.com/tech-data-base-mongo">MongoDB</Link></span>
-              , Firebase, Twilio, and React Native.
+              <span style={{ marginLeft: '.25em' }}><Link href="/services-web-development-node">Node.js</Link></span>
+              ,
+              <span style={{ marginLeft: '.25em' }}><Link href="/tech-data-base-mongo">MongoDB</Link></span>
+              , Firebase, Twilio, and
+              <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-react-native">React Native</Link></span>
+              .
             </p>
             <ul className="technologies-list">
               <li className="technologies-item">
@@ -111,27 +115,8 @@ const ProjectPrix = () => (
               and the customer was willing to cooperate continuously.
             </p>
             <h2>What Makes ParkQX Special?</h2>
-            <div className="iphone-slider-wrap" style={{ marginTop: '40px' }}>
-              <div className="iphone-slider">
-                <Slider {...sliderSettings}>
-                  <div>
-                    <img src="/static/portfolio/parkqx/parkqx-slider-0.jpg" alt="Parkqx screenshot" />
-                  </div>
-                  <div>
-                    <img src="/static/portfolio/parkqx/parkqx-slider-1.jpg" alt="Parkqx screenshot" />
-                  </div>
-                  <div>
-                    <img src="/static/portfolio/parkqx/parkqx-slider-2.jpg" alt="Parkqx screenshot" />
-                  </div>
-                  <div>
-                    <img src="/static/portfolio/parkqx/parkqx-slider-3.jpg" alt="Parkqx screenshot" />
-                  </div>
-                  <div>
-                    <img src="/static/portfolio/parkqx/parkqx-slider-4.jpg" alt="Parkqx screenshot" />
-                  </div>
-                </Slider>
-              </div>
-              <img className="iphone-frame" src="/static/images/iphone7-frame.svg" alt="iphone" />
+            <div>
+              <img src="/static/portfolio/parkqx/parkqx-screens.gif" alt="parkqx screens" />
             </div>
             <p>
               Sign-up and login procedures, account verification and activation, “Remember me” and
