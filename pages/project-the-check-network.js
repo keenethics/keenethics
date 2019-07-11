@@ -19,7 +19,7 @@ const ProjectTheCheckNetwork = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-7 months so far, planned one more year, then Keenethics will
+7 months so far, planned one more year, then KeenEthics will
                 be supporting the project
               </h3>
               <p className="description">

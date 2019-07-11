@@ -1,8 +1,8 @@
 Author: Max Savonin
 Title: What Is Prototyping and Why Do We Need It
-Subtitle: What Is Prototyping and Why Do We Need It - Keenethics Blog
+Subtitle: What Is Prototyping and Why Do We Need It - KeenEthics Blog
 New Date: 1540884600000
-Meta title: What Is Prototyping and Why Do We Need It - Keenethics Blog
+Meta title: What Is Prototyping and Why Do We Need It - KeenEthics Blog
 Meta description: What is Prototype and why prototyping is important? Benefits of using prototyping.
 Categories: Tech
 Preview image: /static/posts/prototype-prew.jpg
@@ -83,5 +83,5 @@ To sum it up, a prototype can mean  two things: first, a set of images made in
 In our opinion, if your app is more than just a registration form – you should start with a clickable prototype. As a company, you should evaluate the importance of prototyping for your needs and then reach out to a trusted company for help. Most development agencies and design studios will offer you an entire spectrum of their services including making a prototype.
 
 <p>
-   When you need a Clickable Prototype, contact us for a free consultation at <a href="/" target="_blank" rel="noreferrer noopener">Keenethics.com</a>.
+   When you need a Clickable Prototype, contact us for a free consultation at <a href="/" target="_blank" rel="noreferrer noopener">KeenEthics.com</a>.
 </p>

@@ -49,7 +49,7 @@ const TechBackEndHapi = () => (
         destination due to the best cost-quality balance.
       </p>
       <p>
-        On our Keenethics spaceship, we are passionate about delivering next-generation web
+        On our KeenEthics spaceship, we are passionate about delivering next-generation web
         apps and products. We can take care of front-end and back-end development, API
         Integration, chatbot development and related services.
       </p>

@@ -1,12 +1,12 @@
 Author: Tetiana Matviiok
 Title: RedLine13 and KeenEthics: The Story of Our Partnership
-Subtitle: RedLine13 and KeenEthics: The Story of Our Partnership - Keenethics Blog
-Meta title: RedLine13 and KeenEthics: The Story of Our Partnership - Keenethics Blog
+Subtitle: RedLine13 and KeenEthics: The Story of Our Partnership - KeenEthics Blog
+Meta title: RedLine13 and KeenEthics: The Story of Our Partnership - KeenEthics Blog
 Meta description: A brief story of KeenEthics’ partnership with RedLine 13 – an optimal load testing service and an ultimate QA saver.
 Categories: From KeenEthics
 Preview image: /static/posts/redline13-and-keenethics-prew.jpg
 
-![Keenethics and RedLine13](/static/posts/redline13-and-keenethics.jpg)
+![KeenEthics and RedLine13](/static/posts/redline13-and-keenethics.jpg)
 
 <div>
   <h1 style="font-weight: 600; margin: 30px 0 10px 0; text-align: center;">RedLine13 and KeenEthics: The Story of Our Partnership</h1>

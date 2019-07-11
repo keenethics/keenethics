@@ -36,12 +36,12 @@ const ServicesWebDevelopment = () => (
         design web development and other services are available on our spaceship.
       </p>
       <p>
-        As a web development company we do the coding part. At Keenethics, we use professional
+        As a web development company we do the coding part. At KeenEthics, we use professional
         web development software and tools. The basic stack of technologies includes Angular,
         React, JavaScript and etc. for the front and Meteor, Express and others for the back
         end. We use only respected databases like MySQL, Mongo, Postgres. For apps we pick
         Electron, Phonegap and so on. We can integrate your product with other services and
-        payment systems. So at Keenethics, you can order an e commerce web development service.
+        payment systems. So at KeenEthics, you can order an e commerce web development service.
       </p>
       <p>
         We pay attention to both back end and front end, so your website or an app will look

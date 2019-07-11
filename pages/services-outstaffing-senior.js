@@ -41,7 +41,7 @@ const ServicesOutstaffingSenior = () => (
       </p>
       <h2>Hiring Senior Developers</h2>
       <p>
-        On the Keenethics spaceship, we have solid experience delivering high-class Desktop
+        On the KeenEthics spaceship, we have solid experience delivering high-class Desktop
         Applications and Mobile solutions for our customers all around the globe. We have done
         projects for Finance and Banking, Healthcare, Communications and Marketing and other
         industries. Our Senior Node.js Developers have experience building chatbots, real-time
@@ -51,7 +51,7 @@ const ServicesOutstaffingSenior = () => (
         all the required knowledge to support complex systems.
       </p>
       <p>
-        On the Keenethics spaceship, for building mobile applications we involve highly-skilled
+        On the KeenEthics spaceship, for building mobile applications we involve highly-skilled
         Senior Mobile Apps Developers, Middle and Junior Developers (from 2 to 5+ years of
         experience), talented Delivery Managers and fastidious QA teams.
       </p>

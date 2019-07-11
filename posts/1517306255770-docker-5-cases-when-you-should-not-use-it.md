@@ -1,7 +1,7 @@
-Author: Keenethics
+Author: KeenEthics
 Title: Docker: 5 Cases When You Should Not Use it
-Subtitle: Docker: 5 Cases When You Should Not Use it - Keenethics Blog
-Meta title: Docker: 5 Cases When You Should Not Use it - Keenethics Blog
+Subtitle: Docker: 5 Cases When You Should Not Use it - KeenEthics Blog
+Meta title: Docker: 5 Cases When You Should Not Use it - KeenEthics Blog
 Meta description: There are many good things about Docker. This containerization fellow manages to pack, ship, and run applications as a lightweight, portable, self-sufficient LXC container. Docker is great for businesses of all sizes.
 Categories: Tech
 Preview image: /static/posts/docker-preview.jpg
@@ -33,4 +33,4 @@ Docker was created by developers and for developers. It provides environment sta
 With virtual machines, the hypervisor can abstract an entire device and you can use Microsoft Azure to run both instances of Windows Server and Linux Server at the same time. 
 Docker image, however, requires the same operating system it was created for. You know, if an image was created based on Linux Ubuntu, it will only run on the exact same Ubuntu. This means that if an app is developed on Windows machines but the production runs on some Linux, you won’t be able to effectively use Docker. It is sometimes easier to simply set up a server if you have several static apps.
 
-<p style="margin-top: 35px;">We at Keenethics enjoy working with Docker and often use it when developing our applications. Despite some drawbacks, you can easily use it to run and manage apps side by side in isolated containers. Docker also provides a clean (original) isolation environment for each test, making it an important and useful tool for automation testing. Just be mindful and aware of the pitfall configuring swap on your Docker hosts. Have fun working with Docker!</p>
+<p style="margin-top: 35px;">We at KeenEthics enjoy working with Docker and often use it when developing our applications. Despite some drawbacks, you can easily use it to run and manage apps side by side in isolated containers. Docker also provides a clean (original) isolation environment for each test, making it an important and useful tool for automation testing. Just be mindful and aware of the pitfall configuring swap on your Docker hosts. Have fun working with Docker!</p>

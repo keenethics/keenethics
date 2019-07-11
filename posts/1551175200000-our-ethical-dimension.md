@@ -1,12 +1,12 @@
 Author: Tetiana Matviiok
 Title: KeenEthics: Our Ethical Dimension
-Subtitle: KeenEthics: Our Ethical Dimension - Keenethics Blog
-Meta title: KeenEthics: Our Ethical Dimension - Keenethics Blog
+Subtitle: KeenEthics: Our Ethical Dimension - KeenEthics Blog
+Meta title: KeenEthics: Our Ethical Dimension - KeenEthics Blog
 Meta description: KeenEthics: We tell a short story of our brand name and highlight the major ethical values we believe in. Find out what "Ethics" stands for!
 Categories: From KeenEthics
 Preview image: /static/posts/our-ethical-dimension-1-prew.jpg
 
-![Keenethics Team](/static/posts/our-ethical-dimension-1.jpg)
+![KeenEthics Team](/static/posts/our-ethical-dimension-1.jpg)
 
 <div>
   <h1 style="font-weight: 600; margin: 30px 0 10px 0; text-align: center;">KeenEthics: Our Ethical Dimension</h1>
@@ -23,7 +23,7 @@ Choosing a title which would represent our vision was a tough nut to crack. We b
 
 Eventually, out of 60 options, we were left with the one and only “KeenEthics”, where “Keen” stands for curiosity and enthusiasm, while “Ethics”... Well, ethics is just ethics.
 
-![Keenethics Team](/static/posts/our-ethical-dimension-3.jpg)
+![KeenEthics Team](/static/posts/our-ethical-dimension-3.jpg)
 
 ## Ethical Values
 
@@ -59,10 +59,10 @@ We strive to share our knowledge and expertise with those who need a professiona
 
 We are devoted to solving business challenges and providing excellent BA, design, development, and product support services. We conduct regular training and knowledge sharing programs, both external ones, such as various meetups or the annual Hacktoberfest, and internal tech talks. We carry out performance evaluations, practice pair programming and team brainstorming, visit external educational events, invite competent speakers from outside ― all for the sake of constantly improving our competence and ensuring the highest quality.
 
-![Keenethics Team](/static/posts/our-ethical-dimension-2.jpg)
+![KeenEthics Team](/static/posts/our-ethical-dimension-2.jpg)
 
 ## Our Team
 
 We are a team of 42 people devoted to the goal of empowering businesses with end-to-end software development. We deliver elegant and modern design services and solutions to improve the daily business processes of our clients. Each member of our team is a unique personality with a story to share, a keen interest in personal and professional development, and a passionate approach to work.
 
-Quality, efficient communication, ethical attitude to all the parties involved, sustainability, support of those in need, and open source are the fundamentals of Keenethics.
+Quality, efficient communication, ethical attitude to all the parties involved, sustainability, support of those in need, and open source are the fundamentals of KeenEthics.

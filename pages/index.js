@@ -18,7 +18,7 @@ JsonLd.propTypes = {
 const companyData = {
   '@context': 'http://www.schema.org',
   '@type': 'Organization',
-  name: 'Keenethics',
+  name: 'KeenEthics',
   url: 'https://keenethics.com/',
   description: 'Custom Software Development Company',
   address: {

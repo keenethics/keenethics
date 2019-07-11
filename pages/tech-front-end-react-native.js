@@ -46,7 +46,7 @@ const TechFrontEndReactNative = () => (
       <h2>Hire React Native Developers</h2>
       <p>
         In terms of quality and costs, Eastern Europe is the most prominent outsourcing
-        destination. On our Keenethics spaceship, React Native Developers have all required
+        destination. On our KeenEthics spaceship, React Native Developers have all required
         skills and experience to develop high-class cross-platform products. We can deliver
         Hybrid Web App Development Services for Finance, Banking, Logistic, Healthcare and many
         other industries.

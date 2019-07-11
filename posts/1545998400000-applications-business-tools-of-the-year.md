@@ -1,7 +1,7 @@
-Author: the Keenethics team
+Author: the KeenEthics team
 Title: Applications & Business Tools of the Year
-Subtitle: Applications & Business Tools of the Year - Keenethics Blog
-Meta title: Applications & Business Tools of the Year - Keenethics Blog
+Subtitle: Applications & Business Tools of the Year - KeenEthics Blog
+Meta title: Applications & Business Tools of the Year - KeenEthics Blog
 Meta description: KeenEthics shares a top list of the 2018 software updates and discoveries, which make a professional routine more convenient and enjoyable.
 Categories: Business guide, Productivity
 Preview image: /static/posts/applications-business-tools-of-the-year/preview.jpg

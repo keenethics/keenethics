@@ -52,7 +52,7 @@ const TechDataBaseMongo = () => (
         cost.
       </p>
       <p>
-        With the help of MongoDB, astronauts on the Keenethics spaceship can create and deploy a
+        With the help of MongoDB, astronauts on the KeenEthics spaceship can create and deploy a
         highly scalable and performance-oriented database.
       </p>
       <h2>Hire Mongo DB Developers</h2>

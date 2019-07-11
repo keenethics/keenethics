@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: The Top 10 Ways an Educational Chatbot Can Revolutionize Your Business
-Subtitle: The Top 10 Ways an Educational Chatbot Can Revolutionize Your Business - Keenethics Blog
-Meta title: The Top 10 Ways an Educational Chatbot Can Revolutionize Your Business - Keenethics Blog
+Subtitle: The Top 10 Ways an Educational Chatbot Can Revolutionize Your Business - KeenEthics Blog
+Meta title: The Top 10 Ways an Educational Chatbot Can Revolutionize Your Business - KeenEthics Blog
 Meta description: Employ an educational chatbot as your translator, librarian, time manager, or data analyst.
 Categories: Tech, Business guide
 Preview image: /static/posts/educational-chatbot/top-10-ways-an-educational-chatbot-can-revolutionize-your-business-prew.jpeg

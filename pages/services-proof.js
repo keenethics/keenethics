@@ -66,7 +66,7 @@ const ServicesProof = () => (
         To make the budget smart and avoid overpaying, hire an outsourcing software development
         service provider that delivers proof of concept services abroad. A lot of development
         companies in Eastern Europe have experience helping startups to grow. For example, on
-        our Keenethics spaceship, management, development and quality assurance teams are enough
+        our KeenEthics spaceship, management, development and quality assurance teams are enough
         qualified to launch a high-class startup product or service, and, of course, we can
         deliver a proof of concept service and check your cool ideas. Contact us and we will be
         glad to bring your idea to life!

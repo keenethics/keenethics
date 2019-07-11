@@ -52,7 +52,7 @@ const ServicesOutstaffingTeam = () => (
         representative office in a country or city, but wants to engage market.
       </p>
       <p>
-        Keenethics provides outstaffing for your business. Let`s get in touch, so you can learn
+        KeenEthics provides outstaffing for your business. Let`s get in touch, so you can learn
         more and use all the outstaffing features.
       </p>
     </div>

@@ -18,7 +18,7 @@ const TechApiIntegration = () => (
         API Integration services are highly required.
       </p>
       <p>
-        On our Keenethics spaceship, we work only with safe world-known systems and provide:
+        On our KeenEthics spaceship, we work only with safe world-known systems and provide:
       </p>
       <ul>
         <li>PayPal API Integration;</li>
@@ -72,7 +72,7 @@ const TechApiIntegration = () => (
       </p>
       <p>
         Whether you want to launch a landing page or build a mobile app, integrate with Payment
-        Processing Systems or build a chatbot, delegate the work to our Keenethics spaceship and
+        Processing Systems or build a chatbot, delegate the work to our KeenEthics spaceship and
         receive the result you need.
       </p>
     </div>

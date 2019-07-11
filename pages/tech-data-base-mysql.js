@@ -61,7 +61,7 @@ const TechDataBaseMysql = () => (
         <li>After sending the first request, pay attention on how does the company respond.</li>
       </ul>
       <p>
-        On our Keenethics spaceship, we have MySQL developers, Mongo, PostgreSQL and Neo4j
+        On our KeenEthics spaceship, we have MySQL developers, Mongo, PostgreSQL and Neo4j
         database developers. Contact our astronauts and get a professional advice on which
         database will suit your project.
       </p>

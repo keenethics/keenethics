@@ -58,7 +58,7 @@ const TechApiIntegrationStripe = () => (
         development, PayPal, Braintree, Stripe API Integration, and a lot more.
       </p>
       <p>
-        As an Agile-oriented company, here at Keenethics we strive to satisfy the customer
+        As an Agile-oriented company, here at KeenEthics we strive to satisfy the customer
         through an early and continuous delivery of high-quality software. Our back-end
         astronauts have experience using a wide range of technologies and tools for different
         purposes. Our Stripe API Developers can easily integrate your business with a robust

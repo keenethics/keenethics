@@ -60,7 +60,7 @@ const TechAppsPhone = () => (
         than on your local market rates.
       </p>
       <p>
-        For example, on our Keenethics spaceship, we have experience delivering high-end
+        For example, on our KeenEthics spaceship, we have experience delivering high-end
         cross-platform PhoneGap Apps for different businesses all around the world. Apps for
         Finance & Banking, Healthcare, Education, Transportation and other industries you can
         find in our case studies. You can feel free to ask us any questions about our projects.

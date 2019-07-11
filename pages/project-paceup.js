@@ -119,9 +119,9 @@ const ProjectPrix = () => (
               and the user is able
               to start working right away.
             </p>
-            <div className="title">Contribution of Keenethics </div>
+            <div className="title">Contribution of KeenEthics </div>
             <p>
-              Keenethics developed front-end for this application. We are proud to have created a
+              KeenEthics developed front-end for this application. We are proud to have created a
               smooth user-friendly
               interface for Paceup. Our achievements on this project also include the implementation
               of beautiful

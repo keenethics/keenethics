@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: CTO as a Service for Startups
-Subtitle: CTO as a Service for Startups - Keenethics Blog
-Meta title: CTO as a Service for Startups - Keenethics Blog
+Subtitle: CTO as a Service for Startups - KeenEthics Blog
+Meta title: CTO as a Service for Startups - KeenEthics Blog
 Meta description: Who is a CTO, why to hire a CTO, what is CTO as a service, and how to be a CTO – all these questions answered.
 Categories: From KeenEthics
 Preview image: /static/posts/cto-as-a-service-for-startups-prew.jpeg

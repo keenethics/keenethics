@@ -75,7 +75,7 @@ const ProjectBankerAdvisor = () => (
             </div>
             <div className="title">Challenge</div>
             <p>
-              Keenethics have been hired to develop a solution that helps buyers
+              KeenEthics have been hired to develop a solution that helps buyers
               see the realistic picture of the investment banking market by providing
               the users with an access to the client reviews. Our main goal was to make a
               resourceful application that would simplify the choice of banks for cooperation.

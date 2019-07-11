@@ -1,7 +1,7 @@
 Author: Max Savonin
 Title: Case Study: From Partners to Friends with WorldLabs
-Subtitle: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
-Meta title: Case Study: From Partners to Friends with WorldLabs - Keenethics Blog
+Subtitle: Case Study: From Partners to Friends with WorldLabs - KeenEthics Blog
+Meta title: Case Study: From Partners to Friends with WorldLabs - KeenEthics Blog
 Meta description: The story of one business partnership: from working extra hours under limited resources to taking part in a major business event in London.
 Categories: From KeenEthics
 Preview image: /static/posts/from-partners-to-friends-with-worldlabs-prew.jpg
@@ -18,9 +18,9 @@ The story of our business partnership and friendship with WorldLabs: from workin
   <h2 style="font-weight: 600; font-size: 22px; color: rgba(0,0,0,0.75)">Where We Started?</h2>
 </div>
 
-What would you do if you found yourself in the middle of troubled relationships with your software vendor? You would probably have few options to consider: either to go on for as long as it takes you, or to find someone who can pick up your project and give it a second life. In the retrospective, we see that WoldLabs have made not the easiest but the optimal choice. Trying to get their web platform ready for a soon-to-be release, they chose to partner with a young but talented company, Keenethics.
+What would you do if you found yourself in the middle of troubled relationships with your software vendor? You would probably have few options to consider: either to go on for as long as it takes you, or to find someone who can pick up your project and give it a second life. In the retrospective, we see that WoldLabs have made not the easiest but the optimal choice. Trying to get their web platform ready for a soon-to-be release, they chose to partner with a young but talented company, KeenEthics.
 
-Was it love at first sight? No, it surely was not. Worldlabs had negative experience with previous contractor and were going through difficult times, so Keenethics had to earn their trust. The production was scheduled for April-May, so we did not have much time for courtesies or hesitations ― we got straight to work. But Worldlabs team was short of time and full of ideas to implement, so the Keenethics team was rapidly going in number. 
+Was it love at first sight? No, it surely was not. Worldlabs had negative experience with previous contractor and were going through difficult times, so KeenEthics had to earn their trust. The production was scheduled for April-May, so we did not have much time for courtesies or hesitations ― we got straight to work. But Worldlabs team was short of time and full of ideas to implement, so the KeenEthics team was rapidly going in number. 
 
 <div style="padding-left: 10%">
   <h3 style="font-weight: 600; font-size: 18px; color: rgba(0,0,0,0.75)">Never Heard of WorldLabs?</h3>
@@ -55,7 +55,7 @@ As a result of the fruitful cooperation with the WorldLabs team, we developed fo
 </div>
 
 <p>
-  Not only we introduced an opportunity for the innovators to share their ideas and meet like-minded people, but we also made new friends ourselves. Having cooperated under the pressure of approaching deadlines and growing ambitions, two separate groups of people from WorldLabs and KeenEthics gradually turned into a united and powerful <a href="https://www.worldlabs.org/team/" target="_blank" rel="noreferrer noopener nofollow">team</a>. Through the continuous communication, we brought together Worldlabs excellence and Keenethics creativity, which enabled us to achieve outstanding results.
+  Not only we introduced an opportunity for the innovators to share their ideas and meet like-minded people, but we also made new friends ourselves. Having cooperated under the pressure of approaching deadlines and growing ambitions, two separate groups of people from WorldLabs and KeenEthics gradually turned into a united and powerful <a href="https://www.worldlabs.org/team/" target="_blank" rel="noreferrer noopener nofollow">team</a>. Through the continuous communication, we brought together Worldlabs excellence and KeenEthics creativity, which enabled us to achieve outstanding results.
 </p>
 
 <p>

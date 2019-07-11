@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: What Is Better: Developing an Educational App or Buying a Ready-made One?
-Subtitle: What Is Better: Developing an Educational App or Buying a Ready-made One? - Keenethics Blog
-Meta title: What Is Better: Developing an Educational App or Buying a Ready-made One? - Keenethics Blog
+Subtitle: What Is Better: Developing an Educational App or Buying a Ready-made One? - KeenEthics Blog
+Meta title: What Is Better: Developing an Educational App or Buying a Ready-made One? - KeenEthics Blog
 Meta description: Top 5 advantages of building a custom app and of buying a ready-made one. Choose your priority: innovation or convention, security or risk, success or stability.
 Categories: Tech, Business guide
 Preview image: /static/posts/buy-or-develop-educational-app/buy-or-develop-educational-app-prew.jpg
