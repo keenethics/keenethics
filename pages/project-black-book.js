@@ -36,7 +36,7 @@ const ProjectBlackBook = () => (
           </div>
           <div className="project-content-more">
             <PortfolioFeedback
-              feedback="The team was multi-cultural and able to address any communication challenges before they became a problem. Keenethics provided various solutions to problems and consulted on the benefits of each. They have a good network of resources and are able to bring in the best people for each job."
+              feedback="The team was multi-cultural and able to address any communication challenges before they became a problem. KeenEthics provided various solutions to problems and consulted on the benefits of each. They have a good network of resources and are able to bring in the best people for each job."
               link="https://clutch.co/profile/keenethics#review-183862"
             />
             <p>
@@ -46,14 +46,14 @@ const ProjectBlackBook = () => (
             <div className="project-achievements">
               <h3>Achievements</h3>
               <ul>
-                <li>The project is being built from scratch by Keenethics;</li>
+                <li>The project is being built from scratch by KeenEthics;</li>
                 <li>
                   Accepted MVP and preceding development process of the next versions. We enabled
                   customer’s analytics and top management to keep an eye on the reports, to filter
                   data and to have an access off-line;
                 </li>
                 <li>
-                  Keenethics developer worked in according to team’s agile methodology, which means
+                  KeenEthics developer worked in according to team’s agile methodology, which means
                   he had to adjust constantly.
                 </li>
               </ul>

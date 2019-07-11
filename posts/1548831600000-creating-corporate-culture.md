@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: How to Create a Sound Corporate Culture
-Subtitle: How to Create a Sound Corporate Culture - Keenethics Blog
-Meta title: How to Create a Sound Corporate Culture - Keenethics Blog
+Subtitle: How to Create a Sound Corporate Culture - KeenEthics Blog
+Meta title: How to Create a Sound Corporate Culture - KeenEthics Blog
 Meta description: Corporate culture is the soul of your organization since any business is defined by people working there. To maintain a healthy atmosphere in the office, think of implementing the following steps.
 Categories: Business guide
 Preview image: /static/posts/creating-corporate-culture-prew.jpg
@@ -75,5 +75,5 @@ No, this process is neither simple nor quick. It requires a deep engagement with
 
 
 <div>
-  <p>And now, straight from Keenethics, the ultimate rule of how to create company culture ― “Have fun”! We spend most of our day at work with our colleagues, so why not to enjoy it? We let our business partnerships turn into friendships, entertain ourselves, and keep the fire in our eyes burning. We share our enthusiasm and optimism, cheer up those in dismay, and support those in need. We highly value and respect our team members, clients, and partners. Check out our <a href="//instagram.com/keen_ethics" target="_blank" rel="noopener noreferrer">Instagram</a> and <a href="//facebook.com/keenethics.development" target="_blank" rel="noopener noreferrer nofollow">Facebook</a> to see! Creating corporate culture is creating the culture of a team, so we build a team!</p>
+  <p>And now, straight from KeenEthics, the ultimate rule of how to create company culture ― “Have fun”! We spend most of our day at work with our colleagues, so why not to enjoy it? We let our business partnerships turn into friendships, entertain ourselves, and keep the fire in our eyes burning. We share our enthusiasm and optimism, cheer up those in dismay, and support those in need. We highly value and respect our team members, clients, and partners. Check out our <a href="//instagram.com/keen_ethics" target="_blank" rel="noopener noreferrer">Instagram</a> and <a href="//facebook.com/keenethics.development" target="_blank" rel="noopener noreferrer nofollow">Facebook</a> to see! Creating corporate culture is creating the culture of a team, so we build a team!</p>
 </div>

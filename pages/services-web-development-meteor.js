@@ -55,7 +55,7 @@ const ServicesWebDevelopmentMeteor = () => (
       <p>
         Today, Eastern Europe is one of the most prominent outsourcing destinations. The
         competition is quite strong, so each Meteor.js development vendor strives to deliver
-        excellent products. In example, on our Keenethics spaceship, except of the product
+        excellent products. In example, on our KeenEthics spaceship, except of the product
         itself, you will receive a chance to pick the software development process methodology,
         the pricing model, select developers for your own Dedicated Development Team and so on.
       </p>

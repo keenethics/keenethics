@@ -1,8 +1,8 @@
 Author: Volodymyr Andrushchak
 Title: Voice App Development: Opportunities and Challenges
-Subtitle: Voice App Development: Opportunities and Challenges - Keenethics Blog
-Meta title: Voice App Development: Opportunities and Challenges - Keenethics Blog
-Meta description: Let us tell you how Keenethics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
+Subtitle: Voice App Development: Opportunities and Challenges - KeenEthics Blog
+Meta title: Voice App Development: Opportunities and Challenges - KeenEthics Blog
+Meta description: Let us tell you how KeenEthics developers create truly useful voice apps, what challenges we face, and which opportunities we offer.
 Categories: Tech
 Preview image: /static/posts/voice-app-development-prew.jpg
 
@@ -130,6 +130,6 @@ However, our work is not over even after the application has been completed and 
 
 __You Have an Idea? We Have a Solution!__
 
-Keenethics is a software developer with almost 2 years of experience in voice app development on multiple projects. We have integrated various chatbots with Alexa and Google Assistant to develop voice applications. In the scope of another large project, we have launched a web-powered and Skype-powered information search voice chatbot. We have also developed numerous Alexa skills for our personal use and for the customers.
+KeenEthics is a software developer with almost 2 years of experience in voice app development on multiple projects. We have integrated various chatbots with Alexa and Google Assistant to develop voice applications. In the scope of another large project, we have launched a web-powered and Skype-powered information search voice chatbot. We have also developed numerous Alexa skills for our personal use and for the customers.
 
 Basically, what we offer is UX chatbots for any voice platforms or devices since the logic is pretty similar regardless of the chosen technology. If you have ideas, we will be glad to help you implement them.

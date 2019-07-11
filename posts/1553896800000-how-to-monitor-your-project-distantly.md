@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: How to monitor your project distantly
-Subtitle: How to monitor your project distantly - Keenethics Blog
-Meta title: How to monitor your project distantly - Keenethics Blog
+Subtitle: How to monitor your project distantly - KeenEthics Blog
+Meta title: How to monitor your project distantly - KeenEthics Blog
 Meta description: Monitoring project progress remotely is easier than you might assume. Check out the recommendations from KeenEthics.
 Categories: From KeenEthics
 Preview image: /static/posts/how-to-monitor-your-project-distantly-prew.jpg

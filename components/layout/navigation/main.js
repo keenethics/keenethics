@@ -156,7 +156,7 @@ class Navigation extends React.Component {
           <div className="navigation-header">
             <Link href="/" prefetch>
               <a className="logo">
-                <img src="/static/images/svg/logo.svg" alt="Keenethics" width="120px" />
+                <img src="/static/images/svg/logo.svg" alt="KeenEthics" width="120px" />
               </a>
             </Link>
           </div>

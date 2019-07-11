@@ -49,7 +49,7 @@ const ServicesWebDevelopmentVoice = () => (
       </p>
       <h2>Hire Programmable Voice Developers</h2>
       <p>
-        On the Keenethics spaceship, we have experience integrating Twilio Programmable Voice
+        On the KeenEthics spaceship, we have experience integrating Twilio Programmable Voice
         into native and progressive apps. In short, what is Twilio and when to use it? Twilio
         itself is a cloud communications platform. It offers Voice & Video, Messaging, and
         Authentication APIs for every application. You can use Twilio products, if your App’s

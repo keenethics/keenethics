@@ -1,7 +1,7 @@
 Author: Volodya Andrushchak
 Title: Case Study: PREE - Stop Losing Your Stuff
-Subtitle: Case Study: PREE - Stop Losing Your Stuff - Keenethics Blog
-Meta title: Case Study: PREE - Stop Losing Your Stuff - Keenethics Blog
+Subtitle: Case Study: PREE - Stop Losing Your Stuff - KeenEthics Blog
+Meta title: Case Study: PREE - Stop Losing Your Stuff - KeenEthics Blog
 Meta description: How often do you lose your stuff? How much time did you spend trying to find your keys the last time? I guess you were looking for it throughout your apartment while quarrelling with your beloved and ending up being late for work. Maybe it’s not about you but for someone else it’s a real problem.
 Categories: From KeenEthics
 Preview image: /static/posts/pree-1-prew.jpg

@@ -42,7 +42,7 @@ const ServicesWebDevelopmentChat = () => (
         motivation to complete more valuable tasks.
       </p>
       <p>
-        What kind of technologies is being used for developing chatbots? On our Keenethics
+        What kind of technologies is being used for developing chatbots? On our KeenEthics
         spaceship, we prefer to use and deliver to our customers chatbots, developed with
         Microsoft Bot Framework, Skype Bot REST API, and Node.js. If you will look for best
         practices, you will find out that this stack of technologies is the most prominent for
@@ -58,7 +58,7 @@ const ServicesWebDevelopmentChat = () => (
         business.
       </p>
       <p>
-        On the Keenethics spaceship, you receive an all-inclusive Chatbot Development service,
+        On the KeenEthics spaceship, you receive an all-inclusive Chatbot Development service,
         therefore you will not have to look for other vendors and developers.Our astronauts can
         build and connect smart bots to interact with your users wherever they are — from your
         website or app to text/SMS, Skype, Slack, Facebook Messenger and other services. Also,

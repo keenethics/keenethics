@@ -1,7 +1,7 @@
 Author: Alexey Hermann
 Title: What is a Mockup and Why Do We Need It
-Subtitle: What is a Mockup and Why Do We Need It - Keenethics Blog
-Meta title: What is a Mockup and Why Do We Need It - Keenethics Blog
+Subtitle: What is a Mockup and Why Do We Need It - KeenEthics Blog
+Meta title: What is a Mockup and Why Do We Need It - KeenEthics Blog
 Meta description: Up to 50% of your budget will be spent on application design. The most basic app that takes 160 hours to code can easily take as much time to prepare a custom design. Please be aware that we are talking about custom design, not just 3 USD theme bought on market-place. That’s the case for another article.
 Categories: Tech
 Preview image: /static/posts/mockup.png

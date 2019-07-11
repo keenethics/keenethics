@@ -1,8 +1,8 @@
 Author: Maryna Yanul
 Title: Sharing Experiences: Why We are Using SVG
-Subtitle: Sharing Experiences: Why We are Using SVG - Keenethics Blog
-Meta title: Sharing Experiences: Why We are Using SVG - Keenethics Blog
-Meta description: Why We Are Using SVG - Read on Keenethics Corporate Blog!
+Subtitle: Sharing Experiences: Why We are Using SVG - KeenEthics Blog
+Meta title: Sharing Experiences: Why We are Using SVG - KeenEthics Blog
+Meta description: Why We Are Using SVG - Read on KeenEthics Corporate Blog!
 Categories: Tech, From KeenEthics
 Preview image: https://cdn-images-1.medium.com/max/800/0*BWjB9M0P6eMdRAsD.
 

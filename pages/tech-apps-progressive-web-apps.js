@@ -68,7 +68,7 @@ const TechAppsProg = () => (
         look at the company&apos;s field of expertise.
       </p>
       <p>
-        On our Keenethics spaceship, progressive web app development is one of the main
+        On our KeenEthics spaceship, progressive web app development is one of the main
         services. You can find some progressive web apps examples in our portfolio to make sure
         that our astronauts have all required knowledge and a solid experience to build
         high-class products. Contact us anytime and deliver an amazing experience to your users.

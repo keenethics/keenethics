@@ -55,7 +55,7 @@ const TechFrontEndAngular2 = () => (
         business and achieve the highest efficiency.
       </p>
       <p>
-        On the Keenethics spaceship, we are looking forward to developing Angular 2 Apps of
+        On the KeenEthics spaceship, we are looking forward to developing Angular 2 Apps of
         different complexity. For further information or questions, please contact us anytime!
       </p>
     </div>

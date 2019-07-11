@@ -1,8 +1,8 @@
 Author: Oleksandr Saltykov
 Title: KeenEthics Study: Two Monitors or One Ultrawide
-Subtitle: KeenEthics Study: Two Monitors or One Ultrawide - Keenethics Blog
-Meta title: KeenEthics Study: Two Monitors or One Ultrawide New Way of Improving Productivity - Keenethics Blog
-Meta description: New Way of Improving Productivity - Read on Keenethics Corporate Blog!
+Subtitle: KeenEthics Study: Two Monitors or One Ultrawide - KeenEthics Blog
+Meta title: KeenEthics Study: Two Monitors or One Ultrawide New Way of Improving Productivity - KeenEthics Blog
+Meta description: New Way of Improving Productivity - Read on KeenEthics Corporate Blog!
 Categories: Tech, From KeenEthics
 Preview image: /static/posts/two-monitors-or-one-ultrawide-1-prew.jpg
 
@@ -10,7 +10,7 @@ Preview image: /static/posts/two-monitors-or-one-ultrawide-1-prew.jpg
 
 <h1 style="text-align: center">KeenEthics Study: Two Monitors or One Ultrawide</h1>
 
-At Keenethics, we always think of a new way to improve our productivity, and in this case study, we draw attention to monitors. The small size of a monitor does not allow a user to have a lot of windows simultaneously opened and makes a user switch between windows, which is time-consuming. 
+At KeenEthics, we always think of a new way to improve our productivity, and in this case study, we draw attention to monitors. The small size of a monitor does not allow a user to have a lot of windows simultaneously opened and makes a user switch between windows, which is time-consuming. 
 
 Obviously, we are not the first ones to think of that. Researchers from NEC came to such conclusions:
 

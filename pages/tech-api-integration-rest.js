@@ -39,7 +39,7 @@ const TechApiIntegrationRest = () => (
         REST systems aim for fast performance, reliability, and the ability to grow, by reusing
         components that can be managed and updated without affecting the system as a whole, even
         while it is running. These are main reasons why we choose REST development on our
-        Keenethics spaceship.
+        KeenEthics spaceship.
       </p>
       <h2>Hire REST Developers</h2>
       <p>

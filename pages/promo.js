@@ -265,7 +265,7 @@ OF KEEN WEB APPS
                 </div>
                 <div className="quotes-column -right">
                   <div className="quote">
-                    &ldquo;Keenethics was reliable in meeting tight deadlines, delivering
+                    &ldquo;KeenEthics was reliable in meeting tight deadlines, delivering
                     high-quality
                     work on time and within budget. They offered a broad range of proficiency
                     and skills as well as friendly, personable customer service. They had no
@@ -273,7 +273,7 @@ OF KEEN WEB APPS
                     needed.&rdquo;
                   </div>
                   <div className="quote">
-                    &ldquo;Keenethics have a good network of resources and are able to bring
+                    &ldquo;KeenEthics have a good network of resources and are able to bring
                     in the best people for each job&rdquo;.
                   </div>
                 </div>

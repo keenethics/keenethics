@@ -1,7 +1,7 @@
 Author: Anton Trofimov
 Title: The Stories of an Avid Gamer and Bug Hunter
-Subtitle: The Stories of an Avid Gamer and Bug Hunter - Keenethics Blog
-Meta title: The Stories of an Avid Gamer and Bug Hunter - Keenethics Blog
+Subtitle: The Stories of an Avid Gamer and Bug Hunter - KeenEthics Blog
+Meta title: The Stories of an Avid Gamer and Bug Hunter - KeenEthics Blog
 Meta description: Finding cracks and vulnerabilities and winning the favorite game.
 Categories: From KeenEthics
 Preview image: /static/posts/the-stories-of-an-avid-gamer-and-bug-hunter-prew.jpeg

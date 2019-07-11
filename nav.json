@@ -6,8 +6,8 @@
         {
           "name": "Web Development",
           "description": "Responsive and user-oriented web coding",
-          "metaTitle": "Custom Web Development Company - Keenethics",
-          "metaDescription": "Looking to hire web developers? Keenethics, a web development company, specializes in web development services. Hire our web developers today",
+          "metaTitle": "Custom Web Development Company - KeenEthics",
+          "metaDescription": "Looking to hire web developers? KeenEthics, a web development company, specializes in web development services. Hire our web developers today",
           "href": "/services-web-development",
           "icon": {
             "name": "web",
@@ -18,8 +18,8 @@
         {
           "name": "Desktop Applications",
           "description": "Native applications with flawless workflow",
-          "metaTitle": "Desktop Application Development Company & Desktop Software App Development - Keenethics",
-          "metaDescription": "Looking to hire Desktop Application developers? Keenethics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today",
+          "metaTitle": "Desktop Application Development Company & Desktop Software App Development - KeenEthics",
+          "metaDescription": "Looking to hire Desktop Application developers? KeenEthics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today",
           "href": "/services-desktop-applications",
           "icon": {
             "name": "dapp",
@@ -54,7 +54,7 @@
         {
           "name": "Outstaffing",
           "description": "Process of using by one company another`s company staff",
-          "metaTitle": "Outstaffing company that helps to find highly qualified developers - Keenethics",
+          "metaTitle": "Outstaffing company that helps to find highly qualified developers - KeenEthics",
           "metaDescription": "",
           "href": "/services-outstaffing",
           "icon": {
@@ -65,7 +65,7 @@
         },
         {
           "name": "Proof of Concept",
-          "metaTitle": "The Proof Of Concept Solution - Keenethics",
+          "metaTitle": "The Proof Of Concept Solution - KeenEthics",
           "description": "Realization of a certain method or idea in order to demonstrate its feasibility",
           "href": "/services-proof",
           "icon": {
@@ -94,7 +94,7 @@
           "description": "Alterative, incremental method of managing the design and build activities of engineering",
           "href": "/approach-agile-project-management",
           "metaTitle": "Agile project management companies",
-          "metaDescription": "Agile Project Management services and Agile solutions from Keenethics services help deliver your business software on time and on budget.",
+          "metaDescription": "Agile Project Management services and Agile solutions from KeenEthics services help deliver your business software on time and on budget.",
           "icon": {
             "name": "agile",
             "alt": "Agile project management"
@@ -203,7 +203,7 @@
     {
       "name": "Portfolio",
       "description": "???",
-      "metaTitle": "Portfolio Keenethics",
+      "metaTitle": "Portfolio KeenEthics",
       "metaDescription": "???",
       "href": "/portfolio",
       "points": [
@@ -232,15 +232,15 @@
     {
       "name": "Blog",
       "description": "Articles based on our experience",
-      "metaTitle": "Web Development News & Ideas - Blog Keenethics",
-      "metaDescription": "Read the latest news and opinions about software development from Keenethics Blog - all articles are based on our experience!",
+      "metaTitle": "Web Development News & Ideas - Blog KeenEthics",
+      "metaDescription": "Read the latest news and opinions about software development from KeenEthics Blog - all articles are based on our experience!",
       "href": "/blog"
     },
     {
       "name": "Careers",
       "description": "",
-      "metaTitle": "Careers at Software Development Company - Keenethics",
-      "metaDescription": "Careers at software development company Keenethics",
+      "metaTitle": "Careers at Software Development Company - KeenEthics",
+      "metaDescription": "Careers at software development company KeenEthics",
       "href": "/careers"
     },
     {
@@ -271,8 +271,8 @@
     {
       "name": "Contacts",
       "description": "Have an idea? We can`t wait to help you implement it!",
-      "metaTitle": "Contacts - Office And Locations - Keenethics",
-      "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact Keenethics software development company to get a professional insight into your business idea!",
+      "metaTitle": "Contacts - Office And Locations - KeenEthics",
+      "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
       "href": "/contacts",
       "type": "hidden"
     }

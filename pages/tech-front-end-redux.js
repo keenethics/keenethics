@@ -47,7 +47,7 @@ const TechFrontEndRedux = () => (
         company often becomes the most efficient one.
       </p>
       <p>
-        On the Keenethics spaceship, we use only the official software and hardware, the latest
+        On the KeenEthics spaceship, we use only the official software and hardware, the latest
         Redux Devtools and other related technologies. Our astronauts can use Redux together
         with React, or with any other library. We can write Redux apps with Angular, Ember,
         jQuery, or vanilla JavaScript. Our location helps us to keep our prices smart and

@@ -59,7 +59,7 @@ const TechFrontEndVue = () => (
         and can offer different solutions.
       </p>
       <p>
-        On our Keenethics spaceship, we have experience providing Vue.js development services
+        On our KeenEthics spaceship, we have experience providing Vue.js development services
         for businesses all around the globe. It would be great if you contact our astronauts and
         tell us more about your project!
       </p>
