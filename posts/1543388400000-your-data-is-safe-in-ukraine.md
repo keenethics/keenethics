@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: KeenEthics Team on Guard: Your Data is Safe in Ukraine
-Subtitle: KeenEthics Team on Guard: Your Data is Safe in Ukraine - Keenethics Blog
-Meta title: KeenEthics Team on Guard: Your Data is Safe in Ukraine - Keenethics Blog
+Subtitle: KeenEthics Team on Guard: Your Data is Safe in Ukraine - KeenEthics Blog
+Meta title: KeenEthics Team on Guard: Your Data is Safe in Ukraine - KeenEthics Blog
 Meta description: Data safety is among the top concerns when it comes to outsourcing to Ukraine. Yet, your data safety is our primary value, and here is why.
 Categories: Outsourcing
 Preview image: /static/posts/your-data-is-safe-in-ukraine-1-prew.jpg

@@ -11,7 +11,7 @@ import worksElements from './navigation/works.json';
 
 const maskTitle = technology => `${technology} Development`;
 const maskDescription = technology => `Looking to hire ${technology} developers?
-  Keenethics, a ${technology} development company, specializes in ${technology} development services.
+  KeenEthics, a ${technology} development company, specializes in ${technology} development services.
   Hire our ${technology} developers today.`;
 
 const maskMapper = (t) => {

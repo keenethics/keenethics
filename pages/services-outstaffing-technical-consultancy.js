@@ -51,7 +51,7 @@ const ServicesOutstaffingTechnical = () => (
         service on a new market.
       </p>
       <p>
-        On the Keenethics spaceship, we can provide technical consultancy services in areas of:
+        On the KeenEthics spaceship, we can provide technical consultancy services in areas of:
       </p>
       <ul>
         <li>E-commerce;</li>

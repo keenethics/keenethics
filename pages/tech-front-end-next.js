@@ -53,7 +53,7 @@ const TechFrontEndNext = () => (
         market one of the most prominent in the region.
       </p>
       <p>
-        On our Keenethics spaceship, we have experience delivering high-end web apps, sites and
+        On our KeenEthics spaceship, we have experience delivering high-end web apps, sites and
         other web-based solutions for different industries and business purposes. Our astronauts
         work with a solid stack of frameworks, including Next.js framework, React, Redux,
         Vue.js, Aurelia, and others. Therefore, we can complete projects of different

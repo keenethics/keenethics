@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: KeenEthics ranks in Best Mobile App Development Companies (2018)
-Subtitle: KeenEthics ranks in Best Mobile App Development Companies (2018) - Keenethics Blog
-Meta title: KeenEthics ranks in Best Mobile App Development Companies (2018) - Keenethics Blog
+Subtitle: KeenEthics ranks in Best Mobile App Development Companies (2018) - KeenEthics Blog
+Meta title: KeenEthics ranks in Best Mobile App Development Companies (2018) - KeenEthics Blog
 Meta description: Business of Apps ranked KeenEthics as one of the Top App Development Companies of 2018
 Categories: From KeenEthics
 Preview image: /static/posts/business-of-apps/business-of-apps-2018-prew.jpg
@@ -45,7 +45,7 @@ Since 2015, the company has been providing its customers with **high-quality ser
 *“KeenEthics is a Ukraine-based full cycle software development company with extensive expertise in mobile and desktop software development. For the last 4+ years, the company has completed dozens of projects in web, mobile, and desktop app development, as well as AI, Machine Learning, Chatbots, voice-interface, UI/UX design, business analytics, CTO as a service, and support & tech consultancy. One of the features that sets KeenEthics apart is its commitment to follow high ethical norms and respect user privacy.”*
 
 <div>
-  <p>The original version of this press release can be found here <a href="//www.pr.com/press-release/786797" target="_blank" rel="noopener noreferrer nofollow">Keenethics Ranks in Best Mobile App Development Companies (2018)</a></p>
+  <p>The original version of this press release can be found here <a href="//www.pr.com/press-release/786797" target="_blank" rel="noopener noreferrer nofollow">KeenEthics Ranks in Best Mobile App Development Companies (2018)</a></p>
 </div>
 
 <div style="text-align: center; margin-top: 25px;">

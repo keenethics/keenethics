@@ -1,7 +1,7 @@
 Author: Walter Hendriks, Max Savonin
-Title: Keenethics announces partnership with Silvertown Technologies
-Subtitle: Keenethics announces partnership with Silvertown Technologies - Keenethics Blog
-Meta title: Keenethics announces partnership with Silvertown Technologies - Keenethics Blog
+Title: KeenEthics announces partnership with Silvertown Technologies
+Subtitle: KeenEthics announces partnership with Silvertown Technologies - KeenEthics Blog
+Meta title: KeenEthics announces partnership with Silvertown Technologies - KeenEthics Blog
 Meta description: Top-rated Upwork agency KeenEthics based in Lviv, Ukraine, complements Silvertown’s scale-up ambitions in ethical software development.
 Categories: From KeenEthics
 Preview image: /static/posts/silvertown-technologies-partnership/silvertown-technologies-partnership.jpg

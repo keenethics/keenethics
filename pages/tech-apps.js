@@ -46,7 +46,7 @@ without any web
         </li>
       </ul>
       <p>
-        On our Keenethics spaceship, we have strong expertise in Hybrid App Development. Native
+        On our KeenEthics spaceship, we have strong expertise in Hybrid App Development. Native
         iOS and native Android development services are time-consuming and usually cost a lot.
         If you do not have specific requirements and are not sure which platform to choose,
         hire App Developers to build a multi-platform solution.
@@ -96,7 +96,7 @@ without any web
         </li>
       </ul>
       <p>
-        On our Keenethics spaceship, we believe in Agile software development and do our best to
+        On our KeenEthics spaceship, we believe in Agile software development and do our best to
         deliver top-notch product to clients. We can build a cross-platform application from
         scratch or update an existing one. Feel free to contact us, receive a free consultation
         from our astronauts and hire a team that will develop an app you need.

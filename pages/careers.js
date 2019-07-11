@@ -273,7 +273,7 @@ export default class Careers extends React.Component {
     }
 
     return (
-      <Layout meta={{ title: 'Careers - Keenethics' }}>
+      <Layout meta={{ title: 'Careers - KeenEthics' }}>
         <div className="careers-page">
           <div className="careers-page-header">
             <h1 className="title">Careers - Open Positions</h1>

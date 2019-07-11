@@ -30,7 +30,7 @@ const TechApiIntegrationPayPal = () => (
       </ul>
       <p>
         What is great about the PayPal Payment System, you can easily integrate with Braintree
-        for next-generation commerce solutions. On our Keenethics spaceship, astronauts can
+        for next-generation commerce solutions. On our KeenEthics spaceship, astronauts can
         provide any integration you need.
       </p>
       <p>
@@ -55,7 +55,7 @@ const TechApiIntegrationPayPal = () => (
         product you need.
       </p>
       <p>
-        On the Keenethics spaceship, we do not offer everything. We focus on front-end and
+        On the KeenEthics spaceship, we do not offer everything. We focus on front-end and
         back-end development, chatbot development, API Integration and other related services.
         We use wide-known JavaScript frameworks like Node.js, Vue.js, Redux.js, and others. We
         can provide Braintree, Stripe and PayPal API Integration and help to understand how the

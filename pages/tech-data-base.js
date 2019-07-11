@@ -18,7 +18,7 @@ const TechDataBase = () => (
         will definitely need to find database developers to join your team.
       </p>
       <p>
-        On our Keenethics spaceship, we have experience in database development using the
+        On our KeenEthics spaceship, we have experience in database development using the
         following database systems:
       </p>
       <ul>

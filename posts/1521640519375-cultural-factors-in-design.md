@@ -1,7 +1,7 @@
 Author: Oksana Pleten
 Title: Cultural Factors in Design: A Product for Everyone
-Subtitle: Cultural Factors in Design: A Product for Everyone - Keenethics Blog
-Meta title: Cultural Factors in Design: A Product for Everyone - Keenethics Blog
+Subtitle: Cultural Factors in Design: A Product for Everyone - KeenEthics Blog
+Meta title: Cultural Factors in Design: A Product for Everyone - KeenEthics Blog
 Meta description: Cultural factors in design or how to make your product accessible to everyone?
 Categories: Tech
 Preview image: /static/posts/apple-imac-ipad-workplace-38568.jpeg

@@ -25,13 +25,13 @@ const ApproachAgileProject = () => (
       </ul>
       <p>
         Each of the agile project management companies believes and follows these simple values
-        and principles. Of course, Keenethics is one of these companies.
+        and principles. Of course, KeenEthics is one of these companies.
       </p>
       <h2>Agile project management advisory service</h2>
       <p>
         Working with a company offering agile project business services pty ltd gives you
         important and meaningful benefits. An agile team will focus on your business goals,
-        striving to deliver the best custom product. On the Keenethics spaceship, astronauts are
+        striving to deliver the best custom product. On the KeenEthics spaceship, astronauts are
         always ready for changes, so if you decide to implement some small features or remove
         the old ones, we will see how we can satisfy such a need without the unnecessary fuss
         and paperwork.

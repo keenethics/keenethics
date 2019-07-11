@@ -65,7 +65,7 @@ const ApproachLeanApproach = () => (
       <p>
         The lean approach is not only an opportunity for a startup to achieve success, but also
         a great way to communicate with the client and optimize the whole product development
-        process. On the Keenethics spaceship, we believe in Agile project management. Agile
+        process. On the KeenEthics spaceship, we believe in Agile project management. Agile
         development requires our astronauts, and the client to take part in shaping the product,
         defining its features in each iteration.
       </p>
@@ -84,7 +84,7 @@ const ApproachLeanApproach = () => (
         <li>reduction of paperwork.</li>
       </ul>
       <p>
-        On our Keenethics spaceship, we have all required knowlage and tools to organize a lean
+        On our KeenEthics spaceship, we have all required knowlage and tools to organize a lean
         startup development process and deliver an amazing Mobile and Desktop experience to your
         users. Contact us anytime to launch your big idea.
       </p>

@@ -36,7 +36,7 @@ const TechFrontEndAurelia = () => (
       </p>
       <p>
         One of the key features of Aurelia JavaScript Framework is that it allows focusing on
-        business logic, not on the framework itself. Our Keenethics astronauts find Aurelia JS
+        business logic, not on the framework itself. Our KeenEthics astronauts find Aurelia JS
         framework concise and simple, powerful and flexible. These benefits became possible
         because Aurelia was composed of smaller, focused modules. This makes building custom
         solutions easier and faster.
@@ -55,7 +55,7 @@ const TechFrontEndAurelia = () => (
         advice.
       </p>
       <p>
-        On our Keenethics spaceship, we provide high-end web development services with the
+        On our KeenEthics spaceship, we provide high-end web development services with the
         following benefits:
       </p>
       <ul>
@@ -65,7 +65,7 @@ const TechFrontEndAurelia = () => (
       </ul>
       <p>
         So if you are looking for highly-skilled dedicated development teams who are good at all
-        the JavaScript frameworks, including development in Aurelia, Keenethics spaceship is the
+        the JavaScript frameworks, including development in Aurelia, KeenEthics spaceship is the
         right company for you.
       </p>
     </div>

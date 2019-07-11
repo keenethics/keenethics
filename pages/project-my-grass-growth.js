@@ -38,7 +38,7 @@ const ProjectMyGrassGrowth = () => (
             <PortfolioFeedback
               title="Wim Honkoop, the Netherlands"
               photo="/static/portfolio/client-my-grass-growth.jpeg"
-              feedback="Despite the physical distance and never meeting each other in person, Keenethics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward."
+              feedback="Despite the physical distance and never meeting each other in person, KeenEthics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward."
               style={{ titleWidth: '110px' }}
             />
             <p>

@@ -25,7 +25,7 @@ const TechAppsCordova = () => (
         the App Store. One code works for all platforms and that crazy variety of devices.
       </p>
       <p>
-        On our Keenethics spaceship, for building powerful cross-platform mobile apps we use
+        On our KeenEthics spaceship, for building powerful cross-platform mobile apps we use
         Apache Cordova. So what is Apache Cordova and why do we use it? Apache Cordova (formerly
         PhoneGap) is a mobile application development framework. It enables software programmers
         to build applications for mobile devices using CSS3, HTML5, and JavaScript instead of
@@ -68,7 +68,7 @@ const TechAppsCordova = () => (
         company&apos;s case studies, areas of expertise and, if possible, references.
       </p>
       <p>
-        Creating multi-platform solutions is one of the main activities on our Keenethics
+        Creating multi-platform solutions is one of the main activities on our KeenEthics
         spaceship. Our astronauts have solid experience building cross-platform Cordova apps for
         a variety of industries and business needs. Tell us more about your project, so we can
         offer the most efficient solution.

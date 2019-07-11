@@ -78,7 +78,7 @@ export default class AboutValues extends React.Component {
               </div>
               <section>
                 <p>
-                  The main thing that we provide in the Keenethics team and bring to our clients is
+                  The main thing that we provide in the KeenEthics team and bring to our clients is
                   honesty. The second thing is competency. The third - open development process. We
                   do believe that two sides take part in software development - both business and
                   developers.
@@ -101,7 +101,7 @@ export default class AboutValues extends React.Component {
               </div>
               <section>
                 <p>
-                  In Keenethics we believe that there’s plenty of improvements we can bring to the
+                  In KeenEthics we believe that there’s plenty of improvements we can bring to the
                   industry to make software development more predictable, efficient and to make the
                   result closer to customer expectations. We make remote web development more keen
                   and ethical.
@@ -110,7 +110,7 @@ export default class AboutValues extends React.Component {
                   We aim to develop cross functionality among our team.
                 </h2>
                 <p>
-                  One day each astronaut on Keenethics board will independently perform and complete
+                  One day each astronaut on KeenEthics board will independently perform and complete
                   any task - that’s our goal. This will allow us to follow the agile development
                   methodology just perfectly. We have a minimal management and maximum
                   self-management. Self-education plays huge role, cross code reviews and training
@@ -124,7 +124,7 @@ export default class AboutValues extends React.Component {
               </div>
               <section>
                 <p>
-                  The main thing that we provide in the Keenethics team and bring to our clients is
+                  The main thing that we provide in the KeenEthics team and bring to our clients is
                   honesty. The second thing is competency. The third - open development process. We
                   do believe that two sides take part in software development - both business and
                   developers.

@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: Ousourcing: Freelancers vs. Agencies
-Subtitle: Ousourcing: Freelancers vs. Agencies - Keenethics Blog
-Meta title: Ousourcing: Freelancers vs. Agencies - Keenethics Blog
+Subtitle: Ousourcing: Freelancers vs. Agencies - KeenEthics Blog
+Meta title: Ousourcing: Freelancers vs. Agencies - KeenEthics Blog
 Meta description: Professional agencies vs. Freelancers: the title of the best outsourcing partner goes to...
 Categories: Business guide
 Preview image: /static/posts/why-should-you-choose-agencies-1-preview.jpg
@@ -64,4 +64,4 @@ An agency is a problem-solver, so if there is a challenge you personally don’t
 
 Weighing up all the pros and cons, we may see that a professional agency is a certain winner in this competition for the title of the best outsourcing partner with the final score of “1” to “4”. A software development company will help you deal with the tasks or challenges which you find to be unbearably difficult or for which you are not competent enough. Professionals will successfully meet your expectations in the most suitable time using the optimal amount of resources. They will provide you with the highest quality product or service, which will help you to win customer loyalty and to improve your brand image while lowering marketing costs. Well, we cannot account for every outsourcing company in the IT sphere that they will satisfy all your interests and needs.
 
-But we guarantee with no hesitations that the Keenethics team will.
+But we guarantee with no hesitations that the KeenEthics team will.

@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: How to Choose Your Optimal Development Methodology
-Subtitle: How to Choose Your Optimal Development Methodology - Keenethics Blog
-Meta title: How to Choose Your Optimal Development Methodology - Keenethics Blog
+Subtitle: How to Choose Your Optimal Development Methodology - KeenEthics Blog
+Meta title: How to Choose Your Optimal Development Methodology - KeenEthics Blog
 Meta description: Is Scrum as universal as it seems to be? Professional Project Managers from KeenEthics will prove that it isn’t. Let us show you the alternatives.
 Categories: Business guide
 Preview image: /static/posts/how-to-choose-your-optimal-development-methodology/how-to-choose-your-optimal-development-methodology-prew.jpg

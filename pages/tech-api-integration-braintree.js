@@ -68,7 +68,7 @@ const TechApiIntegrationBraintree = () => (
         vendor is better for you and hire Braintree Developers for effective cooperation.
       </p>
       <p>
-        On the Keenethics spaceship, astronauts can provide the integration with technologies
+        On the KeenEthics spaceship, astronauts can provide the integration with technologies
         and tools like PayPal, Stripe, Elastic Search, and Braintree API Integration. Strong
         experience in back-end development guarantees the work will be done properly and on
         time. Contact us to find an effective solution for your project.

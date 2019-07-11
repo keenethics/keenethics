@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok, Volodymyr Andrushchak
 Title: Indoor Positioning in Retail
-Subtitle: Indoor Positioning in Retail - Keenethics Blog
-Meta title: Indoor Positioning in Retail - Keenethics Blog
+Subtitle: Indoor Positioning in Retail - KeenEthics Blog
+Meta title: Indoor Positioning in Retail - KeenEthics Blog
 Meta description: For a retailer, it opens unlimited marketing opportunities and boosts engagement. For a customer, it makes shopping easier, faster, and more efficient.
 Categories: Business guide, Tech
 Preview image: /static/posts/indoor-positioning-in-retail/indoor-positioning-in-retail-prew.jpg

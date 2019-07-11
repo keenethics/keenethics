@@ -47,7 +47,7 @@ const TechFrontEndReact = () => (
         <li>The desire to deliver high-quality products that can compete.</li>
       </ul>
       <p>
-        On our Keenethics spaceship, you can hire experienced React JS developers for projects
+        On our KeenEthics spaceship, you can hire experienced React JS developers for projects
         of any complexity. Our astronauts can develop landing pages, online stores, corporate
         websites, E-Commerce solutions and much more.
       </p>

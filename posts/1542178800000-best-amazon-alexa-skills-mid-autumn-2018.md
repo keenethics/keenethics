@@ -1,7 +1,7 @@
 Author: Tetiana Matviiok
 Title: Best Amazon Alexa Skills: Mid-Autumn 2018
-Subtitle: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
-Meta title: Best Amazon Alexa Skills: Mid-Autumn 2018 - Keenethics Blog
+Subtitle: Best Amazon Alexa Skills: Mid-Autumn 2018 - KeenEthics Blog
+Meta title: Best Amazon Alexa Skills: Mid-Autumn 2018 - KeenEthics Blog
 Meta description: Want to give a second life to your Alexa? This fall, the renowned smart speaker learned 10 new ways to conquer your heart.
 Categories: Tech, Productivity
 Preview image: /static/posts/alexa-post-images/mid-autumn/best-amazon-alexa-skills-mid-autumn-2018-prew.jpg
@@ -96,5 +96,5 @@ Are you hungry and feel like making pizza but fail to come up with a new recipe?
 
 Either you are bored from doing nothing or tired from having done all the job in this world, Alexa is here to relieve your annoyance. Tell her that you are bored, and she will make sure that this feeling promptly goes away. She will tell you a story or offer a game to play — all for your entertainment. Or maybe it is time to wash your dog or to clean your bedroom? No time to play bored, Alexa will remind you of those tasks as well. 
 
-If you want to teach your Alexa to do any of these tricks, they are free to install from the Amazon website. Once you downloaded them, enjoy using these functions by activating them with your voice. Surprise your friends and guests with the abilities of your device, and do not hesitate to ask Keenethics engineers to write an Alexa skill if you still feel like your business is missing something — we will help you to get something perfectly suitable for yourself. 
+If you want to teach your Alexa to do any of these tricks, they are free to install from the Amazon website. Once you downloaded them, enjoy using these functions by activating them with your voice. Surprise your friends and guests with the abilities of your device, and do not hesitate to ask KeenEthics engineers to write an Alexa skill if you still feel like your business is missing something — we will help you to get something perfectly suitable for yourself. 
 Let Alexa make your life easier!

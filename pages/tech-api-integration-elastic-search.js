@@ -64,7 +64,7 @@ const TechApiIntegrationElastic = () => (
         minimize business disruptions.
       </p>
       <p>
-        On our Keenethics spaceship, Elasticsearch developers can build a search engine for your
+        On our KeenEthics spaceship, Elasticsearch developers can build a search engine for your
         E-Commerce, Enterprise and other projects. Tell us more about your project and your
         ideas so we can help to find the most efficient solution for you to grow.
       </p>

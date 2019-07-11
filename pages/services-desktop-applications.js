@@ -28,7 +28,7 @@ const ServicesDesktopApplications = () => (
       <p>
         We suggest to take a look at developers that work with the best programming language
         for software development and have a solid expertise or alike projects in their
-        portfolio. For example, for developing desktop apps astronauts at Keenethics prefer
+        portfolio. For example, for developing desktop apps astronauts at KeenEthics prefer
         to use the Electron framework, which was developed by GitHub.
         Electron helps to create Cross-Platform apps using HTML, CSS, and JavaScript.
         According to some researches, it’s one of the most common used and best programming
@@ -43,7 +43,7 @@ const ServicesDesktopApplications = () => (
         project slightly faster, so you can see the result ass soon as possible.
       </p>
       <p>
-        On the Keenethics spaceship astronauts use the most efficient desktop application
+        On the KeenEthics spaceship astronauts use the most efficient desktop application
         development tools to bring projects to life. If you have any desktop application ideas
         that you still hesitate to launch, contact us!
       </p>

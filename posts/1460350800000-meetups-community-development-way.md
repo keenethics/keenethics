@@ -1,7 +1,7 @@
 Author: Max Savonin
 Title: Advancing Developer Community in Ukraine: Meetups
-Subtitle: Advancing Developer Community in Ukraine: Meetups - Keenethics Blog
-Meta title: Advancing Developer Community in Ukraine: Meetups - Keenethics Blog
+Subtitle: Advancing Developer Community in Ukraine: Meetups - KeenEthics Blog
+Meta title: Advancing Developer Community in Ukraine: Meetups - KeenEthics Blog
 Meta description: Because of holding technological meetups, the community around the technology has increased significantly and is growing at a steady pace.
 Categories: Outsourcing, Business guide, Productivity, From KeenEthics
 Preview image: /static/posts/meetups-prew.jpeg

@@ -53,7 +53,7 @@ const TechBackEndMeteor = () => (
       </p>
       <p>
         Our Meteor JS astronauts have all skills and knowledge to build a high-quality app. On
-        the Keenethics spaceship, we have Meteor js examples used in a variety of projects. If
+        the KeenEthics spaceship, we have Meteor js examples used in a variety of projects. If
         you still are not sure if your project requires such type of technology feel free to
         contact us.
       </p>

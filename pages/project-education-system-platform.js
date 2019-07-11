@@ -136,7 +136,7 @@ const ProjectPrix = () => (
             </div>
             <h2>Feedback</h2>
             <p>
-              “Keenethics worked seamlessly alongside the internal team and produced fast, efficient
+              “KeenEthics worked seamlessly alongside the internal team and produced fast, efficient
               code. They accommodated expanded work-hours to meet tight deadlines and responded
               quickly to inquiries. Customers can expect a highly productive team that delivers
               high-quality products at competitive rates.” –

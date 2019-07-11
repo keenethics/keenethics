@@ -1,7 +1,7 @@
 Author: Anton Trofimov
 Title: Hidden and Not Hidden Code Pitfalls of One Website
-Subtitle: Hidden and Not Hidden Code Pitfalls of One Website - Keenethics Blog
-Meta title: Hidden and Not Hidden Code Pitfalls of One Website - Keenethics Blog
+Subtitle: Hidden and Not Hidden Code Pitfalls of One Website - KeenEthics Blog
+Meta title: Hidden and Not Hidden Code Pitfalls of One Website - KeenEthics Blog
 Meta description: Autologin URLs, hidden but not hidden pictures, user vulnerability, and other code pitfalls of one website. These are the mistakes to avoid.
 Categories: Tech, From KeenEthics
 Preview image: /static/posts/hidden-and-not-hidden-code-pitfalls-of-one-website-prew.jpg

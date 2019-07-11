@@ -45,7 +45,7 @@ const ServicesWebDevelopmentE = () => (
         to receive the highest quality.
       </p>
       <p>
-        On our Keenethics spaceship ecommerce website development cost is reasonable and
+        On our KeenEthics spaceship ecommerce website development cost is reasonable and
         affordable for every business. As a young company, we understand our partners and strive
         to find the most efficient solutions keeping the budget within reason.
       </p>
