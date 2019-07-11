@@ -214,6 +214,11 @@ const postsDatePair = [
     filename: 'how-to-choose-your-optimal-development-methodology.md',
     href: '/blog/how-to-choose-your-optimal-development-methodology',
   },
+  {
+    createdAt: 1562860800000,
+    filename: 'how-create-e-learning-app-brings-value.md',
+    href: '/blog/how-create-e-learning-app-brings-value',
+  },
 ];
 
 module.exports.postsDatePair = postsDatePair;
