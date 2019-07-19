@@ -2,84 +2,291 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import Link from 'next/link';
-
-import 'isomorphic-fetch';
+import ReactContentfulImage from 'react-contentful-image';
 
 import Layout from '../components/layout/main';
-import Background from '../components/content/background';
 import Error from './_error';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+} from 'react-share';
+import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
+const _ = require('lodash');
+
+const socialMediaShareButtons = ({ url }) => (
+  <div className="socials">
+    Share on:
+    <FacebookShareButton url={`https://keenethics.com${url}`}>
+      <FacebookIcon size={32} round={true} />
+    </FacebookShareButton>
+    <LinkedinShareButton url={`https://keenethics.com${url}`}>
+      <LinkedinIcon size={32} round={true} />
+    </LinkedinShareButton>
+    <TwitterShareButton url={`https://keenethics.com${url}`}>
+      <TwitterIcon size={32} round={true} />
+    </TwitterShareButton>
+  </div>
+);
+
+const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
+  const url = _.get(heroImage, 'fields.file.url');
+  const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
+
+  return (
+    <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
+      <div className="blog-page-post">
+        <div
+          className="blog-page-post-img"
+          style={{ backgroundImage: `url(https://${url}?fm=jpg&fl=progressive&q=85&w=350)` }}
+        />
+        <div className="blog-page-post-header">
+          <div className="date">
+            {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+          </div>
+          <div className="title">{title}</div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+const imageSizes = [
+  {
+    mediaQuery: 'default',
+    params: { q: 95, w: 1000 },
+  },
+];
+
+const imageComponent = ({ src, description, title }) => (
+  <figure>
+    <ReactContentfulImage alt={title} src={src} sizes={imageSizes} />
+    {description && <figcaption>{description}</figcaption>}
+  </figure>
+);
+
+const personComponent = ({ image, name, position }) => {
+  const url = _.get(image, 'fields.file.url');
+
+  return (
+    <div className="person">
+      {image && (
+        <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`} />
+      )}
+      <span className="info">
+        <span className="name">{name}</span>
+        <span className="title">{position}</span>
+      </span>
+    </div>
+  );
+};
+
+const bodyOptions = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      const filteredChildren = children.filter(item => !!item);
+
+      if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
+        return filteredChildren[0];
+      }
+
+      return <p>{children.filter(item => !!item)}</p>;
+    },
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      const { url } = node.data.target.fields.file;
+      const { description, title } = node.data.target.fields;
+
+      return imageComponent({ src: url, description, title });
+    },
+    [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
+        const { bookList } = node.data.target.fields;
+
+        return (
+          <div className="useful-readings">
+            <div className="useful-readings-icon-wrapper">
+              <img src="/static/images/book_icon.png" />
+            </div>
+            <div className="useful-readings-content">
+              <h4>useful readings:</h4>
+              {documentToReactComponents(bookList)}
+            </div>
+          </div>
+        );
+      }
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'suggestion') {
+        const {
+          body,
+          suggesterName,
+          suggesterPosition,
+          suggestionTitle,
+          suggestorPhoto,
+        } = node.data.target.fields;
+        return (
+          <div className="suggestion">
+            <h5>{suggestionTitle}</h5>
+            <p>{documentToReactComponents(body)}</p>
+            <div className="person">
+              {suggestorPhoto && (
+                <img
+                  src={`https://${
+                    suggestorPhoto.fields.file.url
+                  }?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`}
+                />
+              )}
+              <span className="info">
+                <span className="name">{suggesterName}</span>
+                <span className="title">{suggesterPosition}</span>
+              </span>
+              <a
+                href="//calendly.com/iryna-keenethics/intro-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="calendly-goal"
+              >
+                <button className="btn-schedule">Schedule a call</button>
+              </a>
+            </div>
+          </div>
+        );
+      }
+    },
+    'embedded-entry-inline': node => {
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
+        const { image, name, title } = node.data.target.fields;
+
+        return personComponent({ image, name, position: title });
+      }
+
+      return null;
+    },
+  },
+};
 
 export default class Post extends React.Component {
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.post.title !== this.props.post.title) {
-      document.querySelector('.content-inner').scrollTo(0, 0);
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      url: '',
+    };
   }
 
   static async getInitialProps(p) {
     const { name } = p.query;
+    const response = await getPostBySlug(name);
+    const { items } = response || {};
 
-    const res = await fetch(`${BACKEND_URL}/api/posts/${name}`);
-    const json = await res.json();
+    if (!items || !Array.isArray(items) || !items[0]) return {};
 
-    return { post: json };
+    const { tags, slug } = items[0].fields;
+    const relatedPosts = tags.length
+      ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
+      : [];
+
+      
+    return {
+      ...items[0].fields,
+      relatedPosts,
+    };
   }
 
-  render() {
-    const { post } = this.props;
-    const { hrefToPreviousPost, hrefToNextPost } = post;
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.title !== this.props.title) {
+      document.querySelector('.content-inner').scrollTo(0, 0);
+    }
+  }
 
-    if (post && post.statusCode && post.statusCode === 404) {
+  componentDidMount() {
+    this.setState({
+      url: window.location.href,
+    });
+  }
+
+
+  render() {
+    const {
+      title,
+      subtitle,
+      description,
+      publishDate,
+      bodyRich,
+      author,
+      tags,
+      heroImage,
+      relatedPosts,
+      metaTitle,
+      metaDescription,
+    } = this.props;
+    const heroSrc = _.get(heroImage, 'fields.file.url', '');
+    const heroTitle = _.get(heroImage, 'fields.title', '');
+
+    if (!title || _.isEmpty(bodyRich)) {
       return <Error statusCode={404} />;
     }
 
     const meta = {};
-
-    if (post && post.metaTitle && post.metaDescription) {
-      meta.title = post.metaTitle;
-      meta.description = post.metaDescription;
+    if (metaTitle && metaDescription) {
+      meta.title = metaTitle;
+      meta.description = metaDescription;
     }
+
+    const { url } = this.state;
 
     return (
       <Layout meta={meta}>
         <div className="blog-post-page page">
-          <div className="blog-post-page-header page-header">
-            <div className="blog-post-page-title page-title">
-              <h1>{post.title}</h1>
-              <div className="blog-post-page-description">
-                <div className="blog-post-page-user">
-                  <span>{post.author}</span>
-                </div>
-                <div className="blog-post-page-date">
-                  <span><Moment format="MMMM DD YYYY">{new Date(+post.date)}</Moment></span>
-                </div>
-              </div>
-              <Background className="open-source-page-background" />
+          <header className="blog-post-page-header">
+            <a href="/blog">&lt; Back to blog</a>
+            <hr className="blog-post-page-header-hr" />
+            <div className="blog-post-page-info">
+              {tags.map(tag => (
+                <span key={tag} className="post-tag">
+                  {tag}
+                </span>
+              ))}
+              <span className="date">
+                {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+              </span>
+              {url && socialMediaShareButtons({ url: this.props.url.asPath })}
             </div>
-          </div>
-          <div className="blog-post-page-content content-block">
-            <ReactMarkdown source={post.content} escapeHtml={false} />
-          </div>
-          <div className="blog-post-navigation">
-            <Link
-              href={hrefToPreviousPost ? `/post?name=${hrefToPreviousPost}` : '/blog'}
-              as={`/blog${hrefToPreviousPost ? `/${hrefToPreviousPost}` : ''}`}
-            >
-              <div className="prev-arrow">
-                {'< '}
-                {hrefToPreviousPost ? 'Previous' : 'Back to the blog'}
+          </header>
+
+          <article className="blog-post-page-content content-block">
+            {author && personComponent(author.fields)}
+            <header>
+              <h1 className="blog-post-page-content-title">{title}</h1>
+
+              {subtitle && <p className="blog-post-page-content-subtitle">{subtitle}</p>}
+              {description && <p className="blog-post-page-content-description">{description}</p>}
+              {heroSrc && imageComponent({ src: heroSrc, title: heroTitle })}
+            </header>
+
+            <main>{documentToReactComponents(bodyRich, bodyOptions)}</main>
+
+            <footer className="blog-post-page-footer">
+              {url && socialMediaShareButtons({ url: this.props.url.asPath })}
+            </footer>
+          </article>
+
+          <footer>
+            {!!relatedPosts.length && (
+              <div className="related-posts">
+                <div className="content-block">
+                  <h3>Check out our articles:</h3>
+                  <div className="blog-page-posts">
+                    {relatedPosts.map(post => postCardComponent(post && post.fields))}
+                  </div>
+                </div>
               </div>
-            </Link>
-            <Link
-              href={hrefToNextPost ? `/post?name=${hrefToNextPost}` : '/blog'}
-              as={`/blog${hrefToNextPost ? `/${hrefToNextPost}` : ''}`}
-            >
-              <div className="next-arrow">{hrefToNextPost ? `Next ${'>'}` : 'Blog'}</div>
-            </Link>
-          </div>
+            )}
+          </footer>
         </div>
       </Layout>
     );
@@ -87,8 +294,24 @@ export default class Post extends React.Component {
 }
 
 Post.propTypes = {
-  post: PropTypes.object,
+  author: PropTypes.object,
+  bodyRich: PropTypes.object,
+  heroImage: PropTypes.object,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  description: PropTypes.string,
+  publishDate: PropTypes.string,
+  tags: PropTypes.array,
+  relatedPosts: PropTypes.array,
 };
 Post.defaultProps = {
-  post: {},
+  bodyRich: {},
+  heroImage: {},
+  title: '',
+  subtitle: '',
+  description: '',
+  publishDate: null,
+  author: null,
+  tags: [],
+  relatedPosts: [],
 };
