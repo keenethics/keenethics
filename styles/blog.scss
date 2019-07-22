@@ -311,7 +311,7 @@ blockquote {
 }
 
 div.person {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-bottom: 20px;
   flex-wrap: wrap;
@@ -349,6 +349,43 @@ div.person {
       letter-spacing: 0.56px;
     }
   }
+}
+
+.person-link {
+  text-decoration: none;
+}
+
+div.suggestion {
+  padding: 27px 35px;
+  box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+
+  h5 {
+    color: #12233d;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.18px;
+    font-style: italic;
+    text-align: justify;
+  }
+
+  .suggestor-wrapper {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+
   button {
     border-radius: 35px;
     padding: 16px 28px;
@@ -378,29 +415,6 @@ div.person {
     @include breakpoint(mobile) {
       margin: 20px auto 0;
     }
-  }
-}
-
-div.suggestion {
-  padding: 27px 35px;
-  box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
-
-  h5 {
-    color: #12233d;
-    font-family: Raleway;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.18px;
-    font-style: italic;
-    text-align: justify;
   }
 }
 
@@ -481,6 +495,4 @@ div.person {
 
 .blog-post-page-footer {
   display: flex;
-  // padding-bottom: 14px;
-  // border-bottom: 1px solid #e1e1e1;
 }

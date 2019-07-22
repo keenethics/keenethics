@@ -38,7 +38,7 @@ const socialMediaShareButtons = ({ url }) => (
 
 const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
   const url = _.get(heroImage, 'fields.file.url');
-  const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
+  // const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
 
   return (
     <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
@@ -72,8 +72,23 @@ const imageComponent = ({ src, description, title }) => (
   </figure>
 );
 
-const personComponent = ({ image, name, position }) => {
+const personComponent = ({ image, name, position, linkedIn }) => {
   const url = _.get(image, 'fields.file.url');
+
+  if (linkedIn)
+    return (
+      <a href={linkedIn} target="_blank" className="person-link">
+        <div className="person">
+          {image && (
+            <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`} />
+          )}
+          <span className="info">
+            <span className="name">{name}</span>
+            <span className="title">{position}</span>
+          </span>
+        </div>
+      </a>
+    );
 
   return (
     <div className="person">
@@ -128,23 +143,19 @@ const bodyOptions = {
           suggesterPosition,
           suggestionTitle,
           suggestorPhoto,
+          linkedIn,
         } = node.data.target.fields;
         return (
           <div className="suggestion">
             <h5>{suggestionTitle}</h5>
             <p>{documentToReactComponents(body)}</p>
-            <div className="person">
-              {suggestorPhoto && (
-                <img
-                  src={`https://${
-                    suggestorPhoto.fields.file.url
-                  }?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`}
-                />
-              )}
-              <span className="info">
-                <span className="name">{suggesterName}</span>
-                <span className="title">{suggesterPosition}</span>
-              </span>
+            <div className="suggestor-wrapper">
+              {personComponent({
+                image: suggestorPhoto,
+                name: suggesterName,
+                position: suggesterPosition,
+                linkedIn,
+              })}
               <a
                 href="//calendly.com/iryna-keenethics/intro-call"
                 target="_blank"
@@ -190,7 +201,6 @@ export default class Post extends React.Component {
       ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
       : [];
 
-      
     return {
       ...items[0].fields,
       relatedPosts,
@@ -208,7 +218,6 @@ export default class Post extends React.Component {
       url: window.location.href,
     });
   }
-
 
   render() {
     const {
