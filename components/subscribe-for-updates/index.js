@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-const axios = require('axios');
-
 export default () => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
