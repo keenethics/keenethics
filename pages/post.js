@@ -81,7 +81,7 @@ const personComponent = ({ image, name, position, linkedIn }) => {
       <a href={linkedIn} target="_blank" className="person-link">
         <div className="person">
           {image && (
-            <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`} />
+            <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=65&w=65&fit=crop&fit=thumb`} />
           )}
           <span className="info">
             <span className="name">{name}</span>
@@ -94,7 +94,7 @@ const personComponent = ({ image, name, position, linkedIn }) => {
   return (
     <div className="person">
       {image && (
-        <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=50&w=50&fit=crop&fit=thumb`} />
+        <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=65&w=65&fit=crop&fit=thumb`} />
       )}
       <span className="info">
         <span className="name">{name}</span>
