@@ -38,15 +38,16 @@ const socialMediaShareButtons = ({ url }) => (
 
 const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
   const url = _.get(heroImage, 'fields.file.url');
-  // const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
+  const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
 
   return (
     <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
       <div className="blog-page-post">
         <div
           className="blog-page-post-img"
-          style={{ backgroundImage: `url(https://${url}?fm=jpg&fl=progressive&q=85&w=350)` }}
-        />
+        >
+          <img alt={alt} src={`https://${url}?fm=jpg&fl=progressive&q=85&w=350`} />
+        </div>
         <div className="blog-page-post-header">
           <div className="date">
             {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
@@ -67,7 +68,7 @@ const imageSizes = [
 
 const imageComponent = ({ src, description, title }) => (
   <figure>
-    <ReactContentfulImage alt={title} src={src} sizes={imageSizes} />
+    <ReactContentfulImage alt={description || title} src={src} sizes={imageSizes} />
     {description && <figcaption>{description}</figcaption>}
   </figure>
 );
