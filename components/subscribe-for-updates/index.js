@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
+const axios = require('axios');
+
 export default () => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
@@ -15,6 +17,15 @@ export default () => {
     if (isError) return;
     setSuccess(true);
     setValue('');
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/blog/subscribe', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(
+      JSON.stringify({
+        email: value,
+      }),
+    );
   }
 
   function handleChange(event) {
