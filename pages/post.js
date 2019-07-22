@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import Link from 'next/link';
 import ReactContentfulImage from 'react-contentful-image';
+import SubscribePanel from '../components/subscribe-for-updates';
 
 import Layout from '../components/layout/main';
 import Error from './_error';
@@ -43,9 +44,7 @@ const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
   return (
     <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
       <div className="blog-page-post">
-        <div
-          className="blog-page-post-img"
-        >
+        <div className="blog-page-post-img">
           <img alt={alt} src={`https://${url}?fm=jpg&fl=progressive&q=85&w=350`} />
         </div>
         <div className="blog-page-post-header">
@@ -163,7 +162,7 @@ const bodyOptions = {
                 rel="noopener noreferrer"
                 className="calendly-goal"
               >
-                <button className="btn-schedule">Schedule a call</button>
+                <button className="btn btn-schedule">Schedule a call</button>
               </a>
             </div>
           </div>
@@ -282,6 +281,7 @@ export default class Post extends React.Component {
 
             <footer className="blog-post-page-footer">
               {url && socialMediaShareButtons({ url: this.props.url.asPath })}
+              <SubscribePanel />
             </footer>
           </article>
 
