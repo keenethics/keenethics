@@ -116,7 +116,7 @@ const ProjectPrix = () => (
             </p>
             <h2>What Makes ParkQX Special?</h2>
             <div>
-              <img src="/static/portfolio/parkqx/parkqx-screens.gif" alt="parkqx screens" />
+              <img style={{ width: '500px' }} src="/static/portfolio/parkqx/parkqx-screens.gif" alt="parkqx screens" />
             </div>
             <p>
               Sign-up and login procedures, account verification and activation, “Remember me” and
