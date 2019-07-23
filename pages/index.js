@@ -88,33 +88,52 @@ export default class Index extends React.Component {
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-map.svg" alt="point" />
                 </div>
-                <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
-                  <span itemProp="streetAddress">Kulparkivska St, 59</span>
-                </a>
-                <i>
-                  <span itemProp="addressLocality">Lviv</span>
-,
-                  {' '}
-                  <span itemProp="addressRegion">Ukraine</span>
-                </i>
+                <div>
+                  <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
+                    <span itemProp="streetAddress">Kulparkivska St, 59</span>
+                  </a>
+                  <i>
+                    <span itemProp="addressLocality">Lviv</span>
+  ,
+                    {' '}
+                    <span itemProp="addressRegion">Ukraine</span>
+                  </i>
+                </div>
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-mail.svg" alt="mail" />
                 </div>
-                <a href="mailto:business@keenethics.com">business@keenethics.com</a>
-                <i>
-                  Drop Us a Letter or
-                  {' '}
-                  <a href="skype:maxsav28?chat" className="skype-link">Call</a>
-                </i>
+                <div>
+                  <a href="mailto:business@keenethics.com">business@keenethics.com</a>
+                  <i>
+                    Drop Us a Letter or
+                    {' '}
+                    <a href="skype:maxsav28?chat" className="skype-link">Call</a>
+                  </i>
+                </div>
               </div>
               <div className="contact-item">
                 <div className="contact-item-icon">
                   <img src="/static/images/svg/icon-tel.svg" alt="phone" />
                 </div>
-                <a href="tel:+380968147266"><span itemProp="telephone">+38 (096) 814 72 66</span></a>
-                <i>Give Us a Call</i>
+                <div>
+                  <a href="tel:+380968147266"><span itemProp="telephone">+38 (096) 814 72 66</span></a>
+                  <i>Give Us a Call</i>
+                </div>
+              </div>
+              <div className="contact-item">
+                <div className="contact-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 9 6">
+                    <rect fill="#21468B" width="9" height="6" />
+                    <rect fill="#FFF" width="9" height="4" />
+                    <rect fill="#AE1C28" width="9" height="2" />
+                  </svg>
+                </div>
+                <div>
+                  <a href="https://nl.keenethics.com" target="_blank" rel="noopener noreferrer">nl.keenethics.com</a>
+                  <i>Switch to Dutch version</i>
+                </div>
               </div>
             </div>
           </div>
