@@ -55,7 +55,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 800;
+      z-index: 9999;
       @include visible(true);
     }
   };
