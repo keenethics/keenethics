@@ -223,12 +223,7 @@ const postsDatePair = [
     createdAt: 1563436800000,
     filename: 'sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking.md',
     href: '/blog/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking',
-  },
-  {
-    createdAt: 1563440400000,
-    filename: 'learn-how-ai-can-revolutionize-your-educational-business.md',
-    href: '/blog/learn-how-ai-can-revolutionize-your-educational-business',
-  },
+  }
 ];
 
 module.exports.postsDatePair = postsDatePair;
