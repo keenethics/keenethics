@@ -396,6 +396,12 @@ div.suggestion {
     @include breakpoint(mobile) {
       margin: 20px auto 0;
     }
+
+    button.btn.btn-schedule {
+      background-image: none;
+      background-color: rgb(47, 55, 190);
+      box-shadow: none;
+    }
   }
 }
 
