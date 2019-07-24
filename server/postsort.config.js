@@ -219,6 +219,11 @@ const postsDatePair = [
     filename: 'how-create-e-learning-app-brings-value.md',
     href: '/blog/how-create-e-learning-app-brings-value',
   },
+  {
+    createdAt: 1563436800000,
+    filename: 'sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking.md',
+    href: '/blog/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking',
+  }
 ];
 
 module.exports.postsDatePair = postsDatePair;
