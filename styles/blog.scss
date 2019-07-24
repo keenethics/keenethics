@@ -486,7 +486,6 @@ div.person {
 }
 
 .related-posts {
-  background-color: #f3f3f3;
   padding: 40px 130px;
 
   @include breakpoint(md-max) {
@@ -495,14 +494,31 @@ div.person {
   @include breakpoint(md) {
     padding: 0;
   }
-
+  hr {
+    // border-top: 1px solid #e1e1e1;
+    height: 1px;
+    background-color: #e1e1e1;
+    border: none;
+  }
   .blog-page-posts {
     padding: 0;
   }
 
   h3 {
-    @media (max-width: 1011px) {
-      text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: inline-block;
+      margin-left: auto;
+      color: #12233d;
+      font-family: Raleway;
+      font-size: 14px;
     }
   }
 }

@@ -286,16 +286,20 @@ export default class Post extends React.Component {
           </article>
 
           <footer>
-            {!!relatedPosts.length && (
-              <div className="related-posts">
-                <div className="content-block">
-                  <h3>Check out our articles:</h3>
+            <div className="related-posts">
+              <div className="content-block">
+                <hr />
+                <div className="related-posts-header">
+                  {!!relatedPosts.length && <h3>Check out our articles:</h3>}
+                  <a href="/blog">Back to blog</a>
+                </div>
+                {!!relatedPosts.length && (
                   <div className="blog-page-posts">
                     {relatedPosts.map(post => postCardComponent(post && post.fields))}
                   </div>
-                </div>
+                )}
               </div>
-            )}
+            </div>
           </footer>
         </div>
       </Layout>
