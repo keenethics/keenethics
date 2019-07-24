@@ -35,7 +35,6 @@ export default () => {
 
   return (
     <div className="subscribe-panel">
-      <img src="/static/images/mailbox_icon.png" alt="Mailbox icon" />
       <h4>Don't miss updates from us!</h4>
       <div className="subscribe-panel-input-group">
         <input
@@ -47,8 +46,8 @@ export default () => {
             success,
           })}
         />
-        <button onClick={handleClick} type="button" className="btn sharp-corners no-shadow">
-          Subscribe now
+        <button onClick={handleClick} type="button" className="btn no-shadow">
+          Subscribe
         </button>
       </div>
     </div>

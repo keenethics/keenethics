@@ -486,14 +486,12 @@ div.person {
 }
 
 .subscribe-panel {
-  border-top: 1px solid #e1e1e1;
-  padding-top: 32px;
   margin-top: 12px;
 
-  & > img {
-    height: 70px;
-    width: 70px;
+  @include breakpoint(md) {
+    padding: 0 130px;
   }
+
   h4 {
     color: #df544d;
     font-family: Raleway;
@@ -507,7 +505,7 @@ div.person {
     display: flex;
     position: relative;
 
-    @include breakpoint(sm-max) {
+    @include breakpoint(mobile) {
       flex-wrap: wrap;
     }
 
@@ -516,16 +514,22 @@ div.person {
       border: 1px solid #e1e1e1;
       background-color: #ebebeb;
       flex-grow: 1;
+      border-radius: 35px 0 0 35px;
+      margin-right: -40px;
+      z-index: 0;
 
       color: #84827f;
       font-family: "Open Sans";
       font-weight: 400;
       line-height: 1;
-      padding: 10px 28px;
+      padding: 10px 40px 10px 28px;
       font-size: 12px;
 
-      @include breakpoint(sm-max) {
+      @include breakpoint(mobile) {
         width: 100%;
+        margin: 0;
+        border-radius: 35px;
+        padding: 10px 28px;
       }
 
       &.error {
@@ -541,9 +545,11 @@ div.person {
         animation-iteration-count: 1;
       }
     }
-    button {
-      margin-left: 10px;
-      @include breakpoint(sm-max) {
+    button.btn {
+      z-index: 0;
+      padding: 16px 45px;
+      //   margin-left: 10px;
+      @include breakpoint(mobile) {
         margin: 10px 0 0 0;
         flex-grow: 1;
       }
