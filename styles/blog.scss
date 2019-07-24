@@ -457,7 +457,7 @@ div.person {
 
 .useful-readings {
   display: flex;
-  padding: 27px 0;
+  padding: 27px 10px 27px 0;
   margin-bottom: 30px;
   background-color: #f3f3f3;
 
@@ -465,6 +465,17 @@ div.person {
     display: flex;
     align-items: center;
     padding: 0 33px;
+
+    @include breakpoint(sm-max) {
+      align-items: flex-start;
+      padding: 0 10px 0 10px;
+    }
+
+    img {
+      @include breakpoint(sm-max) {
+        width: 37px;
+      }
+    }
   }
   &-content {
     h4 {
