@@ -171,9 +171,9 @@ const bodyOptions = {
     },
     'embedded-entry-inline': node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
-        const { image, name, title } = node.data.target.fields;
+        const { image, name, position } = node.data.target.fields;
 
-        return personComponent({ image, name, position: title });
+        return personComponent({ image, name, position });
       }
 
       return null;
