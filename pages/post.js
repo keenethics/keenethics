@@ -272,7 +272,7 @@ export default class Post extends React.Component {
             <header>
               <h1 className="blog-post-page-content-title">{title}</h1>
 
-              {subtitle && <p className="blog-post-page-content-subtitle">{subtitle}</p>}
+              {subtitle && <h2 className="blog-post-page-content-subtitle">{subtitle}</h2>}
               {description && <p className="blog-post-page-content-description">{description}</p>}
               {heroSrc && imageComponent({ src: heroSrc, title: heroTitle })}
             </header>

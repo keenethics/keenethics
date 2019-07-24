@@ -1,5 +1,38 @@
 @import "./helpers/responsive-mixin";
 
+.h1-title {
+  font-size: 34pt;
+  line-height: 44pt;
+}
+.h2-subtitle {
+  font-size: 24pt;
+  line-height: 32pt;
+}
+.h2-title {
+  font-size: 24pt;
+  line-height: 32pt;
+  font-weight: 600;
+}
+.p-normal {
+  font-size: 18pt;
+  line-height: 28pt;
+  font-weight: 400;
+}
+.auxiliary {
+  font-size: 14pt;
+  line-height: 18pt;
+  font-weight: 400;
+}
+.tags-text {
+  font-size: 14pt;
+  font-weight: 600;
+  line-height: 1;
+}
+.link-text {
+  font-size: 14pt;
+  font-weight: 400;
+}
+
 .blog-page {
   position: relative;
   min-height: 100%;
@@ -94,17 +127,15 @@
     flex-wrap: wrap;
 
     .post-tag {
+      @extend .tags-text;
       font-family: "Open Sans";
-      padding: 7px 20px;
+      padding: 5.5px 20px;
       margin-right: 25px;
       display: inline-block;
       font-size: 0.85em;
-      line-height: 1;
       border-radius: 2px;
       background-color: #d93a4223;
       color: #d42e2d;
-      font-size: 14px;
-      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.56px;
       @include breakpoint(sm-max) {
@@ -162,10 +193,9 @@
   }
   &-content {
     p {
+      @extend .p-normal;
       color: #12233d;
       font-family: Raleway;
-      font-size: 18px;
-      font-weight: 400;
       margin-bottom: 30px;
       text-align: justify;
     }
@@ -174,6 +204,9 @@
       margin: 0 0 30px 0;
       font-weight: 600;
       text-align: left;
+    }
+    h2 {
+      @extend .h2-title;
     }
     h4 {
       margin-bottom: 5px;
@@ -186,10 +219,9 @@
         max-width: 100%;
       }
       figcaption {
+        @extend .auxiliary;
         color: #4c4d51;
         font-family: Raleway;
-        font-size: 14px;
-        font-weight: 400;
         line-height: 1;
         margin-top: 5px;
         text-align: center;
@@ -215,6 +247,7 @@
       padding-left: 24px;
 
       li {
+        @extend .p-normal;
         padding: 0;
         margin-bottom: 4px;
 
@@ -231,17 +264,18 @@
       color: #12233d;
     }
 
-    &-title {
+    h1#{&}-title {
+      @extend .h1-title;
       color: #000000;
       font-family: Raleway;
-      font-size: 32px;
       font-weight: 700;
       margin-bottom: 17px;
     }
-    &-subtitle {
+    h2#{&}-subtitle {
+      @extend .h2-subtitle;
       color: #4c4d51;
       font-family: Raleway;
-      font-size: 22px;
+      font-weight: 400;
       font-style: italic;
       margin-bottom: 41px;
     }
@@ -373,8 +407,6 @@ div.suggestion {
   }
 
   p {
-    font-size: 16px;
-    font-weight: 500;
     letter-spacing: 0.18px;
     font-style: italic;
     text-align: justify;
@@ -390,6 +422,7 @@ div.suggestion {
   }
 
   a.calendly-goal {
+    @extend .link-text;
     display: inline-block;
     margin-left: auto;
 
