@@ -1,21 +1,19 @@
 @import "./helpers/responsive-mixin";
 
 .h1-title {
-  font-size: 34pt;
-  line-height: 44pt;
+  font-size: 34px;
+  font-weight: 700;
 }
 .h2-subtitle {
-  font-size: 24pt;
-  line-height: 32pt;
+  font-size: 24px;
+  font-style: italic;
 }
 .h2-title {
-  font-size: 24pt;
-  line-height: 32pt;
+  font-size: 24px;
   font-weight: 600;
 }
 .p-normal {
-  font-size: 18pt;
-  line-height: 28pt;
+  font-size: 18px;
   font-weight: 400;
 }
 .auxiliary {
@@ -299,6 +297,11 @@ blockquote {
   position: relative;
   p {
     line-height: 1.4 !important;
+    color: #12233d;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 26px;
   }
 
   @include breakpoint(sm-max) {
@@ -394,22 +397,26 @@ div.person {
 
 div.suggestion {
   padding: 27px 35px;
-  box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  border-radius: 4px;
+  background-color: #f2f3f5;
 
   h5 {
+    font-size: 22px;
+    font-weight: 700;
     color: #12233d;
     font-family: Raleway;
-    font-size: 18px;
     font-style: italic;
-    font-weight: 600;
     margin-bottom: 30px;
+    color: #12233d;
   }
 
   p {
     letter-spacing: 0.18px;
     font-style: italic;
     text-align: justify;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    line-height: 26px;
   }
 
   .suggestor-wrapper {
@@ -432,8 +439,14 @@ div.suggestion {
 
     button.btn.btn-schedule {
       background-image: none;
-      background-color: rgb(47, 55, 190);
+      background-color: #12233d;
       box-shadow: none;
+    }
+  }
+
+  .person {
+    img {
+      border: 4px solid white;
     }
   }
 }
