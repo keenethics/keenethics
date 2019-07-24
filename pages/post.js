@@ -142,7 +142,7 @@ const bodyOptions = {
           suggesterName,
           suggesterPosition,
           suggestionTitle,
-          suggestorPhoto,
+          suggesterPhoto,
           linkedIn,
         } = node.data.target.fields;
         return (
@@ -151,7 +151,7 @@ const bodyOptions = {
             {documentToReactComponents(body)}
             <div className="suggestor-wrapper">
               {personComponent({
-                image: suggestorPhoto,
+                image: suggesterPhoto,
                 name: suggesterName,
                 position: suggesterPosition,
                 linkedIn,
