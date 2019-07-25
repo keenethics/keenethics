@@ -4,7 +4,7 @@ Subtitle: SDCR Report lists KeenEthics in Top Software Development Companies Ran
 Meta title: SDCR Report lists KeenEthics in Top Software Development Companies Ranking - KeenEthics Blog
 Meta description: SoftwareDevelopmentCompany.co ranked KeenEthics as one of the Top App Development Companies – CISION
 Categories: From KeenEthics
-Preview image: /static/posts/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking-prew.jpg
+Preview image: /static/posts/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking-prew.jpg
 
 <div style="text-align: center">
   <div style="font-size: 22px; margin: 28px 0 15px;font-weight: 600;">SDCR Report lists KeenEthics in Top Software Development Companies Ranking</div>
@@ -12,7 +12,7 @@ Preview image: /static/posts/sdcr-report-lists-keenethics-in-top-softwar-develop
 </div>
 
 <div class="text-center" style="margin: 40px 0">
-  <img src="/static/posts/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking.jpg" alt="Top App Development Companies">
+  <img src="/static/posts/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking.jpg" alt="Top App Development Companies">
 </div>
 
 <p>KeenEthics is proud to appear in the Top Software Development Companies ranking, compiled by <a href="//www.softwaredevelopmentcompany.co/about/" target="_blank" rel="noopener noreferrer nofollow">SoftwareDevelopmentCompany.co</a> and announced on <a href="http://www.prweb.com/releases/the_top_advantages_of_custom_software_development_according_to_report_from_sdcr_top_software_development_companies/prweb16434505.htm" target="_blank" rel="noopener noreferrer nofollow">CISION</a>*.</p>
