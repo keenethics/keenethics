@@ -67,7 +67,6 @@ class EstimateForm extends React.Component {
       const state = {
         isPending: false,
         status: json.status.toString(),
-        notifyIsVisible: true,
       };
 
       if (json && json.errorField) {
@@ -103,10 +102,10 @@ class EstimateForm extends React.Component {
       emailEstimate,
       name,
       services,
-      // pm,
+      pm,
     } = this.state;
 
-    // console.log(pm);
+    console.log(pm);
 
     const { isPending, status } = this.props;
     return (
