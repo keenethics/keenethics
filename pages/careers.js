@@ -284,11 +284,9 @@ export default class Careers extends React.Component {
               <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
                 {careers.map(item => (
                   <div className="careers-page-slider-ship" key={item.position}>
-                    { item.image && (
-                      <div className="careers-page-slider-ship-img">
-                        <img src={`/static/images/ships/${item.image}.svg`} className={item.image} alt={item.position} />
-                      </div>
-                    )}
+                    <div className="careers-page-slider-ship-img">
+                      <img src={`/static/images/ships/${item.image}.svg`} className={item.image} alt={item.position} />
+                    </div>
                     <span>{item.position}</span>
                   </div>
                 ))}
