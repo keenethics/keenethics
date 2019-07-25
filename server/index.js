@@ -134,7 +134,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com',
+      to: 'max.soloviov@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
     };
@@ -240,7 +240,7 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com',
+      to: 'max.soloviov@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
     };
@@ -313,7 +313,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'careers@keenethics.com',
+      to: 'max.soloviov@keenethics.com',
       subject: `Hiring: ${position.value}`,
       html,
     };
