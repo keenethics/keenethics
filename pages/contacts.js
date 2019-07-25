@@ -8,6 +8,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
+import Notify from '../components/notify/notify';
 
 class Contacts extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Contacts extends React.Component {
       isPending: false,
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
+      notifyIsVisible: false,
     };
     this.onClick = this.onClick.bind(this);
   }
@@ -33,10 +35,12 @@ class Contacts extends React.Component {
       activeContactForm,
       isPending,
       status,
+      notifyIsVisible,
     } = this.state;
 
     return (
       <Layout>
+        {notifyIsVisible && <Notify title="Thank you! Your request has been sent" updateState={state => this.setState(state)} />}
         <div className="contacts-page">
           <div className="contacts-socket">
             <div className="title-page">
