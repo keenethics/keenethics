@@ -144,6 +144,7 @@ const bodyOptions = {
           suggestionTitle,
           suggesterPhoto,
           linkedIn,
+          buttonText,
         } = node.data.target.fields;
         return (
           <div className="suggestion">
@@ -162,7 +163,7 @@ const bodyOptions = {
                 rel="noopener noreferrer"
                 className="calendly-goal"
               >
-                <button className="btn btn-schedule">Schedule a call</button>
+                <button className="btn btn-schedule">{buttonText || 'Schedule a call'}</button>
               </a>
             </div>
           </div>
