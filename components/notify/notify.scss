@@ -1,0 +1,37 @@
+.notify {
+   position: absolute;
+   z-index: 99999;
+   background: rgba($color: #fff, $alpha: .95);
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+   padding: 15px;
+   font-size: 20px;
+   border-radius: 5px;
+   text-align: center;
+   line-height: 1.3;
+   width: 80%;
+   animation: notify 2s ease-in-out forwards;
+   @media (min-width: 500px) {
+      white-space: nowrap;
+      width: auto;
+   }
+}
+@keyframes notify {
+   from {
+      transform: translateX(-50%) translateY(-100%);
+   }
+   15% {
+      transform: translateX(-50%) translateY(35px);
+   }
+   20% {
+      transform: translateX(-50%) translateY(30px);
+   }
+   90% {
+      transform: translateX(-50%) translateY(30px);
+   }
+   to {
+      transform: translateX(-50%) translateY(-100%);
+   }
+}
