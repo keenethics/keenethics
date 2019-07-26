@@ -379,7 +379,7 @@ Start
               </p>
             </div>
           */}
-          {status && <div className="form-status">{status}</div>}
+          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"
