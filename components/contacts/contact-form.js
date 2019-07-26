@@ -54,6 +54,7 @@ class ContactForm extends React.Component {
         const state = {
           isPending: false,
           status: json.status.toString(),
+          notifyIsVisible: true,
         };
 
         if (json && json.errorField) {
