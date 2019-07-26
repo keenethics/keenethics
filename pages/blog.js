@@ -14,8 +14,6 @@ import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 import { getPostsList } from '../lib/contentful';
 const _ = require('lodash');
 
-const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
-
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
     existCategory =>
