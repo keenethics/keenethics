@@ -197,7 +197,7 @@ export default class Post extends React.Component {
 
     if (!items || !Array.isArray(items) || !items[0]) return {};
 
-    const { tags, slug } = items[0].fields;
+    const { tags = [], slug } = items[0].fields;
     const relatedPosts = tags.length
       ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
       : [];
