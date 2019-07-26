@@ -191,8 +191,8 @@ export default class Post extends React.Component {
   }
 
   static async getInitialProps(p) {
-    const { name } = p.query;
-    const response = await getPostBySlug(name);
+    const { name, preview } = p.query;
+    const response = await getPostBySlug({ slug: name, preview });
     const { items } = response || {};
 
     if (!items || !Array.isArray(items) || !items[0]) return {};

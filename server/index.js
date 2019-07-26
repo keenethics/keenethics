@@ -423,6 +423,8 @@ app.prepare().then(() => {
   });
 
   server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
+  
+  server.get('/post-preview/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name, preview: true }));
 
   server.get('/api/astronauts', async (req, res) => {
     const team = await getTeam();
