@@ -71,7 +71,7 @@ class EstimateForm extends React.Component {
       };
 
       if (json && json.errorField) {
-        state.notifyErrorMessage = json.status.toString();
+        state.notifyMessage = json.status.toString();
         Object.assign(state, json.errorField);
       }
 

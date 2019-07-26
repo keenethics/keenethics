@@ -20,7 +20,7 @@ class Contacts extends React.Component {
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
       notifyIsVisible: false,
-      notifyErrorMessage: null,
+      notifyMessage: null,
     };
     this.onClick = this.onClick.bind(this);
   }
@@ -37,15 +37,14 @@ class Contacts extends React.Component {
       isPending,
       status,
       notifyIsVisible,
-      notifyErrorMessage,
+      notifyMessage,
     } = this.state;
 
     return (
       <Layout>
         {notifyIsVisible && (
           <Notify
-            successTitle="Thank you! Your request has been sent"
-            notifyErrorMessage={notifyErrorMessage}
+            notifyMessage={notifyMessage}
             updateState={state => this.setState(state)}
           />
         )}
