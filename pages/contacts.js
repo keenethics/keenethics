@@ -20,6 +20,7 @@ class Contacts extends React.Component {
       status: '',
       activeContactForm: query.activeForm !== 'estimate',
       notifyIsVisible: false,
+      notifyErrorMessage: null,
     };
     this.onClick = this.onClick.bind(this);
   }
@@ -36,11 +37,18 @@ class Contacts extends React.Component {
       isPending,
       status,
       notifyIsVisible,
+      notifyErrorMessage,
     } = this.state;
 
     return (
       <Layout>
-        {notifyIsVisible && <Notify title="Thank you! Your request has been sent" updateState={state => this.setState(state)} />}
+        {notifyIsVisible && (
+          <Notify
+            successTitle="Thank you! Your request has been sent"
+            notifyErrorMessage={notifyErrorMessage}
+            updateState={state => this.setState(state)}
+          />
+        )}
         <div className="contacts-page">
           <div className="contacts-socket">
             <div className="title-page">
