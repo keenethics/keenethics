@@ -6,9 +6,9 @@ export default function notyfy({
   updateState,
   notifyErrorMessage,
 }) {
-  // setTimeout(() => {
-  //   updateState({ notifyIsVisible: false, notifyErrorMessage: null });
-  // }, 2000);
+  setTimeout(() => {
+    updateState({ notifyIsVisible: false, notifyErrorMessage: null });
+  }, 2000);
 
   return (
     <div className="notify" style={notifyErrorMessage ? { background: 'rgba(255, 0, 51, .7)', color: '#fff' } : null}>

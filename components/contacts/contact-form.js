@@ -163,7 +163,7 @@ class ContactForm extends React.Component {
               onChange={this.onChange}
             />
           </div>
-          {status && <div className="form-status">{status}</div>}
+          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"
