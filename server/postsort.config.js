@@ -221,8 +221,8 @@ const postsDatePair = [
   },
   {
     createdAt: 1563436800000,
-    filename: 'sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking.md',
-    href: '/blog/sdcr-report-lists-keenethics-in-top-softwar-development-companies-ranking',
+    filename: 'sdcr-report-lists-keenethics-in-top-software-development-companies-ranking.md',
+    href: '/blog/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking',
   }
 ];
 
