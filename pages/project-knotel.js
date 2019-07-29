@@ -16,9 +16,7 @@ const ProjectKnotel = () => (
             <div className="project-content-summary-inner">
               <h2 className="title">Knotel</h2>
               <h3 className="duration">
-                <span>Duration:</span>
-                {' '}
-In development since April 2016
+                The Knotel platform was a 3-year project that was finished in 2018.
               </h3>
               <p className="description">
                 Knotel - the Innovative Platform for Workspace Management
@@ -105,6 +103,15 @@ In development since April 2016
               Although Knotel is a relatively new company, they see further growth, and
               more opportunities are yet to come for this aspiring venture.
             </p>
+            <a
+              href="https://www.knotel.com/"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              className="link"
+              style={{ background: baseColor }}
+            >
+              Look at the project
+            </a>
           </div>
           <Navigation />
         </div>

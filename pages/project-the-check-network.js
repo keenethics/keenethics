@@ -114,15 +114,6 @@ const ProjectTheCheckNetwork = () => (
               businesses, web stores, and brands as
               it enables them to achieve much better results.
             </p>
-            <a
-              href="http://thechecknetwork.com"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
           </div>
           <Navigation />
         </div>

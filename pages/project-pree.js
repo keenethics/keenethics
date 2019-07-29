@@ -34,6 +34,7 @@ const ProjectPrix = () => (
               title="Ahmed-Jacob Aly, Germany"
               photo="static/portfolio/client-pree.jpg"
               feedback="Committed team for a starter."
+              noClutchLink
             />
             <div className="title">What is the purpose of the app?</div>
             <p>
@@ -204,15 +205,6 @@ const ProjectPrix = () => (
               alt="Pree site"
               className="image-gaps"
             />
-            <a
-              href="https://www.prix.ai"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
           </div>
           <Navigation />
         </div>
