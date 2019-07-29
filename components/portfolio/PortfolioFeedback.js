@@ -7,6 +7,7 @@ const PortfolioFeedback = ({
   feedback,
   link,
   style,
+  noClutchLink,
 }) => (
   <div className="feedback">
     {
@@ -21,16 +22,18 @@ const PortfolioFeedback = ({
     }
     <div className="feedback--body">
       <p className="feedback--client-quote">{feedback}</p>
-      <a
-        href={link || '//clutch.co/profile/keenethics'}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="feedback--link"
-      >
-        {link ? 'See full review' : 'See all reviews'}
-        {' '}
-        <img src="/static/portfolio/icons/clutch.png" alt="clutch" />
-      </a>
+      {!noClutchLink && (
+        <a
+          href={link || '//clutch.co/profile/keenethics'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="feedback--link"
+        >
+          {link ? 'See full review' : 'See all reviews'}
+          {' '}
+          <img src="/static/portfolio/icons/clutch.png" alt="clutch" />
+        </a>
+      )}
     </div>
   </div>
 );
@@ -43,10 +46,12 @@ PortfolioFeedback.propTypes = {
   feedback: PropTypes.string.isRequired,
   link: PropTypes.string,
   style: PropTypes.object,
+  noClutchLink: PropTypes.bool,
 };
 PortfolioFeedback.defaultProps = {
   title: '',
   photo: '',
   link: '',
   style: { titleWidth: '160px' },
+  noClutchLink: false,
 };
