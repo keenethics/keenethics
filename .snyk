@@ -1,0 +1,32 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - '@zeit/next-sass > sass-loader > async > lodash':
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > autodll-webpack-plugin > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > styled-jsx > babel-types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > autodll-webpack-plugin > webpack-merge > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/core > @babel/types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - nodemailer-mailgun-transport > mailgun-js > async > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/core > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/plugin-proposal-class-properties > @babel/helper-replace-supers > @babel/types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/plugin-proposal-class-properties > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
+    - next > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-29T12:10:21.730Z'
