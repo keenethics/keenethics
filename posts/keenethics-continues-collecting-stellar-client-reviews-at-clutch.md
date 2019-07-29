@@ -106,7 +106,7 @@ Since 2015, KeenEthics has been offering its customers the following __high-qual
 
 KeenEthics is also recognized as the Top Rated Upwork Agency, the Top App Development Company of 2018 by Business of Apps, and the Top Software Development Company by SDCR.
 
-We have been featured as <a href="https://www.softwaredevelopmentcompany.co/software-development-companies/" target="_blank" rel="noopener noreferrer nofollow">Top Software Development Company</a> on SoftwareDevelopmentCompany.co
+<p>We have been featured as <a href="https://www.softwaredevelopmentcompany.co/software-development-companies/" target="_blank" rel="noopener noreferrer nofollow">Top Software Development Company</a> on SoftwareDevelopmentCompany.co</p>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 10px -15px 40px -15px 40px -15px; align-items: center;">
   <div style="padding: 15px">
