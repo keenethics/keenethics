@@ -125,7 +125,9 @@ KeenEthics is also recognized as the Top Rated Upwork Agency, the Top App Develo
     </a>
   </div>
   <div style="padding: 15px">
-    <img style="height: 150px;" src="/static/posts/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking.jpg" alt="top software development companies" />
+    <a href="//www.softwaredevelopmentcompany.co/software-development-companies/" target="_blank" rel="noopener noreferrer nofollow">
+      <img style="height: 150px;" src="/static/posts/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking.jpg" alt="top software development companies" />
+    </a>
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-Author: Tetiana Matviiok
+Author: Tetiana Matviiok, Max Savonin
 Title: What Is Better: Developing an Educational App or Buying a Ready-made One?
 Subtitle: What Is Better: Developing an Educational App or Buying a Ready-made One? - KeenEthics Blog
 Meta title: What Is Better: Developing an Educational App or Buying a Ready-made One? - KeenEthics Blog

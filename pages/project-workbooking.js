@@ -27,9 +27,6 @@ const ProjectWorkbooking = () => (
             <Background />
           </div>
           <div className="project-content-more">
-            <PortfolioFeedback
-              feedback="I am really impressed with the different tools and tips that we also got to bring with us, extremely useful."
-            />
             <div className="project-content-chapter">
               <p className="chapter-title">What is the purpose of the app?</p>
               <p className="chapter-paragraph">Workbooking introduces new service with benefits for all audiences.</p>
