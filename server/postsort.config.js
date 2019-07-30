@@ -199,11 +199,11 @@ const postsDatePair = [
     filename: '1560358800000-business-of-apps.md',
     href: '/blog/1560358800000-business-of-apps',
   },
-  {
-    createdAt: 1560934800000,
-    filename: '1560934800000-buy-or-develop-educational-app.md',
-    href: '/blog/1560934800000-buy-or-develop-educational-app',
-  },
+  // {
+  //   createdAt: 1560934800000,
+  //   filename: '1560934800000-buy-or-develop-educational-app.md',
+  //   href: '/blog/1560934800000-buy-or-develop-educational-app',
+  // },
   {
     createdAt: 1561464000000,
     filename: 'top-10-ways-an-educational-chatbot-can-revolutionize-your-business.md',
