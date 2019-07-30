@@ -40,6 +40,7 @@ const ProjectMyGrassGrowth = () => (
               photo="/static/portfolio/client-my-grass-growth.jpeg"
               feedback="Despite the physical distance and never meeting each other in person, KeenEthics has built a complicated dairy industry related webapp for us. I found the cooperation in the development of this tool good, honest and straightforward."
               style={{ titleWidth: '110px' }}
+              noClutchLink
             />
             <p>
               The main purpose of the app is to show a prognosis for the farmer&apos;s and help them

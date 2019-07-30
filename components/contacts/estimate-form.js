@@ -67,9 +67,11 @@ class EstimateForm extends React.Component {
       const state = {
         isPending: false,
         status: json.status.toString(),
+        notifyIsVisible: true,
       };
 
       if (json && json.errorField) {
+        state.notifyMessage = json.status.toString();
         Object.assign(state, json.errorField);
       }
 
@@ -102,10 +104,10 @@ class EstimateForm extends React.Component {
       emailEstimate,
       name,
       services,
-      pm,
+      // pm,
     } = this.state;
 
-    console.log(pm);
+    // console.log(pm);
 
     const { isPending, status } = this.props;
     return (
@@ -377,7 +379,7 @@ Start
               </p>
             </div>
           */}
-          {status && <div className="form-status">{status}</div>}
+          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"

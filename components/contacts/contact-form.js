@@ -54,9 +54,11 @@ class ContactForm extends React.Component {
         const state = {
           isPending: false,
           status: json.status.toString(),
+          notifyIsVisible: true,
         };
 
         if (json && json.errorField) {
+          state.notifyMessage = json.status.toString();
           Object.assign(state, json.errorField);
         }
 
@@ -161,7 +163,7 @@ class ContactForm extends React.Component {
               onChange={this.onChange}
             />
           </div>
-          {status && <div className="form-status">{status}</div>}
+          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"
