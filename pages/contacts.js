@@ -47,30 +47,12 @@ class Contacts extends React.Component {
               <h1 className="title">Contact Us</h1>
             </div>
             <div
-              className={activeContactForm ? 'contacts-block' : 'estimate-block-background'}
+              className={`contact-us-form-wrapper ${
+                activeContactForm ? 'contacts-block' : 'estimate-block-background'
+              }`}
               itemScope
               itemType="http://schema.org/Organization"
             >
-              <button
-                onClick={this.onClick}
-                name="contact-form-btn"
-                className={classnames('contacts-form-btn contact-form-btn', {
-                  disabled: !activeContactForm,
-                })}
-                type="button"
-              >
-                Say Hello
-              </button>
-              <button
-                onClick={this.onClick}
-                name="estimate-form-btn"
-                className={classnames('contacts-form-btn estimate-form-btn', {
-                  disabled: activeContactForm,
-                })}
-                type="button"
-              >
-                Estimate your project
-              </button>
               <address>
                 <ul className="contacts-list">
                   <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
@@ -123,19 +105,43 @@ class Contacts extends React.Component {
                   </li>
                 </ul>
               </address>
-              {this.state.activeContactForm ? (
-                <ContactForm
-                  isPending={isPending}
-                  status={status}
-                  updateState={state => this.setState(state)}
-                />
-              ) : (
-                <EstimateForm
-                  isPending={isPending}
-                  status={status}
-                  updateState={state => this.setState(state)}
-                />
-              )}
+              <div className="active-form-wrapper">
+                <div className="btn-group">
+                  <button
+                    onClick={this.onClick}
+                    name="contact-form-btn"
+                    className={classnames('button contacts-form-btn contact-form-btn', {
+                      disabled: !activeContactForm,
+                    })}
+                    type="button"
+                  >
+                    Say Hello
+                  </button>
+                  <button
+                    onClick={this.onClick}
+                    name="estimate-form-btn"
+                    className={classnames('button contacts-form-btn estimate-form-btn', {
+                      disabled: activeContactForm,
+                    })}
+                    type="button"
+                  >
+                    Estimate your project
+                  </button>
+                </div>
+                {this.state.activeContactForm ? (
+                  <ContactForm
+                    isPending={isPending}
+                    status={status}
+                    updateState={state => this.setState(state)}
+                  />
+                ) : (
+                  <EstimateForm
+                    isPending={isPending}
+                    status={status}
+                    updateState={state => this.setState(state)}
+                  />
+                )}
+              </div>
             </div>
           </div>
           <Background />
