@@ -49,9 +49,9 @@ class EstimateForm extends React.Component {
       value: '',
       error: false,
     },
-  }
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     const { updateState } = this.props;
 
@@ -63,25 +63,33 @@ class EstimateForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(this.state),
-    }).then(response => response.json()).then((json) => {
-      const state = {
-        isPending: false,
-        status: json.status.toString(),
-        notifyIsVisible: true,
-      };
+    })
+      .then(response => response.json())
+      .then(json => {
+        const state = {
+          isPending: false,
+          status: json.status.toString(),
+          notifyIsVisible: true,
+        };
 
-      if (json && json.errorField) {
-        state.notifyMessage = json.status.toString();
-        Object.assign(state, json.errorField);
-      }
+        if (json && json.errorField) {
+          state.notifyMessage = json.status.toString();
+          Object.assign(state, json.errorField);
+        }
 
-      this.setState(json.errorField);
+        this.setState(json.errorField);
 
-      updateState(state);
-    });
-  }
+        updateState(state);
+      });
+  };
 
-  onChange = ({ target: { name, value, form: { services } } }) => {
+  onChange = ({
+    target: {
+      name,
+      value,
+      form: { services },
+    },
+  }) => {
     const checkedCheckboxesValues = [...services]
       .filter(({ checked }) => checked)
       // eslint-disable-next-line no-shadow
@@ -97,17 +105,10 @@ class EstimateForm extends React.Component {
         },
       });
     }
-  }
+  };
 
   render = () => {
-    const {
-      emailEstimate,
-      name,
-      services,
-      // pm,
-    } = this.state;
-
-    // console.log(pm);
+    const { emailEstimate, name, services } = this.state;
 
     const { isPending, status } = this.props;
     return (
@@ -115,9 +116,7 @@ class EstimateForm extends React.Component {
         <form onSubmit={this.onSubmit} className="estimate-form-inputs">
           <div className="contacts-title estimate-title">let us Estimate your project</div>
           <div className="question-title">
-            <span className="question-number">01</span>
-            {' '}
-Stage
+            <span className="question-number">01</span> Stage
           </div>
           <div className="estimate-input-cols">
             <div className="input-radio-wrap">
@@ -131,7 +130,7 @@ Stage
               />
               <label htmlFor="new" className="label-for-radio-btn">
                 <p className="radio-lable-title">New app</p>
-                  to be built from scratch
+                to be built from scratch
               </label>
             </div>
             <div className="input-radio-wrap">
@@ -145,14 +144,12 @@ Stage
               />
               <label htmlFor="existing" className="label-for-radio-btn">
                 <p className="radio-lable-title">Existing app</p>
-                  continue development
+                continue development
               </label>
             </div>
           </div>
           <div className="question-title">
-            <span className="question-number">02</span>
-            {' '}
-What services are you interested in?
+            <span className="question-number">02</span> What services are you interested in?
           </div>
           <div className="estimate-input-cols">
             <div className="input-checkbox-wrap">
@@ -269,9 +266,7 @@ What services are you interested in?
             />
           </div>
           <div className="question-title">
-            <span className="question-number">04</span>
-            {' '}
-Expected budget
+            <span className="question-number">04</span> Expected budget
           </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
@@ -284,9 +279,7 @@ Expected budget
             </div>
           </div>
           <div className="question-title">
-            <span className="question-number">05</span>
-            {' '}
-Timeframe
+            <span className="question-number">05</span> Timeframe
           </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
@@ -300,9 +293,7 @@ Timeframe
             </div>
           </div>
           <div className="question-title">
-            <span className="question-number">06</span>
-            {' '}
-Start
+            <span className="question-number">06</span> Start
           </div>
           <div className="estimate-input-cols">
             <div className="input-select-wrap">
@@ -366,32 +357,18 @@ Start
               />
             </div>
           </div>
-          {/*
-            <div className="form-footer">
-              <img
-                src="/static/images/touch-screen.png"
-                className="touch-screen"
-                alt="touch-screen"
-              />
-              <p className="form-footer-text">
-                Fill out additional information about your project and <span>get up to 50%</span>
-                &nbsp;discount for project specification’s elaboration - <a href="#">follow link</a>
-              </p>
-            </div>
-          */}
-          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"
               className={classnames('button button-send', { pending: isPending })}
             >
-              <img src="/static/images/svg/send.svg" alt="send" />
+              send
             </button>
           </div>
         </form>
       </div>
     );
-  }
+  };
 }
 EstimateForm.propTypes = {
   isPending: PropTypes.bool.isRequired,

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const handleStatusResponse = (response) => {
+const handleStatusResponse = response => {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -35,9 +35,9 @@ class ContactForm extends React.Component {
       value: '',
       error: false,
     },
-  }
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     const { updateState } = this.props;
 
@@ -49,8 +49,10 @@ class ContactForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(this.state),
-    }).then(handleStatusResponse)
-      .then(response => response.json()).then((json) => {
+    })
+      .then(handleStatusResponse)
+      .then(response => response.json())
+      .then(json => {
         const state = {
           isPending: false,
           status: json.status.toString(),
@@ -67,7 +69,7 @@ class ContactForm extends React.Component {
         updateState(state);
       })
       .catch(err => console.error(err));
-  }
+  };
 
   onChange = ({ target: { name, value } }) => {
     this.setState({
@@ -76,16 +78,10 @@ class ContactForm extends React.Component {
         error: '',
       },
     });
-  }
+  };
 
   render = () => {
-    const {
-      firstname,
-      lastname,
-      email,
-      phone,
-      message,
-    } = this.state;
+    const { firstname, lastname, email, phone, message } = this.state;
 
     const { isPending, status } = this.props;
     return (
@@ -163,19 +159,18 @@ class ContactForm extends React.Component {
               onChange={this.onChange}
             />
           </div>
-          {/* {status && <div className="form-status">{status}</div>} */}
           <div className="submit-btn">
             <button
               type="submit"
               className={isPending ? 'button button-send pending' : 'button button-send'}
             >
-              <img src="/static/images/svg/send.svg" alt="send" />
+              send
             </button>
           </div>
         </form>
       </div>
     );
-  }
+  };
 }
 ContactForm.propTypes = {
   isPending: PropTypes.bool.isRequired,
