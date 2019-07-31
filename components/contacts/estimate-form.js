@@ -284,15 +284,6 @@ const EstimateForm = () => {
           <div className="wizard-stage">
             <div className="question-title align-flex-start">
               <span className="question-number qn-check">03</span>
-              {/* <Checkbox
-                text="Do you require PM/Product manager to save your time for tasks description,
-              tasks assignment and tasks assignment prioritizing?"
-                name="services"
-                id="pm"
-                value="PM/Product manager is required"
-                onChange={handlePmRequirementChange}
-                isChecked={pm.value === 'PM/Product manager is required'}
-              /> */}
               <div className="input-radio-wrap">
                 <input
                   name="isPMrequired"
@@ -383,21 +374,6 @@ const EstimateForm = () => {
               <span className="question-number">05</span> Timeframe
             </div>
             <div className="estimate-input-cols">
-              {/* <div className="input-select-wrap">
-                <select
-                  name="timeframe"
-                  className="input-select"
-                  onChange={event => setTimeframe(event.target.value)}
-                  value={timeframe.value}
-                >
-                  <option value="I`m not sure">I`m not sure</option>
-                  <option value="Less than 1 month">Less than 1 month</option>
-                  <option value="1 to 3 months">1 to 3 months</option>
-                  <option value="3 to 6 months">3 to 6 months</option>
-                  <option value="Above 6 months">Above 6 months</option>
-                </select>
-              </div> */}
-
               <div className="input-radio-wrap">
                 <input
                   name="timeframe"
@@ -643,7 +619,14 @@ const EstimateForm = () => {
               </button>
               <button
                 type="submit"
-                className={classnames('button button-send', { pending: isPending })}
+                className={classnames('button button-send', {
+                  pending:
+                    !name.value ||
+                    !phoneEstimate.value ||
+                    !messageEstimate.value ||
+                    !emailEstimate.value ||
+                    isPending,
+                })}
               >
                 send
               </button>
