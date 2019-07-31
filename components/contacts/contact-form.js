@@ -87,7 +87,13 @@ const ContactForm = () => {
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
-        <div className="contacts-title">Say hello</div>
+        <div className="contact-person">
+          <img src="static/images/max_savonin.png" alt="Contact person" />
+          <div>
+            <span className="name">Talk to Max Savonin</span>
+            <span className="position">CEO at KeenEthics</span>
+          </div>
+        </div>
         <div className="input-cols">
           <div className="input-wrap">
             <input
@@ -105,7 +111,6 @@ const ContactForm = () => {
               value={firstname.value}
             />
             <span className="highlight" />
-            <span className="bar" />
             <label htmlFor="firstname">First Name</label>
           </div>
           <div className="input-wrap">
@@ -124,7 +129,6 @@ const ContactForm = () => {
               value={lastname.value}
             />
             <span className="highlight" />
-            <span className="bar" />
             <label htmlFor="lastname">Last Name</label>
           </div>
         </div>
@@ -146,7 +150,6 @@ const ContactForm = () => {
                 value={email.value}
               />
               <span className="highlight" />
-              <span className="bar" />
               <label htmlFor="email">Your Email</label>
             </div>
           </div>
@@ -167,7 +170,6 @@ const ContactForm = () => {
                 value={phone.value}
               />
               <span className="highlight" />
-              <span className="bar" />
               <label htmlFor="phone">Your Phone</label>
             </div>
           </div>
@@ -194,7 +196,7 @@ const ContactForm = () => {
             type="submit"
             className={isPending ? 'button button-send pending' : 'button button-send'}
           >
-            send
+            Let's talk
           </button>
         </div>
       </form>

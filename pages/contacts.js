@@ -9,6 +9,54 @@ import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
 import Notify from '../components/notify/notify';
+import SocialButton from '../components/social-buttons/main';
+
+const Address = () => (
+  <React.Fragment>
+    <h1>
+      Get
+      <br />
+      in touch
+    </h1>
+    <p>Let's discuss yout idea</p>
+    <address>
+      <ul className="contacts-list">
+        <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+          {/* <a
+            href="https://goo.gl/maps/eaAU8qqLZoo"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          > */}
+          <div className="flag-country-wrapper">
+            <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+            <span className="country" itemProp="addressRegion">
+              Ukraine
+            </span>
+          </div>
+          <div className="address-telephone-wrapper">
+            <span itemProp="addressLocality">Lviv</span>
+            ,&nbsp;
+            <span itemProp="streetAddress">Kulparkivska St, 59</span>
+            <a href="tel:+380968147266">
+              <span className="telephone" itemProp="telephone">
+                +38 (096) 814 72 66
+              </span>
+            </a>
+          </div>
+          {/* </a> */}
+        </li>
+      </ul>
+    </address>
+  </React.Fragment>
+);
+
+const wishlistPanel = wishlist => (
+  <div>
+    {wishlist.map(item => (
+      <span key={item}>{item}</span>
+    ))}
+  </div>
+);
 
 let ContactUsContext;
 const { Provider, Consumer } = (ContactUsContext = React.createContext());
@@ -21,6 +69,7 @@ const Contacts = ({ router }) => {
   const [activeContactForm, setActiveContactForm] = useState(query.activeForm !== 'estimate');
   const [notifyIsVisible, setNotifyIsVisible] = useState(false);
   const [notifyMessage, setNotifyMessage] = useState(null);
+  const [wishlist, setWishlist] = useState([]);
 
   function onClick({ target }) {
     setActiveContactForm(target.name === 'contact-form-btn');
@@ -41,85 +90,45 @@ const Contacts = ({ router }) => {
             <h1 className="title">Contact Us</h1>
           </div>
           <div
-            className={`contact-us-form-wrapper ${
-              activeContactForm ? 'contacts-block' : 'estimate-block-background'
-            }`}
+            className={`contact-us-form ${activeContactForm ? 'contacts-block' : 'estimate-block'}`}
             itemScope
             itemType="http://schema.org/Organization"
           >
-            <address>
-              <ul className="contacts-list">
-                <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                  <a
-                    href="https://goo.gl/maps/eaAU8qqLZoo"
-                    rel="noopener noreferrer nofollow"
-                    target="_blank"
-                  >
-                    <img
-                      width="15"
-                      src="/static/images/svg/con-map.svg"
-                      alt="location"
-                      className="ico"
-                    />
-                    <div itemProp="streetAddress">Kulparkivska St, 59</div>
-                    <span>
-                      <span itemProp="addressLocality" style={{ display: 'inline' }}>
-                        Lviv
-                      </span>
-                      ,&nbsp;
-                      <span itemProp="addressRegion" style={{ display: 'inline' }}>
-                        Ukraine
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+380968147266">
-                    <img
-                      width="15"
-                      src="/static/images/svg/con-tel.svg"
-                      alt="Call"
-                      className="ico"
-                    />
-                    <div itemProp="telephone">+38 (096) 814 72 66</div>
-                    <span>Give Us a Call</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:business@keenethics.com">
-                    <img
-                      width="15"
-                      src="/static/images/svg/con-mail.svg"
-                      alt="email"
-                      className="ico"
-                    />
-                    <div>business@keenethics.com</div>
-                    <span>Drop Us a Letter</span>
-                  </a>
-                </li>
-              </ul>
-            </address>
+            <div
+              className={classnames('contact-us-form-info-side', {
+                'contacts-panel': activeContactForm,
+              })}
+            >
+              {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
+              <hr />
+              <div className="social-icons">
+                <SocialButton />
+              </div>
+            </div>
             <div className="active-form-wrapper">
               <div className="btn-group">
                 <button
                   onClick={onClick}
                   name="contact-form-btn"
-                  className={classnames('button contacts-form-btn contact-form-btn', {
+                  className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
                     disabled: !activeContactForm,
                   })}
                   type="button"
                 >
-                  Say Hello
+                  Get in touch
                 </button>
                 <button
                   onClick={onClick}
                   name="estimate-form-btn"
-                  className={classnames('button contacts-form-btn estimate-form-btn', {
-                    disabled: activeContactForm,
-                  })}
+                  className={classnames(
+                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
+                    {
+                      disabled: activeContactForm,
+                    },
+                  )}
                   type="button"
                 >
-                  Estimate your project
+                  Free estimate
                 </button>
               </div>
               <Provider
@@ -131,17 +140,10 @@ const Contacts = ({ router }) => {
                   setNotifyIsVisible,
                   notifyMessage,
                   setNotifyMessage,
+                  setWishlist,
                 }}
               >
-                {activeContactForm ? (
-                  <ContactForm />
-                ) : (
-                  <EstimateForm
-                    isPending={isPending}
-                    status={status}
-                    // updateState={state => this.setState(state)}
-                  />
-                )}
+                {activeContactForm ? <ContactForm /> : <EstimateForm />}
               </Provider>
             </div>
           </div>
