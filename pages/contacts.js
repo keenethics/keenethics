@@ -86,9 +86,6 @@ const Contacts = ({ router }) => {
       )}
       <div className="contacts-page">
         <div className="contacts-socket">
-          <div className="title-page">
-            <h1 className="title">Contact Us</h1>
-          </div>
           <div
             className={`contact-us-form ${activeContactForm ? 'contacts-block' : 'estimate-block'}`}
             itemScope

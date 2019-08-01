@@ -113,24 +113,6 @@ const ContactForm = () => {
             <span className="highlight" />
             <label htmlFor="firstname">First Name</label>
           </div>
-          <div className="input-wrap">
-            <input
-              className={classnames({ error: lastname.error })}
-              name="lastname"
-              id="lastname"
-              type="text"
-              onChange={event => {
-                setLastname({
-                  value: event.target.value,
-                  error: '',
-                });
-              }}
-              required
-              value={lastname.value}
-            />
-            <span className="highlight" />
-            <label htmlFor="lastname">Last Name</label>
-          </div>
         </div>
         <div className="input-cols">
           <div className="input-wrap">
@@ -151,26 +133,6 @@ const ContactForm = () => {
               />
               <span className="highlight" />
               <label htmlFor="email">Your Email</label>
-            </div>
-          </div>
-          <div className="input-wrap">
-            <div className="input-phone">
-              <input
-                className={classnames({ error: phone.error })}
-                name="phone"
-                id="phone"
-                type="tel"
-                onChange={event => {
-                  setPhone({
-                    value: event.target.value,
-                    error: '',
-                  });
-                }}
-                required
-                value={phone.value}
-              />
-              <span className="highlight" />
-              <label htmlFor="phone">Your Phone</label>
             </div>
           </div>
         </div>

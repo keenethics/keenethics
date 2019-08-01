@@ -1,4 +1,6 @@
 .contacts-page {
+  display: flex;
+  align-items: center;
   position: relative;
   background: linear-gradient(135deg, #071e40 0%, #662938 80%);
   z-index: 600;
@@ -109,18 +111,6 @@
   width: 1050px;
   margin: 0 auto;
   padding: 0 0 80px;
-
-  .title-page {
-    padding: 100px 0 90px;
-  }
-
-  @media (max-width: 1200px) {
-    width: auto;
-
-    .title-page {
-      padding-left: 60px;
-    }
-  }
 }
 
 .contact-wrapper {
@@ -195,6 +185,7 @@
   .input-wrap {
     position: relative;
     z-index: 300;
+    margin-bottom: 20px;
 
     input {
       line-height: 42px;
@@ -305,7 +296,7 @@
       width: 100%;
       height: 100px;
       padding: 14px 20px;
-      margin: 16px 0 0;
+      margin: 0;
       font-size: 14px;
       // border: 1px solid #6d669f;
       color: #6d669f;
@@ -392,7 +383,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     img {
       height: 70px;
@@ -1176,7 +1167,6 @@
 
 .contact-us-form {
   display: flex;
-  // background: #fff;
 
   * {
     font-family: "Raleway";
@@ -1184,10 +1174,11 @@
 
   &-info-side {
     padding: 20px;
-    min-width: 200px;
+    min-width: 315px;
     background-color: #764ba2;
     display: flex;
     flex-direction: column;
+    border-radius: 26px 0 0 26px;
 
     &.contacts-panel {
       // background-color: #291c74;
@@ -1275,10 +1266,15 @@
 
     .social-icons {
       margin-bottom: 17px;
+      padding: 0 30px;
 
       ul {
         display: flex;
         justify-content: space-between;
+
+        #soc-btn {
+          display: none;
+        }
 
         li a {
           margin-bottom: 0;
@@ -1311,6 +1307,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    border-radius: 0 26px 26px 0;
 
     .btn-group {
       margin: 10px 80px 30px;
