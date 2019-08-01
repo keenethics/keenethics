@@ -176,6 +176,7 @@ const ContactForm = () => {
         </div>
         <div className="input-wrap input-wrap-ta">
           <textarea
+            required
             className={classnames({
               'message-textarea': true,
               error: message.error,

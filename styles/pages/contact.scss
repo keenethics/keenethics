@@ -182,8 +182,8 @@
 .contacts-form {
   form {
     background: rgb(248, 248, 252);
-    margin: 0 30px 44px;
-    padding: 35px;
+    margin: 0 80px 24px;
+    padding: 35px 44px;
   }
 
   .input-cols,
@@ -198,7 +198,7 @@
 
     input {
       line-height: 42px;
-      padding: 23px 8px 14px 8px;
+      padding: 23px 20px 14px;
       width: 100%;
       color: #6d669f;
       font-family: "Open Sans";
@@ -210,7 +210,6 @@
       outline: none;
       box-sizing: border-box;
       letter-spacing: 0.28px;
-      // border: 1px solid #764ba2;
       border-radius: 8px;
       border: none;
 
@@ -255,38 +254,6 @@
       display: inline-block;
       padding: 0 4px;
     }
-
-    // .bar {
-    //   position: relative;
-    //   display: block;
-    //   width: 100%;
-    // }
-
-    // .bar:before,
-    // .bar:after {
-    //   content: "";
-    //   height: 2px;
-    //   width: 0;
-    //   bottom: 0px;
-    //   position: absolute;
-    //   background: #6d669f;
-    //   transition: 0.2s ease all;
-    //   -moz-transition: 0.2s ease all;
-    //   -webkit-transition: 0.2s ease all;
-    // }
-
-    // .bar:before {
-    //   left: 50%;
-    // }
-
-    // .bar:after {
-    //   right: 50%;
-    // }
-
-    // input:focus ~ .bar:before,
-    // input:focus ~ .bar:after {
-    //   width: 50%;
-    // }
 
     .highlight {
       position: absolute;
@@ -337,10 +304,10 @@
     textarea {
       width: 100%;
       height: 100px;
-      padding: 5px 8px;
+      padding: 14px 20px;
       margin: 16px 0 0;
       font-size: 14px;
-      border: 1px solid #6d669f;
+      // border: 1px solid #6d669f;
       color: #6d669f;
       box-sizing: border-box;
       background: none;
@@ -350,6 +317,9 @@
       font-family: "Open Sans";
       font-size: 15px;
       letter-spacing: 0.28px;
+      background: rgba(102, 119, 180, 0.1);
+      border: none;
+      border-radius: 8px;
 
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
@@ -382,6 +352,25 @@
         letter-spacing: 0.28px;
         font-size: 13px;
       }
+
+      &.error {
+        color: red;
+        border-color: red;
+      }
+
+      &:focus {
+        background: none;
+        border: 1px solid #764ba2;
+      }
+
+      &:valid {
+        background: none;
+        border: 1px solid #764ba2;
+        // color: red !important;
+      }
+      &:invalid {
+        // color: green !important;
+      }
     }
   }
 
@@ -397,11 +386,6 @@
   .form-status {
     font-size: 12px;
     padding: 0 0 10px;
-  }
-
-  @media (max-width: 1200px) {
-    width: auto;
-    float: none;
   }
 
   .contact-person {
@@ -1329,7 +1313,7 @@
     flex-direction: column;
 
     .btn-group {
-      margin: 10px 30px 15px;
+      margin: 10px 80px 30px;
 
       button {
         flex-grow: 1;
