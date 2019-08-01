@@ -61,15 +61,11 @@ const EstimateForm = () => {
   } = useContext(ContactUsContext);
 
   useEffect(() => {
-    console.log('budget: ', budget.value);
-    setWishlist([
-      stage.value,
-      ...services.value,
-      pm.value,
-      budget.value,
-      timeframe.value,
-      start.value,
-    ]);
+    setWishlist(
+      [stage.value, ...services.value, pm.value, budget.value, timeframe.value, start.value].filter(
+        item => !!item,
+      ),
+    );
   }, [stage.value, services.value, pm.value, budget.value, timeframe.value, start.value]);
 
   function onSubmit(e) {
@@ -97,7 +93,7 @@ const EstimateForm = () => {
       }),
     })
       .then(response => response.json())
-      .then((json) => {
+      .then(json => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
         }
@@ -133,14 +129,20 @@ const EstimateForm = () => {
 
   return (
     <div className="estimate-form">
+      <div class="progressbar-container">
+        <ul class="progressbar">
+          <li className={classnames({ done: wizardStage > 0, active: wizardStage === 0 })} />
+          <li className={classnames({ done: wizardStage > 1, active: wizardStage === 1 })} />
+          <li className={classnames({ done: wizardStage > 2, active: wizardStage === 2 })} />
+          <li className={classnames({ done: wizardStage > 3, active: wizardStage === 3 })} />
+        </ul>
+      </div>
       <form onSubmit={onSubmit} className="estimate-form-inputs">
         <div className="contacts-title estimate-title">let us Estimate your project</div>
         {wizardStage === 0 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">01</span>
-              {' '}
-Stage
+              <span className="question-number">01</span> Stage
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -149,7 +151,7 @@ Stage
                   type="radio"
                   value="New app"
                   id="new"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStage({
                       value: event.target.value,
                       error: '',
@@ -168,7 +170,7 @@ Stage
                   type="radio"
                   value="Existing app"
                   id="existing"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStage({
                       value: event.target.value,
                       error: '',
@@ -183,9 +185,7 @@ Stage
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">02</span>
-              {' '}
-What services are you interested in?
+              <span className="question-number">02</span> What services are you interested in?
             </div>
             <div className="estimate-input-cols">
               <div className="input-checkbox-wrap">
@@ -311,7 +311,7 @@ What services are you interested in?
                   type="radio"
                   value="I need a PM"
                   id="iNeedPM"
-                  onChange={(event) => {
+                  onChange={event => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -329,7 +329,7 @@ What services are you interested in?
                   type="radio"
                   value="I dont need a PM"
                   id="iDontNeedPM"
-                  onChange={(event) => {
+                  onChange={event => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -347,7 +347,7 @@ What services are you interested in?
                   type="radio"
                   value="I'm not sure about PM"
                   id="notSureAboutPM"
-                  onChange={(event) => {
+                  onChange={event => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -361,19 +361,18 @@ What services are you interested in?
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">04</span>
-              {' '}
-Expected budget
+              <span className="question-number">04</span> Expected budget
             </div>
             <div className="estimate-input-cols">
               <div className="input-select-wrap">
                 <select
                   name="budget"
                   className="input-select"
-                  onChange={event => setBudget({
-                    value: event.target.value,
-                    error: '',
-                  })
+                  onChange={event =>
+                    setBudget({
+                      value: event.target.value,
+                      error: '',
+                    })
                   }
                   value={budget.value}
                 >
@@ -400,9 +399,7 @@ Expected budget
         {wizardStage === 2 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">05</span>
-              {' '}
-Timeframe
+              <span className="question-number">05</span> Timeframe
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -411,7 +408,7 @@ Timeframe
                   type="radio"
                   value="Less than 1 month"
                   id="timeframeLessThanAMonth"
-                  onChange={(event) => {
+                  onChange={event => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -429,7 +426,7 @@ Timeframe
                   type="radio"
                   value="1 to 3 months"
                   id="timeframeUpToThreeMonths"
-                  onChange={(event) => {
+                  onChange={event => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -447,7 +444,7 @@ Timeframe
                   type="radio"
                   value="3 to 6 months"
                   id="timeframeIsUpToSixMonths"
-                  onChange={(event) => {
+                  onChange={event => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -465,7 +462,7 @@ Timeframe
                   type="radio"
                   value="Above 6 months"
                   id="timeframeIsAboveSixMonths"
-                  onChange={(event) => {
+                  onChange={event => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -479,9 +476,7 @@ Timeframe
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">06</span>
-              {' '}
-Start
+              <span className="question-number">06</span> Start
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -490,7 +485,7 @@ Start
                   type="radio"
                   value="In a couple of days"
                   id="startInACoupleOfDays"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -508,7 +503,7 @@ Start
                   type="radio"
                   value="In a week"
                   id="startInAWeek"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -526,7 +521,7 @@ Start
                   type="radio"
                   value="In a couple of weeks"
                   id="startInACoupleOfWeeks"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -544,7 +539,7 @@ Start
                   type="radio"
                   value="In a month"
                   id="startInAMonth"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -562,7 +557,7 @@ Start
                   type="radio"
                   value="In a couple of months"
                   id="startInACoupleOfMonths"
-                  onChange={(event) => {
+                  onChange={event => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -639,7 +634,8 @@ Start
                 <textarea
                   name="messageEstimate"
                   placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
-                  onChange={event => setMessageEstimate({ value: event.target.value, error: false })
+                  onChange={event =>
+                    setMessageEstimate({ value: event.target.value, error: false })
                   }
                   value={messageEstimate.value}
                 />
@@ -653,11 +649,11 @@ Start
                 type="submit"
                 className={classnames('button button-send', {
                   pending:
-                    !name.value
-                    || !phoneEstimate.value
-                    || !messageEstimate.value
-                    || !emailEstimate.value
-                    || isPending,
+                    !name.value ||
+                    !phoneEstimate.value ||
+                    !messageEstimate.value ||
+                    !emailEstimate.value ||
+                    isPending,
                 })}
               >
                 send
