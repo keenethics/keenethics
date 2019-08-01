@@ -23,15 +23,7 @@ const ContactForm = () => {
     value: '',
     error: false,
   });
-  const [lastname, setLastname] = useState({
-    value: '',
-    error: false,
-  });
   const [email, setEmail] = useState({
-    value: '',
-    error: false,
-  });
-  const [phone, setPhone] = useState({
     value: '',
     error: false,
   });
@@ -42,9 +34,7 @@ const ContactForm = () => {
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
-    setLastname({ value: '', error: false });
     setEmail({ value: '', error: false });
-    setPhone({ value: '', error: false });
     setMessage({ value: '', error: false });
   };
 
@@ -60,9 +50,7 @@ const ContactForm = () => {
       },
       body: JSON.stringify({
         firstname,
-        lastname,
         email,
-        phone,
         message,
       }),
     })
