@@ -22,28 +22,34 @@ const Address = () => (
     <address>
       <ul className="contacts-list">
         <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-          {/* <a
+          <a
             href="https://goo.gl/maps/eaAU8qqLZoo"
             rel="noopener noreferrer nofollow"
             target="_blank"
-          > */}
-          <div className="flag-country-wrapper">
-            <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
-            <span className="country" itemProp="addressRegion">
-              Ukraine
-            </span>
-          </div>
+          >
+            <div className="flag-country-wrapper">
+              <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+              <span className="country" itemProp="addressRegion">
+                Ukraine
+              </span>
+            </div>
+          </a>
           <div className="address-telephone-wrapper">
-            <span itemProp="addressLocality">Lviv</span>
-            ,&nbsp;
-            <span itemProp="streetAddress">Kulparkivska St, 59</span>
+            <a
+              href="https://goo.gl/maps/eaAU8qqLZoo"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+            >
+              <span itemProp="addressLocality">Lviv</span>
+              ,&nbsp;
+              <span itemProp="streetAddress">Kulparkivska St, 59</span>
+            </a>
             <a href="tel:+380968147266">
               <span className="telephone" itemProp="telephone">
                 +38 (096) 814 72 66
               </span>
             </a>
           </div>
-          {/* </a> */}
         </li>
       </ul>
     </address>
