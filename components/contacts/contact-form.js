@@ -52,6 +52,8 @@ const ContactForm = () => {
         firstname,
         email,
         message,
+        lastname: { value: 'mockedLastname', error: '' },
+        phone: { value: '123456789', error: '' },
       }),
     })
       .then(handleStatusResponse)
