@@ -51,11 +51,26 @@ const Address = () => (
 );
 
 const wishlistPanel = wishlist => (
-  <div>
-    {wishlist.map(item => (
-      <span key={item}>{item}</span>
-    ))}
-  </div>
+  <React.Fragment>
+    <h1>
+      Your
+      <br />
+      wishlist
+    </h1>
+    <p>
+      Here will be your chosen
+      <br />
+      parameters.
+    </p>
+    <hr className="hr-top" />
+    <div>
+      {wishlist.map(item => (
+        <span key={item} className="wish-item">
+          {item}
+        </span>
+      ))}
+    </div>
+  </React.Fragment>
 );
 
 let ContactUsContext;

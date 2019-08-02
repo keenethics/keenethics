@@ -32,10 +32,6 @@ const EstimateForm = () => {
     value: '',
     error: false,
   });
-  const [phoneEstimate, setPhoneEstimate] = useState({
-    value: '',
-    error: false,
-  });
   const [emailEstimate, setEmailEstimate] = useState({
     value: '',
     error: false,
@@ -85,7 +81,6 @@ const EstimateForm = () => {
         budget,
         timeframe,
         start,
-        phoneEstimate,
         emailEstimate,
         messageEstimate,
         name,
@@ -129,8 +124,8 @@ const EstimateForm = () => {
 
   return (
     <div className="estimate-form">
-      <div class="progressbar-container">
-        <ul class="progressbar">
+      <div className="progressbar-container">
+        <ul className="progressbar">
           <li className={classnames({ done: wizardStage > 0, active: wizardStage === 0 })} />
           <li className={classnames({ done: wizardStage > 1, active: wizardStage === 1 })} />
           <li className={classnames({ done: wizardStage > 2, active: wizardStage === 2 })} />
@@ -138,56 +133,60 @@ const EstimateForm = () => {
         </ul>
       </div>
       <form onSubmit={onSubmit} className="estimate-form-inputs">
-        <div className="contacts-title estimate-title">let us Estimate your project</div>
         {wizardStage === 0 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">01</span> Stage
+              <span className="question-number">1.</span> Stage
             </div>
             <div className="estimate-input-cols">
-              <div className="input-radio-wrap">
-                <input
-                  name="stage"
-                  type="radio"
-                  value="New app"
-                  id="new"
-                  onChange={event => {
-                    setStage({
-                      value: event.target.value,
-                      error: '',
-                    });
-                  }}
-                  checked={stage.value === 'New app'}
-                />
-                <label htmlFor="new" className="label-for-radio-btn">
-                  <p className="radio-lable-title">New app</p>
-                  to be built from scratch
-                </label>
-              </div>
-              <div className="input-radio-wrap">
-                <input
-                  name="stage"
-                  type="radio"
-                  value="Existing app"
-                  id="existing"
-                  onChange={event => {
-                    setStage({
-                      value: event.target.value,
-                      error: '',
-                    });
-                  }}
-                  checked={stage.value === 'Existing app'}
-                />
-                <label htmlFor="existing" className="label-for-radio-btn">
-                  <p className="radio-lable-title">Existing app</p>
-                  continue development
-                </label>
+              <div className="standard-radio-input">
+                <radiogroup>
+                  <span>
+                    <input
+                      name="stage"
+                      type="radio"
+                      value="New app"
+                      id="new"
+                      onChange={event => {
+                        setStage({
+                          value: event.target.value,
+                          error: '',
+                        });
+                      }}
+                      checked={stage.value === 'New app'}
+                    />
+                    <label htmlFor="new" className="label-for-radio-btn">
+                      <b className="color-violet font-bold d-block">New app</b>{' '}
+                      <span className="text-dimmed">to be built from scratch</span>
+                    </label>
+                  </span>
+                  <span className="">
+                    <input
+                      name="stage"
+                      type="radio"
+                      value="Existing app"
+                      id="existing"
+                      onChange={event => {
+                        setStage({
+                          value: event.target.value,
+                          error: '',
+                        });
+                      }}
+                      checked={stage.value === 'Existing app'}
+                    />
+                    <label htmlFor="existing" className="label-for-radio-btn">
+                      <b className="color-violet font-bold d-block">Existing app</b>
+                      <span className="text-dimmed">continue development</span>
+                    </label>
+                  </span>
+                </radiogroup>
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">02</span> What services are you interested in?
+              <span className="question-number">2.</span> What services are you interested in?
             </div>
             <div className="estimate-input-cols">
+              <p>Desktop applications</p>
               <div className="input-checkbox-wrap">
                 <Checkbox
                   text="Web app"
@@ -196,36 +195,6 @@ const EstimateForm = () => {
                   value="Web app"
                   onChange={handleServicesChange}
                   isChecked={services.value.includes('Web app')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
-                  text="IOS app"
-                  name="services"
-                  id="ios"
-                  value="IOS app"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('IOS app')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
-                  text="Linux app"
-                  name="services"
-                  id="linux"
-                  value="Linux app"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('Linux app')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
-                  text="Server-side development"
-                  name="services"
-                  id="ssd"
-                  value="Server-side development"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('Server-side development')}
                 />
               </div>
               <div className="input-checkbox-wrap">
@@ -240,22 +209,12 @@ const EstimateForm = () => {
               </div>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="QA testing"
+                  text="Linux app"
                   name="services"
-                  id="qa"
-                  value="QA testing"
+                  id="linux"
+                  value="Linux app"
                   onChange={handleServicesChange}
-                  isChecked={services.value.includes('QA testing')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
-                  text="Android app"
-                  name="services"
-                  id="android"
-                  value="Android app"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('Android app')}
+                  isChecked={services.value.includes('Linux app')}
                 />
               </div>
               <div className="input-checkbox-wrap">
@@ -268,9 +227,53 @@ const EstimateForm = () => {
                   isChecked={services.value.includes('MacOS app')}
                 />
               </div>
+
+              <p>Mobile applications</p>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Design"
+                  text="IOS app"
+                  name="services"
+                  id="ios"
+                  value="IOS app"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('IOS app')}
+                />
+              </div>
+              <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="Android app"
+                  name="services"
+                  id="android"
+                  value="Android app"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('Android app')}
+                />
+              </div>
+
+              <p>We also do</p>
+              <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="Server-side development"
+                  name="services"
+                  id="ssd"
+                  value="Server-side development"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('Server-side development')}
+                />
+              </div>
+              <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="QA testing"
+                  name="services"
+                  id="qa"
+                  value="QA testing"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('QA testing')}
+                />
+              </div>
+              <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="UI/UX Design"
                   name="services"
                   id="design"
                   value="Design"
@@ -289,22 +292,30 @@ const EstimateForm = () => {
                 />
               </div>
             </div>
-            <button
-              type="button"
-              disabled={!stage.value || !services.value.length}
-              className={`button button-send${
-                !stage.value || !services.value.length ? ' pending' : ''
-              }`}
-              onClick={wizardStageIncreaser}
-            >
-              Continue
-            </button>
+            <div className="wizard-stage-footer">
+              <button
+                type="button"
+                disabled={!stage.value || !services.value.length}
+                className={`button ml-auto button-send${
+                  !stage.value || !services.value.length ? ' pending' : ''
+                }`}
+                onClick={wizardStageIncreaser}
+              >
+                Continue
+              </button>
+            </div>
           </div>
         )}
         {wizardStage === 1 && (
           <div className="wizard-stage">
-            <div className="question-title align-flex-start">
-              <span className="question-number qn-check">03</span>
+            <div className="question-title">
+              <span className="question-number">3.</span> Project Manager
+            </div>
+            <div className="estimate-input-cols">
+              <p className="text-normal">
+                Do you require PM/Product manager to save your time for tasks description, tasks
+                assignment and tasks assignment prioritizing?
+              </p>
               <div className="input-radio-wrap">
                 <input
                   name="isPMrequired"
@@ -320,7 +331,7 @@ const EstimateForm = () => {
                   checked={pm.value === 'I need a PM'}
                 />
                 <label htmlFor="iNeedPM" className="label-for-radio-btn">
-                  <p className="radio-lable-title">Yes, I do</p>
+                  Yes, I do
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -338,7 +349,7 @@ const EstimateForm = () => {
                   checked={pm.value === 'I dont need a PM'}
                 />
                 <label htmlFor="iDontNeedPM" className="label-for-radio-btn">
-                  <p className="radio-lable-title">No, I dont</p>
+                  No, I dont
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -356,12 +367,12 @@ const EstimateForm = () => {
                   checked={pm.value === "I'm not sure about PM"}
                 />
                 <label htmlFor="notSureAboutPM" className="label-for-radio-btn">
-                  <p className="radio-lable-title">I'm not sure</p>
+                  I'm not sure
                 </label>
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">04</span> Expected budget
+              <span className="question-number">4.</span> Expected budget
             </div>
             <div className="estimate-input-cols">
               <div className="input-select-wrap">
@@ -383,23 +394,27 @@ const EstimateForm = () => {
                 </select>
               </div>
             </div>
-            <button onClick={wizardStageDecreaser} type="button" className="button button-send">
-              Back
-            </button>
-            <button
-              type="button"
-              disabled={!pm.value || !budget.value}
-              className={`button button-send${!pm.value || !budget.value ? ' pending' : ''}`}
-              onClick={wizardStageIncreaser}
-            >
-              Continue
-            </button>
+            <div className="wizard-stage-footer">
+              <button onClick={wizardStageDecreaser} type="button" className="button button-send">
+                Back
+              </button>
+              <button
+                type="button"
+                disabled={!pm.value || !budget.value}
+                className={`button ml-auto button-send${
+                  !pm.value || !budget.value ? ' pending' : ''
+                }`}
+                onClick={wizardStageIncreaser}
+              >
+                Continue
+              </button>
+            </div>
           </div>
         )}
         {wizardStage === 2 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">05</span> Timeframe
+              <span className="question-number">5.</span> Timeframe
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -417,7 +432,7 @@ const EstimateForm = () => {
                   checked={timeframe.value === 'Less than 1 month'}
                 />
                 <label htmlFor="timeframeLessThanAMonth" className="label-for-radio-btn">
-                  <p className="radio-lable-title">Less than 1 month</p>
+                  Less than 1 month
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -435,7 +450,7 @@ const EstimateForm = () => {
                   checked={timeframe.value === '1 to 3 months'}
                 />
                 <label htmlFor="timeframeUpToThreeMonths" className="label-for-radio-btn">
-                  <p className="radio-lable-title">1 to 3 months</p>
+                  1 to 3 months
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -453,7 +468,7 @@ const EstimateForm = () => {
                   checked={timeframe.value === '3 to 6 months'}
                 />
                 <label htmlFor="timeframeIsUpToSixMonths" className="label-for-radio-btn">
-                  <p className="radio-lable-title">3 to 6 months</p>
+                  3 to 6 months
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -471,12 +486,12 @@ const EstimateForm = () => {
                   checked={timeframe.value === 'Above 6 months'}
                 />
                 <label htmlFor="timeframeIsAboveSixMonths" className="label-for-radio-btn">
-                  <p className="radio-lable-title">Above 6 months</p>
+                  Above 6 months
                 </label>
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">06</span> Start
+              <span className="question-number">6.</span> Start
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -494,7 +509,7 @@ const EstimateForm = () => {
                   checked={start.value === 'In a couple of days'}
                 />
                 <label htmlFor="startInACoupleOfDays" className="label-for-radio-btn">
-                  <p className="radio-lable-title">In a couple of days</p>
+                  In a couple of days
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -512,7 +527,7 @@ const EstimateForm = () => {
                   checked={start.value === 'In a week'}
                 />
                 <label htmlFor="startInAWeek" className="label-for-radio-btn">
-                  <p className="radio-lable-title">In a week</p>
+                  In a week
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -530,7 +545,7 @@ const EstimateForm = () => {
                   checked={start.value === 'In a couple of weeks'}
                 />
                 <label htmlFor="startInACoupleOfWeeks" className="label-for-radio-btn">
-                  <p className="radio-lable-title">In a couple of weeks</p>
+                  In a couple of weeks
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -548,7 +563,7 @@ const EstimateForm = () => {
                   checked={start.value === 'In a month'}
                 />
                 <label htmlFor="startInAMonth" className="label-for-radio-btn">
-                  <p className="radio-lable-title">In a month</p>
+                  In a month
                 </label>
               </div>
               <div className="input-radio-wrap">
@@ -566,94 +581,90 @@ const EstimateForm = () => {
                   checked={start.value === 'In a couple of months'}
                 />
                 <label htmlFor="startInACoupleOfMonths" className="label-for-radio-btn">
-                  <p className="radio-lable-title">In a couple of months</p>
+                  In a couple of months
                 </label>
               </div>
             </div>
-            <button onClick={wizardStageDecreaser} type="button" className="button button-send">
-              Back
-            </button>
-            <button
-              disabled={!timeframe.value || !start.value}
-              onClick={wizardStageIncreaser}
-              className={`button button-send${!timeframe.value || !start.value ? ' pending' : ''}`}
-            >
-              Continue
-            </button>
+            <div className="wizard-stage-footer">
+              <button onClick={wizardStageDecreaser} type="button" className="button button-send">
+                Back
+              </button>
+              <button
+                disabled={!timeframe.value || !start.value}
+                onClick={wizardStageIncreaser}
+                className={`button ml-auto button-send${
+                  !timeframe.value || !start.value ? ' pending' : ''
+                }`}
+              >
+                Continue
+              </button>
+            </div>
           </div>
         )}
         {wizardStage === 3 && (
           <div className="wizard-stage">
-            <div className="input-cols">
-              <div className="input-contacts">
-                <input
-                  className={classnames({ error: name.error })}
-                  name="name"
-                  id="name"
-                  type="text"
-                  onChange={event => setName({ value: event.target.value, error: false })}
-                  value={name.value}
-                  required
-                />
-                <span className="highlight" />
-                <span className="bar" />
-                <label htmlFor="name">Name:</label>
+            <div className="contacts-form">
+              <div className="input-cols">
+                <div className="input-wrap">
+                  <div className="input-email">
+                    <input
+                      className={classnames({ error: name.error })}
+                      name="name"
+                      id="name"
+                      type="text"
+                      onChange={event => setName({ value: event.target.value, error: false })}
+                      value={name.value}
+                      required
+                    />
+                    <label htmlFor="name">Name</label>
+                  </div>
+                </div>
               </div>
-              <div className="input-contacts">
-                <input
-                  name="phoneEstimate"
-                  id="phoneEstimate"
-                  type="tel"
-                  onChange={event => setPhoneEstimate({ value: event.target.value, error: false })}
-                  value={phoneEstimate.value}
-                  required
-                />
-                <span className="highlight" />
-                <span className="bar" />
-                <label htmlFor="phoneEstimate">Phone:</label>
+              <div className="input-cols">
+                <div className="input-wrap">
+                  <div className="input-email">
+                    <input
+                      className={classnames({ error: emailEstimate.error })}
+                      name="emailEstimate"
+                      id="emailEstimate"
+                      type="email"
+                      onChange={event =>
+                        setEmailEstimate({ value: event.target.value, error: false })
+                      }
+                      value={emailEstimate.value}
+                      required
+                    />
+                    <label htmlFor="emailEstimate">Email</label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="input-cols">
-              <div className="input-contacts input-email">
-                <input
-                  className={classnames({ error: emailEstimate.error })}
-                  name="emailEstimate"
-                  type="email"
-                  onChange={event => setEmailEstimate({ value: event.target.value, error: false })}
-                  value={emailEstimate.value}
-                  required
-                />
-                <span className="highlight" />
-                <span className="bar" />
-                <label htmlFor="emailEstimate">Email:</label>
-              </div>
-            </div>
-            <div className="input-cols">
-              <div className="input-textarea">
-                <div className="input-textarea-title">Message:</div>
+
+              <div className="input-wrap input-wrap-ta">
                 <textarea
+                  required
+                  className={classnames({
+                    'message-textarea': true,
+                    error: messageEstimate.error,
+                  })}
                   name="messageEstimate"
-                  placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
+                  id="messageEstimate"
                   onChange={event =>
                     setMessageEstimate({ value: event.target.value, error: false })
                   }
                   value={messageEstimate.value}
+                  placeholder="Message"
                 />
               </div>
             </div>
-            <div className="submit-btn">
+            <div className="wizard-stage-footer">
               <button onClick={wizardStageDecreaser} type="button" className="button button-send">
                 Back
               </button>
               <button
                 type="submit"
-                className={classnames('button button-send', {
+                className={classnames('button ml-auto button-send', {
                   pending:
-                    !name.value ||
-                    !phoneEstimate.value ||
-                    !messageEstimate.value ||
-                    !emailEstimate.value ||
-                    isPending,
+                    !name.value || !messageEstimate.value || !emailEstimate.value || isPending,
                 })}
               >
                 send
