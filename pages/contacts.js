@@ -63,7 +63,7 @@ const wishlistPanel = wishlist => (
       parameters.
     </p>
     <hr className="hr-top" />
-    <div>
+    <div className="wish-list">
       {wishlist.map(item => (
         <span key={item} className="wish-item">
           {item}
@@ -71,6 +71,24 @@ const wishlistPanel = wishlist => (
       ))}
     </div>
   </React.Fragment>
+);
+
+const ThankYou = () => (
+  <div className="thanks">
+    <h1 className="thanks-header">
+      Thank you
+      <br />
+      for the request!
+    </h1>
+    <h2 className="thanks-subheader">
+      We will get back to you within
+      <br />
+      1-2 business days
+    </h2>
+    <a href="/blog" className="button button-send">
+      Read our blog
+    </a>
+  </div>
 );
 
 let ContactUsContext;
@@ -92,73 +110,79 @@ const Contacts = ({ router }) => {
 
   return (
     <Layout>
-      {notifyIsVisible && (
+      {/* {notifyIsVisible && (
         <Notify
           notifyMessage={notifyMessage}
           setNotifyIsVisible={setNotifyIsVisible}
           setNotifyMessage={setNotifyMessage}
         />
-      )}
+      )} */}
       <div className="contacts-page">
         <div className="contacts-socket">
-          <div
-            className={`contact-us-form ${activeContactForm ? 'contacts-block' : 'estimate-block'}`}
-            itemScope
-            itemType="http://schema.org/Organization"
-          >
+          {notifyMessage === 'Message sent' ? (
+            <ThankYou />
+          ) : (
             <div
-              className={classnames('contact-us-form-info-side', {
-                'contacts-panel': activeContactForm,
-              })}
+              className={`contact-us-form ${
+                activeContactForm ? 'contacts-block' : 'estimate-block'
+              }`}
+              itemScope
+              itemType="http://schema.org/Organization"
             >
-              {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
-              <hr />
-              <div className="social-icons">
-                <SocialButton />
-              </div>
-            </div>
-            <div className="active-form-wrapper">
-              <div className="btn-group">
-                <button
-                  onClick={onClick}
-                  name="contact-form-btn"
-                  className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
-                    disabled: !activeContactForm,
-                  })}
-                  type="button"
-                >
-                  Get in touch
-                </button>
-                <button
-                  onClick={onClick}
-                  name="estimate-form-btn"
-                  className={classnames(
-                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
-                    {
-                      disabled: activeContactForm,
-                    },
-                  )}
-                  type="button"
-                >
-                  Free estimate
-                </button>
-              </div>
-              <Provider
-                value={{
-                  isPending,
-                  setIsPending,
-                  status,
-                  setStatus,
-                  setNotifyIsVisible,
-                  notifyMessage,
-                  setNotifyMessage,
-                  setWishlist,
-                }}
+              <div
+                className={classnames('contact-us-form-info-side', {
+                  'contacts-panel': activeContactForm,
+                })}
               >
-                {activeContactForm ? <ContactForm /> : <EstimateForm />}
-              </Provider>
+                {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
+                <hr />
+                <div className="social-icons">
+                  <SocialButton />
+                </div>
+              </div>
+              <div className="active-form-wrapper">
+                <div className="btn-group">
+                  <button
+                    onClick={onClick}
+                    name="contact-form-btn"
+                    className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
+                      disabled: !activeContactForm,
+                    })}
+                    type="button"
+                  >
+                    Get in touch
+                  </button>
+                  <button
+                    onClick={onClick}
+                    name="estimate-form-btn"
+                    className={classnames(
+                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
+                      {
+                        disabled: activeContactForm,
+                      },
+                    )}
+                    type="button"
+                  >
+                    Free estimate
+                  </button>
+                </div>
+                <Provider
+                  value={{
+                    isPending,
+                    setIsPending,
+                    status,
+                    setStatus,
+                    setNotifyIsVisible,
+                    notifyMessage,
+                    setNotifyMessage,
+                    setWishlist,
+                  }}
+                >
+                  {activeContactForm ? <ContactForm /> : <EstimateForm />}
+                </Provider>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <Background />
       </div>
