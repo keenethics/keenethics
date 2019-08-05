@@ -84,7 +84,7 @@ const EstimateForm = () => {
         emailEstimate,
         messageEstimate,
         name,
-        phoneEstimate: {value: '123456789', error: ''},
+        phoneEstimate: { value: '123456789', error: '' },
       }),
     })
       .then(response => response.json())
