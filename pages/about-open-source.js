@@ -17,7 +17,7 @@ export default class AboutTeam extends React.Component {
           <div className="open-source-page-header page-header">
             <div className="open-source-page-title page-title">
               <h1>
-Open Source
+                Open Source
                 <span>We contribute a whole lot</span>
               </h1>
               <Background className="open-source-page-background" />
@@ -25,9 +25,9 @@ Open Source
           </div>
           <div className="open-source-page-content content-block">
             <h1>
-Why do we support
+              Why do we support
               <br />
-Open Source?
+              Open Source?
             </h1>
             <p>
               Whether you want it or not, businesses and regular users rely on open source
@@ -87,6 +87,11 @@ Open Source?
               <img width="20" src="/static/images/svg/ico-git.svg" alt="git" />
               Visit our Github
             </a>
+            <p style={{ marginTop: '25px' }}>
+              We have been featured as Top 10
+              <a style={{ margin: '0 .25em' }} href="https://www.softwaredevelopmentcompany.co/2019/07/19/top-10-open-source-software-examples-of-2019/" target="_blank" rel="noopener noreferrer nofollow">Open Source Software</a>
+              Examples Of 2019 on SoftwareDevelopmentCompany.co
+            </p>
           </div>
         </div>
       </Layout>
