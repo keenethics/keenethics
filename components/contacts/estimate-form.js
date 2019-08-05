@@ -607,6 +607,7 @@ const EstimateForm = () => {
               <div className="input-cols">
                 <div className="input-wrap">
                   <div className="input-email">
+                    <div className="mt-40" />
                     <input
                       className={classnames({ error: name.error })}
                       name="name"

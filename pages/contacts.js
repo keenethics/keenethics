@@ -19,7 +19,7 @@ const Address = () => (
       in touch
     </h1>
     <p>Let's discuss yout idea</p>
-    <address>
+    <address className="visible-md">
       <ul className="contacts-list">
         <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
           <a
@@ -68,8 +68,8 @@ const wishlistPanel = wishlist => (
       <br />
       parameters.
     </p>
-    <hr className="hr-top" />
-    <div className="wish-list">
+    <hr className="hr-top visible-md" />
+    <div className="wish-list visible-md">
       {wishlist.map(item => (
         <span key={item} className="wish-item">
           {item}
@@ -141,8 +141,8 @@ const Contacts = ({ router }) => {
                 })}
               >
                 {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
-                <hr />
-                <div className="social-icons">
+                <hr className="visible-md" />
+                <div className="social-icons visible-md">
                   <SocialButton />
                 </div>
               </div>
