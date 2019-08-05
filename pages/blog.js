@@ -11,31 +11,53 @@ import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
 import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
-
-const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
+import { getPostsList } from '../lib/contentful';
+const _ = require('lodash');
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
-    existCategory => chosenCategory.filter(
-      category => category.toLowerCase() === existCategory.toLowerCase(),
-    ).length,
+    existCategory =>
+      chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase())
+        .length,
   );
+
   return categories.length ? categories : existCategories;
 };
+
+function getCategoriesList({ posts, url }) {
+  const chosenCategory = url.query.chosen;
+  const categories = posts.reduce((acc, post) => {
+    if (post.fields && post.fields.categories) {
+      return [...acc, ...post.fields.categories];
+    }
+
+    return acc;
+  }, []);
+  const uniqCategories = [...new Set(categories)];
+  const selectedPosts = chosenCategory
+    ? transformateCategories(chosenCategory.split(','), uniqCategories)
+    : uniqCategories;
+
+  return { selectedPosts, categorisList: uniqCategories };
+}
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...this.getCategoriesList(props.router),
+      selectedCategories: [],
+      categorisList: [],
+      selectedPosts: [],
     };
     this.posts = [];
-    this.postsCountFor = this.postsCountFor.bind(this);
-    this.filterOnChange = this.filterOnChange.bind(this);
+    this.contentfulPosts = [];
   }
 
   componentDidMount() {
     document.body.style.overflowY = 'hidden';
+
+    const { url, posts } = this.props;
+    posts && posts.length && this.setState({ ...getCategoriesList({ url, posts }) });
   }
 
   componentWillUnmount() {
@@ -43,33 +65,29 @@ class Blog extends React.Component {
   }
 
   static async getInitialProps() {
-    const res = await fetch(`${BACKEND_URL}/api/posts`);
-    const json = await res.json();
+    const contResp = await getPostsList();
 
-    return { posts: json };
+    return { posts: contResp && contResp.items ? contResp.items : [] };
   }
 
-  getCategoriesList(url) {
-    const { posts } = this.props;
-    const chosenCategory = url.query.chosen;
-    const categories = posts
-      .map(post => post.categories)
-      .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
-    const uniqCategories = [...new Set(categories)];
-    const selectedPosts = chosenCategory
-      ? transformateCategories(chosenCategory.split(','), uniqCategories)
-      : uniqCategories;
-    return { selectedPosts, categorisList: uniqCategories };
-  }
-
-  postsCountFor(post) {
+  postsFilterd = () => {
     const { selectedPosts } = this.state;
-    return post.categories.filter(category => selectedPosts.includes(category)).length;
-  }
+    const { posts } = this.props;
 
-  filterOnChange(selectedPosts) {
+    if (selectedPosts.length === posts.length) return posts;
+
+    return posts.reduce((acc, post) => {
+      if (post.fields && post.fields.categories) {
+        return _.intersection(post.fields.categories, selectedPosts).length ? [...acc, post] : acc;
+      }
+
+      return acc;
+    }, []);
+  };
+
+  filterOnChange = selectedPosts => {
     this.setState({ selectedPosts });
-  }
+  };
 
   render() {
     const { categorisList, selectedPosts } = this.state;
@@ -89,7 +107,11 @@ class Blog extends React.Component {
               filterOnChange={this.filterOnChange}
               pageTitle="blog"
             />
-            {!posts.length ? <div className="blog-loading">Loading...</div> : <Posts posts={posts.filter(this.postsCountFor)} />}
+            {!posts.length ? (
+              <div className="blog-loading">Loading...</div>
+            ) : (
+              <Posts posts={this.postsFilterd()} />
+            )}
           </div>
         </div>
       </Layout>
