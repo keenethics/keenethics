@@ -21,7 +21,7 @@ export default () => {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(
       JSON.stringify({
-        email: value,
+        email: { value },
       }),
     );
   }
