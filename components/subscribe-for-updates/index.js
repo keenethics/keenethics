@@ -41,6 +41,7 @@ export default () => {
           onChange={handleChange}
           value={value}
           type="email"
+          placeholder="example@gmail.com"
           className={classnames({
             error,
             success,
