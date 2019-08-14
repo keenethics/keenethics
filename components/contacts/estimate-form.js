@@ -107,8 +107,6 @@ class EstimateForm extends React.Component {
       // pm,
     } = this.state;
 
-    // console.log(pm);
-
     const { isPending, status } = this.props;
     return (
       <div className="estimate-form">

@@ -12,6 +12,7 @@ import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
 import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 import { getPostsList } from '../lib/contentful';
+
 const _ = require('lodash');
 
 const transformateCategories = (chosenCategory, existCategories) => {

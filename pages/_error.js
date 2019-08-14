@@ -4,7 +4,6 @@ import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import nanoid from 'nanoid';
 
 import Layout from '../components/layout/main';
 
@@ -69,7 +68,7 @@ class Error extends React.Component {
               </a>
               <div className="base-urls">
                 <a href="/">Home</a>
-                {baseURLs.map(({ name, href }) => <a key={nanoid()} href={href}>{name}</a>)}
+                {baseURLs.map(({ name, href }) => <a key={name} href={href}>{name}</a>)}
               </div>
             </section>
           </div>
