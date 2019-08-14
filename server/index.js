@@ -453,8 +453,12 @@ app.prepare().then(() => {
       }
 
       const subscriberEmailContent = `
-        <p>Thank you for subscribing!</p>
-        <p>You will receive our biweekly newsletter with the hottest tech and business tips.</p>
+        <p>Thank you for subscribing! You will receive our thought-provoking newsletter twice a month.
+        The topics we cover include technology, productivity, and business.</p>
+        <p>You can also request a topic to be covered by writing directly to us at business@keenethics.com</p>
+        <p>P.S. Now and then, you will receive different promo codes for our services.
+        They may provide 10% off your future software project or quality assurance for free.
+        So don't miss out on the opportunity!</p>
       `;
       const subscriberEmailOptions = {
         from: 'no-reply@keenethics.com',
