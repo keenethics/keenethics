@@ -296,7 +296,7 @@ const EstimateForm = () => {
               <button
                 type="button"
                 disabled={!stage.value || !services.value.length}
-                className={`button ml-auto button-send${
+                className={`button button-send${
                   !stage.value || !services.value.length ? ' pending' : ''
                 }`}
                 onClick={wizardStageIncreaser}
@@ -401,7 +401,7 @@ const EstimateForm = () => {
               <button
                 type="button"
                 disabled={!pm.value || !budget.value}
-                className={`button ml-auto button-send${
+                className={`button button-send${
                   !pm.value || !budget.value ? ' pending' : ''
                 }`}
                 onClick={wizardStageIncreaser}
@@ -592,7 +592,7 @@ const EstimateForm = () => {
               <button
                 disabled={!timeframe.value || !start.value}
                 onClick={wizardStageIncreaser}
-                className={`button ml-auto button-send${
+                className={`button button-send${
                   !timeframe.value || !start.value ? ' pending' : ''
                 }`}
               >
@@ -663,7 +663,7 @@ const EstimateForm = () => {
               </button>
               <button
                 type="submit"
-                className={classnames('button ml-auto button-send', {
+                className={classnames('button button-send', {
                   pending:
                     !name.value || !messageEstimate.value || !emailEstimate.value || isPending,
                 })}
