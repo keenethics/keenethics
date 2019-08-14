@@ -77,7 +77,7 @@ const ContactForm = () => {
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
-        <div className="contact-person">
+        <div className="contact-person display-flex-md">
           <img src="static/images/max_savonin.png" alt="Contact person" />
           <div>
             <span className="name">Talk to Max Savonin</span>

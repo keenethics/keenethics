@@ -19,7 +19,7 @@ const Address = () => (
       in touch
     </h1>
     <p>Let's discuss yout idea</p>
-    <address className="visible-md">
+    <address>
       <ul className="contacts-list">
         <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
           <a
@@ -59,17 +59,15 @@ const Address = () => (
 const wishlistPanel = wishlist => (
   <React.Fragment>
     <h1>
-      Your
-      <br />
+      Your <br className="display-block-md" />
       wishlist
     </h1>
     <p>
-      Here will be your chosen
-      <br />
+      Here will be your chosen <br className="display-block-md" />
       parameters.
     </p>
-    <hr className="hr-top visible-md" />
-    <div className="wish-list visible-md">
+    <hr className="hr-top display-block-md" />
+    <div className="wish-list display-block-md">
       {wishlist.map(item => (
         <span key={item} className="wish-item">
           {item}
@@ -124,6 +122,25 @@ const Contacts = ({ router }) => {
         />
       )} */}
       <div className="contacts-page">
+        <div className="contact-person display-flex-md-max">
+          <a
+            className="text-decoration-none"
+            onClick={() => setActiveContactForm(true)}
+            href="javascript:void(0)"
+          >
+            <img src="static/images/max_savonin.png" alt="Contact person" />
+          </a>
+          <div>
+            <a
+              className="text-decoration-none"
+              onClick={() => setActiveContactForm(true)}
+              href="javascript:void(0)"
+            >
+              <span className="name">Talk to Max Savonin</span>
+              <span className="position">CEO at KeenEthics</span>
+            </a>
+          </div>
+        </div>
         <div className="contacts-socket">
           {notifyMessage === 'Message sent' ? (
             <ThankYou />
@@ -135,19 +152,44 @@ const Contacts = ({ router }) => {
               itemScope
               itemType="http://schema.org/Organization"
             >
+              <div className="btn-group display-flex-md-max mb-23px">
+                <button
+                  onClick={onClick}
+                  name="contact-form-btn"
+                  className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
+                    disabled: !activeContactForm,
+                  })}
+                  type="button"
+                >
+                  Get in touch
+                </button>
+                <button
+                  onClick={onClick}
+                  name="estimate-form-btn"
+                  className={classnames(
+                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
+                    {
+                      disabled: activeContactForm,
+                    },
+                  )}
+                  type="button"
+                >
+                  Free estimate
+                </button>
+              </div>
               <div
                 className={classnames('contact-us-form-info-side', {
                   'contacts-panel': activeContactForm,
                 })}
               >
                 {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
-                <hr className="visible-md" />
-                <div className="social-icons visible-md">
+                <hr className="display-block-md" />
+                <div className="social-icons display-block-md">
                   <SocialButton />
                 </div>
               </div>
               <div className="active-form-wrapper">
-                <div className="btn-group">
+                <div className="btn-group display-flex-md">
                   <button
                     onClick={onClick}
                     name="contact-form-btn"

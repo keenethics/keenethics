@@ -24,6 +24,14 @@
       padding: 12px 0 0;
     }
   }
+
+  @include breakpoint(md-max) {
+    flex-direction: column;
+  }
+
+  & > .contact-person {
+    z-index: 600;
+  }
 }
 
 .contacts-socket {
@@ -80,12 +88,10 @@
     background: rgb(248, 248, 252);
     padding: 15px;
 
-    @include breakpoint(sm) {
-      margin: 0 20px 24px;
-      padding: 35px 44px;
-    }
-    @include breakpoint(lg) {
-      margin: 0 80px 24px;
+    @include breakpoint(md-max) {
+      background: white;
+      border-radius: 8px;
+      padding: 20px 10px;
     }
   }
 
@@ -252,40 +258,13 @@
     padding: 0 0 10px;
   }
 
-  .contact-person {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
-
-    img {
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      margin-right: 19px;
-    }
-    .name {
-      display: block;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 16px;
-      color: #12233d;
-      margin-bottom: 6px;
-    }
-
-    .position {
-      display: block;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      color: #12233d;
-    }
-  }
   .submit-btn {
     display: flex;
     justify-content: flex-end;
+
+    @include breakpoint(md-max) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -865,6 +844,10 @@
   display: flex;
   flex-direction: column;
 
+  @include breakpoint(md-max) {
+    padding: 15px;
+  }
+
   @include breakpoint(md) {
     flex-direction: row;
   }
@@ -1198,12 +1181,6 @@ radiogroup {
 .ml-auto {
   margin-left: auto;
 }
-.visible-md {
-  display: none;
-  @include breakpoint(md) {
-    display: initial;
-  }
-}
 .mt-40 {
   margin-top: 40px;
 }
@@ -1301,4 +1278,139 @@ radiogroup {
       }
     }
   }
+}
+
+.contact-person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include breakpoint(md-max) {
+    align-self: flex-start;
+    margin-top: 12px;
+    margin-left: 15px;
+  }
+  @include breakpoint(sm-max) {
+    margin-left: 85px;
+  }
+
+  img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-right: 19px;
+
+    @include breakpoint(md-max) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .name {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #12233d;
+    margin-bottom: 6px;
+
+    @include breakpoint(md-max) {
+      color: #fff;
+    }
+  }
+
+  .position {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #12233d;
+
+    @include breakpoint(md-max) {
+      color: #fff;
+    }
+  }
+}
+
+.contact-us-form.contacts-block {
+  .contact-us-form-info-side {
+    @include breakpoint(md-max) {
+      display: none;
+    }
+  }
+  .active-form-wrapper {
+    @include breakpoint(md-max) {
+      background: transparent;
+      padding: 0;
+    }
+
+    form {
+      @include breakpoint(md-max) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// .contact-us-form {
+//   @include breakpoint(md) {
+//     display: inherit !important;
+//   }
+// }
+
+.display {
+  &-flex {
+    &-md {
+      display: none !important;
+      @include breakpoint(md) {
+        display: flex !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(md-max) {
+          display: flex !important;
+        }
+      }
+    }
+  }
+  &-block {
+    &-md {
+      display: none !important;
+      @include breakpoint(md) {
+        display: block !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(md-max) {
+          display: block !important;
+        }
+      }
+    }
+  }
+  &-inline-block {
+    &-md {
+      display: none !important;
+      @include breakpoint(md) {
+        display: inline-block !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(md-max) {
+          display: inline-block !important;
+        }
+      }
+    }
+  }
+}
+
+.mb-23px {
+  margin-bottom: 23px;
+}
+.text-decoration-none {
+  text-decoration: none;
 }
