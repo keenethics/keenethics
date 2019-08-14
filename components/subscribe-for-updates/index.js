@@ -36,6 +36,7 @@ export default () => {
   return (
     <div className="subscribe-panel">
       <h4>Don't miss updates from us!</h4>
+      <p>Subscribe to our bimonthly newsletter.</p>
       <div className="subscribe-panel-input-group">
         <input
           onChange={handleChange}
