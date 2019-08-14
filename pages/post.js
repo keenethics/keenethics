@@ -145,6 +145,7 @@ const bodyOptions = {
           suggesterPhoto,
           linkedIn,
           buttonText,
+          redirectLink,
         } = node.data.target.fields;
         return (
           <div className="suggestion">
@@ -158,7 +159,7 @@ const bodyOptions = {
                 linkedIn,
               })}
               <a
-                href="//calendly.com/iryna-keenethics/intro-call"
+                href={redirectLink || '//calendly.com/iryna-keenethics/intro-call'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="calendly-goal"
