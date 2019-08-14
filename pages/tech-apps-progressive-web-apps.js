@@ -8,7 +8,6 @@ import './services-mobile-development.scss';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 const whyShouldYouGoPwa = [
@@ -89,7 +88,10 @@ const TechAppsProg = () => (
         <h3 className="red-italic-title"><span>4</span>Devoted to consistency.</h3>
         <p>We offer you <b>full-cycle cooperation</b>, and we will be glad to take your project from an idea to a perfectly functioning and continuously improved final product. We will also encourage you to <Link href="/blog/1553896800000-how-to-monitor-your-project-distantly">monitor the project</Link> and communicate with our team continuously.</p>
       </section>
-      <CalendlyIframe />
+      <section>
+        <h2 style={{ marginBottom: 0 }}>Now, let’s discuss your business idea!</h2>
+        <CallToActionButton title="CONTACT US" href="/contacts" />
+      </section>
     </div>
   </Layout>
 );
