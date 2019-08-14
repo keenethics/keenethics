@@ -119,6 +119,10 @@
 
 // Post page
 .blog-post-page {
+  * {
+    font-family: Raleway;
+  }
+
   &-info {
     display: flex;
     align-items: center;
@@ -560,7 +564,6 @@ div.person {
   }
   p {
     color: #84827f;
-    font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
