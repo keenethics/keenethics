@@ -39,6 +39,10 @@
   width: 100%;
   z-index: 600;
 
+  @include breakpoint(md-max) {
+    margin-top: 0px;
+  }
+
   @include breakpoint(lg) {
     width: 1050px;
     margin: 0 auto;
@@ -845,7 +849,7 @@
   flex-direction: column;
 
   @include breakpoint(md-max) {
-    padding: 15px;
+    padding: 10px 15px 15px;
   }
 
   @include breakpoint(md) {
