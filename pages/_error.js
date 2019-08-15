@@ -59,12 +59,12 @@ class Error extends React.Component {
                 onClick={(e) => {
                   if (typeof window !== 'undefined') {
                     e.preventDefault();
-                    router.back();
+                    router.push('/');
                   }
                 }}
                 className="btn-e"
               >
-                <span>return back</span>
+                <span>go home</span>
               </a>
               <div className="base-urls">
                 <a href="/">Home</a>
