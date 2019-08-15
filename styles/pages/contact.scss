@@ -92,7 +92,7 @@
 .contacts-form {
   form {
     background: rgb(248, 248, 252);
-    
+
     border-radius: 10px;
 
     @include breakpoint(md) {
@@ -308,9 +308,9 @@
   .estimate-form-inputs {
     flex-grow: 1;
     display: flex;
-    @include breakpoint(md) {
-      margin: 0 30px;
-    }
+    // @include breakpoint(md) {
+    //   margin: 0 30px;
+    // }
 
     .wizard-stage {
       display: flex;
@@ -319,17 +319,22 @@
 
       &-footer {
         display: flex;
-        margin-top: auto;
+        margin-top: 15px;
 
         @include breakpoint(md-max) {
           margin-top: 30px;
           flex-direction: column;
         }
 
+        button:first-child:not(:only-child) {
+          @include breakpoint(md) {
+            margin-right: 15px;
+          }
+        }
+
         button:first-child {
           @include breakpoint(md) {
             margin-left: auto;
-            margin-right: 15px;
           }
           @include breakpoint(md-max) {
             order: 1;
@@ -363,6 +368,14 @@
         margin-bottom: 18px;
       }
     }
+
+    p:first-child {
+      margin-top: 5px;
+    }
+
+    .input-checkbox-wrap + p {
+      margin-top: 6px;
+    }
   }
 
   .question-title {
@@ -370,7 +383,7 @@
     font-family: Raleway;
     letter-spacing: 1.12px;
     margin-bottom: 15px;
-    margin-top: 40px;
+    margin-top: 32px;
     margin-right: 10px;
     font-style: normal;
     font-weight: bold;
@@ -425,13 +438,25 @@
     }
   }
 
+  .question-title:first-child {
+    @include breakpoint(mobile) {
+      margin-top: 38px;
+    }
+    @include breakpoint(md) {
+      margin-top: 35px;
+    }
+    @include breakpoint(lg) {
+      margin-top: 45px;
+    }
+  }
+
   .input-radio-wrap,
   .input-checkbox-wrap {
     display: inline-block;
   }
 
   .input-checkbox-wrap {
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
 
     @include breakpoint(mobile) {
       display: block;
@@ -439,6 +464,8 @@
 
     .checkbox {
       padding: 0;
+      margin-bottom: 10px;
+
       @include breakpoint(mobile) {
         display: block;
       }
@@ -466,19 +493,20 @@
         background: #764ba2;
         font-weight: bold;
         color: #ffffff;
+        cursor: pointer;
 
         &::before {
           content: none;
         }
       }
     }
+
     label {
       display: block;
       padding: 7px;
       margin-right: 10px;
       text-align: center;
       position: relative;
-      padding: 9px 26px;
       background: white;
       border: 2px solid #c9cbdd;
       border-radius: 50px;
@@ -491,6 +519,16 @@
 
       &:after {
         content: none;
+      }
+
+      @include breakpoint(mobile) {
+        margin-right: 0;
+      }
+      @include breakpoint(md) {
+        padding: 7px 35px;
+      }
+      @include breakpoint(lg) {
+        padding: 7px 17px;
       }
     }
   }
@@ -1043,19 +1081,22 @@
     border-radius: 10px;
 
     @include breakpoint(md) {
-      min-height: 766px;
+      min-height: 631px;
       border-radius: 0 10px 10px 0;
+      padding: 40px 20px 20px 35px;
+    }
+
+    @include breakpoint(lg) {
+      padding: 50px 40px 33px 53px;
     }
 
     .btn-group {
-      margin: 10px 0px 30px;
-
       @include breakpoint(md) {
-        margin: 10px auto 20px;
+        margin: 0 auto 20px;
         width: 300px;
       }
       @include breakpoint(lg) {
-        margin: 10px auto 30px;
+        margin: 0 auto 30px;
         width: 380px;
       }
 
@@ -1073,14 +1114,9 @@
 
 .progressbar-container {
   @include clearfix;
-  margin: 0 50px;
-
-  @include breakpoint(mobile) {
-    margin-bottom: 20px;
-  }
-  @include breakpoint(md) {
-    margin: 0 100px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 264px;
 
   .progressbar {
     margin: 0;
@@ -1141,16 +1177,20 @@
 
 radiogroup {
   & > span {
+    &:first-child {
+      margin-right: 40px;
+    }
+
     @include breakpoint(sm-max) {
       margin-bottom: 15px;
       display: inline-block;
     }
 
-    margin-right: 40px;
     .label-for-radio-btn {
       font-size: 12px;
       line-height: 14px;
     }
+
     b {
       font-style: normal;
       font-weight: normal;
@@ -1454,6 +1494,9 @@ radiogroup {
 
 .mb-23px {
   margin-bottom: 23px;
+}
+.mb-auto {
+  margin-bottom: auto !important;
 }
 .text-decoration-none {
   text-decoration: none;

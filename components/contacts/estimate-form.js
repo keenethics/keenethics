@@ -189,7 +189,7 @@ const EstimateForm = () => {
               <p>Desktop applications</p>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Web app"
+                  text="Web"
                   name="services"
                   id="web"
                   value="Web app"
@@ -199,7 +199,7 @@ const EstimateForm = () => {
               </div>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Windows app"
+                  text="Windows"
                   name="services"
                   id="windows"
                   value="Windows app"
@@ -209,7 +209,7 @@ const EstimateForm = () => {
               </div>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Linux app"
+                  text="Linux"
                   name="services"
                   id="linux"
                   value="Linux app"
@@ -219,7 +219,7 @@ const EstimateForm = () => {
               </div>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="MacOS app"
+                  text="MacOS"
                   name="services"
                   id="macos"
                   value="MacOS app"
@@ -231,7 +231,7 @@ const EstimateForm = () => {
               <p>Mobile applications</p>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="IOS app"
+                  text="IOS"
                   name="services"
                   id="ios"
                   value="IOS app"
@@ -241,7 +241,7 @@ const EstimateForm = () => {
               </div>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Android app"
+                  text="Android"
                   name="services"
                   id="android"
                   value="Android app"
@@ -253,26 +253,6 @@ const EstimateForm = () => {
               <p>We also do</p>
               <div className="input-checkbox-wrap">
                 <Checkbox
-                  text="Server-side development"
-                  name="services"
-                  id="ssd"
-                  value="Server-side development"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('Server-side development')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
-                  text="QA testing"
-                  name="services"
-                  id="qa"
-                  value="QA testing"
-                  onChange={handleServicesChange}
-                  isChecked={services.value.includes('QA testing')}
-                />
-              </div>
-              <div className="input-checkbox-wrap">
-                <Checkbox
                   text="UI/UX Design"
                   name="services"
                   id="design"
@@ -281,6 +261,26 @@ const EstimateForm = () => {
                   isChecked={services.value.includes('Design')}
                 />
               </div>
+              <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="Server-Side Development"
+                  name="services"
+                  id="ssd"
+                  value="Server-side development"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('Server-side development')}
+                />
+              </div>
+              {/* <div className="input-checkbox-wrap">
+                <Checkbox
+                  text="QA testing"
+                  name="services"
+                  id="qa"
+                  value="QA testing"
+                  onChange={handleServicesChange}
+                  isChecked={services.value.includes('QA testing')}
+                />
+              </div> */}
               <div className="input-checkbox-wrap">
                 <Checkbox
                   text="Other"
@@ -374,7 +374,7 @@ const EstimateForm = () => {
             <div className="question-title">
               <span className="question-number">4.</span> Expected budget
             </div>
-            <div className="estimate-input-cols">
+            <div className="estimate-input-cols mb-auto">
               <div className="input-select-wrap">
                 <select
                   name="budget"
@@ -401,9 +401,7 @@ const EstimateForm = () => {
               <button
                 type="button"
                 disabled={!pm.value || !budget.value}
-                className={`button button-send${
-                  !pm.value || !budget.value ? ' pending' : ''
-                }`}
+                className={`button button-send${!pm.value || !budget.value ? ' pending' : ''}`}
                 onClick={wizardStageIncreaser}
               >
                 Continue
