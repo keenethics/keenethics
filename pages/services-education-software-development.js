@@ -66,7 +66,6 @@ const ServicesMobileDevelopment = () => {
   return (
     <Layout>
       <ContentNavigation />
-      {/* <ContentNavigation image="mobile_development" /> */}
       <div className="content-block">
         <section>
           <h1 className="text-center">Education Software Development Services</h1>
