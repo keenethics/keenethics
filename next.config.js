@@ -1,7 +1,7 @@
 const withSass = require('@zeit/next-sass');
 const webpack = require('webpack');
 
-require('dotenv-safe').config()
+require('dotenv-safe').config();
 
 module.exports = withSass({
   generateBuildId: async () => `build-${Date.now()}`,

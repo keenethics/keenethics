@@ -178,7 +178,6 @@
       margin: 20px 0 20px;
       text-decoration: none;
       color: #000000;
-      font-family: Raleway;
       font-size: 14px;
       font-weight: 600;
     }
@@ -195,9 +194,7 @@
     p {
       @extend .p-normal;
       color: #12233d;
-      font-family: Raleway;
       margin-bottom: 30px;
-      text-align: justify;
     }
     h2,
     h3 {
@@ -221,7 +218,6 @@
       figcaption {
         @extend .auxiliary;
         color: #4c4d51;
-        font-family: Raleway;
         line-height: 1;
         margin-top: 5px;
         text-align: center;
@@ -267,14 +263,12 @@
     h1#{&}-title {
       @extend .h1-title;
       color: #000000;
-      font-family: Raleway;
       font-weight: 700;
       margin-bottom: 17px;
     }
     h2#{&}-subtitle {
       @extend .h2-subtitle;
       color: #4c4d51;
-      font-family: Raleway;
       font-weight: 400;
       font-style: italic;
       margin-bottom: 41px;
@@ -301,7 +295,6 @@ blockquote {
   p {
     line-height: 1.4 !important;
     color: #12233d;
-    font-family: Raleway;
     font-size: 16px;
     font-style: italic;
     line-height: 26px;
@@ -333,7 +326,6 @@ blockquote {
     border-left: 2px solid #343432;
     padding-left: 12px;
     margin-bottom: 12px;
-    text-align: justify;
   }
   div.person {
     margin-bottom: 0;
@@ -404,7 +396,6 @@ div.suggestion {
     font-size: 22px;
     font-weight: 700;
     color: #12233d;
-    font-family: Raleway;
     font-style: italic;
     margin-bottom: 30px;
     color: #12233d;
@@ -413,7 +404,6 @@ div.suggestion {
   p {
     letter-spacing: 0.18px;
     font-style: italic;
-    text-align: justify;
     font-weight: 400;
     letter-spacing: 0.16px;
     line-height: 26px;
@@ -528,7 +518,6 @@ div.person {
       display: inline-block;
       margin-left: auto;
       color: #12233d;
-      font-family: Raleway;
       font-size: 14px;
     }
   }
@@ -567,7 +556,6 @@ div.person {
 
   h4 {
     color: #df544d;
-    font-family: Raleway;
     font-size: 24px;
     font-weight: 700;
     line-height: 1;

@@ -21,7 +21,7 @@ export default () => {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(
       JSON.stringify({
-        email: value,
+        email: { value },
       }),
     );
   }
@@ -42,6 +42,7 @@ export default () => {
           onChange={handleChange}
           value={value}
           type="email"
+          placeholder="example@gmail.com"
           className={classnames({
             error,
             success,

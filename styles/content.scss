@@ -177,6 +177,10 @@
     font-size: 16px;
     color: #d62c2c;
     font-style: italic;
+    span {
+      font-size: 1.5em;
+      margin-right: 0.5em;
+    }
   }
   .portfolio-works {
     .portfolio__item {

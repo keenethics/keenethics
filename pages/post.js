@@ -193,10 +193,14 @@ export default class Post extends React.Component {
 
   static async getInitialProps(p) {
     const { name, preview } = p.query;
+    const { res, jsonPageRes } = p;
     const response = await getPostBySlug({ slug: name, preview });
     const { items } = response || {};
 
-    if (!items || !Array.isArray(items) || !items[0]) return {};
+    if (!items || !Array.isArray(items) || !items[0]) {
+      res.statusCode = 404;
+      return {};
+    }
 
     const { tags = [], slug } = items[0].fields;
     const relatedPosts = tags.length

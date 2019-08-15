@@ -423,7 +423,63 @@ app.prepare().then(() => {
   });
 
   server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
-  
+
+  server.post('/blog/subscribe', (req, res) => {
+    const { email } = req.body;
+
+    if (!formatValidation.validate({ type: 'email' }, email.value)) {
+      email.error = true;
+
+      return res.send({
+        errorField: { email },
+        status: 'Wrong email address',
+      });
+    }
+
+    const companyEmailContent = `
+      <p>New subscriber</p>
+      <p>${email.value}</p>
+    `;
+    const companyEmailOptions = {
+      from: 'no-reply@keenethics.com',
+      to: 'business@keenethics.com',
+      subject: `Blog subscriber ${email.value}`,
+      html: companyEmailContent,
+    };
+
+    transporter.sendMail(companyEmailOptions, (error) => {
+      if (error) {
+        throw error;
+      }
+
+      const subscriberEmailContent = `
+        <p>Thank you for subscribing! You will receive our thought-provoking newsletter twice a month.
+        The topics we cover include technology, productivity, and business.</p>
+        <p>You can also request a topic to be covered by writing directly to us at business@keenethics.com</p>
+        <p>P.S. Now and then, you will receive different promo codes for our services.
+        They may provide 10% off your future software project or quality assurance for free.
+        So don't miss out on the opportunity!</p>
+      `;
+      const subscriberEmailOptions = {
+        from: 'no-reply@keenethics.com',
+        to: `${email.value}`,
+        subject: 'Keenethics blog subscribing',
+        html: subscriberEmailContent,
+      };
+
+      transporter.sendMail(subscriberEmailOptions, (error) => {
+        if (error) {
+          throw error;
+        }
+
+        res.send({
+          errorField: {},
+          status: 'Email sent to company and subscriber',
+        });
+      });
+    });
+  });
+
   server.get('/post-preview/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name, preview: true }));
 
   server.get('/api/astronauts', async (req, res) => {
