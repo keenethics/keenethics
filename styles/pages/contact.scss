@@ -36,6 +36,87 @@
   & > .contact-person {
     z-index: 600;
   }
+
+  address {
+    margin: auto 50px 0;
+
+    @include breakpoint(md-max) {
+      margin-top: 15px;
+    }
+
+    .contacts-list {
+      @include breakpoint(md-max) {
+        text-align: center;
+      }
+
+      li {
+        white-space: nowrap;
+        position: relative;
+
+        @include breakpoint(md-max) {
+          display: inline-block;
+        }
+
+        .flag-country-wrapper {
+          display: flex;
+          align-items: center;
+
+          @include breakpoint(md-max) {
+            margin-bottom: 16px;
+          }
+
+          .country {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ffffff;
+            margin-left: 15px;
+          }
+        }
+
+        .address-telephone-wrapper {
+          @include breakpoint(md) {
+            padding-left: 50px;
+          }
+
+          a:first-child {
+            @include breakpoint(md-max) {
+              margin-bottom: 27px;
+              display: inline-block;
+            }
+          }
+
+          span {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+          }
+
+          .telephone {
+            display: block;
+            margin-top: 5px;
+          }
+        }
+
+        .ico {
+          height: 25px;
+          width: 25px;
+          display: inline-block;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 4px;
+        }
+
+        a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
 }
 
 .contacts-socket {
@@ -971,60 +1052,6 @@
 
       @include breakpoint(md-max) {
         margin-bottom: 40px;
-      }
-    }
-
-    address {
-      margin: auto 50px 0;
-      .contacts-list {
-        li {
-          white-space: nowrap;
-          position: relative;
-
-          .flag-country-wrapper {
-            display: flex;
-            align-items: center;
-
-            .country {
-              font-style: normal;
-              font-weight: bold;
-              font-size: 16px;
-              line-height: 19px;
-              color: #ffffff;
-              margin-left: 15px;
-            }
-          }
-
-          .address-telephone-wrapper {
-            padding-left: 50px;
-
-            span {
-              color: rgba(255, 255, 255, 0.7);
-              font-style: normal;
-              font-weight: normal;
-              font-size: 12px;
-              line-height: 16px;
-            }
-            .telephone {
-              display: block;
-              margin-top: 5px;
-            }
-          }
-
-          .ico {
-            height: 25px;
-            width: 25px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 4px;
-          }
-
-          a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.7);
-          }
-        }
       }
     }
 

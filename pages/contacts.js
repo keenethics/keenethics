@@ -11,7 +11,44 @@ import ContactForm from '../components/contacts/contact-form';
 import Notify from '../components/notify/notify';
 import SocialButton from '../components/social-buttons/main';
 
-const Address = () => (
+const Address = ({ className }) => (
+  <address className={className}>
+    <ul className="contacts-list">
+      <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+        <a
+          href="https://goo.gl/maps/eaAU8qqLZoo"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <div className="flag-country-wrapper">
+            <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+            <span className="country" itemProp="addressRegion">
+              Ukraine
+            </span>
+          </div>
+        </a>
+        <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/eaAU8qqLZoo"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">Lviv</span>
+            ,&nbsp;
+            <span itemProp="streetAddress">Kulparkivska St, 59</span>
+          </a>
+          <a href="tel:+380968147266">
+            <span className="telephone" itemProp="telephone">
+              +38 (096) 814 72 66
+            </span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </address>
+);
+
+const AddressPanel = () => (
   <React.Fragment>
     <h1>
       Get
@@ -19,40 +56,7 @@ const Address = () => (
       in touch
     </h1>
     <p>Let's discuss yout idea</p>
-    <address>
-      <ul className="contacts-list">
-        <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-          <a
-            href="https://goo.gl/maps/eaAU8qqLZoo"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-          >
-            <div className="flag-country-wrapper">
-              <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
-              <span className="country" itemProp="addressRegion">
-                Ukraine
-              </span>
-            </div>
-          </a>
-          <div className="address-telephone-wrapper">
-            <a
-              href="https://goo.gl/maps/eaAU8qqLZoo"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-            >
-              <span itemProp="addressLocality">Lviv</span>
-              ,&nbsp;
-              <span itemProp="streetAddress">Kulparkivska St, 59</span>
-            </a>
-            <a href="tel:+380968147266">
-              <span className="telephone" itemProp="telephone">
-                +38 (096) 814 72 66
-              </span>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </address>
+    <Address />
   </React.Fragment>
 );
 
@@ -182,7 +186,7 @@ const Contacts = ({ router }) => {
                   'contacts-panel': activeContactForm,
                 })}
               >
-                {activeContactForm ? <Address /> : wishlistPanel(wishlist)}
+                {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
                 <hr className="display-block-md" />
                 <div className="social-icons display-block-md">
                   <SocialButton />
@@ -231,6 +235,7 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
+          <Address className="display-block-md-max" />
         </div>
         <Background />
       </div>
