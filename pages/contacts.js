@@ -66,7 +66,7 @@ const wishlistPanel = wishlist => (
       Your <br className="display-block-md" />
       wishlist
     </h1>
-    <p>
+    <p className="display-block-md">
       Here will be your chosen <br className="display-block-md" />
       parameters.
     </p>

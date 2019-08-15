@@ -643,6 +643,10 @@
       line-height: 14px;
       color: #12233d;
 
+      @include breakpoint(mobile) {
+        margin-right: 0;
+      }
+
       .radio-lable-title {
         font-size: 14px;
         font-weight: 600;
@@ -753,32 +757,27 @@
     position: relative;
     margin: 0 0 10px 0;
 
-    @media (max-width: 700px) {
-      margin-right: 45px;
-    }
-
     select {
       margin: 0;
       width: 100%;
-
-      @include breakpoint(mobile) {
-      }
     }
 
     &::after {
       content: "";
       font: 17px "Consolas", monospace;
       color: #00539a;
-      right: 0;
-      top: 15px;
+      right: 15px !important;
+      top: 12px;
       padding: 0 0 2px;
       position: absolute;
       pointer-events: none;
       text-shadow: 0px 0.5px;
-      background-image: url("/static/images/svg/arrow-down.svg");
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l5.5 6L13 2' stroke='%2312233D' stroke-opacity='.8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       height: 20px;
       width: 25px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (max-width: 700px) {
         right: 2%;
@@ -788,29 +787,19 @@
     .input-select {
       background: transparent;
       width: 100%;
-      padding: 5px;
-      padding-left: 25px;
-      margin-left: 5px;
+      padding: 11.5px 40px 11.5px 29px;
       font-size: 14px;
       line-height: 1;
-      border: 0;
-      border-radius: 0;
-      border-bottom: 1px solid;
-      height: 34px;
       -webkit-appearance: none;
-      border-bottom: 1px solid #acacac;
       outline: none;
       font-family: Raleway;
       font-weight: 400;
       letter-spacing: 0.24px;
       appearance: none;
       cursor: pointer;
-
-      @media (max-width: 700px) {
-        width: 100%;
-        margin-right: 45px;
-        padding: 5px 0px;
-      }
+      border: 2px solid #c9cbdd;
+      border-radius: 10px;
+      line-height: 1.25;
 
       option {
         background-color: #f6f6f6;
@@ -980,10 +969,14 @@
   display: inline-flex;
   vertical-align: middle;
 
-  button {
+  button.button {
     position: relative;
     flex: 1 1 auto;
     text-align: center;
+
+    @include breakpoint(mobile) {
+      padding: 16px 18px !important;
+    }
   }
   button:not(:first-child) {
     border-top-left-radius: 0;
@@ -1040,6 +1033,14 @@
       line-height: 54px;
       color: #ffffff;
       margin: 50px 50px 10px 50px;
+
+      @include breakpoint(sm-max) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 31px;
+        margin: 32px 37px 50px;
+      }
     }
 
     & > p {
@@ -1130,10 +1131,6 @@
       .button {
         flex-grow: 1;
         flex-basis: 0;
-
-        @include breakpoint(mobile) {
-          padding: 16px 18px;
-        }
       }
     }
   }
@@ -1143,12 +1140,12 @@
   @include clearfix;
   margin-left: auto;
   margin-right: auto;
-  width: 264px;
+  width: 100%;
+  max-width: 264px;
 
   .progressbar {
     margin: 0;
     padding: 0;
-    counter-reset: step;
 
     & li {
       list-style-type: none;
