@@ -1,5 +1,9 @@
 @import "./helpers/responsive-mixin";
 
+* {
+  box-sizing: border-box;
+}
+
 .contacts-page {
   display: flex;
   align-items: center;
@@ -53,7 +57,6 @@
   @include clearfix;
   position: relative;
   z-index: 600;
-  box-sizing: border-box;
 }
 
 .estimate-block {
@@ -69,7 +72,6 @@
       display: inline-block;
       background: #ffffff;
       border: 2px solid #ffffff;
-      box-sizing: border-box;
       border-radius: 50px;
       padding: 9px 24px;
       font-style: normal;
@@ -90,7 +92,23 @@
 .contacts-form {
   form {
     background: rgb(248, 248, 252);
-    padding: 15px;
+    
+    border-radius: 10px;
+
+    @include breakpoint(md) {
+      width: 300px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 27px;
+    }
+    @include breakpoint(lg) {
+      width: 380px;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px 45px;
+    }
 
     @include breakpoint(md-max) {
       background: white;
@@ -121,10 +139,10 @@
       border-right: none;
       border-top: none;
       outline: none;
-      box-sizing: border-box;
       letter-spacing: 0.28px;
       border-radius: 8px;
       border: 1px solid transparent;
+      height: 44px;
 
       &.error {
         color: red;
@@ -151,7 +169,7 @@
       position: absolute;
       pointer-events: none;
       left: 20px;
-      bottom: 11.5px;
+      bottom: 13.5px;
       transition: 0.2s ease all;
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
@@ -160,7 +178,7 @@
     input:focus ~ label,
     input:not([value=""]) ~ label,
     input:valid ~ label {
-      bottom: 32px;
+      bottom: 37px;
       left: 21px;
       font-size: 10px;
       background: rgb(248, 248, 252);
@@ -171,6 +189,7 @@
     input:not([value=""]):not(:focus) {
       background: rgba(102, 119, 180, 0.1);
       border: 1px solid transparent;
+      font-weight: bold;
 
       & ~ label {
         display: none;
@@ -184,7 +203,6 @@
       padding: 14px 20px;
       margin: 0;
       font-size: 14px;
-      box-sizing: border-box;
       background: none;
       outline: none;
       border-radius: 3px;
@@ -194,6 +212,14 @@
       background: rgba(102, 119, 180, 0.1);
       border: 1px solid transparent;
       border-radius: 8px;
+
+      min-height: 143px;
+      @include breakpoint(md-max) {
+        min-height: 111px;
+      }
+      @include breakpoint(sm-max) {
+        min-height: 100px;
+      }
 
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
@@ -275,7 +301,6 @@
 .estimate-form {
   background: #fff;
   padding-top: 0px;
-  box-sizing: border-box;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -456,7 +481,6 @@
       padding: 9px 26px;
       background: white;
       border: 2px solid #c9cbdd;
-      box-sizing: border-box;
       border-radius: 50px;
       font-style: normal;
       font-weight: 500;
@@ -493,7 +517,6 @@
       padding: 9px 26px;
       background: white;
       border: 2px solid #c9cbdd;
-      box-sizing: border-box;
       border-radius: 50px;
       font-style: normal;
       font-weight: 500;
@@ -1027,8 +1050,13 @@
     .btn-group {
       margin: 10px 0px 30px;
 
+      @include breakpoint(md) {
+        margin: 10px auto 20px;
+        width: 300px;
+      }
       @include breakpoint(lg) {
-        margin: 10px 80px 30px;
+        margin: 10px auto 30px;
+        width: 380px;
       }
 
       .button {
@@ -1312,8 +1340,8 @@ radiogroup {
   }
 
   img {
-    height: 70px;
-    width: 70px;
+    height: 64px;
+    width: 64px;
     border-radius: 50%;
     margin-right: 19px;
 
