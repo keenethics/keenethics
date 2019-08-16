@@ -610,14 +610,14 @@ div.person {
       }
 
       &.success {
-        animation: success 2s ease-out;
+        animation: success 5s ease-out;
         animation-iteration-count: 1;
       }
     }
     button.btn {
       z-index: 0;
       padding: 16px 45px;
-      //   margin-left: 10px;
+
       @include breakpoint(mobile) {
         margin: 10px 0 0 0;
         flex-grow: 1;
@@ -679,6 +679,10 @@ button.btn {
   }
 }
 
+.green-text-flash{
+  animation: green-text-flash 4s linear;
+}
+
 @keyframes success {
   0% {
     border-color: none;
@@ -691,5 +695,16 @@ button.btn {
   100% {
     border-color: none;
     box-shadow: none;
+  }
+}
+@keyframes green-text-flash {
+  0% {
+    color: #84827f;
+  }
+  30% {
+    color: #39f82d8c;
+  }
+  100% {
+    color: #84827f;
   }
 }

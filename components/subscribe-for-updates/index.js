@@ -24,6 +24,10 @@ export default () => {
         email: { value },
       }),
     );
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
   }
 
   function handleChange(event) {
@@ -35,8 +39,12 @@ export default () => {
 
   return (
     <div className="subscribe-panel">
-      <h4>Don't miss updates from us!</h4>
-      <p>Subscribe to our bimonthly newsletter.</p>
+      {success ? (
+        <h4 className="green-text-flash">Thank you for subscribing!</h4>
+      ) : (
+        <h4>Don't miss updates from us!</h4>
+      )}
+      {success ? <p>&nbsp;</p> : <p>Subscribe to our bimonthly newsletter.</p>}
       <div className="subscribe-panel-input-group">
         <input
           onChange={handleChange}
