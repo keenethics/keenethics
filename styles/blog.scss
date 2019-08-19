@@ -165,12 +165,13 @@
   }
   &-header {
     padding: 0 20px;
+
     @include breakpoint(lg) {
       padding: 0 60px;
     }
 
     @include breakpoint(sm-max) {
-      padding: 0 25px 0 80px;
+      padding: 0 13px;
     }
 
     a {
@@ -180,6 +181,10 @@
       color: #000000;
       font-size: 14px;
       font-weight: 600;
+
+      @include breakpoint(sm-max) {
+        margin-left: 67px;
+      }
     }
 
     &-hr {
@@ -188,6 +193,10 @@
       border-bottom: 1px solid #e1e1e1;
       height: 0;
       margin: 0 0 20px;
+
+      @include breakpoint(sm-max) {
+        margin-left: 67px;
+      }
     }
   }
   &-content {
