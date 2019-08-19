@@ -60,9 +60,41 @@ const AddressPanel = () => (
   </React.Fragment>
 );
 
+const MobileWishlist = ({ wishlist }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <React.Fragment>
+      <div className="mobile-counter display-flex-md-max">
+        <h1>
+          Your <br />
+          wishlist
+        </h1>
+        <button className="counter" onClick={() => setIsExpanded(!isExpanded)}>
+          {wishlist.length}
+        </button>
+        <button
+          className={classnames('expand-icon', { down: !isExpanded })}
+          onClick={() => setIsExpanded(!isExpanded)}
+        />
+        {isExpanded && (
+          <div className="wish-list">
+            {wishlist.map(item => (
+              <span key={item} className="wish-item">
+                {item}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </React.Fragment>
+  );
+};
+
 const wishlistPanel = wishlist => (
   <React.Fragment>
-    <h1>
+    <MobileWishlist wishlist={wishlist} />
+    <h1 className="display-block-md">
       Your <br className="display-block-md" />
       wishlist
     </h1>
