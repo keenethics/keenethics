@@ -151,7 +151,7 @@ const bodyOptions = {
           <div className="suggestion">
             <h5>{suggestionTitle}</h5>
             {documentToReactComponents(body)}
-            <div className="suggestor-wrapper">
+            <div className="suggester-wrapper">
               {personComponent({
                 image: suggesterPhoto,
                 name: suggesterName,
