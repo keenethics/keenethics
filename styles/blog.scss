@@ -150,7 +150,26 @@
       text-transform: uppercase;
       letter-spacing: 0.56px;
       @include breakpoint(sm-max) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+      }
+
+      time:last-child {
+        margin-left: 22px;
+
+        @include breakpoint(md-max) {
+          margin-left: 0;
+        }
+      }
+
+      br {
+        display: none;
+
+        @include breakpoint(md-max) {
+          display: block;
+        }
       }
     }
     .socials {
@@ -258,10 +277,6 @@
         padding: 0 0 0 24px;
         line-height: 24px;
 
-        &::before {
-          content: none;
-        }
-
         p {
           margin: 0;
         }
@@ -273,6 +288,10 @@
 
       li {
         padding-left: 8px;
+
+        &::before {
+          content: none;
+        }
       }
     }
     ul {
@@ -286,8 +305,7 @@
           content: "";
           position: absolute;
           left: 0;
-          top: 50%;
-          transform: translateY(2.5px);
+          top: 15px;
           display: block;
           width: 5px;
           height: 5px;
