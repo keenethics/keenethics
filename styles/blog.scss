@@ -249,14 +249,14 @@
     ul,
     ol {
       margin: 0 0 30px 0;
-      list-style: initial;
-      padding-left: 24px;
 
       li {
         word-break: break-word;
         @extend .p-normal;
         padding: 0;
         margin-bottom: 4px;
+        padding: 0 0 0 24px;
+        line-height: 24px;
 
         &::before {
           content: none;
@@ -264,6 +264,35 @@
 
         p {
           margin: 0;
+        }
+      }
+    }
+    ol {
+      list-style: decimal;
+      padding-left: 39px;
+
+      li {
+        padding-left: 8px;
+      }
+    }
+    ul {
+      padding-left: 24px;
+
+      li {
+        position: relative;
+        list-style: none;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(2.5px);
+          display: block;
+          width: 5px;
+          height: 5px;
+          border: 2px solid #f2af3b;
+          border-radius: 50%;
         }
       }
     }
