@@ -317,6 +317,12 @@
     &-description {
       margin-bottom: 25px;
     }
+    main {
+      & > pre,
+      & > code {
+        margin: 0 0 30px 0 !important;
+      }
+    }
   }
 }
 
