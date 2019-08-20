@@ -326,11 +326,13 @@
         font-size: 18px;
         color: #12233d;
         margin-bottom: 30px;
+        line-height: 1.5;
       }
       & > b {
         font-size: 18px;
         color: #12233d;
         margin-bottom: 30px;
+        line-height: 1.5;
       }
     }
   }
@@ -564,6 +566,12 @@ div.person {
   &-header {
     display: flex;
     align-items: center;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: left;
+    }
 
     a {
       display: inline-block;
