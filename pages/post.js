@@ -5,12 +5,8 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import Link from 'next/link';
 import ReactContentfulImage from 'react-contentful-image';
-import SubscribePanel from '../components/subscribe-for-updates';
-
-import Layout from '../components/layout/main';
-import Error from './_error';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -19,25 +15,33 @@ import {
   TwitterIcon,
   LinkedinIcon,
 } from 'react-share';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import SubscribePanel from '../components/subscribe-for-updates';
+
+import Layout from '../components/layout/main';
+import Error from './_error';
 import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
+
 const _ = require('lodash');
 
 const socialMediaShareButtons = ({ url }) => (
   <div className="socials">
     Share on:
     <FacebookShareButton url={`https://keenethics.com${url}`}>
-      <FacebookIcon size={32} round={true} />
+      <FacebookIcon size={32} round />
     </FacebookShareButton>
     <LinkedinShareButton url={`https://keenethics.com${url}`}>
-      <LinkedinIcon size={32} round={true} />
+      <LinkedinIcon size={32} round />
     </LinkedinShareButton>
     <TwitterShareButton url={`https://keenethics.com${url}`}>
-      <TwitterIcon size={32} round={true} />
+      <TwitterIcon size={32} round />
     </TwitterShareButton>
   </div>
 );
 
-const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
+const postCardComponent = ({
+  slug, heroImage, publishDate, title,
+}) => {
   const url = _.get(heroImage, 'fields.file.url');
   const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
 
@@ -72,15 +76,17 @@ const imageComponent = ({ src, description, title }) => (
   </figure>
 );
 
-const personComponent = ({ image, name, position, linkedIn }) => {
+const personComponent = ({
+  image, name, position, linkedIn,
+}) => {
   const url = _.get(image, 'fields.file.url');
 
-  if (linkedIn)
+  if (linkedIn) {
     return (
       <a href={linkedIn} target="_blank" className="person-link">
         <div className="person">
           {image && (
-            <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
+          <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
           )}
           <span className="info">
             <span className="name">{name}</span>
@@ -89,6 +95,7 @@ const personComponent = ({ image, name, position, linkedIn }) => {
         </div>
       </a>
     );
+  }
 
   return (
     <div className="person">
@@ -114,7 +121,7 @@ const bodyOptions = {
 
       return <p>{children.filter(item => !!item)}</p>;
     },
-    [BLOCKS.EMBEDDED_ASSET]: node => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
 
@@ -171,7 +178,7 @@ const bodyOptions = {
         );
       }
     },
-    'embedded-entry-inline': node => {
+    'embedded-entry-inline': (node) => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
         const { image, name, position } = node.data.target.fields;
 
@@ -180,6 +187,9 @@ const bodyOptions = {
 
       return null;
     },
+  },
+  renderMark: {
+    [MARKS.CODE]: text => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
   },
 };
 
