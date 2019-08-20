@@ -1,5 +1,3 @@
-/* global BACKEND_URL, fetch */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
@@ -80,13 +78,17 @@ const personComponent = ({
   image, name, position, linkedIn,
 }) => {
   const url = _.get(image, 'fields.file.url');
+  const alt = _.get(image, 'fields.description') || _.get(image, 'fields.title');
 
   if (linkedIn) {
     return (
-      <a href={linkedIn} target="_blank" className="person-link">
+      <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="person-link">
         <div className="person">
           {image && (
-          <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
+            <img
+              alt={alt}
+              src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`}
+            />
           )}
           <span className="info">
             <span className="name">{name}</span>
@@ -100,7 +102,10 @@ const personComponent = ({
   return (
     <div className="person">
       {image && (
-        <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
+        <img
+          alt={alt}
+          src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`}
+        />
       )}
       <span className="info">
         <span className="name">{name}</span>
@@ -127,14 +132,14 @@ const bodyOptions = {
 
       return imageComponent({ src: url, description, title });
     },
-    [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
         const { bookList } = node.data.target.fields;
 
         return (
           <div className="useful-readings">
             <div className="useful-readings-icon-wrapper">
-              <img src="/static/images/book_icon.png" />
+              <img alt="Book icon" src="/static/images/book_icon.png" />
             </div>
             <div className="useful-readings-content">
               <h4>useful readings:</h4>
@@ -171,12 +176,16 @@ const bodyOptions = {
                 rel="noopener noreferrer"
                 className="calendly-goal"
               >
-                <button className="btn btn-schedule">{buttonText || 'Schedule a call'}</button>
+                <button type="button" className="btn btn-schedule">
+                  {buttonText || 'Schedule a call'}
+                </button>
               </a>
             </div>
           </div>
         );
       }
+
+      return null;
     },
     'embedded-entry-inline': (node) => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
@@ -203,7 +212,7 @@ export default class Post extends React.Component {
 
   static async getInitialProps(p) {
     const { name, preview } = p.query;
-    const { res, jsonPageRes } = p;
+    const { res } = p;
     const response = await getPostBySlug({ slug: name, preview });
     const { items } = response || {};
 
@@ -223,16 +232,16 @@ export default class Post extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.title !== this.props.title) {
-      document.querySelector('.content-inner').scrollTo(0, 0);
-    }
-  }
-
   componentDidMount() {
     this.setState({
       url: window.location.href,
     });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.title !== this.props.title) {
+      document.querySelector('.content-inner').scrollTo(0, 0);
+    }
   }
 
   render() {
@@ -323,6 +332,30 @@ export default class Post extends React.Component {
   }
 }
 
+personComponent.propTypes = {
+  image: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  linkedIn: PropTypes.string.isRequired,
+};
+
+imageComponent.propTypes = {
+  src: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+postCardComponent.propTypes = {
+  slug: PropTypes.string.isRequired,
+  heroImage: PropTypes.string.isRequired,
+  publishDate: PropTypes.instanceOf(Date).isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+socialMediaShareButtons.propTypes = {
+  url: PropTypes.string.isRequired,
+};
+
 Post.propTypes = {
   author: PropTypes.object,
   bodyRich: PropTypes.object,
@@ -333,6 +366,9 @@ Post.propTypes = {
   publishDate: PropTypes.string,
   tags: PropTypes.array,
   relatedPosts: PropTypes.array,
+  metaTitle: PropTypes.string,
+  metaDescription: PropTypes.string,
+  url: PropTypes.object.isRequired,
 };
 Post.defaultProps = {
   bodyRich: {},
@@ -344,4 +380,6 @@ Post.defaultProps = {
   author: null,
   tags: [],
   relatedPosts: [],
+  metaTitle: '',
+  metaDescription: '',
 };
