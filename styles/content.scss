@@ -1,8 +1,15 @@
+@import "./helpers/responsive-mixin";
+
 .content {
-  display: table-cell;
-  height: 100%;
+  flex-grow: 1;
+  min-height: 100%;
   vertical-align: top;
   -webkit-overflow-scrolling: touch;
+  max-width: calc(100% - 160px);
+  
+  @include breakpoint(sm-max) {
+    max-width: 100%;
+  }
 }
 .content-inner {
   position: relative;
@@ -12,12 +19,12 @@
 
   @include for-tablet {
     margin-left: -1px;
-  };
+  }
 }
 .content-navigation {
   overflow: hidden;
   background: #071e40;
-  background: linear-gradient(145deg, #071e40 0%,#662938 80%);
+  background: linear-gradient(145deg, #071e40 0%, #662938 80%);
 }
 .content-navigation-inner {
   position: relative;
@@ -31,7 +38,7 @@
   @include for-desktop {
     display: none;
     visibility: hidden;
-  };
+  }
 }
 .content-navigation-image-inner {
   position: relative;
@@ -39,7 +46,8 @@
   height: 340px;
   margin: 60px 0;
 
-  .image-top, .image-bottom {
+  .image-top,
+  .image-bottom {
     position: absolute;
     display: block;
     width: 100%;
@@ -90,13 +98,15 @@
     max-width: 100%;
     margin: 0 auto;
   }
-  ul, ol {
+  ul,
+  ol {
     margin: 26px 10px;
     @media screen and (max-width: 500px) {
       margin: 26px 5px;
     }
   }
-  ul li, ol li {
+  ul li,
+  ol li {
     position: relative;
     font-size: 16px;
     color: #444;
@@ -106,7 +116,7 @@
     background-size: 16px;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 12px;
@@ -141,7 +151,8 @@
   }
   table {
     margin: 0 auto 18px auto;
-    td, th {
+    td,
+    th {
       padding: 7px 10px;
       border: 1px solid #12233d;
       @media screen and (max-width: 500px) {
@@ -156,7 +167,7 @@
     }
   }
   .letter {
-    font-family: 'Caveat', cursive;
+    font-family: "Caveat", cursive;
     h1 {
       font-weight: 600;
     }
@@ -188,9 +199,9 @@
       width: 280px;
     }
     .portfolio__item-figure {
-      box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
       &:hover {
-        box-shadow: 2px 2px 6px rgba(0,0,0,.3);
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
       }
     }
   }
@@ -198,7 +209,8 @@
     margin: 0 auto;
     border-radius: 50%;
     border: 3px solid #fff;
-    box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 6px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 1.5px 3px 0 rgba(0, 0, 0, 0.15),
+      0 1.5px 6px 0 rgba(0, 0, 0, 0.15);
     height: 125px;
   }
   .iphone-slider-wrap {
