@@ -37,9 +37,7 @@ const socialMediaShareButtons = ({ url }) => (
   </div>
 );
 
-const postCardComponent = ({
-  slug, heroImage, publishDate, title,
-}) => {
+const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
   const url = _.get(heroImage, 'fields.file.url');
   const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
 
@@ -74,9 +72,7 @@ const imageComponent = ({ src, description, title }) => (
   </figure>
 );
 
-const personComponent = ({
-  image, name, position, linkedIn,
-}) => {
+const personComponent = ({ image, name, position, linkedIn }) => {
   const url = _.get(image, 'fields.file.url');
   const alt = _.get(image, 'fields.description') || _.get(image, 'fields.title');
 
@@ -126,13 +122,13 @@ const bodyOptions = {
 
       return <p>{children.filter(item => !!item)}</p>;
     },
-    [BLOCKS.EMBEDDED_ASSET]: (node) => {
+    [BLOCKS.EMBEDDED_ASSET]: node => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
 
       return imageComponent({ src: url, description, title });
     },
-    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+    [BLOCKS.EMBEDDED_ENTRY]: node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
         const { bookList } = node.data.target.fields;
 
@@ -187,7 +183,7 @@ const bodyOptions = {
 
       return null;
     },
-    'embedded-entry-inline': (node) => {
+    'embedded-entry-inline': node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
         const { image, name, position } = node.data.target.fields;
 
@@ -225,9 +221,11 @@ export default class Post extends React.Component {
     const relatedPosts = tags.length
       ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
       : [];
+    const updatedAt = _.get(response, 'items[0].sys.updatedAt', false);
 
     return {
       ...items[0].fields,
+      updatedAt,
       relatedPosts,
     };
   }
@@ -250,6 +248,7 @@ export default class Post extends React.Component {
       subtitle,
       description,
       publishDate,
+      updatedAt,
       bodyRich,
       author,
       tags,
@@ -270,7 +269,6 @@ export default class Post extends React.Component {
       meta.title = metaTitle;
       meta.description = metaDescription;
     }
-
     const { url } = this.state;
 
     return (
@@ -286,7 +284,18 @@ export default class Post extends React.Component {
                 </span>
               ))}
               <span className="date">
-                {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+                {publishDate && (
+                  <React.Fragment>
+                    PUBLISH DATE:{' '}
+                    <Moment format="MMMM DD YYYY">{`${new Date(publishDate)}`}</Moment>
+                  </React.Fragment>
+                )}
+                <br />
+                {updatedAt && (
+                  <React.Fragment>
+                    UPD: <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
+                  </React.Fragment>
+                )}
               </span>
               {url && socialMediaShareButtons({ url: this.props.url.asPath })}
             </div>
@@ -364,6 +373,7 @@ Post.propTypes = {
   subtitle: PropTypes.string,
   description: PropTypes.string,
   publishDate: PropTypes.string,
+  updatedAt: PropTypes.string,
   tags: PropTypes.array,
   relatedPosts: PropTypes.array,
   metaTitle: PropTypes.string,
@@ -376,7 +386,8 @@ Post.defaultProps = {
   title: '',
   subtitle: '',
   description: '',
-  publishDate: null,
+  publishDate: false,
+  updatedAt: false,
   author: null,
   tags: [],
   relatedPosts: [],
