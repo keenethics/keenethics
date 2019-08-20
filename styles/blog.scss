@@ -156,8 +156,8 @@
         width: 100%;
       }
 
-      time:last-child {
-        margin-left: 22px;
+      time:first-child {
+        margin-right: 22px;
 
         @include breakpoint(md-max) {
           margin-left: 0;
