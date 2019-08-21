@@ -22,6 +22,33 @@ import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
 
 const _ = require('lodash');
 
+const EMBEDDED_ENTRY_CLASSNAMES = {
+  usefulReadings: 'useful-readings',
+  mostSuitableFor: 'most-suitable-for',
+  helpfulTools: 'helpful-tools',
+};
+const EMBEDDED_ENTRY_ICON_NAMES = {
+  usefulReadings: 'book_icon',
+  mostSuitableFor: 'bulb_icon',
+  helpfulTools: 'wrench_icon',
+};
+const EMBEDDED_ENTRY_HEADERS = {
+  usefulReadings: 'USEFUL READINGS:',
+  mostSuitableFor: 'MOST SUITABLE FOR...',
+  helpfulTools: 'HELPFUL TOOLS:',
+};
+const embeddedEntryComponent = ({ type, list }) => (
+  <div key={`&{type}_${Math.random()}`} className={EMBEDDED_ENTRY_CLASSNAMES[type]}>
+    <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-icon-wrapper`}>
+      <img alt="Bulb icon" src={`/static/images/${EMBEDDED_ENTRY_ICON_NAMES[type]}.png`} />
+    </div>
+    <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-content`}>
+      <h4>{EMBEDDED_ENTRY_HEADERS[type]}</h4>
+      {!!list && documentToReactComponents(list)}
+    </div>
+  </div>
+);
+
 const socialMediaShareButtons = ({ url }) => (
   <div className="socials">
     Share on:
@@ -130,19 +157,29 @@ const bodyOptions = {
     },
     [BLOCKS.EMBEDDED_ENTRY]: node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
-        const { bookList } = node.data.target.fields;
+        const { bookList, list } = _.get(node, 'data.target.fields', null);
 
         return (
-          <div className="useful-readings">
-            <div className="useful-readings-icon-wrapper">
+          <div className={EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}>
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-icon-wrapper`}>
               <img alt="Book icon" src="/static/images/book_icon.png" />
             </div>
-            <div className="useful-readings-content">
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-content`}>
               <h4>useful readings:</h4>
-              {documentToReactComponents(bookList)}
+              {(bookList || list) && documentToReactComponents(bookList || list)}
             </div>
           </div>
         );
+      }
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor') {
+        const { list } = _.get(node, 'data.target.fields', null);
+
+        return embeddedEntryComponent({ list, type: 'mostSuitableFor' });
+      }
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools') {
+        const { list } = _.get(node, 'data.target.fields', null);
+
+        return embeddedEntryComponent({ list, type: 'helpfulTools' });
       }
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'suggestion') {
         const {

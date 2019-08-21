@@ -516,7 +516,9 @@ div.person {
   margin-bottom: 0;
 }
 
-.useful-readings {
+.useful-readings,
+.most-suitable-for,
+.helpful-tools {
   display: flex;
   padding: 27px 10px 27px 0;
   margin-bottom: 30px;
@@ -533,6 +535,8 @@ div.person {
     }
 
     img {
+      max-width: 52px;
+
       @include breakpoint(sm-max) {
         width: 37px;
       }
@@ -554,6 +558,9 @@ div.person {
         line-height: 1;
       }
     }
+    ul li::before {
+      top: 11.5px;
+    }
   }
 }
 
@@ -567,7 +574,6 @@ div.person {
     padding: 0;
   }
   hr {
-    // border-top: 1px solid #e1e1e1;
     height: 1px;
     background-color: #e1e1e1;
     border: none;
