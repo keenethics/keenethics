@@ -21,7 +21,9 @@ const Address = ({ className }) => (
           target="_blank"
         >
           <div className="flag-country-wrapper">
-            <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+            <span className="flag-country-wrapper-flag">
+              <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+            </span>
             <span className="country" itemProp="addressRegion">
               Ukraine
             </span>
@@ -40,6 +42,38 @@ const Address = ({ className }) => (
           <a href="tel:+380968147266">
             <span className="telephone" itemProp="telephone">
               +38 (096) 814 72 66
+            </span>
+          </a>
+        </div>
+      </li>
+      <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+        <a
+          href="https://goo.gl/maps/eaAU8qqLZoo"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <div className="flag-country-wrapper">
+            <span className="flag-country-wrapper-flag">
+              <img src="/static/images/flag_netherlands.png" alt="Flag" className="ico flag" />
+            </span>
+            <span className="country" itemProp="addressRegion">
+              The Netherlands
+            </span>
+          </div>
+        </a>
+        <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">Oss</span>
+            ,&nbsp;
+            <span itemProp="streetAddress">Oude litherweg 2, 5346 RT</span>
+          </a>
+          <a href="tel:+311111111111">
+            <span className="telephone" itemProp="telephone">
+              +31 111 111 11 11
             </span>
           </a>
         </div>
@@ -67,13 +101,16 @@ const MobileWishlist = ({ wishlist }) => {
     <React.Fragment>
       <div className="mobile-counter display-flex-md-max">
         <h1>
-          Your <br />
+          Your
+          {' '}
+          <br />
           wishlist
         </h1>
-        <button className="counter" onClick={() => setIsExpanded(!isExpanded)}>
+        <button type="button" className="counter" onClick={() => setIsExpanded(!isExpanded)}>
           {wishlist.length}
         </button>
         <button
+          type="button"
           className={classnames('expand-icon', { down: !isExpanded })}
           onClick={() => setIsExpanded(!isExpanded)}
         />
@@ -95,11 +132,15 @@ const wishlistPanel = wishlist => (
   <React.Fragment>
     <MobileWishlist wishlist={wishlist} />
     <h1 className="display-block-md">
-      Your <br className="display-block-md" />
+      Your
+      {' '}
+      <br className="display-block-md" />
       wishlist
     </h1>
     <p className="display-block-md">
-      Here will be your chosen <br className="display-block-md" />
+      Here will be your chosen
+      {' '}
+      <br className="display-block-md" />
       parameters.
     </p>
     <hr className="hr-top display-block-md" />
