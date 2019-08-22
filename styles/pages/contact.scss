@@ -15,7 +15,8 @@
   * {
     letter-spacing: 0;
     box-sizing: border-box;
-    &::after, &::before {
+    &::after,
+    &::before {
       box-sizing: border-box;
     }
   }
@@ -454,6 +455,9 @@
       &:not(:focus) {
         background: rgba(102, 119, 180, 0.1);
         border: 1px solid transparent;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
       }
     }
   }
@@ -1418,6 +1422,9 @@ radiogroup {
 .mt-40 {
   margin-top: 40px;
 }
+.mt-auto {
+  margin-top: auto !important;
+}
 
 .thanks {
   z-index: 600;
@@ -1444,45 +1451,48 @@ radiogroup {
   border-radius: 35px;
   padding: 16px 28px;
   display: inline-block;
-  font-size: 12px;
-  color: #fff;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background: none;
   border: none;
   outline: none;
-  font-weight: 700;
-  box-shadow: 0px 5px 20px 0px rgba(203, 55, 55, 0.3);
   cursor: pointer;
   line-height: 1;
+  background: #f1f1f1;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #12233d;
 
   &.button-send {
-    background-image: linear-gradient(
-      90deg,
-      rgb(222, 53, 53) 0%,
-      rgb(227, 98, 29) 100%
-    );
+    background: linear-gradient(270deg, #e3621d 0%, #de3535 100%);
     font-weight: 600;
     text-transform: uppercase;
     font-family: Raleway;
     font-size: 15px;
+    color: #fff;
+
+    &.pending {
+      background-image: linear-gradient(
+        270deg,
+        rgb(244, 124, 131) 0%,
+        rgb(245, 153, 114) 100%
+      );
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 
   &:hover {
     box-shadow: 0px 5px 20px 0px rgba(203, 55, 55, 0.4);
   }
 
-  &.pending {
-    background-image: linear-gradient(90deg, #aaa 0%, #ccc 100%);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-
-    &:hover {
-      box-shadow: none;
-    }
-  }
   &.no-shadow {
-    box-shadow: none;
+    box-shadow: none !important;
   }
   &.contacts-form-btn {
     color: #fff;

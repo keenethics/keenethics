@@ -297,11 +297,11 @@ What services are you interested in?
                 />
               </div>
             </div>
-            <div className="wizard-stage-footer">
+            <div className="wizard-stage-footer mt-auto">
               <button
                 type="button"
                 disabled={!stage.value || !services.value.length}
-                className={`button button-send${
+                className={`button no-shadow button-send${
                   !stage.value || !services.value.length ? ' pending' : ''
                 }`}
                 onClick={wizardStageIncreaser}
@@ -402,11 +402,19 @@ Expected budget
                 </select>
               </div>
             </div>
-            <div className="wizard-stage-footer">
-              <button onClick={wizardStageDecreaser} type="button" className="button button-send">
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
                 Back
               </button>
-              <button type="button" className="button button-send" onClick={wizardStageIncreaser}>
+              <button
+                type="button"
+                className="button no-shadow button-send"
+                onClick={wizardStageIncreaser}
+              >
                 Continue
               </button>
             </div>
@@ -590,11 +598,19 @@ Start
                 </label>
               </div>
             </div>
-            <div className="wizard-stage-footer">
-              <button onClick={wizardStageDecreaser} type="button" className="button button-send">
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
                 Back
               </button>
-              <button type="button" onClick={wizardStageIncreaser} className="button button-send">
+              <button
+                type="button"
+                onClick={wizardStageIncreaser}
+                className="button no-shadow button-send"
+              >
                 Continue
               </button>
             </div>
@@ -655,12 +671,16 @@ Start
               </div>
             </div>
             <div className="wizard-stage-footer">
-              <button onClick={wizardStageDecreaser} type="button" className="button button-send">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
                 Back
               </button>
               <button
                 type="submit"
-                className={classnames('button button-send', {
+                className={classnames('button no-shadow button-send', {
                   pending:
                     !name.value || !messageEstimate.value || !emailEstimate.value || isPending,
                 })}
