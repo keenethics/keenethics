@@ -1,16 +1,10 @@
-/* global BACKEND_URL, fetch */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import Link from 'next/link';
 import ReactContentfulImage from 'react-contentful-image';
-import SubscribePanel from '../components/subscribe-for-updates';
-
-import Layout from '../components/layout/main';
-import Error from './_error';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -19,20 +13,53 @@ import {
   TwitterIcon,
   LinkedinIcon,
 } from 'react-share';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import SubscribePanel from '../components/subscribe-for-updates';
+
+import Layout from '../components/layout/main';
+import Error from './_error';
 import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
+
 const _ = require('lodash');
+
+const EMBEDDED_ENTRY_CLASSNAMES = {
+  usefulReadings: 'useful-readings',
+  mostSuitableFor: 'most-suitable-for',
+  helpfulTools: 'helpful-tools',
+};
+const EMBEDDED_ENTRY_ICON_NAMES = {
+  usefulReadings: 'book_icon',
+  mostSuitableFor: 'bulb_icon',
+  helpfulTools: 'wrench_icon',
+};
+const EMBEDDED_ENTRY_HEADERS = {
+  usefulReadings: 'USEFUL READINGS:',
+  mostSuitableFor: 'MOST SUITABLE FOR...',
+  helpfulTools: 'HELPFUL TOOLS:',
+};
+const embeddedEntryComponent = ({ type, list }) => (
+  <div key={`&{type}_${Math.random()}`} className={EMBEDDED_ENTRY_CLASSNAMES[type]}>
+    <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-icon-wrapper`}>
+      <img alt="Bulb icon" src={`/static/images/${EMBEDDED_ENTRY_ICON_NAMES[type]}.png`} />
+    </div>
+    <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-content`}>
+      <h4>{EMBEDDED_ENTRY_HEADERS[type]}</h4>
+      {!!list && documentToReactComponents(list)}
+    </div>
+  </div>
+);
 
 const socialMediaShareButtons = ({ url }) => (
   <div className="socials">
     Share on:
     <FacebookShareButton url={`https://keenethics.com${url}`}>
-      <FacebookIcon size={32} round={true} />
+      <FacebookIcon size={32} round />
     </FacebookShareButton>
     <LinkedinShareButton url={`https://keenethics.com${url}`}>
-      <LinkedinIcon size={32} round={true} />
+      <LinkedinIcon size={32} round />
     </LinkedinShareButton>
     <TwitterShareButton url={`https://keenethics.com${url}`}>
-      <TwitterIcon size={32} round={true} />
+      <TwitterIcon size={32} round />
     </TwitterShareButton>
   </div>
 );
@@ -74,13 +101,17 @@ const imageComponent = ({ src, description, title }) => (
 
 const personComponent = ({ image, name, position, linkedIn }) => {
   const url = _.get(image, 'fields.file.url');
+  const alt = _.get(image, 'fields.description') || _.get(image, 'fields.title');
 
-  if (linkedIn)
+  if (linkedIn) {
     return (
-      <a href={linkedIn} target="_blank" className="person-link">
+      <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="person-link">
         <div className="person">
           {image && (
-            <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
+            <img
+              alt={alt}
+              src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`}
+            />
           )}
           <span className="info">
             <span className="name">{name}</span>
@@ -89,11 +120,15 @@ const personComponent = ({ image, name, position, linkedIn }) => {
         </div>
       </a>
     );
+  }
 
   return (
     <div className="person">
       {image && (
-        <img src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`} />
+        <img
+          alt={alt}
+          src={`https://${url}?fm=jpg&fl=progressive&q=95&h=130&w=130&fit=crop&fit=thumb`}
+        />
       )}
       <span className="info">
         <span className="name">{name}</span>
@@ -120,21 +155,31 @@ const bodyOptions = {
 
       return imageComponent({ src: url, description, title });
     },
-    [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+    [BLOCKS.EMBEDDED_ENTRY]: node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
-        const { bookList } = node.data.target.fields;
+        const { bookList, list } = _.get(node, 'data.target.fields', null);
 
         return (
-          <div className="useful-readings">
-            <div className="useful-readings-icon-wrapper">
-              <img src="/static/images/book_icon.png" />
+          <div className={EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}>
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-icon-wrapper`}>
+              <img alt="Book icon" src="/static/images/book_icon.png" />
             </div>
-            <div className="useful-readings-content">
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-content`}>
               <h4>useful readings:</h4>
-              {documentToReactComponents(bookList)}
+              {(bookList || list) && documentToReactComponents(bookList || list)}
             </div>
           </div>
         );
+      }
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor') {
+        const { list } = _.get(node, 'data.target.fields', null);
+
+        return embeddedEntryComponent({ list, type: 'mostSuitableFor' });
+      }
+      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools') {
+        const { list } = _.get(node, 'data.target.fields', null);
+
+        return embeddedEntryComponent({ list, type: 'helpfulTools' });
       }
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'suggestion') {
         const {
@@ -145,12 +190,13 @@ const bodyOptions = {
           suggesterPhoto,
           linkedIn,
           buttonText,
+          redirectLink,
         } = node.data.target.fields;
         return (
           <div className="suggestion">
             <h5>{suggestionTitle}</h5>
             {documentToReactComponents(body)}
-            <div className="suggestor-wrapper">
+            <div className="suggester-wrapper">
               {personComponent({
                 image: suggesterPhoto,
                 name: suggesterName,
@@ -158,17 +204,21 @@ const bodyOptions = {
                 linkedIn,
               })}
               <a
-                href="//calendly.com/iryna-keenethics/intro-call"
+                href={redirectLink || '//calendly.com/iryna-keenethics/intro-call'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="calendly-goal"
               >
-                <button className="btn btn-schedule">{buttonText || 'Schedule a call'}</button>
+                <button type="button" className="btn btn-schedule">
+                  {buttonText || 'Schedule a call'}
+                </button>
               </a>
             </div>
           </div>
         );
       }
+
+      return null;
     },
     'embedded-entry-inline': node => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
@@ -179,6 +229,9 @@ const bodyOptions = {
 
       return null;
     },
+  },
+  renderMark: {
+    [MARKS.CODE]: text => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
   },
 };
 
@@ -192,7 +245,7 @@ export default class Post extends React.Component {
 
   static async getInitialProps(p) {
     const { name, preview } = p.query;
-    const { res, jsonPageRes } = p;
+    const { res } = p;
     const response = await getPostBySlug({ slug: name, preview });
     const { items } = response || {};
 
@@ -205,17 +258,13 @@ export default class Post extends React.Component {
     const relatedPosts = tags.length
       ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
       : [];
+    const updatedAt = _.get(response, 'items[0].sys.updatedAt', false);
 
     return {
       ...items[0].fields,
+      updatedAt,
       relatedPosts,
     };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.title !== this.props.title) {
-      document.querySelector('.content-inner').scrollTo(0, 0);
-    }
   }
 
   componentDidMount() {
@@ -224,12 +273,19 @@ export default class Post extends React.Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.title !== this.props.title) {
+      document.querySelector('.content-inner').scrollTo(0, 0);
+    }
+  }
+
   render() {
     const {
       title,
       subtitle,
       description,
       publishDate,
+      updatedAt,
       bodyRich,
       author,
       tags,
@@ -250,7 +306,6 @@ export default class Post extends React.Component {
       meta.title = metaTitle;
       meta.description = metaDescription;
     }
-
     const { url } = this.state;
 
     return (
@@ -266,7 +321,18 @@ export default class Post extends React.Component {
                 </span>
               ))}
               <span className="date">
-                {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+                {publishDate && (
+                  <React.Fragment>
+                    PUBLISH DATE:{' '}
+                    <Moment format="MMMM DD YYYY">{`${new Date(publishDate)}`}</Moment>
+                  </React.Fragment>
+                )}
+                <br />
+                {updatedAt && (
+                  <React.Fragment>
+                    UPD: <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
+                  </React.Fragment>
+                )}
               </span>
               {url && socialMediaShareButtons({ url: this.props.url.asPath })}
             </div>
@@ -312,6 +378,30 @@ export default class Post extends React.Component {
   }
 }
 
+personComponent.propTypes = {
+  image: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  linkedIn: PropTypes.string.isRequired,
+};
+
+imageComponent.propTypes = {
+  src: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+postCardComponent.propTypes = {
+  slug: PropTypes.string.isRequired,
+  heroImage: PropTypes.string.isRequired,
+  publishDate: PropTypes.instanceOf(Date).isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+socialMediaShareButtons.propTypes = {
+  url: PropTypes.string.isRequired,
+};
+
 Post.propTypes = {
   author: PropTypes.object,
   bodyRich: PropTypes.object,
@@ -320,8 +410,12 @@ Post.propTypes = {
   subtitle: PropTypes.string,
   description: PropTypes.string,
   publishDate: PropTypes.string,
+  updatedAt: PropTypes.string,
   tags: PropTypes.array,
   relatedPosts: PropTypes.array,
+  metaTitle: PropTypes.string,
+  metaDescription: PropTypes.string,
+  url: PropTypes.object.isRequired,
 };
 Post.defaultProps = {
   bodyRich: {},
@@ -329,8 +423,11 @@ Post.defaultProps = {
   title: '',
   subtitle: '',
   description: '',
-  publishDate: null,
+  publishDate: false,
+  updatedAt: false,
   author: null,
   tags: [],
   relatedPosts: [],
+  metaTitle: '',
+  metaDescription: '',
 };

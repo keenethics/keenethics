@@ -43,6 +43,7 @@
     "react-moment": "^0.8.4",
     "react-share": "^3.0.0",
     "react-slick": "^0.15.4",
+    "react-syntax-highlighter": "^11.0.2",
     "string-format-validation": "^2.0.2",
     "whatwg-fetch": "^2.0.3"
   },
