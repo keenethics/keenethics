@@ -1349,28 +1349,40 @@ radiogroup {
     }
     [type="radio"]:checked + label:before,
     [type="radio"]:not(:checked) + label:before {
+      box-sizing: border-box;
       content: "";
       position: absolute;
       left: 0;
       top: 5px;
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border: 2px solid #c9cbdd;
       border-radius: 100%;
       background: #fff;
+
+      @include breakpoint(sm-max) {
+        width: 32px;
+        height: 32px;
+      }
     }
     [type="radio"]:checked + label:after,
     [type="radio"]:not(:checked) + label:after {
+      box-sizing: border-box;
       content: "";
-      width: 20px;
-      height: 20px;
+      width: 16px;
+      height: 16px;
       background: #764ba2;
       position: absolute;
-      top: 10px;
-      left: 5px;
+      top: 11px;
+      left: 6px;
       border-radius: 100%;
       -webkit-transition: all 0.2s ease;
       transition: all 0.2s ease;
+
+      @include breakpoint(sm-max) {
+        top: 13px;
+        left: 8px;
+      }
     }
     [type="radio"]:not(:checked) + label:after {
       opacity: 0;
