@@ -1332,6 +1332,12 @@ radiogroup {
       position: absolute;
       left: -9999px;
     }
+    [type="radio"]:checked + label b {
+      color: #764ba2;
+    }
+    [type="radio"]:not(:checked) + label b {
+      color: #12233d;
+    }
     [type="radio"]:checked + label,
     [type="radio"]:not(:checked) + label {
       position: relative;

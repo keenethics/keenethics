@@ -156,7 +156,7 @@ const EstimateForm = () => {
                       checked={stage.value === 'New app'}
                     />
                     <label htmlFor="new" className="label-for-radio-btn">
-                      <b className="color-violet font-bold d-block">New app</b>{' '}
+                      <b className="font-bold d-block">New app</b>{' '}
                       <span className="text-dimmed">to be built from scratch</span>
                     </label>
                   </span>
@@ -175,7 +175,7 @@ const EstimateForm = () => {
                       checked={stage.value === 'Existing app'}
                     />
                     <label htmlFor="existing" className="label-for-radio-btn">
-                      <b className="color-violet font-bold d-block">Existing app</b>
+                      <b className="font-bold d-block">Existing app</b>
                       <span className="text-dimmed">continue development</span>
                     </label>
                   </span>
