@@ -9,7 +9,7 @@ import { ContactUsContext } from '../../pages/contacts';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
-    value: 'New app',
+    value: null,
     error: false,
   });
   const [services, setServices] = useState({
@@ -88,7 +88,7 @@ const EstimateForm = () => {
       }),
     })
       .then(response => response.json())
-      .then(json => {
+      .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
         }
@@ -136,7 +136,9 @@ const EstimateForm = () => {
         {wizardStage === 0 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">1.</span> Stage
+              <span className="question-number">1.</span>
+              {' '}
+Stage
             </div>
             <div className="estimate-input-cols">
               <div className="standard-radio-input">
@@ -147,7 +149,7 @@ const EstimateForm = () => {
                       type="radio"
                       value="New app"
                       id="new"
-                      onChange={event => {
+                      onChange={(event) => {
                         setStage({
                           value: event.target.value,
                           error: '',
@@ -156,7 +158,8 @@ const EstimateForm = () => {
                       checked={stage.value === 'New app'}
                     />
                     <label htmlFor="new" className="label-for-radio-btn">
-                      <b className="font-bold d-block">New app</b>{' '}
+                      <b className="font-bold d-block">New app</b>
+                      {' '}
                       <span className="text-dimmed">to be built from scratch</span>
                     </label>
                   </span>
@@ -166,7 +169,7 @@ const EstimateForm = () => {
                       type="radio"
                       value="Existing app"
                       id="existing"
-                      onChange={event => {
+                      onChange={(event) => {
                         setStage({
                           value: event.target.value,
                           error: '',
@@ -183,7 +186,9 @@ const EstimateForm = () => {
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">2.</span> What services are you interested in?
+              <span className="question-number">2.</span>
+              {' '}
+What services are you interested in?
             </div>
             <div className="estimate-input-cols">
               <p>Desktop applications</p>
@@ -309,7 +314,9 @@ const EstimateForm = () => {
         {wizardStage === 1 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">3.</span> Project Manager
+              <span className="question-number">3.</span>
+              {' '}
+Project Manager
             </div>
             <div className="estimate-input-cols">
               <p className="text-normal">
@@ -322,7 +329,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="I need a PM"
                   id="iNeedPM"
-                  onChange={event => {
+                  onChange={(event) => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -340,7 +347,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="I dont need a PM"
                   id="iDontNeedPM"
-                  onChange={event => {
+                  onChange={(event) => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -358,7 +365,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="I'm not sure about PM"
                   id="notSureAboutPM"
-                  onChange={event => {
+                  onChange={(event) => {
                     setPm({
                       value: event.target.value,
                       error: '',
@@ -372,18 +379,19 @@ const EstimateForm = () => {
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">4.</span> Expected budget
+              <span className="question-number">4.</span>
+              {' '}
+Expected budget
             </div>
             <div className="estimate-input-cols mb-auto">
               <div className="input-select-wrap">
                 <select
                   name="budget"
                   className="input-select"
-                  onChange={event =>
-                    setBudget({
-                      value: event.target.value,
-                      error: '',
-                    })
+                  onChange={event => setBudget({
+                    value: event.target.value,
+                    error: '',
+                  })
                   }
                   value={budget.value}
                 >
@@ -398,12 +406,7 @@ const EstimateForm = () => {
               <button onClick={wizardStageDecreaser} type="button" className="button button-send">
                 Back
               </button>
-              <button
-                type="button"
-                disabled={!pm.value || !budget.value}
-                className={`button button-send${!pm.value || !budget.value ? ' pending' : ''}`}
-                onClick={wizardStageIncreaser}
-              >
+              <button type="button" className="button button-send" onClick={wizardStageIncreaser}>
                 Continue
               </button>
             </div>
@@ -412,7 +415,9 @@ const EstimateForm = () => {
         {wizardStage === 2 && (
           <div className="wizard-stage">
             <div className="question-title">
-              <span className="question-number">5.</span> Timeframe
+              <span className="question-number">5.</span>
+              {' '}
+Timeframe
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -421,7 +426,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="Less than 1 month"
                   id="timeframeLessThanAMonth"
-                  onChange={event => {
+                  onChange={(event) => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -439,7 +444,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="1 to 3 months"
                   id="timeframeUpToThreeMonths"
-                  onChange={event => {
+                  onChange={(event) => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -457,7 +462,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="3 to 6 months"
                   id="timeframeIsUpToSixMonths"
-                  onChange={event => {
+                  onChange={(event) => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -475,7 +480,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="Above 6 months"
                   id="timeframeIsAboveSixMonths"
-                  onChange={event => {
+                  onChange={(event) => {
                     setTimeframe({
                       value: event.target.value,
                       error: '',
@@ -489,7 +494,9 @@ const EstimateForm = () => {
               </div>
             </div>
             <div className="question-title">
-              <span className="question-number">6.</span> Start
+              <span className="question-number">6.</span>
+              {' '}
+Start
             </div>
             <div className="estimate-input-cols">
               <div className="input-radio-wrap">
@@ -498,7 +505,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="In a couple of days"
                   id="startInACoupleOfDays"
-                  onChange={event => {
+                  onChange={(event) => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -516,7 +523,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="In a week"
                   id="startInAWeek"
-                  onChange={event => {
+                  onChange={(event) => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -534,7 +541,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="In a couple of weeks"
                   id="startInACoupleOfWeeks"
-                  onChange={event => {
+                  onChange={(event) => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -552,7 +559,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="In a month"
                   id="startInAMonth"
-                  onChange={event => {
+                  onChange={(event) => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -570,7 +577,7 @@ const EstimateForm = () => {
                   type="radio"
                   value="In a couple of months"
                   id="startInACoupleOfMonths"
-                  onChange={event => {
+                  onChange={(event) => {
                     setStart({
                       value: event.target.value,
                       error: '',
@@ -587,13 +594,7 @@ const EstimateForm = () => {
               <button onClick={wizardStageDecreaser} type="button" className="button button-send">
                 Back
               </button>
-              <button
-                disabled={!timeframe.value || !start.value}
-                onClick={wizardStageIncreaser}
-                className={`button button-send${
-                  !timeframe.value || !start.value ? ' pending' : ''
-                }`}
-              >
+              <button type="button" onClick={wizardStageIncreaser} className="button button-send">
                 Continue
               </button>
             </div>
@@ -627,8 +628,7 @@ const EstimateForm = () => {
                       name="emailEstimate"
                       id="emailEstimate"
                       type="email"
-                      onChange={event =>
-                        setEmailEstimate({ value: event.target.value, error: false })
+                      onChange={event => setEmailEstimate({ value: event.target.value, error: false })
                       }
                       value={emailEstimate.value}
                       required
@@ -647,8 +647,7 @@ const EstimateForm = () => {
                   })}
                   name="messageEstimate"
                   id="messageEstimate"
-                  onChange={event =>
-                    setMessageEstimate({ value: event.target.value, error: false })
+                  onChange={event => setMessageEstimate({ value: event.target.value, error: false })
                   }
                   value={messageEstimate.value}
                   placeholder="Message"
