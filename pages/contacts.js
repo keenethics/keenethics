@@ -18,7 +18,7 @@ const Address = ({ className }) => (
         <a
           href="https://goo.gl/maps/eaAU8qqLZoo"
           rel="noopener noreferrer nofollow"
-          target="_blank"
+          target="_blank" 
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
@@ -65,15 +65,15 @@ const Address = ({ className }) => (
           <a
             href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
             rel="noopener noreferrer nofollow"
-            target="_blank"
+            target="_blank" 
           >
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
             <span itemProp="streetAddress">Oude litherweg 2, 5346 RT</span>
           </a>
-          <a href="tel:+311111111111">
+          <a href="tel:+31616397144">
             <span className="telephone" itemProp="telephone">
-              +31 111 111 11 11
+            +31 616 397 144
             </span>
           </a>
         </div>
@@ -303,7 +303,8 @@ const Contacts = ({ router }) => {
                     setWishlist,
                   }}
                 >
-                  {activeContactForm ? <ContactForm /> : <EstimateForm />}
+                  <div className={`form-container ${!activeContactForm ? 'form-container-hidden' : ''}`}><ContactForm /></div>
+                  <div className={`form-container ${activeContactForm ? 'form-container-hidden' : ''}`}><EstimateForm /></div>
                 </Provider>
               </div>
             </div>

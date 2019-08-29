@@ -88,8 +88,8 @@ const getData = async (rangeName, sheetId) => {
 
 getData(TEAM_RANGE, TEAM_SHEET_ID);
 
-const getTeam = async () => getData(TEAM_RANGE, TEAM_SHEET_ID);
-const getCareers = async () => getData(CAREERS_RANGE, TEAM_SHEET_ID);
+const getTeam = async () => []; //getData(TEAM_RANGE, TEAM_SHEET_ID);
+const getCareers = async () => []; //getData(CAREERS_RANGE, TEAM_SHEET_ID);
 
 module.exports = {
   getTeam,

@@ -111,7 +111,7 @@ const ContactForm = () => {
                 className={classnames({ error: email.error })}
                 name="email"
                 id="email"
-                type="mail"
+                type="email"
                 onChange={event => {
                   setEmail({
                     value: event.target.value,

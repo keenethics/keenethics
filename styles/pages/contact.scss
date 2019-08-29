@@ -120,6 +120,7 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 16px;
+            font-family: "Open Sans";
           }
 
           .telephone {
@@ -266,6 +267,12 @@
         flex-basis: 100%;
       }
     }
+  }
+}
+
+.form-container {
+  &-hidden {
+    display: none;
   }
 }
 
@@ -704,6 +711,10 @@
       line-height: 14px;
       color: #12233d;
       cursor: pointer;
+
+      &:hover {
+        border-color: #B4B5C2;
+      }
 
       &:after {
         content: none;
@@ -1354,6 +1365,11 @@ radiogroup {
       display: inline-block;
       color: #8c8c8c;
     }
+
+    [type="radio"]:checked + label:hover::before,
+    [type="radio"]:not(:checked) + label:hover::before {
+      border: 2px solid #B4B5C2;
+    }
     [type="radio"]:checked + label:before,
     [type="radio"]:not(:checked) + label:before {
       box-sizing: border-box;
@@ -1465,6 +1481,11 @@ radiogroup {
   text-transform: uppercase;
   color: #12233d;
 
+  &:hover {
+    background: #dbd8dd;
+    color: #12233d;      
+  }
+
   &.button-send {
     background: linear-gradient(270deg, #e3621d 0%, #de3535 100%);
     font-weight: 600;
@@ -1516,6 +1537,8 @@ radiogroup {
       color: #12233d;
       &:hover {
         cursor: pointer;
+        background: #dbd8dd;
+        color: #12233d;      
       }
     }
   }
