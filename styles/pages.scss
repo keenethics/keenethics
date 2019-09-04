@@ -772,3 +772,35 @@
     top: 14px;
   }
 }
+
+.mobile-development-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 20px -10px !important;
+   .mobile-development-item {
+      width: 50%;
+      max-width: 400px;
+      margin: 0;
+      box-sizing: border-box;
+      padding: 25px 10px;
+      &:before {
+         display: none;
+      }
+      img {
+         @media (max-width: 1000px) {
+            max-width: 130px;
+         }
+         @media (max-width: 500px) {
+            max-width: 110px;
+         }
+      }
+   }
+   .mobile-development-figcaption {
+      text-align: center;
+      margin-top: 10px;
+      a {
+         color: #444;
+      }
+   }
+}

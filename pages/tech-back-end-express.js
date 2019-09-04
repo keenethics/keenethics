@@ -9,8 +9,7 @@ import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 import Works from '../components/portfolio/works';
 
-import { works } from '../main.config';
-import { techBackEnd } from '../main.config';
+import { techBackEnd, works } from '../main.config';
 
 const whyExpressJs = [
   {
