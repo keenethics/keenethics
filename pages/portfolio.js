@@ -7,7 +7,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 
 import Works from '../components/portfolio/works';
-import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
+import CategoriesFilter from '../components/categories-filter/CategoriesFilter.jsx';
 
 import { works } from '../main.config';
 
@@ -16,8 +16,8 @@ const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
     existCategory => chosenCategory.filter(
-      category => category.toLowerCase() === existCategory.toLowerCase(),
-    ).length,
+      category => category.toLowerCase() === existCategory.toLowerCase()
+    ).length
   );
 
   return categories.length ? categories : existCategories;

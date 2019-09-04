@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function FeaturesList({ list, titleItalic }) {
+export default function FeaturesList({ list, titleItalic, titleBold }) {
+  const titleStyle = {};
+  if (titleItalic) {
+    titleStyle.fontStyle = 'italic';
+  }
+  if (titleBold) {
+    titleStyle.fontWeight = '600';
+  }
+
   return (
     <ul className="features-icons--list">
       {
@@ -15,7 +23,7 @@ export default function FeaturesList({ list, titleItalic }) {
           <li key={key} className="features-icons--item">
             <figure className="features-icons--figure">
               {icon && <img src={icon} alt={alt} className="features-icons--img" />}
-              <figcaption className="features-icons--figcaption" style={titleItalic ? { fontStyle: 'italic' } : null}>
+              <figcaption className="features-icons--figcaption" style={titleStyle}>
                 {description}
               </figcaption>
             </figure>
@@ -29,7 +37,9 @@ export default function FeaturesList({ list, titleItalic }) {
 FeaturesList.propTypes = {
   list: PropTypes.array.isRequired,
   titleItalic: PropTypes.bool,
+  titleBold: PropTypes.bool,
 };
 FeaturesList.defaultProps = {
   titleItalic: false,
+  titleBold: false,
 };

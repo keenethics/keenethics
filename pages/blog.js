@@ -10,7 +10,7 @@ import 'isomorphic-fetch';
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
-import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
+import CategoriesFilter from '../components/categories-filter/CategoriesFilter.jsx';
 import { getPostsList } from '../lib/contentful';
 
 const _ = require('lodash');
