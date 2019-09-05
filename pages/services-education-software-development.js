@@ -125,6 +125,7 @@ const ServicesMobileDevelopment = () => {
             </li>
           </ul>
           <h2>Do you agree with our solutions?</h2>
+          <CallToActionButton title="Contact us" href="/contacts" />
         </section>
 
         <section>
