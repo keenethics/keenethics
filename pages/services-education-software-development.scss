@@ -1,0 +1,39 @@
+.content-block {
+  .challenges-list {
+    margin: 25px -15px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .challenges-item {
+      padding: 15px;
+      margin: 0;
+      width: 50%;
+      box-sizing: border-box;
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+      &:before {
+        display: none;
+      }
+      h3 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 18px;
+        img {
+          margin: 0;
+          width: 50px;
+          padding-right: 10px;
+        }
+        &.hidden-xs {
+          @media (min-width: 501px) {
+            display: none;
+          }
+        }
+      }
+      ul {
+        margin: 0;
+      }
+    }
+  }
+}

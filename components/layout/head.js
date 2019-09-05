@@ -109,9 +109,8 @@ const LayoutHead = (props) => {
         href="/static/images/favicon.ico"
       />
       <link
-        rel="alternate"
-        hrefLang="en-US"
-        href={`https://keenethics.com${currentURL.asPath}`}
+        rel="canonical"
+        href={`https://keenethics.com${currentURL.pathname}`}
       />
     </Head>
   );
