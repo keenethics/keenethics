@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
-import React from 'react';
+
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -13,28 +14,32 @@ const handleStatusResponse = (response) => {
   throw error;
 };
 
-class ContactForm extends React.Component {
-  state = {
-    firstname: {
-      value: '',
-      error: false,
-    },
-    lastname: {
-      value: '',
-      error: false,
-    },
-    email: {
-      value: '',
-      error: false,
-    },
-    phone: {
-      value: '',
-      error: false,
-    },
-    message: {
-      value: '',
-      error: false,
-    },
+class ContactForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      firstname: {
+        value: '',
+        error: false,
+      },
+      lastname: {
+        value: '',
+        error: false,
+      },
+      email: {
+        value: '',
+        error: false,
+      },
+      phone: {
+        value: '',
+        error: false,
+      },
+      message: {
+        value: '',
+        error: false,
+      },
+    };
   }
 
   onSubmit = (e) => {
@@ -50,7 +55,7 @@ class ContactForm extends React.Component {
       },
       body: JSON.stringify(this.state),
     }).then(handleStatusResponse)
-      .then(response => response.json()).then((json) => {
+      .then((response) => response.json()).then((json) => {
         const state = {
           isPending: false,
           status: json.status.toString(),
@@ -66,7 +71,7 @@ class ContactForm extends React.Component {
 
         updateState(state);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }
 
   onChange = ({ target: { name, value } }) => {
@@ -87,7 +92,7 @@ class ContactForm extends React.Component {
       message,
     } = this.state;
 
-    const { isPending, status } = this.props;
+    const { isPending } = this.props;
     return (
       <div className="contacts-form">
         <form onSubmit={this.onSubmit}>
@@ -179,7 +184,6 @@ class ContactForm extends React.Component {
 }
 ContactForm.propTypes = {
   isPending: PropTypes.bool.isRequired,
-  status: PropTypes.string.isRequired,
   updateState: PropTypes.func.isRequired,
 };
 

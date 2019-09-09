@@ -7,7 +7,7 @@ export default () => {
   const [success, setSuccess] = useState('');
 
   function handleClick() {
-    const regexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const regexp = new RegExp('/^(([^<>()\\[\\]\\.,;:\\s@\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$/i');
 
     const isError = !value || !regexp.test(value.toLowerCase());
     setError(isError);
@@ -42,7 +42,7 @@ export default () => {
       {success ? (
         <h4 className="green-text-flash">Thank you for subscribing!</h4>
       ) : (
-        <h4>Don't miss updates from us!</h4>
+        <h4>Don&apos;t miss updates from us!</h4>
       )}
       {success ? <p>&nbsp;</p> : <p>Subscribe to our bimonthly newsletter.</p>}
       <div className="subscribe-panel-input-group">

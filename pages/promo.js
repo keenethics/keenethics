@@ -234,7 +234,7 @@ OF KEEN WEB APPS
                 <h2 className="section-title -dot">WHO WE ARE</h2>
                 <ul className="about-us-list">
                   {
-                    aboutUsList.map(aboutUs => (
+                    aboutUsList.map((aboutUs) => (
                       <li className="about-us-item" key={aboutUs.text}>
                         {aboutUs.icon}
                         <p className="about-us-descr">{aboutUs.text}</p>

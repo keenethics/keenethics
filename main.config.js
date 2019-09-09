@@ -9,15 +9,17 @@ import techDatabaseElements from './navigation/techDatabase.json';
 import techApiIntegrationElements from './navigation/techApiIntegration.json';
 import worksElements from './navigation/works.json';
 
-const maskTitle = technology => `${technology} Development`;
-const maskDescription = technology => `Looking to hire ${technology} developers?
+const maskTitle = (technology) => `${technology} Development`;
+const maskDescription = (technology) => `Looking to hire ${technology} developers?
   KeenEthics, a ${technology} development company, specializes in ${technology} development services.
   Hire our ${technology} developers today.`;
 
 const maskMapper = (t) => {
   const { name, metaTitle, metaDescription } = t;
+
   t.metaTitle = metaTitle || maskTitle(name);
   t.metaDescription = metaDescription || maskDescription(name);
+
   return t;
 };
 

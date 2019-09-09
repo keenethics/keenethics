@@ -17,11 +17,11 @@ const TITLE_COLUMN_INDEX = 0;
 const arrayOfArraysToCollection = (arr) => {
   const properties = arr[TITLE_COLUMN_INDEX];
   return arr.slice(TITLE_COLUMN_INDEX + 1)
-    .map(v => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
+    .map((v) => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
 const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
-  v => new RegExp(rangeName).test(v.range),
+  (v) => new RegExp(rangeName).test(v.range),
 ).values;
 
 const getClient = async (keyFile, scopes) => google.auth.getClient({

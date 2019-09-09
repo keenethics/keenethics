@@ -1,5 +1,5 @@
 {
-  // "parser": "babel-eslint",
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -12,8 +12,10 @@
   },
   "rules": {
     "semi": 2,
+    "no-param-reassign": 0,
     "prefer-destructuring": 0,
     "class-methods-use-this": 0,
+    "react/jsx-props-no-spreading": 0,
     "react/forbid-prop-types": 0,
     "react/no-array-index-key": 0,
     "react/no-danger": 0,
@@ -21,6 +23,7 @@
       "extensions": [".js", ".jsx"]
     }],
     "react/destructuring-assignment": 0,
+    "react/jsx-curly-newline": 0,
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": true
     }],

@@ -39,7 +39,7 @@ const LayoutHead = (props) => {
 
   navigation.forEach((point) => {
     if (!currentPoint && point && point.points) {
-      const subpoint = point.points.map(p => p.href)
+      const subpoint = point.points.map((p) => p.href)
         .indexOf(currentURL.pathname);
 
       if (subpoint > -1) {

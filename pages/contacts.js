@@ -45,7 +45,7 @@ class Contacts extends React.Component {
         {notifyIsVisible && (
           <Notify
             notifyMessage={notifyMessage}
-            updateState={state => this.setState(state)}
+            updateState={(state) => this.setState(state)}
           />
         )}
         <div className="contacts-page">
@@ -120,13 +120,13 @@ class Contacts extends React.Component {
                 <ContactForm
                   isPending={isPending}
                   status={status}
-                  updateState={state => this.setState(state)}
+                  updateState={(state) => this.setState(state)}
                 />
               ) : (
                 <EstimateForm
                   isPending={isPending}
                   status={status}
-                  updateState={state => this.setState(state)}
+                  updateState={(state) => this.setState(state)}
                 />
               )}
             </div>
