@@ -197,7 +197,7 @@ const ServicesMobileDevelopment = () => {
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth</h3>
           <p>We have a proven record of helping education companies grow. The elearning software of our latest client has grown by 5 times in terms of the number of users over the course of a year. We are ready to support you in the atmosphere of changing needs and requirements.</p>
 
-          <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value</h3>  
+          <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value</h3>
           <p>Ethics is not just a part of our company name, it is the foremost principle we abide by. We cooperate with our partners on the basis of trust and transparency. We make sure that our education software solutions fully comply with the technical and ethical guidelines of Android, iOS, Microsoft, or any other platform you work with.</p>
 
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span> Launching in a matter of weeks</h3>

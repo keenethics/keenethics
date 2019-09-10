@@ -51,6 +51,17 @@
         "type": "icon"
       },
       {
+        "name": "Custom Healthcare Software Development",
+        "metaTitle": "Healthcare Software Development, Custom Medical Solutions – KeenEthics",
+        "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
+        "href": "/services-custom-healthcare-software-development",
+        "icon": {
+          "name": "icon-healthcare",
+          "alt": "Custom Healthcare Software Development"
+        },
+        "type": "icon"
+      },
+      {
         "name": "Outstaffing",
         "description": "Process of using by one company another`s company staff",
         "metaTitle": "Outstaffing company that helps to find highly qualified developers - KeenEthics",
