@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Router, { withRouter } from 'next/router';
 
-import 'isomorphic-fetch';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';

@@ -3,8 +3,6 @@ import { withRouter } from 'next/router';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'isomorphic-fetch';
-
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';

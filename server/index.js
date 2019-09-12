@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv-safe');
+require('isomorphic-fetch');
 
 const { NODE_ENV, ENV_PATH } = process.env;
 const envDefaultPath = path.resolve(__dirname, '../.env');
@@ -15,7 +16,6 @@ if (pathToEnvFile) {
 const express = require('express');
 const expressUncapitalize = require('express-uncapitalize');
 const next = require('next');
-const fetch = require('node-fetch');
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
