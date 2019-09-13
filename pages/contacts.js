@@ -48,7 +48,7 @@ const Address = ({ className }) => (
       </li>
       <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
         <a
-          href="https://goo.gl/maps/eaAU8qqLZoo"
+          href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
@@ -61,6 +61,13 @@ const Address = ({ className }) => (
             </span>
           </div>
         </a>
+        <div className="additional-info-wrapper">
+          <a href="https://nl.keenethics.com/">
+            <span className="text-underline">
+            Go to the website
+            </span>
+          </a>
+        </div>
         <div className="address-telephone-wrapper">
           <a
             href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
@@ -71,9 +78,9 @@ const Address = ({ className }) => (
             ,&nbsp;
             <span itemProp="streetAddress">Oude litherweg 2, 5346 RT</span>
           </a>
-          <a href="tel:+31616397144">
+          <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
-            +31 616 397 144
+            +1 929 214 1392
             </span>
           </a>
         </div>
@@ -89,7 +96,7 @@ const AddressPanel = () => (
       <br />
       in touch
     </h1>
-    <p>Let's discuss yout idea</p>
+    <p>Let's discuss your idea</p>
     <Address />
   </React.Fragment>
 );
@@ -138,10 +145,10 @@ const wishlistPanel = wishlist => (
       wishlist
     </h1>
     <p className="display-block-md">
-      Here will be your chosen
+      These are the parameters
       {' '}
       <br className="display-block-md" />
-      parameters.
+      you have selected.
     </p>
     <hr className="hr-top display-block-md" />
     <div className="wish-list display-block-md">
@@ -233,7 +240,7 @@ const Contacts = ({ router }) => {
                 <button
                   onClick={onClick}
                   name="contact-form-btn"
-                  className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
+                  className={classnames('button contacts-form-btn no-shadow contact-form-btn text-capitalize', {
                     disabled: !activeContactForm,
                   })}
                   type="button"
@@ -244,7 +251,7 @@ const Contacts = ({ router }) => {
                   onClick={onClick}
                   name="estimate-form-btn"
                   className={classnames(
-                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
+                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
                     {
                       disabled: activeContactForm,
                     },
@@ -270,7 +277,7 @@ const Contacts = ({ router }) => {
                   <button
                     onClick={onClick}
                     name="contact-form-btn"
-                    className={classnames('button contacts-form-btn no-shadow contact-form-btn', {
+                    className={classnames('button contacts-form-btn no-shadow contact-form-btn text-capitalize', {
                       disabled: !activeContactForm,
                     })}
                     type="button"
@@ -281,7 +288,7 @@ const Contacts = ({ router }) => {
                     onClick={onClick}
                     name="estimate-form-btn"
                     className={classnames(
-                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn',
+                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
                       {
                         disabled: activeContactForm,
                       },

@@ -120,12 +120,27 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 16px;
-            font-family: "Open Sans";
           }
 
           .telephone {
             display: block;
             margin-top: 5px;
+          }
+        }
+
+        .additional-info-wrapper {
+          padding-left: 50px;
+          padding-top: 5px;
+          @include breakpoint(md-max) {
+            padding-left: 0;
+          }
+
+          span {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
           }
         }
 
@@ -360,7 +375,6 @@
 
     label {
       color: #757575;
-      font-family: Raleway;
       font-weight: normal;
       font-size: 14px;
       position: absolute;
@@ -419,28 +433,24 @@
 
       &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        font-family: Raleway;
         font-weight: 400;
         font-size: 13px;
       }
 
       &::-moz-placeholder {
         /* Firefox 19+ */
-        font-family: Raleway;
         font-weight: 400;
         font-size: 16px;
       }
 
       &:-ms-input-placeholder {
         /* IE 10+ */
-        font-family: Raleway;
         font-weight: 400;
         font-size: 13px;
       }
 
       &:-moz-placeholder {
         /* Firefox 18- */
-        font-family: Raleway;
         font-weight: 400;
         font-size: 13px;
       }
@@ -503,9 +513,6 @@
   .estimate-form-inputs {
     flex-grow: 1;
     display: flex;
-    // @include breakpoint(md) {
-    //   margin: 0 30px;
-    // }
 
     .wizard-stage {
       display: flex;
@@ -549,7 +556,6 @@
 
     p {
       color: #12103e;
-      font-family: Raleway;
       margin-bottom: 14px;
       margin-top: 20px;
       margin-right: 10px;
@@ -576,7 +582,6 @@
 
   .question-title {
     color: #12103e;
-    font-family: Raleway;
     margin-bottom: 15px;
     margin-top: 32px;
     margin-right: 10px;
@@ -617,7 +622,6 @@
     }
 
     .question-number {
-      font-family: "Raleway";
       margin-right: 30px;
     }
 
@@ -713,7 +717,7 @@
       cursor: pointer;
 
       &:hover {
-        border-color: #B4B5C2;
+        border-color: #b4b5c2;
       }
 
       &:after {
@@ -910,7 +914,6 @@
       line-height: 1;
       -webkit-appearance: none;
       outline: none;
-      font-family: Raleway;
       font-weight: 400;
       appearance: none;
       cursor: pointer;
@@ -921,7 +924,6 @@
       option {
         background-color: #f6f6f6;
         color: #13243c;
-        font-family: Raleway;
         font-size: 15px;
         margin-left: 25px;
         cursor: pointer;
@@ -1120,7 +1122,7 @@
   }
 
   * {
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif !important;
   }
 
   &-info-side {
@@ -1324,8 +1326,11 @@
 
 radiogroup {
   & > span {
-    &:first-child {
-      margin-right: 40px;
+    display: inline-block;
+    margin-top: 15px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
     }
 
     @include breakpoint(sm-max) {
@@ -1368,7 +1373,7 @@ radiogroup {
 
     [type="radio"]:checked + label:hover::before,
     [type="radio"]:not(:checked) + label:hover::before {
-      border: 2px solid #B4B5C2;
+      border: 2px solid #b4b5c2;
     }
     [type="radio"]:checked + label:before,
     [type="radio"]:not(:checked) + label:before {
@@ -1478,19 +1483,17 @@ radiogroup {
   font-weight: 800;
   font-size: 14px;
   line-height: 16px;
-  text-transform: uppercase;
   color: #12233d;
 
   &:hover {
     background: #dbd8dd;
-    color: #12233d;      
+    color: #12233d;
   }
 
   &.button-send {
     background: linear-gradient(270deg, #e3621d 0%, #de3535 100%);
     font-weight: 600;
     text-transform: uppercase;
-    font-family: Raleway;
     font-size: 15px;
     color: #fff;
 
@@ -1520,7 +1523,6 @@ radiogroup {
     outline: none;
     border: none;
     background-color: #291c74;
-    font-family: "Raleway";
     font-size: 12px;
     font-weight: 600;
 
@@ -1538,7 +1540,7 @@ radiogroup {
       &:hover {
         cursor: pointer;
         background: #dbd8dd;
-        color: #12233d;      
+        color: #12233d;
       }
     }
   }
@@ -1687,4 +1689,16 @@ radiogroup {
 }
 .text-decoration-none {
   text-decoration: none;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-underline {
+  text-decoration: underline !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
 }
