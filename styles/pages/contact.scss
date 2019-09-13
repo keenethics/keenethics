@@ -287,7 +287,7 @@
 
 .form-container {
   &-hidden {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1431,8 +1431,13 @@ radiogroup {
 .font-bold {
   font-weight: bold;
 }
-.d-block {
-  display: block;
+.d {
+  &-block {
+    display: block;
+  }
+  &-flex {
+    display: flex;
+  }
 }
 .text-dimmed {
   color: #8c8c8c;
@@ -1720,4 +1725,7 @@ radiogroup {
 }
 .align-self-start {
   align-self: start !important;
+}
+.flex-grow {
+  flex-grow: 1 !important;
 }

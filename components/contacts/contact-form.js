@@ -101,7 +101,7 @@ const ContactForm = () => {
               value={firstname.value}
             />
             <span className="highlight" />
-            <label htmlFor="firstname">First Name</label>
+            <label htmlFor="firstname">Name</label>
           </div>
         </div>
         <div className="input-cols">
@@ -122,7 +122,7 @@ const ContactForm = () => {
                 value={email.value}
               />
               <span className="highlight" />
-              <label htmlFor="email">Your Email</label>
+              <label htmlFor="email">Email</label>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const ContactForm = () => {
               error: message.error
             })}
             name="message"
-            placeholder="Message"
+            placeholder="Your message"
             onChange={event => {
               setMessage({
                 value: event.target.value,

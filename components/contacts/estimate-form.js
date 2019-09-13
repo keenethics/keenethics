@@ -21,15 +21,15 @@ const EstimateForm = () => {
     error: false,
   });
   const [budget, setBudget] = useState({
-    value: 'I am not sure',
+    value: '',
     error: false,
   });
   const [timeframe, setTimeframe] = useState({
-    value: 'I am not sure',
+    value: '',
     error: false,
   });
   const [start, setStart] = useState({
-    value: 'I am not sure',
+    value: '',
     error: false,
   });
   const [emailEstimate, setEmailEstimate] = useState({
@@ -123,7 +123,7 @@ const EstimateForm = () => {
   }
 
   return (
-    <div className="estimate-form">
+    <div className="estimate-form form-container">
       <div className="progressbar-container">
         <ul className="progressbar">
           <li className={classnames({ done: wizardStage > 0, active: wizardStage === 0 })} />
@@ -738,7 +738,6 @@ Start
 
               <div className="input-wrap input-wrap-ta">
                 <textarea
-                  required
                   className={classnames({
                     'message-textarea': true,
                     error: messageEstimate.error,
@@ -748,11 +747,11 @@ Start
                   onChange={event => setMessageEstimate({ value: event.target.value, error: false })
                   }
                   value={messageEstimate.value}
-                  placeholder="Message"
+                  placeholder="Your message (optional)"
                 />
               </div>
             </div>
-            <div className="wizard-stage-footer">
+            <div className="wizard-stage-footer mt-auto">
               <button
                 onClick={wizardStageDecreaser}
                 type="button"

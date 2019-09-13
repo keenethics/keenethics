@@ -300,7 +300,7 @@ const Contacts = ({ router }) => {
                   }}
                 >
                   <div className={`form-container ${!activeContactForm ? 'form-container-hidden' : ''}`}><ContactForm /></div>
-                  <div className={`form-container ${activeContactForm ? 'form-container-hidden' : ''}`}><EstimateForm /></div>
+                  <div className={`form-container d-flex flex-grow ${activeContactForm ? 'form-container-hidden' : ''}`}><EstimateForm /></div>
                 </Provider>
               </div>
             </div>
