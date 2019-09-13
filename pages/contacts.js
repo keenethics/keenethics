@@ -8,8 +8,9 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
-import Notify from '../components/notify/notify';
+// import Notify from '../components/notify/notify';
 import SocialButton from '../components/social-buttons/main';
+import Person from '../components/person'
 
 const Address = ({ className }) => (
   <address className={className}>
@@ -206,25 +207,13 @@ const Contacts = ({ router }) => {
         />
       )} */}
       <div className="contacts-page">
-        <div className="contact-person display-flex-md-max">
-          <a
-            className="text-decoration-none"
-            onClick={() => setActiveContactForm(true)}
-            href="javascript:void(0)"
-          >
-            <img src="static/images/max_savonin.png" alt="Contact person" />
-          </a>
-          <div>
-            <a
-              className="text-decoration-none"
-              onClick={() => setActiveContactForm(true)}
-              href="javascript:void(0)"
-            >
-              <span className="name">Talk to Max Savonin</span>
-              <span className="position">CEO at KeenEthics</span>
-            </a>
-          </div>
-        </div>
+      {Person({
+          onClick: () => {setActiveContactForm(true)},
+          name: "Talk to Max Savonin",
+          position: "CEO at KeenEthics",
+          imgSrc: "static/images/max_savonin.png",
+          wrapperClassnames: "display-inline-flex-md-max"
+        })}
         <div className="contacts-socket">
           {notifyMessage === 'Message sent' ? (
             <ThankYou />

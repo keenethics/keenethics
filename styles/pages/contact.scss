@@ -1551,6 +1551,7 @@ radiogroup {
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+  line-height: 0;
 
   @include breakpoint(md-max) {
     align-self: flex-start;
@@ -1636,6 +1637,21 @@ radiogroup {
       }
     }
   }
+  &-inline-flex {
+    &-md {
+      display: inline-flex !important;
+      @include breakpoint(md-max) {
+        display: none !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(md-max) {
+          display: inline-flex !important;
+        }
+      }
+    }
+  }
   &-block {
     &-sm {
       display: block !important;
@@ -1701,4 +1717,7 @@ radiogroup {
 }
 .mb-0 {
   margin-bottom: 0 !important;
+}
+.align-self-start {
+  align-self: start !important;
 }

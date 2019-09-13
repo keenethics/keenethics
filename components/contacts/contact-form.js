@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 // import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ContactUsContext } from '../../pages/contacts';
+import Person from '../person'
 
 const handleStatusResponse = response => {
   if (response.status >= 200 && response.status < 300) {
@@ -77,13 +78,12 @@ const ContactForm = () => {
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
-        <div className="contact-person display-flex-md">
-          <img src="static/images/max_savonin.png" alt="Contact person" />
-          <div>
-            <span className="name">Talk to Max Savonin</span>
-            <span className="position">CEO at KeenEthics</span>
-          </div>
-        </div>
+        {Person({
+          name: "Talk to Max Savonin",
+          position: "CEO at KeenEthics",
+          imgSrc: "static/images/max_savonin.png",
+          wrapperClassnames: "display-flex-md"
+        })}
         <div className="input-cols">
           <div className="input-wrap">
             <input
@@ -94,7 +94,7 @@ const ContactForm = () => {
               onChange={event => {
                 setFirstname({
                   value: event.target.value,
-                  error: '',
+                  error: ""
                 });
               }}
               required
@@ -115,7 +115,7 @@ const ContactForm = () => {
                 onChange={event => {
                   setEmail({
                     value: event.target.value,
-                    error: '',
+                    error: ""
                   });
                 }}
                 required
@@ -130,15 +130,15 @@ const ContactForm = () => {
           <textarea
             required
             className={classnames({
-              'message-textarea': true,
-              error: message.error,
+              "message-textarea": true,
+              error: message.error
             })}
             name="message"
             placeholder="Message"
             onChange={event => {
               setMessage({
                 value: event.target.value,
-                error: '',
+                error: ""
               });
             }}
             value={message.value}
@@ -147,7 +147,9 @@ const ContactForm = () => {
         <div className="submit-btn">
           <button
             type="submit"
-            className={isPending ? 'button button-send pending' : 'button button-send'}
+            className={
+              isPending ? "button button-send pending" : "button button-send"
+            }
           >
             Let's talk
           </button>
