@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Slider from 'react-slick';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
@@ -9,11 +8,6 @@ import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnology
 import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#1f2a44';
-
-const sliderSettings = {
-  swipe: true,
-  slidesToShow: 1,
-};
 
 const ProjectPrix = () => (
   <Layout>

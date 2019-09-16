@@ -417,7 +417,7 @@ Stage
                       error: '',
                     });
                   }}
-                  checked={pm.value === "I am not sure"}
+                  checked={pm.value === 'I am not sure'}
                 />
                 <label htmlFor="notSureAboutPM" className="label-for-radio-btn">
                 I am not sure

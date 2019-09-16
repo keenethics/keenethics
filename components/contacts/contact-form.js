@@ -3,9 +3,9 @@ import React, { useState, useContext } from 'react';
 // import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ContactUsContext } from '../../pages/contacts';
-import Person from '../person'
+import Person from '../person';
 
-const handleStatusResponse = response => {
+const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -16,7 +16,9 @@ const handleStatusResponse = response => {
 };
 
 const ContactForm = () => {
-  const { isPending, setIsPending, setStatus, setNotifyIsVisible, setNotifyMessage } = useContext(
+  const {
+    isPending, setIsPending, setStatus, setNotifyIsVisible, setNotifyMessage,
+  } = useContext(
     ContactUsContext,
   );
 
@@ -39,7 +41,7 @@ const ContactForm = () => {
     setMessage({ value: '', error: false });
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     setIsPending(true);
@@ -59,7 +61,7 @@ const ContactForm = () => {
     })
       .then(handleStatusResponse)
       .then(response => response.json())
-      .then(json => {
+      .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
         }
@@ -79,10 +81,10 @@ const ContactForm = () => {
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
         {Person({
-          name: "Talk to Max Savonin",
-          position: "CEO at KeenEthics",
-          imgSrc: "static/images/max_savonin.png",
-          wrapperClassnames: "display-flex-md"
+          name: 'Talk to Max Savonin',
+          position: 'CEO at KeenEthics',
+          imgSrc: 'static/images/max_savonin.png',
+          wrapperClassnames: 'display-flex-md',
         })}
         <div className="input-cols">
           <div className="input-wrap">
@@ -91,10 +93,10 @@ const ContactForm = () => {
               name="firstname"
               id="firstname"
               type="text"
-              onChange={event => {
+              onChange={(event) => {
                 setFirstname({
                   value: event.target.value,
-                  error: ""
+                  error: '',
                 });
               }}
               required
@@ -112,10 +114,10 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 type="email"
-                onChange={event => {
+                onChange={(event) => {
                   setEmail({
                     value: event.target.value,
-                    error: ""
+                    error: '',
                   });
                 }}
                 required
@@ -130,15 +132,15 @@ const ContactForm = () => {
           <textarea
             required
             className={classnames({
-              "message-textarea": true,
-              error: message.error
+              'message-textarea': true,
+              error: message.error,
             })}
             name="message"
             placeholder="Your message"
-            onChange={event => {
+            onChange={(event) => {
               setMessage({
                 value: event.target.value,
-                error: ""
+                error: '',
               });
             }}
             value={message.value}
@@ -148,7 +150,7 @@ const ContactForm = () => {
           <button
             type="submit"
             className={
-              isPending ? "button button-send pending" : "button button-send"
+              isPending ? 'button button-send pending' : 'button button-send'
             }
           >
             Let's talk

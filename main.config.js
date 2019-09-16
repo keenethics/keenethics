@@ -16,17 +16,16 @@ const maskDescription = technology => `Looking to hire ${technology} developers?
 
 const maskMapper = (t) => {
   const { name, metaTitle, metaDescription } = t;
-  return {
-    ...t,
-    metaTitle: metaTitle || maskTitle(name),
-    metaDescription: metaDescription || maskDescription(name),
-  };
+
+  t.metaTitle = metaTitle || maskTitle(name);
+  t.metaDescription = metaDescription || maskDescription(name);
+
+  return t;
 };
 
 export const COMPANY_LINKS = {
   linkedin: 'https://www.linkedin.com/company/keen-ethics',
   github: 'https://github.com/keenethics',
-  // googlePlus: 'https://plus.google.com/112805808227871069931',
   twitter: 'https://twitter.com/keen_ethics',
   upwork: 'https://www.upwork.com/o/companies/~0106b5437592391f94/',
   facebook: 'https://www.facebook.com/KeenEthics.development',
@@ -52,11 +51,6 @@ export const config = {
       class: 'soc-3',
       href: COMPANY_LINKS.github,
     },
-    // {
-    //   name: 'GooglePlus',
-    //   class: 'soc-4',
-    //   href: COMPANY_LINKS.googlePlus,
-    // },
     {
       name: 'Twitter',
       class: 'soc-5',
@@ -74,20 +68,20 @@ export const config = {
     },
   ],
 };
-export const servicesWebDevelopmentTabs = () => servicesWebDevelopmentElements.map(e => ({
-  ...e,
-  metaDescription: maskDescription(e.name),
-}));
+export const servicesWebDevelopmentTabs = () => servicesWebDevelopmentElements.map((e) => {
+  e.metaDescription = maskDescription(e.name);
+  return e;
+});
 
-export const servicesMobileDevelopment = () => servicesMobileDevelopmentElements.map(e => ({
-  ...e,
-  metaDescription: maskDescription(e.name2),
-}));
+export const servicesMobileDevelopment = () => servicesMobileDevelopmentElements.map((e) => {
+  e.metaDescription = maskDescription(e.name2);
+  return e;
+});
 
-export const servicesOutstaffing = () => servicesOutstaffingElements.map(e => ({
-  ...e,
-  metaDescription: maskDescription(e.name2),
-}));
+export const servicesOutstaffing = () => servicesOutstaffingElements.map((e) => {
+  e.metaDescription = maskDescription(e.name2);
+  return e;
+});
 
 export const techApps = () => techAppsElements.map(maskMapper);
 export const techFrontEnd = () => techFrontEndElements.map(maskMapper);

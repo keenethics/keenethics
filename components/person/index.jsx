@@ -1,7 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Person = ({ onClick, name, position, imgSrc, wrapperClassnames }) => {
+const Person = ({
+  onClick, name, position, imgSrc, wrapperClassnames,
+}) => {
   const LinkTo = ({ children }) => (
     <a
       className="text-decoration-none"
@@ -43,11 +45,11 @@ Person.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
-  wrapperClassnames: PropTypes.string
+  wrapperClassnames: PropTypes.string,
 };
 
 Person.defaultProps = {
-  wrapperClassnames: ""
+  wrapperClassnames: '',
 };
 
 export default Person;

@@ -10,7 +10,7 @@ import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
 // import Notify from '../components/notify/notify';
 import SocialButton from '../components/social-buttons/main';
-import Person from '../components/person'
+import Person from '../components/person';
 
 const Address = ({ className }) => (
   <address className={className}>
@@ -19,7 +19,7 @@ const Address = ({ className }) => (
         <a
           href="https://goo.gl/maps/eaAU8qqLZoo"
           rel="noopener noreferrer nofollow"
-          target="_blank" 
+          target="_blank"
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
@@ -73,7 +73,7 @@ const Address = ({ className }) => (
           <a
             href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
             rel="noopener noreferrer nofollow"
-            target="_blank" 
+            target="_blank"
           >
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
@@ -207,12 +207,12 @@ const Contacts = ({ router }) => {
         />
       )} */}
       <div className="contacts-page">
-      {Person({
-          onClick: () => {setActiveContactForm(true)},
-          name: "Talk to Max Savonin",
-          position: "CEO at KeenEthics",
-          imgSrc: "static/images/max_savonin.png",
-          wrapperClassnames: "display-inline-flex-md-max"
+        {Person({
+          onClick: () => { setActiveContactForm(true); },
+          name: 'Talk to Max Savonin',
+          position: 'CEO at KeenEthics',
+          imgSrc: 'static/images/max_savonin.png',
+          wrapperClassnames: 'display-inline-flex-md-max',
         })}
         <div className="contacts-socket">
           {notifyMessage === 'Message sent' ? (

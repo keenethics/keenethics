@@ -37,6 +37,8 @@ const EMBEDDED_ENTRY_HEADERS = {
   mostSuitableFor: 'MOST SUITABLE FOR...',
   helpfulTools: 'HELPFUL TOOLS:',
 };
+
+// eslint-disable-next-line react/prop-types
 const embeddedEntryComponent = ({ type, list }) => (
   <div key={`&{type}_${Math.random()}`} className={EMBEDDED_ENTRY_CLASSNAMES[type]}>
     <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-icon-wrapper`}>
@@ -64,7 +66,9 @@ const socialMediaShareButtons = ({ url }) => (
   </div>
 );
 
-const postCardComponent = ({ slug, heroImage, publishDate, title }) => {
+const postCardComponent = ({
+  slug, heroImage, publishDate, title,
+}) => {
   const url = _.get(heroImage, 'fields.file.url');
   const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
 
@@ -99,7 +103,9 @@ const imageComponent = ({ src, description, title }) => (
   </figure>
 );
 
-const personComponent = ({ image, name, position, linkedIn }) => {
+const personComponent = ({
+  image, name, position, linkedIn,
+}) => {
   const url = _.get(image, 'fields.file.url');
   const alt = _.get(image, 'fields.description') || _.get(image, 'fields.title');
 
@@ -149,22 +155,22 @@ const bodyOptions = {
 
       return <p>{children.filter(item => !!item)}</p>;
     },
-    [BLOCKS.EMBEDDED_ASSET]: node => {
+    [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
 
       return imageComponent({ src: url, description, title });
     },
-    [BLOCKS.EMBEDDED_ENTRY]: node => {
+    [BLOCKS.EMBEDDED_ENTRY]: (node) => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
         const { bookList, list } = _.get(node, 'data.target.fields', null);
 
         return (
-          <div className={EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}>
-            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-icon-wrapper`}>
+          <div className={EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}>
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-icon-wrapper`}>
               <img alt="Book icon" src="/static/images/book_icon.png" />
             </div>
-            <div className={`${EMBEDDED_ENTRY_CLASSNAMES['usefulReadings']}-content`}>
+            <div className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-content`}>
               <h4>useful readings:</h4>
               {(bookList || list) && documentToReactComponents(bookList || list)}
             </div>
@@ -220,7 +226,7 @@ const bodyOptions = {
 
       return null;
     },
-    'embedded-entry-inline': node => {
+    'embedded-entry-inline': (node) => {
       if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
         const { image, name, position } = node.data.target.fields;
 
@@ -322,16 +328,19 @@ export default class Post extends React.Component {
               ))}
               <span className="date">
                 {publishDate && (
-                  <React.Fragment>
-                    PUBLISH DATE:{' '}
+                  <>
+                    PUBLISH DATE:
+                    {' '}
                     <Moment format="MMMM DD YYYY">{`${new Date(publishDate)}`}</Moment>
-                  </React.Fragment>
+                  </>
                 )}
                 <br />
                 {updatedAt && (
-                  <React.Fragment>
-                    UPD: <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
-                  </React.Fragment>
+                  <>
+                    UPD:
+                    {' '}
+                    <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
+                  </>
                 )}
               </span>
               {url && socialMediaShareButtons({ url: this.props.url.asPath })}

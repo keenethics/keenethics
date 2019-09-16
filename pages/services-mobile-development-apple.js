@@ -4,8 +4,6 @@ import React from 'react';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
-import './services-mobile-development.scss'
-
 import { servicesMobileDevelopment, works } from '../main.config';
 
 import Works from '../components/portfolio/works';

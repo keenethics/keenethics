@@ -1,5 +1,3 @@
-/* global document */
-
 import Link from 'next/link';
 
 import React from 'react';
@@ -29,7 +27,7 @@ export default class NavigationPoint extends React.Component {
     const { element: { href } } = this.props;
 
     return href ? (
-      <Link href={href} prefetch>
+      <Link href={href}>
         <a className="navigation-point">{this.renderPointContent()}</a>
       </Link>
     ) : (

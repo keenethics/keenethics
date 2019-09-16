@@ -1,5 +1,3 @@
-/* global window, document */
-
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 
@@ -154,7 +152,7 @@ class Navigation extends React.Component {
         </div>
         <div className="navigation-inner" style={{ height: dimensions.height }}>
           <div className="navigation-header">
-            <Link href="/" prefetch>
+            <Link href="/">
               <a className="logo">
                 <img src="/static/images/svg/logo.svg" alt="KeenEthics" width="120px" />
               </a>
