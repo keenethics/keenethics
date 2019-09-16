@@ -142,6 +142,13 @@
             font-size: 12px;
             line-height: 16px;
           }
+
+          a:first-child {
+            @include breakpoint(md-max) {
+              margin-bottom: 27px;
+              display: inline-block;
+            }
+          }
         }
 
         .ico {
