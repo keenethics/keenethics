@@ -208,7 +208,7 @@ const Contacts = ({ router }) => {
       )} */}
       <div className="contacts-page">
         {Person({
-          onClick: () => { setActiveContactForm(true); },
+          onClick: () => setActiveContactForm(true),
           name: 'Talk to Max Savonin',
           position: 'CEO at KeenEthics',
           imgSrc: 'static/images/max_savonin.png',

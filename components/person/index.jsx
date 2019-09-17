@@ -7,7 +7,7 @@ const Person = ({
   const LinkTo = ({ children }) => (
     <a
       className="text-decoration-none"
-      onClick={() => onClick}
+      onClick={onClick}
       href="javascript:void(0)"
     >
       {children}
