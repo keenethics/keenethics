@@ -10,7 +10,7 @@
   position: relative;
   background: linear-gradient(135deg, #071e40 0%, #662938 80%);
   z-index: 600;
-  min-height: 100vh;
+  min-height: 100%;
 
   * {
     letter-spacing: 0;
@@ -38,7 +38,7 @@
     }
   }
 
-  @include breakpoint(md-max) {
+  @include breakpoint(sm-max) {
     flex-direction: column;
   }
 
@@ -50,11 +50,15 @@
     margin: auto 50px 0;
 
     @include breakpoint(md-max) {
+      margin: 50px auto auto 40px;
+    }
+
+    @include breakpoint(sm-max) {
       margin-top: 15px;
     }
 
     .contacts-list {
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         text-align: center;
       }
 
@@ -62,12 +66,12 @@
         white-space: nowrap;
         position: relative;
 
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
           display: block;
         }
 
         & > a {
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             display: inline-block;
           }
         }
@@ -76,7 +80,7 @@
           display: flex;
           align-items: center;
 
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             margin-bottom: 16px;
           }
 
@@ -86,7 +90,7 @@
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, 0.3);
 
-            @include breakpoint(md-max) {
+            @include breakpoint(sm-max) {
               padding: 6px;
             }
           }
@@ -102,13 +106,13 @@
         }
 
         .address-telephone-wrapper {
-          padding-left: 50px;
-          @include breakpoint(md-max) {
+          padding-left: 43px;
+          @include breakpoint(sm-max) {
             padding-left: 0;
           }
 
           a:first-child {
-            @include breakpoint(md-max) {
+            @include breakpoint(sm-max) {
               margin-bottom: 27px;
               display: inline-block;
             }
@@ -129,9 +133,11 @@
         }
 
         .additional-info-wrapper {
-          padding-left: 50px;
+          padding-left: 43px;
           padding-top: 5px;
-          @include breakpoint(md-max) {
+          line-height: 16px;
+
+          @include breakpoint(sm-max) {
             padding-left: 0;
           }
 
@@ -144,7 +150,7 @@
           }
 
           a:first-child {
-            @include breakpoint(md-max) {
+            @include breakpoint(sm-max) {
               margin-bottom: 27px;
               display: inline-block;
             }
@@ -162,7 +168,7 @@
             height: 17px;
             width: 17px;
           }
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             height: 35px;
             width: 35px;
           }
@@ -210,6 +216,8 @@
       color: #764ba2;
       line-height: 100%;
       cursor: pointer;
+      border: none;
+      background: white;
     }
     .expand-icon {
       display: block;
@@ -218,8 +226,11 @@
       height: 11px;
       margin-left: 18px;
       background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
       background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M15.686 8.964l-7.173-7.55M1.414 8.964l7.172-7.55'/%3E%3C/svg%3E");
       cursor: pointer;
+      transition: transform 0.1s linear;
 
       &.down {
         transform: rotateZ(180deg);
@@ -233,7 +244,7 @@
   width: 100%;
   z-index: 600;
 
-  @include breakpoint(md-max) {
+  @include breakpoint(sm-max) {
     margin-top: 0px;
   }
 
@@ -258,7 +269,7 @@
   .wish-list {
     margin: 0 20px;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       width: 100%;
       margin: 0;
       padding: 30px 0 0;
@@ -279,7 +290,7 @@
       color: #764ba2;
       margin: 0 10px 12px 0;
 
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         margin-right: 13px;
         flex-basis: calc(50% - 13px);
         text-align: center;
@@ -316,11 +327,11 @@
     width: 300px;
     max-width: 300px;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       width: auto;
       max-width: none;
     }
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       padding: 20px 27px;
       // width: 300px;
       // max-width: 300px;
@@ -331,7 +342,7 @@
       max-width: 380px;
     }
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       background: white;
       border-radius: 8px;
       padding: 20px 10px;
@@ -431,7 +442,7 @@
       border-radius: 8px;
 
       min-height: 143px;
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         min-height: 111px;
       }
       @include breakpoint(sm-max) {
@@ -504,7 +515,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       flex-direction: column;
     }
   }
@@ -530,24 +541,24 @@
         display: flex;
         margin-top: 15px;
 
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
           margin-top: 30px;
           flex-direction: column;
         }
 
         button:first-child:not(:only-child) {
           margin-right: 15px;
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             margin-right: 0;
           }
         }
 
         button:first-child {
           margin-left: auto;
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             margin-left: 0;
           }
-          @include breakpoint(md-max) {
+          @include breakpoint(sm-max) {
             order: 1;
             margin-top: 15px;
           }
@@ -648,7 +659,7 @@
     @include breakpoint(mobile) {
       margin-top: 38px;
     }
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       margin-top: 35px;
     }
     @include breakpoint(lg) {
@@ -734,7 +745,7 @@
       @include breakpoint(mobile) {
         margin-right: 0;
       }
-      @include breakpoint(md) {
+      @include breakpoint(sm) {
         padding: 7px 35px;
       }
       @include breakpoint(lg) {
@@ -1120,11 +1131,11 @@
   display: flex;
   flex-direction: row;
 
-  @include breakpoint(md-max) {
+  @include breakpoint(sm-max) {
     padding: 10px 15px 15px;
   }
 
-  @include breakpoint(md-max) {
+  @include breakpoint(sm-max) {
     flex-direction: column;
   }
 
@@ -1138,15 +1149,22 @@
     background-color: #764ba2;
     display: flex;
     flex-direction: column;
-
-    flex-basis: 315px;
     border-radius: 10px 0 0 10px;
     margin-bottom: 0;
-    @include breakpoint(md-max) {
+    flex-basis: 247px;
+
+    @include breakpoint(sm-max) {
+      flex-basis: unset;
+    }
+
+    @include breakpoint(sm-max) {
       margin-bottom: -12px;
       padding-bottom: 12px;
       border-radius: 10px 10px 0 0;
-      flex-basis: unset;
+    }
+
+    @include breakpoint(md) {
+      flex-basis: 315px;
     }
 
     &.contacts-panel {
@@ -1159,17 +1177,17 @@
       font-size: 46px;
       line-height: 54px;
       color: #ffffff;
-      margin: 50px 50px 10px 50px;
+      margin: 50px auto 16px 50px;
 
       @include breakpoint(md-max) {
-        margin: 50px;
+        margin: 45px auto 21px 26px;
       }
+
       @include breakpoint(sm-max) {
         font-style: normal;
         font-weight: 800;
         font-size: 26px;
         line-height: 31px;
-        margin: 32px 37px 50px;
       }
     }
 
@@ -1182,7 +1200,11 @@
       margin: 0 50px;
 
       @include breakpoint(md-max) {
-        margin-bottom: 40px;
+        margin: 21px auto 0 28px;
+      }
+
+      @include breakpoint(sm-max) {
+        margin: 32px 37px 50px;
       }
     }
 
@@ -1229,6 +1251,7 @@
       }
     }
   }
+
   .active-form-wrapper {
     display: flex;
     flex-grow: 1;
@@ -1242,7 +1265,7 @@
     @include breakpoint(sm-max) {
       padding: 38px 20px 26px;
     }
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       border-radius: 10px;
       min-height: auto;
     }
@@ -1251,7 +1274,7 @@
     }
 
     .btn-group {
-      @include breakpoint(md) {
+      @include breakpoint(sm) {
         margin: 0 auto 20px;
         width: 300px;
       }
@@ -1496,6 +1519,7 @@ radiogroup {
   font-size: 14px;
   line-height: 16px;
   color: #12233d;
+  margin: 0;
 
   &:hover {
     background: #dbd8dd;
@@ -1565,7 +1589,7 @@ radiogroup {
   margin-bottom: 20px;
   line-height: 0;
 
-  @include breakpoint(md-max) {
+  @include breakpoint(sm-max) {
     align-self: flex-start;
     margin-top: 12px;
     margin-left: 15px;
@@ -1580,7 +1604,7 @@ radiogroup {
     border-radius: 50%;
     margin-right: 19px;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       height: 50px;
       width: 50px;
     }
@@ -1594,7 +1618,7 @@ radiogroup {
     color: #12233d;
     margin-bottom: 6px;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       color: #fff;
     }
   }
@@ -1607,7 +1631,7 @@ radiogroup {
     line-height: 14px;
     color: #12233d;
 
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       color: #fff;
     }
   }
@@ -1615,18 +1639,18 @@ radiogroup {
 
 .contact-us-form.contacts-block {
   .contact-us-form-info-side {
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       display: none;
     }
   }
   .active-form-wrapper {
-    @include breakpoint(md-max) {
+    @include breakpoint(sm-max) {
       background: transparent;
       padding: 0;
     }
 
     form {
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         margin: 0;
       }
     }
@@ -1635,30 +1659,56 @@ radiogroup {
 
 .display {
   &-flex {
-    &-md {
+    &-sm {
       display: flex !important;
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         display: none !important;
       }
 
       &-max {
         display: none !important;
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
+          display: flex !important;
+        }
+      }
+    }
+    &-md {
+      display: flex !important;
+      @include breakpoint(sm-max) {
+        display: none !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(sm-max) {
           display: flex !important;
         }
       }
     }
   }
   &-inline-flex {
-    &-md {
+    &-sm {
       display: inline-flex !important;
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         display: none !important;
       }
 
       &-max {
         display: none !important;
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
+          display: inline-flex !important;
+        }
+      }
+    }
+    &-md {
+      display: inline-flex !important;
+      @include breakpoint(sm-max) {
+        display: none !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(sm-max) {
           display: inline-flex !important;
         }
       }
@@ -1680,28 +1730,41 @@ radiogroup {
     }
     &-md {
       display: block !important;
-      @include breakpoint(md-max) {
+      @include breakpoint(sm-max) {
         display: none !important;
       }
 
       &-max {
         display: none !important;
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
           display: block !important;
         }
       }
     }
   }
   &-inline-block {
-    &-md {
+    &-sm {
       display: none !important;
-      @include breakpoint(md) {
+      @include breakpoint(sm) {
         display: inline-block !important;
       }
 
       &-max {
         display: none !important;
-        @include breakpoint(md-max) {
+        @include breakpoint(sm-max) {
+          display: inline-block !important;
+        }
+      }
+    }
+    &-md {
+      display: none !important;
+      @include breakpoint(sm) {
+        display: inline-block !important;
+      }
+
+      &-max {
+        display: none !important;
+        @include breakpoint(sm-max) {
           display: inline-block !important;
         }
       }

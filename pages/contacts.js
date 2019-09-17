@@ -77,7 +77,7 @@ const Address = ({ className }) => (
           >
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
-            <span itemProp="streetAddress">Oude litherweg 2, 5346 RT</span>
+            <span itemProp="streetAddress">Oude litherweg 2, <br className="display-block-sm" /> 5346 RT</span>
           </a>
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
@@ -97,7 +97,7 @@ const AddressPanel = () => (
       <br />
       in touch
     </h1>
-    <p>Let's discuss your idea</p>
+    <p>Let&apos;s discuss your idea</p>
     <Address />
   </React.Fragment>
 );
@@ -107,7 +107,7 @@ const MobileWishlist = ({ wishlist }) => {
 
   return (
     <React.Fragment>
-      <div className="mobile-counter display-flex-md-max">
+      <div className="mobile-counter display-flex-sm-max">
         <h1>
           Your
           {' '}
@@ -139,20 +139,20 @@ const MobileWishlist = ({ wishlist }) => {
 const wishlistPanel = wishlist => (
   <React.Fragment>
     <MobileWishlist wishlist={wishlist} />
-    <h1 className="display-block-md">
+    <h1 className="display-block-sm">
       Your
       {' '}
-      <br className="display-block-md" />
+      <br className="display-block-sm" />
       wishlist
     </h1>
-    <p className="display-block-md">
+    <p className="display-block-sm">
       These are the parameters
       {' '}
-      <br className="display-block-md" />
+      <br className="display-block-sm" />
       you have selected.
     </p>
-    <hr className="hr-top display-block-md" />
-    <div className="wish-list display-block-md">
+    <hr className="hr-top display-block-sm" />
+    <div className="wish-list display-block-sm">
       {wishlist.map(item => (
         <span key={item} className="wish-item">
           {item}
@@ -212,7 +212,7 @@ const Contacts = ({ router }) => {
           name: 'Talk to Max Savonin',
           position: 'CEO at KeenEthics',
           imgSrc: 'static/images/max_savonin.png',
-          wrapperClassnames: 'display-inline-flex-md-max',
+          wrapperClassnames: 'display-inline-flex-sm-max',
         })}
         <div className="contacts-socket">
           {notifyMessage === 'Message sent' ? (
@@ -225,7 +225,7 @@ const Contacts = ({ router }) => {
               itemScope
               itemType="http://schema.org/Organization"
             >
-              <div className="btn-group display-flex-md-max mb-23px">
+              <div className="btn-group display-flex-sm-max mb-23px">
                 <button
                   onClick={onClick}
                   name="contact-form-btn"
@@ -256,13 +256,13 @@ const Contacts = ({ router }) => {
                 })}
               >
                 {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
-                <hr className="display-block-md" />
-                <div className="social-icons display-block-md">
+                <hr className="display-block-sm" />
+                <div className="social-icons display-block-sm">
                   <SocialButton />
                 </div>
               </div>
               <div className="active-form-wrapper">
-                <div className="btn-group display-flex-md">
+                <div className="btn-group display-flex-sm">
                   <button
                     onClick={onClick}
                     name="contact-form-btn"
@@ -305,7 +305,7 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-md-max" />
+          <Address className="display-block-sm-max" />
         </div>
         <Background />
       </div>
