@@ -1,6 +1,6 @@
 module.exports = {
   globals: {
-    PATH: "https://http://localhost:3000/"
+    PATH: "http://localhost:3000/"
   },
   testMatch: [
     "<rootDir>/*.test.js"
