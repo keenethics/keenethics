@@ -64,6 +64,9 @@
   .description {
     margin-bottom: 20px;
   }
+  .title {
+    text-align: center;
+  }
 }
 .project-content-preview {
   position: relative;
@@ -241,6 +244,9 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+  blockquote .title {
+    margin: 0;
   }
   .technologies-list {
     display: flex;
