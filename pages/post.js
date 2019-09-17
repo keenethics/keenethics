@@ -198,6 +198,7 @@ const bodyOptions = {
           buttonText,
           redirectLink,
         } = node.data.target.fields;
+
         return (
           <div className="suggestion">
             <h5>{suggestionTitle}</h5>
@@ -382,6 +383,49 @@ export default class Post extends React.Component {
             </div>
           </footer>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                '@context': 'http://schema.org',
+                '@type': 'Article',
+                mainEntityOfPage: {
+                  '@type': 'WebPage',
+                  '@id': url,
+                },
+                headline: metaTitle,
+                description: metaDescription,
+                image: {
+                  '@type': 'ImageObject',
+                  url: heroImage.fields.file.url,
+                  ...heroImage.fields.file.details.image,
+                },
+                datePublished: new Date(publishDate),
+                dateModified: new Date(updatedAt),
+                author: {
+                  '@type': 'Person',
+                  name: author.fields.name,
+                  sameAs: [
+                    author.fields.linkedIn,
+                  ],
+                },
+                publisher: {
+                  '@type': 'Organization',
+                  name: 'Moz',
+                  url: 'https://keenethics.com/',
+                  sameAs: ['https://www.facebook.com/keenethics.development/', 'https://www.linkedin.com/company/keen-ethics/', 'https://github.com/keenethics', 'https://twitter.com/keen_ethics', 'https://www.upwork.com/o/companies/~0106b5437592391f94/', 'https://www.instagram.com/keen_ethics/'],
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://keenethics.com/static/images/logo.png',
+                    width: 150,
+                    height: 18,
+                  },
+                },
+              },
+            ),
+          }}
+        />
       </Layout>
     );
   }
