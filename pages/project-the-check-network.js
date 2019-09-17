@@ -1,5 +1,5 @@
+/* eslint-disable */
 import React from 'react';
-import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
