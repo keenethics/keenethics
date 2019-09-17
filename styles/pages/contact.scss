@@ -284,6 +284,49 @@
       }
     }
   }
+  .options-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .input-checkbox-wrap,
+    .input-radio-wrap {
+      margin-right: 10px;
+
+      @include breakpoint(sm-max) {
+        flex-basis: calc(50% - 5px);
+      }
+
+      &:nth-child(odd) {
+        @include breakpoint(sm-max) {
+          margin-right: 10px;
+        }
+      }
+
+      &:nth-child(even) {
+        @include breakpoint(sm-max) {
+          margin-right: 0;
+        }
+      }
+
+      @include breakpoint(mobile) {
+        flex-basis: 100%;
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.odd-options-number {
+      .input-checkbox-wrap:last-child,
+      .input-radio-wrap:last-child {
+        @include breakpoint(sm-max) {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 .contacts-socket {
@@ -738,8 +781,6 @@
   }
 
   .input-checkbox-wrap {
-    // margin-bottom: 15px;
-
     @include breakpoint(mobile) {
       display: block;
     }
@@ -747,12 +788,11 @@
     .checkbox {
       padding: 0;
       margin-bottom: 10px;
-
-      @include breakpoint(mobile) {
-        display: block;
-      }
+      display: block;
 
       .label {
+        margin: 0;
+
         @include breakpoint(mobile) {
           display: block;
         }
@@ -834,7 +874,7 @@
     .label-for-radio-btn {
       display: block;
       padding: 7px;
-      margin-right: 10px;
+      margin-right: 0;
       margin-bottom: 10px;
       text-align: center;
       position: relative;
