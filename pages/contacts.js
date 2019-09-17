@@ -109,7 +109,7 @@ const AddressPanel = () => (
 );
 
 const MobileWishlist = ({ wishlist }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
     <React.Fragment>
@@ -120,23 +120,21 @@ const MobileWishlist = ({ wishlist }) => {
           <br />
           wishlist
         </h1>
-        <button type="button" className="counter" onClick={() => setIsExpanded(!isExpanded)}>
+        <button type="button" className="counter" onClick={() => setIsCollapsed(!isCollapsed)}>
           {wishlist.length}
         </button>
         <button
           type="button"
-          className={classnames('expand-icon', { down: !isExpanded })}
-          onClick={() => setIsExpanded(!isExpanded)}
+          className={classnames('expand-icon', { down: isCollapsed })}
+          onClick={() => setIsCollapsed(!isCollapsed)}
         />
-        {isExpanded && (
-          <div className="wish-list">
+          <div className={`wish-list ${isCollapsed ? 'collapsed' : ""}`}>
             {wishlist.map(item => (
               <span key={item} className="wish-item">
                 {item}
               </span>
             ))}
           </div>
-        )}
       </div>
     </React.Fragment>
   );
