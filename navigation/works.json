@@ -1,5 +1,21 @@
 [
   {
+    "title": "Hospital Marketing Administration System",
+    "metaTitle": "Case study: Hospital Marketing Administration System – KeenEthics",
+    "href": "/project-hospital-marketing-administration-system",
+    "imgSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.jpeg",
+    "category": {
+      "main": [
+        "Business apps"
+      ],
+      "additional": [
+        "Healthcare"
+      ]
+    },
+    "description": "Modeling patient journey, automating marketing documentation, and improving client service",
+    "metaDescription": "A hospital management system for modeling patient journey, automating marketing documentation, and improving client service"
+  },
+  {
     "title": "ParkQX",
     "href": "/parkqx-c2c-e-commerce",
     "imgSrc": "parkqx/parkqx.jpg",
