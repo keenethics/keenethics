@@ -77,7 +77,13 @@ const Address = ({ className }) => (
           >
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
-            <span itemProp="streetAddress">Oude litherweg 2, <br className="display-block-sm" /> 5346 RT</span>
+            <span itemProp="streetAddress">
+Oude litherweg 2,
+{' '}
+<br className="display-block-sm" />
+{' '}
+5346 RT
+</span>
           </a>
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
@@ -307,6 +313,10 @@ const Contacts = ({ router }) => {
           )}
           <Address className="display-block-sm-max" />
         </div>
+        {activeContactForm && (
+        <div className="social-icons display-block-sm-max">
+          <SocialButton />
+        </div>)}
         <Background />
       </div>
     </Layout>

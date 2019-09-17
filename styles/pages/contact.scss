@@ -237,6 +237,53 @@
       }
     }
   }
+  > .social-icons {
+    z-index: 600;
+    padding: 0 32px;
+    width: 100%;
+    margin: 45px 0 32px;
+
+    ul {
+      border-top: 1px solid rgba(211, 211, 211, 0.3);
+      padding-top: 43px;
+    }
+  }
+  .social-icons {
+    margin-bottom: 37px;
+    padding: 0 30px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      #soc-btn {
+        display: none;
+      }
+
+      li a {
+        margin-bottom: 0;
+        opacity: 0.3;
+      }
+      li.soc-1 a {
+        background: url(/static/images/svg/facebook.svg) center no-repeat;
+      }
+      li.soc-2 a {
+        background: url(/static/images/svg/linkedin.svg) center no-repeat;
+      }
+      li.soc-3 a {
+        background: url(/static/images/svg/github.svg) center no-repeat;
+      }
+      li.soc-5 a {
+        background: url(/static/images/svg/twitter.svg) center no-repeat;
+      }
+      li.soc-6 a {
+        background: url(/static/images/svg/upwork.svg) center no-repeat;
+      }
+      li.soc-instagram a {
+        background: url(/static/images/svg/instagram.svg) center no-repeat;
+      }
+    }
+  }
 }
 
 .contacts-socket {
@@ -1212,43 +1259,6 @@
       border: 0;
       border-bottom: 1px solid rgba(211, 211, 211, 0.3);
       margin: auto 20px 37px 20px;
-    }
-
-    .social-icons {
-      margin-bottom: 37px;
-      padding: 0 30px;
-
-      ul {
-        display: flex;
-        justify-content: space-between;
-
-        #soc-btn {
-          display: none;
-        }
-
-        li a {
-          margin-bottom: 0;
-          opacity: 0.3;
-        }
-        li.soc-1 a {
-          background: url(/static/images/svg/facebook.svg) center no-repeat;
-        }
-        li.soc-2 a {
-          background: url(/static/images/svg/linkedin.svg) center no-repeat;
-        }
-        li.soc-3 a {
-          background: url(/static/images/svg/github.svg) center no-repeat;
-        }
-        li.soc-5 a {
-          background: url(/static/images/svg/twitter.svg) center no-repeat;
-        }
-        li.soc-6 a {
-          background: url(/static/images/svg/upwork.svg) center no-repeat;
-        }
-        li.soc-instagram a {
-          background: url(/static/images/svg/instagram.svg) center no-repeat;
-        }
-      }
     }
   }
 
