@@ -142,7 +142,7 @@ Stage
             </div>
             <div className="estimate-input-cols">
               <div className="standard-radio-input">
-                <radiogroup>
+                <div className="radiogroup">
                   <span>
                     <input
                       name="stage"
@@ -201,7 +201,7 @@ Stage
                       <span className="text-dimmed">continue development</span>
                     </label>
                   </span>
-                </radiogroup>
+                </div>
               </div>
             </div>
             <div className="question-title">
