@@ -41,7 +41,7 @@ const Person = ({
 };
 
 Person.propTypes = {
-  onClick: PropTypes.oneOfType([null, undefined, PropTypes.func]).isRequired,
+  onClick: PropTypes.func,
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
@@ -50,6 +50,7 @@ Person.propTypes = {
 
 Person.defaultProps = {
   wrapperClassnames: '',
+  onClick: null,
 };
 
 export default Person;
