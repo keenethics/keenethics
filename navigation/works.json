@@ -120,7 +120,7 @@
   {
     "title": "Paceup",
     "href": "/project-paceup",
-    "imgSrc": "paceup.png",
+    "imgSrc": "paceup/paceup.png",
     "category": {
       "main": [
         "Business apps"
@@ -203,7 +203,7 @@
   {
     "title": "The Check Network",
     "href": "/project-the-check-network",
-    "imgSrc": "The-Check-Network.jpg",
+    "imgSrc": "the-check-network/the-check-network.jpg",
     "category": {
       "main": [
         "Consumer apps"

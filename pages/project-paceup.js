@@ -23,7 +23,7 @@ const ProjectPrix = () => (
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
                 <img src="/static/images/project/macbook.png" alt="macbook" className="macbook" />
-                <img src="/static/images/project/paceup.png" alt="Prix" className="screen" />
+                <img src="/static/images/project/paceup.png" alt="Paceup" className="screen" />
               </div>
             </div>
             <Background />
@@ -38,7 +38,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '700px', width: '100%' }}
-              src="/static/portfolio/paceup/pace.png"
+              src="/static/portfolio/paceup/paceup-top.jpg"
               alt="PaceUp"
             />
             <h2>Our Cooperation</h2>
@@ -78,7 +78,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '700px', width: '100%' }}
-              src="/static/portfolio/paceup/real-time-forecasts.png"
+              src="/static/portfolio/paceup/real-time-forecasts.jpg"
               alt="Real-time forecasts"
             />
             <h3>Customer needs kept in mind</h3>
@@ -87,7 +87,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '700px', width: '100%' }}
-              src="/static/portfolio/paceup/customer-needs-kept-in-mind.png"
+              src="/static/portfolio/paceup/customer-needs-kept-in-mind.jpg"
               alt="Customer needs kept in mind"
             />
             <h3>Organization and convenience</h3>
@@ -96,7 +96,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '700px', width: '100%' }}
-              src="/static/portfolio/paceup/organization-and-convenience.png"
+              src="/static/portfolio/paceup/organization-and-convenience.jpg"
               alt="Organization and convenience"
             />
             <h3>Multifaceted interaction</h3>
@@ -105,7 +105,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '500px', width: '100%' }}
-              src="/static/portfolio/paceup/multifaceted-interaction.png"
+              src="/static/portfolio/paceup/paceup.jpg"
               alt="Multifaceted interaction"
             />
             <h3>Gorgeous intuitive interface</h3>
@@ -123,7 +123,7 @@ const ProjectPrix = () => (
             </p>
             <img
               style={{ maxWidth: '700px', width: '100%' }}
-              src="/static/portfolio/paceup/pricing.png"
+              src="/static/portfolio/paceup/pricing.jpg"
               alt="Cost-efficiency"
             />
             <h2>Feedback</h2>
