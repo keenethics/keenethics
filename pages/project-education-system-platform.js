@@ -135,7 +135,24 @@ const ProjectPrix = () => (
               </ul>
             </div>
             <h2>Feedback</h2>
-            <p>
+            <blockquote>
+              <p>
+                KeenEthics worked seamlessly alongside the internal team and produced fast,
+                efficient code. They accommodated expanded work-hours to meet tight deadlines and
+                responded quickly to inquiries. Customers can expect a highly productive team that
+                delivers high-quality products at competitive rates.
+              </p>
+              <p>
+                <i />
+                <div className="person">
+                  <span className="info">
+                    <span className="title">Technical Lead</span>
+                  </span>
+                </div>
+                <i />
+              </p>
+            </blockquote>
+            {/* <p>
               “KeenEthics worked seamlessly alongside the internal team and produced fast, efficient
               code. They accommodated expanded work-hours to meet tight deadlines and responded
               quickly to inquiries. Customers can expect a highly productive team that delivers
@@ -148,7 +165,7 @@ const ProjectPrix = () => (
               >
                 Technical Lead
               </a>
-            </p>
+            </p> */}
             <CallToActionButton
               buttonBefore={(
                 <Link

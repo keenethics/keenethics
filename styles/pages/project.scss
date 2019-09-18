@@ -43,6 +43,7 @@
   .description {
     font-size: 18px;
     line-height: 1.3;
+    text-align: center;
   }
   .content-navigation-background {
     z-index: 50;
@@ -63,6 +64,9 @@
   }
   .description {
     margin-bottom: 20px;
+  }
+  .title {
+    text-align: center;
   }
 }
 .project-content-preview {
@@ -241,6 +245,9 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+  blockquote .title {
+    margin: 0;
   }
   .technologies-list {
     display: flex;

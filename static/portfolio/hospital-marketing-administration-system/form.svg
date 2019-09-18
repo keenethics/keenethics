@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
+	<g>
+		<path style="fill:#1B2F5A" d="M416,32H272c0,8.836-7.164,16-16,16s-16-7.164-16-16H96c-22.055,0-40,17.945-40,40v400    c0,22.055,17.945,40,40,40h320c22.055,0,40-17.945,40-40V72C456,49.945,438.054,32,416,32z M416,464c0,4.418-3.582,8-8,8H104    c-4.418,0-8-3.582-8-8V80c0-4.418,3.582-8,8-8h304c4.418,0,8,3.582,8,8V464z" data-original="#9F6459" class="" data-old_color="#9F6459"/>
+	</g>
+	<g>
+		<g>
+			<path style="fill:#E7E5E5" d="M152,368c-1.891,0-3.789-0.664-5.312-2.023c-3.305-2.93-3.602-7.992-0.664-11.289l64-72     c2.328-2.625,6.094-3.422,9.289-1.969l80.445,36.57l52.844-128.336c1.688-4.078,6.359-6,10.445-4.352     c4.086,1.68,6.031,6.359,4.352,10.445l-56,136c-0.828,2.008-2.438,3.594-4.453,4.391s-4.273,0.742-6.258-0.156l-82.625-37.555     l-60.086,67.586C156.398,367.094,154.203,368,152,368z" data-original="#D8DCE1" class="" data-old_color="#D8DCE1"/>
+		</g>
+	</g>
+	<g>
+		<circle style="fill:#D62C2C" cx="152" cy="360" r="24" data-original="#FF4F19" class="" data-old_color="#FF4F19"/>
+	</g>
+	<g>
+		<circle style="fill:#E3611E" cx="216" cy="288" r="24" data-original="#FF9600" class="" data-old_color="#FF9600"/>
+	</g>
+	<g>
+		<circle style="fill:#DE4F4F" cx="304" cy="328" r="24" data-original="#FFD200" class="" data-old_color="#FFD200"/>
+	</g>
+	<g>
+		<circle style="fill:#B9BCE5" cx="360" cy="192" r="24" data-original="#74D24F" class="" data-old_color="#74D24F"/>
+	</g>
+	<g>
+		<path style="fill:#B9BBC1" d="M304,16h-20.391C277.969,6.242,267.484,0,256,0s-21.969,6.242-27.609,16H208    c-22.055,0-40,17.945-40,40v32c0,4.418,3.578,8,8,8h160c4.422,0,8-3.582,8-8V56C344,33.945,326.055,16,304,16z M256,40    c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8s8,3.582,8,8C264,36.418,260.418,40,256,40z" data-original="#B9BBC1" class="active-path" data-old_color="#B9BBC1"/>
+	</g>
+</g></g> </svg>
