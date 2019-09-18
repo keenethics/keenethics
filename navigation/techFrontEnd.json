@@ -14,7 +14,9 @@
   {
     "href": "/tech-front-end-angular",
     "name": "Angular",
-    "description": "Google-backed frontend-framework",
+    "metaTitle": "AngularJS Development Services, Angular JS App Development Company",
+    "description": "Using the scalable, reliable, self-sufficient, and multifunctional  framework",
+    "metaDescription": "Web and mobile development services using a scalable, reliable, self-sufficient, and multifunctional framework",
     "icon": "icon-ang"
   },
   {
@@ -28,12 +30,6 @@
     "name": "React Native",
     "description": "Speeding up hybrid mobile-apps by using native mobile UI-elements",
     "icon": "icon-rn"
-  },
-  {
-    "href": "/tech-front-end-angular-2",
-    "name": "Angular 2.0",
-    "description": "Next-generation frontend-framework",
-    "icon": "icon-ang"
   },
   {
     "href": "/tech-front-end-vue",
