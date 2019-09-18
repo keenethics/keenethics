@@ -41,12 +41,23 @@
       {
         "name": "Education Software Development",
         "description": "Revolutionizing the world of personal, academic, and professional development",
-        "metaTitle": "Education Software Development Services – KeenEthics",
+        "metaTitle": "Education Software Development Company, E-learning Software Solutions – KeenEthics",
         "metaDescription": "Revolutionizing the world of personal, academic, and professional development",
         "href": "/services-education-software-development",
         "icon": {
           "name": "esd",
           "alt": "Education Software Development"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Custom Healthcare Software Development",
+        "metaTitle": "Healthcare Software Development, Custom Medical Solutions – KeenEthics",
+        "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
+        "href": "/services-custom-healthcare-software-development",
+        "icon": {
+          "name": "icon-healthcare",
+          "alt": "Custom Healthcare Software Development"
         },
         "type": "icon"
       },

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv-safe');
+require('isomorphic-fetch');
 
 const { NODE_ENV, ENV_PATH } = process.env;
 const envDefaultPath = path.resolve(__dirname, '../.env');
@@ -15,7 +16,6 @@ if (pathToEnvFile) {
 const express = require('express');
 const expressUncapitalize = require('express-uncapitalize');
 const next = require('next');
-const fetch = require('node-fetch');
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -33,7 +33,7 @@ const app = next({ dev });
 
 const handle = app.getRequestHandler();
 
-const checkStatus = response => (response.ok ? response.json() : Promise.reject(response.json()));
+const checkStatus = (response) => (response.ok ? response.json() : Promise.reject(response.json()));
 
 const sendContactToHubSpot = (hubSpotParameters) => {
   const parameters = querystring.stringify(hubSpotParameters);
@@ -49,7 +49,7 @@ const sendContactToHubSpot = (hubSpotParameters) => {
 
   fetch(hubUrl, options)
     .then(checkStatus)
-    .catch(error => console.log('Hubspot request error: ', error));
+    .catch((error) => console.log('Hubspot request error: ', error));
 };
 
 app.prepare().then(() => {
@@ -360,7 +360,7 @@ app.prepare().then(() => {
           categories,
         };
       })
-      .filter(v => v !== null);
+      .filter((v) => v !== null);
     res.send(result);
   });
   server.get('/api/posts/:name', (req, res) => {
@@ -372,7 +372,7 @@ app.prepare().then(() => {
             .sort((a, b) => b.createdAt - a.createdAt);
 
 
-          const postIndex = sortedPosts.map(({ filename }) => filename).indexOf(filename);
+          const postIndex = sortedPosts.map(({ fln }) => fln).indexOf(filename);
           const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].filename.replace('.md', '')}`;
           const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].filename.replace('.md', '')}`;
           const text = fs.readFileSync(path.resolve(__dirname, `../posts/${req.params.name}.md`), 'utf8');
@@ -467,9 +467,9 @@ app.prepare().then(() => {
         html: subscriberEmailContent,
       };
 
-      transporter.sendMail(subscriberEmailOptions, (error) => {
-        if (error) {
-          throw error;
+      transporter.sendMail(subscriberEmailOptions, (err) => {
+        if (err) {
+          throw err;
         }
 
         res.send({
@@ -478,6 +478,8 @@ app.prepare().then(() => {
         });
       });
     });
+
+    return res.sendStatus(200);
   });
 
   server.get('/post-preview/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name, preview: true }));

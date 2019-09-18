@@ -4,7 +4,6 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
-import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
 
 const baseColor = '#289e94';
 

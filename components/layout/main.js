@@ -1,5 +1,3 @@
-/* global window */
-
 import { withRouter } from 'next/router';
 
 import React from 'react';

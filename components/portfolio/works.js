@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Works = ({ works }) => (
   <div className="portfolio-works">
     <ul className="portfolio__list">
-      {works.map(work => (
+      {works.map((work) => (
         <li className="portfolio__item" key={work.title}>
           <Link href={work.href}>
             <a className="portfolio__item-link">
@@ -19,12 +19,12 @@ const Works = ({ works }) => (
                   <ul className="portfolio__item-categories">
                     {
                       work.category.main && work.category.main !== 'Other'
-                        ? work.category.main.map(category => (<li className="portfolio__item-category" key={category}>{category}</li>))
+                        ? work.category.main.map((category) => (<li className="portfolio__item-category" key={category}>{category}</li>))
                         : null
                     }
                     {
                       work.category.additional
-                        ? work.category.additional.map(category => (<li className="portfolio__item-category" key={category}>{category}</li>))
+                        ? work.category.additional.map((category) => (<li className="portfolio__item-category" key={category}>{category}</li>))
                         : null
                     }
                   </ul>

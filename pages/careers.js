@@ -1,6 +1,4 @@
-/* global BACKEND_URL, fetch */
-
-import 'whatwg-fetch';
+/* global BACKEND_URL */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -13,16 +11,6 @@ import Layout from '../components/layout/main';
 
 
 export default class Careers extends React.Component {
-  static propTypes = {
-    url: PropTypes.object,
-    careers: PropTypes.array,
-  };
-
-  static defaultProps = {
-    url: {},
-    careers: [],
-  };
-
   constructor(props) {
     super(props);
 
@@ -106,7 +94,7 @@ export default class Careers extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(state),
-    }).then(response => response.json()).then((json) => {
+    }).then((response) => response.json()).then((json) => {
       const responseState = {
         isPending: false,
         status: json.status.toString(),
@@ -282,11 +270,15 @@ export default class Careers extends React.Component {
           <div className="careers-page-content">
             <div className={sliderIsActive && this.slider ? 'careers-page-slider' : 'careers-page-slider loading'}>
               <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
-                {careers.map(item => (
+                {careers.map((item) => (
                   <div className="careers-page-slider-ship" key={item.position}>
                     {/* { item.image && (
                       <div className="careers-page-slider-ship-img">
-                        <img src={`/static/images/ships/${item.image}.svg`} className={item.image} alt={item.position} />
+                        <img
+                          src={`/static/images/ships/${item.image}.svg`}
+                          className={item.image}
+                          alt={item.position}
+                        />
                       </div>
                     )} */}
                     <span>{item.position}</span>
@@ -303,3 +295,13 @@ export default class Careers extends React.Component {
     );
   }
 }
+
+Careers.propTypes = {
+  url: PropTypes.object,
+  careers: PropTypes.array,
+};
+
+Careers.defaultProps = {
+  url: {},
+  careers: [],
+};

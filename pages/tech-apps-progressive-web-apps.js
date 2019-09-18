@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import { techApps } from '../main.config';
 
-import './services-mobile-development.scss';
-
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
