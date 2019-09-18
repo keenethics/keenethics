@@ -49,11 +49,6 @@ const ProjectPrix = () => (
               <p>
                 Also, this hospital patient management software works with patients throughout all stages of their journey, meaning that it helps to attract, convert, and retain clients.
               </p>
-              <img
-                style={{ width: '100%' }}
-                src="/static/portfolio/hospital-marketing-administration-system/hospital-marketing-administration-system.jpeg"
-                alt="Hospital Marketing Administration System"
-              />
             </section>
             <section>
               <h2>Our Cooperation</h2>

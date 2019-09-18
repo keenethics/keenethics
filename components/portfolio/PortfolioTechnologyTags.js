@@ -11,7 +11,6 @@ const links = {
   nodejs: '/services-web-development-node',
   cordova: '/tech-apps-cordova',
   angular: '/tech-front-end-angular',
-  angular2: '/tech-front-end-angular-2',
   android: '/services-mobile-development-android',
 };
 
