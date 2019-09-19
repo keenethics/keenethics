@@ -34,6 +34,7 @@
 .blog-page {
   position: relative;
   min-height: 100%;
+  padding: 96px 0;
 
   &-background {
     position: absolute;
@@ -794,4 +795,16 @@ button.btn {
 
 i {
   font-style: italic;
+}
+
+.here {
+  border: 1px dashed red !important;
+
+  &1 {
+    border: 1px dashed blue !important;
+  }
+}
+
+.text-center {
+  text-align: center !important;
 }

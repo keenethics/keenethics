@@ -87,6 +87,8 @@
     "node": "<=9"
   },
   "sass": {
-    "includePaths": ["./node_modules"]
+    "includePaths": [
+      "./node_modules"
+    ]
   }
 }
