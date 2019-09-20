@@ -1,106 +1,179 @@
 .filter {
-   margin-bottom: 30px;
-   display: flex;
-   align-items: center;
-   margin: 0 auto 10px auto;
-   padding: 15px;
-   @media (max-width: 1200px ) {
-      flex-direction: column;
-   }
-   &--blog {
-      max-width: 980px;
-   }
-   &--portfolio {
-      max-width: 900px;
-   }
-}
-.filter__show-all {
-   flex-grow: 1;
-   margin-right: 30px;
-   @media (max-width: 1200px ) {
-      margin-right: 0;
-      margin-bottom: 20px;
-   }
-}
-.filter__list {
-   margin: 0 -10px;
-   display: flex;
-   justify-content: center;
-   list-style: none;
-   flex-wrap: wrap;
-   @media (max-width: 1200px ) {
-      max-width: 900px;
-   }
-}
-.filter__item {
-   padding: 10px;
-}
-.filter__btn {
-   padding: 12px 32.5px;
-   border: none;
-   background: rgba($color: #FAFCFC, $alpha: .2);
-   border-radius: 20px;
-   color: #fff;
-   font-size: 14px;
-   cursor: pointer;
-   overflow: hidden;
-   position: relative;
-   @media (max-width: 1200px ) {
-      min-width: 220px;
-      padding: 10px 30px;
-   }
-   &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 15px;
-      height: 8px;
-      width: 16px;
-      border: 2px solid #fff;
-      border-top: none;
-      border-right: none;
-      transform: translateY(-50%) rotate(315deg);
-      transform-origin: 25%;
-      opacity: 0;
-   }
-   &:focus {
+  display: flex;
+  //   align-items: center;
+  margin: 0 auto 10px auto;
+  flex-wrap: wrap;
+
+  &__expander {
+    display: none;
+    width: 100%;
+    padding: 10px 60px 10px 22px;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.75' stroke='%2312233D' stroke-width='.5'/%3E%3Cpath d='M8.02 10.15c.06 0 .12-.02.17-.06l3.71-2.71a.24.24 0 0 0 .07-.07.19.19 0 0 0 .02-.18.22.22 0 0 0-.06-.07.28.28 0 0 0-.09-.06.33.33 0 0 0-.31.04L8 9.62 4.47 7.04a.3.3 0 0 0-.1-.04.34.34 0 0 0-.21 0 .28.28 0 0 0-.09.06.22.22 0 0 0-.06.07.19.19 0 0 0 .02.18l.07.07 3.71 2.71a.3.3 0 0 0 .1.05H8z' fill='%2312233D'/%3E%3C/svg%3E")
+      calc(100% - 22px) center no-repeat;
+    border: 1px solid rgba(18, 35, 61, 0.1);
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    color: #12233d;
+    margin-bottom: 14px;
+    cursor: pointer;
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    &.expanded {
+      background: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='7.75' stroke='%2312233D' stroke-width='.5'/%3E%3Cpath d='M7.98 6.98a.32.32 0 0 0-.17.06L4.1 9.74a.24.24 0 0 0-.07.08.19.19 0 0 0-.02.18l.06.07.09.06a.33.33 0 0 0 .31-.04L8 7.5l3.53 2.58a.3.3 0 0 0 .1.04.34.34 0 0 0 .21 0 .28.28 0 0 0 .09-.06.22.22 0 0 0 .05-.07.19.19 0 0 0-.01-.18.24.24 0 0 0-.07-.07L8.19 7.04a.3.3 0 0 0-.1-.05.34.34 0 0 0-.1 0z' fill='%2312233D'/%3E%3C/svg%3E")
+        calc(100% - 22px) center no-repeat;
+    }
+  }
+
+  .filter__btn {
+    padding: 8px 15px;
+    border: none;
+    background: #f2f3f5;
+    border-radius: 100px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #12233d;
+    text-align: center;
+    margin-bottom: 16px;
+    min-width: 122px;
+
+    @media (max-width: 769px) {
+      min-width: 152px;
+    }
+
+    &:focus {
       outline: none;
-   }
-   &.-red {
-      padding-left: 20px;
-      padding-right: 45px;
-      background: linear-gradient(to right, #e1602c 0%, #dc3a3a 100%);
-      &:after {
-         opacity: 1;
-      }
-   }
-   &.-disabled {
+    }
+
+    &.-red {
+      background: linear-gradient(270deg, #e3621d 0%, #de3535 100%);
+      font-weight: 600;
+      color: #ffffff;
+    }
+    &.-disabled {
       position: relative;
-      animation: disabledBtb .05s linear;
+      animation: disabledBtb 0.05s linear;
       animation-iteration-count: 3;
-   }
-   &.-show-all {
-      min-width: auto;
-      white-space: nowrap;
-      color: rgba($color: #fff, $alpha: .5);
-      border: .5px solid rgba($color: #fff, $alpha: .3);
-      background: transparent;
-      padding: 12px 15px;
-      @media (max-width: 1000px ) {
-         padding: 10px 15px;
+    }
+    &.-show-all {
+      background: #fff;
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #d42e2d;
+      border: solid 2px transparent;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(to top, #de3535, #e3621d);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px #fff inset;
+      padding: 6px 15px;
+      margin-left: auto;
+
+      @media (max-width: 575px) {
+        flex-basis: calc(50% - 8px);
+        margin-left: 0;
+        min-width: unset;
       }
+
       &.-active {
-         color: rgba($color: #fff, $alpha: .8);;
-         border-color: transparent;
-         background: rgba($color: #FAFCFC, $alpha: .2);
       }
-   }
-   @keyframes disabledBtb {
+    }
+    @keyframes disabledBtb {
       from {
-         left: -1px;
+        left: -1px;
       }
       to {
-         right: -1px;
+        right: -1px;
       }
-   }
+    }
+  }
+  .show-all-container {
+    display: flex;
+    align-items: flex-start;
+
+    @media (min-width: 992px) {
+      margin-left: auto;
+    }
+
+    @media (max-width: 575px) {
+      padding-left: 0 !important;
+    }
+
+    @include breakpoint(sm-max) {
+      overflow: hidden;
+      height: 0;
+    }
+
+    &.expanded {
+      overflow: auto;
+      height: auto;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+
+    @media (max-width: 575px) {
+      padding-right: 0 !important;
+    }
+
+    @include breakpoint(sm-max) {
+      overflow: hidden;
+      height: 0;
+    }
+
+    &.expanded {
+      overflow: auto;
+      height: auto;
+    }
+    .filter__item {
+      padding-right: 12px;
+
+      @media (max-width: 575px) {
+        flex-basis: calc(50% - 8px);
+        padding-right: 0;
+
+        button {
+          width: 100%;
+          min-width: unset;
+        }
+      }
+
+      &:nth-child(odd) {
+        @media (max-width: 575px) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+.p {
+  &l-0 {
+    padding-left: 0;
+  }
+  &r-0 {
+    padding-right: 0;
+  }
 }
