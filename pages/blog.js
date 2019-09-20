@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import Layout from "../components/layout/main";
 import Posts from "../components/blog/posts";
-import Background from "../components/content/background";
+// import Background from "../components/content/background";
 import CategoriesFilter from "../components/categories-filter/CategoriesFilter";
 import Pagination from "../components/pagination";
 import { getPostsList, getAllCategories } from "../lib/contentful";
@@ -46,14 +46,16 @@ const Blog = ({ router, url, allCategories }) => {
     setSelectedPostsCategories(selectedPostsCategories);
   }
 
+  // console.log("blog posts: ", posts)
+
   return (
     <Layout currentURL={router.current}>
       <div className="blog-page">
         {/* <Background className="blog-page-background here1" /> */}
         <div className="blog-page-content">
-          <div className="blog-page-header">
+          {/* <div className="blog-page-header">
             <h1 className="blog-page-title">Blog</h1>
-          </div>
+          </div> */}
           <CategoriesFilter
             categorisList={allCategories}
             selectedCategories={selectedPostsCategories}
