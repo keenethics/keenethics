@@ -46,16 +46,18 @@ const Blog = ({ router, url, allCategories }) => {
     setSelectedPostsCategories(selectedPostsCategories);
   }
 
-  // console.log("blog posts: ", posts)
-
   return (
     <Layout currentURL={router.current}>
       <div className="blog-page">
-        {/* <Background className="blog-page-background here1" /> */}
+        <div className="blog-page-header">
+          <h1>
+            <span className="text-color-red">Keen</span>{" "}
+            <span className="text-undelined text-color-blue">Blog</span>
+            <br />
+            on Tech and business
+          </h1>
+        </div>
         <div className="blog-page-content">
-          {/* <div className="blog-page-header">
-            <h1 className="blog-page-title">Blog</h1>
-          </div> */}
           <CategoriesFilter
             categorisList={allCategories}
             selectedCategories={selectedPostsCategories}
