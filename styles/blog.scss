@@ -112,7 +112,7 @@
 
     &-img {
       padding-top: 530px / 944px * 100%;
-      background-size: contain;
+      background-size: cover;
       background-position: center;
       position: relative;
       margin-bottom: 24px;
@@ -197,15 +197,7 @@
         font-size: 18px;
         line-height: 21px;
       }
-      @media (min-width: 992px) {
-        font-size: 18px;
-        line-height: 21px;
-      }
       @media (min-width: 1200px) {
-        font-size: 24px;
-        line-height: 28px;
-      }
-      @media (min-width: 1440px) {
         font-size: 24px;
         line-height: 28px;
       }
@@ -220,7 +212,12 @@
     }
   }
 
+  // first tile
   &-post {
+    &:last-child {
+      margin-right: 0 !important;
+    }
+
     @media (min-width: 992px) {
       &:nth-child(odd) {
         margin-right: 0;
@@ -381,6 +378,66 @@
           }
         }
       }
+    }
+  }
+
+  // last three tiles
+  &-post:nth-last-child(-n + 3) {
+    // background: #f2af3b;
+
+    @media (min-width: 992px) {
+      flex-basis: calc(33.33% - 21.33px);
+      margin-right: 32px;
+
+      .blog-page-post-info {
+        .blog-page-post-info-tag-container .tag {
+          margin-bottom: 16px;
+        }
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: 16px;
+        }
+
+        .blog-page-post-date {
+          margin-top: 0;
+        }
+
+        .blog-page-post-date {
+          order: 1;
+          text-align: left;
+          margin-left: 0;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      .blog-page-post-info {
+        h2 {
+          font-size: 20px;
+          line-height: 23px;
+          margin-bottom: 24px;
+        }
+
+        .blog-page-post-info-tag-container .tag {
+          margin-bottom: 24px;
+        }
+      }
+    }
+    @media (min-width: 1440px) {
+      .blog-page-post-info {
+        h2 {
+          margin-bottom: 0;
+        }
+
+        .blog-page-post-date {
+          order: 0;
+          text-align: right;
+        }
+      }
+    }
+    @media (min-width: 1600px) {
+    }
+    @media (min-width: 1920px) {
     }
   }
 }
