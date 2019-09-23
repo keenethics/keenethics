@@ -8,24 +8,30 @@ const _ = require("lodash");
 
 const Posts = ({ posts }) => (
   <div className="blog-page-posts">
-    {posts.map(post => {
+    {posts.map((post, counter) => {
       const {
-        fields: { slug, title, heroImage, publishDate, tags }
+        fields: { slug, title, heroImage, publishDate, tags, description }
       } = post;
 
       const url = _.get(heroImage, "fields.file.url");
-      const alt =
+      {
+        /* const alt =
         _.get(heroImage, "fields.description") ||
-        _.get(heroImage, "fields.title");
+        _.get(heroImage, "fields.title"); */
+      }
 
       return (
-        <div className="blog-page-post">
-          <figure className="blog-page-post-img">
-            <img
-              src={url ? `https://${url}?fm=jpg&fl=progressive&q=1&w=1888` : ""}
-              alt={alt}
+        <div key={slug} className="blog-page-post">
+          <div className="blog-page-post-wrap-img">
+            <div
+              className="blog-page-post-img"
+              style={{
+                backgroundImage: url
+                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=1888)`
+                  : "red"
+              }}
             />
-          </figure>
+          </div>
           <div className="blog-page-post-info">
             <div className="blog-page-post-info-tag-container">
               {tags.map(tag => (
@@ -38,10 +44,20 @@ const Posts = ({ posts }) => (
               <Moment format="MMMM D, YYYY">{publishDate}</Moment>
             </span>
             <h2>{title}</h2>
+            {counter === 0 && description && (
+              <React.Fragment>
+                <p className="blog-page-post-description">
+                  {description.slice(0, 128).concat("...")}
+                </p>
+                <a
+                  className="blog-page-post-read-more"
+                  href={`/post?name=${slug}`}
+                >
+                  Read More
+                </a>
+              </React.Fragment>
+            )}
           </div>
-          {/* <div className="blog-page-post-header">
-            <div className="title">{title}</div>
-          </div> */}
         </div>
       );
     })}
@@ -56,10 +72,3 @@ Posts.defaultProps = {
 };
 
 export default Posts;
-
-{
-  /* <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}> */
-}
-{
-  /* </Link> */
-}
