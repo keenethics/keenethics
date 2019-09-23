@@ -37,11 +37,6 @@ const ProjectTheCheckNetwork = () => (
               <p>
                 Each website offers a concise overview of all businesses marketing in a certain field and provides a side-by-side comparison of their prices. In this way, businesses are able to show their advantage over competitors and to target exactly the audience that they may appeal to. In turn, customers are offered a priceless opportunity to find a vendor or a service provider that suits them the most. Such an approach enables growing agencies, brands, and e-stores to get the most advantage from their platforms by promoting their products or services to the specific target groups and generating extra sales. This ecommerce platform for SEO is not about economizing or underperforming. Instead, it is all about doing the right thing in the right place and at the right time.
               </p>
-              <img
-                style={{ maxWidth: '700px', width: '100%' }}
-                src="/static/portfolio/the-check-network/the-check-network-top.jpg"
-                alt="The Check Network"
-              />
             </section>
             <section>
               <h2>Our Cooperation</h2>
