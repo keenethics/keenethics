@@ -1,6 +1,5 @@
 .filter {
   display: flex;
-  //   align-items: center;
   margin: 0 auto 10px auto;
   flex-wrap: wrap;
 
@@ -21,6 +20,7 @@
     color: #12233d;
     margin-bottom: 14px;
     cursor: pointer;
+
     @media (max-width: 768px) {
       display: block;
     }
@@ -65,11 +65,13 @@
       font-weight: 600;
       color: #ffffff;
     }
+
     &.-disabled {
       position: relative;
       animation: disabledBtb 0.05s linear;
       animation-iteration-count: 3;
     }
+
     &.-show-all {
       background: #fff;
       font-family: "Raleway";
@@ -99,15 +101,18 @@
       &.-active {
       }
     }
+
     @keyframes disabledBtb {
       from {
         left: -1px;
       }
+
       to {
         right: -1px;
       }
     }
   }
+
   .show-all-container {
     display: flex;
     align-items: flex-start;
@@ -130,6 +135,7 @@
       height: auto;
     }
   }
+
   &__list {
     display: flex;
     list-style: none;
@@ -148,6 +154,7 @@
       overflow: auto;
       height: auto;
     }
+
     .filter__item {
       padding-right: 12px;
 
@@ -169,10 +176,12 @@
     }
   }
 }
+
 .p {
   &l-0 {
     padding-left: 0;
   }
+
   &r-0 {
     padding-right: 0;
   }

@@ -62,20 +62,23 @@ export default class CategoriesFilter extends Component {
   render() {
     const { disabledBtnAnimation, filterPanelExpanded } = this.state;
     const { categorisList, selectedCategories, pageTitle } = this.props;
+
     return (
       <div className={`filter filter--${pageTitle}`}>
         <button
           className={`filter__expander${
-            filterPanelExpanded ? " expanded" : ""
+            filterPanelExpanded ? " expanded" : " text-color-red"
           }`}
           onClick={() => {
             this.setState({ filterPanelExpanded: !filterPanelExpanded });
           }}
         >
-          Set the filters
+          {filterPanelExpanded
+            ? "Set the filters"
+            : `${selectedCategories.length} filters selected`}
         </button>
         <ul
-          className={`filter__list col-sm-8 col-md-6 col-lg-auto pl-0${
+          className={`filter__list col-sm-8 col-md-6 col-lg-auto pl-0 pr-0${
             filterPanelExpanded ? " expanded" : ""
           }`}
         >
