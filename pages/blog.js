@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 
 import Layout from "../components/layout/main";
 import Posts from "../components/blog/posts";
-// import Background from "../components/content/background";
 import CategoriesFilter from "../components/categories-filter/CategoriesFilter";
 import Pagination from "../components/pagination";
 import { getPostsList, getAllCategories } from "../lib/contentful";
