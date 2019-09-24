@@ -213,6 +213,18 @@
   // posts tiles
   &-post {
     flex-basis: calc(50% - 12px);
+    @media (min-width: 575px) {
+      flex-basis: calc(50% - 6px);
+    }
+    @media (min-width: 575px) {
+      flex-basis: calc(50% - 9px);
+    }
+    @media (min-width: 992px) {
+      flex-basis: calc(50% - 12px);
+    }
+    @media (min-width: 1200px) {
+      flex-basis: calc(50% - 16px);
+    }
 
     &:not(:last-child) {
       margin-bottom: 32px;
@@ -243,10 +255,14 @@
     }
 
     &:nth-child(odd) {
-      margin-right: 24px;
-
-      @media (max-width: 768px) {
-        margin-right: 0;
+      @media (min-width: 768px) {
+        margin-right: 16px;
+      }
+      @media (min-width: 992px) {
+        margin-right: 24px;
+      }
+      @media (min-width: 1200px) {
+        margin-right: 32px;
       }
     }
 
@@ -379,7 +395,15 @@
       }
 
       &:nth-child(even) {
-        margin-right: 24px;
+        @media (min-width: 768px) {
+          margin-right: 16px;
+        }
+        @media (min-width: 992px) {
+          margin-right: 24px;
+        }
+        @media (min-width: 1200px) {
+          margin-right: 32px;
+        }
       }
 
       &:first-child() {
