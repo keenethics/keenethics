@@ -28,7 +28,7 @@ const Posts = ({ posts }) => (
                 className="blog-page-post-img"
                 style={{
                   backgroundImage: url
-                    ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=900)`
+                    ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=950)`
                     : "red"
                 }}
               />
