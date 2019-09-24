@@ -23,14 +23,16 @@ const Posts = ({ posts }) => (
       return (
         <div key={slug} className="blog-page-post">
           <div className="blog-page-post-wrap-img">
-            <div
-              className="blog-page-post-img"
-              style={{
-                backgroundImage: url
-                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=1888)`
-                  : "red"
-              }}
-            />
+            <a className="" href={`/post?name=${slug}`}>
+              <div
+                className="blog-page-post-img"
+                style={{
+                  backgroundImage: url
+                    ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=900)`
+                    : "red"
+                }}
+              />
+            </a>
           </div>
           <div className="blog-page-post-info">
             <div className="blog-page-post-info-tag-container">
@@ -43,7 +45,11 @@ const Posts = ({ posts }) => (
             <span className="blog-page-post-date">
               <Moment format="MMMM D, YYYY">{publishDate}</Moment>
             </span>
-            <h2>{title}</h2>
+            <h2>
+              <a className="" href={`/post?name=${slug}`}>
+                {title}
+              </a>
+            </h2>
             {counter === 0 && description && (
               <React.Fragment>
                 <p className="blog-page-post-description">
