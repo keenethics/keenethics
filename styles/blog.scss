@@ -1356,6 +1356,10 @@ i {
     &-blue {
       color: #6677b4 !important;
     }
+
+    &-black {
+      color: #000000 !important;
+    }
   }
 
   &-undelined {
@@ -1377,4 +1381,9 @@ span.tag {
   display: inline-block;
   padding: 3px 17px;
   text-transform: uppercase;
+}
+
+.btn-link {
+  background: transparent;
+  border: 0;
 }

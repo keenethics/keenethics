@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 
-export default () => {
+export default ({ HeaderComponent, SloganComponent }) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -37,14 +37,17 @@ export default () => {
     if (success) setSuccess(false);
   }
 
+  const Header = () => HeaderComponent ? <HeaderComponent /> : <h4>Don&apos;t miss updates from us!</h4>;
+  const Slogan = () => SloganComponent ? <SloganComponent /> : <p>Subscribe to our bimonthly newsletter.</p>;
+
   return (
     <div className="subscribe-panel">
       {success ? (
         <h4 className="green-text-flash">Thank you for subscribing!</h4>
       ) : (
-        <h4>Don&apos;t miss updates from us!</h4>
+        <Header />
       )}
-      {success ? <p>&nbsp;</p> : <p>Subscribe to our bimonthly newsletter.</p>}
+      {success ? <p>&nbsp;</p> : <Slogan />}
       <div className="subscribe-panel-input-group">
         <input
           onChange={handleChange}
