@@ -17,7 +17,7 @@
   font-weight: 400;
 }
 .auxiliary {
-  font-size: 14pt;
+  font-size: 15px;
   line-height: 18pt;
   font-weight: 400;
 }
@@ -119,6 +119,10 @@
 
 // Post page
 .blog-post-page {
+  * {
+    font-family: Raleway;
+  }
+
   &-info {
     display: flex;
     align-items: center;
@@ -126,7 +130,6 @@
 
     .post-tag {
       @extend .tags-text;
-      font-family: "Open Sans";
       padding: 5.5px 20px;
       margin-right: 25px;
       display: inline-block;
@@ -142,13 +145,31 @@
     }
     .date {
       color: #84827f;
-      font-family: "Open Sans";
       font-size: 14px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.56px;
       @include breakpoint(sm-max) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+      }
+
+      time:first-child {
+        margin-right: 22px;
+
+        @include breakpoint(md-max) {
+          margin-left: 0;
+        }
+      }
+
+      br {
+        display: none;
+
+        @include breakpoint(md-max) {
+          display: block;
+        }
       }
     }
     .socials {
@@ -163,12 +184,13 @@
   }
   &-header {
     padding: 0 20px;
+
     @include breakpoint(lg) {
       padding: 0 60px;
     }
 
     @include breakpoint(sm-max) {
-      padding: 0 25px 0 80px;
+      padding: 0 13px;
     }
 
     a {
@@ -176,9 +198,12 @@
       margin: 20px 0 20px;
       text-decoration: none;
       color: #000000;
-      font-family: Raleway;
       font-size: 14px;
       font-weight: 600;
+
+      @include breakpoint(sm-max) {
+        margin-left: 67px;
+      }
     }
 
     &-hr {
@@ -187,15 +212,17 @@
       border-bottom: 1px solid #e1e1e1;
       height: 0;
       margin: 0 0 20px;
+
+      @include breakpoint(sm-max) {
+        margin-left: 67px;
+      }
     }
   }
   &-content {
     p {
       @extend .p-normal;
       color: #12233d;
-      font-family: Raleway;
       margin-bottom: 30px;
-      text-align: justify;
     }
     h2,
     h3 {
@@ -219,7 +246,6 @@
       figcaption {
         @extend .auxiliary;
         color: #4c4d51;
-        font-family: Raleway;
         line-height: 1;
         margin-top: 5px;
         text-align: center;
@@ -239,22 +265,52 @@
       font-style: italic;
       text-align: center !important;
     }
-    ul {
+    ul,
+    ol {
       margin: 0 0 30px 0;
-      list-style: initial;
-      padding-left: 24px;
 
       li {
+        word-break: break-word;
         @extend .p-normal;
         padding: 0;
         margin-bottom: 4px;
+        padding: 0 0 0 24px;
+        line-height: 24px;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+    ol {
+      list-style: decimal;
+      padding-left: 39px;
+
+      li {
+        padding-left: 8px;
 
         &::before {
           content: none;
         }
+      }
+    }
+    ul {
+      padding-left: 24px;
 
-        p {
-          margin: 0;
+      li {
+        position: relative;
+        list-style: none;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 15px;
+          display: block;
+          width: 5px;
+          height: 5px;
+          border: 2px solid #f2af3b;
+          border-radius: 50%;
         }
       }
     }
@@ -265,20 +321,37 @@
     h1#{&}-title {
       @extend .h1-title;
       color: #000000;
-      font-family: Raleway;
       font-weight: 700;
       margin-bottom: 17px;
     }
     h2#{&}-subtitle {
       @extend .h2-subtitle;
       color: #4c4d51;
-      font-family: Raleway;
       font-weight: 400;
       font-style: italic;
       margin-bottom: 41px;
+      font-size: 22px;
     }
     &-description {
       margin-bottom: 25px;
+    }
+    main {
+      & > pre,
+      & > code {
+        margin: 0 0 30px 0 !important;
+      }
+      & > i {
+        font-size: 18px;
+        color: #12233d;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+      & > b {
+        font-size: 18px;
+        color: #12233d;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
     }
   }
 }
@@ -298,7 +371,6 @@ blockquote {
   p {
     line-height: 1.4 !important;
     color: #12233d;
-    font-family: Raleway;
     font-size: 16px;
     font-style: italic;
     line-height: 26px;
@@ -330,7 +402,6 @@ blockquote {
     border-left: 2px solid #343432;
     padding-left: 12px;
     margin-bottom: 12px;
-    text-align: justify;
   }
   div.person {
     margin-bottom: 0;
@@ -342,7 +413,6 @@ blockquote {
       span.name,
       span.title {
         color: #12233d;
-        font-family: Raleway;
         font-size: 14px;
         font-weight: 500;
       }
@@ -354,7 +424,6 @@ div.person {
   display: inline-flex;
   align-items: center;
   margin-bottom: 20px;
-  flex-wrap: wrap;
 
   img {
     display: inline-block;
@@ -375,7 +444,6 @@ div.person {
     }
     span.name {
       color: #4c493e;
-      font-family: "Open Sans";
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.64px;
@@ -383,7 +451,6 @@ div.person {
     }
     span.title {
       color: #84827f;
-      font-family: "Open Sans";
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.56px;
@@ -404,22 +471,16 @@ div.suggestion {
     font-size: 22px;
     font-weight: 700;
     color: #12233d;
-    font-family: Raleway;
-    font-style: italic;
     margin-bottom: 30px;
-    color: #12233d;
   }
 
   p {
     letter-spacing: 0.18px;
-    font-style: italic;
-    text-align: justify;
     font-weight: 400;
-    letter-spacing: 0.16px;
     line-height: 26px;
   }
 
-  .suggestor-wrapper {
+  .suggester-wrapper {
     display: flex;
     align-items: center;
 
@@ -455,7 +516,9 @@ div.person {
   margin-bottom: 0;
 }
 
-.useful-readings {
+.useful-readings,
+.most-suitable-for,
+.helpful-tools {
   display: flex;
   padding: 27px 10px 27px 0;
   margin-bottom: 30px;
@@ -472,6 +535,8 @@ div.person {
     }
 
     img {
+      max-width: 52px;
+
       @include breakpoint(sm-max) {
         width: 37px;
       }
@@ -493,6 +558,9 @@ div.person {
         line-height: 1;
       }
     }
+    ul li::before {
+      top: 11.5px;
+    }
   }
 }
 
@@ -506,7 +574,6 @@ div.person {
     padding: 0;
   }
   hr {
-    // border-top: 1px solid #e1e1e1;
     height: 1px;
     background-color: #e1e1e1;
     border: none;
@@ -524,11 +591,16 @@ div.person {
     display: flex;
     align-items: center;
 
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      text-align: left;
+    }
+
     a {
       display: inline-block;
       margin-left: auto;
       color: #12233d;
-      font-family: Raleway;
       font-size: 14px;
     }
   }
@@ -567,12 +639,20 @@ div.person {
 
   h4 {
     color: #df544d;
-    font-family: Raleway;
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin: 14px 0 16px;
+    margin: 14px 0 7px;
+  }
+  p {
+    color: #84827f;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.56px;
+    text-align: center;
+    margin-bottom: 16px;
   }
   &-input-group {
     display: flex;
@@ -592,7 +672,6 @@ div.person {
       z-index: 0;
 
       color: #84827f;
-      font-family: "Open Sans";
       font-weight: 400;
       line-height: 1;
       padding: 10px 40px 10px 28px;
@@ -614,14 +693,14 @@ div.person {
       }
 
       &.success {
-        animation: success 2s ease-out;
+        animation: success 5s ease-out;
         animation-iteration-count: 1;
       }
     }
     button.btn {
       z-index: 0;
       padding: 16px 45px;
-      //   margin-left: 10px;
+
       @include breakpoint(mobile) {
         margin: 10px 0 0 0;
         flex-grow: 1;
@@ -683,6 +762,10 @@ button.btn {
   }
 }
 
+.green-text-flash {
+  animation: green-text-flash 4s linear;
+}
+
 @keyframes success {
   0% {
     border-color: none;
@@ -696,4 +779,19 @@ button.btn {
     border-color: none;
     box-shadow: none;
   }
+}
+@keyframes green-text-flash {
+  0% {
+    color: #84827f;
+  }
+  30% {
+    color: #39f82d8c;
+  }
+  100% {
+    color: #84827f;
+  }
+}
+
+i {
+  font-style: italic;
 }

@@ -1,6 +1,3 @@
-/* global fetch */
-
-import 'whatwg-fetch';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -8,47 +5,51 @@ import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 
 class EstimateForm extends React.Component {
-  state = {
-    stage: {
-      value: 'New app',
-      error: false,
-    },
-    services: {
-      value: ['Web app'],
-      error: false,
-    },
-    pm: {
-      value: '',
-      error: false,
-    },
-    budget: {
-      value: 'I`m not sure',
-      error: false,
-    },
-    timeframe: {
-      value: 'I`m not sure',
-      error: false,
-    },
-    start: {
-      value: 'ASAP',
-      error: false,
-    },
-    phoneEstimate: {
-      value: '',
-      error: false,
-    },
-    emailEstimate: {
-      value: '',
-      error: false,
-    },
-    messageEstimate: {
-      value: '',
-      error: false,
-    },
-    name: {
-      value: '',
-      error: false,
-    },
+  constructor() {
+    super();
+
+    this.state = {
+      stage: {
+        value: 'New app',
+        error: false,
+      },
+      services: {
+        value: ['Web app'],
+        error: false,
+      },
+      pm: {
+        value: '',
+        error: false,
+      },
+      budget: {
+        value: 'I`m not sure',
+        error: false,
+      },
+      timeframe: {
+        value: 'I`m not sure',
+        error: false,
+      },
+      start: {
+        value: 'ASAP',
+        error: false,
+      },
+      phoneEstimate: {
+        value: '',
+        error: false,
+      },
+      emailEstimate: {
+        value: '',
+        error: false,
+      },
+      messageEstimate: {
+        value: '',
+        error: false,
+      },
+      name: {
+        value: '',
+        error: false,
+      },
+    };
   }
 
   onSubmit = (e) => {
@@ -63,7 +64,7 @@ class EstimateForm extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(this.state),
-    }).then(response => response.json()).then((json) => {
+    }).then((response) => response.json()).then((json) => {
       const state = {
         isPending: false,
         status: json.status.toString(),
@@ -107,9 +108,7 @@ class EstimateForm extends React.Component {
       // pm,
     } = this.state;
 
-    // console.log(pm);
-
-    const { isPending, status } = this.props;
+    const { isPending } = this.props;
     return (
       <div className="estimate-form">
         <form onSubmit={this.onSubmit} className="estimate-form-inputs">
@@ -395,7 +394,6 @@ Start
 }
 EstimateForm.propTypes = {
   isPending: PropTypes.bool.isRequired,
-  status: PropTypes.string.isRequired,
   updateState: PropTypes.func.isRequired,
 };
 

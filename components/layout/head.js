@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Router, { withRouter } from 'next/router';
 
-import 'isomorphic-fetch';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
@@ -39,7 +37,7 @@ const LayoutHead = (props) => {
 
   navigation.forEach((point) => {
     if (!currentPoint && point && point.points) {
-      const subpoint = point.points.map(p => p.href)
+      const subpoint = point.points.map((p) => p.href)
         .indexOf(currentURL.pathname);
 
       if (subpoint > -1) {
@@ -109,9 +107,8 @@ const LayoutHead = (props) => {
         href="/static/images/favicon.ico"
       />
       <link
-        rel="alternate"
-        hrefLang="en-US"
-        href={`https://keenethics.com${currentURL.asPath}`}
+        rel="canonical"
+        href={`https://keenethics.com${currentURL.pathname}`}
       />
     </Head>
   );

@@ -1,24 +1,21 @@
-/* global BACKEND_URL, fetch, document */
-
 import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import 'isomorphic-fetch';
 
 import Layout from '../components/layout/main';
 import Posts from '../components/blog/posts';
 import Background from '../components/content/background';
 import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 import { getPostsList } from '../lib/contentful';
+
 const _ = require('lodash');
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
-    existCategory =>
-      chosenCategory.filter(category => category.toLowerCase() === existCategory.toLowerCase())
-        .length,
+    (existCategory) => chosenCategory.filter(
+      (category) => category.toLowerCase() === existCategory.toLowerCase(),
+    ).length,
   );
 
   return categories.length ? categories : existCategories;
@@ -44,8 +41,8 @@ function getCategoriesList({ posts, url }) {
 class Blog extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      selectedCategories: [],
       categorisList: [],
       selectedPosts: [],
     };
@@ -57,7 +54,10 @@ class Blog extends React.Component {
     document.body.style.overflowY = 'hidden';
 
     const { url, posts } = this.props;
-    posts && posts.length && this.setState({ ...getCategoriesList({ url, posts }) });
+
+    if (posts && posts.length) {
+      this.setState({ ...getCategoriesList({ url, posts }) });
+    }
   }
 
   componentWillUnmount() {
@@ -85,7 +85,7 @@ class Blog extends React.Component {
     }, []);
   };
 
-  filterOnChange = selectedPosts => {
+  filterOnChange = (selectedPosts) => {
     this.setState({ selectedPosts });
   };
 
@@ -120,11 +120,13 @@ class Blog extends React.Component {
 }
 
 Blog.propTypes = {
+  url: PropTypes.object,
   router: PropTypes.object,
   posts: PropTypes.array,
 };
 
 Blog.defaultProps = {
+  url: {},
   router: {},
   posts: [],
 };

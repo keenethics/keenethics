@@ -7,8 +7,6 @@ import PageTabs from '../components/content/tabs';
 
 import { servicesMobileDevelopment, works } from '../main.config';
 
-import './services-mobile-development.scss';
-
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import CalendlyIframe from '../components/content/CalendlyIframe';

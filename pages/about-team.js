@@ -1,24 +1,20 @@
 /* eslint no-param-reassign: ["error", { "props": false }] */
-/* global BACKEND_URL, fetch */
+/* global BACKEND_URL */
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Ship from '../components/pages/about/ship-item';
 
-export default class AboutTeam extends React.Component {
-  static propTypes = {
-    team: PropTypes.array,
-  };
+export default class AboutTeam extends Component {
+  constructor() {
+    super();
 
-  static defaultProps = {
-    team: [],
-  };
-
-  state = {
-    activeId: 'first',
+    this.state = {
+      activeId: 'first',
+    };
   }
 
   static getInitialProps = async () => {
@@ -27,7 +23,7 @@ export default class AboutTeam extends React.Component {
     return { team };
   };
 
-  setActiveId = activeId => this.setState({ activeId })
+  setActiveId = (activeId) => this.setState({ activeId })
 
   getSpaceships = (team = []) => team.map((worker, index) => (
     <Ship
@@ -63,3 +59,11 @@ Team
     );
   }
 }
+
+AboutTeam.propTypes = {
+  team: PropTypes.array,
+};
+
+AboutTeam.defaultProps = {
+  team: [],
+};

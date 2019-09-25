@@ -1,9 +1,39 @@
+/* eslint-disable */
 import React from 'react';
+import Link from 'next/link';
+import { techApps } from '../main.config';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import CallToActionButton from '../components/content/CallToActionButton';
+import FeaturesList from '../components/content/FeaturesList';
 
-import { techApps } from '../main.config';
+const whyShouldYouGoPwa = [
+  {
+    description: 'Engaging and convenient.',
+    additionalText: 'Having to look for an app in the store is too much effort for modern-day users. PWAs enable users to access a native-like mobile version of their favorite website without spending extra time and effort.',
+  },
+  {
+    description: 'Competitive and with future in mind.',
+    additionalText: 'Since users access your app directly via the website, they would not perceive it as a one-time install-click-and-delete app from the store. This is how you overcome competition and establish a firm position in the market.',
+  },
+  {
+    description: 'Fast and simple.',
+    additionalText: 'A progressive web app loads faster than a regular website, which is important for the excellent user experience. Also, it does not have all the bars and buttons that a mobile browser has.',
+  },
+  {
+    description: 'Reliable and compatible.',
+    additionalText: 'By using cached data from earlier online activities, progressive web apps can perfectly work without access to the Internet. They are compatible with all devices and platforms, namely Windows, MacOS, Linux, and Chrome OS.',
+  },
+  {
+    description: 'User-friendly and profitable.',
+    additionalText: 'PWA apps are more personalized than regular mobile apps, which greatly boosts customer engagement and loyalty. As a result, PWAs increase organic traffic and decrease bounce rate.',
+  },
+  {
+    description: 'Resource-efficient.',
+    additionalText: 'PWAs are cheaper and faster to develop as long as there is no need to write separate codes for different platforms. The development takes less time, and the overall cost of the final product is considerably lower.',
+  },
+];
 
 const TechAppsProg = () => (
   <Layout>
@@ -12,67 +42,54 @@ const TechAppsProg = () => (
       points={techApps()}
     />
     <div className="content-block">
-      <h1>Progressive Web App Development Services</h1>
-      <p>
-        Let us start from the beginning. So what are progressive web apps and why are they
-        becoming so popular? Unlike traditional applications, progressive web apps (PWA) are a
-        hybrid of regular websites and mobile applications. This model attempts to combine
-        features offered by most modern browsers with the benefits of mobile experience.
-      </p>
-      <p>
-        According to Google Developers website, a Progressive Web App uses modern web
-        capabilities to deliver an app-like user experience.
-      </p>
-      <p>
-        What is the key benefit of launching progressive web apps? With a help of a Progressive
-        Web App, you can reach more users beyond the App Store for iOS users and the Google Play
-        for Android users. In other words, you receive access to a large market of users and,
-        therefore, an opportunity to grow engagement and increase conversions. But there is more
-        to say. Top progressive web apps features are more than that. Long story short:
-      </p>
-      <ul>
-        <li>
-          Progressive apps work for every user, no matter which browser or mobile platform he
-          prefers;
-        </li>
-        <li>There is no complex installation process;</li>
-        <li>
-          Desktop, mobile, tablet – it does not matter. Progressive web apps are responsive;
-        </li>
-        <li>
-          With a help of a service worker, they load instantly, regardless of the network state;
-        </li>
-        <li>
-          You know that 53% of users will leave a site if it takes longer than 3 seconds to
-          load. And once loaded, users expect them to be fast, no scrolling or slow-to-respond
-          interfaces. Notice, that progressive web app developers know how to make your app
-          fast.
-        </li>
-        <li>
-          Served via HTTPS to prevent snooping and to ensure content has not been tampered with.
-          In other words, progressive web apps are safe.
-        </li>
-      </ul>
-      <p>
-        Ordering Progressive App Development Services is a great idea if you want to cover a big
-        market and do not see the reason to spend your budget on iOS App Development, Android
-        App Development, and Website Development Services. And this is another undeniable plus
-        of developing progressive web apps instead of native ones.
-      </p>
-      <h2>Hire Progressive Web App Developers</h2>
-      <p>
-        If you want to build a progressive web app, hire an experienced software development
-        provider. Often local market players have high rates, so many companies, especially from
-        the USA and European Countries, consider offshore and nearshore vendors. You can find
-        both giant software development providers and middle-sized or small companies, so take a
-        look at the company&apos;s field of expertise.
-      </p>
-      <p>
-        On our KeenEthics spaceship, progressive web app development is one of the main
-        services. You can find some progressive web apps examples in our portfolio to make sure
-        that our astronauts have all required knowledge and a solid experience to build
-        high-class products. Contact us anytime and deliver an amazing experience to your users.
-      </p>
+      <section>
+        <h1 className="text-center">Progressive Web App Development Services</h1>
+        <p className="text-center text-italic">Fast, reliable, and engaging mobile-ready web apps with little effort.</p>
+        <CallToActionButton />
+      </section>
+      <section>
+        <h2>What Is Progressive Web App Development?</h2>
+        <p style={{ maxWidth: '580px', margin: '0 auto' }}>A progressive web app is a website designed to function as a mobile application, which offers the benefits and minimized the drawbacks of both.</p>
+        <img
+          style={{ margin: '0 auto' }}
+          src="/static/services/tech-apps-progressive-web-apps/tech-apps-progressive-web-apps-on-mobile-and-web.jpg"
+          alt="Mobile and web"
+        />
+        <div style={{ display: 'flex', flexWrap: 'wrap', margin: '-10px -10px 30px -10px', justifyContent: 'space-around' }}>
+          <div style={{ textAlign: 'right', maxWidth: '360px', padding: '10px' }}>As a mobile application progressive web apps can be accessed cia a home screen icon. They offer app-like navigation, push notifications, and excellent visual content.</div>
+          <div style={{ maxWidth: '360px', padding: '10px' }}>As a website, progressive web applications are fast and convenient. Thet are compatible across multiple platforms, can be shared through URL and installed with a few simple taps.</div>
+        </div>
+        <p>Progressive web app development comprises optimal software development practices for the purpose of striking the golden mean between a website and a mobile app. It is implemented with the help of service workers – JS files that enable offline information storage and app execution.</p>
+        <img
+          style={{ maxWidth: '500px', margin: '25px auto 35px auto' }}
+          src="/static/services/tech-apps-progressive-web-apps/tech-apps-progressive-web-apps-functionality.jpg"
+          alt="Functionality"
+        />
+        <p>By boosting the performance, accessibility, and customization, progressive web app developers make PWAs to be fast, engaging, and reliable.</p>
+      </section>
+      <section>
+        <h2>Why Should You Go PWA?</h2>
+        <FeaturesList list={whyShouldYouGoPwa} titleItalic />
+      </section>
+      <section>
+        <h2>Why KeenEthics?</h2>
+
+        <h3 className="red-italic-title"><span>1</span>Devoted to future.</h3>
+        <p>The industry of web development is bound to change for the benefit of a user. We strive to make the user experience not just <b>simpler, faster, and more enjoyable</b> but all of these at the same time.</p>
+
+        <h3 className="red-italic-title"><span>2</span>Devoted to professionalism.</h3>
+        <p>Our PWA developers have <b>sound professional experience</b> in progressive web application development. We position <b>perfection, reliability, and efficiency</b> as our key values, and PWA development enables us to implement these values in real life.</p>
+
+        <h3 className="red-italic-title"><span>3</span>Devoted to the needs of your business.</h3>
+        <p>We offer a <b>reasonable pricing policy</b> and the opportunity to choose a paying model you prefer. We perfectly follow <b>data security regulations</b> and the requirements of the NDA you choose to sign.</p>
+
+        <h3 className="red-italic-title"><span>4</span>Devoted to consistency.</h3>
+        <p>We offer you <b>full-cycle cooperation</b>, and we will be glad to take your project from an idea to a perfectly functioning and continuously improved final product. We will also encourage you to <Link href="/blog/1553896800000-how-to-monitor-your-project-distantly">monitor the project</Link> and communicate with our team continuously.</p>
+      </section>
+      <section>
+        <h2 style={{ marginBottom: 0 }}>Now, let’s discuss your business idea!</h2>
+        <CallToActionButton title="CONTACT US" href="/contacts" />
+      </section>
     </div>
   </Layout>
 );

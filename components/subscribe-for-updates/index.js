@@ -7,7 +7,7 @@ export default () => {
   const [success, setSuccess] = useState('');
 
   function handleClick() {
-    const regexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const regexp = new RegExp('/^(([^<>()\\[\\]\\.,;:\\s@\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$/i');
 
     const isError = !value || !regexp.test(value.toLowerCase());
     setError(isError);
@@ -21,9 +21,13 @@ export default () => {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(
       JSON.stringify({
-        email: value,
+        email: { value },
       }),
     );
+
+    setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
   }
 
   function handleChange(event) {
@@ -35,12 +39,18 @@ export default () => {
 
   return (
     <div className="subscribe-panel">
-      <h4>Don't miss updates from us!</h4>
+      {success ? (
+        <h4 className="green-text-flash">Thank you for subscribing!</h4>
+      ) : (
+        <h4>Don&apos;t miss updates from us!</h4>
+      )}
+      {success ? <p>&nbsp;</p> : <p>Subscribe to our bimonthly newsletter.</p>}
       <div className="subscribe-panel-input-group">
         <input
           onChange={handleChange}
           value={value}
           type="email"
+          placeholder="example@gmail.com"
           className={classnames({
             error,
             success,

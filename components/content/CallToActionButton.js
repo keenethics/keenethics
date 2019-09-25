@@ -14,9 +14,7 @@ export default function CallToActionButton({ title, href, buttonBefore }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className={classnames(
-          { 'calendly-goal': isCalendlyLink },
-        )}
+        className={classnames({ 'calendly-goal': isCalendlyLink })}
       >
         <button
           className="call-to-cation-btn"

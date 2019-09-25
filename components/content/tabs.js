@@ -25,7 +25,7 @@ PageTabsElement.defaultProps = {
   name: '',
   icon: '',
 };
-const listOfTabs = points => (
+const listOfTabs = (points) => (
   points.map((element, i) => (
     <div key={i}>
       <PageTabsElement
@@ -113,11 +113,12 @@ export default class PageTabs extends React.Component {
   render() {
     const { points } = this.props;
     const { sliderIsActive } = this.state;
+    const { sliderSetting } = this;
 
     return (
       <div className="content-tabs">
         <div className={sliderIsActive ? 'content-tabs-inner slider-active' : 'content-tabs-inner'}>
-          <Slider {...this.sliderSetting}>{listOfTabs(points)}</Slider>
+          <Slider {...sliderSetting}>{listOfTabs(points)}</Slider>
         </div>
       </div>
     );

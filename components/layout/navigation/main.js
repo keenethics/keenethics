@@ -1,5 +1,3 @@
-/* global window, document */
-
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 
@@ -128,14 +126,14 @@ class Navigation extends React.Component {
     const currentURL = router;
 
     const { navigation } = config;
-    const height = `${100 / navigation.filter(n => !n.type && n.type !== 'hidden').length}%`;
+    const height = `${100 / navigation.filter((n) => !n.type && n.type !== 'hidden').length}%`;
 
     let currentPoint = null;
     let currentSubpoint = null;
 
     navigation.forEach((point, i) => {
       if (!currentPoint && point && point.points) {
-        const subpoint = point.points.map(p => p.href).indexOf(currentURL.pathname);
+        const subpoint = point.points.map((p) => p.href).indexOf(currentURL.pathname);
 
         if (subpoint > -1) {
           currentSubpoint = subpoint;
@@ -154,7 +152,7 @@ class Navigation extends React.Component {
         </div>
         <div className="navigation-inner" style={{ height: dimensions.height }}>
           <div className="navigation-header">
-            <Link href="/" prefetch>
+            <Link href="/">
               <a className="logo">
                 <img src="/static/images/svg/logo.svg" alt="KeenEthics" width="120px" />
               </a>
