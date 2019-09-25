@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import cc from 'classnames';
-import nanoid from 'nanoid';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import cc from "classnames";
+import nanoid from "nanoid";
 
-import Label from './label';
+import Label from "./label";
 
 export default class Checkbox extends PureComponent {
   constructor(props) {
@@ -16,21 +16,22 @@ export default class Checkbox extends PureComponent {
     const {
       className,
       text,
+      secondaryText,
       value,
       name,
       onChange,
       isChecked,
       isDisabled,
-      isLoading,
+      isLoading
     } = this.props;
     const checkboxComputedAttributes = {
-      [onChange ? 'checked' : 'defaultChecked']: isChecked,
+      [onChange ? "checked" : "defaultChecked"]: isChecked
     };
     const checkboxClass = cc({
       checkbox: true,
       [className]: className,
       disabled: isDisabled,
-      loading: isLoading,
+      loading: isLoading
     });
 
     return (
@@ -47,6 +48,12 @@ export default class Checkbox extends PureComponent {
         {text ? (
           <Label htmlFor={this.id}>
             {text}
+            {!!secondaryText && (
+              <>
+                <br />
+                <span className="secondary-text">{secondaryText}</span>
+              </>
+            )}
           </Label>
         ) : null}
       </div>
@@ -63,16 +70,16 @@ Checkbox.propTypes = {
   onChange: PropTypes.func,
   isChecked: PropTypes.bool,
   isDisabled: PropTypes.bool,
-  isLoading: PropTypes.bool,
+  isLoading: PropTypes.bool
 };
 Checkbox.defaultProps = {
   id: null,
   className: null,
-  text: 'Checkbox',
-  value: '',
-  name: '',
+  text: "Checkbox",
+  value: "",
+  name: "",
   onChange: null,
   isChecked: false,
   isDisabled: false,
-  isLoading: false,
+  isLoading: false
 };

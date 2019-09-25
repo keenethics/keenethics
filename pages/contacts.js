@@ -1,21 +1,24 @@
-import { withRouter } from 'next/router';
+import { withRouter } from "next/router";
 
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import Layout from '../components/layout/main';
-import Background from '../components/content/background';
-import EstimateForm from '../components/contacts/estimate-form';
-import ContactForm from '../components/contacts/contact-form';
-// import Notify from '../components/notify/notify';
-import SocialButton from '../components/social-buttons/main';
-import Person from '../components/person';
+import Layout from "../components/layout/main";
+import Background from "../components/content/background";
+import EstimateForm from "../components/contacts/estimate-form";
+import ContactForm from "../components/contacts/contact-form";
+import SocialButton from "../components/social-buttons/main";
+import Person from "../components/person";
 
 const Address = ({ className }) => (
   <address className={className}>
     <ul className="contacts-list">
-      <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
         <a
           href="https://goo.gl/maps/eaAU8qqLZoo"
           rel="noopener noreferrer nofollow"
@@ -23,7 +26,11 @@ const Address = ({ className }) => (
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
-              <img src="/static/images/flag_ukraine.png" alt="Flag" className="ico flag" />
+              <img
+                src="/static/images/flag_ukraine.png"
+                alt="Flag"
+                className="ico flag"
+              />
             </span>
             <span className="country" itemProp="addressRegion">
               Ukraine
@@ -47,7 +54,11 @@ const Address = ({ className }) => (
           </a>
         </div>
       </li>
-      <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
         <a
           href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
           rel="noopener noreferrer nofollow"
@@ -55,7 +66,11 @@ const Address = ({ className }) => (
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
-              <img src="/static/images/flag_netherlands.png" alt="Flag" className="ico flag" />
+              <img
+                src="/static/images/flag_netherlands.png"
+                alt="Flag"
+                className="ico flag"
+              />
             </span>
             <span className="country" itemProp="addressRegion">
               The Netherlands
@@ -64,9 +79,7 @@ const Address = ({ className }) => (
         </a>
         <div className="additional-info-wrapper">
           <a href="https://nl.keenethics.com/">
-            <span className="text-underline">
-            Go to the website
-            </span>
+            <span className="text-underline">Go to the website</span>
           </a>
         </div>
         <div className="address-telephone-wrapper">
@@ -78,16 +91,12 @@ const Address = ({ className }) => (
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
             <span itemProp="streetAddress">
-Oude litherweg 2,
-{' '}
-<br className="display-block-sm" />
-{' '}
-5346 RT
-</span>
+              Oude litherweg 2, <br className="display-block-sm" /> 5346 RT
+            </span>
           </a>
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
-            +1 929 214 1392
+              +1 929 214 1392
             </span>
           </a>
         </div>
@@ -97,7 +106,7 @@ Oude litherweg 2,
 );
 
 const AddressPanel = () => (
-  <React.Fragment>
+  <>
     <h1>
       Get
       <br />
@@ -105,54 +114,50 @@ const AddressPanel = () => (
     </h1>
     <p>Let&apos;s discuss your idea</p>
     <Address />
-  </React.Fragment>
+  </>
 );
 
 const MobileWishlist = ({ wishlist }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
-    <React.Fragment>
-      <div className="mobile-counter display-flex-sm-max">
-        <h1>
-          Your
-          {' '}
-          <br />
-          wishlist
-        </h1>
-        <button type="button" className="counter" onClick={() => setIsCollapsed(!isCollapsed)}>
-          {wishlist.length}
-        </button>
-        <button
-          type="button"
-          className={classnames('expand-icon', { down: isCollapsed })}
-          onClick={() => setIsCollapsed(!isCollapsed)}
-        />
-          <div className={`wish-list ${isCollapsed ? 'collapsed' : ""}`}>
-            {wishlist.map(item => (
-              <span key={item} className="wish-item">
-                {item}
-              </span>
-            ))}
-          </div>
+    <div className="mobile-counter display-flex-sm-max">
+      <h1>
+        Your <br />
+        wishlist
+      </h1>
+      <button
+        type="button"
+        className="counter"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        {wishlist.length}
+      </button>
+      <button
+        type="button"
+        className={classnames("expand-icon", { down: isCollapsed })}
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      />
+      <div className={`wish-list ${isCollapsed ? "collapsed" : ""}`}>
+        {wishlist.map(item => (
+          <span key={item} className="wish-item">
+            {item}
+          </span>
+        ))}
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
 const wishlistPanel = wishlist => (
-  <React.Fragment>
+  <>
     <MobileWishlist wishlist={wishlist} />
     <h1 className="display-block-sm">
-      Your
-      {' '}
-      <br className="display-block-sm" />
+      Your <br className="display-block-sm" />
       wishlist
     </h1>
     <p className="display-block-sm">
-      These are the parameters
-      {' '}
-      <br className="display-block-sm" />
+      These are the parameters <br className="display-block-sm" />
       you have selected.
     </p>
     <hr className="hr-top display-block-sm" />
@@ -163,7 +168,7 @@ const wishlistPanel = wishlist => (
         </span>
       ))}
     </div>
-  </React.Fragment>
+  </>
 );
 
 const ThankYou = () => (
@@ -191,40 +196,35 @@ const Contacts = ({ router }) => {
   const { query } = router;
 
   const [isPending, setIsPending] = useState(false);
-  const [status, setStatus] = useState('');
-  const [activeContactForm, setActiveContactForm] = useState(query.activeForm !== 'estimate');
+  const [status, setStatus] = useState("");
+  const [activeContactForm, setActiveContactForm] = useState(
+    query.activeForm !== "estimate"
+  );
   const [notifyIsVisible, setNotifyIsVisible] = useState(false);
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
 
   function onClick({ target }) {
-    setActiveContactForm(target.name === 'contact-form-btn');
+    setActiveContactForm(target.name === "contact-form-btn");
   }
 
   return (
     <Layout>
-      {/* {notifyIsVisible && (
-        <Notify
-          notifyMessage={notifyMessage}
-          setNotifyIsVisible={setNotifyIsVisible}
-          setNotifyMessage={setNotifyMessage}
-        />
-      )} */}
       <div className="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),
-          name: 'Talk to Max Savonin',
-          position: 'CEO at KeenEthics',
-          imgSrc: 'static/images/max_savonin.png',
-          wrapperClassnames: 'display-inline-flex-sm-max',
+          name: "Talk to Max Savonin",
+          position: "CEO at KeenEthics",
+          imgSrc: "static/images/max_savonin.png",
+          wrapperClassnames: "display-inline-flex-sm-max"
         })}
         <div className="contacts-socket">
-          {notifyMessage === 'Message sent' ? (
+          {notifyMessage === "Message sent" ? (
             <ThankYou />
           ) : (
             <div
               className={`contact-us-form ${
-                activeContactForm ? 'contacts-block' : 'estimate-block'
+                activeContactForm ? "contacts-block" : "estimate-block"
               }`}
               itemScope
               itemType="http://schema.org/Organization"
@@ -233,9 +233,12 @@ const Contacts = ({ router }) => {
                 <button
                   onClick={onClick}
                   name="contact-form-btn"
-                  className={classnames('button contacts-form-btn no-shadow contact-form-btn text-capitalize', {
-                    disabled: !activeContactForm,
-                  })}
+                  className={classnames(
+                    "button contacts-form-btn no-shadow contact-form-btn text-capitalize",
+                    {
+                      disabled: !activeContactForm
+                    }
+                  )}
                   type="button"
                 >
                   Get in touch
@@ -244,10 +247,10 @@ const Contacts = ({ router }) => {
                   onClick={onClick}
                   name="estimate-form-btn"
                   className={classnames(
-                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
+                    "button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize",
                     {
-                      disabled: activeContactForm,
-                    },
+                      disabled: activeContactForm
+                    }
                   )}
                   type="button"
                 >
@@ -255,8 +258,8 @@ const Contacts = ({ router }) => {
                 </button>
               </div>
               <div
-                className={classnames('contact-us-form-info-side', {
-                  'contacts-panel': activeContactForm,
+                className={classnames("contact-us-form-info-side", {
+                  "contacts-panel": activeContactForm
                 })}
               >
                 {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
@@ -270,9 +273,12 @@ const Contacts = ({ router }) => {
                   <button
                     onClick={onClick}
                     name="contact-form-btn"
-                    className={classnames('button contacts-form-btn no-shadow contact-form-btn text-capitalize', {
-                      disabled: !activeContactForm,
-                    })}
+                    className={classnames(
+                      "button contacts-form-btn no-shadow contact-form-btn text-capitalize",
+                      {
+                        disabled: !activeContactForm
+                      }
+                    )}
                     type="button"
                   >
                     Get in touch
@@ -281,10 +287,10 @@ const Contacts = ({ router }) => {
                     onClick={onClick}
                     name="estimate-form-btn"
                     className={classnames(
-                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
+                      "button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize",
                       {
-                        disabled: activeContactForm,
-                      },
+                        disabled: activeContactForm
+                      }
                     )}
                     type="button"
                   >
@@ -300,11 +306,23 @@ const Contacts = ({ router }) => {
                     setNotifyIsVisible,
                     notifyMessage,
                     setNotifyMessage,
-                    setWishlist,
+                    setWishlist
                   }}
                 >
-                  <div className={`form-container ${!activeContactForm ? 'form-container-hidden' : ''}`}><ContactForm /></div>
-                  <div className={`form-container d-flex flex-grow ${activeContactForm ? 'form-container-hidden' : ''}`}><EstimateForm /></div>
+                  <div
+                    className={`form-container ${
+                      !activeContactForm ? "form-container-hidden" : ""
+                    }`}
+                  >
+                    <ContactForm />
+                  </div>
+                  <div
+                    className={`form-container d-flex flex-grow ${
+                      activeContactForm ? "form-container-hidden" : ""
+                    }`}
+                  >
+                    <EstimateForm />
+                  </div>
                 </Provider>
               </div>
             </div>
@@ -312,9 +330,10 @@ const Contacts = ({ router }) => {
           <Address className="display-block-sm-max" />
         </div>
         {activeContactForm && (
-        <div className="social-icons display-block-sm-max">
-          <SocialButton />
-        </div>)}
+          <div className="social-icons display-block-sm-max">
+            <SocialButton />
+          </div>
+        )}
         <Background />
       </div>
     </Layout>
@@ -322,10 +341,10 @@ const Contacts = ({ router }) => {
 };
 
 Contacts.propTypes = {
-  router: PropTypes.object,
+  router: PropTypes.object
 };
 Contacts.defaultProps = {
-  router: {},
+  router: {}
 };
 
 export default withRouter(Contacts);
