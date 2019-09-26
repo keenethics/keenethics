@@ -14,6 +14,9 @@
 @mixin for-tablet {
   @media (max-width: 768px) { @content; }
 }
+@mixin for-tablet-max {
+  @media (max-width: 993px) { @content; }
+}
 @mixin for-desktop {
   @media (max-width: 1368px) { @content; }
 }
