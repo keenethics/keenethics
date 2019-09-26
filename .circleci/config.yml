@@ -7,7 +7,6 @@ jobs:
     branches:
       only:
         - master
-        - fix/ci
     steps:
       - checkout
       - restore_cache:
