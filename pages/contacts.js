@@ -1,15 +1,15 @@
-import { withRouter } from "next/router";
+import { withRouter } from 'next/router';
 
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Layout from "../components/layout/main";
-import Background from "../components/content/background";
-import EstimateForm from "../components/contacts/estimate-form";
-import ContactForm from "../components/contacts/contact-form";
-import SocialButton from "../components/social-buttons/main";
-import Person from "../components/person";
+import Layout from '../components/layout/main';
+import Background from '../components/content/background';
+import EstimateForm from '../components/contacts/estimate-form';
+import ContactForm from '../components/contacts/contact-form';
+import SocialButton from '../components/social-buttons/main';
+import Person from '../components/person';
 
 const Address = ({ className }) => (
   <address className={className}>
@@ -91,7 +91,11 @@ const Address = ({ className }) => (
             <span itemProp="addressLocality">Oss</span>
             ,&nbsp;
             <span itemProp="streetAddress">
-              Oude litherweg 2, <br className="display-block-sm" /> 5346 RT
+              Oude litherweg 2,
+              {' '}
+              <br className="display-block-sm" />
+              {' '}
+5346 RT
             </span>
           </a>
           <a href="tel:+19292141392">
@@ -123,7 +127,9 @@ const MobileWishlist = ({ wishlist }) => {
   return (
     <div className="mobile-counter display-flex-sm-max">
       <h1>
-        Your <br />
+        Your
+        {' '}
+        <br />
         wishlist
       </h1>
       <button
@@ -135,11 +141,11 @@ const MobileWishlist = ({ wishlist }) => {
       </button>
       <button
         type="button"
-        className={classnames("expand-icon", { down: isCollapsed })}
+        className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
       />
-      <div className={`wish-list ${isCollapsed ? "collapsed" : ""}`}>
-        {wishlist.map(item => (
+      <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
+        {wishlist.map((item) => (
           <span key={item} className="wish-item">
             {item}
           </span>
@@ -149,20 +155,24 @@ const MobileWishlist = ({ wishlist }) => {
   );
 };
 
-const wishlistPanel = wishlist => (
+const wishlistPanel = (wishlist) => (
   <>
     <MobileWishlist wishlist={wishlist} />
     <h1 className="display-block-sm">
-      Your <br className="display-block-sm" />
+      Your
+      {' '}
+      <br className="display-block-sm" />
       wishlist
     </h1>
     <p className="display-block-sm">
-      These are the parameters <br className="display-block-sm" />
+      These are the parameters
+      {' '}
+      <br className="display-block-sm" />
       you have selected.
     </p>
     <hr className="hr-top display-block-sm" />
     <div className="wish-list display-block-sm">
-      {wishlist.map(item => (
+      {wishlist.map((item) => (
         <span key={item} className="wish-item">
           {item}
         </span>
@@ -196,16 +206,16 @@ const Contacts = ({ router }) => {
   const { query } = router;
 
   const [isPending, setIsPending] = useState(false);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
   const [activeContactForm, setActiveContactForm] = useState(
-    query.activeForm !== "estimate"
+    query.activeForm !== 'estimate',
   );
   const [notifyIsVisible, setNotifyIsVisible] = useState(false);
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
 
   function onClick({ target }) {
-    setActiveContactForm(target.name === "contact-form-btn");
+    setActiveContactForm(target.name === 'contact-form-btn');
   }
 
   return (
@@ -213,18 +223,18 @@ const Contacts = ({ router }) => {
       <div className="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),
-          name: "Talk to Max Savonin",
-          position: "CEO at KeenEthics",
-          imgSrc: "static/images/max_savonin.png",
-          wrapperClassnames: "display-inline-flex-sm-max"
+          name: 'Talk to Max Savonin',
+          position: 'CEO at KeenEthics',
+          imgSrc: 'static/images/max_savonin.png',
+          wrapperClassnames: 'display-inline-flex-sm-max',
         })}
         <div className="contacts-socket">
-          {notifyMessage === "Message sent" ? (
+          {notifyMessage === 'Message sent' ? (
             <ThankYou />
           ) : (
             <div
               className={`contact-us-form ${
-                activeContactForm ? "contacts-block" : "estimate-block"
+                activeContactForm ? 'contacts-block' : 'estimate-block'
               }`}
               itemScope
               itemType="http://schema.org/Organization"
@@ -234,10 +244,10 @@ const Contacts = ({ router }) => {
                   onClick={onClick}
                   name="contact-form-btn"
                   className={classnames(
-                    "button contacts-form-btn no-shadow contact-form-btn text-capitalize",
+                    'button contacts-form-btn no-shadow contact-form-btn text-capitalize',
                     {
-                      disabled: !activeContactForm
-                    }
+                      disabled: !activeContactForm,
+                    },
                   )}
                   type="button"
                 >
@@ -247,10 +257,10 @@ const Contacts = ({ router }) => {
                   onClick={onClick}
                   name="estimate-form-btn"
                   className={classnames(
-                    "button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize",
+                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
                     {
-                      disabled: activeContactForm
-                    }
+                      disabled: activeContactForm,
+                    },
                   )}
                   type="button"
                 >
@@ -258,8 +268,8 @@ const Contacts = ({ router }) => {
                 </button>
               </div>
               <div
-                className={classnames("contact-us-form-info-side", {
-                  "contacts-panel": activeContactForm
+                className={classnames('contact-us-form-info-side', {
+                  'contacts-panel': activeContactForm,
                 })}
               >
                 {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
@@ -274,10 +284,10 @@ const Contacts = ({ router }) => {
                     onClick={onClick}
                     name="contact-form-btn"
                     className={classnames(
-                      "button contacts-form-btn no-shadow contact-form-btn text-capitalize",
+                      'button contacts-form-btn no-shadow contact-form-btn text-capitalize',
                       {
-                        disabled: !activeContactForm
-                      }
+                        disabled: !activeContactForm,
+                      },
                     )}
                     type="button"
                   >
@@ -287,10 +297,10 @@ const Contacts = ({ router }) => {
                     onClick={onClick}
                     name="estimate-form-btn"
                     className={classnames(
-                      "button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize",
+                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
                       {
-                        disabled: activeContactForm
-                      }
+                        disabled: activeContactForm,
+                      },
                     )}
                     type="button"
                   >
@@ -306,19 +316,19 @@ const Contacts = ({ router }) => {
                     setNotifyIsVisible,
                     notifyMessage,
                     setNotifyMessage,
-                    setWishlist
+                    setWishlist,
                   }}
                 >
                   <div
                     className={`form-container ${
-                      !activeContactForm ? "form-container-hidden" : ""
+                      !activeContactForm ? 'form-container-hidden' : ''
                     }`}
                   >
                     <ContactForm />
                   </div>
                   <div
                     className={`form-container d-flex flex-grow ${
-                      activeContactForm ? "form-container-hidden" : ""
+                      activeContactForm ? 'form-container-hidden' : ''
                     }`}
                   >
                     <EstimateForm />
@@ -341,10 +351,10 @@ const Contacts = ({ router }) => {
 };
 
 Contacts.propTypes = {
-  router: PropTypes.object
+  router: PropTypes.object,
 };
 Contacts.defaultProps = {
-  router: {}
+  router: {},
 };
 
 export default withRouter(Contacts);

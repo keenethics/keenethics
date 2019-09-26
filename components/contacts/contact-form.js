@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 // import PropTypes from 'prop-types';
-import classnames from "classnames";
-import { ContactUsContext } from "../../pages/contacts";
-import Person from "../person";
-import Checkbox from "../form/checkbox";
+import classnames from 'classnames';
+import { ContactUsContext } from '../../pages/contacts';
+import Person from '../person';
+import Checkbox from '../form/checkbox';
 
-const handleStatusResponse = response => {
+const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -21,53 +21,53 @@ const ContactForm = () => {
     setIsPending,
     setStatus,
     setNotifyIsVisible,
-    setNotifyMessage
+    setNotifyMessage,
   } = useContext(ContactUsContext);
 
   const [firstname, setFirstname] = useState({
-    value: "",
-    error: false
+    value: '',
+    error: false,
   });
   const [email, setEmail] = useState({
-    value: "",
-    error: false
+    value: '',
+    error: false,
   });
   const [message, setMessage] = useState({
-    value: "",
-    error: false
+    value: '',
+    error: false,
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
   const [hasDiscount, setHasDiscount] = useState(false);
 
   const setInitialState = () => {
-    setFirstname({ value: "", error: false });
-    setEmail({ value: "", error: false });
-    setMessage({ value: "", error: false });
+    setFirstname({ value: '', error: false });
+    setEmail({ value: '', error: false });
+    setMessage({ value: '', error: false });
   };
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     setIsPending(true);
 
-    fetch("/contact", {
-      method: "POST",
+    fetch('/contact', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         firstname,
         email,
         message,
-        lastname: { value: "mockedLastname", error: "" },
-        phone: { value: "123456789", error: "" },
+        lastname: { value: 'mockedLastname', error: '' },
+        phone: { value: '123456789', error: '' },
         isSubscriber,
-        hasDiscount
-      })
+        hasDiscount,
+      }),
     })
       .then(handleStatusResponse)
-      .then(response => response.json())
-      .then(json => {
+      .then((response) => response.json())
+      .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
         }
@@ -76,21 +76,21 @@ const ContactForm = () => {
         setStatus(json.status.toString());
         setNotifyIsVisible(true);
 
-        if (json.status.toString() === "Message sent") {
+        if (json.status.toString() === 'Message sent') {
           setInitialState();
         }
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   };
 
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
         {Person({
-          name: "Talk to Max Savonin",
-          position: "CEO at KeenEthics",
-          imgSrc: "static/images/max_savonin.png",
-          wrapperClassnames: "display-flex-md"
+          name: 'Talk to Max Savonin',
+          position: 'CEO at KeenEthics',
+          imgSrc: 'static/images/max_savonin.png',
+          wrapperClassnames: 'display-flex-md',
         })}
         <div className="input-cols">
           <div className="input-wrap">
@@ -99,10 +99,10 @@ const ContactForm = () => {
               name="firstname"
               id="firstname"
               type="text"
-              onChange={event => {
+              onChange={(event) => {
                 setFirstname({
                   value: event.target.value,
-                  error: ""
+                  error: '',
                 });
               }}
               required
@@ -120,10 +120,10 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 type="email"
-                onChange={event => {
+                onChange={(event) => {
                   setEmail({
                     value: event.target.value,
-                    error: ""
+                    error: '',
                   });
                 }}
                 required
@@ -138,15 +138,15 @@ const ContactForm = () => {
           <textarea
             required
             className={classnames({
-              "message-textarea": true,
-              error: message.error
+              'message-textarea': true,
+              error: message.error,
             })}
             name="message"
             placeholder="Your message"
-            onChange={event => {
+            onChange={(event) => {
               setMessage({
                 value: event.target.value,
-                error: ""
+                error: '',
               });
             }}
             value={message.value}
@@ -181,7 +181,7 @@ const ContactForm = () => {
           <button
             type="submit"
             className={
-              isPending ? "button button-send pending" : "button button-send"
+              isPending ? 'button button-send pending' : 'button button-send'
             }
           >
             Let's talk

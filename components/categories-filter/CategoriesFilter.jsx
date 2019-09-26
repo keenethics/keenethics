@@ -83,7 +83,7 @@ export default class CategoriesFilter extends Component {
           </button>
         </div>
         <ul className="filter__list">
-          {categorisList.map(category => (
+          {categorisList.map((category) => (
             <CategoryButton
               category={category}
               key={category}

@@ -25,7 +25,7 @@ PageTabsElement.defaultProps = {
   name: '',
   icon: '',
 };
-const listOfTabs = points => (
+const listOfTabs = (points) => (
   points.map((element, i) => (
     <div key={i}>
       <PageTabsElement

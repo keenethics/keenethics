@@ -13,8 +13,8 @@ const _ = require('lodash');
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
-    existCategory => chosenCategory.filter(
-      category => category.toLowerCase() === existCategory.toLowerCase(),
+    (existCategory) => chosenCategory.filter(
+      (category) => category.toLowerCase() === existCategory.toLowerCase(),
     ).length,
   );
 

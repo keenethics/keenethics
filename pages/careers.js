@@ -94,7 +94,7 @@ export default class Careers extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(state),
-    }).then(response => response.json()).then((json) => {
+    }).then((response) => response.json()).then((json) => {
       const responseState = {
         isPending: false,
         status: json.status.toString(),
@@ -270,7 +270,7 @@ export default class Careers extends React.Component {
           <div className="careers-page-content">
             <div className={sliderIsActive && this.slider ? 'careers-page-slider' : 'careers-page-slider loading'}>
               <Slider ref={(s) => { this.slider = s; }} {...this.sliderSettings}>
-                {careers.map(item => (
+                {careers.map((item) => (
                   <div className="careers-page-slider-ship" key={item.position}>
                     {/* { item.image && (
                       <div className="careers-page-slider-ship-img">

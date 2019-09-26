@@ -50,7 +50,7 @@ class ContentNavigation extends React.Component {
     if (router && router.pathname) {
       config.navigation.forEach((navigation, i) => {
         if (navigation.points) {
-          const index = navigation.points.map(point => point.href).indexOf(router.pathname);
+          const index = navigation.points.map((point) => point.href).indexOf(router.pathname);
 
           if (index > -1) {
             const currentNav = config.navigation[i].points;

@@ -33,7 +33,7 @@ const app = next({ dev });
 
 const handle = app.getRequestHandler();
 
-const checkStatus = response => (response.ok ? response.json() : Promise.reject(response.json()));
+const checkStatus = (response) => (response.ok ? response.json() : Promise.reject(response.json()));
 
 const sendContactToHubSpot = (hubSpotParameters) => {
   const parameters = querystring.stringify(hubSpotParameters);
@@ -49,7 +49,7 @@ const sendContactToHubSpot = (hubSpotParameters) => {
 
   fetch(hubUrl, options)
     .then(checkStatus)
-    .catch(error => console.log('Hubspot request error: ', error));
+    .catch((error) => console.log('Hubspot request error: ', error));
 };
 
 app.prepare().then(() => {
@@ -368,7 +368,7 @@ app.prepare().then(() => {
           categories,
         };
       })
-      .filter(v => v !== null);
+      .filter((v) => v !== null);
     res.send(result);
   });
   server.get('/api/posts/:name', (req, res) => {

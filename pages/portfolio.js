@@ -11,12 +11,12 @@ import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 
 import { works } from '../main.config';
 
-const flatten = deepArray => deepArray.reduce((a, b) => a.concat(b), []);
+const flatten = (deepArray) => deepArray.reduce((a, b) => a.concat(b), []);
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
-    existCategory => chosenCategory.filter(
-      category => category.toLowerCase() === existCategory.toLowerCase(),
+    (existCategory) => chosenCategory.filter(
+      (category) => category.toLowerCase() === existCategory.toLowerCase(),
     ).length,
   );
 
@@ -44,7 +44,7 @@ class Portfolio extends React.Component {
   getCategoriesList(url) {
     const chosenCategory = url.query.chosen;
     const categories = works
-      .map(work => work.category.main)
+      .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
     const uniqCategories = [...new Set(categories)];
 
@@ -56,7 +56,7 @@ class Portfolio extends React.Component {
 
   worksCountFor(work) {
     const { selectedWorks } = this.state;
-    return work.category.main.filter(category => selectedWorks.includes(category)).length;
+    return work.category.main.filter((category) => selectedWorks.includes(category)).length;
   }
 
   filterOnChange(selectedWorks) {

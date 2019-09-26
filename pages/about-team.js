@@ -23,7 +23,7 @@ export default class AboutTeam extends Component {
     return { team };
   };
 
-  setActiveId = activeId => this.setState({ activeId })
+  setActiveId = (activeId) => this.setState({ activeId })
 
   getSpaceships = (team = []) => team.map((worker, index) => (
     <Ship

@@ -147,13 +147,13 @@ const personComponent = ({
 const bodyOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => {
-      const filteredChildren = children.filter(item => !!item);
+      const filteredChildren = children.filter((item) => !!item);
 
       if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
         return filteredChildren[0];
       }
 
-      return <p>{children.filter(item => !!item)}</p>;
+      return <p>{children.filter((item) => !!item)}</p>;
     },
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
@@ -238,7 +238,7 @@ const bodyOptions = {
     },
   },
   renderMark: {
-    [MARKS.CODE]: text => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
+    [MARKS.CODE]: (text) => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
   },
 };
 
@@ -322,7 +322,7 @@ export default class Post extends React.Component {
             <a href="/blog">&lt; Back to blog</a>
             <hr className="blog-post-page-header-hr" />
             <div className="blog-post-page-info">
-              {tags.map(tag => (
+              {tags.map((tag) => (
                 <span key={tag} className="post-tag">
                   {tag}
                 </span>
@@ -376,7 +376,7 @@ export default class Post extends React.Component {
                 </div>
                 {!!relatedPosts.length && (
                   <div className="blog-page-posts">
-                    {relatedPosts.map(post => postCardComponent(post && post.fields))}
+                    {relatedPosts.map((post) => postCardComponent(post && post.fields))}
                   </div>
                 )}
               </div>
