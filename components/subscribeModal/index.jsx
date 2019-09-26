@@ -23,13 +23,13 @@ const RocketImage = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="142.5" cy="142.5" r="82.42" fill="url(#paint0_linear)" />
-    <circle cx="142.5" cy="142.5" r="141" stroke="#DEE3EE" stroke-width="3" />
+    <circle cx="142.5" cy="142.5" r="141" stroke="#DEE3EE" strokeWidth="3" />
     <circle
       cx="142.5"
       cy="142.5"
       r="112.23"
       stroke="#DEE3EE"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <circle cx="224.15" cy="26.96" r="16.18" fill="#93AAE5" />
     <ellipse cx="239.55" cy="243.78" rx="11.55" ry="10.78" fill="#DEE3EE" />
@@ -97,8 +97,8 @@ const RocketImage = () => (
         y2="142.47"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#93AAE5" />
-        <stop offset="1" stop-color="#507CEB" />
+        <stop stopColor="#93AAE5" />
+        <stop offset="1" stopColor="#507CEB" />
       </linearGradient>
       <linearGradient
         id="paint1_linear"
@@ -108,8 +108,8 @@ const RocketImage = () => (
         y2="244.01"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#93AAE5" />
-        <stop offset="1" stop-color="#507CEB" />
+        <stop stopColor="#93AAE5" />
+        <stop offset="1" stopColor="#507CEB" />
       </linearGradient>
       <linearGradient
         id="paint2_linear"
@@ -119,8 +119,8 @@ const RocketImage = () => (
         y2="175.95"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B9497F" />
-        <stop offset="1" stop-color="#F54F4F" />
+        <stop stopColor="#B9497F" />
+        <stop offset="1" stopColor="#F54F4F" />
       </linearGradient>
       <linearGradient
         id="paint3_linear"
@@ -130,8 +130,8 @@ const RocketImage = () => (
         y2="144.91"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B9497F" />
-        <stop offset="1" stop-color="#F54F4F" />
+        <stop stopColor="#B9497F" />
+        <stop offset="1" stopColor="#F54F4F" />
       </linearGradient>
       <linearGradient
         id="paint4_linear"
@@ -141,8 +141,8 @@ const RocketImage = () => (
         y2="177.76"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B9497F" />
-        <stop offset="1" stop-color="#F54F4F" />
+        <stop stopColor="#B9497F" />
+        <stop offset="1" stopColor="#F54F4F" />
       </linearGradient>
       <linearGradient
         id="paint5_linear"
@@ -152,8 +152,8 @@ const RocketImage = () => (
         y2="164.12"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B9497F" />
-        <stop offset="1" stop-color="#F54F4F" />
+        <stop stopColor="#B9497F" />
+        <stop offset="1" stopColor="#F54F4F" />
       </linearGradient>
       <linearGradient
         id="paint6_linear"
@@ -163,8 +163,8 @@ const RocketImage = () => (
         y2="100.88"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#B9497F" />
-        <stop offset="1" stop-color="#F54F4F" />
+        <stop stopColor="#B9497F" />
+        <stop offset="1" stopColor="#F54F4F" />
       </linearGradient>
     </defs>
   </svg>
