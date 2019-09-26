@@ -29,3 +29,4 @@ jobs:
           name: Install rsync
           command: sudo apt-get update && sudo apt install rsync
       - run: yarn deploy
+
