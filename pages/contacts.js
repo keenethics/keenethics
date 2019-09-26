@@ -10,6 +10,7 @@ import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
 import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
+import { ContactsProvider } from '../components/context/contacts-context';
 
 const Address = ({ className }) => (
   <address className={className}>
@@ -143,7 +144,9 @@ const MobileWishlist = ({ wishlist }) => {
         type="button"
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
-      />
+      >
+        {''}
+      </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
           <span key={item} className="wish-item">
@@ -199,9 +202,6 @@ const ThankYou = () => (
   </div>
 );
 
-let ContactUsContext;
-const { Provider, Consumer } = (ContactUsContext = React.createContext());
-
 const Contacts = ({ router }) => {
   const { query } = router;
 
@@ -210,7 +210,6 @@ const Contacts = ({ router }) => {
   const [activeContactForm, setActiveContactForm] = useState(
     query.activeForm !== 'estimate',
   );
-  const [notifyIsVisible, setNotifyIsVisible] = useState(false);
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
 
@@ -307,13 +306,12 @@ const Contacts = ({ router }) => {
                     Free estimate
                   </button>
                 </div>
-                <Provider
+                <ContactsProvider
                   value={{
                     isPending,
                     setIsPending,
                     status,
                     setStatus,
-                    setNotifyIsVisible,
                     notifyMessage,
                     setNotifyMessage,
                     setWishlist,
@@ -333,7 +331,7 @@ const Contacts = ({ router }) => {
                   >
                     <EstimateForm />
                   </div>
-                </Provider>
+                </ContactsProvider>
               </div>
             </div>
           )}
@@ -357,6 +355,18 @@ Contacts.defaultProps = {
   router: {},
 };
 
-export default withRouter(Contacts);
+Address.propTypes = {
+  className: PropTypes.string,
+};
+Address.defaultProps = {
+  className: '',
+};
 
-export { ContactUsContext };
+MobileWishlist.propTypes = {
+  wishlist: PropTypes.array,
+};
+MobileWishlist.defaultProps = {
+  wishlist: [],
+};
+
+export default withRouter(Contacts);

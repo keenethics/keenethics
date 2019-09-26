@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
-// import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { ContactUsContext } from '../../pages/contacts';
+import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
 
@@ -20,7 +19,6 @@ const ContactForm = () => {
     isPending,
     setIsPending,
     setStatus,
-    setNotifyIsVisible,
     setNotifyMessage,
   } = useContext(ContactUsContext);
 
@@ -74,7 +72,6 @@ const ContactForm = () => {
 
         setIsPending(false);
         setStatus(json.status.toString());
-        setNotifyIsVisible(true);
 
         if (json.status.toString() === 'Message sent') {
           setInitialState();
@@ -184,7 +181,7 @@ const ContactForm = () => {
               isPending ? 'button button-send pending' : 'button button-send'
             }
           >
-            Let's talk
+            Let&apos;s talk
           </button>
         </div>
       </form>

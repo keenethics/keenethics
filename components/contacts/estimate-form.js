@@ -1,8 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
-import { ContactUsContext } from '../../pages/contacts';
+import { ContactUsContext } from '../context/contacts-context';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
@@ -50,7 +49,6 @@ const EstimateForm = () => {
     setIsPending,
     setNotifyMessage,
     setStatus,
-    setNotifyIsVisible,
     setWishlist,
   } = useContext(ContactUsContext);
 
@@ -107,7 +105,6 @@ const EstimateForm = () => {
 
         setIsPending(false);
         setStatus(json.status.toString());
-        setNotifyIsVisible(true);
 
         if (json.status.toString() === 'Message sent') {
           // setInitialState();
