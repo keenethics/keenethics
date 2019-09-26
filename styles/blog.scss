@@ -337,6 +337,10 @@
       font-size: 14px;
       line-height: 24px;
 
+      time {
+        font: inherit;
+      }
+
       @media (min-width: 575px) and (max-width: 767.98px) {
         font-size: 12px;
       }
