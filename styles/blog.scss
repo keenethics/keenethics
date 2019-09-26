@@ -143,6 +143,17 @@
       @media (min-width: 1920px) {
         margin-left: 244px;
       }
+
+      svg {
+        height: 20px;
+        @media (min-width: 575px) {
+          height: 23px;
+        }
+
+        @media (min-width: 1200px) {
+          height: 33px;
+        }
+      }
     }
   }
 
