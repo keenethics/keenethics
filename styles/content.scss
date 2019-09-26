@@ -7,7 +7,7 @@
   -webkit-overflow-scrolling: touch;
   max-width: calc(100% - 160px);
   
-  @include breakpoint(sm-max) {
+  @include for-tablet-max {
     max-width: 100%;
   }
 }

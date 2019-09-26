@@ -12,13 +12,13 @@
     line-height: 22px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 3px;
       top: 5px;
       width: 14px;
       height: 14px;
-      background: url('/static/images/svg/checkbox.svg');
+      background: url("/static/images/svg/checkbox.svg");
       background-size: 14px;
       background-repeat: no-repeat;
       transition: all 0.2s;
@@ -34,7 +34,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       left: 0;
@@ -72,7 +72,7 @@
     }
   }
 
-  [type='checkbox'] {
+  [type="checkbox"] {
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -115,6 +115,103 @@
 
     100% {
       background-color: #eee;
+    }
+  }
+
+  &.grey {
+    line-height: 0;
+    padding: 0 0 0 18px;
+
+    label {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11px;
+      line-height: 15px;
+      color: rgba(45, 67, 82, 0.8);
+
+      .secondary-text {
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(45, 67, 82, 0.8);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 3px;
+        width: 10px;
+        height: 10px;
+        background: url("/static/images/svg/checkbox_grey.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: all 0.2s;
+        z-index: 10;
+        cursor: pointer;
+        display: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        &::before {
+          transition: none;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 12px;
+        height: 12px;
+        z-index: 1;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+        border-radius: 2px;
+      }
+
+      &:hover {
+        &::after {
+          border-color: #c4c4c4;
+        }
+      }
+    }
+
+    [type="checkbox"] {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      visibility: hidden;
+
+      &:checked {
+        + label::before {
+          display: block;
+        }
+        + label::after {
+          background-color: transparent;
+          border-color: #c4c4c4;
+        }
+      }
+
+      &:disabled {
+        + label {
+          color: #eee;
+          cursor: auto;
+        }
+
+        + label::before {
+          opacity: 0.6;
+        }
+
+        + label::after {
+          background-color: #eee;
+        }
+      }
     }
   }
 }
