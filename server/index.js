@@ -174,6 +174,8 @@ app.prepare().then(() => {
       phoneEstimate,
       emailEstimate,
       messageEstimate,
+      isSubscriber,
+      hasDiscount,
     } = req.body;
 
     let servicesEstimate;
@@ -263,6 +265,8 @@ app.prepare().then(() => {
       name: name.value,
       email: emailEstimate.value,
       phone: phoneEstimate.value.toString(),
+      isSubscriber: !!isSubscriber,
+      hasDiscount: !!hasDiscount,
     };
 
     sendContactToHubSpot(hubSpotParameters);
