@@ -1362,14 +1362,6 @@ i {
   font-style: italic;
 }
 
-.here {
-  border: 1px dashed red !important;
-
-  &1 {
-    border: 1px dashed blue !important;
-  }
-}
-
 .text-center {
   text-align: center !important;
 }
@@ -1395,6 +1387,10 @@ i {
 
   &-undelined {
     text-decoration: underline !important;
+  }
+
+  &-decoration-none {
+    text-decoration: none !important;
   }
 }
 
