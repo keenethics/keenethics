@@ -305,10 +305,10 @@
       &-tag-container {
         display: flex;
         flex-wrap: wrap;
-        flex-basis: 50%;
+        flex-basis: 100%;
 
-        @media (min-width: 768px) and (max-width: 1200px) {
-          flex-basis: 100%;
+        @media (min-width: 1200px) {
+          flex-basis: 50%;
         }
 
         .tag {
@@ -349,7 +349,7 @@
         font-size: 12px;
       }
 
-      @media (min-width: 768px) and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         order: 1;
         margin-left: 0;
         margin-top: 16px;
@@ -643,7 +643,7 @@
 // Post page
 .blog-post-page {
   * {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 
   &-info {
