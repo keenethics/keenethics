@@ -100,10 +100,8 @@ _* The price of building your own app will depend on the product type, platform,
     <button class="call-to-cation-btn -secondary" type="button">LEARN HOW TO START</button>
   </a>
   <a
-    href="//calendly.com/iryna-keenethics/intro-call"
+    href="/contacts"
     target="_blank"
-    rel="noopener noreferrer"
-    className="calendly-goal"
   >
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>

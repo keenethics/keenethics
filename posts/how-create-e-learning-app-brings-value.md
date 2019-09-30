@@ -123,10 +123,8 @@ You may create an account on Instagram or Facebook to reach your target audience
     <button class="call-to-cation-btn -secondary" type="button">LEARN MORE</button>
   </a>
   <a
-    href="//calendly.com/iryna-keenethics/intro-call"
+    href="/contacts"
     target="_blank"
-    rel="noopener noreferrer"
-    className="calendly-goal"
   >
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>
