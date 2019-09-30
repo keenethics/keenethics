@@ -211,10 +211,9 @@ const bodyOptions = {
                 linkedIn,
               })}
               <a
-                href={redirectLink || '//calendly.com/iryna-keenethics/intro-call'}
+                href={redirectLink || '/contacts'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="calendly-goal"
               >
                 <button type="button" className="btn btn-schedule">
                   {buttonText || 'Schedule a call'}

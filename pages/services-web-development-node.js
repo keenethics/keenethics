@@ -11,7 +11,6 @@ import './services-web-development-node.scss';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 const ServicesWebDevelopmentNode = () => {
@@ -164,7 +163,6 @@ const ServicesWebDevelopmentNode = () => {
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
           <Works works={nodeJsWorks} />
         </section>
-        <CalendlyIframe />
       </div>
     </Layout>
   );

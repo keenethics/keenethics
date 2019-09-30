@@ -489,22 +489,6 @@ div.suggestion {
     }
   }
 
-  a.calendly-goal {
-    @extend .link-text;
-    display: inline-block;
-    margin-left: auto;
-
-    @include breakpoint(mobile) {
-      margin: 20px auto 0;
-    }
-
-    button.btn.btn-schedule {
-      background-image: none;
-      background-color: #12233d;
-      box-shadow: none;
-    }
-  }
-
   .person {
     img {
       border: 4px solid white;
