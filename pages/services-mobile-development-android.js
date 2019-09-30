@@ -9,7 +9,6 @@ import { servicesMobileDevelopment, works } from '../main.config';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 const whyAndroid = [
@@ -83,7 +82,6 @@ const ServicesWebDevelopmentAndroid = () => (
         <p>Check out some of the Android mobile applications we have developed:</p>
         <Works works={androidWorks} />
       </section>
-      <CalendlyIframe />
     </div>
   </Layout>
 );
