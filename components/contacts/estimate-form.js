@@ -1,400 +1,889 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useContext, useEffect } from 'react';
 import classnames from 'classnames';
-
 import Checkbox from '../form/checkbox';
+import { ContactUsContext } from '../context/contacts-context';
 
-class EstimateForm extends React.Component {
-  constructor() {
-    super();
+const EstimateForm = () => {
+  const [stage, setStage] = useState({
+    value: null,
+    error: false,
+  });
+  const [services, setServices] = useState({
+    value: [],
+    error: false,
+  });
+  const [pm, setPm] = useState({
+    value: null,
+    error: false,
+  });
+  const [budget, setBudget] = useState({
+    value: '',
+    error: false,
+  });
+  const [timeframe, setTimeframe] = useState({
+    value: '',
+    error: false,
+  });
+  const [start, setStart] = useState({
+    value: '',
+    error: false,
+  });
+  const [emailEstimate, setEmailEstimate] = useState({
+    value: '',
+    error: false,
+  });
+  const [messageEstimate, setMessageEstimate] = useState({
+    value: '',
+    error: false,
+  });
+  const [name, setName] = useState({
+    value: '',
+    error: false,
+  });
+  const [isSubscriber, setIsSubscriber] = useState(false);
+  const [hasDiscount, setHasDiscount] = useState(false);
+  const [wizardStage, setWizardStage] = useState(0);
 
-    this.state = {
-      stage: {
-        value: 'New app',
-        error: false,
-      },
-      services: {
-        value: ['Web app'],
-        error: false,
-      },
-      pm: {
-        value: '',
-        error: false,
-      },
-      budget: {
-        value: 'I`m not sure',
-        error: false,
-      },
-      timeframe: {
-        value: 'I`m not sure',
-        error: false,
-      },
-      start: {
-        value: 'ASAP',
-        error: false,
-      },
-      phoneEstimate: {
-        value: '',
-        error: false,
-      },
-      emailEstimate: {
-        value: '',
-        error: false,
-      },
-      messageEstimate: {
-        value: '',
-        error: false,
-      },
-      name: {
-        value: '',
-        error: false,
-      },
-    };
-  }
+  const {
+    isPending,
+    setIsPending,
+    setNotifyMessage,
+    setStatus,
+    setWishlist,
+  } = useContext(ContactUsContext);
 
-  onSubmit = (e) => {
+  useEffect(() => {
+    setWishlist(
+      [
+        stage.value,
+        ...services.value,
+        pm.value,
+        budget.value,
+        timeframe.value,
+        start.value,
+      ].filter((item) => !!item),
+    );
+  }, [
+    stage.value,
+    services.value,
+    pm.value,
+    budget.value,
+    timeframe.value,
+    start.value,
+  ]);
+
+  function onSubmit(e) {
     e.preventDefault();
-    const { updateState } = this.props;
 
-    updateState({ isPending: true });
+    setIsPending(true);
 
     fetch('/estimate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.state),
-    }).then((response) => response.json()).then((json) => {
-      const state = {
-        isPending: false,
-        status: json.status.toString(),
-        notifyIsVisible: true,
-      };
+      body: JSON.stringify({
+        stage,
+        services,
+        pm,
+        budget,
+        timeframe,
+        start,
+        emailEstimate,
+        messageEstimate,
+        name,
+        phoneEstimate: { value: '123456789', error: '' },
+        isSubscriber,
+        hasDiscount,
+      }),
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        if (json && json.errorField) {
+          setNotifyMessage(json.status.toString());
+        }
 
-      if (json && json.errorField) {
-        state.notifyMessage = json.status.toString();
-        Object.assign(state, json.errorField);
-      }
+        setIsPending(false);
+        setStatus(json.status.toString());
 
-      this.setState(json.errorField);
+        if (json.status.toString() === 'Message sent') {
+          // setInitialState();
+        }
+      });
+  }
 
-      updateState(state);
+  function handleServicesChange(event) {
+    if (event.target.checked) {
+      setServices({
+        value: [...services.value, event.target.value],
+        error: false,
+      });
+      return;
+    }
+
+    setServices({
+      value: services.value.filter((item) => item !== event.target.value),
+      error: false,
     });
   }
 
-  onChange = ({ target: { name, value, form: { services } } }) => {
-    const checkedCheckboxesValues = [...services]
-      .filter(({ checked }) => checked)
-      // eslint-disable-next-line no-shadow
-      .map(({ value }) => value);
-
-    if (name === 'services') {
-      this.setState({ services: { value: checkedCheckboxesValues } });
-    } else {
-      this.setState({
-        [name]: {
-          value,
-          error: '',
-        },
-      });
-    }
+  function wizardStageIncreaser() {
+    setWizardStage(wizardStage + 1);
+  }
+  function wizardStageDecreaser() {
+    setWizardStage(wizardStage - 1);
   }
 
-  render = () => {
-    const {
-      emailEstimate,
-      name,
-      services,
-      // pm,
-    } = this.state;
-
-    const { isPending } = this.props;
-    return (
-      <div className="estimate-form">
-        <form onSubmit={this.onSubmit} className="estimate-form-inputs">
-          <div className="contacts-title estimate-title">let us Estimate your project</div>
-          <div className="question-title">
-            <span className="question-number">01</span>
-            {' '}
-Stage
-          </div>
-          <div className="estimate-input-cols">
-            <div className="input-radio-wrap">
-              <input
-                name="stage"
-                type="radio"
-                value="New app"
-                id="new"
-                onChange={this.onChange}
-                checked={this.state.stage.value === 'New app'}
-              />
-              <label htmlFor="new" className="label-for-radio-btn">
-                <p className="radio-lable-title">New app</p>
-                  to be built from scratch
-              </label>
-            </div>
-            <div className="input-radio-wrap">
-              <input
-                name="stage"
-                type="radio"
-                value="Existing app"
-                id="existing"
-                onChange={this.onChange}
-                checked={this.state.stage.value === 'Existing app'}
-              />
-              <label htmlFor="existing" className="label-for-radio-btn">
-                <p className="radio-lable-title">Existing app</p>
-                  continue development
-              </label>
-            </div>
-          </div>
-          <div className="question-title">
-            <span className="question-number">02</span>
-            {' '}
-What services are you interested in?
-          </div>
-          <div className="estimate-input-cols">
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Web app"
-                name="services"
-                id="web"
-                value="Web app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Web app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="IOS app"
-                name="services"
-                id="ios"
-                value="IOS app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('IOS app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Linux app"
-                name="services"
-                id="linux"
-                value="Linux app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Linux app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Server-side development"
-                name="services"
-                id="ssd"
-                value="Server-side development"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Server-side development')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Windows app"
-                name="services"
-                id="windows"
-                value="Windows app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Windows app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="QA testing"
-                name="services"
-                id="qa"
-                value="QA testing"
-                onChange={this.onChange}
-                isChecked={services.value.includes('QA testing')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Android app"
-                name="services"
-                id="android"
-                value="Android app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Android app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="MacOS app"
-                name="services"
-                id="macos"
-                value="MacOS app"
-                onChange={this.onChange}
-                isChecked={services.value.includes('MacOS app')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Design"
-                name="services"
-                id="design"
-                value="Design"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Design')}
-              />
-            </div>
-            <div className="input-checkbox-wrap">
-              <Checkbox
-                text="Other"
-                name="services"
-                id="other"
-                value="Other"
-                onChange={this.onChange}
-                isChecked={services.value.includes('Other')}
-              />
-            </div>
-          </div>
-          <div className="question-title align-flex-start">
-            <span className="question-number qn-check">03</span>
-            <Checkbox
-              text="Do you require PM/Product manager to save your time for tasks description,
-              tasks assignment and tasks assignment prioritizing?"
-              name="services"
-              id="pm"
-              value="PM/Product manager is required"
-              onChange={this.onChange}
-              isChecked={services.value.includes('PM/Product manager is required')}
-            />
-          </div>
-          <div className="question-title">
-            <span className="question-number">04</span>
-            {' '}
-Expected budget
-          </div>
-          <div className="estimate-input-cols">
-            <div className="input-select-wrap">
-              <select name="budget" className="input-select" onChange={this.onChange}>
-                <option value="I`m not sure">I`m not sure</option>
-                <option value="Under $10000">Under $10000</option>
-                <option value="$10000-$30000">$10000-$30000</option>
-                <option value="$30000 and above">$30000 and above</option>
-              </select>
-            </div>
-          </div>
-          <div className="question-title">
-            <span className="question-number">05</span>
-            {' '}
-Timeframe
-          </div>
-          <div className="estimate-input-cols">
-            <div className="input-select-wrap">
-              <select name="timeframe" className="input-select" onChange={this.onChange}>
-                <option value="I`m not sure">I`m not sure</option>
-                <option value="Less than 1 month">Less than 1 month</option>
-                <option value="1 to 3 months">1 to 3 months</option>
-                <option value="3 to 6 months">3 to 6 months</option>
-                <option value="Above 6 months">Above 6 months</option>
-              </select>
-            </div>
-          </div>
-          <div className="question-title">
-            <span className="question-number">06</span>
-            {' '}
-Start
-          </div>
-          <div className="estimate-input-cols">
-            <div className="input-select-wrap">
-              <select name="start" className="input-select" onChange={this.onChange}>
-                <option value="ASAP">ASAP</option>
-                <option value="in a couple of days">in a couple of days</option>
-                <option value="in a week">in a week</option>
-                <option value="in a couple of weeks">in a couple of weeks</option>
-                <option value="in a month or later">in a month or later</option>
-              </select>
-            </div>
-          </div>
-          <div className="input-cols">
-            <div className="input-contacts">
-              <input
-                className={classnames({ error: name.error })}
-                name="name"
-                id="name"
-                type="text"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="name">Name:</label>
-            </div>
-            <div className="input-contacts">
-              <input
-                name="phoneEstimate"
-                id="phoneEstimate"
-                type="tel"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="phoneEstimate">Phone:</label>
-            </div>
-          </div>
-          <div className="input-cols">
-            <div className="input-contacts input-email">
-              <input
-                className={classnames({ error: emailEstimate.error })}
-                name="emailEstimate"
-                type="mail"
-                onChange={this.onChange}
-                required
-              />
-              <span className="highlight" />
-              <span className="bar" />
-              <label htmlFor="emailEstimate">Email:</label>
-            </div>
-          </div>
-          <div className="input-cols">
-            <div className="input-textarea">
-              <div className="input-textarea-title">Message:</div>
-              <textarea
-                name="messageEstimate"
-                placeholder="Write short description of your project or tell us your questions. Feel free to leave this blank and submit now - we will contact you and guide you through the process."
-                onChange={this.onChange}
-              />
-            </div>
-          </div>
-          {/*
-            <div className="form-footer">
-              <img
-                src="/static/images/touch-screen.png"
-                className="touch-screen"
-                alt="touch-screen"
-              />
-              <p className="form-footer-text">
-                Fill out additional information about your project and <span>get up to 50%</span>
-                &nbsp;discount for project specification’s elaboration - <a href="#">follow link</a>
-              </p>
-            </div>
-          */}
-          {/* {status && <div className="form-status">{status}</div>} */}
-          <div className="submit-btn">
-            <button
-              type="submit"
-              className={classnames('button button-send', { pending: isPending })}
-            >
-              <img src="/static/images/svg/send.svg" alt="send" />
-            </button>
-          </div>
-        </form>
+  return (
+    <div className="estimate-form form-container">
+      <div className="progressbar-container">
+        <ul className="progressbar">
+          <li
+            className={classnames({
+              done: wizardStage > 0,
+              active: wizardStage === 0,
+            })}
+          />
+          <li
+            className={classnames({
+              done: wizardStage > 1,
+              active: wizardStage === 1,
+            })}
+          />
+          <li
+            className={classnames({
+              done: wizardStage > 2,
+              active: wizardStage === 2,
+            })}
+          />
+          <li
+            className={classnames({
+              done: wizardStage > 3,
+              active: wizardStage === 3,
+            })}
+          />
+        </ul>
       </div>
-    );
-  }
-}
-EstimateForm.propTypes = {
-  isPending: PropTypes.bool.isRequired,
-  updateState: PropTypes.func.isRequired,
+      <form onSubmit={onSubmit} className="estimate-form-inputs">
+        {wizardStage === 0 && (
+          <div className="wizard-stage">
+            <div className="question-title mb-0">
+              <span className="question-number">1.</span>
+              {' '}
+Stage
+            </div>
+            <div className="estimate-input-cols">
+              <div className="standard-radio-input">
+                <div className="radiogroup">
+                  <span>
+                    <input
+                      name="stage"
+                      type="radio"
+                      value="New project"
+                      id="new"
+                      onChange={(event) => {
+                        setStage({
+                          value: event.target.value,
+                          error: '',
+                        });
+                      }}
+                      checked={stage.value === 'New project'}
+                    />
+                    <label htmlFor="new" className="label-for-radio-btn">
+                      <b className="font-bold d-block">New project</b>
+                      {' '}
+                      <span className="text-dimmed">
+                        to be built from scratch
+                      </span>
+                    </label>
+                  </span>
+                  <span>
+                    <input
+                      name="stage"
+                      type="radio"
+                      value="Ongoing project"
+                      id="existing"
+                      onChange={(event) => {
+                        setStage({
+                          value: event.target.value,
+                          error: '',
+                        });
+                      }}
+                      checked={stage.value === 'Ongoing project'}
+                    />
+                    <label htmlFor="existing" className="label-for-radio-btn">
+                      <b className="font-bold d-block">Ongoing project</b>
+                      <span className="text-dimmed">continue development</span>
+                    </label>
+                  </span>
+                  <span>
+                    <input
+                      name="stage"
+                      type="radio"
+                      value="Legacy project"
+                      id="legacy"
+                      onChange={(event) => {
+                        setStage({
+                          value: event.target.value,
+                          error: '',
+                        });
+                      }}
+                      checked={stage.value === 'Legacy project'}
+                    />
+                    <label htmlFor="legacy" className="label-for-radio-btn">
+                      <b className="font-bold d-block">Legacy project</b>
+                      <span className="text-dimmed">continue development</span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="question-title">
+              <span className="question-number">2.</span>
+              {' '}
+Services needed
+            </div>
+            <div className="estimate-input-cols">
+              <p>Software Development</p>
+              <div className="options-wrapper">
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Web"
+                    name="services"
+                    id="web"
+                    value="Web app"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Web app')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Mobile"
+                    name="services"
+                    id="mobile"
+                    value="Mobile app"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Mobile app')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="PWA"
+                    name="services"
+                    id="pwa"
+                    value="PWA"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('PWA')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="AMP"
+                    name="services"
+                    id="amp"
+                    value="AMP"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('AMP')}
+                  />
+                </div>
+              </div>
+              <p>Other Services</p>
+              <div className="options-wrapper odd-options-number">
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Team enhancement"
+                    name="services"
+                    id="еeam-enhancement"
+                    value="Team enhancement"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Team enhancement')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="UX/UI design"
+                    name="services"
+                    id="ui-ux-design"
+                    value="UX/UI design"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('UX/UI design')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="MVP"
+                    name="services"
+                    id="mvp"
+                    value="MVP"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('MVP')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="PoC"
+                    name="services"
+                    id="poc"
+                    value="PoC"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('PoC')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Tech support"
+                    name="services"
+                    id="tech-support"
+                    value="Tech support"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Tech support')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Tech consultancy"
+                    name="services"
+                    id="tech-consultancy"
+                    value="Tech consultancy"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Tech consultancy')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Chatbots"
+                    name="services"
+                    id="chatbots"
+                    value="Chatbots"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Chatbots')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Programmable voice"
+                    name="services"
+                    id="programmable-voice"
+                    value="Programmable voice"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Programmable voice')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="IoT"
+                    name="services"
+                    id="iot"
+                    value="IoT"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('IoT')}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                type="button"
+                disabled={!stage.value || !services.value.length}
+                className={`button no-shadow button-send${
+                  !stage.value || !services.value.length ? ' pending' : ''
+                }`}
+                onClick={wizardStageIncreaser}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
+        {wizardStage === 1 && (
+          <div className="wizard-stage">
+            <div className="question-title">
+              <span className="question-number">3.</span>
+              {' '}
+Project Management
+            </div>
+            <div className="estimate-input-cols">
+              <p className="text-normal">
+                Do you require either a product manager or a project manager,
+                who will save your time by describing, assigning, and
+                prioritizing tasks?
+              </p>
+              <div className="options-wrapper odd-options-number">
+                <div className="input-radio-wrap">
+                  <input
+                    name="isPMrequired"
+                    type="radio"
+                    value="Yes, please"
+                    id="iNeedPM"
+                    onChange={(event) => {
+                      setPm({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={pm.value === 'Yes, please'}
+                  />
+                  <label htmlFor="iNeedPM" className="label-for-radio-btn">
+                    Yes, please
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="isPMrequired"
+                    type="radio"
+                    value="No, thank you"
+                    id="iDontNeedPM"
+                    onChange={(event) => {
+                      setPm({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={pm.value === 'No, thank you'}
+                  />
+                  <label htmlFor="iDontNeedPM" className="label-for-radio-btn">
+                    No, thank you
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="isPMrequired"
+                    type="radio"
+                    value="I am not sure"
+                    id="notSureAboutPM"
+                    onChange={(event) => {
+                      setPm({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={pm.value === 'I am not sure'}
+                  />
+                  <label
+                    htmlFor="notSureAboutPM"
+                    className="label-for-radio-btn"
+                  >
+                    I am not sure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="question-title">
+              <span className="question-number">4.</span>
+              {' '}
+Expected budget
+            </div>
+            <div className="estimate-input-cols mb-auto">
+              <div className="input-select-wrap">
+                <select
+                  name="budget"
+                  className="input-select"
+                  onChange={(event) => setBudget({
+                    value: event.target.value,
+                    error: '',
+                  })
+                  }
+                  value={budget.value}
+                >
+                  <option value="I am not sure">I am not sure</option>
+                  <option value="Less than $10,000">Less than $10,000</option>
+                  <option value="$10,000 - $45,000">$10,000 - $45,000</option>
+                  <option value="More than $45,000">More than $45,000</option>
+                </select>
+              </div>
+            </div>
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                className="button no-shadow button-send"
+                onClick={wizardStageIncreaser}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
+        {wizardStage === 2 && (
+          <div className="wizard-stage">
+            <div className="question-title">
+              <span className="question-number">5.</span>
+              {' '}
+Timeframe
+            </div>
+            <div className="estimate-input-cols">
+              <div className="options-wrapper odd-options-number">
+                <div className="input-radio-wrap">
+                  <input
+                    name="timeframe"
+                    type="radio"
+                    value="I am not sure"
+                    id="timeframeLessThanAMonth"
+                    onChange={(event) => {
+                      setTimeframe({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={timeframe.value === 'I am not sure'}
+                  />
+                  <label
+                    htmlFor="timeframeLessThanAMonth"
+                    className="label-for-radio-btn"
+                  >
+                    I am not sure
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="timeframe"
+                    type="radio"
+                    value="Less than 1 month"
+                    id="timeframeUpToThreeMonths"
+                    onChange={(event) => {
+                      setTimeframe({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={timeframe.value === 'Less than 1 month'}
+                  />
+                  <label
+                    htmlFor="timeframeUpToThreeMonths"
+                    className="label-for-radio-btn"
+                  >
+                    Less than 1 month
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="timeframe"
+                    type="radio"
+                    value="1 to 3 months"
+                    id="timeframeIsUpToSixMonths"
+                    onChange={(event) => {
+                      setTimeframe({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={timeframe.value === '1 to 3 months'}
+                  />
+                  <label
+                    htmlFor="timeframeIsUpToSixMonths"
+                    className="label-for-radio-btn"
+                  >
+                    1 to 3 months
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="timeframe"
+                    type="radio"
+                    value="3 to 6 months"
+                    id="timeframeIsAboveSixMonths"
+                    onChange={(event) => {
+                      setTimeframe({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={timeframe.value === '3 to 6 months'}
+                  />
+                  <label
+                    htmlFor="timeframeIsAboveSixMonths"
+                    className="label-for-radio-btn"
+                  >
+                    3 to 6 months
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="timeframe"
+                    type="radio"
+                    value="Less than 6 months"
+                    id="timeframeIsAboveSixMonths"
+                    onChange={(event) => {
+                      setTimeframe({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={timeframe.value === 'Less than 6 months'}
+                  />
+                  <label
+                    htmlFor="timeframeIsAboveSixMonths"
+                    className="label-for-radio-btn"
+                  >
+                    Less than 6 months
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="question-title">
+              <span className="question-number">6.</span>
+              {' '}
+Start
+            </div>
+            <div className="estimate-input-cols">
+              <div className="options-wrapper">
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="I am not sure"
+                    id="startNotSure"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'I am not sure'}
+                  />
+                  <label htmlFor="startNotSure" className="label-for-radio-btn">
+                    I am not sure
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="In a couple of days"
+                    id="startInACoupleOfDays"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'In a couple of days'}
+                  />
+                  <label
+                    htmlFor="startInACoupleOfDays"
+                    className="label-for-radio-btn"
+                  >
+                    In a couple of days
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="In a week"
+                    id="startInAWeek"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'In a week'}
+                  />
+                  <label htmlFor="startInAWeek" className="label-for-radio-btn">
+                    In a week
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="In a couple of weeks"
+                    id="startInACoupleOfWeeks"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'In a couple of weeks'}
+                  />
+                  <label
+                    htmlFor="startInACoupleOfWeeks"
+                    className="label-for-radio-btn"
+                  >
+                    In a couple of weeks
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="In a month"
+                    id="startInAMonth"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'In a month'}
+                  />
+                  <label
+                    htmlFor="startInAMonth"
+                    className="label-for-radio-btn"
+                  >
+                    In a month
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="start"
+                    type="radio"
+                    value="More than a month"
+                    id="startInMoreThanMonth"
+                    onChange={(event) => {
+                      setStart({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={start.value === 'More than a month'}
+                  />
+                  <label
+                    htmlFor="startInMoreThanMonth"
+                    className="label-for-radio-btn"
+                  >
+                    More than a month
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                onClick={wizardStageIncreaser}
+                className="button no-shadow button-send"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
+        {wizardStage === 3 && (
+          <div className="wizard-stage">
+            <div className="contacts-form">
+              <div className="input-cols">
+                <div className="input-wrap">
+                  <div className="input-email">
+                    <div className="mt-40" />
+                    <input
+                      className={classnames({ error: name.error })}
+                      name="name"
+                      id="name"
+                      type="text"
+                      onChange={(event) => setName({ value: event.target.value, error: false })
+                      }
+                      value={name.value}
+                      required
+                    />
+                    <label htmlFor="name">Name</label>
+                  </div>
+                </div>
+              </div>
+              <div className="input-cols">
+                <div className="input-wrap">
+                  <div className="input-email">
+                    <input
+                      className={classnames({ error: emailEstimate.error })}
+                      name="emailEstimate"
+                      id="emailEstimate"
+                      type="email"
+                      onChange={(event) => setEmailEstimate({
+                        value: event.target.value,
+                        error: false,
+                      })
+                      }
+                      value={emailEstimate.value}
+                      required
+                    />
+                    <label htmlFor="emailEstimate">Email</label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="input-wrap input-wrap-ta">
+                <textarea
+                  className={classnames({
+                    'message-textarea': true,
+                    error: messageEstimate.error,
+                  })}
+                  name="messageEstimate"
+                  id="messageEstimate"
+                  onChange={(event) => setMessageEstimate({
+                    value: event.target.value,
+                    error: false,
+                  })
+                  }
+                  value={messageEstimate.value}
+                  placeholder="Your message (optional)"
+                />
+              </div>
+            </div>
+            <div className="grey-checkbox-wrapper here">
+              <Checkbox
+                className="grey"
+                text="I am a subscriber."
+                name="estimateFormIsSubscriber"
+                id="estimateFormIsSubscriber"
+                value="estimateFormIsSubscriber"
+                onChange={() => {
+                  setIsSubscriber(!isSubscriber);
+                }}
+                isChecked={isSubscriber}
+              />
+              <Checkbox
+                className="grey"
+                text="I have a discount."
+                secondaryText="(Please, specify in your message)."
+                name="estimateFormHasDiscount"
+                id="estimateFormHasDiscount"
+                value="estimateFormHasDiscount"
+                onChange={() => {
+                  setHasDiscount(!hasDiscount);
+                }}
+                isChecked={hasDiscount}
+              />
+            </div>
+            <div className="wizard-stage-footer mt-auto">
+              <button
+                onClick={wizardStageDecreaser}
+                type="button"
+                className="button no-shadow"
+              >
+                Back
+              </button>
+              <button
+                type="submit"
+                className={classnames('button no-shadow button-send', {
+                  pending:
+                    !name.value
+                    || !messageEstimate.value
+                    || !emailEstimate.value
+                    || isPending,
+                })}
+              >
+                send
+              </button>
+            </div>
+          </div>
+        )}
+      </form>
+    </div>
+  );
 };
 
 export default EstimateForm;

@@ -16,6 +16,7 @@ export default class Checkbox extends PureComponent {
     const {
       className,
       text,
+      secondaryText,
       value,
       name,
       onChange,
@@ -47,6 +48,12 @@ export default class Checkbox extends PureComponent {
         {text ? (
           <Label htmlFor={this.id}>
             {text}
+            {!!secondaryText && (
+              <>
+                <br />
+                <span className="secondary-text">{secondaryText}</span>
+              </>
+            )}
           </Label>
         ) : null}
       </div>
@@ -58,6 +65,7 @@ Checkbox.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   text: PropTypes.string,
+  secondaryText: PropTypes.string,
   value: PropTypes.string,
   name: PropTypes.string,
   onChange: PropTypes.func,
@@ -69,6 +77,7 @@ Checkbox.defaultProps = {
   id: null,
   className: null,
   text: 'Checkbox',
+  secondaryText: '',
   value: '',
   name: '',
   onChange: null,

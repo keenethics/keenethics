@@ -3,6 +3,10 @@
     @media (max-width: 576px) {
       @content;
     }
+  } @else if $class == after-mobile {
+    @media (min-width: 576px) {
+      @content;
+    }
   } @else if $class == xs {
     @media (max-width: 767px) {
       @content;
@@ -25,6 +29,10 @@
     }
   } @else if $class == lg {
     @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $class == lg-max {
+    @media (max-width: 1200px) {
       @content;
     }
   } @else {

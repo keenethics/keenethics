@@ -120,6 +120,7 @@
     border-radius: 40px 12px 40px 12px;
   }
   img {
+    box-sizing: content-box;
     position: relative;
     display: block;
     padding: 20px;

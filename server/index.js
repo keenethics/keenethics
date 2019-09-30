@@ -73,6 +73,8 @@ app.prepare().then(() => {
       email,
       phone,
       message,
+      isSubscriber,
+      hasDiscount,
     } = req.body;
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
@@ -154,6 +156,8 @@ app.prepare().then(() => {
       lastname: lastname.value,
       email: email.value,
       phone: phone.value.toString(),
+      isSubscriber: !!isSubscriber,
+      hasDiscount: !!hasDiscount,
     };
 
     sendContactToHubSpot(hubSpotParameters);
@@ -170,6 +174,8 @@ app.prepare().then(() => {
       phoneEstimate,
       emailEstimate,
       messageEstimate,
+      isSubscriber,
+      hasDiscount,
     } = req.body;
 
     let servicesEstimate;
@@ -259,6 +265,8 @@ app.prepare().then(() => {
       name: name.value,
       email: emailEstimate.value,
       phone: phoneEstimate.value.toString(),
+      isSubscriber: !!isSubscriber,
+      hasDiscount: !!hasDiscount,
     };
 
     sendContactToHubSpot(hubSpotParameters);
