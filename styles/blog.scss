@@ -483,6 +483,7 @@ div.suggestion {
   .suggester-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include breakpoint(mobile) {
       flex-direction: column;
