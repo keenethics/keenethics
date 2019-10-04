@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function CallToActionButton({ title, href, buttonBefore }) {
-
   return (
     <div className="call-to-cation-btn-wrap">
       {
