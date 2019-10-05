@@ -263,4 +263,19 @@
       }
     }
   }
+  .float-right-img {
+    float: right;
+    max-width: 250px;
+    margin: 0 0 10px 7%;
+    @media (max-width: 750px) {
+      margin-left: 20px;
+    }
+    @media (max-width: 550px) {
+      float: none;
+      margin: 30px auto;
+    }
+  }
+}
+.clearfix {
+  @include clearfix;
 }

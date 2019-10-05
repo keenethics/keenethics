@@ -1,7 +1,23 @@
 [
   {
+    "title": "Blood Test Application",
+    "metaTitle": "Case study: Blood Test Application – KeenEthics",
+    "href": "/project-blood-test-application",
+    "imgSrc": "blood-test-application/blood-test-application.jpg",
+    "category": {
+      "main": [
+        "Business apps"
+      ],
+      "additional": [
+        "Healthcare"
+      ]
+    },
+    "description": "A convenient mobile app for patients to record and understand their blood test results",
+    "metaDescription": "A convenient mobile app for patients to record and understand their blood test results"
+  },
+  {
     "title": "Digital Hospital App",
-    "metaTitle": "Case study: Digital Hospital App  KeenEthics",
+    "metaTitle": "Case study: Digital Hospital App - KeenEthics",
     "href": "/project-digital-hospital-app",
     "imgSrc": "digital-hospital-app/digital-hospital-app.jpg",
     "category": {

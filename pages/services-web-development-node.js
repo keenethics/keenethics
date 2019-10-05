@@ -72,7 +72,7 @@ const ServicesWebDevelopmentNode = () => {
     },
   ];
 
-  const whatDoWeOfferIconst = [
+  const whatDoWeOfferIcons = [
     {
       iconTitle: 'node-js-web-and-application-development',
       description: 'Node.js web and application development',
@@ -134,7 +134,7 @@ const ServicesWebDevelopmentNode = () => {
           <p>So, we are glad and proud to offer our services, and as a Node.js development company, we offer:</p>
           <ul className="web-development-node-list">
             {
-              whatDoWeOfferIconst.map(({ iconTitle, description }, key) => (
+              whatDoWeOfferIcons.map(({ iconTitle, description }, key) => (
                 <li key={key} className="web-development-node-item">
                   <figure>
                     <img src={`/static/services/node-js/${iconTitle}.png`} alt={description} />
