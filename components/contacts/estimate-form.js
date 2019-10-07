@@ -17,7 +17,7 @@ const EstimateForm = () => {
     error: false,
   });
   const [budget, setBudget] = useState({
-    value: '',
+    value: 'I am not sure',
     error: false,
   });
   const [timeframe, setTimeframe] = useState({
@@ -213,7 +213,7 @@ Stage
                     />
                     <label htmlFor="existing" className="label-for-radio-btn">
                       <b className="font-bold d-block">Ongoing project</b>
-                      <span className="text-dimmed">continue development</span>
+                      <span className="text-dimmed">to continue development</span>
                     </label>
                   </span>
                   <span>
@@ -232,7 +232,7 @@ Stage
                     />
                     <label htmlFor="legacy" className="label-for-radio-btn">
                       <b className="font-bold d-block">Legacy project</b>
-                      <span className="text-dimmed">continue development</span>
+                      <span className="text-dimmed">to continue development</span>
                     </label>
                   </span>
                 </div>
@@ -291,7 +291,7 @@ Services needed
               <div className="options-wrapper odd-options-number">
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Team enhancement"
+                    text="Team augmentation"
                     name="services"
                     id="еeam-enhancement"
                     value="Team enhancement"
@@ -404,9 +404,8 @@ Project Management
             </div>
             <div className="estimate-input-cols">
               <p className="text-normal">
-                Do you require either a product manager or a project manager,
-                who will save your time by describing, assigning, and
-                prioritizing tasks?
+                Do you require a product manager or a project manager,
+                 who will save your time by describing, assigning, and prioritizing tasks?
               </p>
               <div className="options-wrapper odd-options-number">
                 <div className="input-radio-wrap">
@@ -496,7 +495,7 @@ Expected budget
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase"
               >
                 Back
               </button>
@@ -759,7 +758,7 @@ Start
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase"
               >
                 Back
               </button>
@@ -833,7 +832,7 @@ Start
                 />
               </div>
             </div>
-            <div className="grey-checkbox-wrapper here">
+            <div className="grey-checkbox-wrapper">
               <Checkbox
                 className="grey"
                 text="I am a subscriber."
@@ -862,7 +861,7 @@ Start
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase"
               >
                 Back
               </button>
@@ -871,7 +870,6 @@ Start
                 className={classnames('button no-shadow button-send', {
                   pending:
                     !name.value
-                    || !messageEstimate.value
                     || !emailEstimate.value
                     || isPending,
                 })}

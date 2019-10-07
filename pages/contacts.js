@@ -99,9 +99,9 @@ const Address = ({ className }) => (
 5346 RT
             </span>
           </a>
-          <a href="tel:+19292141392">
+          <a href="tel:+31202620944">
             <span className="telephone" itemProp="telephone">
-              +1 929 214 1392
+              +31 20 262 0944
             </span>
           </a>
         </div>
