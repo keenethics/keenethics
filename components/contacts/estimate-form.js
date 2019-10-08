@@ -403,7 +403,7 @@ Services needed
 Project Management
             </div>
             <div className="estimate-input-cols">
-              <p className="text-normal">
+              <p className="text-normal text-label">
                 Do you require a product manager or a project manager,
                  who will save your time by describing, assigning, and prioritizing tasks?
               </p>

@@ -700,6 +700,9 @@
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 18px;
+        &.text-label {
+          line-height: 1.6em;
+        }
       }
     }
 
