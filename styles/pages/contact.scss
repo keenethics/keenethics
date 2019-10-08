@@ -291,7 +291,8 @@
     .input-checkbox-wrap,
     .input-radio-wrap {
       margin-right: 10px;
-
+      user-select: none;
+      
       @include breakpoint(sm-max) {
         flex-basis: calc(50% - 5px);
       }
