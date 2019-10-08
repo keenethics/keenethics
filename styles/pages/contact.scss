@@ -1608,14 +1608,17 @@
     background: #dbd8dd;
     color: #12233d;
   }
-
+  &.btn-wide {
+    padding: 16px 50px;
+  }
   &.button-send {
     background: linear-gradient(270deg, #e3621d 0%, #de3535 100%);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 15px;
     color: #fff;
-
+    padding: 16px 50px;
+    
     &.pending {
       background-image: linear-gradient(
         270deg,

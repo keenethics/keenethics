@@ -495,13 +495,13 @@ Expected budget
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow text-uppercase"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="button"
-                className="button no-shadow button-send"
+                className="button no-shadow button-send btn-wide"
                 onClick={wizardStageIncreaser}
               >
                 Continue
@@ -758,14 +758,14 @@ Start
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow text-uppercase"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="button"
                 onClick={wizardStageIncreaser}
-                className="button no-shadow button-send"
+                className="button no-shadow button-send btn-wide"
               >
                 Continue
               </button>
@@ -861,13 +861,13 @@ Start
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow text-uppercase"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="submit"
-                className={classnames('button no-shadow button-send', {
+                className={classnames('button no-shadow button-send btn-wide', {
                   pending:
                     !name.value
                     || !emailEstimate.value
