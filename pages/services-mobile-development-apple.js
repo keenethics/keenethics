@@ -8,7 +8,6 @@ import { servicesMobileDevelopment, works } from '../main.config';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 
@@ -83,7 +82,6 @@ const ServicesWebDevelopmentApple = () => (
         <h3>Check out some of the iOS mobile applications we have developed:</h3>
         <Works works={iosWorks} />
       </section>
-      <CalendlyIframe />
     </div>
   </Layout>
 );

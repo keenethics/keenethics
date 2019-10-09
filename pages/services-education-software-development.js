@@ -9,7 +9,6 @@ import { works } from '../main.config';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 const ServicesMobileDevelopment = () => {
@@ -209,7 +208,6 @@ const ServicesMobileDevelopment = () => {
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data</h3>
           <p>We understand how valuable your project idea is, so we comply with all the data security regulations. If you choose to sign an NDA, we will respect and value your willingness to stay private.</p>
         </section>
-        <CalendlyIframe />
       </div>
     </Layout>
   );

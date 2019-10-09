@@ -11,7 +11,6 @@ import './services-web-development-node.scss';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import CalendlyIframe from '../components/content/CalendlyIframe';
 import FeaturesList from '../components/content/FeaturesList';
 
 const ServicesWebDevelopmentNode = () => {
@@ -73,7 +72,7 @@ const ServicesWebDevelopmentNode = () => {
     },
   ];
 
-  const whatDoWeOfferIconst = [
+  const whatDoWeOfferIcons = [
     {
       iconTitle: 'node-js-web-and-application-development',
       description: 'Node.js web and application development',
@@ -135,7 +134,7 @@ const ServicesWebDevelopmentNode = () => {
           <p>So, we are glad and proud to offer our services, and as a Node.js development company, we offer:</p>
           <ul className="web-development-node-list">
             {
-              whatDoWeOfferIconst.map(({ iconTitle, description }, key) => (
+              whatDoWeOfferIcons.map(({ iconTitle, description }, key) => (
                 <li key={key} className="web-development-node-item">
                   <figure>
                     <img src={`/static/services/node-js/${iconTitle}.png`} alt={description} />
@@ -164,7 +163,6 @@ const ServicesWebDevelopmentNode = () => {
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
           <Works works={nodeJsWorks} />
         </section>
-        <CalendlyIframe />
       </div>
     </Layout>
   );

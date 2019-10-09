@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 export default function CallToActionButton({ title, href, buttonBefore }) {
-  const isCalendlyLink = href.includes('calendly.com');
-
   return (
     <div className="call-to-cation-btn-wrap">
       {
@@ -14,7 +11,6 @@ export default function CallToActionButton({ title, href, buttonBefore }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className={classnames({ 'calendly-goal': isCalendlyLink })}
       >
         <button
           className="call-to-cation-btn"
@@ -33,6 +29,6 @@ CallToActionButton.propTypes = {
 };
 CallToActionButton.defaultProps = {
   title: 'Learn more',
-  href: '//calendly.com/iryna-keenethics/intro-call',
+  href: '/contacts',
   buttonBefore: null,
 };

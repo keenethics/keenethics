@@ -1,6 +1,6 @@
 import { withRouter } from 'next/router';
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -8,141 +8,365 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
 import ContactForm from '../components/contacts/contact-form';
-import Notify from '../components/notify/notify';
+import SocialButton from '../components/social-buttons/main';
+import Person from '../components/person';
+import { ContactsProvider } from '../components/context/contacts-context';
 
-class Contacts extends React.Component {
-  constructor(props) {
-    super(props);
-    const { query } = props.router;
-
-    this.state = {
-      isPending: false,
-      status: '',
-      activeContactForm: query.activeForm !== 'estimate',
-      notifyIsVisible: false,
-      notifyMessage: null,
-    };
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick({ target }) {
-    this.setState({
-      activeContactForm: target.name === 'contact-form-btn',
-    });
-  }
-
-  render() {
-    const {
-      activeContactForm,
-      isPending,
-      status,
-      notifyIsVisible,
-      notifyMessage,
-    } = this.state;
-
-    return (
-      <Layout>
-        {notifyIsVisible && (
-          <Notify
-            notifyMessage={notifyMessage}
-            updateState={(state) => this.setState(state)}
-          />
-        )}
-        <div className="contacts-page">
-          <div className="contacts-socket">
-            <div className="title-page">
-              <h1 className="title">Contact Us</h1>
-            </div>
-            <div className={activeContactForm ? 'contacts-block' : 'estimate-block-background'} itemScope itemType="http://schema.org/Organization">
-              <ul className="contacts-stars">
-                <li />
-                <li />
-                <li />
-                <li />
-              </ul>
-              {activeContactForm ? <div className="contacts-mail" /> : <div className="contacts-file" />}
-              <button
-                onClick={this.onClick}
-                name="contact-form-btn"
-                className={classnames(
-                  'contacts-form-btn contact-form-btn',
-                  {
-                    disabled: !activeContactForm,
-                  },
-                )}
-                type="button"
-              >
-                Say Hello
-              </button>
-              <button
-                onClick={this.onClick}
-                name="estimate-form-btn"
-                className={classnames(
-                  'contacts-form-btn estimate-form-btn',
-                  {
-                    disabled: activeContactForm,
-                  },
-                )}
-                type="button"
-              >
-                Estimate your project
-              </button>
-              <address>
-                <ul className="contacts-list">
-                  <li itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                    <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
-                      <img width="15" src="/static/images/svg/con-map.svg" alt="location" className="ico" />
-                      <div itemProp="streetAddress">Kulparkivska St, 59</div>
-                      <span>
-                        <span itemProp="addressLocality" style={{ display: 'inline' }}>Lviv</span>
-                        ,&nbsp;
-                        <span itemProp="addressRegion" style={{ display: 'inline' }}>Ukraine</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="tel:+380968147266">
-                      <img width="15" src="/static/images/svg/con-tel.svg" alt="Call" className="ico" />
-                      <div itemProp="telephone">+38 (096) 814 72 66</div>
-                      <span>Give Us a Call</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:business@keenethics.com">
-                      <img width="15" src="/static/images/svg/con-mail.svg" alt="email" className="ico" />
-                      <div>business@keenethics.com</div>
-                      <span>Drop Us a Letter</span>
-                    </a>
-                  </li>
-                </ul>
-              </address>
-              { this.state.activeContactForm ? (
-                <ContactForm
-                  isPending={isPending}
-                  status={status}
-                  updateState={(state) => this.setState(state)}
-                />
-              ) : (
-                <EstimateForm
-                  isPending={isPending}
-                  status={status}
-                  updateState={(state) => this.setState(state)}
-                />
-              )}
-            </div>
+const Address = ({ className }) => (
+  <address className={className}>
+    <ul className="contacts-list">
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
+        <a
+          href="https://goo.gl/maps/eaAU8qqLZoo"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <div className="flag-country-wrapper">
+            <span className="flag-country-wrapper-flag">
+              <img
+                src="/static/images/flag_ukraine.png"
+                alt="Flag"
+                className="ico flag"
+              />
+            </span>
+            <span className="country" itemProp="addressRegion">
+              Ukraine
+            </span>
           </div>
-          <Background />
+        </a>
+        <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/eaAU8qqLZoo"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">Lviv</span>
+            ,&nbsp;
+            <span itemProp="streetAddress">Kulparkivska St, 59</span>
+          </a>
+          <a href="tel:+380968147266">
+            <span className="telephone" itemProp="telephone">
+              +38 (096) 814 72 66
+            </span>
+          </a>
         </div>
-      </Layout>
-    );
+      </li>
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
+        <a
+          href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <div className="flag-country-wrapper">
+            <span className="flag-country-wrapper-flag">
+              <img
+                src="/static/images/flag_netherlands.png"
+                alt="Flag"
+                className="ico flag"
+              />
+            </span>
+            <span className="country" itemProp="addressRegion">
+              The Netherlands
+            </span>
+          </div>
+        </a>
+        <div className="additional-info-wrapper">
+          <a href="https://nl.keenethics.com/">
+            <span className="text-underline">Go to the website</span>
+          </a>
+        </div>
+        <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">Oss</span>
+            ,&nbsp;
+            <span itemProp="streetAddress">
+              Oude litherweg 2,
+              {' '}
+              <br className="display-block-sm" />
+              {' '}
+5346 RT
+            </span>
+          </a>
+          <a href="tel:+19292141392">
+            <span className="telephone" itemProp="telephone">
+              +1 929 214 1392
+            </span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </address>
+);
+
+const AddressPanel = () => (
+  <>
+    <h1>
+      Get
+      <br />
+      in touch
+    </h1>
+    <p>Let&apos;s discuss your idea</p>
+    <Address />
+  </>
+);
+
+const MobileWishlist = ({ wishlist }) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  return (
+    <div className="mobile-counter display-flex-sm-max">
+      <h1>
+        Your
+        {' '}
+        <br />
+        wishlist
+      </h1>
+      <button
+        type="button"
+        className="counter"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        {wishlist.length}
+      </button>
+      <button
+        type="button"
+        className={classnames('expand-icon', { down: isCollapsed })}
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        {''}
+      </button>
+      <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
+        {wishlist.map((item) => (
+          <span key={item} className="wish-item">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const wishlistPanel = (wishlist) => (
+  <>
+    <MobileWishlist wishlist={wishlist} />
+    <h1 className="display-block-sm">
+      Your
+      {' '}
+      <br className="display-block-sm" />
+      wishlist
+    </h1>
+    <p className="display-block-sm">
+      These are the parameters
+      {' '}
+      <br className="display-block-sm" />
+      you have selected.
+    </p>
+    <hr className="hr-top display-block-sm" />
+    <div className="wish-list display-block-sm">
+      {wishlist.map((item) => (
+        <span key={item} className="wish-item">
+          {item}
+        </span>
+      ))}
+    </div>
+  </>
+);
+
+const ThankYou = () => (
+  <div className="thanks">
+    <h1 className="thanks-header">
+      Thank you
+      <br />
+      for the request!
+    </h1>
+    <h2 className="thanks-subheader">
+      We will get back to you within
+      <br />
+      1-2 business days
+    </h2>
+    <a href="/blog" className="button button-send">
+      Read our blog
+    </a>
+  </div>
+);
+
+const Contacts = ({ router }) => {
+  const { query } = router;
+
+  const [isPending, setIsPending] = useState(false);
+  const [status, setStatus] = useState('');
+  const [activeContactForm, setActiveContactForm] = useState(
+    query.activeForm !== 'estimate',
+  );
+  const [notifyMessage, setNotifyMessage] = useState(null);
+  const [wishlist, setWishlist] = useState([]);
+
+  function onClick({ target }) {
+    setActiveContactForm(target.name === 'contact-form-btn');
   }
-}
+
+  return (
+    <Layout>
+      <div className="contacts-page">
+        {Person({
+          onClick: () => setActiveContactForm(true),
+          name: 'Talk to Max Savonin',
+          position: 'CEO at KeenEthics',
+          imgSrc: 'static/images/max_savonin.png',
+          wrapperClassnames: 'display-inline-flex-sm-max',
+        })}
+        <div className="contacts-socket">
+          {notifyMessage === 'Message sent' ? (
+            <ThankYou />
+          ) : (
+            <div
+              className={`contact-us-form ${
+                activeContactForm ? 'contacts-block' : 'estimate-block'
+              }`}
+              itemScope
+              itemType="http://schema.org/Organization"
+            >
+              <div className="btn-group display-flex-sm-max mb-23px">
+                <button
+                  onClick={onClick}
+                  name="contact-form-btn"
+                  className={classnames(
+                    'button contacts-form-btn no-shadow contact-form-btn text-capitalize',
+                    {
+                      disabled: !activeContactForm,
+                    },
+                  )}
+                  type="button"
+                >
+                  Get in touch
+                </button>
+                <button
+                  onClick={onClick}
+                  name="estimate-form-btn"
+                  className={classnames(
+                    'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
+                    {
+                      disabled: activeContactForm,
+                    },
+                  )}
+                  type="button"
+                >
+                  Free estimate
+                </button>
+              </div>
+              <div
+                className={classnames('contact-us-form-info-side', {
+                  'contacts-panel': activeContactForm,
+                })}
+              >
+                {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
+                <hr className="display-block-sm" />
+                <div className="social-icons display-block-sm">
+                  <SocialButton />
+                </div>
+              </div>
+              <div className="active-form-wrapper">
+                <div className="btn-group display-flex-sm">
+                  <button
+                    onClick={onClick}
+                    name="contact-form-btn"
+                    className={classnames(
+                      'button contacts-form-btn no-shadow contact-form-btn text-capitalize',
+                      {
+                        disabled: !activeContactForm,
+                      },
+                    )}
+                    type="button"
+                  >
+                    Get in touch
+                  </button>
+                  <button
+                    onClick={onClick}
+                    name="estimate-form-btn"
+                    className={classnames(
+                      'button contacts-form-btn btn-estimate no-shadow estimate-form-btn text-capitalize',
+                      {
+                        disabled: activeContactForm,
+                      },
+                    )}
+                    type="button"
+                  >
+                    Free estimate
+                  </button>
+                </div>
+                <ContactsProvider
+                  value={{
+                    isPending,
+                    setIsPending,
+                    status,
+                    setStatus,
+                    notifyMessage,
+                    setNotifyMessage,
+                    setWishlist,
+                  }}
+                >
+                  <div
+                    className={`form-container ${
+                      !activeContactForm ? 'form-container-hidden' : ''
+                    }`}
+                  >
+                    <ContactForm />
+                  </div>
+                  <div
+                    className={`form-container d-flex flex-grow ${
+                      activeContactForm ? 'form-container-hidden' : ''
+                    }`}
+                  >
+                    <EstimateForm />
+                  </div>
+                </ContactsProvider>
+              </div>
+            </div>
+          )}
+          <Address className="display-block-sm-max" />
+        </div>
+        {activeContactForm && (
+          <div className="social-icons display-block-sm-max">
+            <SocialButton />
+          </div>
+        )}
+        <Background />
+      </div>
+    </Layout>
+  );
+};
 
 Contacts.propTypes = {
   router: PropTypes.object,
 };
 Contacts.defaultProps = {
   router: {},
+};
+
+Address.propTypes = {
+  className: PropTypes.string,
+};
+Address.defaultProps = {
+  className: '',
+};
+
+MobileWishlist.propTypes = {
+  wishlist: PropTypes.array,
+};
+MobileWishlist.defaultProps = {
+  wishlist: [],
 };
 
 export default withRouter(Contacts);

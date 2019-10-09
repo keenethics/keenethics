@@ -120,7 +120,7 @@
 // Post page
 .blog-post-page {
   * {
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
   }
 
   &-info {
@@ -483,25 +483,10 @@ div.suggestion {
   .suggester-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include breakpoint(mobile) {
       flex-direction: column;
-    }
-  }
-
-  a.calendly-goal {
-    @extend .link-text;
-    display: inline-block;
-    margin-left: auto;
-
-    @include breakpoint(mobile) {
-      margin: 20px auto 0;
-    }
-
-    button.btn.btn-schedule {
-      background-image: none;
-      background-color: #12233d;
-      box-shadow: none;
     }
   }
 

@@ -40,7 +40,7 @@ class CustomMap extends Map {
     const result = await super.get(key);
 
     // eslint-disable-next-line
-    if ((Date.now() - result._date) >= TEN_MINUTES) {
+    if (Date.now() - result._date >= TEN_MINUTES) {
       super.delete(key);
     }
 
@@ -51,7 +51,8 @@ class CustomMap extends Map {
 
 memoize.Cache = CustomMap;
 
-const getSheets = memoize(async (spreadsheetId) => { // TEAM_SHEET_ID
+const getSheets = memoize(async (spreadsheetId) => {
+  // TEAM_SHEET_ID
   const client = await getClient(CREDS_FILE, googleScopes);
 
   const sheets = google.sheets('v4');

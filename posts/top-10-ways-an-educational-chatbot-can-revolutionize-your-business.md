@@ -104,10 +104,8 @@ Therefore, do not miss the opportunity to become a part of this billion dollar m
     <button class="call-to-cation-btn -secondary" type="button">LEARN HOW TO START</button>
   </a>
   <a
-    href="//calendly.com/iryna-keenethics/intro-call"
+    href="/contacts"
     target="_blank"
-    rel="noopener noreferrer"
-    className="calendly-goal"
   >
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>

@@ -80,10 +80,8 @@ It is essential to develop a sense of empathy for the user since even the smalle
 
 <div class="call-to-cation-btn-wrap" style="margin-top: 30px">
   <a
-    href="//calendly.com/iryna-keenethics/intro-call"
+    href="/contacts"
     target="_blank"
-    rel="noopener noreferrer"
-    className="calendly-goal"
   >
     <button class="call-to-cation-btn" type="button">SCHEDULE A CALL</button>
   </a>
