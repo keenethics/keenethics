@@ -22,7 +22,9 @@ Router.onRouteChangeStart = () => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-const DEFAULT_DESCRIPTION = 'KeenEthics is an Eastern European software development company, that provides custom software development for your business';
+// eslint-disable-next-line
+const DEFAULT_DESCRIPTION =
+  'KeenEthics is an Eastern European software development company, that provides custom software development for your business';
 const DEFAULT_TITLE = 'Custom Software Development Company - KeenEthics';
 
 const LayoutHead = (props) => {
@@ -37,7 +39,8 @@ const LayoutHead = (props) => {
 
   navigation.forEach((point) => {
     if (!currentPoint && point && point.points) {
-      const subpoint = point.points.map((p) => p.href)
+      const subpoint = point.points
+        .map((p) => p.href)
         .indexOf(currentURL.pathname);
 
       if (subpoint > -1) {
@@ -50,17 +53,16 @@ const LayoutHead = (props) => {
   });
 
   if (!currentPoint) {
-    const subnavigation = servicesWebDevelopmentTabs()
-      .concat(
-        servicesOutstaffing(),
-        servicesMobileDevelopment(),
-        techApps(),
-        techFrontEnd(),
-        techBackEnd(),
-        techDatabase(),
-        techApiIntegration(),
-        works,
-      );
+    const subnavigation = servicesWebDevelopmentTabs().concat(
+      servicesOutstaffing(),
+      servicesMobileDevelopment(),
+      techApps(),
+      techFrontEnd(),
+      techBackEnd(),
+      techDatabase(),
+      techApiIntegration(),
+      works,
+    );
 
     subnavigation.forEach((point) => {
       if (point && point.href && point.href === currentURL.pathname) {
@@ -91,10 +93,7 @@ const LayoutHead = (props) => {
         content="initial-scale=1.0, user-scalable=no, width=device-width"
       />
       {description && description.length ? (
-        <meta
-          name="description"
-          content={description}
-        />
+        <meta name="description" content={description} />
       ) : null}
       <link
         type="image/vnd.microsoft.icon"

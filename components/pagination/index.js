@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+/* eslint-disable jsx-a11y/control-has-associated-label, jsx-a11y/anchor-has-content */
+import React from 'react';
+import PropTypes from 'prop-types';
 
+// eslint-disable-next-line
 const Pagination = ({ total, skip, limit, onPageChange }) => {
   const PAGES_TO_SHOW = 4;
   const totalPages = Math.ceil(total / limit);
@@ -25,7 +27,7 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
   const ListItem = ({ counter, active, className }) => (
     <li key={counter} className={active ? `active ${className}` : className}>
       <a
-        onClick={event => {
+        onClick={(event) => {
           handlePageChange(event, counter);
         }}
         href="#"
@@ -35,14 +37,20 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
     </li>
   );
 
+  ListItem.propTypes = {
+    counter: PropTypes.number.isRequired,
+    active: PropTypes.number.isRequired,
+    className: PropTypes.string.isRequired,
+  };
+
   return (
     <ul className="pagination">
       <li
         key="item-first"
-        className={`item-first${isNoPrevPages ? " disabled" : ""}`}
+        className={`item-first${isNoPrevPages ? ' disabled' : ''}`}
       >
         <a
-          onClick={event => {
+          onClick={(event) => {
             handlePageChange(event, 0);
           }}
           href="#"
@@ -50,10 +58,10 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
       </li>
       <li
         key="item-prev"
-        className={`item-prev${isNoPrevPages ? " disabled" : ""}`}
+        className={`item-prev${isNoPrevPages ? ' disabled' : ''}`}
       >
         <a
-          onClick={event => {
+          onClick={(event) => {
             handlePageChange(event, currentPage - 1);
           }}
           href="#"
@@ -61,14 +69,15 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
       </li>
       {totalPages <= PAGES_TO_SHOW
         ? pageCountArray.map((item, counter) => (
+            /* eslint-disable react/jsx-indent, indent, operator-linebreak */
             <ListItem
               key={counter}
               counter={counter}
               active={currentPage === counter}
             />
           ))
-        : pageCountArray.reduce((acc, item, counter) => {
-            return [
+        : pageCountArray.reduce(
+            (acc, item, counter) => [
               ...acc,
               counter === currentPage - 1 ||
               counter === currentPage ||
@@ -95,15 +104,16 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
                     active={currentPage === counter}
                   />
                 </React.Fragment>
-              ) : null
-            ];
-          }, [])}
+              ) : null,
+            ],
+            [],
+          )}
       <li
         key="item-next"
-        className={`item-next${isNoNextPages ? " disabled" : ""}`}
+        className={`item-next${isNoNextPages ? ' disabled' : ''}`}
       >
         <a
-          onClick={event => {
+          onClick={(event) => {
             handlePageChange(event, currentPage + 1);
           }}
           href="#"
@@ -111,17 +121,25 @@ const Pagination = ({ total, skip, limit, onPageChange }) => {
       </li>
       <li
         key="item-last"
-        className={`item-last${isNoNextPages ? " disabled" : ""}`}
+        className={`item-last${isNoNextPages ? ' disabled' : ''}`}
       >
         <a
-          onClick={event => {
+          onClick={(event) => {
             handlePageChange(event, totalPages - 1);
           }}
           href="#"
         />
+        {/* eslint-enable */}
       </li>
     </ul>
   );
+};
+
+Pagination.propTypes = {
+  total: PropTypes.number.isRequired,
+  skip: PropTypes.number.isRequired,
+  limit: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 };
 
 export default Pagination;

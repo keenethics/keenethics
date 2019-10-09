@@ -40,9 +40,15 @@ const EMBEDDED_ENTRY_HEADERS = {
 
 // eslint-disable-next-line react/prop-types
 const embeddedEntryComponent = ({ type, list }) => (
-  <div key={`&{type}_${Math.random()}`} className={EMBEDDED_ENTRY_CLASSNAMES[type]}>
+  <div
+    key={`&{type}_${Math.random()}`}
+    className={EMBEDDED_ENTRY_CLASSNAMES[type]}
+  >
     <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-icon-wrapper`}>
-      <img alt="Bulb icon" src={`/static/images/${EMBEDDED_ENTRY_ICON_NAMES[type]}.png`} />
+      <img
+        alt="Bulb icon"
+        src={`/static/images/${EMBEDDED_ENTRY_ICON_NAMES[type]}.png`}
+      />
     </div>
     <div className={`${EMBEDDED_ENTRY_CLASSNAMES[type]}-content`}>
       <h4>{EMBEDDED_ENTRY_HEADERS[type]}</h4>
@@ -76,11 +82,16 @@ const postCardComponent = ({
     <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
       <div className="blog-page-post">
         <div className="blog-page-post-img">
-          <img alt={alt} src={`https://${url}?fm=jpg&fl=progressive&q=85&w=350`} />
+          <img
+            alt={alt}
+            src={`https://${url}?fm=jpg&fl=progressive&q=85&w=350`}
+          />
         </div>
         <div className="blog-page-post-header">
           <div className="date">
-            {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+            {publishDate && (
+              <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>
+            )}
           </div>
           <div className="title">{title}</div>
         </div>
@@ -98,7 +109,11 @@ const imageSizes = [
 
 const imageComponent = ({ src, description, title }) => (
   <figure>
-    <ReactContentfulImage alt={description || title} src={src} sizes={imageSizes} />
+    <ReactContentfulImage
+      alt={description || title}
+      src={src}
+      sizes={imageSizes}
+    />
     {description && <figcaption>{description}</figcaption>}
   </figure>
 );
@@ -111,7 +126,12 @@ const personComponent = ({
 
   if (linkedIn) {
     return (
-      <a href={linkedIn} target="_blank" rel="noopener noreferrer" className="person-link">
+      <a
+        href={linkedIn}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="person-link"
+      >
         <div className="person">
           {image && (
             <img
@@ -149,7 +169,10 @@ const bodyOptions = {
     [BLOCKS.PARAGRAPH]: (node, children) => {
       const filteredChildren = children.filter((item) => !!item);
 
-      if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
+      if (
+        filteredChildren.length === 1
+        && typeof filteredChildren[0] === 'object'
+      ) {
         return filteredChildren[0];
       }
 
@@ -162,27 +185,38 @@ const bodyOptions = {
       return imageComponent({ src: url, description, title });
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
+      if (
+        _.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings'
+      ) {
         const { bookList, list } = _.get(node, 'data.target.fields', null);
 
         return (
           <div className={EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}>
-            <div className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-icon-wrapper`}>
+            <div
+              className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-icon-wrapper`}
+            >
               <img alt="Book icon" src="/static/images/book_icon.png" />
             </div>
-            <div className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-content`}>
+            <div
+              className={`${EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}-content`}
+            >
               <h4>useful readings:</h4>
-              {(bookList || list) && documentToReactComponents(bookList || list)}
+              {(bookList || list)
+                && documentToReactComponents(bookList || list)}
             </div>
           </div>
         );
       }
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor') {
+      if (
+        _.get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor'
+      ) {
         const { list } = _.get(node, 'data.target.fields', null);
 
         return embeddedEntryComponent({ list, type: 'mostSuitableFor' });
       }
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools') {
+      if (
+        _.get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools'
+      ) {
         const { list } = _.get(node, 'data.target.fields', null);
 
         return embeddedEntryComponent({ list, type: 'helpfulTools' });
@@ -237,7 +271,9 @@ const bodyOptions = {
     },
   },
   renderMark: {
-    [MARKS.CODE]: (text) => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
+    [MARKS.CODE]: (text) => (
+      <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>
+    ),
   },
 };
 
@@ -279,7 +315,8 @@ export default class Post extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
+  // eslint-disable-next-line
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.title !== this.props.title) {
       document.querySelector('.content-inner').scrollTo(0, 0);
     }
@@ -329,17 +366,19 @@ export default class Post extends React.Component {
               <span className="date">
                 {publishDate && (
                   <>
-                    PUBLISH DATE:
-                    {' '}
-                    <Moment format="MMMM DD YYYY">{`${new Date(publishDate)}`}</Moment>
+                    PUBLISH DATE:&nbsp;
+                    <Moment format="MMMM DD YYYY">
+                      {`${new Date(publishDate)}`}
+                    </Moment>
                   </>
                 )}
                 <br />
                 {updatedAt && (
                   <>
-                    UPD:
-                    {' '}
-                    <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
+                    UPD:&nbsp;
+                    <Moment format="MMMM DD YYYY">
+                      {`${new Date(updatedAt)}`}
+                    </Moment>
                   </>
                 )}
               </span>
@@ -352,8 +391,14 @@ export default class Post extends React.Component {
             <header>
               <h1 className="blog-post-page-content-title">{title}</h1>
 
-              {subtitle && <h2 className="blog-post-page-content-subtitle">{subtitle}</h2>}
-              {description && <p className="blog-post-page-content-description">{description}</p>}
+              {subtitle && (
+                <h2 className="blog-post-page-content-subtitle">{subtitle}</h2>
+              )}
+              {description && (
+                <p className="blog-post-page-content-description">
+                  {description}
+                </p>
+              )}
               {heroSrc && imageComponent({ src: heroSrc, title: heroTitle })}
             </header>
 
@@ -375,7 +420,10 @@ export default class Post extends React.Component {
                 </div>
                 {!!relatedPosts.length && (
                   <div className="blog-page-posts">
-                    {relatedPosts.map((post) => postCardComponent(post && post.fields))}
+                    {// eslint-disable-next-line
+                    relatedPosts.map((post) => {
+                      return postCardComponent(post && post.fields);
+                    })}
                   </div>
                 )}
               </div>
@@ -385,44 +433,47 @@ export default class Post extends React.Component {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                '@context': 'http://schema.org',
-                '@type': 'Article',
-                mainEntityOfPage: {
-                  '@type': 'WebPage',
-                  '@id': url,
-                },
-                headline: metaTitle,
-                description: metaDescription,
-                image: {
+            __html: JSON.stringify({
+              '@context': 'http://schema.org',
+              '@type': 'Article',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': url,
+              },
+              headline: metaTitle,
+              description: metaDescription,
+              image: {
+                '@type': 'ImageObject',
+                url: heroImage.fields.file.url,
+                ...heroImage.fields.file.details.image,
+              },
+              datePublished: new Date(publishDate),
+              dateModified: new Date(updatedAt),
+              author: {
+                '@type': 'Person',
+                name: author.fields.name,
+                sameAs: [author.fields.linkedIn],
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'Moz',
+                url: 'https://keenethics.com/',
+                sameAs: [
+                  'https://www.facebook.com/keenethics.development/',
+                  'https://www.linkedin.com/company/keen-ethics/',
+                  'https://github.com/keenethics',
+                  'https://twitter.com/keen_ethics',
+                  'https://www.upwork.com/o/companies/~0106b5437592391f94/',
+                  'https://www.instagram.com/keen_ethics/',
+                ],
+                logo: {
                   '@type': 'ImageObject',
-                  url: heroImage.fields.file.url,
-                  ...heroImage.fields.file.details.image,
-                },
-                datePublished: new Date(publishDate),
-                dateModified: new Date(updatedAt),
-                author: {
-                  '@type': 'Person',
-                  name: author.fields.name,
-                  sameAs: [
-                    author.fields.linkedIn,
-                  ],
-                },
-                publisher: {
-                  '@type': 'Organization',
-                  name: 'Moz',
-                  url: 'https://keenethics.com/',
-                  sameAs: ['https://www.facebook.com/keenethics.development/', 'https://www.linkedin.com/company/keen-ethics/', 'https://github.com/keenethics', 'https://twitter.com/keen_ethics', 'https://www.upwork.com/o/companies/~0106b5437592391f94/', 'https://www.instagram.com/keen_ethics/'],
-                  logo: {
-                    '@type': 'ImageObject',
-                    url: 'https://keenethics.com/static/images/logo.png',
-                    width: 150,
-                    height: 18,
-                  },
+                  url: 'https://keenethics.com/static/images/logo.png',
+                  width: 150,
+                  height: 18,
                 },
               },
-            ),
+            }),
           }}
         />
       </Layout>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Subscriber from "../subscribe-for-updates";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Subscriber from '../subscribe-for-updates';
 
 const TimesIcon = () => (
   <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,13 +25,7 @@ const RocketImage = () => (
   >
     <circle cx="142.5" cy="142.5" r="82.42" fill="url(#paint0_linear)" />
     <circle cx="142.5" cy="142.5" r="141" stroke="#DEE3EE" strokeWidth="3" />
-    <circle
-      cx="142.5"
-      cy="142.5"
-      r="112.23"
-      stroke="#DEE3EE"
-      strokeWidth="2"
-    />
+    <circle cx="142.5" cy="142.5" r="112.23" stroke="#DEE3EE" strokeWidth="2" />
     <circle cx="224.15" cy="26.96" r="16.18" fill="#93AAE5" />
     <ellipse cx="239.55" cy="243.78" rx="11.55" ry="10.78" fill="#DEE3EE" />
     <ellipse
@@ -169,11 +164,11 @@ const RocketImage = () => (
     </defs>
   </svg>
 );
-
-export default ({ open, onClose }) => {
+const SubscribeModal = ({ open, onClose }) => {
   const HeaderComponent = () => (
     <h4>
-      <span className="text-color-red">KEEN</span>{" "}
+      <span className="text-color-red">KEEN</span>
+      &nbsp;
       <span className="text-color-black">BLOG</span>
     </h4>
   );
@@ -185,8 +180,8 @@ export default ({ open, onClose }) => {
   );
 
   return (
-    <div className="modal" style={{ display: open ? "flex" : "none" }}>
-      <button onClick={onClose} className="close">
+    <div className="modal" style={{ display: open ? 'flex' : 'none' }}>
+      <button type="button" onClick={onClose} className="close">
         <TimesIcon />
       </button>
       <div className="modal-content">
@@ -196,7 +191,7 @@ export default ({ open, onClose }) => {
             HeaderComponent={HeaderComponent}
             SloganComponent={SloganComponent}
           />
-          <button className="btn-link" onClick={onClose}>
+          <button type="button" className="btn-link" onClick={onClose}>
             No, thanks
           </button>
         </div>
@@ -204,3 +199,10 @@ export default ({ open, onClose }) => {
     </div>
   );
 };
+
+SubscribeModal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.bool.isRequired,
+};
+
+export default SubscribeModal;

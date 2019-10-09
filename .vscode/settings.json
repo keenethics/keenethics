@@ -1,0 +1,19 @@
+{
+  "window.zoomLevel": 1,
+  "editor.minimap.enabled": false,
+  "json.format.enable": false,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.copyWithSyntaxHighlighting": false,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.tabSize": 2
+}

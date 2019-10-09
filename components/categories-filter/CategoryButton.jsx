@@ -11,13 +11,10 @@ export default function FilterBtn({
   return (
     <li className="filter__item">
       <button
-        className={classnames(
-          'filter__btn',
-          {
-            '-red': isActive,
-            '-disabled': isDisabled,
-          },
-        )}
+        className={classnames('filter__btn', {
+          '-red': isActive,
+          '-disabled': isDisabled,
+        })}
         onClick={buttonClick}
         type="button"
       >

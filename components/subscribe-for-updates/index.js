@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export default ({ HeaderComponent, SloganComponent }) => {
+const SubscribeForUpdates = ({ HeaderComponent, SloganComponent }) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
   function handleClick() {
-    const regexp = new RegExp('/^(([^<>()\\[\\]\\.,;:\\s@\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$/i');
+    const regexp = new RegExp(
+      '/^(([^<>()\\[\\]\\.,;:\\s@\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$/i',
+    );
 
     const isError = !value || !regexp.test(value.toLowerCase());
     setError(isError);
@@ -37,8 +40,18 @@ export default ({ HeaderComponent, SloganComponent }) => {
     if (success) setSuccess(false);
   }
 
-  const Header = () => HeaderComponent ? <HeaderComponent /> : <h4>Don&apos;t miss updates from us!</h4>;
-  const Slogan = () => SloganComponent ? <SloganComponent /> : <p>Subscribe to our bimonthly newsletter.</p>;
+  const Header = () =>
+    (HeaderComponent ? (
+      <HeaderComponent />
+    ) : (
+      <h4>Don&apos;t miss updates from us!</h4>
+    ));
+  const Slogan = () =>
+    (SloganComponent ? (
+      <SloganComponent />
+    ) : (
+      <p>Subscribe to our bimonthly newsletter.</p>
+    ));
 
   return (
     <div className="subscribe-panel">
@@ -66,3 +79,10 @@ export default ({ HeaderComponent, SloganComponent }) => {
     </div>
   );
 };
+
+SubscribeForUpdates.propTypes = {
+  HeaderComponent: PropTypes.object.isRequired,
+  SloganComponent: PropTypes.object.isRequired,
+};
+
+export default SubscribeForUpdates;

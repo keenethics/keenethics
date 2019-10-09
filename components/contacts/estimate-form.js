@@ -51,18 +51,16 @@ const EstimateForm = () => {
     setStatus,
     setWishlist,
   } = useContext(ContactUsContext);
-
+  const filteredValues = [
+    stage.value,
+    ...services.value,
+    pm.value,
+    budget.value,
+    timeframe.value,
+    start.value,
+  ].filter((item) => !!item);
   useEffect(() => {
-    setWishlist(
-      [
-        stage.value,
-        ...services.value,
-        pm.value,
-        budget.value,
-        timeframe.value,
-        start.value,
-      ].filter((item) => !!item),
-    );
+    setWishlist(filteredValues);
   }, [
     stage.value,
     services.value,
@@ -134,6 +132,10 @@ const EstimateForm = () => {
     setWizardStage(wizardStage - 1);
   }
 
+  // eslint-disable-next-line
+  const pending =
+    name.value || !messageEstimate.value || !emailEstimate.value || isPending;
+
   return (
     <div className="estimate-form form-container">
       <div className="progressbar-container">
@@ -169,8 +171,7 @@ const EstimateForm = () => {
           <div className="wizard-stage">
             <div className="question-title mb-0">
               <span className="question-number">1.</span>
-              {' '}
-Stage
+              Stage
             </div>
             <div className="estimate-input-cols">
               <div className="standard-radio-input">
@@ -191,7 +192,7 @@ Stage
                     />
                     <label htmlFor="new" className="label-for-radio-btn">
                       <b className="font-bold d-block">New project</b>
-                      {' '}
+                      &nbsp;
                       <span className="text-dimmed">
                         to be built from scratch
                       </span>
@@ -240,8 +241,7 @@ Stage
             </div>
             <div className="question-title">
               <span className="question-number">2.</span>
-              {' '}
-Services needed
+              Services needed
             </div>
             <div className="estimate-input-cols">
               <p>Software Development</p>
@@ -399,8 +399,7 @@ Services needed
           <div className="wizard-stage">
             <div className="question-title">
               <span className="question-number">3.</span>
-              {' '}
-Project Management
+              Project Management
             </div>
             <div className="estimate-input-cols">
               <p className="text-normal">
@@ -470,19 +469,19 @@ Project Management
             </div>
             <div className="question-title">
               <span className="question-number">4.</span>
-              {' '}
-Expected budget
+              Expected budget
             </div>
             <div className="estimate-input-cols mb-auto">
               <div className="input-select-wrap">
                 <select
                   name="budget"
                   className="input-select"
-                  onChange={(event) => setBudget({
-                    value: event.target.value,
-                    error: '',
-                  })
-                  }
+                  onChange={(event) => {
+                    setBudget({
+                      value: event.target.value,
+                      error: '',
+                    });
+                  }}
                   value={budget.value}
                 >
                   <option value="I am not sure">I am not sure</option>
@@ -514,8 +513,7 @@ Expected budget
           <div className="wizard-stage">
             <div className="question-title">
               <span className="question-number">5.</span>
-              {' '}
-Timeframe
+              Timeframe
             </div>
             <div className="estimate-input-cols">
               <div className="options-wrapper odd-options-number">
@@ -628,8 +626,7 @@ Timeframe
             </div>
             <div className="question-title">
               <span className="question-number">6.</span>
-              {' '}
-Start
+              Start
             </div>
             <div className="estimate-input-cols">
               <div className="options-wrapper">
@@ -785,8 +782,9 @@ Start
                       name="name"
                       id="name"
                       type="text"
-                      onChange={(event) => setName({ value: event.target.value, error: false })
-                      }
+                      onChange={(event) => {
+                        setName({ value: event.target.value, error: false });
+                      }}
                       value={name.value}
                       required
                     />
@@ -802,11 +800,12 @@ Start
                       name="emailEstimate"
                       id="emailEstimate"
                       type="email"
-                      onChange={(event) => setEmailEstimate({
-                        value: event.target.value,
-                        error: false,
-                      })
-                      }
+                      onChange={(event) => {
+                        setEmailEstimate({
+                          value: event.target.value,
+                          error: false,
+                        });
+                      }}
                       value={emailEstimate.value}
                       required
                     />
@@ -823,11 +822,12 @@ Start
                   })}
                   name="messageEstimate"
                   id="messageEstimate"
-                  onChange={(event) => setMessageEstimate({
-                    value: event.target.value,
-                    error: false,
-                  })
-                  }
+                  onChange={(event) => {
+                    setMessageEstimate({
+                      value: event.target.value,
+                      error: false,
+                    });
+                  }}
                   value={messageEstimate.value}
                   placeholder="Your message (optional)"
                 />
@@ -869,11 +869,7 @@ Start
               <button
                 type="submit"
                 className={classnames('button no-shadow button-send', {
-                  pending:
-                    !name.value
-                    || !messageEstimate.value
-                    || !emailEstimate.value
-                    || isPending,
+                  pending,
                 })}
               >
                 send
