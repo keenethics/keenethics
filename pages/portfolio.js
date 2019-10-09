@@ -69,9 +69,14 @@ class Portfolio extends React.Component {
     return (
       <Layout>
         <section className="portfolio">
-          <Background className="portfolio__background" />
           <div className="portfolio__header">
-            <h1 className="portfolio__title">Portfolio</h1>
+            <h1 className="portfolio__title">
+              <span className="text-color-red">Keen</span>
+              &nbsp;
+              <span className="text-undelined text-color-blue">Portfolio</span>
+              <br />
+              on Tech and business
+            </h1>
           </div>
           <CategoriesFilter
             categorisList={categorisList}
