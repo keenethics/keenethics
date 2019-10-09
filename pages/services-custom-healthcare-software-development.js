@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import Link from 'next/link';
 
@@ -117,9 +118,8 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <li>
                 Hiring an&nbsp;
                 <a
-                  href="https://keenethics.com/blog/1551175200000-our-ethical-dimension"
+                  href="/blog/1551175200000-our-ethical-dimension"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   ethical company
                 </a>
@@ -146,9 +146,8 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <li>
                 You should review and follow&nbsp;
                 <a
-                  href="https://keenethics.com/blog/1543388400000-your-data-is-safe-in-ukraine"
+                  href="/blog/1543388400000-your-data-is-safe-in-ukraine"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   data safety regulations
                 </a>
@@ -373,6 +372,76 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             </div>
           </div>
           <Works works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
+
+          <div>
+            <h3>Hospital Marketing Administration System</h3>
+            <p>This system was developed to facilitate and optimize business processes in dental clinics. This web platform is commercial, meaning that it does not serve a single clinic but is available for purchase. It is expected to be used specifically by a front desk assistant, a marketing specialist, and a patient consultant. In general, it helps to automate documentation and improve patient service.</p>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Technologies</b>: <Link href="/tech-front-end-react">React</Link>, <Link href="/tech-front-end-redux">Redux</Link>, <Link href="/tech-back-end-express">Express</Link>, RethinkDB, and Webpack2
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link>
+            </div>
+            <div style={{ marginBottom: '25px' }}>
+              <b>Team</b>: 1 middle software developer, 1 QA specialist, 1 HTML/CSS coder, and 1 UI/UX designer
+            </div>
+            <Works works={works.filter(({ title }) => ['Hospital Marketing Administration System'].includes(title))} />
+          </div>
+
+          <div>
+            <h3>Blood Testing Application</h3>
+            <p>It is a blood test management application, the idea of which is to help people record and understand their blood test results. Such a service may not be relevant for average people but it is utterly important for patients with specific health conditions, such as diabetes. This app is augmented with AI, serves an educational function, allows creating a unique user profile, features a Q&A section and a messenger.</p>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Platform</b>: <Link href="/services-mobile-development">Mobile application</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Technologies</b>: UI/UX design only – Adobe Photoshop, Sketch, InVision App, and Avocode
+            </div>
+            <div style={{ marginBottom: '25px' }}>
+              <b>Team</b>: 1 UI/UX designer
+            </div>
+            <Works works={works.filter(({ title }) => ['Blood Testing Application'].includes(title))} />
+          </div>
+
+          <div>
+            <h3>Digital Hospital App</h3>
+            <p>This platform is called a digital hospital since it provides patients with high-quality end-to-end medical care. Here, users can request an appointment with a medical specialist providing cancer care, hair treatment, eye treatment, fertility treatment, as well as with doctors making cosmetic, weight loss, and orthopedic surgeries. The digital hospital is aimed at transforming the outdated and inefficient, traditional healthcare system.</p>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Technologies</b>: <Link href="/tech-front-end-react">React</Link> and <Link href="/services-web-development-node">Node.js</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link>
+            </div>
+            <div style={{ marginBottom: '25px' }}>
+              <b>Team</b>: 2 full-stack software developers and 1 QA specialist
+            </div>
+            <Works works={works.filter(({ title }) => ['Digital Hospital App'].includes(title))} />
+          </div>
+
+          <div>
+            <h3>Diagnostic Appointment Scheduling System</h3>
+            <p>This healthcare booking service enables patient to find and schedule medical appointments without wasting time while holding on a line or standing in a queue. Besides, they conduct numerous successful public health events to encourage healthy lifestyle, support people suffering from diabetes or living through menopause, help to prevent cardiovascular diseases, or encourage to give up on smoking.</p>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Technologies</b>: SQLite, <Link href="/tech-front-end-react">React</Link> and <Link href="/tech-front-end-redux">Redux</Link>
+            </div>
+            <div style={{ marginBottom: '5px' }}>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link>
+            </div>
+            <div style={{ marginBottom: '25px' }}>
+              <b>Team</b>: 2 full-stack software developers, 1 PM, and 1 QA specialist
+            </div>
+            <Works works={works.filter(({ title }) => ['Diagnostic Appointment Scheduling System'].includes(title))} />
+          </div>
+
         </div>
       </section>
       <h2>Now, let’s discuss your business idea!</h2>

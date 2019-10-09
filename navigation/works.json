@@ -1,9 +1,9 @@
 [
   {
-    "title": "Hospital Marketing Administration System",
-    "metaTitle": "Case study: Hospital Marketing Administration System – KeenEthics",
-    "href": "/project-hospital-marketing-administration-system",
-    "imgSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.jpeg",
+    "title": "Blood Test Application",
+    "metaTitle": "Case study: Blood Test Application – KeenEthics",
+    "href": "/project-blood-test-application",
+    "imgSrc": "blood-test-application/blood-test-application.jpg",
     "category": {
       "main": [
         "Business apps"
@@ -12,8 +12,24 @@
         "Healthcare"
       ]
     },
-    "description": "Modeling patient journey, automating marketing documentation, and improving client service",
-    "metaDescription": "A hospital management system for modeling patient journey, automating marketing documentation, and improving client service"
+    "description": "A convenient mobile app for patients to record and understand their blood test results",
+    "metaDescription": "A convenient mobile app for patients to record and understand their blood test results"
+  },
+  {
+    "title": "Digital Hospital App",
+    "metaTitle": "Case study: Digital Hospital App - KeenEthics",
+    "href": "/project-digital-hospital-app",
+    "imgSrc": "digital-hospital-app/digital-hospital-app.jpg",
+    "category": {
+      "main": [
+        "Business apps"
+      ],
+      "additional": [
+        "Healthcare"
+      ]
+    },
+    "description": "Revolutionizing the outdated, disorganized, and inefficient traditional system of healthcare",
+    "metaDescription": "A project revolutionizing the outdated, disorganized, and inefficient traditional system of healthcare."
   },
   {
     "title": "ParkQX",
@@ -56,6 +72,22 @@
     "description": "Making the lives of cancer survivors easier"
   },
   {
+    "title": "Diagnostic Appointment Scheduling System",
+    "metaTitle": "Case study: Diagnostic Appointment Scheduling System  KeenEthics",
+    "href": "/project-diagnostic-appointment-scheduling-system",
+    "imgSrc": "diagnostic-appointment-scheduling-system/diagnostic-appointment-scheduling-system.jpg",
+    "category": {
+      "main": [
+        "Business apps"
+      ],
+      "additional": [
+        "Healthcare"
+      ]
+    },
+    "description": "Personalized medical care and public health support",
+    "metaDescription": "A platform providing personalized medical care and public health support"
+  },
+  {
     "title": "Pree",
     "href": "/project-pree",
     "imgSrc": "Pree.jpg",
@@ -68,6 +100,22 @@
       ]
     },
     "description": "Stop losing your stuff"
+  },
+  {
+    "title": "Hospital Marketing Administration System",
+    "metaTitle": "Case study: Hospital Marketing Administration System – KeenEthics",
+    "href": "/project-hospital-marketing-administration-system",
+    "imgSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.jpeg",
+    "category": {
+      "main": [
+        "Business apps"
+      ],
+      "additional": [
+        "Healthcare"
+      ]
+    },
+    "description": "Modeling patient journey, automating marketing documentation, and improving client service",
+    "metaDescription": "A hospital management system for modeling patient journey, automating marketing documentation, and improving client service"
   },
   {
     "title": "SelfLeaders",
