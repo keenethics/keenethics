@@ -11,8 +11,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run: yarn install
       - save_cache:
           paths:
@@ -23,8 +23,15 @@ jobs:
           command: ssh-keyscan 107.170.121.178 >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - "MD5:04:13:38:a4:16:d4:ac:10:99:a7:4c:b4:4e:62:96:1b"
+            - 'MD5:04:13:38:a4:16:d4:ac:10:99:a7:4c:b4:4e:62:96:1b'
       - run:
           name: Install rsync
           command: sudo apt-get update && sudo apt install rsync
       - run: yarn deploy
+  lint:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/keenethics
+    steps:
+      - checkout
+      - run: yarn lint
