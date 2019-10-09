@@ -1,27 +1,31 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import Moment from "react-moment";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import Moment from 'react-moment';
 
-const _ = require("lodash");
+const _ = require('lodash');
 
 const Posts = ({ posts }) => {
-  const [windowMode, setWindowMode] = useState("desktop");
-  const isMobileWindowMode = windowMode === "mobile";
+  const [windowMode, setWindowMode] = useState('desktop');
+  const isMobileWindowMode = windowMode === 'mobile';
 
   function windowModeSetter() {
-    window.innerWidth < 768 && setWindowMode("mobile");
-    window.innerWidth >= 768 &&
-      window.innerWidth < 992 &&
-      setWindowMode("tablet");
-    window.innerWidth >= 992 && setWindowMode("desktop");
+    if (window.innerWidth < 768) {
+      setWindowMode('mobile');
+    }
+    if (window.innerWidth >= 768 && window.innerWidth < 992) {
+      setWindowMode('tablet');
+    }
+    if (window.innerWidth >= 992) {
+      setWindowMode('desktop');
+    }
   }
 
   useEffect(() => {
     windowModeSetter();
-    window.addEventListener("resize", windowModeSetter);
+    window.addEventListener('resize', windowModeSetter);
 
     return () => {
-      window.removeEventListener("resize", windowModeSetter);
+      window.removeEventListener('resize', windowModeSetter);
     };
   }, []);
 
@@ -29,24 +33,25 @@ const Posts = ({ posts }) => {
     <div className="blog-page-posts">
       {posts.map((post, counter) => {
         const {
-          fields: { slug, title, heroImage, publishDate, tags, description }
+          fields: {
+            slug, title, heroImage, publishDate, tags, description,
+          },
         } = post;
 
-        const url = _.get(heroImage, "fields.file.url");
-        const styles =
-          counter === 0 && !isMobileWindowMode
-            ? {
-                backgroundImage: url
-                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=1200)`
-                  : ""
-              }
-            : {
-                backgroundImage: url
-                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=${
-                      isMobileWindowMode ? 700 : 950
-                    })`
-                  : ""
-              };
+        const url = _.get(heroImage, 'fields.file.url');
+        const styles = counter === 0 && !isMobileWindowMode
+          ? {
+            backgroundImage: url
+              ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=1200)`
+              : '',
+          }
+          : {
+            backgroundImage: url
+              ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=${
+                isMobileWindowMode ? 700 : 950
+              })`
+              : '',
+          };
         /* const alt =
         _.get(heroImage, "fields.description") ||
         _.get(heroImage, "fields.title"); */
@@ -60,7 +65,7 @@ const Posts = ({ posts }) => {
             </div>
             <div className="blog-page-post-info">
               <div className="blog-page-post-info-tag-container">
-                {tags.map(tag => (
+                {tags.map((tag) => (
                   <span className="tag" key={tag}>
                     {tag}
                   </span>
@@ -75,9 +80,9 @@ const Posts = ({ posts }) => {
                 </a>
               </h2>
               {counter === 0 && description && (
-                <React.Fragment>
+                <>
                   <p className="blog-page-post-description">
-                    {description.slice(0, 128).concat("...")}
+                    {description.slice(0, 128).concat('...')}
                   </p>
                   <a
                     className="blog-page-post-read-more"
@@ -85,7 +90,7 @@ const Posts = ({ posts }) => {
                   >
                     Read More
                   </a>
-                </React.Fragment>
+                </>
               )}
             </div>
           </div>
@@ -96,10 +101,10 @@ const Posts = ({ posts }) => {
 };
 
 Posts.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.array,
 };
 Posts.defaultProps = {
-  posts: []
+  posts: [],
 };
 
 export default Posts;

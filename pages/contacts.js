@@ -93,10 +93,8 @@ const Address = ({ className }) => (
             ,&nbsp;
             <span itemProp="streetAddress">
               Oude litherweg 2,
-              {' '}
               <br className="display-block-sm" />
-              {' '}
-5346 RT
+              5346 RT
             </span>
           </a>
           <a href="tel:+19292141392">
@@ -129,7 +127,6 @@ const MobileWishlist = ({ wishlist }) => {
     <div className="mobile-counter display-flex-sm-max">
       <h1>
         Your
-        {' '}
         <br />
         wishlist
       </h1>
@@ -140,13 +137,12 @@ const MobileWishlist = ({ wishlist }) => {
       >
         {wishlist.length}
       </button>
+      {/* eslint-disable-next-line */}
       <button
         type="button"
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
-      >
-        {''}
-      </button>
+      />
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
           <span key={item} className="wish-item">
@@ -163,13 +159,11 @@ const wishlistPanel = (wishlist) => (
     <MobileWishlist wishlist={wishlist} />
     <h1 className="display-block-sm">
       Your
-      {' '}
       <br className="display-block-sm" />
       wishlist
     </h1>
     <p className="display-block-sm">
       These are the parameters
-      {' '}
       <br className="display-block-sm" />
       you have selected.
     </p>

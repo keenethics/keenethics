@@ -15,7 +15,7 @@ const TechApps = () => (
       <p>
         Maybe, there are a few businesses left that can successfully
         {' '}
-        {'function'}
+        function
         {' '}
 without any web
         and software products. But most companies can significantly improve and grow their

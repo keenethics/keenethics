@@ -1,16 +1,16 @@
-import { withRouter } from "next/router";
+import { withRouter } from 'next/router';
 
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-import Layout from "../components/layout/main";
-import Posts from "../components/blog/posts";
-import CategoriesFilter from "../components/categories-filter/CategoriesFilter";
-import Pagination from "../components/pagination";
-import { getPostsList, getAllCategories } from "../lib/contentful";
-import SubscribeModal from "../components/subscribeModal";
+import Layout from '../components/layout/main';
+import Posts from '../components/blog/posts';
+import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
+import Pagination from '../components/pagination';
+import { getPostsList, getAllCategories } from '../lib/contentful';
+import SubscribeModal from '../components/subscribeModal';
 
-const _ = require("lodash");
+const _ = require('lodash');
 
 const RESULTS_PER_PAGE = 8;
 
@@ -29,9 +29,9 @@ const BellIcon = () => (
   </svg>
 );
 
-const Blog = ({ router, url, allCategories }) => {
+const Blog = ({ router, allCategories }) => {
   const [selectedPostsCategories, setSelectedPostsCategories] = useState(
-    allCategories
+    allCategories,
   );
   const [posts, setPosts] = useState([]);
   const [total, setTotal] = useState(0);
@@ -46,7 +46,7 @@ const Blog = ({ router, url, allCategories }) => {
         categories:
           selectedPostsCategories.length < allCategories.length
             ? selectedPostsCategories
-            : allCategories
+            : allCategories,
       });
 
       setPosts(contResp && contResp.items ? contResp.items : []);
@@ -57,9 +57,9 @@ const Blog = ({ router, url, allCategories }) => {
     getPosts();
   }, [selectedPostsCategories, skip]);
 
-  function filterOnChange(selectedPostsCategories) {
+  function filterOnChange(selectedPostsCategoriesN) {
     setSkip(0);
-    setSelectedPostsCategories(selectedPostsCategories);
+    setSelectedPostsCategories(selectedPostsCategoriesN);
   }
 
   function subscribeModalHandler(event) {
@@ -74,13 +74,15 @@ const Blog = ({ router, url, allCategories }) => {
         <SubscribeModal open={modalOpen} onClose={() => setModalOpen(false)} />
         <div className="blog-page-header">
           <h1>
-            <span className="text-color-red">Keen</span>{" "}
+            <span className="text-color-red">Keen</span>
+            &nbsp;
             <a
               className="text-decoration-none"
               href="#"
-              onClick={event => subscribeModalHandler(event)}
+              onClick={(event) => subscribeModalHandler(event)}
             >
-              <span className="text-undelined text-color-blue">Blog</span>{" "}
+              <span className="text-undelined text-color-blue">Blog</span>
+              &nbsp;
               <BellIcon />
             </a>
             <br />
@@ -105,7 +107,7 @@ const Blog = ({ router, url, allCategories }) => {
             total={total}
             skip={skip}
             limit={RESULTS_PER_PAGE}
-            onPageChange={({ skip }) => setSkip(skip)}
+            onPageChange={({ skipN }) => setSkip(skipN)}
           />
         </div>
       </div>
@@ -116,27 +118,25 @@ const Blog = ({ router, url, allCategories }) => {
 Blog.getInitialProps = async () => {
   const categoriesEntries = (await getAllCategories()).items;
   const allCategories = categoriesEntries.reduce((acc, item) => {
-    if (item && item.fields && item.fields.categories)
+    if (item && item.fields && item.fields.categories) {
       return [...acc, ...item.fields.categories];
+    }
 
     return acc;
   }, []);
 
   return {
-    allCategories: _.uniq(allCategories)
+    allCategories: _.uniq(allCategories),
   };
 };
 
 Blog.propTypes = {
-  url: PropTypes.object,
   router: PropTypes.object,
-  posts: PropTypes.array
+  allCategories: PropTypes.array.isRequired,
 };
 
 Blog.defaultProps = {
-  url: {},
   router: {},
-  posts: []
 };
 
 export default withRouter(Blog);
