@@ -182,6 +182,7 @@
       padding: 6px;
       box-sizing: border-box;
       position: relative;
+      box-sizing: initial;
       &:before {
         content: '';
         width: 34px;

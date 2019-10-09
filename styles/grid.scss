@@ -18,11 +18,11 @@
 .col-1-8 {
   width: 12.5%;
 }
-[class*='col-'] {
-  float: left;
+// [class*='col-'] {
+//   float: left;
 
-  @include for-tablet {
-    width: 100%;
-  }
-}
+//   @include for-tablet {
+//     width: 100%;
+//   }
+// }
  

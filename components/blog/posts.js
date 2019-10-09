@@ -1,46 +1,105 @@
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import Moment from "react-moment";
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Moment from 'react-moment';
+const _ = require("lodash");
 
-const _ = require('lodash');
+const Posts = ({ posts }) => {
+  const [windowMode, setWindowMode] = useState("desktop");
+  const isMobileWindowMode = windowMode === "mobile";
 
-const Posts = ({ posts }) => (
-  <div className="blog-page-posts">
-    {posts.map((post) => {
-      const {
-        fields: {
-          slug, title, heroImage, publishDate,
-        },
-      } = post;
-      const url = _.get(heroImage, 'fields.file.url');
-      const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
+  function windowModeSetter() {
+    window.innerWidth < 768 && setWindowMode("mobile");
+    window.innerWidth >= 768 &&
+      window.innerWidth < 992 &&
+      setWindowMode("tablet");
+    window.innerWidth >= 992 && setWindowMode("desktop");
+  }
 
-      return (
-        <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
-          <a className="blog-page-post">
-            <div className="blog-page-post-img">
-              <img src={url ? `https://${url}?fm=jpg&fl=progressive&q=85&w=350` : ''} alt={alt} />
+  useEffect(() => {
+    windowModeSetter();
+    window.addEventListener("resize", windowModeSetter);
+
+    return () => {
+      window.removeEventListener("resize", windowModeSetter);
+    };
+  }, []);
+
+  return (
+    <div className="blog-page-posts">
+      {posts.map((post, counter) => {
+        const {
+          fields: { slug, title, heroImage, publishDate, tags, description }
+        } = post;
+
+        const url = _.get(heroImage, "fields.file.url");
+        const styles =
+          counter === 0 && !isMobileWindowMode
+            ? {
+                backgroundImage: url
+                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=1200)`
+                  : ""
+              }
+            : {
+                backgroundImage: url
+                  ? `url(https://${url}?fm=jpg&fl=progressive&q=85&w=${
+                      isMobileWindowMode ? 700 : 950
+                    })`
+                  : ""
+              };
+        /* const alt =
+        _.get(heroImage, "fields.description") ||
+        _.get(heroImage, "fields.title"); */
+
+        return (
+          <div key={slug} className="blog-page-post">
+            <div className="blog-page-post-wrap-img">
+              <a className="" href={`/post?name=${slug}`}>
+                <div className="blog-page-post-img" style={styles} />
+              </a>
             </div>
-            <div className="blog-page-post-header">
-              <div className="date">
-                <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>
+            <div className="blog-page-post-info">
+              <div className="blog-page-post-info-tag-container">
+                {tags.map(tag => (
+                  <span className="tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
               </div>
-              <div className="title">{title}</div>
+              <span className="blog-page-post-date">
+                <Moment format="MMMM D, YYYY">{publishDate}</Moment>
+              </span>
+              <h2>
+                <a className="" href={`/post?name=${slug}`}>
+                  {title}
+                </a>
+              </h2>
+              {counter === 0 && description && (
+                <React.Fragment>
+                  <p className="blog-page-post-description">
+                    {description.slice(0, 128).concat("...")}
+                  </p>
+                  <a
+                    className="blog-page-post-read-more"
+                    href={`/post?name=${slug}`}
+                  >
+                    Read More
+                  </a>
+                </React.Fragment>
+              )}
             </div>
-          </a>
-        </Link>
-      );
-    })}
-  </div>
-);
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 Posts.propTypes = {
-  posts: PropTypes.array,
+  posts: PropTypes.array
 };
 Posts.defaultProps = {
-  posts: [],
+  posts: []
 };
 
 export default Posts;
