@@ -1,4 +1,4 @@
-import {PATH} from './config/default-path';
+import { PATH } from './config/default-path';
 describe('Check Services content navigation carousel', () => {
 	let page;
 
@@ -8,8 +8,8 @@ describe('Check Services content navigation carousel', () => {
 	});
 
 	afterAll(async () => {
-        await page.close();
-    });
+		await page.close();
+	});
 	test("next_btn-1 web dev page", async () => {
 		await page.goto(`${PATH}/services-web-development`);
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
@@ -72,4 +72,3 @@ describe('Check Services content navigation carousel', () => {
 	});
 });
 
-  

@@ -8,8 +8,9 @@ const DIR = path.join(os.tmpdir(), 'jest_puppeteer_global_setup');
 
 const headless = !process.env.DEBUG;
 
-module.exports = async function() {
-  const browser = await puppeteer.launch({ headless,
+module.exports = async function () {
+  const browser = await puppeteer.launch({
+    headless,
     args: [
       '--disable-background-timer-throttling',
       '--disable-backgrounding-occluded-windows',
