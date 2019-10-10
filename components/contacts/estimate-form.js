@@ -53,11 +53,6 @@ const EstimateForm = () => {
   } = useContext(ContactUsContext);
 
   useEffect(() => {
-    console.log(services);
-    console.log(pm.value);
-    console.log(budget.value);
-    
-        
     setWishlist(
       [
         stage.value,

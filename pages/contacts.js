@@ -174,7 +174,7 @@ const MobileWishlist = ({ wishlist }) => {
       </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
-          <span key={item} className="wish-item">
+          <span key={Math.random()} className="wish-item">
             {item}
           </span>
         ))}
@@ -201,7 +201,7 @@ const wishlistPanel = (wishlist) => (
     <hr className="hr-top display-block-sm" />
     <div className="wish-list display-block-sm">
       {wishlist.map((item) => (
-        <span key={item} className="wish-item">
+        <span key={Math.random()} className="wish-item">
           {item}
         </span>
       ))}
