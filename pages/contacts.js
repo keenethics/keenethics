@@ -106,6 +106,31 @@ const Address = ({ className }) => (
           </a>
         </div>
       </li>
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
+        <div className="flag-country-wrapper">
+          <span className="flag-country-wrapper-flag">
+            <img
+              src="/static/images/flag_netherlands.png"
+              alt="Flag"
+              className="ico flag"
+            />
+          </span>
+          <span className="country" itemProp="addressRegion">
+            The USA
+          </span>
+        </div>
+        <div className="address-telephone-wrapper">
+          <a href="tel:+19292141392">
+            <span className="telephone" itemProp="telephone">
+              +1 (929) 214 1392
+            </span>
+          </a>
+        </div>
+      </li>
     </ul>
   </address>
 );

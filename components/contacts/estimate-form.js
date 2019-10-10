@@ -53,6 +53,11 @@ const EstimateForm = () => {
   } = useContext(ContactUsContext);
 
   useEffect(() => {
+    console.log(services);
+    console.log(pm.value);
+    console.log(budget.value);
+    
+        
     setWishlist(
       [
         stage.value,
@@ -835,16 +840,17 @@ Start
             <div className="grey-checkbox-wrapper">
               <Checkbox
                 className="grey"
-                text="I am a subscriber."
+                text="I want to use a subscriber discount (specify in your message)"
                 name="estimateFormIsSubscriber"
                 id="estimateFormIsSubscriber"
                 value="estimateFormIsSubscriber"
                 onChange={() => {
                   setIsSubscriber(!isSubscriber);
+                  setHasDiscount(!hasDiscount);
                 }}
                 isChecked={isSubscriber}
               />
-              <Checkbox
+              {/* <Checkbox
                 className="grey"
                 text="I have a discount."
                 secondaryText="(Please, specify in your message)."
@@ -855,7 +861,7 @@ Start
                   setHasDiscount(!hasDiscount);
                 }}
                 isChecked={hasDiscount}
-              />
+              /> */}
             </div>
             <div className="wizard-stage-footer mt-auto">
               <button
