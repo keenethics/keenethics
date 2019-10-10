@@ -393,7 +393,8 @@
       line-height: 14px;
       color: #764ba2;
       margin: 0 10px 12px 0;
-
+      user-select: none;
+      
       &:nth-child(even) {
         margin-right: 0;
       }
