@@ -118,7 +118,7 @@ app.prepare().then(() => {
       });
       return;
     }
-    if (!formatValidation.validate({ min: 3, max: 800 }, message.value)) {
+    if (!formatValidation.validate({ min: 0, max: 800 }, message.value)) {
       message.error = true;
 
       res.send({

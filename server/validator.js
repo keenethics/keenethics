@@ -13,7 +13,7 @@ const errorMessages = ({ value }, field) => {
 };
 
 const checkRequiredEstimateFields = (body) => {
-  const requiredFields = ['stage', 'services', 'budget', 'timeframe', 'start', 'name', 'phoneEstimate', 'emailEstimate'];
+  const requiredFields = ['name', 'emailEstimate'];
   const invalidFields = requiredFields.filter((field) => {
     if (body[field] && Array.isArray(body[field].value)) {
       return !body[field].value.length;
