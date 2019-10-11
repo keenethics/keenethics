@@ -17,7 +17,7 @@ const EstimateForm = () => {
     error: false,
   });
   const [budget, setBudget] = useState({
-    value: '',
+    value: 'I am not sure',
     error: false,
   });
   const [timeframe, setTimeframe] = useState({
@@ -213,7 +213,7 @@ Stage
                     />
                     <label htmlFor="existing" className="label-for-radio-btn">
                       <b className="font-bold d-block">Ongoing project</b>
-                      <span className="text-dimmed">continue development</span>
+                      <span className="text-dimmed">to continue development</span>
                     </label>
                   </span>
                   <span>
@@ -232,7 +232,7 @@ Stage
                     />
                     <label htmlFor="legacy" className="label-for-radio-btn">
                       <b className="font-bold d-block">Legacy project</b>
-                      <span className="text-dimmed">continue development</span>
+                      <span className="text-dimmed">to continue development</span>
                     </label>
                   </span>
                 </div>
@@ -291,7 +291,7 @@ Services needed
               <div className="options-wrapper odd-options-number">
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Team enhancement"
+                    text="Team augmentation"
                     name="services"
                     id="еeam-enhancement"
                     value="Team enhancement"
@@ -403,10 +403,9 @@ Services needed
 Project Management
             </div>
             <div className="estimate-input-cols">
-              <p className="text-normal">
-                Do you require either a product manager or a project manager,
-                who will save your time by describing, assigning, and
-                prioritizing tasks?
+              <p className="text-normal text-label">
+                Do you require a product manager or a project manager,
+                 who will save your time by describing, assigning, and prioritizing tasks?
               </p>
               <div className="options-wrapper odd-options-number">
                 <div className="input-radio-wrap">
@@ -496,13 +495,13 @@ Expected budget
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="button"
-                className="button no-shadow button-send"
+                className="button no-shadow button-send btn-wide"
                 onClick={wizardStageIncreaser}
               >
                 Continue
@@ -759,14 +758,14 @@ Start
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="button"
                 onClick={wizardStageIncreaser}
-                className="button no-shadow button-send"
+                className="button no-shadow button-send btn-wide"
               >
                 Continue
               </button>
@@ -833,19 +832,20 @@ Start
                 />
               </div>
             </div>
-            <div className="grey-checkbox-wrapper here">
+            <div className="grey-checkbox-wrapper">
               <Checkbox
                 className="grey"
-                text="I am a subscriber."
+                text="I want to use a subscriber discount (specify in your message)"
                 name="estimateFormIsSubscriber"
                 id="estimateFormIsSubscriber"
                 value="estimateFormIsSubscriber"
                 onChange={() => {
                   setIsSubscriber(!isSubscriber);
+                  setHasDiscount(!hasDiscount);
                 }}
                 isChecked={isSubscriber}
               />
-              <Checkbox
+              {/* <Checkbox
                 className="grey"
                 text="I have a discount."
                 secondaryText="(Please, specify in your message)."
@@ -856,22 +856,21 @@ Start
                   setHasDiscount(!hasDiscount);
                 }}
                 isChecked={hasDiscount}
-              />
+              /> */}
             </div>
             <div className="wizard-stage-footer mt-auto">
               <button
                 onClick={wizardStageDecreaser}
                 type="button"
-                className="button no-shadow"
+                className="button no-shadow text-uppercase btn-wide"
               >
                 Back
               </button>
               <button
                 type="submit"
-                className={classnames('button no-shadow button-send', {
+                className={classnames('button no-shadow button-send btn-wide', {
                   pending:
                     !name.value
-                    || !messageEstimate.value
                     || !emailEstimate.value
                     || isPending,
                 })}

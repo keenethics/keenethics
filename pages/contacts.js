@@ -99,9 +99,34 @@ const Address = ({ className }) => (
 5346 RT
             </span>
           </a>
+          <a href="tel:+31202620944">
+            <span className="telephone" itemProp="telephone">
+              +31 20 262 0944
+            </span>
+          </a>
+        </div>
+      </li>
+      <li
+        itemProp="address"
+        itemScope
+        itemType="http://schema.org/PostalAddress"
+      >
+        <div className="flag-country-wrapper">
+          <span className="flag-country-wrapper-flag">
+            <img
+              src="/static/images/flag_netherlands.png"
+              alt="Flag"
+              className="ico flag"
+            />
+          </span>
+          <span className="country" itemProp="addressRegion">
+            The USA
+          </span>
+        </div>
+        <div className="address-telephone-wrapper">
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
-              +1 929 214 1392
+              +1 (929) 214 1392
             </span>
           </a>
         </div>
@@ -149,7 +174,7 @@ const MobileWishlist = ({ wishlist }) => {
       </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
-          <span key={item} className="wish-item">
+          <span key={Math.random()} className="wish-item">
             {item}
           </span>
         ))}
@@ -176,7 +201,7 @@ const wishlistPanel = (wishlist) => (
     <hr className="hr-top display-block-sm" />
     <div className="wish-list display-block-sm">
       {wishlist.map((item) => (
-        <span key={item} className="wish-item">
+        <span key={Math.random()} className="wish-item">
           {item}
         </span>
       ))}

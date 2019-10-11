@@ -9,7 +9,8 @@
     "lint": "eslint . --ext .jsx,.js --fix",
     "test": "jest",
     "analyze": "cross-env ANALYZE=1 next build",
-    "deploy": "bash deploy"
+    "deploy": "bash deploy",
+    "endtoend": "jest --config=__tests__/endtoend/jest.config.js --runInBand"
   },
   "repository": {
     "type": "git",
