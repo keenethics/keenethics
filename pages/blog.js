@@ -22,7 +22,7 @@ const transformateCategories = (chosenCategory, existCategories) => {
 };
 
 function getCategoriesList({ posts, url }) {
-  const chosenCategory = url.query.chosen;
+  const chosenCategory = url.query ? url.query.chosen : '';
   const categories = posts.reduce((acc, post) => {
     if (post.fields && post.fields.categories) {
       return [...acc, ...post.fields.categories];
