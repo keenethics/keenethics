@@ -114,7 +114,7 @@ const Address = ({ className }) => (
         <div className="flag-country-wrapper">
           <span className="flag-country-wrapper-flag">
             <img
-              src="/static/images/flag_netherlands.png"
+              src="/static/images/united-states.svg"
               alt="Flag"
               className="ico flag"
             />

@@ -17,7 +17,7 @@ const EstimateForm = () => {
     error: false,
   });
   const [budget, setBudget] = useState({
-    value: 'I am not sure',
+    value: '',
     error: false,
   });
   const [timeframe, setTimeframe] = useState({
@@ -244,7 +244,7 @@ Stage
 Services needed
             </div>
             <div className="estimate-input-cols">
-              <p>Software Development</p>
+              <p>Software development</p>
               <div className="options-wrapper">
                 <div className="input-checkbox-wrap">
                   <Checkbox
@@ -287,7 +287,7 @@ Services needed
                   />
                 </div>
               </div>
-              <p>Other Services</p>
+              <p>Other services</p>
               <div className="options-wrapper odd-options-number">
                 <div className="input-checkbox-wrap">
                   <Checkbox
@@ -379,6 +379,16 @@ Services needed
                     isChecked={services.value.includes('IoT')}
                   />
                 </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Other services"
+                    name="services"
+                    id="other-services"
+                    value="Other services"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Other services')}
+                  />
+                </div>
               </div>
             </div>
             <div className="wizard-stage-footer mt-auto">
@@ -400,7 +410,7 @@ Services needed
             <div className="question-title">
               <span className="question-number">3.</span>
               {' '}
-Project Management
+Project management
             </div>
             <div className="estimate-input-cols">
               <p className="text-normal text-label">
@@ -450,9 +460,9 @@ Project Management
                     type="radio"
                     value="I am not sure"
                     id="notSureAboutPM"
-                    onChange={(event) => {
+                    onChange={() => {
                       setPm({
-                        value: event.target.value,
+                        value: 'I am not sure about project management',
                         error: '',
                       });
                     }}
@@ -477,13 +487,14 @@ Expected budget
                 <select
                   name="budget"
                   className="input-select"
-                  onChange={(event) => setBudget({
-                    value: event.target.value,
+                  onChange={() => setBudget({
+                    value: 'I am not sure about the expected budget',
                     error: '',
                   })
                   }
                   value={budget.value}
                 >
+                  <option value="">Please, select budget</option>
                   <option value="I am not sure">I am not sure</option>
                   <option value="Less than $10,000">Less than $10,000</option>
                   <option value="$10,000 - $45,000">$10,000 - $45,000</option>
@@ -524,9 +535,9 @@ Timeframe
                     type="radio"
                     value="I am not sure"
                     id="timeframeLessThanAMonth"
-                    onChange={(event) => {
+                    onChange={() => {
                       setTimeframe({
-                        value: event.target.value,
+                        value: 'I am not sure about the timeframe',
                         error: '',
                       });
                     }}
@@ -638,9 +649,9 @@ Start
                     type="radio"
                     value="I am not sure"
                     id="startNotSure"
-                    onChange={(event) => {
+                    onChange={() => {
                       setStart({
-                        value: event.target.value,
+                        value: 'I am not sure about the start',
                         error: '',
                       });
                     }}
