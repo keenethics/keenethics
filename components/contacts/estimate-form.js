@@ -57,10 +57,10 @@ const EstimateForm = () => {
       [
         stage.value,
         ...services.value,
-        pm.value === 'I am not sure' ? 'I am not sure about project management' : pm.value,
-        budget.value === 'I am not sure' ? 'I am not sure about the expected budget' : budget.value,
-        timeframe.value === 'I am not sure' ? 'I am not sure about the timeframe' : timeframe.value,
-        start.value === 'I am not sure' ? 'I am not sure about the start' : start.value,
+        pm.value,
+        budget.value,
+        timeframe.value,
+        start.value,
       ].filter((item) => !!item),
     );
   }, [
@@ -460,9 +460,9 @@ Project management
                     type="radio"
                     value="I am not sure"
                     id="notSureAboutPM"
-                    onChange={(event) => {
+                    onChange={() => {
                       setPm({
-                        value: event.target.value,
+                        value: 'I am not sure about project management',
                         error: '',
                       });
                     }}
@@ -487,8 +487,8 @@ Expected budget
                 <select
                   name="budget"
                   className="input-select"
-                  onChange={(event) => setBudget({
-                    value: event.target.value,
+                  onChange={() => setBudget({
+                    value: 'I am not sure about the expected budget',
                     error: '',
                   })
                   }
@@ -535,9 +535,9 @@ Timeframe
                     type="radio"
                     value="I am not sure"
                     id="timeframeLessThanAMonth"
-                    onChange={(event) => {
+                    onChange={() => {
                       setTimeframe({
-                        value: event.target.value,
+                        value: 'I am not sure about the timeframe',
                         error: '',
                       });
                     }}
@@ -649,9 +649,9 @@ Start
                     type="radio"
                     value="I am not sure"
                     id="startNotSure"
-                    onChange={(event) => {
+                    onChange={() => {
                       setStart({
-                        value: event.target.value,
+                        value: 'I am not sure about the start',
                         error: '',
                       });
                     }}
