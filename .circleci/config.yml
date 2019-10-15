@@ -39,6 +39,9 @@ jobs:
     docker:
       - image: circleci/node:latest
     working_directory: ~/keenethics
+    branches:
+      ignore:
+        - master
     steps:
       - checkout
       - restore_cache:
