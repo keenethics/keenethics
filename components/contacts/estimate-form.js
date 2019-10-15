@@ -903,27 +903,15 @@ Start
               <Checkbox
                 className="grey"
                 text="I want to use a subscriber discount (specify in your message)"
-                name="estimateFormIsSubscriber"
-                id="estimateFormIsSubscriber"
-                value="estimateFormIsSubscriber"
+                name="estimateFormIsSubscriberDiscount"
+                id="estimateFormIsSubscriberDiscount"
+                value="estimateFormIsSubscriberDiscount"
                 onChange={() => {
                   setIsSubscriber(!isSubscriber);
                   setHasDiscount(!hasDiscount);
                 }}
-                isChecked={isSubscriber}
-              />
-              {/* <Checkbox
-                className="grey"
-                text="I have a discount."
-                secondaryText="(Please, specify in your message)."
-                name="estimateFormHasDiscount"
-                id="estimateFormHasDiscount"
-                value="estimateFormHasDiscount"
-                onChange={() => {
-                  setHasDiscount(!hasDiscount);
-                }}
                 isChecked={hasDiscount}
-              /> */}
+              />
             </div>
             <div className="wizard-stage-footer mt-auto">
               <button
