@@ -120,12 +120,12 @@ const ProjectTheCheckNetwork = () => (
                 title="SHARE YOUR IDEA"
                 buttonBefore={(
                   <a
-                    href="http://www.thechecknetwork.com/"
+                    href="https://keenethics.com/portfolio"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                   >
                     <button type="button" className="call-to-cation-btn -secondary">
-                      CHECK THE PROJECT
+                      OTHER PROJECTS
                     </button>
                   </a>
                 )}
