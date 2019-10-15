@@ -141,6 +141,19 @@ app.prepare().then(() => {
       html,
     };
 
+    const dublicateMailOptions = {
+      from: 'no-reply@keenethics.com',
+      to: 'oleh.romanyuk@keenethics.com',
+      subject: `New message from ${email.value}`,
+      html,
+    };
+
+    transporter.sendMail(dublicateMailOptions, (err) => {
+      if (err) {
+        throw err;
+      }
+    });
+
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
         throw err;

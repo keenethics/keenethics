@@ -458,15 +458,15 @@ Project management
                   <input
                     name="isPMrequired"
                     type="radio"
-                    value="I am not sure"
+                    value="I am not sure about project management"
                     id="notSureAboutPM"
-                    onChange={() => {
+                    onChange={(event) => {
                       setPm({
-                        value: 'I am not sure about project management',
+                        value: event.target.value,
                         error: '',
                       });
                     }}
-                    checked={pm.value === 'I am not sure'}
+                    checked={pm.value === 'I am not sure about project management'}
                   />
                   <label
                     htmlFor="notSureAboutPM"
@@ -480,26 +480,82 @@ Project management
             <div className="question-title">
               <span className="question-number">4.</span>
               {' '}
-Expected budget
+              Expected budget
             </div>
-            <div className="estimate-input-cols mb-auto">
-              <div className="input-select-wrap">
-                <select
-                  name="budget"
-                  className="input-select"
-                  onChange={() => setBudget({
-                    value: 'I am not sure about the expected budget',
-                    error: '',
-                  })
-                  }
-                  value={budget.value}
-                >
-                  <option value="">Please, select budget</option>
-                  <option value="I am not sure">I am not sure</option>
-                  <option value="Less than $10,000">Less than $10,000</option>
-                  <option value="$10,000 - $45,000">$10,000 - $45,000</option>
-                  <option value="More than $45,000">More than $45,000</option>
-                </select>
+            <div className="estimate-input-cols">
+              <div className="options-wrapper odd-options-number">
+                <div className="input-radio-wrap">
+                  <input
+                    name="budget"
+                    type="radio"
+                    value="Less than $10,000"
+                    id="budgetLtTen"
+                    onChange={(event) => {
+                      setBudget({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={budget.value === 'Less than $10,000'}
+                  />
+                  <label htmlFor="budgetLtTen" className="label-for-radio-btn">
+                    Less than $10,000
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="budget"
+                    type="radio"
+                    value="$10,000 - $45,000"
+                    id="tenToForty"
+                    onChange={(event) => {
+                      setBudget({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={budget.value === '$10,000 - $45,000'}
+                  />
+                  <label htmlFor="tenToForty" className="label-for-radio-btn">
+                    $10,000 - $45,000
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="budget"
+                    type="radio"
+                    value="More than $45,000"
+                    id="budgetMoreThen"
+                    onChange={(event) => {
+                      setBudget({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={budget.value === 'More than $45,000'}
+                  />
+                  <label htmlFor="budgetMoreThen" className="label-for-radio-btn">
+                  More than $45,000
+                  </label>
+                </div>
+                <div className="input-radio-wrap">
+                  <input
+                    name="budget"
+                    type="radio"
+                    value="I am not sure about the expected budget"
+                    id="budgetNotSure"
+                    onChange={(event) => {
+                      setBudget({
+                        value: event.target.value,
+                        error: '',
+                      });
+                    }}
+                    checked={budget.value === 'I am not sure about the expected budget'}
+                  />
+                  <label htmlFor="budgetNotSure" className="label-for-radio-btn">
+                    I am not sure
+                  </label>
+                </div>
               </div>
             </div>
             <div className="wizard-stage-footer mt-auto">
@@ -533,15 +589,15 @@ Timeframe
                   <input
                     name="timeframe"
                     type="radio"
-                    value="I am not sure"
+                    value="I am not sure about the timeframe"
                     id="timeframeLessThanAMonth"
-                    onChange={() => {
+                    onChange={(event) => {
                       setTimeframe({
-                        value: 'I am not sure about the timeframe',
+                        value: event.target.value,
                         error: '',
                       });
                     }}
-                    checked={timeframe.value === 'I am not sure'}
+                    checked={timeframe.value === 'I am not sure about the timeframe'}
                   />
                   <label
                     htmlFor="timeframeLessThanAMonth"
@@ -555,7 +611,7 @@ Timeframe
                     name="timeframe"
                     type="radio"
                     value="Less than 1 month"
-                    id="timeframeUpToThreeMonths"
+                    id="notSureTimeframe"
                     onChange={(event) => {
                       setTimeframe({
                         value: event.target.value,
@@ -565,7 +621,7 @@ Timeframe
                     checked={timeframe.value === 'Less than 1 month'}
                   />
                   <label
-                    htmlFor="timeframeUpToThreeMonths"
+                    htmlFor="notSureTimeframe"
                     className="label-for-radio-btn"
                   >
                     Less than 1 month
@@ -576,7 +632,7 @@ Timeframe
                     name="timeframe"
                     type="radio"
                     value="1 to 3 months"
-                    id="timeframeIsUpToSixMonths"
+                    id="timeframeOneToThree"
                     onChange={(event) => {
                       setTimeframe({
                         value: event.target.value,
@@ -586,7 +642,7 @@ Timeframe
                     checked={timeframe.value === '1 to 3 months'}
                   />
                   <label
-                    htmlFor="timeframeIsUpToSixMonths"
+                    htmlFor="timeframeOneToThree"
                     className="label-for-radio-btn"
                   >
                     1 to 3 months
@@ -597,7 +653,7 @@ Timeframe
                     name="timeframe"
                     type="radio"
                     value="3 to 6 months"
-                    id="timeframeIsAboveSixMonths"
+                    id="TimeFrameThreeToSix"
                     onChange={(event) => {
                       setTimeframe({
                         value: event.target.value,
@@ -607,7 +663,7 @@ Timeframe
                     checked={timeframe.value === '3 to 6 months'}
                   />
                   <label
-                    htmlFor="timeframeIsAboveSixMonths"
+                    htmlFor="TimeFrameThreeToSix"
                     className="label-for-radio-btn"
                   >
                     3 to 6 months
@@ -617,7 +673,7 @@ Timeframe
                   <input
                     name="timeframe"
                     type="radio"
-                    value="Less than 6 months"
+                    value="More than 6 months"
                     id="timeframeIsAboveSixMonths"
                     onChange={(event) => {
                       setTimeframe({
@@ -625,13 +681,13 @@ Timeframe
                         error: '',
                       });
                     }}
-                    checked={timeframe.value === 'Less than 6 months'}
+                    checked={timeframe.value === 'More than 6 months'}
                   />
                   <label
                     htmlFor="timeframeIsAboveSixMonths"
                     className="label-for-radio-btn"
                   >
-                    Less than 6 months
+                    More than 6 months
                   </label>
                 </div>
               </div>
@@ -647,15 +703,15 @@ Start
                   <input
                     name="start"
                     type="radio"
-                    value="I am not sure"
+                    value="I am not sure about the start"
                     id="startNotSure"
-                    onChange={() => {
+                    onChange={(event) => {
                       setStart({
-                        value: 'I am not sure about the start',
+                        value: event.target.value,
                         error: '',
                       });
                     }}
-                    checked={start.value === 'I am not sure'}
+                    checked={start.value === 'I am not sure about the start'}
                   />
                   <label htmlFor="startNotSure" className="label-for-radio-btn">
                     I am not sure

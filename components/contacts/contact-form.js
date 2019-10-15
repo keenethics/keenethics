@@ -151,26 +151,15 @@ const ContactForm = () => {
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
-            text="I am a subscriber."
-            name="contactFormIsSubscriber"
-            id="contactFormIsSubscriber"
-            value="contactFormIsSubscriber"
+            text="I want to use a subscriber discount (specify in your message)"
+            name="estimateFormIsSubscriber"
+            id="estimateFormIsSubscriber"
+            value="estimateFormIsSubscriber"
             onChange={() => {
               setIsSubscriber(!isSubscriber);
-            }}
-            isChecked={isSubscriber}
-          />
-          <Checkbox
-            className="grey"
-            text="I have a discount."
-            secondaryText="(Please, specify in your message)."
-            name="contactFormHasDiscount"
-            id="contactFormHasDiscount"
-            value="contactFormHasDiscount"
-            onChange={() => {
               setHasDiscount(!hasDiscount);
             }}
-            isChecked={hasDiscount}
+            isChecked={isSubscriber}
           />
         </div>
         <div className="submit-btn">
