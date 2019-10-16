@@ -136,23 +136,10 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com',
+      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
     };
-
-    const dublicateMailOptions = {
-      from: 'no-reply@keenethics.com',
-      to: 'oleh.romanyuk@keenethics.com',
-      subject: `New message from ${email.value}`,
-      html,
-    };
-
-    transporter.sendMail(dublicateMailOptions, (err) => {
-      if (err) {
-        throw err;
-      }
-    });
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
