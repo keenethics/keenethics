@@ -1,11 +1,4 @@
-workflows:
-  version: 2
-  untagged-build:
-    jobs:
-      - lint
-  tagged-build:
-    jobs:
-      - build
+version: 2
 jobs:
   build:
     docker:
@@ -39,6 +32,9 @@ jobs:
     docker:
       - image: circleci/node:latest
     working_directory: ~/keenethics
+    branches:
+      ignore:
+        - master
     steps:
       - checkout
       - restore_cache:
