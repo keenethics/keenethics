@@ -19,12 +19,12 @@ const Works = ({ works }) => (
                   <ul className="portfolio__item-categories">
                     {
                       work.category.main && work.category.main !== 'Other'
-                        ? work.category.main.map((category) => (<span className="tag" key={category}>{category}</span>))
+                        ? work.category.main.map((category) => (<li className="tag" key={category}>{category}</li>))
                         : null
                     }
                     {
                       work.category.additional
-                        ? work.category.additional.map((category) => (<span className="tag" key={category}>{category}</span>))
+                        ? work.category.additional.map((category) => (<li className="tag" key={category}>{category}</li>))
                         : null
                     }
                   </ul>
