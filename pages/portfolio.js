@@ -4,7 +4,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
-import Background from '../components/content/background';
 
 import Works from '../components/portfolio/works';
 import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
@@ -69,9 +68,13 @@ class Portfolio extends React.Component {
     return (
       <Layout>
         <section className="portfolio">
-          <Background className="portfolio__background" />
           <div className="portfolio__header">
-            <h1 className="portfolio__title">Portfolio</h1>
+            <h1 className="portfolio__title">
+              <span className="text-color-red">Keen</span>
+              &nbsp;Portfolio
+              <br />
+              on Tech and business
+            </h1>
           </div>
           <CategoriesFilter
             categorisList={categorisList}
