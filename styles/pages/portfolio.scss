@@ -30,6 +30,10 @@
   font-size: 28px;
   line-height: 40px;
 
+  .text-color-red {
+    color: #D42E2D;
+  }
+
   @include breakpoint(after-mobile) {
     font-size: 32px;
   }

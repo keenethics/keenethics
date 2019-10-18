@@ -71,9 +71,9 @@ class Portfolio extends React.Component {
           <div className="portfolio__header">
             <h1 className="portfolio__title">
               <span className="text-color-red">Keen</span>
-              &nbsp;Portfolio
+              &nbsp;projects
               <br />
-              on Tech and business
+              we put into action
             </h1>
           </div>
           <CategoriesFilter
