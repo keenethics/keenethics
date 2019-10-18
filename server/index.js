@@ -132,6 +132,7 @@ app.prepare().then(() => {
       <p>${firstname.value} ${lastname.value}</p>
       <p>Email: ${email.value}</p>
       <p>Phone: ${phone.value}</p>
+      <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {

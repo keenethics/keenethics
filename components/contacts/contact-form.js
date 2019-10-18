@@ -161,6 +161,7 @@ const ContactForm = () => {
             }}
             isChecked={isSubscriber}
           />
+          <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
         </div>
         <div className="submit-btn">
           <button

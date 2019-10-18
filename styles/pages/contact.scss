@@ -82,6 +82,7 @@
 
           @include breakpoint(sm-max) {
             margin-bottom: 16px;
+            justify-content: center;
           }
 
           &-flag {
@@ -1084,8 +1085,13 @@
 }
 
 .grey-checkbox-wrapper {
+  flex-direction: column;
   display: flex;
   margin-bottom: 14px;
+  .inline-link {
+    font-size: 12px;
+    font-weight: bold;
+  }
 }
 
 .btn-send {

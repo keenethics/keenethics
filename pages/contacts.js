@@ -74,7 +74,7 @@ const Address = ({ className }) => (
               />
             </span>
             <span className="country" itemProp="addressRegion">
-              The Netherlands
+              Netherlands
             </span>
           </div>
         </a>
@@ -120,7 +120,7 @@ const Address = ({ className }) => (
             />
           </span>
           <span className="country" itemProp="addressRegion">
-            The USA
+            USA
           </span>
         </div>
         <div className="address-telephone-wrapper">
