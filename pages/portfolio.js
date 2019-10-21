@@ -50,7 +50,7 @@ class Portfolio extends React.Component {
     const selectedWorks = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
       : uniqCategories;
 
-    return { selectedWorks, categorisList: uniqCategories };
+    return { selectedWorks, categoriesList: uniqCategories };
   }
 
   worksCountFor(work) {
@@ -63,7 +63,7 @@ class Portfolio extends React.Component {
   }
 
   render() {
-    const { selectedWorks, categorisList } = this.state;
+    const { selectedWorks, categoriesList } = this.state;
 
     return (
       <Layout>
@@ -77,7 +77,7 @@ class Portfolio extends React.Component {
             </h1>
           </div>
           <CategoriesFilter
-            categorisList={categorisList}
+            categoriesList={categoriesList}
             selectedCategories={selectedWorks}
             filterOnChange={this.filterOnChange}
             pageTitle="portfolio"

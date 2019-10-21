@@ -1,108 +1,49 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import classnames from 'classnames';
-import CategoryButton from './CategoryButton';
-
-export default class CategoriesFilter extends Component {
+export default class CategoriesFilter extends React.Component {
   constructor() {
     super();
     this.state = {
-      disabledBtnAnimation: '',
+      isExpanded: false,
     };
-    this.buttonClick = this.buttonClick.bind(this);
-    this.showAllWorks = this.showAllWorks.bind(this);
   }
 
-  buttonClick(category) {
-    const { filterOnChange, selectedCategories, pageTitle } = this.props;
-    const selectedItems = selectedCategories.slice();
-    const position = selectedItems.indexOf(category);
-
-    if (position === -1) {
-      selectedItems.push(category);
-    } else if (selectedItems.length === 1) {
-      this.setState({ disabledBtnAnimation: category });
-      setTimeout(() => {
-        this.setState({ disabledBtnAnimation: '' });
-      }, 500);
-      return;
-    } else {
-      selectedItems.splice(position, 1);
-    }
-    const url = `/${pageTitle}?chosen=${selectedItems.join(',')}`;
-    window.history.replaceState({ url }, '', url);
-    filterOnChange(selectedItems);
-  }
-
-  showAllWorks() {
-    const {
-      filterOnChange,
-      selectedCategories,
-      categorisList,
-      pageTitle,
-    } = this.props;
-    const selectedItems = selectedCategories.slice();
-
-    if (selectedItems.length === categorisList.length) {
-      this.setState({ disabledBtnAnimation: 'all' });
-      setTimeout(() => {
-        this.setState({ disabledBtnAnimation: '' });
-      }, 500);
-      return;
-    }
-
-    const url = `/${pageTitle}`;
-    window.history.replaceState({ url }, '', url);
-
-    filterOnChange(categorisList);
+  toggleExpand = () => {
+    this.setState((state) => ({ isExpanded: !state.isExpanded }));
   }
 
   render() {
-    const { disabledBtnAnimation } = this.state;
-    const {
-      categorisList,
-      selectedCategories,
-      pageTitle,
-    } = this.props;
+    const { pageTitle, categoriesList, selectedCategories } = this.props;
+    const { isExpanded } = this.state;
+
     return (
       <div className={`filter filter--${pageTitle}`}>
-        <div className="filter__show-all">
-          <button
-            onClick={this.showAllWorks}
-            className={classnames(
-              'filter__btn -show-all',
-              {
-                '-active': selectedCategories.length !== categorisList.length,
-                '-disabled': disabledBtnAnimation === 'all',
-              },
-            )}
-            type="button"
-          >
-              Show all
-          </button>
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={this.toggleExpand}
+          onKeyPress={this.toggleExpand}
+          className={classNames('filter--toggler', { 'filter--toggler__expanded': isExpanded })}
+        >
+          {
+            selectedCategories.length
+              && selectedCategories.length !== categoriesList.length
+              ? `${selectedCategories.length} filter selected`
+              : 'Set the filters'}
         </div>
-        <ul className="filter__list">
-          {categorisList.map((category) => (
-            <CategoryButton
-              category={category}
-              key={category}
-              isActive={selectedCategories.includes(category)}
-              buttonClick={() => this.buttonClick(category)}
-              isDisabled={disabledBtnAnimation === category}
-            />
-          ))}
-        </ul>
       </div>
     );
   }
 }
+
 CategoriesFilter.propTypes = {
-  categorisList: PropTypes.array.isRequired,
-  selectedCategories: PropTypes.array,
-  filterOnChange: PropTypes.func.isRequired,
   pageTitle: PropTypes.string.isRequired,
+  categoriesList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedCategories: PropTypes.arrayOf(PropTypes.string),
 };
+
 CategoriesFilter.defaultProps = {
   selectedCategories: [],
 };

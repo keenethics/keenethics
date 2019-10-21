@@ -1,0 +1,106 @@
+.filter {
+   margin-bottom: 30px;
+   display: flex;
+   align-items: center;
+   margin: 0 auto 10px auto;
+   padding: 15px;
+   @media (max-width: 1200px ) {
+      flex-direction: column;
+   }
+   &--blog {
+      max-width: 980px;
+   }
+   &--portfolio {
+      max-width: 900px;
+   }
+}
+.filter__show-all {
+   flex-grow: 1;
+   margin-right: 30px;
+   @media (max-width: 1200px ) {
+      margin-right: 0;
+      margin-bottom: 20px;
+   }
+}
+.filter__list {
+   margin: 0 -10px;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   flex-wrap: wrap;
+   @media (max-width: 1200px ) {
+      max-width: 900px;
+   }
+}
+.filter__item {
+   padding: 10px;
+}
+.filter__btn {
+   padding: 12px 32.5px;
+   border: none;
+   background: rgba($color: #FAFCFC, $alpha: .2);
+   border-radius: 20px;
+   color: #fff;
+   font-size: 14px;
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+   @media (max-width: 1200px ) {
+      min-width: 220px;
+      padding: 10px 30px;
+   }
+   &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      height: 8px;
+      width: 16px;
+      border: 2px solid #fff;
+      border-top: none;
+      border-right: none;
+      transform: translateY(-50%) rotate(315deg);
+      transform-origin: 25%;
+      opacity: 0;
+   }
+   &:focus {
+      outline: none;
+   }
+   &.-red {
+      padding-left: 20px;
+      padding-right: 45px;
+      background: linear-gradient(to right, #e1602c 0%, #dc3a3a 100%);
+      &:after {
+         opacity: 1;
+      }
+   }
+   &.-disabled {
+      position: relative;
+      animation: disabledBtb .05s linear;
+      animation-iteration-count: 3;
+   }
+   &.-show-all {
+      min-width: auto;
+      white-space: nowrap;
+      color: rgba($color: #fff, $alpha: .5);
+      border: .5px solid rgba($color: #fff, $alpha: .3);
+      background: transparent;
+      padding: 12px 15px;
+      @media (max-width: 1000px ) {
+         padding: 10px 15px;
+      }
+      &.-active {
+         color: rgba($color: #fff, $alpha: .8);;
+         border-color: transparent;
+         background: rgba($color: #FAFCFC, $alpha: .2);
+      }
+   }
+   @keyframes disabledBtb {
+      from {
+         left: -1px;
+      }
+      to {
+         right: -1px;
+      }
+   }
+}
