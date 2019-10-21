@@ -68,9 +68,9 @@ class Portfolio extends React.Component {
     return (
       <Layout>
         <section className="portfolio">
-          <div className="portfolio__header">
-            <h1 className="portfolio__title">
-              <span className="text-color-red">Keen</span>
+          <div className="page__header">
+            <h1 className="page__title">
+              <em>Keen</em>
               &nbsp;projects
               <br />
               we put into action
