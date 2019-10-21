@@ -1,42 +1,55 @@
 // unified styles for 'blog' and 'portfolio' pages
 
-.page__header {
-  padding: 76px 22px 58px;
+.page__wrapper {
+  padding: 0 20px 40px;
+  position: relative;
 
   @media (min-width: $mobile-md) {
-    padding: 76px 24px 58px;
+    padding: 0 25px 40px;
   }
 
   @media (min-width: $tablet-sm) {
-    padding: 116px 28px 96px;
+    padding: 0 30px 40px;
+  }
+
+  @media (min-width: $desktop-lg) {
+    padding: 0 40px 40px;
+  }
+}
+
+.page__header {
+  padding: 75px 0 60px;
+
+  @media (min-width: $tablet-sm) {
+    padding: 115px 0 95px;
   }
 
   @media (min-width: $tablet-lg) {
-    padding: 116px 28px 147px;
+    padding: 115px 0 145px;
   }
 
   @media (min-width: $desktop-xs) {
-    padding: 64px 28px 64px 156px;
+    padding: 65px 0 65px 125px;
   }
 
   @media (min-width: $desktop-sm) {
-    padding: 96px 28px 96px 168px;
+    padding: 95px 0 95px 150px;
   }
 
   @media (min-width: $desktop-md) {
-    padding: 96px 28px 96px 216px;
+    padding: 95px 0 95px 215px;
   }
 
   @media (min-width: $desktop-md) {
-    padding: 96px 28px 96px 248px;
+    padding: 95px 0 95px 250px;
   }
 
   @media (min-width: $desktop-xl) {
-    padding: 96px 28px 96px 288px;
+    padding: 95px 0 95px 290px;
   }
 
   @media (min-width: $desktop-xxl) {
-    padding: 96px 28px 96px 408px;
+    padding: 95px 0 95px 410px;
   }
 }
 

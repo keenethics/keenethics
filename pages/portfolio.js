@@ -67,7 +67,7 @@ class Portfolio extends React.Component {
 
     return (
       <Layout>
-        <section className="portfolio">
+        <section className="portfolio page__wrapper">
           <div className="page__header">
             <h1 className="page__title">
               <em>Keen</em>
