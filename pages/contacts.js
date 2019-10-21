@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import { MaxS, PaulW } from '../static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -12,18 +13,21 @@ import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
 
-const Address = ({ className }) => (
+const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
     <ul className="contacts-list">
       <li
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
+        className={(selectedCountry === 'UA' || !selectedCountry) ? 'arrow-left-triangle' : ''}
       >
-        <a
-          href="https://goo.gl/maps/eaAU8qqLZoo"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
+        <button
+          type="button"
+          className="container-btn"
+          onClick={() => {
+            setSelectedCountry('UA');
+          }}
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
@@ -37,7 +41,7 @@ const Address = ({ className }) => (
               Ukraine
             </span>
           </div>
-        </a>
+        </button>
         <div className="address-telephone-wrapper">
           <a
             href="https://goo.gl/maps/eaAU8qqLZoo"
@@ -59,11 +63,14 @@ const Address = ({ className }) => (
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
+        className={selectedCountry === 'NL' ? 'arrow-left-triangle' : ''}
       >
-        <a
-          href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
+        <button
+          type="button"
+          className="container-btn"
+          onClick={() => {
+            setSelectedCountry('NL');
+          }}
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
@@ -74,10 +81,10 @@ const Address = ({ className }) => (
               />
             </span>
             <span className="country" itemProp="addressRegion">
-              Netherlands
+Netherlands
             </span>
           </div>
-        </a>
+        </button>
         <div className="additional-info-wrapper">
           <a href="https://nl.keenethics.com/">
             <span className="text-underline">Go to the website</span>
@@ -111,18 +118,26 @@ const Address = ({ className }) => (
         itemScope
         itemType="http://schema.org/PostalAddress"
       >
-        <div className="flag-country-wrapper">
-          <span className="flag-country-wrapper-flag">
-            <img
-              src="/static/images/united-states.svg"
-              alt="Flag"
-              className="ico flag"
-            />
-          </span>
-          <span className="country" itemProp="addressRegion">
-            USA
-          </span>
-        </div>
+        <button
+          type="button"
+          className="container-btn"
+          onClick={() => {
+            setSelectedCountry('UA');
+          }}
+        >
+          <div className="flag-country-wrapper">
+            <span className="flag-country-wrapper-flag">
+              <img
+                src="/static/images/united-states.svg"
+                alt="Flag"
+                className="ico flag"
+              />
+            </span>
+            <span className="country" itemProp="addressRegion">
+              USA
+            </span>
+          </div>
+        </button>
         <div className="address-telephone-wrapper">
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
@@ -135,7 +150,7 @@ const Address = ({ className }) => (
   </address>
 );
 
-const AddressPanel = () => (
+const AddressPanel = ({ setSelectedCountry, selectedCountry }) => (
   <>
     <h1>
       Get
@@ -143,7 +158,7 @@ const AddressPanel = () => (
       in touch
     </h1>
     <p>Let&apos;s discuss your idea</p>
-    <Address />
+    <Address setSelectedCountry={setSelectedCountry} selectedCountry={selectedCountry} />
   </>
 );
 
@@ -237,19 +252,19 @@ const Contacts = ({ router }) => {
   );
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
 
   function onClick({ target }) {
     setActiveContactForm(target.name === 'contact-form-btn');
   }
 
+  const person = selectedCountry === 'NL' ? PaulW : MaxS;
   return (
     <Layout>
       <div className="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),
-          name: 'Talk to Max Savonin',
-          position: 'CEO at KeenEthics',
-          imgSrc: 'static/images/max_savonin.png',
+          ...person,
           wrapperClassnames: 'display-inline-flex-sm-max',
         })}
         <div className="contacts-socket">
@@ -296,7 +311,12 @@ const Contacts = ({ router }) => {
                   'contacts-panel': activeContactForm,
                 })}
               >
-                {activeContactForm ? <AddressPanel /> : wishlistPanel(wishlist)}
+                {activeContactForm ? (
+                  <AddressPanel
+                    setSelectedCountry={setSelectedCountry}
+                    selectedCountry={selectedCountry}
+                  />
+                ) : wishlistPanel(wishlist)}
                 <hr className="display-block-sm" />
                 <div className="social-icons display-block-sm">
                   <SocialButton />
@@ -340,6 +360,7 @@ const Contacts = ({ router }) => {
                     notifyMessage,
                     setNotifyMessage,
                     setWishlist,
+                    selectedCountry,
                   }}
                 >
                   <div
@@ -360,7 +381,7 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-sm-max" />
+          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} />
         </div>
         {activeContactForm && (
           <div className="social-icons display-block-sm-max">
@@ -382,9 +403,22 @@ Contacts.defaultProps = {
 
 Address.propTypes = {
   className: PropTypes.string,
+  setSelectedCountry: PropTypes.func,
+  selectedCountry: PropTypes.string,
 };
 Address.defaultProps = {
   className: '',
+  setSelectedCountry: null,
+  selectedCountry: '',
+};
+
+AddressPanel.propTypes = {
+  setSelectedCountry: PropTypes.func,
+  selectedCountry: PropTypes.string,
+};
+AddressPanel.defaultProps = {
+  setSelectedCountry: null,
+  selectedCountry: '',
 };
 
 MobileWishlist.propTypes = {
