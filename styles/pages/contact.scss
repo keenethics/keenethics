@@ -1900,6 +1900,20 @@
 
 .arrow-left-triangle {
   position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    height: calc(100% + 40px);
+    width: calc(100% + 100px);
+    background: rgba(0,0,0,.15);
+    overflow: hidden;
+    @include breakpoint(md-max) {
+      left: -31px;
+      width: calc(100% + 62px);
+    }
+  }
   &:after {
     content: '';
     position: absolute;
@@ -1910,5 +1924,9 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent; 
     border-right:10px solid #fff; 
+    overflow: hidden;
+    @include breakpoint(md-max) {
+      right: -31px;
+    }
   }
 }
