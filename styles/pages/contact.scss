@@ -50,7 +50,7 @@
     margin: auto 50px 0;
 
     @include breakpoint(md-max) {
-      margin: 50px auto auto 40px;
+      margin: 50px auto auto 0px;
     }
 
     @include breakpoint(sm-max) {
@@ -1912,6 +1912,10 @@
     @include breakpoint(md-max) {
       left: -31px;
       width: calc(100% + 62px);
+    }
+    @include breakpoint(sm-max) {
+      left: -40px;
+      width: calc(100% + 40px);
     }
   }
   &:after {

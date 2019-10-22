@@ -381,7 +381,7 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} />
+          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} selectedCountry={selectedCountry} />
         </div>
         {activeContactForm && (
           <div className="social-icons display-block-sm-max">
