@@ -7,12 +7,14 @@ export default function FilterBtn({
   buttonClick,
   category,
   isDisabled,
+  className,
 }) {
   return (
-    <li className="filter__item">
+    <li className={`filter__item ${className}`}>
       <button
         className={classnames(
           'filter__btn',
+          className,
           {
             '-red': isActive,
             '-disabled': isDisabled,
@@ -31,8 +33,10 @@ FilterBtn.propTypes = {
   buttonClick: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
   isDisabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 FilterBtn.defaultProps = {
   isActive: false,
   isDisabled: false,
+  className: '',
 };

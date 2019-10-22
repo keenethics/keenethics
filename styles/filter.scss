@@ -1,10 +1,13 @@
+@import "../node_modules/react-slidedown/lib/slidedown.css";
+
 .filter {
   height: auto;
   display: flex;
   flex-flow: column nowrap;
 
-  &--toggler {
+  &__toggler {
     position: relative;
+    margin-bottom: 20px;
     height: 40px;
     border: 1px solid rgba(18, 35, 61, 0.1);
     border-radius: 100px;
@@ -27,8 +30,58 @@
       transform-origin: 50% 50%;
     }
 
-    &__expanded:after {
+    &--expanded:after {
       transform: rotate(360deg);
+    }
+  }
+
+  &__slidedown {
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    // 3px for proper displaying of focused outline
+    padding: 3px 3px 0;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    &:nth-child(odd) {
+      // 100% - two buttons - paddings of ul
+      margin-right: calc(100% - 300px - 6px);
+    }
+  }
+
+  &__btn {
+    width: 150px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: #F2F3F5;
+    border-radius: 20px;
+    color: #12233D;
+    font-size: 14px;
+    line-height: 36px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif, Arial, 'Helvetica Neue', Helvetica;
+
+    &.-hidden {
+      visibility: hidden;
+    }
+
+    &.-clear {
+      background-color: transparent;
+      text-transform: uppercase;
+    }
+
+    &.-show-all {
+      background-color: transparent;
+      color: #D42E2D;
+      border: 1px solid #D42E2D;
     }
   }
 }
