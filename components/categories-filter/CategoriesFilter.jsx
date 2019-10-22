@@ -10,6 +10,7 @@ export default class CategoriesFilter extends React.Component {
     super();
     this.state = {
       isExpanded: false,
+      preventDisablingLast: '',
     };
   }
 
@@ -25,6 +26,10 @@ export default class CategoriesFilter extends React.Component {
     if (position === -1) {
       selectedItems.push(category);
     } else if (selectedItems.length === 1) {
+      this.setState({ preventDisablingLast: category });
+      setTimeout(() => {
+        this.setState({ preventDisablingLast: '' });
+      }, 500);
       return;
     } else {
       selectedItems.splice(position, 1);
@@ -36,7 +41,7 @@ export default class CategoriesFilter extends React.Component {
 
   render() {
     const { pageTitle, categoriesList, selectedCategories } = this.props;
-    const { isExpanded } = this.state;
+    const { isExpanded, preventDisablingLast } = this.state;
 
     return (
       <div className={`filter filter__${pageTitle}`}>
@@ -50,7 +55,7 @@ export default class CategoriesFilter extends React.Component {
           {
             selectedCategories.length
               && selectedCategories.length !== categoriesList.length
-              ? `${selectedCategories.length} filter selected`
+              ? `${selectedCategories.length} filters selected`
               : 'Set the filters'
           }
         </div>
@@ -67,19 +72,17 @@ export default class CategoriesFilter extends React.Component {
                 key={category}
                 isActive={selectedCategories.includes(category)}
                 buttonClick={() => this.buttonClick(category)}
-              // isDisabled={disabledBtnAnimation === category}
+                isDisabled={preventDisablingLast === category}
               />
             ))}
             <br />
             <CategoryButton
               category="Clear"
-              isActive
               buttonClick={() => null}
               className="-clear"
             />
             <CategoryButton
               category="Show All"
-              isActive
               buttonClick={() => null}
               className="-show-all"
             />

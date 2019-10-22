@@ -16,7 +16,7 @@ export default function FilterBtn({
           'filter__btn',
           className,
           {
-            '-red': isActive,
+            '-active': isActive,
             '-disabled': isDisabled,
           },
         )}
