@@ -46,24 +46,27 @@ class Portfolio extends React.Component {
       .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
     const uniqCategories = [...new Set(categories)];
-
-    const selectedWorks = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
-      : uniqCategories;
-
-    return { selectedWorks, categoriesList: uniqCategories };
+    // no selected categories by default
+    const selectedCategories = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
+      : [];
+    return { selectedCategories, categoriesList: uniqCategories };
   }
 
   worksCountFor(work) {
-    const { selectedWorks } = this.state;
-    return work.category.main.filter((category) => selectedWorks.includes(category)).length;
+    const { selectedCategories } = this.state;
+    // When no categories selected - show all works
+    if (!selectedCategories.length) {
+      return true;
+    }
+    return work.category.main.some((category) => selectedCategories.includes(category));
   }
 
-  filterOnChange(selectedWorks) {
-    this.setState({ selectedWorks });
+  filterOnChange(selectedCategories) {
+    this.setState({ selectedCategories });
   }
 
   render() {
-    const { selectedWorks, categoriesList } = this.state;
+    const { selectedCategories, categoriesList } = this.state;
 
     return (
       <Layout>
@@ -78,7 +81,7 @@ class Portfolio extends React.Component {
           </div>
           <CategoriesFilter
             categoriesList={categoriesList}
-            selectedCategories={selectedWorks}
+            selectedCategories={selectedCategories}
             filterOnChange={this.filterOnChange}
             pageTitle="portfolio"
           />

@@ -88,23 +88,5 @@
       background: linear-gradient(to right, #e1602c 0%, #dc3a3a 100%);
       color: white;
     }
-
-    &.-disabled {
-      animation : {
-        name: shake;
-        duration: 0.1s;
-        timing-function: linear;
-        iteration-count: 3;
-      }
-    }
-  }
-}
-
-@keyframes shake {
-  from {
-    transform: translateX(-1px);
-  }
-  to {
-    transform: translateX(1px);
   }
 }

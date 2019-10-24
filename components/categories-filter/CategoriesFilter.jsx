@@ -10,7 +10,6 @@ export default class CategoriesFilter extends React.Component {
     super();
     this.state = {
       isExpanded: false,
-      preventDisablingLast: '',
     };
   }
 
@@ -18,19 +17,13 @@ export default class CategoriesFilter extends React.Component {
     this.setState((state) => ({ isExpanded: !state.isExpanded }));
   }
 
-  buttonClick = (category) => {
+  selectCategory = (category) => {
     const { filterOnChange, selectedCategories, pageTitle } = this.props;
     const selectedItems = selectedCategories.slice();
     const position = selectedCategories.indexOf(category);
 
     if (position === -1) {
       selectedItems.push(category);
-    } else if (selectedItems.length === 1) {
-      this.setState({ preventDisablingLast: category });
-      setTimeout(() => {
-        this.setState({ preventDisablingLast: '' });
-      }, 500);
-      return;
     } else {
       selectedItems.splice(position, 1);
     }
@@ -39,9 +32,26 @@ export default class CategoriesFilter extends React.Component {
     filterOnChange(selectedItems);
   }
 
+  clearCategories = () => {
+    const { pageTitle, filterOnChange } = this.props;
+
+    const url = `/${pageTitle}`;
+    window.history.replaceState({ url }, '', url);
+
+    filterOnChange([]);
+  }
+
+  selectAllCategories = () => {
+    const { filterOnChange, categoriesList, pageTitle } = this.props;
+
+    const url = `/${pageTitle}?chosen=${categoriesList.join(',')}`;
+    window.history.replaceState({ url }, '', url);
+    filterOnChange(categoriesList);
+  }
+
   render() {
     const { pageTitle, categoriesList, selectedCategories } = this.props;
-    const { isExpanded, preventDisablingLast } = this.state;
+    const { isExpanded } = this.state;
 
     return (
       <div className={`filter filter__${pageTitle}`}>
@@ -63,7 +73,6 @@ export default class CategoriesFilter extends React.Component {
         <SlideDown
           closed={!isExpanded}
           className="filter__slidedown"
-        // transitionOnAppear={false}
         >
           <ul className="filter__list">
             {categoriesList.map((category) => (
@@ -71,19 +80,18 @@ export default class CategoriesFilter extends React.Component {
                 category={category}
                 key={category}
                 isActive={selectedCategories.includes(category)}
-                buttonClick={() => this.buttonClick(category)}
-                isDisabled={preventDisablingLast === category}
+                buttonClick={() => this.selectCategory(category)}
               />
             ))}
             <br />
             <CategoryButton
               category="Clear"
-              buttonClick={() => null}
-              className="-clear"
+              buttonClick={this.clearCategories}
+              className={classNames('-clear', { '-hidden': !selectedCategories.length })}
             />
             <CategoryButton
               category="Show All"
-              buttonClick={() => null}
+              buttonClick={this.selectAllCategories}
               className="-show-all"
             />
           </ul>
