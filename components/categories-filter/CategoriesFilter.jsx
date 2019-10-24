@@ -60,11 +60,13 @@ export default class CategoriesFilter extends React.Component {
           tabIndex={0}
           onClick={this.toggleExpand}
           onKeyPress={this.toggleExpand}
-          className={classNames('filter__toggler', { 'filter__toggler--expanded': isExpanded })}
+          className={classNames('filter__toggler', {
+            'filter__toggler--expanded': isExpanded,
+            'filter__toggler--selected': selectedCategories.length,
+          })}
         >
           {
             selectedCategories.length
-              && selectedCategories.length !== categoriesList.length
               ? `${selectedCategories.length} filters selected`
               : 'Set the filters'
           }
@@ -75,25 +77,29 @@ export default class CategoriesFilter extends React.Component {
           className="filter__slidedown"
         >
           <ul className="filter__list">
-            {categoriesList.map((category) => (
+            <div className="filter__categories">
+              {categoriesList.map((category) => (
+                <CategoryButton
+                  category={category}
+                  key={category}
+                  isActive={selectedCategories.includes(category)}
+                  buttonClick={() => this.selectCategory(category)}
+                />
+              ))}
+            </div>
+            <div className="filter__controls">
               <CategoryButton
-                category={category}
-                key={category}
-                isActive={selectedCategories.includes(category)}
-                buttonClick={() => this.selectCategory(category)}
+                category="Clear"
+                buttonClick={this.clearCategories}
+                className={classNames('-clear', { '-hidden': !selectedCategories.length })}
               />
-            ))}
-            <br />
-            <CategoryButton
-              category="Clear"
-              buttonClick={this.clearCategories}
-              className={classNames('-clear', { '-hidden': !selectedCategories.length })}
-            />
-            <CategoryButton
-              category="Show All"
-              buttonClick={this.selectAllCategories}
-              className="-show-all"
-            />
+              <CategoryButton
+                category="Show All"
+                buttonClick={this.selectAllCategories}
+                className="-show-all"
+              />
+            </div>
+
           </ul>
         </SlideDown>
       </div>
