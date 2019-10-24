@@ -15,7 +15,6 @@ const Works = ({ works }) => (
                   <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
                 </div>
                 <figcaption className="portfolio__figcaption">
-                  <h3 className="portfolio__item-title">{work.title}</h3>
                   <ul className="portfolio__item-categories">
                     {
                       work.category.main && work.category.main !== 'Other'
@@ -28,6 +27,7 @@ const Works = ({ works }) => (
                         : null
                     }
                   </ul>
+                  <h3 className="portfolio__item-title">{work.title}</h3>
                 </figcaption>
               </figure>
             </a>

@@ -66,13 +66,17 @@
     align-items: flex-start;
     padding: 15px 0 0;
     flex-grow: 1;
+
+    @media (min-width: $mobile-lg) {
+      padding: 20px 0 0;
+    }
   }
   .portfolio__item-title {
     margin: 0 0 10px 0 !important;
     color: #2D4352;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 23px;
+    line-height: 21px;
     text-align: left;
   }
   .portfolio__item-tags {
@@ -93,21 +97,8 @@
     color: #d42e2d;
     text-transform: uppercase;
     letter-spacing: 0.56px;
-    @include breakpoint(sm-max) {
-      margin-bottom: 10px;
-    }
-    margin-bottom: 12px;
-    margin-right: 12px;
-
-    @media (min-width: 1280px) {
-      margin-bottom: 17px;
-      margin-right: 17px;
-    }
-
-    @media (min-width: 575px) and (max-width: 768px) {
-      margin-bottom: 8px;
-      margin-right: 8px;
-    }
+    
+    margin-bottom: 20px;
   }
 }
 
