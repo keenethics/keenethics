@@ -1,16 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { debounce } from 'lodash';
 import { SlideDown } from 'react-slidedown';
 
 import CategoryButton from './CategoryButton';
 
 export default class CategoriesFilter extends React.Component {
+  handleResize = debounce(() => {
+    const { isMobile } = this.state;
+    if (window.innerWidth < 960 && !isMobile) {
+      this.setState({ isMobile: true });
+    } else if (window.innerWidth >= 960 && (isMobile || isMobile === null)) {
+      this.setState({ isMobile: false, isExpanded: false });
+    }
+  })
+
   constructor() {
     super();
     this.state = {
       isExpanded: false,
+      isMobile: null,
     };
+  }
+
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   toggleExpand = () => {
@@ -51,58 +71,115 @@ export default class CategoriesFilter extends React.Component {
 
   render() {
     const { pageTitle, categoriesList, selectedCategories } = this.props;
-    const { isExpanded } = this.state;
+    const { isExpanded, isMobile } = this.state;
 
     return (
-      <div className={`filter filter__${pageTitle}`}>
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={this.toggleExpand}
-          onKeyPress={this.toggleExpand}
-          className={classNames('filter__toggler', {
-            'filter__toggler--expanded': isExpanded,
-            'filter__toggler--selected': selectedCategories.length,
-          })}
-        >
+      <>
+        <div className={`filter filter__${pageTitle}`}>
           {
-            selectedCategories.length
-              ? `${selectedCategories.length} filters selected`
-              : 'Set the filters'
+            isMobile
+            && (
+              <div className="filter__wrapper">
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={this.toggleExpand}
+                  onKeyPress={this.toggleExpand}
+                  className={classNames('filter__toggler', {
+                    'filter__toggler--expanded': isExpanded,
+                    'filter__toggler--selected': selectedCategories.length,
+                  })}
+                >
+                  {
+                    selectedCategories.length
+                      ? `${selectedCategories.length} filters selected`
+                      : 'Set the filters'
+                  }
+                </div>
+
+                <SlideDown
+                  closed={!isExpanded}
+                  className="filter__slidedown"
+                >
+                  <ul className="filter__list">
+                    <div className="filter__categories">
+                      {categoriesList.map((category) => (
+                        <CategoryButton
+                          category={category}
+                          key={category}
+                          isActive={selectedCategories.includes(category)}
+                          buttonClick={() => this.selectCategory(category)}
+                        />
+                      ))}
+                    </div>
+                    <div className="filter__controls">
+                      <CategoryButton
+                        category="Clear"
+                        buttonClick={this.clearCategories}
+                        className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+                      />
+                      <CategoryButton
+                        category="Show All"
+                        buttonClick={this.selectAllCategories}
+                        className="-show-all"
+                      />
+                    </div>
+                  </ul>
+                </SlideDown>
+              </div>
+            )
           }
+
+          {
+            isMobile === false
+            && (
+              <div className="filter__wrapper">
+                <ul className="filter__list">
+                  <div className="filter__categories">
+                    {categoriesList.map((category) => (
+                      <CategoryButton
+                        category={category}
+                        key={category}
+                        isActive={selectedCategories.includes(category)}
+                        buttonClick={() => this.selectCategory(category)}
+                      />
+                    ))}
+                  </div>
+                </ul>
+
+                <div className="filter__arrows">
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <button
+                    type="button"
+                    className="filter__arrow -left"
+                    onClick={() => null}
+                  />
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <button
+                    type="button"
+                    className="filter__arrow -right"
+                    onClick={() => null}
+                  />
+                </div>
+
+                <div className="filter__controls">
+                  <CategoryButton
+                    category="Clear"
+                    buttonClick={this.clearCategories}
+                    className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+                  />
+                  <CategoryButton
+                    category="Show All"
+                    buttonClick={this.selectAllCategories}
+                    className="-show-all"
+                  />
+                </div>
+              </div>
+            )
+          }
+
         </div>
-
-        <SlideDown
-          closed={!isExpanded}
-          className="filter__slidedown"
-        >
-          <ul className="filter__list">
-            <div className="filter__categories">
-              {categoriesList.map((category) => (
-                <CategoryButton
-                  category={category}
-                  key={category}
-                  isActive={selectedCategories.includes(category)}
-                  buttonClick={() => this.selectCategory(category)}
-                />
-              ))}
-            </div>
-            <div className="filter__controls">
-              <CategoryButton
-                category="Clear"
-                buttonClick={this.clearCategories}
-                className={classNames('-clear', { '-hidden': !selectedCategories.length })}
-              />
-              <CategoryButton
-                category="Show All"
-                buttonClick={this.selectAllCategories}
-                className="-show-all"
-              />
-            </div>
-
-          </ul>
-        </SlideDown>
-      </div>
+      </>
     );
   }
 }

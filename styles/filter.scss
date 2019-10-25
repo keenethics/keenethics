@@ -1,9 +1,16 @@
 @import "../node_modules/react-slidedown/lib/slidedown.css";
 
 .filter {
-  height: auto;
+  height: 36px;
+  margin-bottom: 10px;
   display: flex;
   flex-flow: column nowrap;
+
+  &__wrapper {
+    @media (min-width: $desktop-xs) {
+      display: flex;
+    }
+  }
 
   &__toggler {
     position: relative;
@@ -52,6 +59,15 @@
     @media (min-width: $tablet-sm) {
       display: flex;
     }
+
+    @media (min-width: $desktop-xs) {
+      position: relative;
+      overflow: hidden;
+      flex-grow: 1;
+      max-width: calc(150px * 3 + 10px * 2);
+      padding: 0;
+      margin-right: auto;
+    }
   }
 
   &__categories {
@@ -63,11 +79,65 @@
     @media (min-width: $tablet-sm) {
       width: 310px;
     }
+
+    @media (min-width: $desktop-xs) {
+      width: auto;
+      flex-wrap: nowrap;
+      position: absolute;
+
+      .filter__item {
+        flex: 150px 0 0;
+        &:not(:last-of-type) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__arrows {
+    width: calc(32px + 32px + 10px + 10px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+  &__arrow {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F2F3F5;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border: 11px solid transparent;
+      transform: scaleY(0.6);
+      top: 5px;
+    }
+
+    &.-left:before {
+      border-right-color:#12233D;
+      left: -2px;
+    }
+
+    &.-right:before {
+      border-left-color:#12233D;
+      right: -2px;
+    }
   }
 
   &__controls {
     display: flex;
     width: 100%;
+    list-style: none;
 
     @media (min-width: $tablet-sm) {
       width: 150px;
@@ -79,6 +149,15 @@
         width: 100%;
       }
     }
+
+    @media (min-width: $desktop-xs) {
+      width: calc(150px * 2 + 15px);
+      flex-flow: row nowrap;
+      margin-left: 0;
+      .filter__item {
+        width: 150px;
+      }
+    }
   }
 
   &__item {
@@ -87,6 +166,10 @@
 
     @media (min-width: $mobile-md) {
       width: calc(50% - 7.5px);
+    }
+
+    @media (min-width: $desktop-xs) {
+      margin-bottom: 0;
     }
   }
 
