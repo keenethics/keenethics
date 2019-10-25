@@ -7,9 +7,9 @@ export default () => {
   const [success, setSuccess] = useState('');
 
   function handleClick() {
-    const regexp = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
+    const emailRegexp = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
 
-    const isError = !value || !regexp.test(value.toLowerCase());
+    const isError = !value || !emailRegexp.test(value.toLowerCase());
     setError(isError);
 
     if (isError) return;

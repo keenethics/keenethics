@@ -20,7 +20,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
-        className={(selectedCountry === 'UA' || !selectedCountry) ? 'arrow-left-triangle' : ''}
+        className={classnames({ 'arrow-left-triangle': selectedCountry === 'UA' || !selectedCountry })}
       >
         <button
           type="button"
@@ -63,7 +63,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
-        className={selectedCountry === 'NL' ? 'arrow-left-triangle' : ''}
+        className={classnames({ 'arrow-left-triangle': selectedCountry === 'NL' })}
       >
         <button
           type="button"
@@ -408,7 +408,7 @@ Address.propTypes = {
 };
 Address.defaultProps = {
   className: '',
-  setSelectedCountry: null,
+  setSelectedCountry: () => ({}),
   selectedCountry: '',
 };
 

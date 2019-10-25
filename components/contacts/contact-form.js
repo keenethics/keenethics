@@ -81,7 +81,6 @@ const ContactForm = () => {
       })
       .catch((err) => console.error(err));
   };
-  // console.log(person);
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
