@@ -417,7 +417,7 @@ AddressPanel.propTypes = {
   selectedCountry: PropTypes.string,
 };
 AddressPanel.defaultProps = {
-  setSelectedCountry: null,
+  setSelectedCountry: () => ({}),
   selectedCountry: '',
 };
 
