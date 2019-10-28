@@ -433,7 +433,7 @@ Project management
                     checked={pm.value === 'Yes, please'}
                   />
                   <label htmlFor="iNeedPM" className="label-for-radio-btn">
-                    Yes, please
+                    Yes, I need project management
                   </label>
                 </div>
                 <div className="input-radio-wrap">
@@ -451,7 +451,7 @@ Project management
                     checked={pm.value === 'No, thank you'}
                   />
                   <label htmlFor="iDontNeedPM" className="label-for-radio-btn">
-                    No, thank you
+                    No, I do not need project management
                   </label>
                 </div>
                 <div className="input-radio-wrap">
@@ -912,6 +912,7 @@ Start
                 }}
                 isChecked={hasDiscount}
               />
+              <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
             </div>
             <div className="wizard-stage-footer mt-auto">
               <button

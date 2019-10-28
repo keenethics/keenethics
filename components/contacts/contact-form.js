@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
+import { MaxS, PaulW } from '../../static/contacts/contacts-data';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -20,8 +21,9 @@ const ContactForm = () => {
     setIsPending,
     setStatus,
     setNotifyMessage,
+    selectedCountry,
   } = useContext(ContactUsContext);
-
+  const person = selectedCountry === 'NL' ? PaulW : MaxS;
   const [firstname, setFirstname] = useState({
     value: '',
     error: false,
@@ -79,14 +81,11 @@ const ContactForm = () => {
       })
       .catch((err) => console.error(err));
   };
-
   return (
     <div className="contacts-form">
       <form onSubmit={onSubmit}>
         {Person({
-          name: 'Talk to Max Savonin',
-          position: 'CEO at KeenEthics',
-          imgSrc: 'static/images/max_savonin.png',
+          ...person,
           wrapperClassnames: 'display-flex-md',
         })}
         <div className="input-cols">
@@ -161,6 +160,7 @@ const ContactForm = () => {
             }}
             isChecked={isSubscriber}
           />
+          <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
         </div>
         <div className="submit-btn">
           <button

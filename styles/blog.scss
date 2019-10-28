@@ -485,6 +485,11 @@ div.suggestion {
     align-items: center;
     justify-content: space-between;
 
+    .btn.btn-schedule {
+      background-color: #12233d;
+      background-image: none;
+      box-shadow: none;
+    }
     @include breakpoint(mobile) {
       flex-direction: column;
     }
