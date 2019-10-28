@@ -68,6 +68,26 @@
       padding: 0;
       margin-right: auto;
     }
+
+    @media (min-width: $desktop-sm) {
+      max-width: calc(150px * 2 + 10px);
+    }
+
+    @media (min-width: $desktop-md) {
+      max-width: calc(150px * 4 + 10px * 3);
+    }
+
+    @media (min-width: $desktop-lg) {
+      max-width: calc(150px * 5 + 10px * 4);
+    }
+
+    @media (min-width: $desktop-xl) {
+      max-width: calc(150px * 6 + 10px * 5);
+    }
+
+    @media (min-width: $desktop-xl) {
+      max-width: calc(150px * 8 + 10px * 7);
+    }
   }
 
   &__categories {
@@ -84,6 +104,8 @@
       width: auto;
       flex-wrap: nowrap;
       position: absolute;
+      left: 0;
+      transition: left .3s ease;
 
       .filter__item {
         flex: 150px 0 0;

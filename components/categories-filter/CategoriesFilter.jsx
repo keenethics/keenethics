@@ -6,6 +6,28 @@ import { SlideDown } from 'react-slidedown';
 
 import CategoryButton from './CategoryButton';
 
+// button width + margin-right
+const CATEGORY_BUTTON_WIDTH_DESKTOP = 150 + 10;
+
+const getVisibleLinksAmount = (screenWidth) => {
+  if (screenWidth >= 960 && screenWidth < 1024) {
+    return 3;
+  }
+  if (screenWidth >= 1024 && screenWidth < 1280) {
+    return 2;
+  }
+  if (screenWidth >= 1280 && screenWidth < 1440) {
+    return 4;
+  }
+  if (screenWidth >= 1440 && screenWidth < 1600) {
+    return 6;
+  }
+  if (screenWidth >= 1600) {
+    return 8;
+  }
+  return NaN;
+};
+
 export default class CategoriesFilter extends React.Component {
   handleResize = debounce(() => {
     const { isMobile } = this.state;
@@ -21,6 +43,7 @@ export default class CategoriesFilter extends React.Component {
     this.state = {
       isExpanded: false,
       isMobile: null,
+      scroll: 0,
     };
   }
 
@@ -36,6 +59,29 @@ export default class CategoriesFilter extends React.Component {
   toggleExpand = () => {
     this.setState((state) => ({ isExpanded: !state.isExpanded }));
   }
+
+  scroll = (step) => {
+    const { scroll } = this.state;
+    const { categoriesList } = this.props;
+
+    // prevent switching to unexistent steps
+    if (
+      (step === -1 && scroll === 0)
+      || (step === 1 && scroll === categoriesList.length)
+    ) {
+      return;
+    }
+
+    // prevent scrolling to blank space
+    if (
+      step === 1
+      && scroll > categoriesList.length - getVisibleLinksAmount(window.innerWidth)
+    ) {
+      return;
+    }
+
+    this.setState({ scroll: scroll + step });
+  };
 
   selectCategory = (category) => {
     const { filterOnChange, selectedCategories, pageTitle } = this.props;
@@ -71,7 +117,7 @@ export default class CategoriesFilter extends React.Component {
 
   render() {
     const { pageTitle, categoriesList, selectedCategories } = this.props;
-    const { isExpanded, isMobile } = this.state;
+    const { isExpanded, isMobile, scroll } = this.state;
 
     return (
       <>
@@ -102,7 +148,9 @@ export default class CategoriesFilter extends React.Component {
                   className="filter__slidedown"
                 >
                   <ul className="filter__list">
-                    <div className="filter__categories">
+                    <div
+                      className="filter__categories"
+                    >
                       {categoriesList.map((category) => (
                         <CategoryButton
                           category={category}
@@ -135,7 +183,10 @@ export default class CategoriesFilter extends React.Component {
             && (
               <div className="filter__wrapper">
                 <ul className="filter__list">
-                  <div className="filter__categories">
+                  <div
+                    className="filter__categories"
+                    style={{ left: scroll * -CATEGORY_BUTTON_WIDTH_DESKTOP }}
+                  >
                     {categoriesList.map((category) => (
                       <CategoryButton
                         category={category}
@@ -152,13 +203,13 @@ export default class CategoriesFilter extends React.Component {
                   <button
                     type="button"
                     className="filter__arrow -left"
-                    onClick={() => null}
+                    onClick={() => this.scroll(-1)}
                   />
                   {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
                   <button
                     type="button"
                     className="filter__arrow -right"
-                    onClick={() => null}
+                    onClick={() => this.scroll(1)}
                   />
                 </div>
 
