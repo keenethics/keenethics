@@ -117,7 +117,7 @@ const TechFrontEndReact = () => (
         <h2>Why KeenEthics?</h2>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth.</h3>
-        <p>You can request Reactjs development services and robust solutions in multiple industries, including <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer">education</a>, e-commerce, healthcare, finance, business services, fashion, food, real estate, and logistics. Our Reactjs developers have not just technical expertise but also industry-specific skills and knowledge.</p>
+        <p>You can request Reactjs development services and robust solutions in multiple industries, including <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer nofollow">education</a>, e-commerce, healthcare, finance, business services, fashion, food, real estate, and logistics. Our Reactjs developers have not just technical expertise but also industry-specific skills and knowledge.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>  
         <p>We are ethical towards our employees, partners, and customers. You can be sure that we communicate and cooperate with the principles of honesty and transparency because ethics is more than just a part of our corporate name.</p>
@@ -126,10 +126,10 @@ const TechFrontEndReact = () => (
         <p>Let us promptly turn your idea into a perfect final software product. As a full-cycle React.js development company, we offer Reactjs services including discovery and research, design and development, testing and debugging, deployment, maintenance, and support.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span> Bringing tech expertise.</h3>
-        <p>Our team has a great deal of expertise in React development, and we are willing to share it with you. React is the JS library we use the most. Almost half of <a href="/portfolio" target="_blank" rel="noopener noreferrer">projects</a> we have developed are React-based.</p>
+        <p>Our team has a great deal of expertise in React development, and we are willing to share it with you. React is the JS library we use the most. Almost half of <a href="/portfolio" target="_blank" rel="noopener noreferrer nofollow">projects</a> we have developed are React-based.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data.</h3>
-        <p>You can be sure that we closely follow all the <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer">data security</a> regulations and NDA requirements, Also, we want our pricing strategy to be fair and transparent. When you hire React.js developers, we want your software development experience to be pleasant and trouble-free. For this reason, we employ a pricing strategy of your choosing, should it be a fixed price or a <a href="/blog/1554420300000-estimates" target="_blank" rel="noopener noreferrer">Time-and-Material</a> approach.</p>
+        <p>You can be sure that we closely follow all the <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer nofollow">data security</a> regulations and NDA requirements, Also, we want our pricing strategy to be fair and transparent. When you hire React.js developers, we want your software development experience to be pleasant and trouble-free. For this reason, we employ a pricing strategy of your choosing, should it be a fixed price or a <a href="/blog/1554420300000-estimates" target="_blank" rel="noopener noreferrer nofollow">Time-and-Material</a> approach.</p>
       </section>
 
       <section>

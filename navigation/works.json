@@ -1,5 +1,18 @@
 [
   {
+    "title": "WorldLabs",
+    "metaTitle": "WorldLabs – KeenEthics Projects",
+    "href": "/project-worldlabs",
+    "imgSrc": "worldlabs/wl-screenshot.jpg",
+    "category": {
+      "main": [
+        "Business"
+      ]
+    },
+    "description": "A business incubation platform giving people the power to elevate their ideas.",
+    "metaDescription": "A business incubation platform giving people the power to elevate their ideas."
+  },
+  {
     "title": "Blood Test Application",
     "metaTitle": "Case study: Blood Test Application – KeenEthics",
     "href": "/project-blood-test-application",
