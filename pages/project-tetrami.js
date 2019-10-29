@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
-import Slider from 'react-slick';
+// import Slider from 'react-slick';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
@@ -10,10 +10,10 @@ import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = 'linear-gradient(135deg,#071e40 0%,#662938 80%)';
 
-const sliderSettings = {
-  swipe: true,
-  slidesToShow: 1,
-};
+// const sliderSettings = {
+//   swipe: true,
+//   slidesToShow: 1,
+// };
 
 const ProjectTetrami = () => (
   <Layout>
@@ -54,7 +54,13 @@ const ProjectTetrami = () => (
                 out of the United States on their own.
               </p>
             </section>
-            <div className="iphone-slider-wrap">
+            <img
+              src="/static/portfolio/tetrami/tetrami-phone.jpg"
+              alt="Tetrami"
+              className="image-gaps"
+              style={{ marginBottom: '50px' }}
+            />
+            {/* <div className="iphone-slider-wrap">
               <div className="iphone-slider">
                 <Slider {...sliderSettings}>
                   <div>
@@ -72,7 +78,7 @@ const ProjectTetrami = () => (
                 </Slider>
               </div>
               <img className="iphone-frame" src="/static/images/iphone7-frame.svg" alt="iphone" />
-            </div>
+            </div> */}
             <section>
               <h2 className="title">Our Cooperation</h2>
               <h3 className="red-italic-title">Challenges</h3>

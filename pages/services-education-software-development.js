@@ -90,7 +90,7 @@ const ServicesMobileDevelopment = () => {
             <li className="challenges-item">
               <h3><img src="/static/services/services-education-software-development/solutions-we-offer.png" alt="challenges you face"/>SOLUTIONS WE OFFER</h3>
               <ul>
-                <li>Before requesting education software development services, you should review the <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer">data safety regulations</a> offered by the agency.</li>
+                <li>Before requesting education software development services, you should review the <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer nofollow">data safety regulations</a> offered by the agency.</li>
                 <li>It is also advised that you sign an NDA with the software development service provider to have legal guarantees.</li>
               </ul>
             </li>
@@ -104,7 +104,7 @@ const ServicesMobileDevelopment = () => {
             <li className="challenges-item">
               <h3 className="hidden-xs"><img src="/static/services/services-education-software-development/solutions-we-offer.png" alt="challenges you face"/>SOLUTIONS WE OFFER</h3>
               <ul>
-                <li>If you are a pedagog yourself or you have those in your team, please, cooperate with us at all times and closely <a href="/blog/1553896800000-how-to-monitor-your-project-distantly" target="_blank" rel="noopener noreferrer">monitor your project</a>.</li>
+                <li>If you are a pedagog yourself or you have those in your team, please, cooperate with us at all times and closely <a href="/blog/1553896800000-how-to-monitor-your-project-distantly" target="_blank" rel="noopener noreferrer nofollow">monitor your project</a>.</li>
                 <li>If you do not have pedagogical expertise, we will provide you with a professional in the field.</li>
               </ul>
             </li>
