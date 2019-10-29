@@ -81,7 +81,7 @@ const TechBackEndExpress = () => (
         <h2>What Is Express.js?</h2>
         <p>Express.js is the most popular and efficient Node.js framework, which is fully customizable in terms of both the development process and the final app. It offers numerous built-in features, which means the developer does not have to write them from scratch but uses ready-made templates and saves a great deal of time. Express.js considerably assists in keeping the code clean and organized. </p>
         <p>Express.js does not contradict but rather complements the functionality of Node.js. It offers a robust list of features, which includes content negotiation, robust routing, application view options, environment-based configuration, dynamic view helpers, and session-based flash notifications.</p>
-        <p>Therefore, this server-side framework is actively used for both back-end and front-end <a href="/services-web-development" target="_blank" rel="noopener noreferrer">web app development</a> and <a href="/services-mobile-development" target="_blank" rel="noopener noreferrer">mobile app development</a>. Due to the advantages and opportunities it provides, the popularity of Express.js is expected to grow.</p>
+        <p>Therefore, this server-side framework is actively used for both back-end and front-end <a href="/services-web-development" target="_blank" rel="noopener noreferrer nofollow">web app development</a> and <a href="/services-mobile-development" target="_blank" rel="noopener noreferrer nofollow">mobile app development</a>. Due to the advantages and opportunities it provides, the popularity of Express.js is expected to grow.</p>
         <p>Popular websites such as <a href="https://www.paypal.com/" target="_blank" rel="noopener noreferrer nofollow">Paypal</a>, <a href="https://www.yahoo.com/" target="_blank" rel="noopener noreferrer nofollow">Yahoo!</a>, <a href="https://www.wsj.com/" target="_blank" rel="noopener noreferrer nofollow">Wall Street Journal Online</a>, <a href="https://www.groupon.com/" target="_blank" rel="noopener noreferrer nofollow">Groupon</a>, <a href="https://www.shutterstock.com/" target="_blank" rel="noopener noreferrer nofollow">Shutterstock</a>, and <a href="https://myspace.com/" target="_blank" rel="noopener noreferrer nofollow">MySpace</a>, are powered by Express.js.</p>
       </section>
 
@@ -120,22 +120,22 @@ const TechBackEndExpress = () => (
 
       <section>
         <h2>Why KeenEthics?</h2>
-        <p>The answer is simple: we are a leading <a href="/services-web-development-node" target="_blank" rel="noopener noreferrer">Node.js development company</a>. Plus, Express.js, being one of the most efficient Node.js frameworks, lets us do an even better job.</p>
+        <p>The answer is simple: we are a leading <a href="/services-web-development-node" target="_blank" rel="noopener noreferrer nofollow">Node.js development company</a>. Plus, Express.js, being one of the most efficient Node.js frameworks, lets us do an even better job.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth.</h3>
-        <p>Regardless of the industry you are in, we strive for you to reach the best business outcome. You will be offered to cooperate with a professional specializing in your industry, should you be <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer">developing an educational app</a>, a healthcare management system, or an e-commerce platform.</p>
+        <p>Regardless of the industry you are in, we strive for you to reach the best business outcome. You will be offered to cooperate with a professional specializing in your industry, should you be <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer nofollow">developing an educational app</a>, a healthcare management system, or an e-commerce platform.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>  
-        <p>You can be sure that our cooperation will be built on the principles of honesty, transparency, and efficiency. As an <a href="/blog/1551175200000-our-ethical-dimension" target="_blank" rel="noopener noreferrer">ethical company</a>, we prioritize the interests and needs of our partners and users.</p>
+        <p>You can be sure that our cooperation will be built on the principles of honesty, transparency, and efficiency. As an <a href="/blog/1551175200000-our-ethical-dimension" target="_blank" rel="noopener noreferrer nofollow">ethical company</a>, we prioritize the interests and needs of our partners and users.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span> Launching in a matter of weeks.</h3>
         <p>Due to a perfectly organized partner engagement process, we are able to promptly collect requirements, conduct an estimate, and start working on your project. Also, you can cooperate full-cycle with us so that we take your idea from the initial stages to the perfect final product.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span> Bringing tech expertise.</h3>
-        <p>Our Express.js developers are result-oriented and experienced. We have proven expertise in the field, and we are ready to share it with you. The <a href="/portfolio" target="_blank" rel="noopener noreferrer">solutions</a> that we offer you are robust, innovative, and reliable.</p>
+        <p>Our Express.js developers are result-oriented and experienced. We have proven expertise in the field, and we are ready to share it with you. The <a href="/portfolio" target="_blank" rel="noopener noreferrer nofollow">solutions</a> that we offer you are robust, innovative, and reliable.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data.</h3>
-        <p>Your software development experience will be trouble-free because our pricing and <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer">data security</a> strategies are fair and transparent. Also, we invite you to sign an NDA for both of us to have legal quarantees.</p>
+        <p>Your software development experience will be trouble-free because our pricing and <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer nofollow">data security</a> strategies are fair and transparent. Also, we invite you to sign an NDA for both of us to have legal quarantees.</p>
       </section>
 
       <section>
