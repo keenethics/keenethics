@@ -7,7 +7,7 @@ import Moment from 'react-moment';
 const _ = require('lodash');
 
 const Posts = ({ posts }) => (
-  <div className="blog-page-posts">
+  <div className="page__list">
     {posts.map((post) => {
       const {
         fields: {
@@ -19,16 +19,31 @@ const Posts = ({ posts }) => (
 
       return (
         <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
-          <a className="blog-page-post">
-            <div className="blog-page-post-img">
-              <img src={url ? `https://${url}?fm=jpg&fl=progressive&q=85&w=350` : ''} alt={alt} />
-            </div>
-            <div className="blog-page-post-header">
-              <div className="date">
-                <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>
+          <a className="page__item page__item-link">
+            <figure className="page__item-figure">
+              <div className="page__item-figure-img-wrap">
+                <img
+                  src={url ? `https://${url}?fm=jpg&fl=progressive&q=85&w=350` : ''}
+                  alt={alt}
+                  className="page__item-img"
+                />
               </div>
-              <div className="title">{title}</div>
-            </div>
+              <figcaption className="page__item-figcaption">
+                <div className="page__item-figcaption-heading">
+                  <ul className="page__item-tags">
+                    {
+                      post.fields.categories
+                        ? post.fields.categories.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
+                        : null
+                    }
+                  </ul>
+                  <Moment format="MMM DD, YYYY" className="page__item-date">{new Date(publishDate)}</Moment>
+                </div>
+                <h3 className="page__item-title">
+                  {title}
+                </h3>
+              </figcaption>
+            </figure>
           </a>
         </Link>
       );

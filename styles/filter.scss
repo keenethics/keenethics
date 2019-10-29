@@ -1,7 +1,6 @@
 @import "../node_modules/react-slidedown/lib/slidedown.css";
 
 .filter {
-  height: 36px;
   margin-bottom: 10px;
   display: flex;
   flex-flow: column nowrap;
@@ -14,7 +13,6 @@
 
   &__toggler {
     position: relative;
-    margin-bottom: 20px;
     height: 40px;
     border: 1px solid rgba(18, 35, 61, 0.1);
     border-radius: 100px;
@@ -53,6 +51,7 @@
   }
 
   &__list {
+    margin-top: 20px;
     // 3px for proper displaying of focused outline
     padding: 3px 3px 0;
 
@@ -67,6 +66,7 @@
       max-width: calc(150px * 3 + 10px * 2);
       padding: 0;
       margin-right: auto;
+      margin-top: 0;
     }
 
     @media (min-width: $desktop-sm) {
@@ -154,6 +154,10 @@
       border-left-color:#12233D;
       right: -2px;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__controls {
@@ -178,6 +182,9 @@
       margin-left: 0;
       .filter__item {
         width: 150px;
+        &:first-of-type {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -226,6 +233,10 @@
     &.-active {
       background: linear-gradient(to right, #e1602c 0%, #dc3a3a 100%);
       color: white;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }

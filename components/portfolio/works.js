@@ -5,29 +5,31 @@ import PropTypes from 'prop-types';
 
 const Works = ({ works }) => (
   <div className="portfolio-works">
-    <ul className="portfolio__list">
+    <ul className="page__list">
       {works.map((work) => (
-        <li className="portfolio__item" key={work.title}>
+        <li className="page__item" key={work.title}>
           <Link href={work.href}>
-            <a className="portfolio__item-link">
-              <figure className="portfolio__item-figure">
-                <div className="portfolio__item-figure-img-wrap">
-                  <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
+            <a className="page__item-link">
+              <figure className="page__item-figure">
+                <div className="page__item-figure-img-wrap">
+                  <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="page__item-img" />
                 </div>
-                <figcaption className="portfolio__figcaption">
-                  <ul className="portfolio__item-categories">
-                    {
-                      work.category.main && work.category.main !== 'Other'
-                        ? work.category.main.map((category) => (<li className="tag" key={category}>{category}</li>))
-                        : null
-                    }
-                    {
-                      work.category.additional
-                        ? work.category.additional.map((category) => (<li className="tag" key={category}>{category}</li>))
-                        : null
-                    }
-                  </ul>
-                  <h3 className="portfolio__item-title">{work.title}</h3>
+                <figcaption className="page__item-figcaption">
+                  <div className="page__item-figcaption-heading">
+                    <ul className="page__item-tags">
+                      {
+                        work.category.main && work.category.main !== 'Other'
+                          ? work.category.main.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
+                          : null
+                      }
+                      {
+                        work.category.additional
+                          ? work.category.additional.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
+                          : null
+                      }
+                    </ul>
+                  </div>
+                  <h3 className="page__item-title">{work.title}</h3>
                 </figcaption>
               </figure>
             </a>
