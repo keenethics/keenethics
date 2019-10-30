@@ -18,13 +18,8 @@ const Works = ({ works }) => (
                   <div className="page__item-figcaption-heading">
                     <ul className="page__item-tags">
                       {
-                        work.category.main && work.category.main !== 'Other'
+                        work.category.main.length !== 0
                           ? work.category.main.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
-                          : null
-                      }
-                      {
-                        work.category.additional
-                          ? work.category.additional.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
                           : null
                       }
                     </ul>

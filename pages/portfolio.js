@@ -55,7 +55,7 @@ class Portfolio extends React.Component {
   worksCountFor(work) {
     const { selectedCategories } = this.state;
     // When no categories selected - show all works
-    if (!selectedCategories.length) {
+    if (selectedCategories.length === 0) {
       return true;
     }
     return work.category.main.some((category) => selectedCategories.includes(category));

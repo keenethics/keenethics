@@ -10,22 +10,20 @@ export default function FilterBtn({
   className,
 }) {
   return (
-    <li className={`filter__item ${className}`}>
-      <button
-        className={classnames(
-          'filter__btn',
-          className,
-          {
-            '-active': isActive,
-            '-disabled': isDisabled,
-          },
-        )}
-        onClick={buttonClick}
-        type="button"
-      >
-        {category}
-      </button>
-    </li>
+    <button
+      className={classnames(
+        'filter__btn',
+        className,
+        {
+          '-active': isActive,
+          '-disabled': isDisabled,
+        },
+      )}
+      onClick={buttonClick}
+      type="button"
+    >
+      {category}
+    </button>
   );
 }
 FilterBtn.propTypes = {

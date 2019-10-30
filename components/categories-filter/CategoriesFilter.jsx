@@ -152,25 +152,31 @@ export default class CategoriesFilter extends React.Component {
                       className="filter__categories"
                     >
                       {categoriesList.map((category) => (
-                        <CategoryButton
-                          category={category}
-                          key={category}
-                          isActive={selectedCategories.includes(category)}
-                          buttonClick={() => this.selectCategory(category)}
-                        />
+                        <li className="filter__item">
+                          <CategoryButton
+                            category={category}
+                            key={category}
+                            isActive={selectedCategories.includes(category)}
+                            buttonClick={() => this.selectCategory(category)}
+                          />
+                        </li>
                       ))}
                     </div>
                     <div className="filter__controls">
-                      <CategoryButton
-                        category="Clear"
-                        buttonClick={this.clearCategories}
-                        className={classNames('-clear', { '-hidden': !selectedCategories.length })}
-                      />
-                      <CategoryButton
-                        category="Show All"
-                        buttonClick={this.selectAllCategories}
-                        className="-show-all"
-                      />
+                      <li className="filter__item">
+                        <CategoryButton
+                          category="Clear"
+                          buttonClick={this.clearCategories}
+                          className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+                        />
+                      </li>
+                      <li className="filter__item">
+                        <CategoryButton
+                          category="Show All"
+                          buttonClick={this.selectAllCategories}
+                          className="-show-all"
+                        />
+                      </li>
                     </div>
                   </ul>
                 </SlideDown>
@@ -185,15 +191,17 @@ export default class CategoriesFilter extends React.Component {
                 <ul className="filter__list">
                   <div
                     className="filter__categories"
-                    style={{ left: scroll * -CATEGORY_BUTTON_WIDTH_DESKTOP }}
+                    style={{ left: scroll * (-1 * CATEGORY_BUTTON_WIDTH_DESKTOP) }}
                   >
                     {categoriesList.map((category) => (
-                      <CategoryButton
-                        category={category}
-                        key={category}
-                        isActive={selectedCategories.includes(category)}
-                        buttonClick={() => this.selectCategory(category)}
-                      />
+                      <li className="filter__item">
+                        <CategoryButton
+                          category={category}
+                          key={category}
+                          isActive={selectedCategories.includes(category)}
+                          buttonClick={() => this.selectCategory(category)}
+                        />
+                      </li>
                     ))}
                   </div>
                 </ul>
@@ -202,13 +210,13 @@ export default class CategoriesFilter extends React.Component {
                   {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
                   <button
                     type="button"
-                    className="filter__arrow -left"
+                    className="filter__arrow filter__arrow-left"
                     onClick={() => this.scroll(-1)}
                   />
                   {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
                   <button
                     type="button"
-                    className="filter__arrow -right"
+                    className="filter__arrow filter__arrow-right"
                     onClick={() => this.scroll(1)}
                   />
                 </div>

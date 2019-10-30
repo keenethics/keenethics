@@ -145,12 +145,12 @@
       top: 5px;
     }
 
-    &.-left:before {
+    &-left:before {
       border-right-color:#12233D;
       left: -2px;
     }
 
-    &.-right:before {
+    &-right:before {
       border-left-color:#12233D;
       right: -2px;
     }
