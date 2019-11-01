@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { withRouter } from 'next/router';
 import { debounce } from 'lodash';
 import { SlideDown } from 'react-slidedown';
 
@@ -28,7 +29,7 @@ const getVisibleLinksAmount = (screenWidth) => {
   return NaN;
 };
 
-export default class CategoriesFilter extends React.Component {
+class CategoriesFilter extends React.Component {
   handleResize = debounce(() => {
     const { isMobile } = this.state;
     if (window.innerWidth < 960 && !isMobile) {
@@ -84,7 +85,12 @@ export default class CategoriesFilter extends React.Component {
   };
 
   selectCategory = (category) => {
-    const { filterOnChange, selectedCategories, pageTitle } = this.props;
+    const {
+      filterOnChange,
+      selectedCategories,
+      pageTitle,
+      router,
+    } = this.props;
     const selectedItems = selectedCategories.slice();
     const position = selectedCategories.indexOf(category);
 
@@ -93,25 +99,33 @@ export default class CategoriesFilter extends React.Component {
     } else {
       selectedItems.splice(position, 1);
     }
-    const url = `/${pageTitle}?chosen=${selectedItems.join(',')}`;
-    window.history.replaceState({ url }, '', url);
+
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: selectedItems.join(',') },
+    });
+
     filterOnChange(selectedItems);
   }
 
   clearCategories = () => {
-    const { pageTitle, filterOnChange } = this.props;
+    const { pageTitle, filterOnChange, router } = this.props;
 
-    const url = `/${pageTitle}`;
-    window.history.replaceState({ url }, '', url);
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: '' },
+    });
 
     filterOnChange([]);
   }
 
   selectAllCategories = () => {
-    const { filterOnChange, categoriesList, pageTitle } = this.props;
+    const { filterOnChange, categoriesList, pageTitle, router } = this.props;
 
-    const url = `/${pageTitle}?chosen=${categoriesList.join(',')}`;
-    window.history.replaceState({ url }, '', url);
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: categoriesList.join(',') },
+    });
     filterOnChange(categoriesList);
   }
 
@@ -152,10 +166,9 @@ export default class CategoriesFilter extends React.Component {
                       className="filter__categories"
                     >
                       {categoriesList.map((category) => (
-                        <li className="filter__item">
+                        <li className="filter__item" key={category}>
                           <CategoryButton
                             category={category}
-                            key={category}
                             isActive={selectedCategories.includes(category)}
                             buttonClick={() => this.selectCategory(category)}
                           />
@@ -194,10 +207,9 @@ export default class CategoriesFilter extends React.Component {
                     style={{ left: scroll * (-1 * CATEGORY_BUTTON_WIDTH_DESKTOP) }}
                   >
                     {categoriesList.map((category) => (
-                      <li className="filter__item">
+                      <li className="filter__item" key={category}>
                         <CategoryButton
                           category={category}
-                          key={category}
                           isActive={selectedCategories.includes(category)}
                           buttonClick={() => this.selectCategory(category)}
                         />
@@ -248,8 +260,11 @@ CategoriesFilter.propTypes = {
   categoriesList: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectedCategories: PropTypes.arrayOf(PropTypes.string),
   filterOnChange: PropTypes.func.isRequired,
+  router: PropTypes.object.isRequired,
 };
 
 CategoriesFilter.defaultProps = {
   selectedCategories: [],
 };
+
+export default withRouter(CategoriesFilter);
