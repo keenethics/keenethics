@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import ListItem from '../content/ListItem';
 
-const Works = ({ works }) => (
+const Works = ({ works, rounded }) => (
   <div className="portfolio-works">
-    <div className="page__list">
+    <div className={classNames('page__list', { '-rounded': rounded })}>
       {works.map((work) => (
-        <ListItem work={work} />
+        <ListItem work={work} rounded={rounded} />
       ))}
     </div>
   </div>
@@ -15,9 +16,11 @@ const Works = ({ works }) => (
 
 Works.propTypes = {
   works: PropTypes.array,
+  rounded: PropTypes.bool,
 };
 Works.defaultProps = {
   works: [],
+  rounded: false,
 };
 
 export default Works;
