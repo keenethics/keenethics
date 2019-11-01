@@ -120,7 +120,9 @@ class CategoriesFilter extends React.Component {
   }
 
   selectAllCategories = () => {
-    const { filterOnChange, categoriesList, pageTitle, router } = this.props;
+    const {
+      filterOnChange, categoriesList, pageTitle, router,
+    } = this.props;
 
     router.replace({
       pathname: `/${pageTitle}`,
