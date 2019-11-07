@@ -69,7 +69,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
                 src="/static/services/services-education-software-development/challenges-you-face.png"
                 alt="Challanges you face"
               />
-              Challanges you face
+              Challenges you face
             </h3>
             <b>Responsibility</b>
             <p>
