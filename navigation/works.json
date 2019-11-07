@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Business Research Platform",
+    "metaTitle": "A mediator between business consultants and consultees",
+    "href": "/project-the-business-research-platform",
+    "imgSrc": "the-business-research-platform/the-business-research-platform.jpeg",
+    "category": {
+      "main": [
+        "Business"
+      ]
+    },
+    "description": "A business research platform lets users take well-thought-out investment decisions.",
+    "metaDescription": "A business research platform lets users take well-thought-out investment decisions."
+  },
+  {
     "title": "WorldLabs",
     "metaTitle": "WorldLabs – KeenEthics Projects",
     "href": "/project-worldlabs",
