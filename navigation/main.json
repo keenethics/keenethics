@@ -83,6 +83,18 @@
           "alt": "Proof of concept"
         },
         "type": "icon"
+      },
+      {
+        "name": "Ecommerce Development Services",
+        "metaTitle": "Ecommerce Development Services, Custom Ecommerce Development – KeenEthics",
+        "description": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
+        "metaDescription": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
+        "href": "/services-ecommerce-developments-ervices",
+        "icon": {
+          "name": "pcon",
+          "alt": "Ecommerce Development Services"
+        },
+        "type": "icon"
       }
     ]
   },
