@@ -150,7 +150,7 @@ const ContactForm = () => {
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
-            text="I want to use a subscriber discount (specify in your message)"
+            text="I want to use a subscriber discount"
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"

@@ -54,7 +54,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           </a>
           <a href="tel:+380968147266">
             <span className="telephone" itemProp="telephone">
-              +38 (096) 814 72 66
+              +38 (094) 710 61 05
             </span>
           </a>
         </div>
