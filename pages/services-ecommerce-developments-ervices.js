@@ -11,7 +11,7 @@ const EcommerceDevelopmentServices = () => (
     <ContentNavigation image="proof" />
     <div className="content-block">
       <section>
-        <h1 className="text-center">EcommerceDevelopmentServices</h1>
+        <h1 className="text-center">Ecommerce Development Services</h1>
         <p className="text-center text-italic">
           Solving software challenges associated with medical responsibility, patient ethics, high
           costs, technological advancement, and holistic approach
@@ -26,7 +26,7 @@ const EcommerceDevelopmentServices = () => (
           to order food online and get it delivered right to your door. Booking a hotel suite and buying 
           tickets for a holiday trip also went 100 percent online. <a 
             href="https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/"
-            target="_blanc"
+            target="_blank"
             rel="noopener noreferrer nofollow"
           >The size of the global ecommerce market</a> has almost doubled from $1,845 billion in 2016 
           to $3,453 billion in 2019. By 2021, it is expected to reach $4,878 billion. 
