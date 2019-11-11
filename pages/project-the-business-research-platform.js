@@ -188,16 +188,16 @@ const ProjectPrix = () => (
               </p>
               <img style={{ margin: '30px auto' }} src="/static/portfolio/the-business-research-platform/smartphones-usage.png" alt="Copy of 2.7 billion people use smartphones" />
               <p>
-                Such a software solution helps a business <b>to automate the process</b> of organizing conference calls and <b>to enhance the quality of calls>?</b> by recording them.
+                Such a software solution helps a business <b>to automate the process</b> of organizing conference calls and <b>to enhance the quality of calls?</b> by recording them.
               </p>
               <p>
                 It is an important and unique tool for business growth consultants, which helps:
-                <ul>
-                  <li>businesses to optimize their research process and take the best investment decision,</li>
-                  <li>business managers to find an external consultant instead of hiring an in-house one,</li>
-                  <li>business strategy consulting firms to find their clients</li>
-                </ul>
               </p>
+              <ul>
+                <li>businesses to optimize their research process and take the best investment decision,</li>
+                <li>business managers to find an external consultant instead of hiring an in-house one,</li>
+                <li>business strategy consulting firms to find their clients</li>
+              </ul>
             </section>
             <section>
               <h2>Do You Have a Similar Project Idea?</h2>
