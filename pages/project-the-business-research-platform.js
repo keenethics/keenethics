@@ -128,13 +128,10 @@ const ProjectPrix = () => (
                 The management consulting industry project has been developed with <a href="https://loopback.io/" target="_blank" rel="noopener noreferrer nofollow">LoopBack
                 </a>, <a href="/tech-data-base-mysql" target="_blank">MySQL
                 </a>, <a href="/tech-front-end-react" target="_blank">React
-                </a>, <a href="https://aws.amazon.com/ses/" target="_blank" rel="noopener noreferrer nofollow">AWS&nbsp;SES
-                </a>, <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer nofollow">AWS&nbsp;S3
-                </a>, <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless
-                </a>, <a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener noreferrer nofollow">CloudWatch
-                </a>, <a href="https://aws.amazon.com/cloudsearch/" target="_blank" rel="noopener noreferrer nofollow">CloudSearch
-                </a>, <a href="https://aws.amazon.com/cloudformation/" target="_blank" rel="noopener noreferrer nofollow">CloudFormation
-                </a>, and <a href="https://aws.amazon.com/codepipeline/" target="_blank" rel="noopener noreferrer nofollow">CodePipeline</a>.
+                </a>, <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer nofollow">AWS
+                </a> (SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana), <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless
+                </a>, <a href="https://www.terraform.io/" target="_blank" rel="noopener noreferrer nofollow">Terraform
+                </a>, <a href="https://jenkins.io/" target="_blank" rel="noopener noreferrer nofollow">Jenkins</a>.
               </p>
             
               <ul className="technologies-list">
@@ -153,26 +150,15 @@ const ProjectPrix = () => (
                   <img src="/static/portfolio/the-business-research-platform/serverless.png" alt="Serverless" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/the-business-research-platform/aws-code-pipeline.png" alt="CodePipeline" />
+                  <img src="/static/portfolio/the-business-research-platform/jenkins.png" alt="Jenkins" />
                 </li>
               </ul>
               <ul className="technologies-list">
                 <li className="technologies-item">
-                  <img src="/static/portfolio/the-business-research-platform/aws-s3.png" alt="AWS S3" />
+                  <img style={{ maxHeight: '100px' }} src="/static/portfolio/the-business-research-platform/aws-logo.png" alt="AWS" />
                 </li>
                 <li className="technologies-item">
-                  <img src="/static/portfolio/the-business-research-platform/aws-ses.png" alt="AWS SES" />
-                </li>
-              </ul>
-              <ul className="technologies-list">
-                <li className="technologies-item">
-                  <img style={{ maxHeight: '90px' }} src="/static/portfolio/the-business-research-platform/cloud-watch.png" alt="CloudWatch" />
-                </li>
-                <li className="technologies-item">
-                  <img style={{ maxHeight: '90px' }} src="/static/portfolio/the-business-research-platform/cloud-search.png" alt="CloudSearch" />
-                </li>
-                <li className="technologies-item">
-                  <img style={{ maxHeight: '90px' }} src="/static/portfolio/the-business-research-platform/cloud-formation.png" alt="CloudFormation" />
+                  <img style={{ maxHeight: '100px' }} src="/static/portfolio/the-business-research-platform/terraform.png" alt="Terraform" />
                 </li>
               </ul>
  
@@ -205,9 +191,8 @@ const ProjectPrix = () => (
                 title="SHARE YOUR IDEA"
                 buttonBefore={(
                   <a
-                    href="https://keenethics.com/portfolio"
+                    href="/portfolio"
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
                   >
                     <button type="button" className="call-to-cation-btn -secondary">
                       CHECK OTHER PROJECT
