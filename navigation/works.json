@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Business Research Platform",
+    "metaTitle": "The Business Research Platform – KeenEthics Case Study",
+    "href": "/project-the-business-research-platform",
+    "imgSrc": "the-business-research-platform/the-business-research-platform.jpeg",
+    "category": {
+      "main": [
+        "Business"
+      ]
+    },
+    "description": "A web platform offering the services of a mediator between business consultants and consultees.",
+    "metaDescription": "A web platform offering the services of a mediator between business consultants and consultees."
+  },
+  {
     "title": "WorldLabs",
     "metaTitle": "WorldLabs – KeenEthics Projects",
     "href": "/project-worldlabs",
