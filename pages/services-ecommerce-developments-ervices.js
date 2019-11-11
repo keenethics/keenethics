@@ -151,7 +151,7 @@ const EcommerceDevelopmentServices = () => (
           <li className="challenges-item">
             <ul>
               <li>
-                Closely follow <a href="https://keenethics.com/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer nofollow">
+                Closely follow <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">
                 data security regulations</a> for ecommerce web development services.
               </li>
               <li>
@@ -183,17 +183,17 @@ const EcommerceDevelopmentServices = () => (
               </li>
               <li>
                 Design your platform as a&nbsp;
-                <a href="https://keenethics.com/tech-apps-progressive-web-apps" target="_blank" rel="noopener noreferrer nofollow">progressive web app</a> to 
+                <a href="/tech-apps-progressive-web-apps" target="_blank">progressive web app</a> to 
                 make your app faster, more reliable, and engaging.
               </li>
               <li>
                 Integrate a 
-                <a href="https://keenethics.com/blog/1548151200000-voice-app-development" target="_blank" rel="noopener noreferrer nofollow">voice assistant</a> into 
+                <a href="/blog/1548151200000-voice-app-development" target="_blank">voice assistant</a> into 
                 your platform.
               </li>
               <li>
                 To improve data collection and analysis processes and to boost the visibility of your physical store, implement 
-                an <a href="https://keenethics.com/blog/1554793200000-indoor-positioning-in-retail" target="_blank" rel="noopener noreferrer nofollow">indoor positioning system</a>.
+                an <a href="/blog/1554793200000-indoor-positioning-in-retail" target="_blank">indoor positioning system</a>.
               </li>
             </ul>
           </li>
@@ -201,7 +201,7 @@ const EcommerceDevelopmentServices = () => (
         <h2>Do you agree with our solutions?</h2>
         <CallToActionButton
           title="SOLVE A CHALLENGE"
-          href="https://calendly.com/iryna-keenethics/intro-call?month=2019-06"
+          href="/contacts"
         />
       </section>
       <section>
@@ -324,13 +324,13 @@ const EcommerceDevelopmentServices = () => (
             it does accept orders from other countries if users organize shipping on their own.
           </p>
           <div style={{ marginBottom: '5px' }}>
-            <b>Platform</b>: <a href="https://keenethics.com/services-web-development" target="_blank" rel="noopener noreferrer nofollow">Web
-            </a>, <a href="https://keenethics.com/services-mobile-development-android" target="_blank" rel="noopener noreferrer nofollow">Android
-            </a>, and <a href="https://keenethics.com/services-mobile-development-apple" target="_blank" rel="noopener noreferrer nofollow">iOS</a>
+            <b>Platform</b>: <a href="/services-web-development" target="_blank">Web
+            </a>, <a href="/services-mobile-development-android" target="_blank">Android
+            </a>, and <a href="/services-mobile-development-apple" target="_blank">iOS</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
-            <b>Platform</b>: <a href="https://keenethics.com/tech-back-end-meteor" target="_blank" rel="noopener noreferrer nofollow">Meteor
-            </a>, Blaze, Ionic, and <a href="https://keenethics.com/tech-front-end-angular" target="_blank" rel="noopener noreferrer nofollow">Angular</a>
+            <b>Platform</b>: <a href="/tech-back-end-meteor" target="_blank">Meteor
+            </a>, Blaze, Ionic, and <a href="/tech-front-end-angular" target="_blank">Angular</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
             <b>Methodology</b>: Kanban
@@ -350,13 +350,13 @@ const EcommerceDevelopmentServices = () => (
             At the same time, it lets parking spot owners (Lenders) turn their unused parking space into money.
           </p>
           <div style={{ marginBottom: '5px' }}>
-            <b>Platform</b>: <a href="https://keenethics.com/services-mobile-development-android" target="_blank" rel="noopener noreferrer nofollow">Android</a> and&nbsp;
-            <a href="https://keenethics.com/services-mobile-development-apple" target="_blank" rel="noopener noreferrer nofollow">iOS</a>
+            <b>Platform</b>: <a href="/services-mobile-development-android" target="_blank">Android</a> and&nbsp;
+            <a href="/services-mobile-development-apple" target="_blank">iOS</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
-            <b>Technologies</b>: Redux, <a href="https://keenethics.com/services-web-development-node" target="_blank" rel="noopener noreferrer nofollow">Node.js
-            </a>, <a href="https://keenethics.com/tech-data-base-mongo" target="_blank" rel="noopener noreferrer nofollow">MongoDB
-            </a>, Firebase, Twilio, <a href="https://keenethics.com/tech-apps-react-native" target="_blank" rel="noopener noreferrer nofollow">
+            <b>Technologies</b>: Redux, <a href="/services-web-development-node" target="_blank">Node.js
+            </a>, <a href="/tech-data-base-mongo" target="_blank">MongoDB
+            </a>, Firebase, Twilio, <a href="/tech-apps-react-native" target="_blank">
             React Native Maps, React Native Push Notifications</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
@@ -398,17 +398,17 @@ const EcommerceDevelopmentServices = () => (
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span> Bringing tech expertise</h3>
         <p>
           Our highly skilled ecommerce development team is ready 
-          to offer <a href="https://keenethics.com/services-mobile-development" target="_blank" rel="noopener noreferrer nofollow">mobile app development</a> and&nbsp; 
-          <a href="https://keenethics.com/services-web-development" target="_blank" rel="noopener noreferrer nofollow">web platform development</a> services. 
+          to offer <a href="/services-mobile-development" target="_blank">mobile app development</a> and&nbsp; 
+          <a href="/services-web-development" target="_blank">web platform development</a> services. 
           We are also willing to assist you 
-          with <a href="https://keenethics.com/tech-apps-progressive-web-apps" target="_blank" rel="noopener noreferrer nofollow">progressive web apps</a> or&nbsp;
-          <a href="https://keenethics.com/services-web-development-chatbot" target="_blank" rel="noopener noreferrer nofollow">chatbots</a>.
+          with <a href="/tech-apps-progressive-web-apps" target="_blank">progressive web apps</a> or&nbsp;
+          <a href="/services-web-development-chatbot" target="_blank">chatbots</a>.
         </p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data</h3>
         <p>
           We greatly value your project idea, so we abide by all 
-          the <a href="https://keenethics.com/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank" rel="noopener noreferrer nofollow">data security</a> regulations. 
+          the <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">data security</a> regulations. 
           We will respect your desire to stay private about ecommerce development services if you choose to sign a non-disclosure agreement.
         </p>
       </section>
