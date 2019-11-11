@@ -285,5 +285,13 @@
     "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
     "href": "/contacts",
     "type": "hidden"
+  },
+  {
+    "name": "Privacy Policy",
+    "description": "...",
+    "metaTitle": "KeenEthics’ Privacy Policy",
+    "metaDescription": "...",
+    "href": "/privacy-policy",
+    "type": "hidden"
   }
 ]
