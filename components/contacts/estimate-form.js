@@ -395,8 +395,8 @@ Services needed
               <button
                 type="button"
                 disabled={!stage.value || !services.value.length}
-                className={`button no-shadow button-send${
-                  !stage.value || !services.value.length ? ' pending' : ''
+                className={`button button-send${
+                  !stage.value || !services.value.length ? ' no-shadow pending' : ''
                 }`}
                 onClick={wizardStageIncreaser}
               >
@@ -568,7 +568,7 @@ Project management
               </button>
               <button
                 type="button"
-                className="button no-shadow button-send btn-wide"
+                className="button button-send btn-wide"
                 onClick={wizardStageIncreaser}
               >
                 Continue
@@ -832,7 +832,7 @@ Start
               <button
                 type="button"
                 onClick={wizardStageIncreaser}
-                className="button no-shadow button-send btn-wide"
+                className="button button-send btn-wide"
               >
                 Continue
               </button>
@@ -924,8 +924,8 @@ Start
               </button>
               <button
                 type="submit"
-                className={classnames('button no-shadow button-send btn-wide', {
-                  pending:
+                className={classnames('button button-send btn-wide', {
+                  "pending no-shadow":
                     !name.value
                     || !emailEstimate.value
                     || isPending,

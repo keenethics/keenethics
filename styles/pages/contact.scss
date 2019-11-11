@@ -910,6 +910,10 @@
         font-weight: 600;
         margin-bottom: 5px;
       }
+
+      &:hover {
+        border-color: #b4b5c2;
+      }
     }
 
     input[type="radio"]:checked + .label-for-radio-btn {
@@ -1657,7 +1661,7 @@
     outline: none;
     border: none;
     background-color: #291c74;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 
     &.btn-estimate {
