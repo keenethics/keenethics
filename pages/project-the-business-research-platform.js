@@ -19,7 +19,7 @@ const ProjectPrix = () => (
             <div className="project-content-summary-inner">
               <h1 className="title">The Business Research Platform</h1>
               <p className="description">A mediator between business consultants and consultees.</p>
-              <PortfolioTechnologyTags tags={['Business']} />
+              <PortfolioTechnologyTags tags={['Business Administration']} />
             </div>
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
@@ -126,8 +126,8 @@ const ProjectPrix = () => (
               <h3>Technologies</h3>
               <p>
                 The management consulting industry project has been developed with <a href="https://loopback.io/" target="_blank" rel="noopener noreferrer nofollow">LoopBack
-                </a>, <a href="https://keenethics.com/tech-data-base-mysql" target="_blank" rel="noopener noreferrer nofollow">MySQL
-                </a>, <a href="https://keenethics.com/tech-front-end-react" target="_blank" rel="noopener noreferrer nofollow">React
+                </a>, <a href="/tech-data-base-mysql" target="_blank">MySQL
+                </a>, <a href="/tech-front-end-react" target="_blank">React
                 </a>, <a href="https://aws.amazon.com/ses/" target="_blank" rel="noopener noreferrer nofollow">AWS&nbsp;SES
                 </a>, <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer nofollow">AWS&nbsp;S3
                 </a>, <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless
