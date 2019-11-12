@@ -7,5 +7,5 @@ export const MaxS = {
 export const PaulW = {
   name: 'Talk to Paul van Workum',
   position: 'Business Partner of KeenEthics',
-  imgSrc: 'static/images/paul-van-workum.jpg',
+  imgSrc: 'static/images/paul_van_workum.png',
 };
