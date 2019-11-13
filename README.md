@@ -21,7 +21,7 @@
 ## Deploy
 
 1. Deploy `dev` to staging http://167.71.71.176:8000/ (file `bash deploy-staging`)
-2. Deploy `master` to ptoduction https://keenethics.com/ (file `bash deploy`)
+2. Deploy `master` to production https://keenethics.com/ (file `bash deploy`)
 
 ### Other way
 
