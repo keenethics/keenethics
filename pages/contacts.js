@@ -1,6 +1,6 @@
 import { withRouter } from 'next/router';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -257,6 +257,18 @@ const Contacts = ({ router }) => {
   function onClick({ target }) {
     setActiveContactForm(target.name === 'contact-form-btn');
   }
+
+  useEffect(() => {
+    const getLoction = async () => {
+      const res = await fetch(`${BACKEND_URL}/api/location`);
+      const json = await res.json();
+      const location = json.location;
+      
+      setSelectedCountry(location.country);
+    }
+
+    getLoction();
+  }, []);
 
   const person = selectedCountry === 'NL' ? PaulW : MaxS;
   return (

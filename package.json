@@ -28,6 +28,7 @@
     "express": "^4.17.1",
     "express-uncapitalize": "^1.0.0",
     "googleapis": "^42.0.0",
+    "iplocation": "^6.1.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
     "micro": "^9.0.2",

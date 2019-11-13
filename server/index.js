@@ -25,6 +25,7 @@ const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
+const iplocation = require("iplocation").default; 
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -501,6 +502,19 @@ app.prepare().then(() => {
   server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
+  });
+
+  server.get('/api/location', async (req, res) => {
+    try {
+      const ip = req.headers['x-forwarded-for'] || 
+        req.connection.remoteAddress || 
+        req.socket.remoteAddress ||
+        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+      const location = await iplocation(ip);
+      res.status(200).json({ location: location });
+    } catch(e) {
+      res.status(400).json({ location: ""});
+    }
   });
 
   server.get('*', (req, res) => handle(req, res));
