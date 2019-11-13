@@ -7,23 +7,23 @@ export default function FilterBtn({
   buttonClick,
   category,
   isDisabled,
+  className,
 }) {
   return (
-    <li className="filter__item">
-      <button
-        className={classnames(
-          'filter__btn',
-          {
-            '-red': isActive,
-            '-disabled': isDisabled,
-          },
-        )}
-        onClick={buttonClick}
-        type="button"
-      >
-        {category}
-      </button>
-    </li>
+    <button
+      className={classnames(
+        'filter__btn',
+        className,
+        {
+          '-active': isActive,
+          '-disabled': isDisabled,
+        },
+      )}
+      onClick={buttonClick}
+      type="button"
+    >
+      {category}
+    </button>
   );
 }
 FilterBtn.propTypes = {
@@ -31,8 +31,10 @@ FilterBtn.propTypes = {
   buttonClick: PropTypes.func.isRequired,
   category: PropTypes.string.isRequired,
   isDisabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 FilterBtn.defaultProps = {
   isActive: false,
   isDisabled: false,
+  className: '',
 };

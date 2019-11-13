@@ -1,0 +1,278 @@
+// unified styles for 'blog' and 'portfolio' pages
+
+.page__wrapper {
+  padding: 0 20px 40px;
+  position: relative;
+
+  @media (min-width: $mobile-md) {
+    padding: 0 25px 40px;
+  }
+
+  @media (min-width: $tablet-sm) {
+    padding: 0 30px 40px;
+  }
+
+  @media (min-width: $desktop-lg) {
+    padding: 0 40px 40px;
+  }
+}
+
+.page__header {
+  padding: 75px 0 60px;
+
+  @media (min-width: $tablet-sm) {
+    padding: 115px 0 95px;
+  }
+
+  @media (min-width: $tablet-lg) {
+    padding: 115px 0 145px;
+  }
+
+  @media (min-width: $desktop-xs) {
+    padding: 65px 0 65px 125px;
+  }
+
+  @media (min-width: $desktop-sm) {
+    padding: 95px 0 95px 150px;
+  }
+
+  @media (min-width: $desktop-md) {
+    padding: 95px 0 95px 215px;
+  }
+
+  @media (min-width: $desktop-md) {
+    padding: 95px 0 95px 250px;
+  }
+
+  @media (min-width: $desktop-xl) {
+    padding: 95px 0 95px 290px;
+  }
+
+  @media (min-width: $desktop-xxl) {
+    padding: 95px 0 95px 410px;
+  }
+}
+
+
+.page__title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  font-size: 28px;
+  line-height: 40px;
+
+  em {
+    font-style: normal;
+    color: #D42E2D;
+  }
+
+  .bell {
+    transform: translateY(5px);
+  }
+
+  @media (min-width: $tablet-sm) {
+    font-size: 32px;
+  }
+
+  @media (min-width: $desktop-md) {
+    font-size: 44px;
+    line-height: 54px;
+  }
+}
+
+.page__list {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+
+  &.-rounded {
+    justify-content: space-around;
+  }
+}
+
+.page__item {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  margin: 0;
+  transition: transform 0.1s ease-in-out;
+  &:before {
+    display: none;
+  }
+
+  @media (min-width: $tablet-lg) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-xs) {
+    width: calc(100% / 12 * 4);
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  &-figure {
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &-figure-img-wrap {
+    height: 0;
+    padding-bottom: 56%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  &-figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0 0;
+    flex-grow: 1;
+
+    &-heading {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $mobile-lg) {
+      padding: 20px 0 0;
+    }
+  }
+
+  &-title {
+    margin: 0 0 10px 0 !important;
+    color: #2D4352;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  &-tags {
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  &-tag {
+    @extend .tags-text;
+    height: 24px;
+    padding: 0 20px;
+    display: inline-block;
+    font-size: 0.85em;
+    border-radius: 2px;
+    background-color: #d93a4223;
+    color: #d42e2d;
+    text-transform: uppercase;
+    letter-spacing: 0.56px;
+    line-height: 24px;
+
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+
+    @media (min-width: $mobile-md) {
+      padding: 0 10px;
+    }
+
+    @media (min-width: $tablet-lg) {
+      padding: 0 25px;
+    }
+
+    @media (min-width: $desktop-xs) {
+      padding: 0 10px;
+    }
+  }
+
+  &-date {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #12233D;
+
+    margin-left: auto;
+  }
+
+  /*
+    Rounded images (for service/blog-post pages
+  */
+  &.-rounded {
+    padding: 10px;
+    width: 280px;
+
+    .page__item {
+      &-figure {
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow .3s ease;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        &:hover {
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &-figcaption {
+        padding: 15px 15px 25px;
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+
+      &-figcaption-heading {
+        margin-bottom: 0;
+      }
+
+      &-title {
+        margin: 0 0 10px!important;
+        color: rgba(0,0,0,.9);
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      &-tags {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+      }
+
+      &-tag {
+        background-color: #fff;
+        color: rgba(0,0,0,.7);
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

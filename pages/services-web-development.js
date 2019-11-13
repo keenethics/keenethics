@@ -124,7 +124,7 @@ const ServicesWebDevelopment = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some of the applications and websites that we have developed:</p>
-          <Works works={webDevelopmentWorks} />
+          <Works works={webDevelopmentWorks} rounded />
         </section>
         <section>
           <h2>Now, let’s discuss your business idea!</h2>

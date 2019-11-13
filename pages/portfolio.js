@@ -46,39 +46,42 @@ class Portfolio extends React.Component {
       .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
     const uniqCategories = [...new Set(categories)];
-
-    const selectedWorks = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
-      : uniqCategories;
-
-    return { selectedWorks, categorisList: uniqCategories };
+    // no selected categories by default
+    const selectedCategories = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
+      : [];
+    return { selectedCategories, categoriesList: uniqCategories };
   }
 
   worksCountFor(work) {
-    const { selectedWorks } = this.state;
-    return work.category.main.filter((category) => selectedWorks.includes(category)).length;
+    const { selectedCategories } = this.state;
+    // When no categories selected - show all works
+    if (selectedCategories.length === 0) {
+      return true;
+    }
+    return work.category.main.some((category) => selectedCategories.includes(category));
   }
 
-  filterOnChange(selectedWorks) {
-    this.setState({ selectedWorks });
+  filterOnChange(selectedCategories) {
+    this.setState({ selectedCategories });
   }
 
   render() {
-    const { selectedWorks, categorisList } = this.state;
+    const { selectedCategories, categoriesList } = this.state;
 
     return (
       <Layout>
-        <section className="portfolio">
-          <div className="portfolio__header">
-            <h1 className="portfolio__title">
-              <span className="text-color-red">Keen</span>
-              &nbsp;Portfolio
+        <section className="portfolio page__wrapper">
+          <div className="page__header">
+            <h1 className="page__title">
+              <em>Keen</em>
+              &nbsp;projects
               <br />
-              on Tech and business
+              we put into action
             </h1>
           </div>
           <CategoriesFilter
-            categorisList={categorisList}
-            selectedCategories={selectedWorks}
+            categoriesList={categoriesList}
+            selectedCategories={selectedCategories}
             filterOnChange={this.filterOnChange}
             pageTitle="portfolio"
           />
