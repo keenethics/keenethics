@@ -371,7 +371,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               : 2 full-stack developers and 1 Project Manager
             </div>
           </div>
-          <Works works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
+          <Works rounded works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
 
           <div>
             <h3>Hospital Marketing Administration System</h3>
@@ -388,7 +388,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 1 middle software developer, 1 QA specialist, 1 HTML/CSS coder, and 1 UI/UX designer
             </div>
-            <Works works={works.filter(({ title }) => ['Hospital Marketing Administration System'].includes(title))} />
+            <Works rounded works={works.filter(({ title }) => ['Hospital Marketing Administration System'].includes(title))} />
           </div>
 
           <div>
@@ -403,7 +403,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 1 UI/UX designer
             </div>
-            <Works works={works.filter(({ title }) => ['Blood Testing Application'].includes(title))} />
+            <Works rounded works={works.filter(({ title }) => ['Blood Testing Application'].includes(title))} />
           </div>
 
           <div>
@@ -421,7 +421,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 2 full-stack software developers and 1 QA specialist
             </div>
-            <Works works={works.filter(({ title }) => ['Digital Hospital App'].includes(title))} />
+            <Works rounded works={works.filter(({ title }) => ['Digital Hospital App'].includes(title))} />
           </div>
 
           <div>
@@ -439,7 +439,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 2 full-stack software developers, 1 PM, and 1 QA specialist
             </div>
-            <Works works={works.filter(({ title }) => ['Diagnostic Appointment Scheduling System'].includes(title))} />
+            <Works rounded works={works.filter(({ title }) => ['Diagnostic Appointment Scheduling System'].includes(title))} />
           </div>
 
         </div>

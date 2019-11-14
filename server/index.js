@@ -34,8 +34,6 @@ const app = next({ dev });
 
 const handle = app.getRequestHandler();
 
-const checkStatus = (response) => (response.ok ? response.json() : Promise.reject(response.json()));
-
 const sendContactToHubSpot = (hubSpotParameters) => {
   const parameters = querystring.stringify(hubSpotParameters);
   const options = {
@@ -49,7 +47,17 @@ const sendContactToHubSpot = (hubSpotParameters) => {
   const hubUrl = `https://forms.hubspot.com/uploads/form/v2/${userId}/${formId}?${parameters}`;
 
   fetch(hubUrl, options)
-    .then(checkStatus)
+    .then((res) => res.text())
+    .then((text) => {
+      console.log('=========');
+      console.log(text);
+      try {
+        const parsedResponse = JSON.parse(text);
+        return Promise.resolve(parsedResponse);
+      } catch (err) {
+        throw new Error(text);
+      }
+    })
     .catch((error) => console.log('Hubspot request error: ', error));
 };
 
@@ -248,7 +256,7 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com',
+      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
     };

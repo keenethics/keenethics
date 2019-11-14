@@ -154,7 +154,7 @@ const ServicesOutstaffing = () => (
             <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link></div>
             <div style={{ marginBottom: '25px' }}><b>Team</b>: 10 full-stack developers and QA specialists, and 1 Project Manager</div>
           </div>
-          <Works works={works.filter(({ title }) => ['WorldLabs'].includes(title))} />
+          <Works rounded works={works.filter(({ title }) => ['WorldLabs'].includes(title))} />
         </div>
         <div>
           <h3>My Grass Growth</h3>
@@ -165,7 +165,7 @@ const ServicesOutstaffing = () => (
             <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link></div>
             <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers, 1 QA specialist, and 1 Project Manager</div>
           </div>
-          <Works works={works.filter(({ title }) => ['My Grass Growth'].includes(title))} />
+          <Works rounded works={works.filter(({ title }) => ['My Grass Growth'].includes(title))} />
         </div>
         <div>
           <h3>OneRemission</h3>
@@ -176,7 +176,7 @@ const ServicesOutstaffing = () => (
             <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link></div>
             <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers and 1 Project Manager</div>
           </div>
-          <Works works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
+          <Works rounded works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
         </div>
       </section>
       <section>

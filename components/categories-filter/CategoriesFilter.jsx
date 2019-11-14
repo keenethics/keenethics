@@ -1,108 +1,272 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withRouter } from 'next/router';
+import { debounce } from 'lodash';
+import { SlideDown } from 'react-slidedown';
 
-import classnames from 'classnames';
 import CategoryButton from './CategoryButton';
 
-export default class CategoriesFilter extends Component {
+// button width + margin-right
+const CATEGORY_BUTTON_WIDTH_DESKTOP = 150 + 10;
+
+const getVisibleLinksAmount = (screenWidth) => {
+  if (screenWidth >= 960 && screenWidth < 1024) {
+    return 3;
+  }
+  if (screenWidth >= 1024 && screenWidth < 1280) {
+    return 2;
+  }
+  if (screenWidth >= 1280 && screenWidth < 1440) {
+    return 4;
+  }
+  if (screenWidth >= 1440 && screenWidth < 1600) {
+    return 6;
+  }
+  if (screenWidth >= 1600) {
+    return 8;
+  }
+  return NaN;
+};
+
+class CategoriesFilter extends React.Component {
+  handleResize = debounce(() => {
+    const { isMobile } = this.state;
+    if (window.innerWidth < 960 && !isMobile) {
+      this.setState({ isMobile: true });
+    } else if (window.innerWidth >= 960 && (isMobile || isMobile === null)) {
+      this.setState({ isMobile: false, isExpanded: false });
+    }
+  })
+
   constructor() {
     super();
     this.state = {
-      disabledBtnAnimation: '',
+      isExpanded: false,
+      isMobile: null,
+      scroll: 0,
     };
-    this.buttonClick = this.buttonClick.bind(this);
-    this.showAllWorks = this.showAllWorks.bind(this);
   }
 
-  buttonClick(category) {
-    const { filterOnChange, selectedCategories, pageTitle } = this.props;
-    const selectedItems = selectedCategories.slice();
-    const position = selectedItems.indexOf(category);
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
 
-    if (position === -1) {
-      selectedItems.push(category);
-    } else if (selectedItems.length === 1) {
-      this.setState({ disabledBtnAnimation: category });
-      setTimeout(() => {
-        this.setState({ disabledBtnAnimation: '' });
-      }, 500);
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  toggleExpand = () => {
+    this.setState((state) => ({ isExpanded: !state.isExpanded }));
+  }
+
+  scroll = (step) => {
+    const { scroll } = this.state;
+    const { categoriesList } = this.props;
+
+    // prevent switching to unexistent steps
+    if (
+      (step === -1 && scroll === 0)
+      || (step === 1 && scroll === categoriesList.length)
+    ) {
       return;
-    } else {
-      selectedItems.splice(position, 1);
     }
-    const url = `/${pageTitle}?chosen=${selectedItems.join(',')}`;
-    window.history.replaceState({ url }, '', url);
-    filterOnChange(selectedItems);
-  }
 
-  showAllWorks() {
+    // prevent scrolling to blank space
+    if (
+      step === 1
+      && scroll > categoriesList.length - getVisibleLinksAmount(window.innerWidth)
+    ) {
+      return;
+    }
+
+    this.setState({ scroll: scroll + step });
+  };
+
+  selectCategory = (category) => {
     const {
       filterOnChange,
       selectedCategories,
-      categorisList,
       pageTitle,
+      router,
     } = this.props;
     const selectedItems = selectedCategories.slice();
+    const position = selectedCategories.indexOf(category);
 
-    if (selectedItems.length === categorisList.length) {
-      this.setState({ disabledBtnAnimation: 'all' });
-      setTimeout(() => {
-        this.setState({ disabledBtnAnimation: '' });
-      }, 500);
-      return;
+    if (position === -1) {
+      selectedItems.push(category);
+    } else {
+      selectedItems.splice(position, 1);
     }
 
-    const url = `/${pageTitle}`;
-    window.history.replaceState({ url }, '', url);
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: selectedItems.join(',') },
+    });
 
-    filterOnChange(categorisList);
+    filterOnChange(selectedItems);
+  }
+
+  clearCategories = () => {
+    const { pageTitle, filterOnChange, router } = this.props;
+
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: '' },
+    });
+
+    filterOnChange([]);
+  }
+
+  selectAllCategories = () => {
+    const {
+      filterOnChange, categoriesList, pageTitle, router,
+    } = this.props;
+
+    router.replace({
+      pathname: `/${pageTitle}`,
+      query: { chosen: categoriesList.join(',') },
+    });
+    filterOnChange(categoriesList);
   }
 
   render() {
-    const { disabledBtnAnimation } = this.state;
-    const {
-      categorisList,
-      selectedCategories,
-      pageTitle,
-    } = this.props;
+    const { pageTitle, categoriesList, selectedCategories } = this.props;
+    const { isExpanded, isMobile, scroll } = this.state;
+
     return (
-      <div className={`filter filter--${pageTitle}`}>
-        <div className="filter__show-all">
-          <button
-            onClick={this.showAllWorks}
-            className={classnames(
-              'filter__btn -show-all',
-              {
-                '-active': selectedCategories.length !== categorisList.length,
-                '-disabled': disabledBtnAnimation === 'all',
-              },
-            )}
-            type="button"
-          >
-              Show all
-          </button>
+      <>
+        <div className={`filter filter__${pageTitle}`}>
+          {
+            isMobile
+            && (
+              <div className="filter__wrapper">
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={this.toggleExpand}
+                  onKeyPress={this.toggleExpand}
+                  className={classNames('filter__toggler', {
+                    'filter__toggler--expanded': isExpanded,
+                    'filter__toggler--selected': selectedCategories.length,
+                  })}
+                >
+                  {
+                    selectedCategories.length
+                      ? `${selectedCategories.length} filters selected`
+                      : 'Set the filters'
+                  }
+                </div>
+
+                <SlideDown
+                  closed={!isExpanded}
+                  className="filter__slidedown"
+                >
+                  <ul className="filter__list">
+                    <div
+                      className="filter__categories"
+                    >
+                      {categoriesList.map((category) => (
+                        <li className="filter__item" key={category}>
+                          <CategoryButton
+                            category={category}
+                            isActive={selectedCategories.includes(category)}
+                            buttonClick={() => this.selectCategory(category)}
+                          />
+                        </li>
+                      ))}
+                    </div>
+                    <div className="filter__controls">
+                      <li className="filter__item">
+                        <CategoryButton
+                          category="Clear"
+                          buttonClick={this.clearCategories}
+                          className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+                        />
+                      </li>
+                      <li className="filter__item">
+                        <CategoryButton
+                          category="Show All"
+                          buttonClick={this.selectAllCategories}
+                          className="-show-all"
+                        />
+                      </li>
+                    </div>
+                  </ul>
+                </SlideDown>
+              </div>
+            )
+          }
+
+          {
+            isMobile === false
+            && (
+              <div className="filter__wrapper">
+                <ul className="filter__list">
+                  <div
+                    className="filter__categories"
+                    style={{ left: scroll * (-1 * CATEGORY_BUTTON_WIDTH_DESKTOP) }}
+                  >
+                    {categoriesList.map((category) => (
+                      <li className="filter__item" key={category}>
+                        <CategoryButton
+                          category={category}
+                          isActive={selectedCategories.includes(category)}
+                          buttonClick={() => this.selectCategory(category)}
+                        />
+                      </li>
+                    ))}
+                  </div>
+                </ul>
+
+                <div className="filter__arrows">
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <button
+                    type="button"
+                    className="filter__arrow filter__arrow-left"
+                    onClick={() => this.scroll(-1)}
+                  />
+                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+                  <button
+                    type="button"
+                    className="filter__arrow filter__arrow-right"
+                    onClick={() => this.scroll(1)}
+                  />
+                </div>
+
+                <div className="filter__controls">
+                  <CategoryButton
+                    category="Clear"
+                    buttonClick={this.clearCategories}
+                    className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+                  />
+                  <CategoryButton
+                    category="Show All"
+                    buttonClick={this.selectAllCategories}
+                    className="-show-all"
+                  />
+                </div>
+              </div>
+            )
+          }
+
         </div>
-        <ul className="filter__list">
-          {categorisList.map((category) => (
-            <CategoryButton
-              category={category}
-              key={category}
-              isActive={selectedCategories.includes(category)}
-              buttonClick={() => this.buttonClick(category)}
-              isDisabled={disabledBtnAnimation === category}
-            />
-          ))}
-        </ul>
-      </div>
+      </>
     );
   }
 }
+
 CategoriesFilter.propTypes = {
-  categorisList: PropTypes.array.isRequired,
-  selectedCategories: PropTypes.array,
-  filterOnChange: PropTypes.func.isRequired,
   pageTitle: PropTypes.string.isRequired,
+  categoriesList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedCategories: PropTypes.arrayOf(PropTypes.string),
+  filterOnChange: PropTypes.func.isRequired,
+  router: PropTypes.object.isRequired,
 };
+
 CategoriesFilter.defaultProps = {
   selectedCategories: [],
 };
+
+export default withRouter(CategoriesFilter);

@@ -1,6 +1,7 @@
 @import "reset";
 @import "mixins";
 @import "common";
+@import "helpers/breakpoints";
 @import "grid";
 @import "layout";
 @import "form/checkbox";
@@ -11,13 +12,13 @@
 @import "content";
 @import "pages";
 @import "blog";
+@import "filter";
+@import 'pages/common';
 @import "pages/project";
 @import "pages/team";
 @import "pages/contact";
 @import "pages/error";
-@import "pages/portfolio";
 @import "pages/promo";
-@import "filter";
 
 @import "portfolio/PortfolioTechnologyTags";
 @import "portfolio/PortfolioFeedback";

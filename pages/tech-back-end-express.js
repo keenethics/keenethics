@@ -141,7 +141,7 @@ const TechBackEndExpress = () => (
       <section>
         <h2>Portfolio</h2>
         <p>As an Express.js development company we have created:</p>
-        <Works works={works.filter(({ title }) => ['Education System Platform', 'Pree', 'Banker Advisor'].includes(title))} />
+        <Works rounded works={works.filter(({ title }) => ['Education System Platform', 'Pree', 'Banker Advisor'].includes(title))} />
       </section>
 
       <CallToActionButton title="CONTACT US" href="/contacts" />

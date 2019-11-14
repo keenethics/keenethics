@@ -1,48 +1,26 @@
-import Link from 'next/link';
-
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-const Works = ({ works }) => (
+import ListItem from '../content/ListItem';
+
+const Works = ({ works, rounded }) => (
   <div className="portfolio-works">
-    <ul className="portfolio__list">
+    <div className={classNames('page__list', { '-rounded': rounded })}>
       {works.map((work) => (
-        <li className="portfolio__item" key={work.title}>
-          <Link href={work.href}>
-            <a className="portfolio__item-link">
-              <figure className="portfolio__item-figure">
-                <div className="portfolio__item-figure-img-wrap">
-                  <img src={`static/portfolio/${work.imgSrc}`} alt={work.title} className="portfolio__item-img" />
-                </div>
-                <figcaption className="portfolio__figcaption">
-                  <h3 className="portfolio__item-title">{work.title}</h3>
-                  <ul className="portfolio__item-categories">
-                    {
-                      work.category.main && work.category.main !== 'Other'
-                        ? work.category.main.map((category) => (<li className="tag" key={category}>{category}</li>))
-                        : null
-                    }
-                    {
-                      work.category.additional
-                        ? work.category.additional.map((category) => (<li className="tag" key={category}>{category}</li>))
-                        : null
-                    }
-                  </ul>
-                </figcaption>
-              </figure>
-            </a>
-          </Link>
-        </li>
+        <ListItem work={work} rounded={rounded} />
       ))}
-    </ul>
+    </div>
   </div>
 );
 
 Works.propTypes = {
   works: PropTypes.array,
+  rounded: PropTypes.bool,
 };
 Works.defaultProps = {
   works: [],
+  rounded: false,
 };
 
 export default Works;

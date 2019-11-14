@@ -32,9 +32,6 @@
     "imgSrc": "blood-test-application/blood-test-application.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
         "Healthcare"
       ]
     },
@@ -48,9 +45,6 @@
     "imgSrc": "digital-hospital-app/digital-hospital-app.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
         "Healthcare"
       ]
     },
@@ -63,10 +57,7 @@
     "imgSrc": "parkqx/parkqx.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
-        "E-Commerce"
+        "E-commerce"
       ]
     },
     "description": "A C2C e-commerce app, which makes parking routine easy, hassle-free, and convenient."
@@ -77,7 +68,7 @@
     "imgSrc": "education-system-platform.jpg",
     "category": {
       "main": [
-        "Educational apps"
+        "Education"
       ]
     },
     "description": "Analysis and optimization of the federal education system"
@@ -88,11 +79,7 @@
     "imgSrc": "one-remission/one-remission.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
-        "E-Commerce",
-        "Healhcare"
+        "Healthcare"
       ]
     },
     "description": "Making the lives of cancer survivors easier"
@@ -104,9 +91,6 @@
     "imgSrc": "diagnostic-appointment-scheduling-system/diagnostic-appointment-scheduling-system.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
         "Healthcare"
       ]
     },
@@ -119,10 +103,7 @@
     "imgSrc": "Pree.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
-        "IoT"
+        "E-commerce"
       ]
     },
     "description": "Stop losing your stuff"
@@ -134,9 +115,6 @@
     "imgSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.jpeg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
         "Healthcare"
       ]
     },
@@ -149,10 +127,7 @@
     "imgSrc": "SelfLeaders.jpg",
     "category": {
       "main": [
-        "Educational apps"
-      ],
-      "additional": [
-        "E-Learning"
+        "Education"
       ]
     },
     "description": "Personal Growth Tool"
@@ -163,7 +138,7 @@
     "imgSrc": "Banker-Advisor.png",
     "category": {
       "main": [
-        "Consumer apps"
+        "Finance & Banking"
       ]
     },
     "description": "Investment banking tool"
@@ -173,7 +148,7 @@
     "href": "/project-black-book",
     "category": {
       "main": [
-        "Business apps"
+        "Business"
       ]
     },
     "imgSrc": "Black-Book.jpg",
@@ -185,9 +160,6 @@
     "imgSrc": "Tetrami.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
         "E-commerce"
       ]
     },
@@ -199,10 +171,7 @@
     "imgSrc": "Workbooking.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
-        "Job platform"
+        "Business"
       ]
     },
     "description": "Get hired or find someone to do the job for you"
@@ -213,10 +182,7 @@
     "imgSrc": "paceup/paceup.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
-        "AI"
+        "Hospitality"
       ]
     },
     "description": "Revenue management system for increasing customer loyalty"
@@ -227,10 +193,7 @@
     "imgSrc": "My-Grass-Growth.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
-        "Farming"
+        "Agriculture"
       ]
     },
     "description": "Keep you cows healthy and well-fed"
@@ -241,7 +204,7 @@
     "imgSrc": "Pollen.jpg",
     "category": {
       "main": [
-        "Educational apps"
+        "Business"
       ]
     },
     "description": "Organizing social-campaigns via Gmail contacts"
@@ -251,7 +214,7 @@
     "href": "/project-barfrogs",
     "category": {
       "main": [
-        "Consumer apps"
+        "Entertainment"
       ]
     },
     "imgSrc": "BarFrogs.jpg",
@@ -263,7 +226,7 @@
     "imgSrc": "Phenix.jpg",
     "category": {
       "main": [
-        "Business apps"
+        "Entertainment"
       ]
     },
     "description": "Online video-streaming"
@@ -273,7 +236,7 @@
     "href": "/project-wargaming",
     "category": {
       "main": [
-        "Business apps"
+        "Business"
       ]
     },
     "imgSrc": "Wargaming.jpg",
@@ -285,7 +248,7 @@
     "imgSrc": "Plutio.jpg",
     "category": {
       "main": [
-        "Business apps"
+        "Business"
       ]
     },
     "description": "Business management platform"
@@ -296,10 +259,7 @@
     "imgSrc": "the-check-network/the-check-network.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
-        "E-commerce"
+        "Business"
       ]
     },
     "description": "Comprehensive e-commerce platform for effective SEO optimization"
@@ -310,10 +270,7 @@
     "imgSrc": "ComicEnglish.jpg",
     "category": {
       "main": [
-        "Educational apps"
-      ],
-      "additional": [
-        "E-Learning"
+        "Education"
       ]
     },
     "description": "ComicEnglish is a chatbot-based app for interactive English learning"
@@ -324,10 +281,7 @@
     "imgSrc": "Knote.jpg",
     "category": {
       "main": [
-        "Business apps"
-      ],
-      "additional": [
-        "Team collaboration tool"
+        "Real Estate"
       ]
     },
     "description": "A tool for online collaboration and task-management"
@@ -338,9 +292,6 @@
     "imgSrc": "Knotel.jpg",
     "category": {
       "main": [
-        "Consumer apps"
-      ],
-      "additional": [
         "Real Estate"
       ]
     },
@@ -353,7 +304,7 @@
     "imgSrc": "lets-start-coding/lets-start-coding.jpg",
     "category": {
       "main": [
-        "Educational apps"
+        "Education"
       ]
     },
     "description": "An interactive e-learning platform with physical code kits and online lessons on computer coding for kids",
