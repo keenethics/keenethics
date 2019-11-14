@@ -37,7 +37,6 @@ const ContactForm = () => {
     error: false,
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
-  const [hasDiscount, setHasDiscount] = useState(false);
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
@@ -62,7 +61,6 @@ const ContactForm = () => {
         lastname: { value: 'mockedLastname', error: '' },
         phone: { value: '123456789', error: '' },
         isSubscriber,
-        hasDiscount,
       }),
     })
       .then(handleStatusResponse)
@@ -156,7 +154,6 @@ const ContactForm = () => {
             value="estimateFormIsSubscriber"
             onChange={() => {
               setIsSubscriber(!isSubscriber);
-              setHasDiscount(!hasDiscount);
             }}
             isChecked={isSubscriber}
           />
