@@ -38,6 +38,11 @@ const ContactForm = () => {
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
   const [hasDiscount, setHasDiscount] = useState(false);
+  const [file, setFile] = useState({
+    value: '',
+    error: false,
+  });
+  const [fileName, setFileName] = useState('Attach you file');
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
@@ -50,20 +55,38 @@ const ContactForm = () => {
 
     setIsPending(true);
 
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('data', JSON.stringify({
+      firstname,
+      email,
+      message,
+      lastname: { value: 'mockedLastname', error: '' },
+      phone: { value: '123456789', error: '' },
+      isSubscriber,
+      hasDiscount,
+    }));
+
+    // fetch('/contact', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     firstname,
+    //     email,
+    //     message,
+    //     lastname: { value: 'mockedLastname', error: '' },
+    //     phone: { value: '123456789', error: '' },
+    //     isSubscriber,
+    //     hasDiscount,
+    //     formData
+    //   }),
+    // })
+
     fetch('/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        firstname,
-        email,
-        message,
-        lastname: { value: 'mockedLastname', error: '' },
-        phone: { value: '123456789', error: '' },
-        isSubscriber,
-        hasDiscount,
-      }),
+      body: formData
     })
       .then(handleStatusResponse)
       .then((response) => response.json())
@@ -146,6 +169,18 @@ const ContactForm = () => {
             }}
             value={message.value}
           />
+        </div>
+        <div className="input-cols">
+          <label for="file-upload" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i> {fileName}
+          </label>
+          <input id="file-upload" type="file" name="file" onChange={
+            e => {
+              setFile(e.target.files[0]);
+              setFileName(e.target.files[0].name);
+              console.log(e.target.files[0]);
+            }
+          }/>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox

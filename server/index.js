@@ -26,6 +26,7 @@ const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const iplocation = require("iplocation").default; 
+const fileUpload = require('express-fileupload')
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -74,8 +75,9 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
+  server.use(fileUpload());
 
-  server.post('/contact', (req, res) => {
+  server.post('/contact', async (req, res) => {
     const {
       firstname,
       lastname,
@@ -84,7 +86,8 @@ app.prepare().then(() => {
       message,
       isSubscriber,
       hasDiscount,
-    } = req.body;
+    } = JSON.parse(req.body.data);
+    console.log(req.files.file);
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
     lastname.value = lastname.value.replace(/\s+/g, ' ');
@@ -136,6 +139,15 @@ app.prepare().then(() => {
       });
       return;
     }
+    const file = req.files.file;
+    let path;
+    try {
+      path = `${__dirname}/../static/upload/${file.name}`
+      await file.mv(path);
+    } catch(e) {
+      console.log(e);
+      return res.send({status: "file"});
+    }    
 
     const html = `
       <p>${firstname.value} ${lastname.value}</p>
@@ -146,9 +158,15 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+    //  to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'vitaliy.melnychenko@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
+      attachments: [
+        {
+          path: path
+        }
+      ]
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -170,7 +188,7 @@ app.prepare().then(() => {
       hasDiscount: !!hasDiscount,
     };
 
-    sendContactToHubSpot(hubSpotParameters);
+    //sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
     const {
@@ -251,6 +269,7 @@ app.prepare().then(() => {
       <p>Budget: ${budget.value}</p>
       <p>Timeframe: ${timeframe.value}</p>
       <p>Start: ${start.value}</p>
+      <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${messageEstimate.value}</div>
     `;
 
@@ -523,6 +542,20 @@ app.prepare().then(() => {
     } catch(e) {
       res.status(400).json({ location: ""});
     }
+  });
+
+  server.post('/upload', (req, res) => {
+    if (req.files === null) {
+      return res.status(400).json({});
+    }
+    const file = req.files.file;
+    console.log(file);
+    file.mv(`${__dirname}/../static/upload/${file.name}`, err => {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({});
+      }
+    })
   });
 
   server.get('*', (req, res) => handle(req, res));
