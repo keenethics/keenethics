@@ -75,9 +75,14 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
-  server.use(fileUpload());
+  server.use(fileUpload({
+    limits: {
+        fileSize: 1000000 //1mb
+    },
+    abortOnLimit: true
+ }));
 
-  server.post('/contact', async (req, res) => {
+  server.post('/contact', (req, res) => {
     const {
       firstname,
       lastname,
@@ -87,7 +92,6 @@ app.prepare().then(() => {
       isSubscriber,
       hasDiscount,
     } = JSON.parse(req.body.data);
-    console.log(req.files.file);
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
     lastname.value = lastname.value.replace(/\s+/g, ' ');
@@ -139,15 +143,24 @@ app.prepare().then(() => {
       });
       return;
     }
-    const file = req.files.file;
-    let path;
-    try {
-      path = `${__dirname}/../static/upload/${file.name}`
-      await file.mv(path);
-    } catch(e) {
-      console.log(e);
-      return res.send({status: "file"});
-    }    
+
+    let attachment;
+    if (req.files !== null) {
+      const file = req.files.file;
+      attachment = {
+        name: file.name,
+        content: file.data,
+        encoding: file.encoding,
+        contentType: file.mimetype
+      }
+    }
+    const allowedExts = ['pdf', 'doc', 'docx', 'jpeg', 'png', 'xls', 'xlsx', 'ppt', 'pptx'];
+    const ext = attachment.name.split('.')[length - 1]
+    if (!allowedExts.includes(ext)) {
+      return res.send({
+        status: 'Not allowed file type',
+      });
+    }
 
     const html = `
       <p>${firstname.value} ${lastname.value}</p>
@@ -163,9 +176,7 @@ app.prepare().then(() => {
       subject: `New message from ${email.value}`,
       html,
       attachments: [
-        {
-          path: path
-        }
+        attachment ? attachment : {}
       ]
     };
 
@@ -275,7 +286,8 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      //to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'vitaliy.melnychenko@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
     };
@@ -298,7 +310,7 @@ app.prepare().then(() => {
       hasDiscount: !!hasDiscount,
     };
 
-    sendContactToHubSpot(hubSpotParameters);
+    //sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/careers', (req, res) => {
     const {
