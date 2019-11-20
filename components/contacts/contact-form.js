@@ -1,9 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, Fragment } from 'react';
 import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
 import { MaxS, PaulW } from '../../static/contacts/contacts-data';
+import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -170,9 +171,11 @@ const ContactForm = () => {
             value={message.value}
           />
         </div>
-        <div className="input-cols">
+        {/* <div className="input-cols">
           <label for="file-upload" class="custom-file-upload">
-            <i class="fa fa-cloud-upload"></i> {fileName}
+            { (fileName.length > 10 && fileName !== 'Attach you file') 
+              ? fileName.substring(0, 10).concat('...') 
+              : fileName} <span>(up to 10MB)</span> <img src="/static/images/svg/file.svg" alt="File" />
           </label>
           <input id="file-upload" type="file" name="file" onChange={
             e => {
@@ -181,11 +184,28 @@ const ContactForm = () => {
               console.log(e.target.files[0]);
             }
           }/>
+          <span className="file-upload-desc">.pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx</span>
+        </div> */}
+        <div className="input-cols">
+          <FileUpload 
+            text={(fileName.length > 10 && fileName !== 'Attach you file') 
+            ? fileName.substring(0, 10).concat('...') 
+            : fileName}
+            limit="up to 10MB"
+            allowedExts=".pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx"
+            onChange={
+              e => {
+                setFile(e.target.files[0]);
+                setFileName(e.target.files[0].name);
+                console.log(e.target.files[0]);
+              }
+            }
+          />
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
-            text="I want to use a subscriber discount"
+            text= { <Fragment>I want to use a <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a></Fragment> }
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"
@@ -195,7 +215,6 @@ const ContactForm = () => {
             }}
             isChecked={isSubscriber}
           />
-          <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
         </div>
         <div className="submit-btn">
           <button
@@ -206,6 +225,9 @@ const ContactForm = () => {
           >
             Let&apos;s talk
           </button>
+        </div>
+        <div className="privacy-policy">
+            By submting I agree to KeenEthics’ <a href="/privacy-policy" classNamve="">Privacy Policy</a>
         </div>
       </form>
     </div>

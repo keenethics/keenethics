@@ -1,7 +1,8 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, Fragment } from 'react';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
+import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
@@ -44,6 +45,12 @@ const EstimateForm = () => {
   const [hasDiscount, setHasDiscount] = useState(false);
   const [wizardStage, setWizardStage] = useState(0);
 
+  const [file, setFile] = useState({
+    value: '',
+    error: false,
+  });
+  const [fileName, setFileName] = useState('Attach you file');
+
   const {
     isPending,
     setIsPending,
@@ -77,25 +84,47 @@ const EstimateForm = () => {
 
     setIsPending(true);
 
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('data', JSON.stringify({
+      stage,
+      services,
+      pm,
+      budget,
+      timeframe,
+      start,
+      emailEstimate,
+      messageEstimate,
+      name,
+      phoneEstimate: { value: '123456789', error: '' },
+      isSubscriber,
+      hasDiscount,
+    }));
+
+    // fetch('/estimate', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     stage,
+    //     services,
+    //     pm,
+    //     budget,
+    //     timeframe,
+    //     start,
+    //     emailEstimate,
+    //     messageEstimate,
+    //     name,
+    //     phoneEstimate: { value: '123456789', error: '' },
+    //     isSubscriber,
+    //     hasDiscount,
+    //   }),
+    // })
+
     fetch('/estimate', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        stage,
-        services,
-        pm,
-        budget,
-        timeframe,
-        start,
-        emailEstimate,
-        messageEstimate,
-        name,
-        phoneEstimate: { value: '123456789', error: '' },
-        isSubscriber,
-        hasDiscount,
-      }),
+      body: formData
     })
       .then((response) => response.json())
       .then((json) => {
@@ -899,10 +928,26 @@ Start
                 />
               </div>
             </div>
+            <div className="input-cols">
+              <FileUpload 
+                text={(fileName.length > 10 && fileName !== 'Attach you file') 
+                ? fileName.substring(0, 10).concat('...') 
+                : fileName}
+                limit="up to 10MB"
+                allowedExts=".pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx"
+                onChange={
+                  e => {
+                    setFile(e.target.files[0]);
+                    setFileName(e.target.files[0].name);
+                    console.log(e.target.files[0]);
+                  }
+                }
+              />
+            </div>
             <div className="grey-checkbox-wrapper">
               <Checkbox
                 className="grey"
-                text="I want to use a subscriber discount"
+                text= { <Fragment>I want to use a <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a></Fragment> }
                 name="estimateFormIsSubscriberDiscount"
                 id="estimateFormIsSubscriberDiscount"
                 value="estimateFormIsSubscriberDiscount"
@@ -912,7 +957,6 @@ Start
                 }}
                 isChecked={hasDiscount}
               />
-              <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
             </div>
             <div className="wizard-stage-footer mt-auto">
               <button

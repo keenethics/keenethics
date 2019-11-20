@@ -25,8 +25,9 @@ const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
-const iplocation = require("iplocation").default; 
-const fileUpload = require('express-fileupload')
+const iplocation = require('iplocation').default; 
+const fileUpload = require('express-fileupload');
+const checkAttachment = require('./attachment-validator');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -77,7 +78,7 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(fileUpload({
     limits: {
-        fileSize: 1000000 //1mb
+        fileSize: 1000000 // 1mb
     },
     abortOnLimit: true
  }));
@@ -145,21 +146,10 @@ app.prepare().then(() => {
     }
 
     let attachment;
-    if (req.files !== null) {
-      const file = req.files.file;
-      attachment = {
-        name: file.name,
-        content: file.data,
-        encoding: file.encoding,
-        contentType: file.mimetype
-      }
-    }
-    const allowedExts = ['pdf', 'doc', 'docx', 'jpeg', 'png', 'xls', 'xlsx', 'ppt', 'pptx'];
-    const ext = attachment.name.split('.')[length - 1]
-    if (!allowedExts.includes(ext)) {
-      return res.send({
-        status: 'Not allowed file type',
-      });
+    try {
+      attachment = checkAttachment(req.files);
+    } catch(e) {
+      res.send({ status: e.message });
     }
 
     const html = `
@@ -170,13 +160,13 @@ app.prepare().then(() => {
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
-      from: 'no-reply@keenethics.com',
+      from: 'maxim.savonin@keenethics.com',
     //  to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
       to: 'vitaliy.melnychenko@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
       attachments: [
-        attachment ? attachment : {}
+        attachment
       ]
     };
 
@@ -202,6 +192,7 @@ app.prepare().then(() => {
     //sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
+    const formFildsData = JSON.parse(req.body.data)
     const {
       stage,
       services,
@@ -215,7 +206,7 @@ app.prepare().then(() => {
       messageEstimate,
       isSubscriber,
       hasDiscount,
-    } = req.body;
+    } = formFildsData;
 
     let servicesEstimate;
 
@@ -224,7 +215,7 @@ app.prepare().then(() => {
     messageEstimate.value = messageEstimate.value.replace(/\s+/g, ' ');
     if (services.value) servicesEstimate = services.value.join(', ');
 
-    const [missedField] = checkRequiredEstimateFields(req.body);
+    const [missedField] = checkRequiredEstimateFields(formFildsData);
 
     if (missedField) {
       res.send(missedField);
@@ -270,6 +261,13 @@ app.prepare().then(() => {
       return;
     }
 
+    let attachment;
+    try {
+      attachment = checkAttachment(req.files);
+    } catch(e) {
+      res.send({ status: e.message });
+    }
+
     const html = `
       <p>${name.value}</p>
       <p>Email: ${emailEstimate.value}</p>
@@ -290,6 +288,9 @@ app.prepare().then(() => {
       to: 'vitaliy.melnychenko@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
+      attachments: [
+        attachment
+      ]
     };
 
     transporter.sendMail(mailOptions, (err) => {
