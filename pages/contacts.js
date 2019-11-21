@@ -264,7 +264,7 @@ const Contacts = ({ router }) => {
       const json = await res.json();
       const location = json.location;
       
-      setSelectedCountry(location.country);
+      setSelectedCountry(location.countryCode);
     }
 
     getLoction();

@@ -66,24 +66,8 @@ const ContactForm = () => {
       phone: { value: '123456789', error: '' },
       isSubscriber,
       hasDiscount,
+      selectedCountry,
     }));
-
-    // fetch('/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     firstname,
-    //     email,
-    //     message,
-    //     lastname: { value: 'mockedLastname', error: '' },
-    //     phone: { value: '123456789', error: '' },
-    //     isSubscriber,
-    //     hasDiscount,
-    //     formData
-    //   }),
-    // })
 
     fetch('/contact', {
       method: 'POST',
@@ -171,28 +155,13 @@ const ContactForm = () => {
             value={message.value}
           />
         </div>
-        {/* <div className="input-cols">
-          <label for="file-upload" class="custom-file-upload">
-            { (fileName.length > 10 && fileName !== 'Attach you file') 
-              ? fileName.substring(0, 10).concat('...') 
-              : fileName} <span>(up to 10MB)</span> <img src="/static/images/svg/file.svg" alt="File" />
-          </label>
-          <input id="file-upload" type="file" name="file" onChange={
-            e => {
-              setFile(e.target.files[0]);
-              setFileName(e.target.files[0].name);
-              console.log(e.target.files[0]);
-            }
-          }/>
-          <span className="file-upload-desc">.pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx</span>
-        </div> */}
         <div className="input-cols">
           <FileUpload 
             text={(fileName.length > 10 && fileName !== 'Attach you file') 
             ? fileName.substring(0, 10).concat('...') 
             : fileName}
             limit="up to 10MB"
-            allowedExts=".pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx"
+            allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
             onChange={
               e => {
                 setFile(e.target.files[0]);

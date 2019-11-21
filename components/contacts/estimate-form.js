@@ -57,6 +57,7 @@ const EstimateForm = () => {
     setNotifyMessage,
     setStatus,
     setWishlist,
+    selectedCountry
   } = useContext(ContactUsContext);
 
   useEffect(() => {
@@ -99,28 +100,8 @@ const EstimateForm = () => {
       phoneEstimate: { value: '123456789', error: '' },
       isSubscriber,
       hasDiscount,
+      selectedCountry,
     }));
-
-    // fetch('/estimate', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     stage,
-    //     services,
-    //     pm,
-    //     budget,
-    //     timeframe,
-    //     start,
-    //     emailEstimate,
-    //     messageEstimate,
-    //     name,
-    //     phoneEstimate: { value: '123456789', error: '' },
-    //     isSubscriber,
-    //     hasDiscount,
-    //   }),
-    // })
 
     fetch('/estimate', {
       method: 'POST',
@@ -934,12 +915,11 @@ Start
                 ? fileName.substring(0, 10).concat('...') 
                 : fileName}
                 limit="up to 10MB"
-                allowedExts=".pdf, doc, docx, jpeg, png, xls, xlsx, ppt, pptx"
+                allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
                 onChange={
                   e => {
                     setFile(e.target.files[0]);
                     setFileName(e.target.files[0].name);
-                    console.log(e.target.files[0]);
                   }
                 }
               />

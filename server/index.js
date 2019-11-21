@@ -28,6 +28,7 @@ const { checkRequiredEstimateFields } = require('./validator');
 const iplocation = require('iplocation').default; 
 const fileUpload = require('express-fileupload');
 const checkAttachment = require('./attachment-validator');
+const autoReplyMailOptilns = require('./autoReplyMailOptilns');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -76,12 +77,7 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
-  server.use(fileUpload({
-    limits: {
-        fileSize: 1000000 // 1mb
-    },
-    abortOnLimit: true
- }));
+  server.use(fileUpload());
 
   server.post('/contact', (req, res) => {
     const {
@@ -92,6 +88,7 @@ app.prepare().then(() => {
       message,
       isSubscriber,
       hasDiscount,
+      selectedCountry,
     } = JSON.parse(req.body.data);
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
@@ -160,9 +157,8 @@ app.prepare().then(() => {
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
-      from: 'maxim.savonin@keenethics.com',
-    //  to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
-      to: 'vitaliy.melnychenko@keenethics.com',
+      from: 'no-reply@keenethics.com',
+      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
       attachments: [
@@ -178,6 +174,10 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
+
+      transporter.sendMail(autoReplyMailOptilns(selectedCountry, firstname.value, email.value), (err) => {
+        if (err) throw err;
+      });
     });
 
     const hubSpotParameters = {
@@ -189,7 +189,7 @@ app.prepare().then(() => {
       hasDiscount: !!hasDiscount,
     };
 
-    //sendContactToHubSpot(hubSpotParameters);
+    sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
     const formFildsData = JSON.parse(req.body.data)
@@ -206,6 +206,7 @@ app.prepare().then(() => {
       messageEstimate,
       isSubscriber,
       hasDiscount,
+      selectedCountry,
     } = formFildsData;
 
     let servicesEstimate;
@@ -284,8 +285,7 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      //to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
-      to: 'vitaliy.melnychenko@keenethics.com',
+      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
       attachments: [
@@ -301,6 +301,9 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
+      transporter.sendMail(autoReplyMailOptilns(selectedCountry, name.value, emailEstimate.value), (err) => {
+        if (err) throw err;
+      });
     });
 
     const hubSpotParameters = {
@@ -311,7 +314,7 @@ app.prepare().then(() => {
       hasDiscount: !!hasDiscount,
     };
 
-    //sendContactToHubSpot(hubSpotParameters);
+    sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/careers', (req, res) => {
     const {
