@@ -180,7 +180,6 @@ const ContactForm = () => {
             value="estimateFormIsSubscriber"
             onChange={() => {
               setIsSubscriber(!isSubscriber);
-              setHasDiscount(!hasDiscount);
             }}
             isChecked={isSubscriber}
           />

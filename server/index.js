@@ -16,7 +16,6 @@ if (pathToEnvFile) {
 const express = require('express');
 const expressUncapitalize = require('express-uncapitalize');
 const next = require('next');
-const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
@@ -38,16 +37,19 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const sendContactToHubSpot = (hubSpotParameters) => {
-  const parameters = querystring.stringify(hubSpotParameters);
+  const fields = Object.keys(hubSpotParameters)
+    .map((name) => ({ name, value: hubSpotParameters[name] }));
   const options = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-      'Content-Length': parameters.length,
+      'Content-Type': 'application/json',
     },
+    body: JSON.stringify({
+      fields,
+    }),
   };
   const { userId, formId } = hubSpot;
-  const hubUrl = `https://forms.hubspot.com/uploads/form/v2/${userId}/${formId}?${parameters}`;
+  const hubUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${userId}/${formId}`;
 
   fetch(hubUrl, options)
     .then((res) => res.text())
@@ -61,7 +63,7 @@ const sendContactToHubSpot = (hubSpotParameters) => {
         throw new Error(text);
       }
     })
-    .catch((error) => console.log('Hubspot request error: ', error));
+    .catch((error) => console.error('Hubspot request error: ', error));
 };
 
 app.prepare().then(() => {
@@ -185,8 +187,8 @@ app.prepare().then(() => {
       lastname: lastname.value,
       email: email.value,
       phone: phone.value.toString(),
-      isSubscriber: !!isSubscriber,
-      hasDiscount: !!hasDiscount,
+      // eslint-disable-next-line
+      subscription_status: !!isSubscriber ? 'Subscribed' : 'Unsubscribed',
     };
 
     sendContactToHubSpot(hubSpotParameters);
