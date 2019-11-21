@@ -112,6 +112,10 @@
             padding-left: 0;
           }
 
+          a {
+            position: relative;
+          }
+
           a:first-child {
             @include breakpoint(sm-max) {
               margin-bottom: 27px;
@@ -157,6 +161,10 @@
               margin-bottom: 27px;
               display: inline-block;
             }
+          }
+
+          a {
+            position: relative;
           }
         }
 
@@ -1934,8 +1942,8 @@
     background: rgba(0,0,0,.15);
     overflow: hidden;
     @include breakpoint(md-max) {
-      left: -31px;
-      width: calc(100% + 62px);
+      left: 0;
+      width: calc(100% + 70px);
     }
     @include breakpoint(sm-max) {
       left: -40px;
@@ -1954,7 +1962,7 @@
     border-right:10px solid #fff; 
     overflow: hidden;
     @include breakpoint(md-max) {
-      right: -31px;
+      right: -71px;
     }
   }
 }
