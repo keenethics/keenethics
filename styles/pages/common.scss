@@ -19,6 +19,7 @@
 
 .page__header {
   padding: 75px 0 60px;
+  text-align: center;
 
   @media (min-width: $tablet-sm) {
     padding: 115px 0 95px;
@@ -51,6 +52,33 @@
   @media (min-width: $desktop-xxl) {
     padding: 95px 0 95px 410px;
   }
+
+  .separator {
+    // TODO change margin according to design
+    // margin-left: calc(100% - );
+    margin-top: 50px;
+    margin-left: 305px;
+    width: 175px;
+    height: 2px;
+    background-color: #D62624;
+  }
+
+  h5, p {
+    max-width: 780px;
+    text-align: center;
+    color: #12233D;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h5 {
+    margin-top: 50px;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 35px;
+  }
 }
 
 
@@ -59,6 +87,7 @@
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: left;
 
   font-size: 28px;
   line-height: 40px;
