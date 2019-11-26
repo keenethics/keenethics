@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv-safe');
@@ -20,12 +21,12 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
+const iplocation = require('iplocation').default;
+const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
-const iplocation = require('iplocation').default; 
-const fileUpload = require('express-fileupload');
 const checkAttachment = require('./attachment-validator');
 const autoReplyMailOptilns = require('./autoReplyMailOptilns');
 
@@ -147,7 +148,7 @@ app.prepare().then(() => {
     let attachment;
     try {
       attachment = checkAttachment(req.files);
-    } catch(e) {
+    } catch (e) {
       res.send({ status: e.message });
     }
 
@@ -164,8 +165,8 @@ app.prepare().then(() => {
       subject: `New message from ${email.value}`,
       html,
       attachments: [
-        attachment
-      ]
+        attachment,
+      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -177,9 +178,12 @@ app.prepare().then(() => {
         status: 'Message sent',
       });
 
-      transporter.sendMail(autoReplyMailOptilns(selectedCountry, firstname.value, email.value), (err) => {
-        if (err) throw err;
-      });
+      transporter.sendMail(
+        autoReplyMailOptilns(selectedCountry, firstname.value, email.value),
+        (e) => {
+          if (e) throw e;
+        },
+      );
     });
 
     const hubSpotParameters = {
@@ -194,7 +198,7 @@ app.prepare().then(() => {
     sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
-    const formFildsData = JSON.parse(req.body.data)
+    const formFildsData = JSON.parse(req.body.data);
     const {
       stage,
       services,
@@ -267,7 +271,7 @@ app.prepare().then(() => {
     let attachment;
     try {
       attachment = checkAttachment(req.files);
-    } catch(e) {
+    } catch (e) {
       res.send({ status: e.message });
     }
 
@@ -291,8 +295,8 @@ app.prepare().then(() => {
       subject: `New message from ${emailEstimate.value}`,
       html,
       attachments: [
-        attachment
-      ]
+        attachment,
+      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -303,9 +307,12 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
-      transporter.sendMail(autoReplyMailOptilns(selectedCountry, name.value, emailEstimate.value), (err) => {
-        if (err) throw err;
-      });
+      transporter.sendMail(
+        autoReplyMailOptilns(selectedCountry, name.value, emailEstimate.value),
+        (e) => {
+          if (e) throw e;
+        },
+      );
     });
 
     const hubSpotParameters = {
@@ -551,29 +558,15 @@ app.prepare().then(() => {
 
   server.get('/api/location', async (req, res) => {
     try {
-      const ip = req.headers['x-forwarded-for'] || 
-        req.connection.remoteAddress || 
-        req.socket.remoteAddress ||
-        (req.connection.socket ? req.connection.socket.remoteAddress : null);
+      const ip = req.headers['x-forwarded-for']
+        || req.connection.remoteAddress
+        || req.socket.remoteAddress
+        || (req.connection.socket ? req.connection.socket.remoteAddress : null);
       const location = await iplocation(ip);
-      res.status(200).json({ location: location });
-    } catch(e) {
-      res.status(400).json({ location: ""});
+      res.status(200).json({ location });
+    } catch (e) {
+      res.status(400).json({ location: '' });
     }
-  });
-
-  server.post('/upload', (req, res) => {
-    if (req.files === null) {
-      return res.status(400).json({});
-    }
-    const file = req.files.file;
-    console.log(file);
-    file.mv(`${__dirname}/../static/upload/${file.name}`, err => {
-      if (err) {
-        console.log(err);
-        return res.status(500).json({});
-      }
-    })
   });
 
   server.get('*', (req, res) => handle(req, res));

@@ -1,4 +1,4 @@
-import React, { useState, useContext, Fragment } from 'react';
+import React, { useState, useContext } from 'react';
 import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
@@ -38,7 +38,7 @@ const ContactForm = () => {
     error: false,
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
-  const [hasDiscount, setHasDiscount] = useState(false);
+  const [hasDiscount] = useState(false);
   const [file, setFile] = useState({
     value: '',
     error: false,
@@ -71,7 +71,7 @@ const ContactForm = () => {
 
     fetch('/contact', {
       method: 'POST',
-      body: formData
+      body: formData,
     })
       .then(handleStatusResponse)
       .then((response) => response.json())
@@ -87,6 +87,7 @@ const ContactForm = () => {
           setInitialState();
         }
       })
+      // eslint-disable-next-line no-console
       .catch((err) => console.error(err));
   };
   return (
@@ -156,17 +157,16 @@ const ContactForm = () => {
           />
         </div>
         <div className="input-cols">
-          <FileUpload 
-            text={(fileName.length > 10 && fileName !== 'Attach you file') 
-            ? fileName.substring(0, 10).concat('...') 
-            : fileName}
+          <FileUpload
+            text={(fileName.length > 10 && fileName !== 'Attach you file')
+              ? fileName.substring(0, 10).concat('...')
+              : fileName}
             limit="up to 10MB"
             allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
             onChange={
-              e => {
+              (e) => {
                 setFile(e.target.files[0]);
                 setFileName(e.target.files[0].name);
-                console.log(e.target.files[0]);
               }
             }
           />
@@ -174,7 +174,12 @@ const ContactForm = () => {
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
-            text= { <Fragment>I want to use a <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a></Fragment> }
+            text={(
+              <>
+I want to use a
+                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
+              </>
+)}
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"
@@ -195,7 +200,9 @@ const ContactForm = () => {
           </button>
         </div>
         <div className="privacy-policy">
-            By submting I agree to KeenEthics’ <a href="/privacy-policy" classNamve="">Privacy Policy</a>
+            By submting I agree to KeenEthics’
+          {' '}
+          <a href="/privacy-policy" classNamve="">Privacy Policy</a>
         </div>
       </form>
     </div>

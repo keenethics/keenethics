@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, Fragment } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
@@ -57,7 +57,7 @@ const EstimateForm = () => {
     setNotifyMessage,
     setStatus,
     setWishlist,
-    selectedCountry
+    selectedCountry,
   } = useContext(ContactUsContext);
 
   useEffect(() => {
@@ -105,7 +105,7 @@ const EstimateForm = () => {
 
     fetch('/estimate', {
       method: 'POST',
-      body: formData
+      body: formData,
     })
       .then((response) => response.json())
       .then((json) => {
@@ -910,14 +910,14 @@ Start
               </div>
             </div>
             <div className="input-cols">
-              <FileUpload 
-                text={(fileName.length > 10 && fileName !== 'Attach you file') 
-                ? fileName.substring(0, 10).concat('...') 
-                : fileName}
+              <FileUpload
+                text={(fileName.length > 10 && fileName !== 'Attach you file')
+                  ? fileName.substring(0, 10).concat('...')
+                  : fileName}
                 limit="up to 10MB"
                 allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
                 onChange={
-                  e => {
+                  (e) => {
                     setFile(e.target.files[0]);
                     setFileName(e.target.files[0].name);
                   }
@@ -927,7 +927,12 @@ Start
             <div className="grey-checkbox-wrapper">
               <Checkbox
                 className="grey"
-                text= { <Fragment>I want to use a <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a></Fragment> }
+                text={(
+                  <>
+I want to use a
+                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
+                  </>
+)}
                 name="estimateFormIsSubscriberDiscount"
                 id="estimateFormIsSubscriberDiscount"
                 value="estimateFormIsSubscriberDiscount"
@@ -949,7 +954,7 @@ Start
               <button
                 type="submit"
                 className={classnames('button button-send btn-wide', {
-                  "pending no-shadow":
+                  'pending no-shadow':
                     !name.value
                     || !emailEstimate.value
                     || isPending,

@@ -52,7 +52,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
             ,&nbsp;
             <span itemProp="streetAddress">Kulparkivska St, 59</span>
           </a>
-          <a href="tel:+380968147266">
+          <a href="tel:+380947106105">
             <span className="telephone" itemProp="telephone">
               +38 (094) 710 61 05
             </span>
@@ -260,12 +260,12 @@ const Contacts = ({ router }) => {
 
   useEffect(() => {
     const getLoction = async () => {
-      const res = await fetch(`${BACKEND_URL}/api/location`);
+      const res = await fetch('/api/location');
       const json = await res.json();
       const location = json.location;
-      
+
       setSelectedCountry(location.countryCode);
-    }
+    };
 
     getLoction();
   }, []);
