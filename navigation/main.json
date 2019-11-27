@@ -95,6 +95,18 @@
           "alt": "Ecommerce Development Services"
         },
         "type": "icon"
+      },
+      {
+        "name": "Cloud Application Development",
+        "metaTitle": "Cloud Application Development Services – KeenEthics",
+        "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "metaDescription": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "href": "/services-cloud-app-dev",
+        "icon": {
+          "name": "cloud-icon",
+          "alt": "Cloud Application Development"
+        },
+        "type": "icon"
       }
     ]
   },
