@@ -4,6 +4,7 @@ import React from 'react';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
+import './services-education-software-development.scss';
 import Works from '../components/portfolio/works';
 import { works } from '../main.config';
 
