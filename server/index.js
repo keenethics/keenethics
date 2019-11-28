@@ -55,8 +55,6 @@ const sendContactToHubSpot = (hubSpotParameters) => {
   fetch(hubUrl, options)
     .then((res) => res.text())
     .then((text) => {
-      console.log('=========');
-      console.log(text);
       try {
         const parsedResponse = JSON.parse(text);
         return Promise.resolve(parsedResponse);

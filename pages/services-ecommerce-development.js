@@ -1,8 +1,10 @@
+/* eslint-disable */
 import React from 'react';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
+import './services-education-software-development.scss';
 import Works from '../components/portfolio/works';
 import { works } from '../main.config';
 
@@ -338,7 +340,7 @@ const EcommerceDevelopmentServices = () => (
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
-          <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} />
+          <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} rounded/>
         </div>
       </section>
       <section>
@@ -365,7 +367,7 @@ const EcommerceDevelopmentServices = () => (
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>: 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
-          <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} />
+          <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} rounded/>
         </div>
       </section>
       <section>
