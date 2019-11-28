@@ -185,7 +185,7 @@ const MobileWishlist = ({ wishlist }) => {
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
-        {''}
+        &nbsp;
       </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
