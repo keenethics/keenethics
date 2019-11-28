@@ -20,10 +20,14 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
+const iplocation = require('iplocation').default;
+const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
+const checkAttachment = require('./attachment-validator');
+const autoReplyMailOptilns = require('./autoReplyMailOptilns');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -73,6 +77,7 @@ app.prepare().then(() => {
   server.use(expressUncapitalize());
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
+  server.use(fileUpload());
 
   server.post('/contact', (req, res) => {
     const {
@@ -83,7 +88,8 @@ app.prepare().then(() => {
       message,
       isSubscriber,
       hasDiscount,
-    } = req.body;
+      selectedCountry,
+    } = JSON.parse(req.body.data);
 
     firstname.value = firstname.value.replace(/\s+/g, ' ');
     lastname.value = lastname.value.replace(/\s+/g, ' ');
@@ -136,8 +142,21 @@ app.prepare().then(() => {
       return;
     }
 
+    let attachment;
+    try {
+      attachment = checkAttachment(req.files);
+    } catch (e) {
+      res.send({ status: e.message });
+    }
+    const countrys = {
+      NL: 'Netherlands',
+      US: 'USA',
+      UA: 'Ukraine',
+    };
+
     const html = `
       <p>${firstname.value} ${lastname.value}</p>
+      <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${email.value}</p>
       <p>Phone: ${phone.value}</p>
       <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
@@ -145,9 +164,12 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
+      attachments: [
+        attachment,
+      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -158,6 +180,13 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
+
+      transporter.sendMail(
+        autoReplyMailOptilns(selectedCountry, firstname.value, email.value),
+        (e) => {
+          if (e) throw e;
+        },
+      );
     });
 
     const hubSpotParameters = {
@@ -172,6 +201,7 @@ app.prepare().then(() => {
     sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
+    const formFildsData = JSON.parse(req.body.data);
     const {
       stage,
       services,
@@ -185,7 +215,8 @@ app.prepare().then(() => {
       messageEstimate,
       isSubscriber,
       hasDiscount,
-    } = req.body;
+      selectedCountry,
+    } = formFildsData;
 
     let servicesEstimate;
 
@@ -194,7 +225,7 @@ app.prepare().then(() => {
     messageEstimate.value = messageEstimate.value.replace(/\s+/g, ' ');
     if (services.value) servicesEstimate = services.value.join(', ');
 
-    const [missedField] = checkRequiredEstimateFields(req.body);
+    const [missedField] = checkRequiredEstimateFields(formFildsData);
 
     if (missedField) {
       res.send(missedField);
@@ -240,8 +271,21 @@ app.prepare().then(() => {
       return;
     }
 
+    let attachment;
+    try {
+      attachment = checkAttachment(req.files);
+    } catch (e) {
+      res.send({ status: e.message });
+    }
+    const countrys = {
+      NL: 'Netherlands',
+      US: 'USA',
+      UA: 'Ukraine',
+    };
+
     const html = `
       <p>${name.value}</p>
+      <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${emailEstimate.value}</p>
       <p>Phone: ${phoneEstimate.value}</p>
       <p>Stage: ${stage.value}</p>
@@ -250,14 +294,18 @@ app.prepare().then(() => {
       <p>Budget: ${budget.value}</p>
       <p>Timeframe: ${timeframe.value}</p>
       <p>Start: ${start.value}</p>
+      <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${messageEstimate.value}</div>
     `;
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
+      attachments: [
+        attachment,
+      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -268,6 +316,12 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
+      transporter.sendMail(
+        autoReplyMailOptilns(selectedCountry, name.value, emailEstimate.value),
+        (e) => {
+          if (e) throw e;
+        },
+      );
     });
 
     const hubSpotParameters = {
@@ -509,6 +563,19 @@ app.prepare().then(() => {
   server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
+  });
+
+  server.get('/api/location', async (req, res) => {
+    try {
+      const ip = req.headers['x-forwarded-for']
+        || req.connection.remoteAddress
+        || req.socket.remoteAddress
+        || (req.connection.socket ? req.connection.socket.remoteAddress : null);
+      const location = await iplocation(ip);
+      res.status(200).json({ location });
+    } catch (e) {
+      res.status(400).json({ location: '' });
+    }
   });
 
   server.get('*', (req, res) => handle(req, res));
