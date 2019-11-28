@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { MaxS, PaulW } from '../static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -117,12 +117,13 @@ Netherlands
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
+        className={classnames({ 'arrow-left-triangle': selectedCountry === 'US' })}
       >
         <button
           type="button"
           className="container-btn"
           onClick={() => {
-            setSelectedCountry('UA');
+            setSelectedCountry('US');
           }}
         >
           <div className="flag-country-wrapper">
@@ -139,6 +140,20 @@ Netherlands
           </div>
         </button>
         <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/SacJi7LxaXFfrad79"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">New York</span>
+            <span itemProp="streetAddress">
+              1412 Broadway,&nbsp;
+              <br className="display-block-sm" />
+              21st floor, 2200
+              <br />
+              NY 10028
+            </span>
+          </a>
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
               +1 (929) 214 1392
@@ -270,7 +285,10 @@ const Contacts = ({ router }) => {
     getLoction();
   }, []);
 
-  const person = selectedCountry === 'NL' ? PaulW : MaxS;
+  let person;
+  if (selectedCountry === 'NL') person = PaulW;
+  else if (selectedCountry === 'US') person = JeanA;
+  else person = MaxS;
   return (
     <Layout>
       <div className="contacts-page">

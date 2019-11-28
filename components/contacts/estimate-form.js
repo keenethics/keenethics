@@ -929,7 +929,7 @@ Start
                 className="grey"
                 text={(
                   <>
-I want to use a
+I want to use a&nbsp;
                     <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
                   </>
 )}

@@ -1943,7 +1943,7 @@
     overflow: hidden;
     @include breakpoint(md-max) {
       left: 0;
-      width: calc(100% + 70px);
+      width: calc(100% + 50px);
     }
     @include breakpoint(sm-max) {
       left: -40px;
@@ -1962,7 +1962,7 @@
     border-right:10px solid #fff; 
     overflow: hidden;
     @include breakpoint(md-max) {
-      right: -71px;
+      right: -54px;
     }
   }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv-safe');
@@ -149,9 +148,15 @@ app.prepare().then(() => {
     } catch (e) {
       res.send({ status: e.message });
     }
+    const countrys = {
+      NL: 'Netherlands',
+      US: 'USA',
+      UA: 'Ukraine',
+    };
 
     const html = `
       <p>${firstname.value} ${lastname.value}</p>
+      <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${email.value}</p>
       <p>Phone: ${phone.value}</p>
       <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
@@ -159,7 +164,7 @@ app.prepare().then(() => {
     `;
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
       attachments: [
@@ -272,9 +277,15 @@ app.prepare().then(() => {
     } catch (e) {
       res.send({ status: e.message });
     }
+    const countrys = {
+      NL: 'Netherlands',
+      US: 'USA',
+      UA: 'Ukraine',
+    };
 
     const html = `
       <p>${name.value}</p>
+      <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${emailEstimate.value}</p>
       <p>Phone: ${phoneEstimate.value}</p>
       <p>Stage: ${stage.value}</p>
@@ -289,7 +300,7 @@ app.prepare().then(() => {
 
     const mailOptions = {
       from: 'no-reply@keenethics.com',
-      to: 'business@keenethics.com, oleh.romanyuk@keenethics.com',
+      to: 'business@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
       attachments: [

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW } from '../../static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../../static/contacts/contacts-data';
 import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
@@ -24,7 +24,10 @@ const ContactForm = () => {
     setNotifyMessage,
     selectedCountry,
   } = useContext(ContactUsContext);
-  const person = selectedCountry === 'NL' ? PaulW : MaxS;
+  let person;
+  if (selectedCountry === 'NL') person = PaulW;
+  else if (selectedCountry === 'US') person = JeanA;
+  else person = MaxS;
   const [firstname, setFirstname] = useState({
     value: '',
     error: false,
@@ -176,7 +179,7 @@ const ContactForm = () => {
             className="grey"
             text={(
               <>
-I want to use a
+I want to use a&nbsp;
                 <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
               </>
 )}

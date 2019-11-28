@@ -9,3 +9,9 @@ export const PaulW = {
   position: 'Business Partner of KeenEthics',
   imgSrc: 'static/images/paul_van_workum.png',
 };
+
+export const JeanA = {
+  name: 'Talk to Jean-Marc Arsan',
+  position: 'Business Partner of KeenEthics',
+  imgSrc: 'static/images/jean-marc_arsan.png',
+};
