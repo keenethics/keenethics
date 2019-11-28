@@ -12,16 +12,126 @@ const Industries = () => (
       </div>
     </header>
     <div className="industries">
-      <div className="grid">
+      <div className="industries-big grid">
         <div className="col-1-3">
           <div className="industries--big-item">
-            <div className="industries--big-item-logo" />
+            <div className="industries--big-item-logo">
+              <img
+                src="/static/main-blocks/industries/education.svg"
+                width="33px"
+                height="28px"
+                alt="Education industries"
+              />
+            </div>
             <div className="industries--big-item-title">
               Education
             </div>
             <div className="industries--big-item-description">
-              Software development
+              Software Development
             </div>
+          </div>
+        </div>
+        <div className="col-1-3">
+          <div className="industries--big-item">
+            <div className="industries--big-item-logo">
+              <img
+                src="/static/main-blocks/industries/education.svg"
+                width="33px"
+                height="28px"
+                alt="Education industries"
+              />
+            </div>
+            <div className="industries--big-item-title">
+              Business
+            </div>
+            <div className="industries--big-item-description">
+              Administration Development
+            </div>
+          </div>
+        </div>
+        <div className="col-1-3">
+          <div className="industries--big-item">
+            <div className="industries--big-item-logo">
+              <img
+                src="/static/main-blocks/industries/education.svg"
+                width="33px"
+                height="28px"
+                alt="Education industries"
+              />
+            </div>
+            <div className="industries--big-item-title">
+              Healthcare
+            </div>
+            <div className="industries--big-item-description">
+              Software Development
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="industries-small">
+        <div className="industries--small-item">
+          <div className="industries--small-item-logo">
+            <img
+              src="/static/main-blocks/industries/education.svg"
+              width="33px"
+              height="28px"
+              alt="Education industries"
+            />
+          </div>
+          <div className="industries--small-item-title">
+            E-Commerce
+          </div>
+        </div>
+        <div className="industries--small-item">
+          <div className="industries--small-item-logo">
+            <img
+              src="/static/main-blocks/industries/education.svg"
+              width="33px"
+              height="28px"
+              alt="Education industries"
+            />
+          </div>
+          <div className="industries--small-item-title">
+            Agriculture
+          </div>
+        </div>
+        <div className="industries--small-item">
+          <div className="industries--small-item-logo">
+            <img
+              src="/static/main-blocks/industries/education.svg"
+              width="33px"
+              height="28px"
+              alt="Education industries"
+            />
+          </div>
+          <div className="industries--small-item-title">
+            Hospitality and Entertainment
+          </div>
+        </div>
+        <div className="industries--small-item">
+          <div className="industries--small-item-logo">
+            <img
+              src="/static/main-blocks/industries/education.svg"
+              width="33px"
+              height="28px"
+              alt="Education industries"
+            />
+          </div>
+          <div className="industries--small-item-title">
+            Real Estate
+          </div>
+        </div>
+        <div className="industries--small-item">
+          <div className="industries--small-item-logo">
+            <img
+              src="/static/main-blocks/industries/education.svg"
+              width="33px"
+              height="28px"
+              alt="Education industries"
+            />
+          </div>
+          <div className="industries--small-item-title">
+            Finance and Banking
           </div>
         </div>
       </div>

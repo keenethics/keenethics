@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW } from '../../static/contacts/contacts-data';
+import { MaxS, PaulW } from '../../public/static/contacts/contacts-data';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
