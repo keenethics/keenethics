@@ -340,7 +340,7 @@ const EcommerceDevelopmentServices = () => (
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
-          <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} />
+          <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} rounded/>
         </div>
       </section>
       <section>
@@ -367,7 +367,7 @@ const EcommerceDevelopmentServices = () => (
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>: 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
-          <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} />
+          <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} rounded/>
         </div>
       </section>
       <section>

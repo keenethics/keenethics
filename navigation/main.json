@@ -89,10 +89,22 @@
         "metaTitle": "Ecommerce Development Services, Custom Ecommerce Development – KeenEthics",
         "description": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
         "metaDescription": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
-        "href": "/services-ecommerce-developments-ervices",
+        "href": "/services-ecommerce-development",
         "icon": {
           "name": "ecommerce",
           "alt": "Ecommerce Development Services"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Business Analysis",
+        "metaTitle": "Business Analysis – KeenEthics",
+        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "href": "/services-business-analysis",
+        "icon": {
+          "name": "business-analytics",
+          "alt": "Business Analysis"
         },
         "type": "icon"
       },
