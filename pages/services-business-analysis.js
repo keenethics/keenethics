@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 
 import Layout from '../components/layout/main';
@@ -18,32 +17,68 @@ const ServicesBusinessAnalysis = () => {
     {
       icon: '/static/services/piggy-bank.png',
       alt: 'piggy bank',
-      description: <><b>WebReduces expenses.</b> Timely and effective business analysis helps you reduce the cost of project development. It minimizes the number of requirement changes that are going to occur. platforms are more convenient for complex tasks than mobile applications.</>,
+      description:
+  <>
+    <b>WebReduces expenses.</b>
+    &nbsp;Timely and effective business analysis helps you reduce the cost
+    of project development. It minimizes the number of requirement changes
+    that are going to occur. platforms are more convenient for complex tasks
+    than mobile applications.
+  </>,
     },
     {
       icon: '/static/services/stopwatch.png',
       alt: 'stopwatch',
-      description: <><b>Speeds up development.</b> Business analysis helps to make the project development be completed sooner. The research phase is a time investment that pays off.</>,
+      description:
+  <>
+    <b>Speeds up development.</b>
+    &nbsp;Business analysis helps to make the project development be
+    completed sooner. The research phase is a time investment that pays off.
+  </>,
     },
     {
       icon: '/static/services/users.png',
       alt: 'users',
-      description: <><b>Improves cooperation.</b> Business analysis training lets you achieve a high level of understanding in the team. Clear requirements and documentation will ensure that all team members are on the same plate.</>,
+      description:
+  <>
+    <b>Improves cooperation.</b>
+    &nbsp;Business analysis training lets you achieve a high level of
+    understanding in the team. Clear requirements and documentation will
+    ensure that all team members are on the same plate.
+  </>,
     },
     {
       icon: '/static/services/thumb-up.png',
       alt: 'stopwatch',
-      description: <><b>Boosts sales.</b> A thoroughly researched idea is going to translate into a competitive product. Your prospective clients will appreciate that their needs are heard.</>,
+      description:
+  <>
+    <b>Boosts sales.</b>
+    &nbsp;A thoroughly researched idea is going to translate into a
+    competitive product. Your prospective clients will appreciate that
+    their needs are heard.
+  </>,
     },
     {
       icon: '/static/services/security.png',
       alt: 'stopwatch',
-      description: <><b>Enhances quality.</b> Business analysis consulting services help you minimize the risks. With a well-thought-out development strategy, you will not forget about technology challenges, data security measures, or legal liabilities.</>,
+      description:
+  <>
+    <b>Enhances quality.</b>
+    &nbsp;Business analysis consulting services help you minimize the risks.
+    With a well-thought-out development strategy, you will not forget about
+    technology challenges, data security measures, or legal liabilities.
+  </>,
     },
     {
       icon: '/static/services/profit.png',
       alt: 'stopwatch',
-      description: <><b>Facilitates retrospective.</b> Detailed project documentation is essential for effective analysis and reporting after the project completion. Comparing results with forecasts, you will understand what went well or wrong.</>,
+      description:
+  <>
+    <b>Facilitates retrospective.</b>
+    &nbsp;Detailed project documentation is essential for effective analysis
+    and reporting after the project completion. Comparing results with forecasts,
+    you will understand what went well or wrong.
+  </>,
     },
   ];
 
@@ -81,53 +116,64 @@ const ServicesBusinessAnalysis = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['ParkQX', 'WorkBooking', 'Banker Advisor'].includes(title)
+    ({ title }) => ['ParkQX', 'WorkBooking', 'Banker Advisor'].includes(title),
   );
 
   const whyKeenethics = [
     {
       title: 'Empowering growth',
-      desc: <>
-        Sound research prior to the development of your project is essential.
-        It will let you make sure that your product is going to be in demand. For your development
-        efforts and costs not to go in vain, we conduct comprehensive business analysis.
-        By choosing the right business analysis techniques, we empower the growth of your business.
-      </>,
+      desc:
+  <>
+    Sound research prior to the development of your project is essential.
+    It will let you make sure that your product is going to be in demand. For your development
+    efforts and costs not to go in vain, we conduct comprehensive business analysis.
+    By choosing the right business analysis techniques, we empower the growth of your business.
+  </>,
     },
     {
       title: 'Building value',
-      desc: <>
-        Our cooperation can be based according to Time & Material or Fixed Price approach, depending
-        on which you find to be more suitable. The pricing policy we offer will be equally suitable
-        for a start-up and for a large corporation. IT business analysis services and software solutions
-        we offer are cost-efficient. <a href="/contacts?activeForm=estimate">Let us estimate your project</a>
-      </>,
+      desc:
+  <>
+    Our cooperation can be based according to Time & Material or Fixed Price approach, depending
+    on which you find to be more suitable. The pricing policy we offer will be equally suitable
+    for a start-up and for a large corporation. IT business analysis services and software solutions
+    we offer are cost-efficient.&nbsp;
+    <a href="/contacts?activeForm=estimate">Let us estimate your project</a>
+  </>,
     },
     {
       title: 'Launching in a matter of weeks',
-      desc: <>
-        Business systems analysis may take too long if organized ineffectively. We strive to conduct the
-        discovery stage quickly without compromising the quality of results. This is what our professional
-        Engagement Manager is here for! They will make sure that business analysis is completed and transitions
-        into the development stage quite swiftly.
-      </>,
+      desc:
+  <>
+    Business systems analysis may take too long if organized ineffectively. We strive to conduct the
+    discovery stage quickly without compromising the quality of results. This is what our
+    professional Engagement Manager is here for! They will make sure that business analysis is
+    completed and transitions into the development stage quite swiftly.
+  </>,
     },
     {
       title: 'Bringing tech expertise',
-      desc: <>
-        Our Business Analyst engages UI/UX designers, senior software developers, and solution architects in the
-        research process. While we organize this business process in a time- and cost-efficient manner, we do not
-        forget about the quality of the results. Our professionals are experts in what they do. They will provide
-        you with business analysis training if you ask. See our <a href="/portfolio">case studies</a> to make sure!
-      </>,
+      desc:
+  <>
+    Our Business Analyst engages UI/UX designers, senior software developers, and solution
+    architects in the research process. While we organize this business process in a time
+    and cost-efficient manner, we do not forget about the quality of the results. Our
+    professionals are experts in what they do. They will provide
+    you with business analysis training if you ask. See our&nbsp;
+    <a href="/portfolio">case studies</a>
+    &nbsp;to make sure!
+  </>,
     },
     {
       title: 'Protecting your data',
-      desc: <>
-        We do everything to ensure the security of your <a href="/blog/1543388400000-your-data-is-safe-in-ukraine">information and data</a> at
-        all stages of project development, including business analysis services. Together with general data safety
-        measures, we take some industry-specific and technology-specific steps. You can read more about these at our blog!
-      </>,
+      desc:
+  <>
+    We do everything to ensure the security of your&nbsp;
+    <a href="/blog/1543388400000-your-data-is-safe-in-ukraine">information and data</a>
+    &nbsp;at all stages of project development, including business analysis services.
+    Together with general data safety measures, we take some industry-specific and
+    technology-specific steps. You can read more about these at our blog!
+  </>,
     },
   ];
 
@@ -239,7 +285,8 @@ const ServicesBusinessAnalysis = () => {
             </li>
             <li className="challenges-item">
               <p className="text-bold">
-                5. Developing <a href="/approach-minimum-viable-product">minimum viable product</a>
+                5. Developing&nbsp;
+                <a href="/approach-minimum-viable-product">minimum viable product</a>
               </p>
             </li>
             <li className="challenges-item">
@@ -257,7 +304,10 @@ const ServicesBusinessAnalysis = () => {
         </section>
         <section>
           <h2>Portfolio</h2>
-          <p>These are some of applications and websites we have provided business analysis services for:</p>
+          <p>
+            These are some of applications and websites we have provided business
+            analysis services for:
+          </p>
           <Works works={webDevelopmentWorks} rounded />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
@@ -267,7 +317,7 @@ const ServicesBusinessAnalysis = () => {
         />
       </div>
     </Layout>
-  )
+  );
 };
 
 export default ServicesBusinessAnalysis;
