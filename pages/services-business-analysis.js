@@ -7,6 +7,7 @@ import './services-education-software-development.scss';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
+import OfferList from '../components/content/OfferList';
 
 import { works } from '../main.config';
 
@@ -19,7 +20,7 @@ const ServicesBusinessAnalysis = () => {
       alt: 'piggy bank',
       description:
   <>
-    <b>WebReduces expenses.</b>
+    <b>Reduces expenses.</b>
     &nbsp;Timely and effective business analysis helps you reduce the cost
     of project development. It minimizes the number of requirement changes
     that are going to occur. platforms are more convenient for complex tasks
@@ -219,16 +220,7 @@ const ServicesBusinessAnalysis = () => {
           />
         </section>
         <section>
-          <div className="offers-list">
-            {
-              whatDoWeOffer.map(({ icon, alt, title }) => (
-                <div className="offers-list-item">
-                  <img className="offers-list-item-img" src={icon} alt={alt} />
-                  <p className="offers-list-item-p">{title}</p>
-                </div>
-              ))
-            }
-          </div>
+          <OfferList list={whatDoWeOffer} />
         </section>
         <section>
           <h2>How We Do It?</h2>

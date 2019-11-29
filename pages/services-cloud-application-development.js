@@ -6,6 +6,7 @@ import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 import OfferList from '../components/content/OfferList';
+import './services-education-software-development.scss';
 
 import { works } from '../main.config';
 
@@ -15,7 +16,7 @@ const ServicesCloudAppDev = () => {
   const whatIsBusinessAnalysis = [
     {
       icon: '/static/services/cloud-app-dev/icons8-combo-chart-100.png',
-      alt: 'piggy bank',
+      alt: 'Combo Chart',
       description:
   <>
     <b>Scalable</b>
@@ -25,7 +26,7 @@ const ServicesCloudAppDev = () => {
     },
     {
       icon: '/static/services/cloud-app-dev/icons8-database-100.png',
-      alt: 'stopwatch',
+      alt: 'Database',
       description:
   <>
     <b>Data-friendly</b>
@@ -35,7 +36,7 @@ const ServicesCloudAppDev = () => {
     },
     {
       icon: '/static/services/cloud-app-dev/icons8-data-transfer-100.png',
-      alt: 'users',
+      alt: 'Data Transfer',
       description:
   <>
     <b>Reliable</b>
@@ -45,7 +46,7 @@ const ServicesCloudAppDev = () => {
     },
     {
       icon: '/static/services/cloud-app-dev/icons8-user-100.png',
-      alt: 'stopwatch',
+      alt: 'User',
       description:
   <>
     <b>Easily managed</b>
@@ -56,7 +57,7 @@ const ServicesCloudAppDev = () => {
     },
     {
       icon: '/static/services/cloud-app-dev/icons8-geography-100.png',
-      alt: 'stopwatch',
+      alt: 'Geography',
       description:
   <>
     <b>Convenient</b>
@@ -66,7 +67,7 @@ const ServicesCloudAppDev = () => {
     },
     {
       icon: '/static/services/cloud-app-dev/icons8-shield-100.png',
-      alt: 'stopwatch',
+      alt: 'Shield',
       description:
   <>
     <b>Secure</b>
@@ -111,7 +112,7 @@ const ServicesCloudAppDev = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['OneRemission'].includes(title),
+    ({ title }) => ['Business Research Platform'].includes(title),
   );
 
   return (
@@ -278,7 +279,7 @@ const ServicesCloudAppDev = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some of the cloud applications that we have developed:</p>
-          <Works works={webDevelopmentWorks} rounded />
+          <div><Works works={webDevelopmentWorks} rounded /></div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton
