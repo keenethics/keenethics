@@ -119,6 +119,18 @@
           "alt": "Cloud Application Development"
         },
         "type": "icon"
+      },
+      {
+        "name": "Internet of Things (IoT)",
+        "metaTitle": "Internet of Things (IoT) Development Services – KeenEthics",
+        "description": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "href": "/services-internet-of-things",
+        "icon": {
+          "name": "iot-icon",
+          "alt": "Internet of Things"
+        },
+        "type": "icon"
       }
     ]
   },
