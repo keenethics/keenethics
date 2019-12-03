@@ -122,11 +122,19 @@
     line-height: 0;
     padding: 0 0 0 18px;
 
+    a.sub-dis, a.sub-dis:visited {
+      color: rgba(45, 67, 82, 0.8);
+    }
+
+    a.sub-dis:hover {
+      color: rgba(45, 67, 82, 1);
+    }
+
     label {
       font-family: "Raleway", sans-serif;
       font-style: normal;
       font-weight: bold;
-      font-size: 11px;
+      font-size: 13px;
       line-height: 15px;
       color: rgba(45, 67, 82, 0.8);
 

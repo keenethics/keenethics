@@ -73,9 +73,11 @@ const ListItem = ({ work, rounded }) => {
               <div className="page__item-figcaption-heading">
                 <ul className="page__item-tags">
                   {
-                    tags.length !== 0
-                      ? tags.map((category) => (<li className="page__item-tag" key={category}>{category}</li>))
-                      : null
+                    !!tags.length && tags.map((category) => (
+                      <li key={category}>
+                        <div className="page__item-tag">{category}</div>
+                      </li>
+                    ))
                   }
                 </ul>
                 {

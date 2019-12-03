@@ -89,10 +89,46 @@
         "metaTitle": "Ecommerce Development Services, Custom Ecommerce Development – KeenEthics",
         "description": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
         "metaDescription": "Solving ecommerce app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations",
-        "href": "/services-ecommerce-developments-ervices",
+        "href": "/services-ecommerce-development",
         "icon": {
           "name": "ecommerce",
           "alt": "Ecommerce Development Services"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Business Analysis",
+        "metaTitle": "Business Analysis – KeenEthics",
+        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "href": "/services-business-analysis",
+        "icon": {
+          "name": "business-analytics",
+          "alt": "Business Analysis"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Cloud Application Development",
+        "metaTitle": "Cloud Application Development Services – KeenEthics",
+        "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "metaDescription": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "href": "/services-cloud-app-dev",
+        "icon": {
+          "name": "cloud-icon",
+          "alt": "Cloud Application Development"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Internet of Things (IoT)",
+        "metaTitle": "Internet of Things (IoT) Development Services – KeenEthics",
+        "description": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "href": "/services-internet-of-things",
+        "icon": {
+          "name": "iot-icon",
+          "alt": "Internet of Things"
         },
         "type": "icon"
       }
@@ -296,6 +332,14 @@
     "metaTitle": "Contacts - Office And Locations - KeenEthics",
     "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
     "href": "/contacts",
+    "type": "hidden"
+  },
+  {
+    "name": "Privacy Policy",
+    "description": "...",
+    "metaTitle": "KeenEthics’ Privacy Policy",
+    "metaDescription": "...",
+    "href": "/privacy-policy",
     "type": "hidden"
   }
 ]
