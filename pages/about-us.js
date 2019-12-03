@@ -1,19 +1,25 @@
 import React from 'react';
 
 import Layout from '../components/layout/main';
+import OurStory from '../components/about-us/OurStory';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AboutUs extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="page_wrapper">
+        <section className="page__wrapper page__about-us">
           <div className="page__header">
             <h1 className="page__title">
-              we solve
-              <br />
-              your&nbsp;
-              <em>business challenges</em>
+              we solve&nbsp;
+              <br className="desktop-plus" />
+              your
+              <br className="tablet" />
+              <em>
+                business&nbsp;
+                <br className="mobile-only" />
+                challenges
+              </em>
               <br />
               with proper code
             </h1>
@@ -30,6 +36,7 @@ class AboutUs extends React.Component {
              business analytics, and UI/UX design.
             </p>
           </div>
+          <OurStory />
         </section>
       </Layout>
     );

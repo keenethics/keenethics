@@ -1,0 +1,86 @@
+.page__about-us {
+  padding: 0;
+  // TODO remove
+  padding-bottom: 2000px;
+
+  .page__header {
+    padding: 105px 25px 60px;
+
+    @media (min-width: $tablet-sm) {
+      br.mobile-only {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-xs) {
+      em {
+        margin-left: 8px;
+      }
+    }
+
+    br {
+      &.desktop-plus {
+        display: none;
+
+        @media(min-width: $desktop-xs) {
+          display: block;
+        }
+      }
+
+      &.tablet {
+        @media (min-width: $desktop-xs) {
+          display: none;
+        }
+      }
+    }
+
+    h5, p {  
+      max-width: 780px;
+      text-align: left;
+      color: #12233D;
+      font-size: 14px;
+      line-height: 24px;
+
+      @media (min-width: $tablet-sm) {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 80%;
+      }
+    }
+
+    h5 {
+      margin-top: 25px;
+      font-weight: bold;
+      letter-spacing: -0.1px;
+
+      @media (min-width: $tablet-sm) {
+        margin-top: 40px;
+      }
+    }
+
+    p {
+      margin-top: 25px;
+
+      @media (min-width: $tablet-sm) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .separator {
+    margin-top: 20px;
+    width: 175px;
+    height: 2px;
+    background-color: #D62624;
+
+    @media (min-width: $tablet-sm) {
+      margin-top: 40px;
+    }
+  }
+
+  .our-story {
+    background-color: #12233D;
+    color: white;
+    min-height: 590px;
+  }
+}
