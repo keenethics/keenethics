@@ -183,6 +183,7 @@
       &-item {
         flex: 1 1 100%;
         padding: 0 25px;
+
         h3 {
           color: #F9F9FB;
         }
@@ -194,6 +195,8 @@
         }
 
         .stat {
+          width: 120px;
+
           em {
             font-family: 'Open Sans';
             display: block;
