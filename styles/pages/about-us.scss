@@ -78,9 +78,152 @@
     }
   }
 
+  h2 {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 44px;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+
   .our-story {
     background-color: #12233D;
     color: white;
     min-height: 590px;
+
+    padding-top: 50px;
+
+    .timeline {
+      position: relative;
+      height: 50px;
+      margin-top: 25px;
+
+      .years {
+        position: absolute;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        top: 0;
+        left: 53px;
+        transition: transform .3s ease;
+      }
+      
+      li {
+        color: #F9F9FB;
+        font-size: 18px;
+        font-family: 'Open Sans';
+
+        &:nth-of-type(3) {
+          width: 100px;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 50px;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+
+      &:before,
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+      }
+
+      &:before {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(#B6B5B5, 0.2);
+        bottom: 0;
+      }
+
+      &:after {
+        @keyframes glow {
+          0% {
+            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
+          }
+          50% {
+            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 1px;
+          }
+          100% {
+            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
+          }
+        }
+
+        width: 16px;
+        height: 16px;
+        background-color: #D62C2C;
+        border-radius: 50%;
+        bottom: -8px;
+        left: 65px;
+        animation: {
+          name: glow;
+          duration: 2s;
+          iteration-count: infinite;
+        }
+      }
+    }
+
+    .story {
+      margin-top: 40px;
+      display: inline-flex;
+      width: calc(100% * 4);
+      flex-flow: row nowrap;
+
+      &-item {
+        flex: 1 1 100%;
+        padding: 0 25px;
+        h3 {
+          color: #F9F9FB;
+        }
+
+        .stats {
+          display: flex;
+          flex-flow: row nowrap;
+          margin-top: 40px;
+        }
+
+        .stat {
+          em {
+            font-family: 'Open Sans';
+            display: block;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 22px;
+          }
+
+          span {
+            display: block;
+            text-transform: uppercase;
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.1px;
+          }
+        }
+
+        .notes {
+          margin-top: 30px;
+
+          li {
+            color: #F9F9FB;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
   }
 }
