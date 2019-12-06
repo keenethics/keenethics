@@ -3,6 +3,10 @@
   background: #fff;
   vertical-align: top;
   box-shadow: 0 2px 19px rgba(80, 116, 165, .1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 .navigation-hamburger {
   display: block;

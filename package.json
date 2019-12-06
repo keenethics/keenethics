@@ -19,6 +19,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^13.4.0",
+    "@fullpage/react-fullpage": "^0.1.16",
     "@zeit/next-sass": "^1.0.1",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
@@ -28,6 +29,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6-alpha.6",
     "express-uncapitalize": "^1.0.0",
+    "fullpage.js": "^3.0.7",
     "googleapis": "^42.0.0",
     "iplocation": "^6.1.0",
     "isomorphic-fetch": "^2.2.1",

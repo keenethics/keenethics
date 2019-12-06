@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import ReactFullpage from '@fullpage/react-fullpage';
+import classnames from 'classnames';
 import Layout from '../components/layout/main';
 import SocialButton from '../components/social-buttons/main';
+import OurServices from './our-services';
+import Founders from './founders';
+import Projects from './home-page-projects';
+import Blog from './home-page-blog';
 
 const JsonLd = ({ data }) => (
   <script
@@ -39,124 +45,216 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    const sections = ['top', 'services', 'founders', 'projects'];
+    this.state = {
+      sections,
+      currentSection: 'top',
+      nextSection: 'services',
+      isInit: true,
+      isMobile: false,
+      showCircleAnimation: false,
+      fpAPI: null,
+      isFPDestroyed: false,
+    };
+
+    this.updateDimensions.bind(this);
+    this.scrollClick.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', (e) => {
+      const { isMobile } = this.state;
+      if (!isMobile && e.target.innerWidth < 768) {
+        this.setState({ isMobile: true });
+      }
+      if (isMobile && e.target.innerWidth >= 768) {
+        this.setState({ isMobile: false });
+      }
+    });
+    this.setState({ isMobile: window.innerWidth <= 768 });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', () => {});
+  }
+
+  updateDimensions(e) {
+    const { isMobile } = this.state;
+    if (!isMobile && e.target.innerWidth < 768) {
+      this.setState({ isMobile: true });
+    }
+    if (isMobile && e.target.innerWidth >= 768) {
+      this.setState({ isMobile: false });
+    }
+  }
+
+  scrollClick() {
+    const { sections, currentSection } = this.state;
+    const newSectionIndex = sections.indexOf(currentSection) + 1;
+    const newSection = document.getElementById(sections[newSectionIndex]);
+    newSection.scrollIntoView({ behavior: 'smooth' });
   }
 
   render() {
+    // setTimeout(() => {
+    //   const w = window;
+    //   if (w) {
+    //     const elem = w.document ? w.document.getElementById('__next') : null;
+    //     if (elem) elem.classList.add('testloader');
+    //   }
+    // }, 1000);
+    const {
+      sections,
+      currentSection,
+      nextSection,
+      isInit,
+      showCircleAnimation,
+      isMobile,
+      fpAPI,
+      isFPDestroyed,
+    } = this.state;
+    console.log(this);
     return (
-      <Layout>
-        <JsonLd data={companyData} />
-        <div className="home-page">
-          <div className="home-page-content">
-            <div className="home-page-content-link">
-              <a
-                href="https://www.upwork.com/agencies/~0106b5437592391f94"
-                className="link link-upwork"
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-              >
-                Top rated Upwork agency
-              </a>
-            </div>
-            <div className="home-page-content-link">
-              <a
-                href="https://clutch.co/profile/keenethics"
-                className="link link-clutch"
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-              >
-                5-stars rated company at Clutch
-              </a>
-            </div>
-            <h1>
-              Keen &amp; Ethical
-              <br />
-              Software
-              <br />
-              Development
-            </h1>
-            <h2>
-              You have a keen idea
-              <span className="dash" />
-              we have a keen approach
-            </h2>
-            <Link href="/contacts?activeForm=estimate">
-              <a className="button contacts-goal">Free estimate</a>
-            </Link>
-            <div className="home-page-content-contact" itemScope itemType="http://schema.org/Organization">
-              <div className="contact-item" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
-                <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-map.svg" alt="point" />
-                </div>
-                <div>
-                  <a href="https://goo.gl/maps/eaAU8qqLZoo" rel="noopener noreferrer nofollow" target="_blank">
-                    <span itemProp="streetAddress">Kulparkivska St, 59</span>
-                  </a>
-                  <i>
-                    <span itemProp="addressLocality">Lviv</span>
-  ,
-                    {' '}
-                    <span itemProp="addressRegion">Ukraine</span>
-                  </i>
-                </div>
-              </div>
-              <div className="contact-item">
-                <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-mail.svg" alt="mail" />
-                </div>
-                <div>
-                  <a href="mailto:business@keenethics.com">business@keenethics.com</a>
-                  <i>
-                    Drop Us a Letter or
-                    {' '}
-                    <a href="skype:maxsav28?chat" className="skype-link">Call</a>
-                  </i>
-                </div>
-              </div>
-              <div className="contact-item">
-                <div className="contact-item-icon">
-                  <img src="/static/images/svg/icon-tel.svg" alt="phone" />
-                </div>
-                <div>
-                  <a href="tel:+380968147266"><span itemProp="telephone">+38 (096) 814 72 66</span></a>
-                  <i>Give Us a Call</i>
-                </div>
-              </div>
-              <div className="contact-item">
-                <div className="contact-item-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 9 6">
-                    <rect fill="#21468B" width="9" height="6" />
-                    <rect fill="#FFF" width="9" height="4" />
-                    <rect fill="#AE1C28" width="9" height="2" />
-                  </svg>
-                </div>
-                <div>
-                  <a href="https://nl.keenethics.com" target="_blank" rel="noopener noreferrer">nl.keenethics.com</a>
-                  <i>Switch to Dutch version</i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="social-icons home-page-social">
-            <SocialButton />
-          </div>
-          <div className="home-page-background">
-            <div className="home-page-background-inner">
-              <div className="planet" />
-              <div className="orbits">
-                <div className="orbit" />
-                <div className="orbit" />
-                <div className="orbit" />
-                <div className="orbit" />
-              </div>
-              <div className="stars">
-                <div className="star-1" />
-                <div className="star-2" />
-                <div className="star-3" />
-                <div className="star-4" />
-              </div>
-            </div>
-          </div>
+      <Layout
+        className="home-full-vh"
+      >
+        <div className={classnames('container-top ', {
+          test: currentSection === sections[0],
+        })}
+        >
+          <ReactFullpage
+            autoScrolling
+            navigation
+            // fitToSection={false}
+            onLeave={(origin, destination) => {
+              const enableFP = sections[0] === nextSection
+              || (currentSection === sections[0] && nextSection === sections[1]);
+              let isDestroyed = isFPDestroyed;
+              if (enableFP && !isInit) {
+                fpAPI.destroy();
+                isDestroyed = true;
+              } else if (!isInit) {
+                if (isDestroyed) {
+                  fpAPI.reBuild();
+                  isDestroyed = false;
+                }
+              }
+              this.setState({
+                currentSection: origin.item.id,
+                nextSection: destination.item.id,
+                isInit: false,
+                showCircleAnimation: destination.item.id === sections[1]
+                && origin.item.id === sections[0],
+                isFPDestroyed: isDestroyed,
+              });
+            }}
+            render={({ fullpageApi }) => {
+              if (!fpAPI) {
+                this.setState({ fpAPI: fullpageApi });
+              }
+              return (
+                <ReactFullpage.Wrapper>
+
+                  <JsonLd data={companyData} />
+                  <div className="section" id={sections[0]}>
+                    <div className={classnames('home-page')}>
+                      <div className="home-page-content">
+                        <div className="social-icons home-page-social">
+                          <SocialButton />
+                        </div>
+                        <h4 className={classnames('home-page-small-title', {
+                          faded: nextSection === sections[1] && !isInit,
+                        })}
+                        >
+                          Keen &amp; Ethical Software
+                          <br />
+                          Development
+                        </h4>
+                        <div className={classnames('vertical-line', {
+                          faded: nextSection === sections[1] && !isInit,
+                        })}
+                        />
+                        <h1 className={classnames('home-page-large-title', {
+                          faded: nextSection === sections[1] && !isInit,
+                        })}
+                        >
+                          Full-cycle
+                          <br />
+                          web and mobile
+                          <br />
+                          development partner
+                        </h1>
+                        <div className="home-page-rates-container">
+                          <div className="home-page-content-link">
+                            <a
+                              href="https://www.upwork.com/agencies/~0106b5437592391f94"
+                              className="link link-upwork"
+                              target="_blank"
+                              rel="noreferrer noopener nofollow"
+                            >
+                              Top rated Upwork agency
+                            </a>
+                          </div>
+                          <div className="home-page-content-link">
+                            <a
+                              href="https://clutch.co/profile/keenethics"
+                              className="link link-clutch"
+                              target="_blank"
+                              rel="noreferrer noopener nofollow"
+                            >
+                              5-stars rated company at Clutch
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classnames('home-page-side-info')}>
+                        <div className="side-info-bg">
+                          <img src="/static/images/banner-photo-1.jpg" className="home-page-side-info__image" alt="Banner one" />
+                          <img src="/static/images/banner-photo-2.jpg" className="home-page-side-info__image" alt="Banner two" />
+                          <img src="/static/images/banner-photo-3.jpg" className="home-page-side-info__image" alt="Banner three" />
+                        </div>
+                        <div className="circle-container">
+                          <div className={classnames('orange-circle', { 'circle-anim': showCircleAnimation })}>
+                            <div className="border" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className={classnames('side-info-top', { faded: nextSection === sections[1] && !isInit })}>
+                        <Link href="/contacts?activeForm=estimate">
+                          <a className="button contacts-goal side-info-top-content">Free estimate</a>
+                        </Link>
+                      </div>
+                      <div className="scroll-info-container">
+                        <p className="vertical-text">scroll down to see more</p>
+                        <button className="mouse-scroll" type="button" onClick={() => this.scrollClick()}>
+                          <span className="mouse-scroll-wheel" />
+                        </button>
+                      </div>
+                      <div className={classnames('bg-scroll', { 'bg-scroll-animate': currentSection === sections[0] && !isInit })} />
+                    </div>
+                  </div>
+                  <OurServices
+                    section={sections[1]}
+                    show={sections[1] === nextSection && !isInit}
+                    isMobile={isMobile}
+                  />
+                  <Founders
+                    section={sections[2]}
+                    isMobile={isMobile}
+                  />
+                  <Projects
+                    section={sections[3]}
+                    isMobile={isMobile}
+                  />
+                  <Blog
+                    section={sections[4]}
+                    // isMobile={isMobile}
+                  />
+                </ReactFullpage.Wrapper>
+              );
+            }
+          }
+          />
         </div>
       </Layout>
     );

@@ -32,12 +32,24 @@ class Portfolio extends React.Component {
 
     this.worksCountFor = this.worksCountFor.bind(this);
     this.filterOnChange = this.filterOnChange.bind(this);
+    this.wrapperCondition = this.wrapperCondition.bind(this);
   }
 
   componentDidMount() {
     const subnavigation = document.querySelector('.navigation-item.current > .subnavigation');
-    subnavigation.style.display = 'none';
-    subnavigation.parentElement.classList.add('is-link');
+    if (subnavigation) {
+      subnavigation.style.display = 'none';
+      subnavigation.parentElement.classList.add('is-link');
+    }
+    //  else {
+    //   const subnav = document.getElementsByClassName('subnavigation');
+    //   console.log(subnav);
+    //   for (let i = 0; i < subnav.length; i++) {
+    //     const element = subnav[i];
+    //     element.style.display = 'none';
+    //     element.parentElement.classList.add('is-link');
+    //   }
+    // }
   }
 
   getCategoriesList(url) {
@@ -65,42 +77,65 @@ class Portfolio extends React.Component {
     this.setState({ selectedCategories });
   }
 
+  wrapperCondition(component) {
+    return <Layout>{component}</Layout>;
+  }
+  
   render() {
     const { selectedCategories, categoriesList } = this.state;
-
-    return (
-      <Layout>
-        <section className="portfolio page__wrapper">
-          <div className="page__header">
-            <h1 className="page__title">
-              <em>Keen</em>
-              &nbsp;projects
-              <br />
-              we put into action
-            </h1>
-          </div>
-          <CategoriesFilter
-            categoriesList={categoriesList}
-            selectedCategories={selectedCategories}
-            filterOnChange={this.filterOnChange}
-            pageTitle="portfolio"
-          />
-          {
-            works.length
-              ? <Works works={works.filter(this.worksCountFor)} />
-              : null
-          }
-        </section>
-      </Layout>
+    const {
+      isFullPage,
+      pageTitle,
+      topTitle,
+      isMobile,
+    } = this.props;
+    const filteredWorks = works.filter(this.worksCountFor);
+    let worksSliceToShow = 0;
+    if (isFullPage) {
+      worksSliceToShow = isMobile ? filteredWorks.length - 2 : filteredWorks.length - 3;
+    }
+    const portfolioComponent = (
+      <section className="portfolio page__wrapper">
+        <div className="page__header">
+          {topTitle || (
+          <h1 className="page__title">
+            <em>Keen</em>
+            &nbsp;projects
+            <br />
+            we put into action
+          </h1>
+          )}
+        </div>
+        <CategoriesFilter
+          categoriesList={categoriesList}
+          selectedCategories={selectedCategories}
+          filterOnChange={this.filterOnChange}
+          pageTitle={pageTitle || 'portfolio'}
+        />
+        {
+          works.length
+            ? <Works works={filteredWorks.slice(worksSliceToShow)} />
+            : null
+        }
+      </section>
     );
+    return isFullPage ? portfolioComponent : this.wrapperCondition(portfolioComponent);
   }
 }
 
 Portfolio.propTypes = {
   router: PropTypes.object,
+  isFullPage: PropTypes.bool,
+  pageTitle: PropTypes.string,
+  topTitle: PropTypes.string,
+  isMobile: PropTypes.bool,
 };
 Portfolio.defaultProps = {
   router: {},
+  isFullPage: false,
+  pageTitle: '',
+  topTitle: '',
+  isMobile: false,
 };
 
 export default withRouter(Portfolio);
