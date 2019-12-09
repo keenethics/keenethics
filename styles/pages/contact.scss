@@ -1977,3 +1977,16 @@
     }
   }
 }
+
+.error-message {
+  margin: 0;
+  font-size: 12px;
+  color: red;
+  position: relative;
+  margin: 1em .5em;
+  margin-top: -12px;
+}
+
+.error-none {
+  display: none;
+}
