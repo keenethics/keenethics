@@ -61,7 +61,7 @@ const OurStory = () => {
       >
         {storyData.map((_step, i) => (
           <StoryItem
-            visible={classNames({ active: step === i })}
+            visible={step === i}
             key={_step.year}
             {..._step}
           />
