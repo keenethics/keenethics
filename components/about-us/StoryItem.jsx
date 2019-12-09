@@ -28,10 +28,15 @@ StoryItemDescription.propTypes = {
 };
 
 const StoryItem = ({
-  title, engineers, partners, items, visible, links,
+  year, title, engineers, partners, items, visible, links,
 }) => (
   <div className={classNames('story-item', { visible })}>
-    <h3>{title}</h3>
+    <div className="story-item-heading">
+      <em>{year}</em>
+      <h3>
+        {title}
+      </h3>
+    </div>
     <div className="stats">
       <div className="stat">
         <em>{engineers}</em>
@@ -66,6 +71,7 @@ StoryItem.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   visible: PropTypes.bool,
   links: PropTypes.object,
+  year: PropTypes.string.isRequired,
 };
 
 export default StoryItem;

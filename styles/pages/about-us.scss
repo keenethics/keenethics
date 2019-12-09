@@ -83,6 +83,10 @@
     font-size: 26px;
     line-height: 44px;
     text-align: center;
+
+    @media (min-width: $tablet-lg) {
+      font-size: 28px;
+    }
   }
 
   h3 {
@@ -97,13 +101,47 @@
     background-color: #12233D;
     color: white;
     min-height: 590px;
-
     padding-top: 50px;
+    overflow: hidden;
+
+    @media (min-width: $tablet-lg) {
+      padding-top: 60px;
+      position: relative;
+      .out-story-body {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+
+        padding-left: 65px;
+      }
+    }
 
     .timeline {
       position: relative;
       height: 50px;
       margin-top: 25px;
+
+      @media (min-width: $tablet-lg) {
+        margin-top: 0;
+        height: initial;
+        position: static;
+        min-width: 235px;
+
+        padding-top: 180px;
+        padding-left: 20px;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
+        }
+        50% {
+          box-shadow: rgba(#D62C2C, 0.3) 0 0 0 1px;
+        }
+        100% {
+          box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
+        }
+      }
 
       .years {
         position: absolute;
@@ -113,6 +151,13 @@
         top: 0;
         left: 53px;
         transition: transform .3s ease;
+
+        @media (min-width: $tablet-lg) {
+          position: static;
+          flex-flow: column nowrap;
+
+          transform: translateX(0px) !important;
+        }
       }
       
       li {
@@ -131,6 +176,74 @@
         &.active {
           font-weight: bold;
         }
+
+        @media (min-width: $tablet-lg) {
+          width: 100px;
+          margin-right: 0 !important;
+          position: relative;
+          
+          &:not(:last-of-type) {
+            margin-bottom: 30px;
+          }
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: #334154;
+            left: calc(-20px - 5px);
+            top: 5px;
+            transition: all .5s ease;
+          }
+
+          &.active {
+            &:before {
+              width: 17px;
+              height: 17px;
+  
+              background-color: #D62C2C;
+              left: calc(-20px - 8px);
+              top: 2px;
+              animation: {
+                name: glow;
+                duration: 2s;
+                iteration-count: infinite;
+              }
+            }
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 10px;
+              right: -95px;
+              width: 65px;
+              height: 1px;
+              background-color: #D62C2C;
+
+              @keyframes appear {
+                from {
+                  transform: translateX(-25px);
+                  opacity: 0;
+                }
+                to {
+                  transform: translateX(0);
+                  opacity: 1;
+                }
+              }
+
+              animation: {
+                name: appear;
+                duration: .5s;
+                iteration-count: 1;
+                fill-mode: forwards;
+              }
+            }
+          }
+        }
       }
 
       &:before,
@@ -143,23 +256,19 @@
       &:before {
         height: 1px;
         width: 100%;
-        background-color: rgba(#B6B5B5, 0.2);
+        background-color: #334154;
         bottom: 0;
+
+        @media (min-width: $tablet-lg) {
+          height: 100%;
+          width: 1px;
+          top: 0;
+          bottom: 0;
+          left: 65px;
+        }
       }
 
       &:after {
-        @keyframes glow {
-          0% {
-            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
-          }
-          50% {
-            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 1px;
-          }
-          100% {
-            box-shadow: rgba(#D62C2C, 0.3) 0 0 0 5px;
-          }
-        }
-
         width: 16px;
         height: 16px;
         background-color: #D62C2C;
@@ -171,6 +280,10 @@
           duration: 2s;
           iteration-count: infinite;
         }
+
+        @media (min-width: $tablet-lg) {
+          display: none;
+        }
       }
     }
 
@@ -181,24 +294,82 @@
       flex-flow: row nowrap;
       width: calc(100% * 4);
 
+      @media (min-width: $tablet-lg) {
+        margin-top: 40px;
+        min-width: calc(350px * 4);
+      }
+
       &-item {
         flex: 1 1 100%;
         padding: 0 25px;
         transition: opacity .7s ease;
         opacity: 0;
 
+        @media (min-width: $tablet-lg) {
+          padding: 0;
+          flex: 1 1 350px;
+          transition-duration: .3s;
+
+          &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: #334154;
+            height: 300%;
+            width: 1px;
+            top: -50%;
+            bottom: 0;
+          }
+        }
+
         &.visible {
           opacity: 1;
         }
 
-        h3 {
-          color: #F9F9FB;
+        &-heading {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: flex-start;
+          justify-content: center;
+
+          em {
+            display: none;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 28px;
+          }
+  
+          h3 {
+            color: #F9F9FB;
+            text-align: left;
+          }
+
+          @media (min-width: $tablet-lg) {
+            justify-content: flex-start;
+
+            em {
+              display: inline-block;
+              margin-right: 30px;
+              margin-bottom: 10px;
+            }
+
+            h3 {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
         }
 
         .stats {
           display: flex;
           flex-flow: row nowrap;
           margin-top: 40px;
+
+          @media (min-width: $tablet-lg) {
+           margin-top: 50px;
+          }
         }
 
         .stat {
@@ -220,6 +391,17 @@
             font-size: 14px;
             line-height: 22px;
             letter-spacing: -0.1px;
+          }
+
+          @media (min-width: $tablet-lg) {
+            em {
+              font-size: 30px;
+            }
+
+            span {
+              font-size: 16px;
+              margin-top: 20px;
+            }
           }
         }
 

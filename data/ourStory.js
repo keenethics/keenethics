@@ -30,7 +30,6 @@ const storyData = [
       'The tech stack was broadened to satisfy all the needs and requests of our customers.',
       'We moved to a new office',
       'We started supporting the educational project %Let Kids Move% and %Hebron Academy%.',
-      'We started supporting the educational project %Let Kids Move% and %Hebron Academy%.',
       'We’ve involved industry experts and set up decentralized decision making within a company',
     ],
     engineers: '36',

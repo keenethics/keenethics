@@ -40,32 +40,34 @@ const OurStory = () => {
   return (
     <div className="our-story" {...bind()}>
       <h2>Our Story</h2>
-      <div className="timeline">
-        <ul
-          className="years"
-          style={{ transform: `translateX(${mobileYearOffsets[step]})` }}
+      <div className="out-story-body">
+        <div className="timeline">
+          <ul
+            className="years"
+            style={{ transform: `translateX(${mobileYearOffsets[step]})` }}
+          >
+            {storyData.map((s, i) => (
+              <li
+                key={s.year}
+                className={classNames({ active: step === i })}
+              >
+                {s.year}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div
+          className="story"
+          style={{ transform: `translateX(${-25 * step}%)` }}
         >
-          {storyData.map((s, i) => (
-            <li
-              key={s.year}
-              className={classNames({ active: step === i })}
-            >
-              {s.year}
-            </li>
+          {storyData.map((_step, i) => (
+            <StoryItem
+              visible={step === i}
+              key={_step.year}
+              {..._step}
+            />
           ))}
-        </ul>
-      </div>
-      <div
-        className="story"
-        style={{ transform: `translateX(${-25 * step}%)` }}
-      >
-        {storyData.map((_step, i) => (
-          <StoryItem
-            visible={step === i}
-            key={_step.year}
-            {..._step}
-          />
-        ))}
+        </div>
       </div>
     </div>
   );
