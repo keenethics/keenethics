@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const StoryItem = ({
-  title, engineers, partners, items,
+  title, engineers, partners, items, visible,
 }) => (
-  <div className="story-item">
+  <div className={classNames('story-item', { visible })}>
     <h3>{title}</h3>
     <div className="stats">
       <div className="stat">
@@ -28,11 +29,16 @@ const StoryItem = ({
   </div>
 );
 
+StoryItem.defaultProps = {
+  visible: false,
+};
+
 StoryItem.propTypes = {
   title: PropTypes.string.isRequired,
   engineers: PropTypes.string.isRequired,
   partners: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  visible: PropTypes.bool,
 };
 
 export default StoryItem;

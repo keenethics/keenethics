@@ -24,7 +24,6 @@ const OurStory = () => {
 
   const bind = useGesture({
     onDragEnd: throttle(({ vxvy }) => {
-      console.log('nu che tam');
       const vx = Math.abs(vxvy[0]);
       const vy = Math.abs(vxvy[1]);
       if (vx > vy && vx > 0.3) {
@@ -58,12 +57,13 @@ const OurStory = () => {
       </div>
       <div
         className="story"
-        style={{ transform: `translateX(${step * -25}%)` }}
+        style={{ transform: `translateX(${-25 * step}%)` }}
       >
-        {storyData.map((_step) => (
+        {storyData.map((_step, i) => (
           <StoryItem
-            {..._step}
+            visible={classNames({ active: step === i })}
             key={_step.year}
+            {..._step}
           />
         ))}
       </div>

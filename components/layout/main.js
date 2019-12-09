@@ -69,8 +69,8 @@ class Layout extends React.Component {
         {noMenu ? null : <Navigation currentURL={currentURL} />}
         <div className="content">
 
-    { /* TODO style={style} */}
-          <div className="content-inner" >
+          { /* TODO style={style} */}
+          <div className="content-inner">
             { children }
           </div>
         </div>

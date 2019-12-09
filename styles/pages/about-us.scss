@@ -176,13 +176,20 @@
 
     .story {
       margin-top: 40px;
+      transition: transform .5s ease;
       display: inline-flex;
-      width: calc(100% * 4);
       flex-flow: row nowrap;
+      width: calc(100% * 4);
 
       &-item {
         flex: 1 1 100%;
         padding: 0 25px;
+        transition: opacity .7s ease;
+        opacity: 0;
+
+        &.visible {
+          opacity: 1;
+        }
 
         h3 {
           color: #F9F9FB;
