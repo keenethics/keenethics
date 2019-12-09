@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
-const iplocation = require('iplocation').default;
+const geoip = require('geoip-lite');
 const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
@@ -573,7 +573,7 @@ app.prepare().then(() => {
         || req.connection.remoteAddress
         || req.socket.remoteAddress
         || (req.connection.socket ? req.connection.socket.remoteAddress : null);
-      const location = await iplocation(ip);
+      const location = await geoip.lookup(ip);
       res.status(200).json({ location });
     } catch (e) {
       res.status(400).json({ location: '' });
