@@ -1,0 +1,78 @@
+.block-industries {
+  position: relative;
+  background: #12233d url('/static/main-blocks/industries/background.svg') no-repeat top center;
+  background-size: 767px 428px;
+
+  .block--header-title {
+    color: #fff;
+  }
+  .block--header-description {
+    color: #fff;
+  }
+}
+
+.industries {
+  max-width: 1010px;
+  margin: 0 auto;
+
+  .industries-big {
+    padding: 0 0 80px;
+  }
+
+  .industries-small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 100px;
+  }
+
+  &--big-item {
+
+  }
+
+  &--big-item-logo {
+    position: relative;
+    margin: 0 0 38px;
+
+    img {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: #d62c2c;
+      z-index: 1;
+    }
+  }
+
+  &--big-item-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+
+  &--big-item-description {
+    color: #7d7ca9;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &--small-item-logo {
+    margin: 0 0 28px;
+  }
+
+  &--small-item-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+}

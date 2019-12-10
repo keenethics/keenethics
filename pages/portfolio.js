@@ -98,12 +98,12 @@ class Portfolio extends React.Component {
       <section className="portfolio page__wrapper">
         <div className="page__header">
           {topTitle || (
-          <h1 className="page__title">
-            <em>Keen</em>
-            &nbsp;projects
-            <br />
-            we put into action
-          </h1>
+            <h1 className="page__title">
+              <em>Keen</em>
+              &nbsp;projects
+              <br />
+              we put into action
+            </h1>
           )}
         </div>
         <CategoriesFilter
@@ -127,7 +127,7 @@ Portfolio.propTypes = {
   router: PropTypes.object,
   isFullPage: PropTypes.bool,
   pageTitle: PropTypes.string,
-  topTitle: PropTypes.string,
+  topTitle: PropTypes.node,
   isMobile: PropTypes.bool,
 };
 Portfolio.defaultProps = {

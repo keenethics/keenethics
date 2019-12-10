@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { MaxS, PaulW, JeanA } from '../static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -200,7 +200,7 @@ const MobileWishlist = ({ wishlist }) => {
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
-        {''}
+        &nbsp;
       </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (

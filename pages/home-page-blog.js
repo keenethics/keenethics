@@ -32,8 +32,12 @@ const KeenBlog = ({ section }) => {
 };
 
 KeenBlog.propTypes = {
-//   isMobile: PropTypes.bool.isRequired,
-  section: PropTypes.string.isRequired,
+  // isMobile: PropTypes.bool.isRequired,
+  section: PropTypes.string,
+};
+
+KeenBlog.defaultProps = {
+  section: '',
 };
 
 export default KeenBlog;

@@ -1,9 +1,16 @@
+import Link from 'next/link';
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
-import ReactFullpage from '@fullpage/react-fullpage';
 import classnames from 'classnames';
+
+import ReactFullpage from '@fullpage/react-fullpage';
+
 import Layout from '../components/layout/main';
+import OurMethods from '../components/blocks/our-methods/OurMethods';
+import Methodologies from '../components/blocks/methodologies/Methodologies';
+import Industries from '../components/blocks/industries/Industries';
+import TechStack from '../components/blocks/tech-stack/TechStack';
 import SocialButton from '../components/social-buttons/main';
 import OurServices from './our-services';
 import Founders from './founders';
@@ -153,7 +160,6 @@ export default class Index extends React.Component {
               }
               return (
                 <ReactFullpage.Wrapper>
-
                   <JsonLd data={companyData} />
                   <div className="section" id={sections[0]}>
                     <div className={classnames('home-page')}>
@@ -231,6 +237,32 @@ export default class Index extends React.Component {
                       </div>
                       <div className={classnames('bg-scroll', { 'bg-scroll-animate': currentSection === sections[0] && !isInit })} />
                     </div>
+                  </div>
+                  <div className="block block-our-methods">
+                    <header className="block--header">
+                      <div className="block--header-title">
+                        Our methods
+                      </div>
+                      <div className="block--header-description">
+                        We guide businesses through every stage of software development while
+                        delivering effective and elegantly designed solutions to improve your daily
+                        business processes.
+                      </div>
+                    </header>
+                    <OurMethods />
+                  </div>
+                  <Methodologies />
+                  <Industries />
+                  <div className="block block-tech-stack">
+                    <header className="block--header">
+                      <div className="block--header-title">
+                        Our tech stack
+                      </div>
+                      <div className="block--header-description">
+                        These are the tools we use to reach the optimal software solution.
+                      </div>
+                    </header>
+                    <TechStack />
                   </div>
                   <OurServices
                     section={sections[1]}
