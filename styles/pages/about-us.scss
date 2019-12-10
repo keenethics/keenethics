@@ -128,12 +128,26 @@
     @media (min-width: $tablet-lg) {
       padding-top: 60px;
       position: relative;
-      .out-story-body {
+
+      &-body {
         display: flex;
         flex-flow: row nowrap;
         align-items: stretch;
 
         padding-left: 65px;
+      }
+    }
+
+    @media (min-width: $desktop-md) {
+      padding-top: 95px;
+
+      h2 {
+        font-size: 34px;
+        line-height: 44px;
+      }
+
+      &-body {
+        padding-left: 205px;
       }
     }
 
@@ -150,6 +164,11 @@
 
         padding-top: 180px;
         padding-left: 20px;
+      }
+
+      @media (min-width: $desktop-md) {
+        padding-top: 280px;
+        min-width: 350px;
       }
 
       @keyframes glow {
@@ -218,6 +237,10 @@
             left: calc(-20px - 5px);
             top: 5px;
             transition: all .5s ease;
+
+            @media (min-width: $desktop-md) {
+              left: calc(-20px - 10px);
+            }
           }
 
           &.active {
@@ -232,6 +255,10 @@
                 name: glow;
                 duration: 2s;
                 iteration-count: infinite;
+              }
+
+              @media (min-width: $desktop-md) {
+                left: calc(-20px - 13px);
               }
             }
 
@@ -262,6 +289,11 @@
                 iteration-count: 1;
                 fill-mode: forwards;
               }
+
+              @media (min-width: $desktop-md) {
+                right: -195px;
+                width: 165px;
+              }
             }
           }
         }
@@ -286,6 +318,10 @@
           top: 0;
           bottom: 0;
           left: 65px;
+        }
+
+        @media (min-width: $desktop-md) {
+          left: 200px;
         }
       }
 
@@ -320,6 +356,10 @@
         min-width: calc(350px * 4);
       }
 
+      @media (min-width: $desktop-md) {
+        min-width: calc(650px * 4);
+      }
+
       &-item {
         flex: 1 1 100%;
         padding: 0 25px;
@@ -330,17 +370,10 @@
           padding: 0;
           flex: 1 1 350px;
           transition-duration: .3s;
+        }
 
-          &:before {
-            content: '';
-            position: absolute;
-            display: block;
-            background-color: #334154;
-            height: 300%;
-            width: 1px;
-            top: -50%;
-            bottom: 0;
-          }
+        @media (min-width: $desktop-md) {
+          flex: 1 1 650px;
         }
 
         &.visible {
@@ -381,6 +414,25 @@
               line-height: 18px;
             }
           }
+
+          @media (min-width: $desktop-md) {
+            margin-top: 20px;
+            height: 150px;
+            flex-wrap: nowrap;
+
+            em {
+              font-size: 64px;
+              line-height: 64px;
+              margin-bottom: 0;
+              white-space: nowrap;
+            }
+
+            h3 {
+              margin-top: 10px;
+              font-size: 24px;
+              line-height: 30px;
+            }
+          }
         }
 
         .stats {
@@ -389,7 +441,11 @@
           margin-top: 40px;
 
           @media (min-width: $tablet-lg) {
-           margin-top: 50px;
+            margin-top: 50px;
+          }
+
+          @media (min-width: $desktop-md) {
+            margin-top: 0;
           }
         }
 
@@ -415,6 +471,17 @@
           }
 
           @media (min-width: $tablet-lg) {
+            &:first-of-type:before {
+              content: '';
+              position: absolute;
+              display: block;
+              background-color: #334154;
+              height: 300%;
+              width: 1px;
+              top: -50%;
+              bottom: 0;
+            }
+
             em {
               font-size: 30px;
             }
@@ -422,6 +489,31 @@
             span {
               font-size: 16px;
               margin-top: 20px;
+            }
+          }
+
+          @media (min-width: $desktop-md) {
+            &:first-of-type {
+              margin-right: 85px;
+            }
+
+            &:last-of-type:before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: -50%;
+              bottom: 0;
+              height: 300%;
+              width: 1px;
+              background-color: #334154;
+            }
+
+            em {
+              font-size: 38px;
+            }
+            span {
+              font-size: 18px;
+              margin-top: 30px;
             }
           }
         }
@@ -434,6 +526,11 @@
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 25px;
+          }
+
+          @media (min-width: $desktop-md) {
+            margin-top: 55px;
+            max-width: 460px;
           }
         }
       }

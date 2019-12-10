@@ -40,7 +40,7 @@ const OurStory = () => {
   return (
     <div className="our-story" {...bind()}>
       <h2>Our Story</h2>
-      <div className="out-story-body">
+      <div className="our-story-body">
         <div className="timeline">
           <ul
             className="years"
