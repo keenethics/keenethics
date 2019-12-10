@@ -52,7 +52,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
             ,&nbsp;
             <span itemProp="streetAddress">Kulparkivska St, 59</span>
           </a>
-          <a href="tel:+380947106105">
+          <a href="tel:+380947106105" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +38 (094) 710 61 05
             </span>
@@ -106,7 +106,7 @@ Netherlands
 5346 RT
             </span>
           </a>
-          <a href="tel:+31202620944">
+          <a href="tel:+31202620944" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +31 20 262 0944
             </span>
@@ -154,7 +154,7 @@ Netherlands
               NY 10018
             </span>
           </a>
-          <a href="tel:+19292141392">
+          <a href="tel:+19292141392" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +1 (929) 214 1392
             </span>

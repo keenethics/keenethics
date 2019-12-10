@@ -64,7 +64,7 @@ export default class Checkbox extends PureComponent {
 Checkbox.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.node,
   secondaryText: PropTypes.string,
   value: PropTypes.string,
   name: PropTypes.string,

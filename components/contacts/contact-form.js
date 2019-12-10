@@ -161,6 +161,7 @@ const ContactForm = () => {
         </div>
         <div className="input-cols">
           <FileUpload
+            id="contact-us-file-upload"
             text={(fileName.length > 10 && fileName !== 'Attach you file')
               ? fileName.substring(0, 10).concat('...')
               : fileName}
@@ -180,8 +181,8 @@ const ContactForm = () => {
             className="grey"
             text={(
               <>
-I want to use a&nbsp;
-                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="blanck" className="grey sub-dis">subscriber discount</a>
+                I want to use a&nbsp;
+                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
               </>
 )}
             name="estimateFormIsSubscriber"
@@ -205,7 +206,7 @@ I want to use a&nbsp;
         </div>
         <div className="privacy-policy">
             By submitting, I agree to KeenEthics’&nbsp;
-          <a href="/privacy-policy" target="blanc" classNamve="">Privacy Policy</a>
+          <a href="/privacy-policy" target="_blank">Privacy Policy</a>
         </div>
       </form>
     </div>
