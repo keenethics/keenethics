@@ -18,6 +18,11 @@
       }
     }
 
+    @media (min-width: $desktop-md) {
+      padding-left: 245px;
+      padding-bottom: 90px;
+    }
+
     br {
       &.desktop-plus {
         display: none;
@@ -34,7 +39,7 @@
       }
     }
 
-    h5, p {  
+    h5, p {
       max-width: 780px;
       text-align: left;
       color: #12233D;
@@ -46,6 +51,13 @@
         line-height: 28px;
         max-width: 80%;
       }
+
+      @media (min-width: $desktop-md) {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 780px;
+        text-align: center;
+      }
     }
 
     h5 {
@@ -55,6 +67,10 @@
 
       @media (min-width: $tablet-sm) {
         margin-top: 40px;
+      }
+
+      @media (min-width: $desktop-md) {
+        margin-top: 50px;
       }
     }
 
@@ -75,6 +91,11 @@
 
     @media (min-width: $tablet-sm) {
       margin-top: 40px;
+    }
+
+    @media (min-width: $desktop-md) {
+      margin-top: 50px;
+      margin-left: calc(780px / 2 - 85px);
     }
   }
 
