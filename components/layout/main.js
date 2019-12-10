@@ -32,7 +32,7 @@ class Layout extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
-
+    console.log(window);
     this.updateDimensions();
   }
 
@@ -74,7 +74,7 @@ class Layout extends React.Component {
     if (noMenu) {
       style.width = '100vw';
     }
-
+    
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />

@@ -207,6 +207,34 @@
     animation: right-to-left-appearance 2s linear;
   }
 }
+
+.container-top {
+  .home-section-title {
+    font-size: 34px;
+    text-align: center;
+    margin: 80px 0 30px
+  }
+  .projects {
+    background-color: #fafafa;
+    .page__header {
+      padding: 0;
+    }
+  }
+  .keen-blog {
+    padding: 0 44px;
+    background-color: #fafafa;
+    .home-section-title {
+      margin: 85px 0 30px;
+    }
+    .page__item-figure {
+      background: transparent;
+    }
+    .page__item {
+      width: 50%;
+    }
+  }
+  
+}
 .home-page-side-info {
   width: 350px;
   height: 100%;
@@ -289,10 +317,6 @@
     }
     @include for-tablet {
       padding: 20px 40px;
-    }
-    .home-section-title {
-      font-size: 34px;
-      text-align: center;
     }
     .home-section-description {
       font-size: 18px;
@@ -1371,6 +1395,22 @@ $show-slide-pos: -300px;
   .section.our-services .home-section-description {
     width: unset;
   }
+  .container-top {
+    .keen-blog {
+      padding: 0 34px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-top .home-section-plates-item {
+    width: unset;
+  }
+}
+@media (min-width: 768px) {
+  .container-top .home-section-plates-item {
+    width: 21%;
+  }
 }
 
 @include for-tablet {
@@ -1387,5 +1427,14 @@ $show-slide-pos: -300px;
         width: 100%;
       }
     }
+  }
+  .container-top {
+    .keen-blog {
+      padding: 0 20px;
+      .page__item {
+        width: 100%;
+      }
+    }
+    
   }
 }

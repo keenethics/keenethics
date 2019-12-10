@@ -80,7 +80,7 @@ class Portfolio extends React.Component {
   wrapperCondition(component) {
     return <Layout>{component}</Layout>;
   }
-  
+
   render() {
     const { selectedCategories, categoriesList } = this.state;
     const {

@@ -113,7 +113,6 @@ export default class Index extends React.Component {
       fpAPI,
       isFPDestroyed,
     } = this.state;
-    console.log(this);
     return (
       <Layout
         className="home-full-vh"

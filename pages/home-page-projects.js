@@ -9,7 +9,7 @@ const Projects = ({ section, isMobile }) => {
     </h1>
   );
   return (
-    <div className="section fp-auto-height" id={section}>
+    <div className="section fp-auto-height projects" id={section}>
       <div className="fw-section">
         <Portfolio
           isFullPage
