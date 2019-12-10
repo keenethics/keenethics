@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { useGesture } from 'react-use-gesture';
@@ -24,6 +26,9 @@ const OurStory = () => {
 
   const bind = useGesture({
     onDragEnd: throttle(({ vxvy }) => {
+      if (window.innerWidth > 1024) {
+        return;
+      }
       const vx = Math.abs(vxvy[0]);
       const vy = Math.abs(vxvy[1]);
       if (vx > vy && vx > 0.3) {
@@ -50,6 +55,14 @@ const OurStory = () => {
               <li
                 key={s.year}
                 className={classNames({ active: step === i })}
+                onClick={() => _setStep(i)}
+                onKeyDown={(event) => {
+                  if (event.keyCode === 32) {
+                    event.preventDefault();
+                    _setStep(i);
+                  }
+                }}
+                tabIndex="0"
               >
                 {s.year}
               </li>

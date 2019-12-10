@@ -128,6 +128,7 @@
     @media (min-width: $tablet-lg) {
       padding-top: 60px;
       position: relative;
+      z-index: 1;
 
       &-body {
         display: flex;
@@ -191,6 +192,7 @@
         top: 0;
         left: 53px;
         transition: transform .3s ease;
+        z-index: 10;
 
         @media (min-width: $tablet-lg) {
           position: static;
@@ -204,6 +206,7 @@
         color: #F9F9FB;
         font-size: 18px;
         font-family: 'Open Sans';
+        cursor: pointer;
 
         &:nth-of-type(3) {
           width: 100px;
@@ -354,6 +357,8 @@
       @media (min-width: $tablet-lg) {
         margin-top: 40px;
         min-width: calc(350px * 4);
+        position: relative;
+        z-index: -1;
       }
 
       @media (min-width: $desktop-md) {
@@ -526,6 +531,18 @@
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 25px;
+
+            a {
+              color: inherit;
+              cursor: pointer;
+              &:hover,
+              &:active {
+                color: #909090;
+              }
+              &:visited {
+                color: #767BC9;
+              }
+            }
           }
 
           @media (min-width: $desktop-md) {
