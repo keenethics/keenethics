@@ -135,12 +135,10 @@
 
   &-img {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
+    height: 100%;
+    transform: translateX(-50%);
   }
 
   &-figcaption {
@@ -156,6 +154,7 @@
       justify-content: flex-start;
       align-items: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
     @media (min-width: $mobile-lg) {
@@ -173,17 +172,18 @@
   }
 
   &-tags {
-    margin: 0;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-wrap: wrap;
     font-size: 14px;
+    margin: -4px;
+    li {
+      padding: 4px;
+    }
   }
 
   &-tag {
     @extend .tags-text;
     height: 24px;
-    padding: 0 20px;
     display: inline-block;
     font-size: 0.85em;
     border-radius: 2px;
@@ -192,10 +192,6 @@
     text-transform: uppercase;
     letter-spacing: 0.56px;
     line-height: 24px;
-
-    &:not(:last-of-type) {
-      margin-right: 10px;
-    }
 
     @media (min-width: $mobile-md) {
       padding: 0 10px;
@@ -215,6 +211,7 @@
     font-size: 12px;
     line-height: 16px;
     color: #12233D;
+    padding: 4px 0 4px 8px;
 
     margin-left: auto;
   }

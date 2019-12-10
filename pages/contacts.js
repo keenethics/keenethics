@@ -1,10 +1,10 @@
 import { withRouter } from 'next/router';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { MaxS, PaulW } from '../public/static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -52,9 +52,9 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
             ,&nbsp;
             <span itemProp="streetAddress">Kulparkivska St, 59</span>
           </a>
-          <a href="tel:+380968147266">
+          <a href="tel:+380947106105">
             <span className="telephone" itemProp="telephone">
-              +38 (096) 814 72 66
+              +38 (094) 710 61 05
             </span>
           </a>
         </div>
@@ -117,12 +117,13 @@ Netherlands
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
+        className={classnames({ 'arrow-left-triangle': selectedCountry === 'US' })}
       >
         <button
           type="button"
           className="container-btn"
           onClick={() => {
-            setSelectedCountry('UA');
+            setSelectedCountry('US');
           }}
         >
           <div className="flag-country-wrapper">
@@ -139,6 +140,20 @@ Netherlands
           </div>
         </button>
         <div className="address-telephone-wrapper">
+          <a
+            href="https://goo.gl/maps/SacJi7LxaXFfrad79"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          >
+            <span itemProp="addressLocality">New York</span>
+            <span itemProp="streetAddress">
+              1412 Broadway,&nbsp;
+              <br className="display-block-sm" />
+              21st floor, 2200
+              <br />
+              NY 10028
+            </span>
+          </a>
           <a href="tel:+19292141392">
             <span className="telephone" itemProp="telephone">
               +1 (929) 214 1392
@@ -258,7 +273,22 @@ const Contacts = ({ router }) => {
     setActiveContactForm(target.name === 'contact-form-btn');
   }
 
-  const person = selectedCountry === 'NL' ? PaulW : MaxS;
+  useEffect(() => {
+    const getLoction = async () => {
+      const res = await fetch('/api/location');
+      const json = await res.json();
+      const location = json.location;
+
+      setSelectedCountry(location.countryCode);
+    };
+
+    getLoction();
+  }, []);
+
+  let person;
+  if (selectedCountry === 'NL') person = PaulW;
+  else if (selectedCountry === 'US') person = JeanA;
+  else person = MaxS;
   return (
     <Layout>
       <div className="contacts-page">

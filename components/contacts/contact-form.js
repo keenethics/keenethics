@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW } from '../../public/static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
+import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -23,7 +24,10 @@ const ContactForm = () => {
     setNotifyMessage,
     selectedCountry,
   } = useContext(ContactUsContext);
-  const person = selectedCountry === 'NL' ? PaulW : MaxS;
+  let person;
+  if (selectedCountry === 'NL') person = PaulW;
+  else if (selectedCountry === 'US') person = JeanA;
+  else person = MaxS;
   const [firstname, setFirstname] = useState({
     value: '',
     error: false,
@@ -37,6 +41,12 @@ const ContactForm = () => {
     error: false,
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
+  const [hasDiscount] = useState(false);
+  const [file, setFile] = useState({
+    value: '',
+    error: false,
+  });
+  const [fileName, setFileName] = useState('Attach you file');
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
@@ -49,19 +59,22 @@ const ContactForm = () => {
 
     setIsPending(true);
 
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('data', JSON.stringify({
+      firstname,
+      email,
+      message,
+      lastname: { value: 'mockedLastname', error: '' },
+      phone: { value: '123456789', error: '' },
+      isSubscriber,
+      hasDiscount,
+      selectedCountry,
+    }));
+
     fetch('/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        firstname,
-        email,
-        message,
-        lastname: { value: 'mockedLastname', error: '' },
-        phone: { value: '123456789', error: '' },
-        isSubscriber,
-      }),
+      body: formData,
     })
       .then(handleStatusResponse)
       .then((response) => response.json())
@@ -77,6 +90,7 @@ const ContactForm = () => {
           setInitialState();
         }
       })
+      // eslint-disable-next-line no-console
       .catch((err) => console.error(err));
   };
   return (
@@ -145,10 +159,35 @@ const ContactForm = () => {
             value={message.value}
           />
         </div>
+        <div className="input-cols">
+          <FileUpload
+            text={(fileName.length > 10 && fileName !== 'Attach you file')
+              ? fileName.substring(0, 10).concat('...')
+              : fileName}
+            limit="up to 10MB"
+            allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
+            onChange={
+              (e) => {
+                setFile(e.target.files[0]);
+                setFileName(e.target.files[0].name);
+              }
+            }
+          />
+        </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
-            text="I want to use a subscriber discount (specify in your message)"
+            text={(
+              <>
+I want to use a&nbsp;
+                <a
+                  href="https://mailchi.mp/keenethics/offers-for-keen-subscribers"
+                  className="grey sub-dis"
+                >
+                  subscriber discount
+                </a>
+              </>
+)}
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"
@@ -157,7 +196,6 @@ const ContactForm = () => {
             }}
             isChecked={isSubscriber}
           />
-          <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="inline-link">List of offers for subscribers</a>
         </div>
         <div className="submit-btn">
           <button
@@ -168,6 +206,11 @@ const ContactForm = () => {
           >
             Let&apos;s talk
           </button>
+        </div>
+        <div className="privacy-policy">
+            By submting I agree to KeenEthics’
+          {' '}
+          <a href="/privacy-policy" classNamve="">Privacy Policy</a>
         </div>
       </form>
     </div>

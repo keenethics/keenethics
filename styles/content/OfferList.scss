@@ -1,0 +1,35 @@
+.offers-list {
+  display: flex;
+  margin: 20px -10px;
+  padding: 0;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .offers-list-item {
+    align-self: flex-start;
+    width: 30%;
+    padding: 15px;
+    margin: 10;
+    box-sizing: border-box;
+    @media (max-width: 600px) {
+      width: 50%;
+      padding: 10px;
+    }
+    @media (min-width: 601px) {
+      min-width: 200px;
+    }
+
+    .offers-list-item-p {
+      text-align: center;
+    }
+
+    .offers-list-item-img {
+      @media (max-width: 600px) {
+        max-width: 120px;
+      }
+      max-width: 150px;
+      padding: 0 auto;
+    }
+  }
+} 

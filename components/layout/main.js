@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Promise from 'promise-polyfill';
+import classnames from 'classnames';
 
 import '../../styles/main.scss';
 
@@ -22,14 +23,16 @@ class Layout extends React.Component {
         width: -1,
         height: -1,
       },
+      showNav: true,
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
-
+    console.log(window);
     this.updateDimensions();
   }
 
@@ -46,6 +49,13 @@ class Layout extends React.Component {
     });
   }
 
+  toggleNav() {
+    const { showNav } = this.state;
+    this.setState({
+      showNav: !showNav,
+    });
+  }
+
   render() {
     const {
       dimensions,
@@ -55,20 +65,22 @@ class Layout extends React.Component {
       router,
       meta,
       noMenu,
+      className,
     } = this.props;
 
     const currentURL = router.route;
 
-    const style = { height: dimensions.height };
+    const style = {};
     if (noMenu) {
       style.width = '100vw';
     }
+
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
-        {noMenu ? null : <Navigation currentURL={currentURL} />}
-        <div className="content">
-          <div className="content-inner" style={style}>
+        {noMenu ? null : <Navigation currentURL={currentURL} toggleNav={this.toggleNav} />}
+        <div className={classnames('content', { 'nav-open': noMenu || (dimensions.width > 768) })}>
+          <div className={classnames('content-inner', className)} style={style}>
             { children }
           </div>
         </div>
@@ -85,6 +97,7 @@ Layout.propTypes = {
   router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Layout.defaultProps = {
@@ -92,6 +105,7 @@ Layout.defaultProps = {
   router: {},
   meta: {},
   noMenu: false,
+  className: '',
 };
 
 export default withRouter(Layout);
