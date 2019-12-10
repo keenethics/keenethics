@@ -5,6 +5,7 @@ import Layout from '../components/layout/main';
 import OurMethods from '../components/blocks/our-methods/OurMethods';
 import Methodologies from '../components/blocks/methodologies/Methodologies';
 import Industries from '../components/blocks/industries/Industries';
+import TechStack from '../components/blocks/tech-stack/TechStack';
 
 const JsonLd = ({ data }) => (
   <script
@@ -62,6 +63,17 @@ export default class Index extends React.Component {
         </div>
         <Methodologies />
         <Industries />
+        <div className="block block-tech-stack">
+          <header className="block--header">
+            <div className="block--header-title">
+              Our tech stack
+            </div>
+            <div className="block--header-description">
+              These are the tools we use to reach the optimal software solution.
+            </div>
+          </header>
+          <TechStack />
+        </div>
       </Layout>
     );
   }

@@ -35,7 +35,7 @@ const NavigationItem = ({
         opacity: getOpacity(),
       }}
     >
-      <a href="/" onClick={clickHandler}>
+      <a href="#" onClick={clickHandler}>
         <span className="our-methods--navigation-item-count">
           {getCountLabel()}
         </span>
@@ -53,7 +53,7 @@ NavigationItem.propTypes = {
     component: PropTypes.elementType,
   }).isRequired,
   activeIndex: PropTypes.number,
-  setActiveIndex: PropTypes.number.isRequired,
+  setActiveIndex: PropTypes.func.isRequired,
   maxItems: PropTypes.number,
 };
 
