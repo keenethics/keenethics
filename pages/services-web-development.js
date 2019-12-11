@@ -161,6 +161,97 @@ const ServicesWebDevelopment = () => {
             every need of our partner. We position ourselves as a full-stack development company,
             and each software developer at KeenEthics is equally skilled in back end and front end.
           </p>
+          <h2 className="subtitle-web-dev">
+            --
+            <br />
+            Our team of expert designers, developers, QA specialists, and Project Managers will
+            turn your project idea into a perfect final product.
+            <br />
+            --
+          </h2>
+          <p>
+            These are the technologies that help us do it:&nbsp;
+            <a href="/services-web-development-node">Node.js</a>
+            ,&nbsp;
+            <a href="/tech-front-end-angular">Angular</a>
+            ,&nbsp;
+            <a href="/tech-front-end-react">React</a>
+            ,&nbsp;
+            <a href="/tech-front-end-aurelia">Aurelia</a>
+            ,&nbsp;
+            <a href="/tech-front-end-vue">Vue</a>
+            ,&nbsp;
+            <a href="/tech-back-end-express">Express</a>
+            ,&nbsp;
+            <a href="https://github.com/keenethics/svelte-notifications">Svelte</a>
+            ,&nbsp;
+            <a href="/services-web-development-meteor">Meteor</a>
+            .
+          </p>
+          <div className="project-content-more">
+            <ul className="technologies-list">
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/angular.svg" alt="Angular" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/react.png" alt="React" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/aurelia.png" alt="Aurelia" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/vue.png" alt="Vue" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/meteor.png" alt="Meteor" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/svelte.png" alt="Svelte" />
+              </li>
+            </ul>
+            <ul className="technologies-list">
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/node-js.png" alt="Node.js" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/express.png" alt="Express.js" />
+              </li>
+            </ul>
+          </div>
+          <p>
+            The database technology that we integrate are&nbsp;
+            <a href="/tech-data-base-mongo">MongoDB</a>
+            &nbsp;and&nbsp;
+            <a href="/tech-data-base-mysql">MySQL</a>
+            .
+          </p>
+          <div className="project-content-more">
+            <ul className="technologies-list">
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/mongodb.png" alt="MySQL" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/mysql.jpg" alt="Express.js" />
+              </li>
+            </ul>
+          </div>
+          <p>
+            The API integration technologies we use are&nbsp;
+            <a href="/tech-api-integration-rest">REST</a>
+            &nbsp;and&nbsp;
+            <a href="/tech-api-integration-graphql">GraphQL</a>
+            .
+          </p>
+          <div className="project-content-more">
+            <ul className="technologies-list">
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/rest.png" alt="REST" />
+              </li>
+              <li className="technologies-item">
+                <img src="/static/services/web-dev/graphql.png" alt="GraphQL" />
+              </li>
+            </ul>
+          </div>
         </section>
         <section>
           <h2>Why KeenEthics?</h2>
