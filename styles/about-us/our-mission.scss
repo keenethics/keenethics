@@ -1,0 +1,109 @@
+.our-mission {
+  padding-top: 50px;
+  position: relative;
+  @media (min-width: $tablet-lg) {
+    padding-top: 65px;
+  }
+
+  .our-mission-body {
+    @media (min-width: $tablet-lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  h2 {
+    line-height: 40px;
+    @media (min-width: $tablet-lg) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  h3 {
+    margin: 15px auto 0;
+    max-width: 70%;
+    font-size: 22px;
+    line-height: 30px;
+    span {
+      color: red;
+    }
+    @media (min-width: $tablet-lg) {
+      padding-left: 120px;
+      margin: 43px auto 0;
+      font-size: 26px;
+      line-height: 34px;
+      min-width: 45%;
+      text-align: left;
+    }
+
+  }
+
+  .missions {
+    margin-top: 40px;
+    padding: 5px 25px;
+    overflow: hidden;
+    @media(min-width: $tablet-lg) {
+      padding: 10px 80px 10px 45px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 1px;
+      left: 23px;
+      background-color: rgba(#B6B5B5, 0.2);
+      @media(min-width: $tablet-lg) {
+        left: 390px;
+      }
+    }
+
+    &-item {
+      opacity: 0.6;
+      transition: opacity .3s ease;
+
+      &.active {
+        opacity: 1;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 60px;
+      }
+
+      &:first-of-type img {
+        max-height: 40px;
+        margin-bottom: -10px;
+      }
+
+      &:nth-of-type(2) img {
+        max-height: 22px;
+      }
+
+      &:last-of-type img {
+        max-height: 35px;
+        margin-bottom: -10px;
+      }
+
+      h4 {
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 24px;
+        @media (min-width: $tablet-lg) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
