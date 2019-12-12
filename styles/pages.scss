@@ -219,6 +219,9 @@
     .page__header {
       padding: 0;
     }
+    .page__item-figure {
+      background: transparent;
+    }
   }
   .keen-blog {
     padding: 0 44px;
@@ -233,7 +236,16 @@
       width: 50%;
     }
   }
-  
+  .section-founders, .section-start {
+    .button {
+      background-image: linear-gradient(90deg,#de3535 0%,#e3621d 100%);
+      color: #fff;
+      &:hover {
+        background:#dbd8dd;
+        color: #12233d;
+      }
+    }
+  }
 }
 .home-page-side-info {
   width: 350px;
@@ -253,31 +265,58 @@
     left: 0;
     top: 0;
     transform: translate(0px, 0px);
-    background: linear-gradient(45deg, black, red);
+    background-color: #142846;
     display: flex;
+    align-items: center;
+    // .pre-image {
+    //   width: 300px;
+    //   height: 100%;
+    //   background-color: #142846;
+    // }
     .home-page-side-info__image {
       position: absolute;
       left: 0;
       top: 0;
-      padding-left: 300px;
-      background: #142846;
+      background-color: #142846;
       transition: ease-out;
       height: 100%;
-      width: 650px;
+      width: 350px;
+      // padding-left: 300px;
+      // background-size: 100%;
+      // background-position-y: 50%;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      &:before {
+        content: '';
+        display: block;
+        width: 300px;
+        height: 100%;
+        background-color: #142846;
+        position: absolute;
+        left: -300px;
+        top: 0;
+      }
       &:first-child {
-        transform: translate(-200, 0);
+        transform: translate(-200px, 0);
         animation: side-info-slide-one 12s infinite;
         z-index: 0;
+        background-image: url('/static/images/banner-photo-3.jpg');
+        // background-position-x: 40%;
       }
       &:nth-child(2) {
-        transform: translate(375px, 0);
+        transform: translate(725px, 0);
         animation: side-info-slide-two 12s infinite;
         z-index: 1;
+        background-image: url('/static/images/banner-photo-2.jpg');
+        // background-position-x: -20%;
       }
       &:nth-child(3) {
-        transform: translate(375px, 0);
+        transform: translate(725px, 0);
         animation: side-info-slide-three 12s infinite;
         z-index: 2;
+        background-image: url('/static/images/banner-photo-1.jpg');
+        // background-position-x: -30%;
       }
     }
     
@@ -366,7 +405,7 @@
 
 
 
-$show-slide-pos: -300px;
+$show-slide-pos: 0px;
 @keyframes side-info-slide-one {
   0% {
     transform: translate($show-slide-pos, 0);
@@ -381,15 +420,15 @@ $show-slide-pos: -300px;
     z-index: 0;
   }
   50% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
     z-index: 0;
   }
   67% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
     z-index: 0;
   }
   84% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
     z-index: 4;
   }
   100% {
@@ -399,10 +438,10 @@ $show-slide-pos: -300px;
 }
 @keyframes side-info-slide-two {
   0% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   17% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   34% {
     transform: translate($show-slide-pos, 0);
@@ -414,24 +453,24 @@ $show-slide-pos: -300px;
     transform: translate($show-slide-pos, 0);
   }
   84% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   100% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
 }
 @keyframes side-info-slide-three {
   0% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   17% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   34% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   50% {
-    transform: translate(375px, 0px);
+    transform: translate(725px, 0px);
   }
   67% {
     transform: translate($show-slide-pos, 0);
@@ -606,8 +645,21 @@ $show-slide-pos: -300px;
           background: url('/static/images/svg/upwork 2.svg') no-repeat center;
         }
       }
+      &.link-upwork-white {
+        color: #fff;
+        &:before {
+          background: url('/static/images/svg/upwork 3.svg') no-repeat center;
+        }
+      }
+      
       &.link-clutch:before {
         background: url('/static/images/svg/Cluch.svg') no-repeat center;
+      }
+      &.link-clutch-white {
+        color: #fff;
+        &:before {
+          background: url('/static/images/svg/Cluch.1.svg') no-repeat center;
+        }
       }
       @include for-tablet {
         color: #fff;

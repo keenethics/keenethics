@@ -32,7 +32,6 @@ class Layout extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
-    console.log(window);
     this.updateDimensions();
   }
 
