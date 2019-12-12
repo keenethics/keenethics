@@ -8,7 +8,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import Layout from '../components/layout/main';
 import OurMethods from '../components/blocks/our-methods/OurMethods';
-import Methodologies from '../components/blocks/methodologies/Methodologies';
+// import Methodologies from '../components/blocks/methodologies/Methodologies';
 import Industries from '../components/blocks/industries/Industries';
 import TechStack from '../components/blocks/tech-stack/TechStack';
 import SocialButton from '../components/social-buttons/main';
@@ -16,6 +16,7 @@ import OurServices from './our-services';
 import Founders from './founders';
 import Projects from './home-page-projects';
 import Blog from './home-page-blog';
+import LetsStart from './home-page-lets-start';
 
 const JsonLd = ({ data }) => (
   <script
@@ -52,7 +53,7 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
 
-    const sections = ['top', 'services', 'founders', 'projects'];
+    const sections = ['top', 'our-methods', 'services', 'founders', 'projects'];
     this.state = {
       sections,
       currentSection: 'top',
@@ -72,10 +73,18 @@ export default class Index extends React.Component {
     window.addEventListener('resize', (e) => {
       const { isMobile } = this.state;
       if (!isMobile && e.target.innerWidth < 768) {
-        this.setState({ isMobile: true });
+        this.state.fpAPI.destroy();
+        this.setState({
+          isMobile: true,
+          isFPDestroyed: true,
+        });
       }
       if (isMobile && e.target.innerWidth >= 768) {
-        this.setState({ isMobile: false });
+        this.state.fpAPI.reBuild();
+        this.setState({
+          isMobile: false,
+          isFPDestroyed: false,
+        });
       }
     });
     this.setState({ isMobile: window.innerWidth <= 768 });
@@ -96,10 +105,8 @@ export default class Index extends React.Component {
   }
 
   scrollClick() {
-    const { sections, currentSection } = this.state;
-    const newSectionIndex = sections.indexOf(currentSection) + 1;
-    const newSection = document.getElementById(sections[newSectionIndex]);
-    newSection.scrollIntoView({ behavior: 'smooth' });
+    const { fpAPI } = this.state;
+    fpAPI.moveTo(2);
   }
 
   render() {
@@ -120,6 +127,7 @@ export default class Index extends React.Component {
       fpAPI,
       isFPDestroyed,
     } = this.state;
+    const isFirstScroll = nextSection === sections[1] && !isInit && !isFPDestroyed;
     return (
       <Layout
         className="home-full-vh"
@@ -131,27 +139,13 @@ export default class Index extends React.Component {
           <ReactFullpage
             autoScrolling
             navigation
-            // fitToSection={false}
             onLeave={(origin, destination) => {
-              const enableFP = sections[0] === nextSection
-              || (currentSection === sections[0] && nextSection === sections[1]);
-              let isDestroyed = isFPDestroyed;
-              if (enableFP && !isInit) {
-                fpAPI.destroy();
-                isDestroyed = true;
-              } else if (!isInit) {
-                if (isDestroyed) {
-                  fpAPI.reBuild();
-                  isDestroyed = false;
-                }
-              }
               this.setState({
                 currentSection: origin.item.id,
                 nextSection: destination.item.id,
                 isInit: false,
                 showCircleAnimation: destination.item.id === sections[1]
                 && origin.item.id === sections[0],
-                isFPDestroyed: isDestroyed,
               });
             }}
             render={({ fullpageApi }) => {
@@ -168,7 +162,7 @@ export default class Index extends React.Component {
                           <SocialButton />
                         </div>
                         <h4 className={classnames('home-page-small-title', {
-                          faded: nextSection === sections[1] && !isInit,
+                          faded: isFirstScroll,
                         })}
                         >
                           Keen &amp; Ethical Software
@@ -176,11 +170,11 @@ export default class Index extends React.Component {
                           Development
                         </h4>
                         <div className={classnames('vertical-line', {
-                          faded: nextSection === sections[1] && !isInit,
+                          faded: isFirstScroll,
                         })}
                         />
                         <h1 className={classnames('home-page-large-title', {
-                          faded: nextSection === sections[1] && !isInit,
+                          faded: isFirstScroll,
                         })}
                         >
                           Full-cycle
@@ -193,7 +187,7 @@ export default class Index extends React.Component {
                           <div className="home-page-content-link">
                             <a
                               href="https://www.upwork.com/agencies/~0106b5437592391f94"
-                              className="link link-upwork"
+                              className={classnames('link link-upwork', { 'link-upwork-white faded': isFirstScroll })}
                               target="_blank"
                               rel="noreferrer noopener nofollow"
                             >
@@ -203,7 +197,7 @@ export default class Index extends React.Component {
                           <div className="home-page-content-link">
                             <a
                               href="https://clutch.co/profile/keenethics"
-                              className="link link-clutch"
+                              className={classnames('link link-clutch', { 'link-clutch-white faded': isFirstScroll })}
                               target="_blank"
                               rel="noreferrer noopener nofollow"
                             >
@@ -214,9 +208,9 @@ export default class Index extends React.Component {
                       </div>
                       <div className={classnames('home-page-side-info')}>
                         <div className="side-info-bg">
-                          <img src="/static/images/banner-photo-1.jpg" className="home-page-side-info__image" alt="Banner one" />
-                          <img src="/static/images/banner-photo-2.jpg" className="home-page-side-info__image" alt="Banner two" />
-                          <img src="/static/images/banner-photo-3.jpg" className="home-page-side-info__image" alt="Banner three" />
+                          <div className="home-page-side-info__image" />
+                          <div className="home-page-side-info__image" />
+                          <div className="home-page-side-info__image" />
                         </div>
                         <div className="circle-container">
                           <div className={classnames('orange-circle', { 'circle-anim': showCircleAnimation })}>
@@ -224,7 +218,7 @@ export default class Index extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <div className={classnames('side-info-top', { faded: nextSection === sections[1] && !isInit })}>
+                      <div className={classnames('side-info-top', { faded: isFirstScroll })}>
                         <Link href="/contacts?activeForm=estimate">
                           <a className="button contacts-goal side-info-top-content">Free estimate</a>
                         </Link>
@@ -238,7 +232,12 @@ export default class Index extends React.Component {
                       <div className={classnames('bg-scroll', { 'bg-scroll-animate': currentSection === sections[0] && !isInit })} />
                     </div>
                   </div>
-                  <div className="block block-our-methods">
+                  <OurServices
+                    section={sections[1]}
+                    show={sections[1] === nextSection && !isInit}
+                    isMobile={isMobile}
+                  />
+                  <div className="block block-our-methods section" id="our-methods">
                     <header className="block--header">
                       <div className="block--header-title">
                         Our methods
@@ -251,8 +250,16 @@ export default class Index extends React.Component {
                     </header>
                     <OurMethods />
                   </div>
-                  <Methodologies />
+                  {/* <Methodologies /> */}
                   <Industries />
+                  <Founders
+                    section={sections[2]}
+                    isMobile={isMobile}
+                  />
+                  <Projects
+                    section={sections[3]}
+                    isMobile={isMobile}
+                  />
                   <div className="block block-tech-stack">
                     <header className="block--header">
                       <div className="block--header-title">
@@ -264,22 +271,13 @@ export default class Index extends React.Component {
                     </header>
                     <TechStack />
                   </div>
-                  <OurServices
-                    section={sections[1]}
-                    show={sections[1] === nextSection && !isInit}
-                    isMobile={isMobile}
-                  />
-                  <Founders
-                    section={sections[2]}
-                    isMobile={isMobile}
-                  />
-                  <Projects
-                    section={sections[3]}
-                    isMobile={isMobile}
-                  />
                   <Blog
                     section={sections[4]}
                     // isMobile={isMobile}
+                  />
+                  <LetsStart
+                    section={sections[5]}
+                    isMobile={isMobile}
                   />
                 </ReactFullpage.Wrapper>
               );

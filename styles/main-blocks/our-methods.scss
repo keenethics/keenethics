@@ -1,6 +1,7 @@
 .block {
   &.block-our-methods {
     background: #e5e5e5;
+    padding: 0 44px;
   }
 
   &--header {
@@ -55,6 +56,7 @@
 
   &--navigation-item {
     margin: 32px 0;
+    transition: .5s;
 
     a {
       text-decoration: none;

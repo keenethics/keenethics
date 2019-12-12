@@ -1,0 +1,58 @@
+.lets-start {
+    display: flex;
+    justify-content: space-around;
+    padding: 130px 44px 0 16%;
+    .lets-start-section {
+        width: 50%;
+        &.lets-start-text {
+            font-size: 18px;
+            color: #12233D;
+            &>* {
+                margin: 30px 0;
+            }
+            .lets-start-text-title {
+                font-weight: 600;
+            }
+            .lets-start__author {
+                margin-bottom: 5px;
+            }
+            .lets-start__author-position {
+                font-weight: 600;
+                color: #DE3535;
+                margin-top: 0;
+            }
+            .button.lets-start-btn {
+                width: 170px;
+                color: #fff;
+                background: linear-gradient(12.16deg, #DE3535 2.37%, #E3621D 96.81%);
+                margin-bottom: 85px;
+            }
+        }
+        &.lets-start-img {
+            display: flex;
+            background-image: url('/static/images/IreneK 1.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            min-height: 438px;
+        }
+    }
+    
+}
+
+@include for-mobile {
+    .lets-start {
+        padding: 120px 24px 0;
+        position: relative;
+        .lets-start-text {
+            width: 100%;
+        }
+        .lets-start-img {
+            position: absolute;
+            right: 0px;
+            bottom: 0;
+            height: 50%;
+            background-size: 100%;
+        }
+    }
+      
+}
