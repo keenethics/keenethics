@@ -15,7 +15,7 @@ const ProjectPrix = () => (
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
-              <h1 className="title">The Business Research Platform</h1>
+              <h1 className="title">Business Research Platform</h1>
               <p className="description">A mediator between business consultants and consultees.</p>
               <PortfolioTechnologyTags tags={['Business Administration']} />
             </div>
@@ -31,7 +31,7 @@ const ProjectPrix = () => (
           </div>
           <div className="project-content-more">
             <section className="clearfix">
-              <h2 className="title">What Is The Business Research Platform?</h2>
+              <h2 className="title">What Is Business Research Platform?</h2>
               <div className="columns" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div className="column">
                   <table>
@@ -40,7 +40,7 @@ const ProjectPrix = () => (
                         <b>Name</b>
                         :
                       </td>
-                      <td style={{ border: 0 }}>The Business Research Platform</td>
+                      <td style={{ border: 0 }}>Business Research Platform</td>
                     </tr>
                     <tr>
                       <td style={{ border: 0, paddingLeft: 0 }}>
@@ -239,15 +239,15 @@ const ProjectPrix = () => (
                 It is an important and unique tool for business growth consultants, which helps:
               </p>
               <ul>
-                <li>
+                <li style={{ color: '#12233d' }}>
                   businesses to optimize their research process and take the
                   best investment decision,
                 </li>
-                <li>
+                <li style={{ color: '#12233d' }}>
                   business managers to find an external consultant instead of
                   hiring an in-house one,
                 </li>
-                <li>business strategy consulting firms to find their clients</li>
+                <li style={{ color: '#12233d' }}>business strategy consulting firms to find their clients</li>
               </ul>
             </section>
             <section>
