@@ -169,23 +169,16 @@ const ServicesWebDevelopment = () => {
             <br />
             --
           </h2>
-          <p>
-            These are the technologies that help us do it:&nbsp;
-            <a href="/services-web-development-node">Node.js</a>
-            ,&nbsp;
-            <a href="/tech-front-end-angular">Angular</a>
-            ,&nbsp;
-            <a href="/tech-front-end-react">React</a>
-            ,&nbsp;
-            <a href="/tech-front-end-aurelia">Aurelia</a>
-            ,&nbsp;
-            <a href="/tech-front-end-vue">Vue</a>
-            ,&nbsp;
-            <a href="/tech-back-end-express">Express</a>
-            ,&nbsp;
-            <a href="https://github.com/keenethics/svelte-notifications">Svelte</a>
-            ,&nbsp;
-            <a href="/services-web-development-meteor">Meteor</a>
+          <p className="technologies-links">
+            These are the technologies that help us do it:
+            <span><a href="/services-web-development-node">Node.js</a></span>
+            <span><a href="/tech-front-end-angular">Angular</a></span>
+            <span><a href="/tech-front-end-react">React</a></span>
+            <span><a href="/tech-front-end-aurelia">Aurelia</a></span>
+            <span><a href="/tech-front-end-vue">Vue</a></span>
+            <span><a href="/tech-back-end-express">Express</a></span>
+            <span><a href="https://github.com/keenethics/svelte-notifications">Svelte</a></span>
+            <span><a href="/services-web-development-meteor">Meteor</a></span>
             .
           </p>
           <div className="project-content-more">
