@@ -1,6 +1,6 @@
 .block {
   &.block-our-methods {
-    background: #e5e5e5;
+    background: #fafafa;
   }
 
   &--header {
@@ -55,6 +55,7 @@
 
   &--navigation-item {
     margin: 32px 0;
+    transition: all 250ms;
 
     a {
       text-decoration: none;
@@ -125,6 +126,20 @@
     font-size: 16px;
     color: #12233d;
     line-height: 26px;
+
+    a {
+      display: inline-block;
+      color: #12233d;
+      margin: 30px 0 0;
+
+      &:hover {
+        color: #de4f4f;
+      }
+
+      &:active {
+        color: #d62c2c;
+      }
+    }
   }
 }
 
