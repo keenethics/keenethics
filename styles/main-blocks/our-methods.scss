@@ -110,16 +110,18 @@
     width: 110px;
     height: 110px;
 
-    &::before {
-      content: '';
-      display: block;
+    .our-methods--content-icon-circle {
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 110px;
       height: 110px;
       background: url('/static/main-blocks/our-methods/circle.svg') no-repeat center;
       background-size: 110px 110px;
-      animation: circle-rotate 2000ms forwards;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
+      transition: all 1s;
+      // animation: circle-rotate 2000ms forwards;
+      // animation-iteration-count: infinite;
+      // animation-timing-function: linear;
     }
   }
 

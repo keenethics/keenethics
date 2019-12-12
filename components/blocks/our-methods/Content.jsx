@@ -18,7 +18,12 @@ const Content = ({
   return (
     <div className="our-methods--content">
       <div className="our-methods--content-icon">
-        <div className="our-methods--content-icon-circle" />
+        <div
+          className="our-methods--content-icon-circle"
+          style={{
+            transform: `rotate(${activeIndex * 60}deg)`,
+          }}
+        />
       </div>
       <div className="our-methods--content-description">
         <Component>
