@@ -1,11 +1,13 @@
 .our-mission {
   padding-top: 50px;
   position: relative;
+
   @media (min-width: $tablet-lg) {
     padding-top: 65px;
   }
-  @media (min-width: $desktop-sm) {
-   padding-top: 80px;
+
+  @media (min-width: $desktop-lg) {
+    padding-top: 80px;
   }
 
   .our-mission-body {
@@ -14,17 +16,10 @@
       flex-direction: row;
       justify-content: center;
       margin-top: 40px;
+    }
 
-      h3 {
-        flex: 1 1 51%;
-        padding-left: calc(51% - 275px);
-        padding-right: 55px;
-      }
-
-      .missions {
-        // flex: 1 1 calc(50% - 290px);
-        flex: 1 1 49%;
-      }
+    @media (min-width: $desktop-lg) {
+      margin-top: 75px;
     }
   }
 
@@ -46,7 +41,7 @@
     }
 
     @media (min-width: $desktop-sm) {
-      margin: 70px auto 0;
+      // margin: 70px auto 0;
       font-size: 44px;
       line-height: 60px;
     }
@@ -67,11 +62,20 @@
       font-size: 26px;
       line-height: 34px;
       text-align: left;
+      flex: 1 1 51%;
+      padding-left: calc(51% - 275px);
+      padding-right: 55px;
     }
 
     @media (min-width: $desktop-sm) {
       font-size: 34px;
       line-height: 44px;
+    }
+
+    @media (min-width: $desktop-lg) {
+      padding-left: calc(53% - 455px);
+      padding-right: 70px;
+      flex: 1 1 53%;
     }
   }
 
@@ -82,12 +86,13 @@
 
     @media(min-width: $tablet-lg) {
       margin-top: 0;
-      // adding: 10px 80px 10px 45px;
       padding: 15px calc(49% - 290px) 0 0;
+      flex: 1 1 49%;
     }
 
-    @media (min-width: $desktop-sm) {
-      padding: 65px 25px 10px 170px;
+    @media (min-width: $desktop-lg) {
+      padding: 35px calc(47% - 290px) 0 0;
+      flex: 1 1 47%;
     }
 
     &:before {
@@ -104,20 +109,25 @@
       @media(min-width: $tablet-lg) {
         left: 51%;
       }
+
+      @media (min-width: $desktop-lg) {
+        left: 53%;
+      }
     }
 
     &-item {
-      opacity: 0.6;
-      transition: opacity .3s ease;
+      // opacity: 0.6;
+      // transition: opacity .3s ease;
 
-      &.active {
-        opacity: 1;
-      }
+      // &.active {
+      //   opacity: 1;
+      // }
 
       &:not(:last-of-type) {
         margin-bottom: 60px;
-        @media (min-width: $desktop-sm) {
-          margin-bottom: 110px;
+
+        @media (min-width: $desktop-lg) {
+          margin-bottom: 115px;
         }
       }
 
@@ -131,8 +141,8 @@
           margin-bottom: 40px;
         }
 
-        @media (min-width: $desktop-sm) {
-          margin-bottom: 75px;
+        @media (min-width: $desktop-lg) {
+          margin-bottom: 80px;
         }
 
         img {
@@ -159,9 +169,6 @@
         line-height: 24px;
         @media (min-width: $tablet-lg) {
           margin-top: 20px;
-        }
-        @media (min-width: $desktop-sm) {
-          max-width: 50%;
         }
       }
     }
