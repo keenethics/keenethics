@@ -291,6 +291,11 @@
     margin-bottom: 41px;
     font-size: 22px;
   }
+  .technologies-links {
+    span:before {
+      content: ' ';
+    }
+  }
 }
 .clearfix {
   @include clearfix;

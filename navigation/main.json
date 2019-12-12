@@ -119,6 +119,18 @@
           "alt": "Internet of Things"
         },
         "type": "icon"
+      },
+      {
+        "name": "Development and Quality Assurance",
+        "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
+        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "href": "/services-development-and-quality-assurance",
+        "icon": {
+          "name": "icon-development-and-testing",
+          "alt": "Development and Quality Assurance"
+        },
+        "type": "icon"
       }
     ]
   },
