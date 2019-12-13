@@ -208,6 +208,12 @@
       width: 100%;
       text-align: left;
     }
+
+    button.container-btn:focus {
+      outline: 0;
+      border: 0;
+    }
+    button::-moz-focus-inner, button::-moz-focus-outer { border: 0 !important; }
   }
 
   .mobile-counter {
@@ -490,8 +496,13 @@
     // z-index: 300;
     margin-bottom: 20px;
 
+    textarea {
+      opacity: .65;
+    }
+
     input {
       color: black;
+      opacity: .65;
       line-height: 42px;
       padding: 14px 20px;
       width: 100%;

@@ -47,6 +47,7 @@ const ContactForm = () => {
     error: false,
   });
   const [fileName, setFileName] = useState('Attach you file');
+  const [fileSize, setFileSize] = useState('up to 10MB');
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
@@ -90,7 +91,6 @@ const ContactForm = () => {
           setInitialState();
         }
       })
-      // eslint-disable-next-line no-console
       .catch((err) => console.error(err));
   };
   return (
@@ -161,15 +161,17 @@ const ContactForm = () => {
         </div>
         <div className="input-cols">
           <FileUpload
+            id="contact-us-file-upload"
             text={(fileName.length > 10 && fileName !== 'Attach you file')
               ? fileName.substring(0, 10).concat('...')
               : fileName}
-            limit="up to 10MB"
+            limit={fileSize}
             allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
             onChange={
               (e) => {
                 setFile(e.target.files[0]);
                 setFileName(e.target.files[0].name);
+                setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
               }
             }
           />
@@ -179,8 +181,8 @@ const ContactForm = () => {
             className="grey"
             text={(
               <>
-I want to use a&nbsp;
-                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
+                I want to use a&nbsp;
+                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
               </>
 )}
             name="estimateFormIsSubscriber"
@@ -203,9 +205,8 @@ I want to use a&nbsp;
           </button>
         </div>
         <div className="privacy-policy">
-            By submting I agree to KeenEthics’
-          {' '}
-          <a href="/privacy-policy" classNamve="">Privacy Policy</a>
+            By submitting, I agree to KeenEthics’&nbsp;
+          <a href="/privacy-policy" target="_blank">Privacy Policy</a>
         </div>
       </form>
     </div>
