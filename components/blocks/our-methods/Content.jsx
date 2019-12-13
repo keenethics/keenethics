@@ -20,17 +20,25 @@ const Content = ({
   return (
     <div className="our-methods--content">
       <div className="our-methods--content-icon">
-        <img
-          className="our-methods--content-icon-image"
-          src={`/static/main-blocks/our-methods/${icon}.svg`}
-          alt={value}
-        />
-        <div
-          className="our-methods--content-icon-circle"
-          style={{
-            transform: `rotate(${activeIndex * 72}deg)`,
-          }}
-        />
+        <div className="our-methods--content-icon-link prev">
+          <span>01</span>
+        </div>
+        <div className="our-methods--content-icon-inner">
+          <img
+            className="our-methods--content-icon-image"
+            src={`/static/main-blocks/our-methods/${icon}.svg`}
+            alt={value}
+          />
+          <div
+            className="our-methods--content-icon-circle"
+            style={{
+              transform: `rotate(${activeIndex * 72}deg)`,
+            }}
+          />
+        </div>
+        <div className="our-methods--content-icon-link next">
+          <span>03</span>
+        </div>
       </div>
       <div className="our-methods--content-description">
         <Component>
