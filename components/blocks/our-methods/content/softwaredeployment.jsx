@@ -6,9 +6,9 @@ const Description = ({
 }) => (
   <>
     <p>
-      The goal of business analysis is to test the project idea. We gather, agree upon, and organize
-      project requirements in a working plan. The end result of the business analysis stage will be
-      either a proof of concept or development of a minimum viable product.
+      Software grows outdated, technical errors occur, and the project idea undergoes changes. We
+      provide you with continuous maintenance and support to keep your product updated, relevant,
+      and perfectly functioning.
     </p>
 
     {children}

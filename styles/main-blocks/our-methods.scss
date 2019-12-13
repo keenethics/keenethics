@@ -110,6 +110,14 @@
     width: 110px;
     height: 110px;
 
+    .our-methods--content-icon-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 35px;
+      z-index: 20;
+    }
+
     .our-methods--content-icon-circle {
       position: absolute;
       left: 0;

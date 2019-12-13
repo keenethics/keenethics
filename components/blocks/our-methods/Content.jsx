@@ -13,15 +13,22 @@ const Content = ({
   const {
     component: Component,
     href,
+    value,
+    icon,
   } = items[activeIndex];
 
   return (
     <div className="our-methods--content">
       <div className="our-methods--content-icon">
+        <img
+          className="our-methods--content-icon-image"
+          src={`/static/main-blocks/our-methods/${icon}.svg`}
+          alt={value}
+        />
         <div
           className="our-methods--content-icon-circle"
           style={{
-            transform: `rotate(${activeIndex * 60}deg)`,
+            transform: `rotate(${activeIndex * 72}deg)`,
           }}
         />
       </div>

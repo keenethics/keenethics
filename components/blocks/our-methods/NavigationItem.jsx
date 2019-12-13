@@ -19,7 +19,7 @@ const NavigationItem = ({
 
     const diff = Math.abs(index - activeIndex);
 
-    return (maxItems - diff) * 0.15;
+    return (maxItems - diff) * 0.1;
   };
 
   const getCountLabel = () => {
