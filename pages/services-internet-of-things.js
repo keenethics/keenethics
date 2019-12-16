@@ -284,13 +284,13 @@ const ServicesInternetOfThings = () => {
             system of beacons, set up trackers and the mobile app, and instruct managers on how
             to use Asama.
           </p>
+        </section>
+        <section>
+          <img src="/static/services/internet-of-things/asama-items.png" alt="Asama Items" />
           <CallToActionButton
             title="learn more"
             href="/contacts"
           />
-        </section>
-        <section>
-          <img src="/static/services/internet-of-things/asama-items.png" alt="Asama Items" />
           <p>
             Another company we have provided Internet of Things development services with is PREE.
             See the case study to learn more about it.
