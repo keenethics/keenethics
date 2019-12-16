@@ -119,6 +119,18 @@
           "alt": "Internet of Things"
         },
         "type": "icon"
+      },
+      {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "href": "/services-maintenance-and-support",
+        "icon": {
+          "name": "iot-icon",
+          "alt": "Maintenance and Support"
+        },
+        "type": "icon"
       }
     ]
   },
