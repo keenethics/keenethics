@@ -954,7 +954,7 @@ Start
                 text={(
                   <>
 I want to use a&nbsp;
-                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="blanck" className="grey sub-dis">subscriber discount</a>
+                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
                   </>
 )}
                 name="estimateFormIsSubscriberDiscount"
@@ -989,7 +989,7 @@ I want to use a&nbsp;
             </div>
             <div className="privacy-policy">
                 By submitting, I agree to KeenEthics’&nbsp;
-              <a href="/privacy-policy" target="blanc" classNamve="">Privacy Policy</a>
+              <a href="/privacy-policy" target="_blank">Privacy Policy</a>
             </div>
           </div>
         )}
