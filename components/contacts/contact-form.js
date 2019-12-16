@@ -53,6 +53,15 @@ const ContactForm = () => {
     setFirstname({ value: '', error: false });
     setEmail({ value: '', error: false });
     setMessage({ value: '', error: false });
+    setFile({ value: '', error: false });
+    setFileName('Attach you file');
+    setFileSize('up to 10MB');
+  };
+
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName('Attach you file');
+    setFileSize('up to 10MB');
   };
 
   const onSubmit = (e) => {
@@ -82,6 +91,10 @@ const ContactForm = () => {
       .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
+          if (json.errorField === 'firstname') setFirstname(json);
+          if (json.errorField === 'email') setEmail(json);
+          if (json.errorField === 'message') setMessage(json);
+          if (json.errorField === 'file') unattachFile(json);
         }
 
         setIsPending(false);
@@ -119,6 +132,9 @@ const ContactForm = () => {
             <span className="highlight" />
             <label htmlFor="firstname">Name</label>
           </div>
+          <div className={firstname.errorField ? 'error-message' : 'error-none'}>
+            {firstname.status}
+          </div>
         </div>
         <div className="input-cols">
           <div className="input-wrap">
@@ -141,6 +157,9 @@ const ContactForm = () => {
               <label htmlFor="email">Email</label>
             </div>
           </div>
+          <div className={email.errorField ? 'error-message' : 'error-none'}>
+            {email.status}
+          </div>
         </div>
         <div className="input-wrap">
           <textarea
@@ -159,6 +178,9 @@ const ContactForm = () => {
             value={message.value}
           />
         </div>
+        <div className={message.errorField ? 'error-message' : 'error-none'}>
+          {message.status}
+        </div>
         <div className="input-cols">
           <FileUpload
             id="contact-us-file-upload"
@@ -175,6 +197,9 @@ const ContactForm = () => {
               }
             }
           />
+          <div className={file.errorField ? 'error-message' : 'error-none'}>
+            {file.status}
+          </div>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox

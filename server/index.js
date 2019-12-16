@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
-const iplocation = require('iplocation').default;
+const geoip = require('geoip-lite');
 const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
 const { postsDatePair } = require('./postsort.config');
@@ -87,7 +87,6 @@ app.prepare().then(() => {
       phone,
       message,
       isSubscriber,
-      hasDiscount,
       selectedCountry,
     } = JSON.parse(req.body.data);
 
@@ -97,11 +96,11 @@ app.prepare().then(() => {
     message.value = message.value.replace(/\s+/g, ' ');
 
     if (!formatValidation.validate({ min: 3, max: 25 }, firstname.value)) {
-      firstname.error = true;
-
       res.send({
-        errorField: { firstname },
-        status: 'Wrong first name length',
+        value: firstname.value,
+        errorField: 'firstname',
+        error: true,
+        status: 'Wrong name length, it must be from 3 to 25 characters',
       });
       return;
     }
@@ -115,10 +114,10 @@ app.prepare().then(() => {
       return;
     }
     if (!formatValidation.validate({ type: 'email' }, email.value)) {
-      email.error = true;
-
       res.send({
-        errorField: { email },
+        value: email.value,
+        errorField: 'email',
+        error: true,
         status: 'Wrong email address',
       });
       return;
@@ -133,11 +132,11 @@ app.prepare().then(() => {
       return;
     }
     if (!formatValidation.validate({ min: 0, max: 800 }, message.value)) {
-      message.error = true;
-
       res.send({
-        errorField: { message },
-        status: 'Wrong message length',
+        value: message.value,
+        errorField: 'message',
+        error: true,
+        status: 'The message must be not longer than 800 characters',
       });
       return;
     }
@@ -146,7 +145,8 @@ app.prepare().then(() => {
     try {
       attachment = checkAttachment(req.files);
     } catch (e) {
-      res.send({ status: e.message });
+      res.send(e);
+      return;
     }
     const countrys = {
       NL: 'Netherlands',
@@ -159,7 +159,7 @@ app.prepare().then(() => {
       <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${email.value}</p>
       <p>Phone: ${phone.value}</p>
-      <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
+      <p>I want to use a subscriber discount: ${isSubscriber ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
@@ -234,20 +234,20 @@ app.prepare().then(() => {
     }
 
     if (!formatValidation.validate({ min: 3, max: 25 }, name.value)) {
-      name.error = true;
-
       res.send({
-        errorField: { name },
-        status: 'Wrong name length',
+        value: name.value,
+        errorField: 'name',
+        error: true,
+        status: 'Wrong name length, it must be from 3 to 25 characters',
       });
       return;
     }
 
     if (!formatValidation.validate({ type: 'email' }, emailEstimate.value)) {
-      emailEstimate.error = true;
-
       res.send({
-        errorField: { emailEstimate },
+        value: emailEstimate.value,
+        errorField: 'email',
+        error: true,
         status: 'Wrong email address',
       });
       return;
@@ -262,11 +262,11 @@ app.prepare().then(() => {
       return;
     }
     if (!formatValidation.validate({ max: 800 }, messageEstimate.value)) {
-      messageEstimate.error = true;
-
       res.send({
-        errorField: { messageEstimate },
-        status: 'Wrong message length',
+        value: messageEstimate.value,
+        errorField: 'message',
+        error: true,
+        status: 'The message must be not longer than 800 characters',
       });
       return;
     }
@@ -275,7 +275,8 @@ app.prepare().then(() => {
     try {
       attachment = checkAttachment(req.files);
     } catch (e) {
-      res.send({ status: e.message });
+      res.send(e);
+      return;
     }
     const countrys = {
       NL: 'Netherlands',
@@ -571,7 +572,7 @@ app.prepare().then(() => {
         || req.connection.remoteAddress
         || req.socket.remoteAddress
         || (req.connection.socket ? req.connection.socket.remoteAddress : null);
-      const location = await iplocation(ip);
+      const location = await geoip.lookup(ip);
       res.status(200).json({ location });
     } catch (e) {
       res.status(400).json({ location: '' });
