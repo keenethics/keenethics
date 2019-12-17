@@ -1,19 +1,26 @@
 import React from 'react';
+import Moment from 'moment';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import PostsContext from '../components/context/posts-context';
+import Slider from 'react-slick';
 
-const HomeFooter = ({ section }) => {
+const HomeFooter = ({
+  section,
+  // isDesktop,
+}) => {
   const posts = React.useContext(PostsContext) || [];
-  const sortedPosts = [];
-  let counter = 9;
-  if (posts.length < counter) {
-    counter = posts.length - (posts.length % 3);
-  }
-  for (let i = 0; i < counter; i += 3) {
-    sortedPosts.push(posts.slice(i, i + 3));
-  }
-  console.log(sortedPosts);
+  // const sortedPosts = [];
+  // let allPostsCount = 9;
+  // const postsDisplayedCount = isDesktop ? 3 : 2;
+  // console.log(postsDisplayedCount, isDesktop);
+  // if (posts.length < allPostsCount) {
+  //   allPostsCount = posts.length - (posts.length % postsDisplayedCount);
+  // }
+  // for (let i = 0; i < allPostsCount; i += postsDisplayedCount) {
+  //   sortedPosts.push(posts.slice(i, i + postsDisplayedCount));
+  // }
+
   return (
     <div className="section fp-auto-height" id={section}>
       <div className="home-footer">
@@ -135,7 +142,7 @@ const HomeFooter = ({ section }) => {
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link>
+              <Link href="#">
                 <a href="#" className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -144,16 +151,29 @@ const HomeFooter = ({ section }) => {
           </ul>
         </div>
         <div className="horizontal-divider" />
-        <div className="home-footer-row">
-          {sortedPosts.map((el) => (
-            <div className="slide" key={el[0].sys.id}>
-              {el.map(((post) => (
+        <div className="home-footer-row footer-blog">
+          <div className="footer-slider-title">
+            Latest in Blog
+            <span className="bell-icon" />
+          </div>
+          <Slider
+            slidesToShow={3}
+          >
+            {posts.map((post) => (
+              <div className="slide-container" key={post.sys.id}>
+                {/* {el.map(((post) => ( */}
                 <div className="slide-item" key={post.fields.slug}>
-                  {post.fields.title}
+                  <div className="slide-date">
+                    {Moment(post.fields.publishDate).format('D MMM, YYYY')}
+                  </div>
+                  <div className="slide-title">
+                    {post.fields.title}
+                  </div>
                 </div>
-              )))}
-            </div>
-          ))}
+                {/* )))} */}
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>
@@ -162,6 +182,7 @@ const HomeFooter = ({ section }) => {
 
 HomeFooter.propTypes = {
   section: PropTypes.string,
+  // isDesktop: PropTypes.bool.isRequired,
 };
 
 HomeFooter.defaultProps = {

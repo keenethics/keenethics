@@ -63,6 +63,7 @@ export default class Index extends React.Component {
       nextSection: 'services',
       isInit: true,
       isMobile: false,
+      // isDesktop: false,
       showCircleAnimation: false,
       fpAPI: null,
       isFPDestroyed: false,
@@ -76,21 +77,34 @@ export default class Index extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', (e) => {
-      const { isMobile } = this.state;
+      const {
+        isMobile,
+        // isDesktop,
+      } = this.state;
       if (!isMobile && e.target.innerWidth < 768) {
         this.state.fpAPI.destroy();
         this.setState({
           isMobile: true,
           isFPDestroyed: true,
         });
+        return;
       }
       if (isMobile && e.target.innerWidth >= 768) {
-        this.state.fpAPI.reBuild();
         this.setState({
           isMobile: false,
           isFPDestroyed: false,
         });
       }
+      // if (isDesktop && e.target.innerWidth <= 1024) {
+      //   this.setState({
+      //     isDesktop: false,
+      //   });
+      // }
+      // if (!isDesktop && e.target.innerWidth >= 1024) {
+      //   this.setState({
+      //     isDesktop: true,
+      //   });
+      // }
     });
     // this.getPosts();
     this.setState({ isMobile: window.innerWidth <= 768 });
@@ -144,6 +158,7 @@ export default class Index extends React.Component {
       isMobile,
       fpAPI,
       isFPDestroyed,
+      // isDesktop,
     } = this.state;
     const { posts } = this.props;
     const isFirstScroll = nextSection === sections[1] && !isInit && !isFPDestroyed;
@@ -302,6 +317,7 @@ export default class Index extends React.Component {
                     <HomeFooter
                       section={sections[6]}
                       isMobile={isMobile}
+                      // isDesktop={isDesktop}
                     />
                   </PostsContext.Provider>
                 </ReactFullpage.Wrapper>
