@@ -17,6 +17,9 @@ import Founders from './founders';
 import Projects from './home-page-projects';
 import Blog from './home-page-blog';
 import LetsStart from './home-page-lets-start';
+import HomeFooter from './home-page-footer';
+import { getPostsList } from '../lib/contentful';
+import PostsContext from '../components/context/posts-context';
 
 const JsonLd = ({ data }) => (
   <script
@@ -65,8 +68,10 @@ export default class Index extends React.Component {
       isFPDestroyed: false,
     };
 
-    this.updateDimensions.bind(this);
-    this.scrollClick.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
+    this.scrollClick = this.scrollClick.bind(this);
+    // this.setPostsContext = this.setPostsContext.bind(this);
+    // this.getPosts = this.getPosts.bind(this);
   }
 
   componentDidMount() {
@@ -87,11 +92,29 @@ export default class Index extends React.Component {
         });
       }
     });
+    // this.getPosts();
     this.setState({ isMobile: window.innerWidth <= 768 });
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', () => {});
+  }
+
+  static async getInitialProps() {
+    const contResp = await getPostsList();
+
+    return { posts: contResp && contResp.items ? contResp.items : [] };
+  }
+  // const getPosts = async () => {
+  //   const res = await getPostsList();
+  //   const posts = res.items;
+  //   setTest(posts.slice(-2));
+  //   setPostsContext(posts);
+  // };
+
+  scrollClick() {
+    const { fpAPI } = this.state;
+    fpAPI.moveTo(2);
   }
 
   updateDimensions(e) {
@@ -102,11 +125,6 @@ export default class Index extends React.Component {
     if (isMobile && e.target.innerWidth >= 768) {
       this.setState({ isMobile: false });
     }
-  }
-
-  scrollClick() {
-    const { fpAPI } = this.state;
-    fpAPI.moveTo(2);
   }
 
   render() {
@@ -127,6 +145,7 @@ export default class Index extends React.Component {
       fpAPI,
       isFPDestroyed,
     } = this.state;
+    const { posts } = this.props;
     const isFirstScroll = nextSection === sections[1] && !isInit && !isFPDestroyed;
     return (
       <Layout
@@ -271,14 +290,20 @@ export default class Index extends React.Component {
                     </header>
                     <TechStack />
                   </div>
-                  <Blog
-                    section={sections[4]}
-                    // isMobile={isMobile}
-                  />
-                  <LetsStart
-                    section={sections[5]}
-                    isMobile={isMobile}
-                  />
+                  <PostsContext.Provider value={posts}>
+                    <Blog
+                      section={sections[4]}
+                      posts={posts}
+                      setPostsContext={this.setPostsContext}
+                    />
+                    <LetsStart
+                      section={sections[5]}
+                    />
+                    <HomeFooter
+                      section={sections[6]}
+                      isMobile={isMobile}
+                    />
+                  </PostsContext.Provider>
                 </ReactFullpage.Wrapper>
               );
             }
@@ -289,3 +314,11 @@ export default class Index extends React.Component {
     );
   }
 }
+
+Index.propTypes = {
+  posts: PropTypes.array,
+};
+
+Index.defaultProps = {
+  posts: [],
+};
