@@ -111,6 +111,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 80px;
+    user-select: none;
 
     .our-methods--content-icon-inner {
       position: relative;
@@ -124,6 +125,7 @@
       margin: 0 10px 0 0;
       padding: 0 0 26px 0;
       transition: all 250ms;
+      display: none;
 
       cursor: pointer;
 
@@ -203,6 +205,19 @@
       }
     }
   }
+
+  &--content-description-title {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 30px;
+    display: none;
+
+    span {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -212,5 +227,12 @@
 
   .our-methods--content {
     width: 100%;
+  }
+
+  .our-methods--content-description-title {
+    display: block;
+  }
+  .our-methods--content-icon .our-methods--content-icon-link {
+    display: block;
   }
 }

@@ -6,37 +6,11 @@ import NavigationItem from './NavigationItem';
 const Navigation = ({
   activeIndex,
   setActiveIndex,
+  decreaseIndex,
+  increaseIndex,
   items,
   maxItems,
 }) => {
-  const increaseIndex = (e) => {
-    e.preventDefault();
-
-    const nextIndex = activeIndex + 1;
-
-    if (nextIndex > items.length - 1) {
-      setActiveIndex(0);
-
-      return;
-    }
-
-    setActiveIndex(nextIndex);
-  };
-
-  const decreaseIndex = (e) => {
-    e.preventDefault();
-
-    const nextIndex = activeIndex - 1;
-
-    if (nextIndex === -1) {
-      setActiveIndex(items.length - 1);
-
-      return;
-    }
-
-    setActiveIndex(nextIndex);
-  };
-
   return (
     <div className="our-methods--navigation">
       <div className="our-methods--navigation-inner">
@@ -73,6 +47,8 @@ const Navigation = ({
 Navigation.propTypes = {
   activeIndex: PropTypes.number.isRequired,
   setActiveIndex: PropTypes.func.isRequired,
+  increaseIndex: PropTypes.func.isRequired,
+  decreaseIndex: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string,
