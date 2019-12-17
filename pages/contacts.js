@@ -277,9 +277,9 @@ const Contacts = ({ router }) => {
     const getLoction = async () => {
       const res = await fetch('/api/location');
       const json = await res.json();
-      const location = json.location;
+      const location = json.location || {};
 
-      setSelectedCountry(location.countryCode);
+      setSelectedCountry(location.country);
     };
 
     getLoction();

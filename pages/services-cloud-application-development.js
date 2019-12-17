@@ -112,7 +112,7 @@ const ServicesCloudAppDev = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['Business Research Platform'].includes(title),
+    ({ title }) => ['Business Research Platform', 'Banker-Advisor'].includes(title),
   );
 
   return (
