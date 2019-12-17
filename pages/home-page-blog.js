@@ -13,7 +13,7 @@ const KeenBlog = ({ section }) => {
   return (
     <div className="section fp-auto-height keen-blog" id={section}>
       {topTitle}
-      <Posts posts={posts} />
+      <Posts posts={posts.slice(-2)} />
     </div>
   );
 };
