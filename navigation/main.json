@@ -121,6 +121,18 @@
         "type": "icon"
       },
       {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "href": "/services-maintenance-and-support",
+        "icon": {
+          "name": "icon-maintenance-and-support",
+          "alt": "Maintenance and Support"
+        },
+        "type": "icon"
+      },
+      {
         "name": "Development and Quality Assurance",
         "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
         "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
