@@ -1,0 +1,26 @@
+.content-block {
+  .maintenance-and-support-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .maintenance-and-support-item {
+      max-width: 270px;
+      div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      b {
+        margin-left: 10px;
+        position: relative;
+        top: -16px;
+      }
+      img {
+        width: 50px;
+        display: inline-block;
+      }
+      p {
+        padding: 5px 20px;
+      }
+    }
+  }
+}

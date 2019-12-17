@@ -284,6 +284,18 @@
       margin: 30px auto;
     }
   }
+  .subtitle-web-dev {
+    color: #4c4d51;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 41px;
+    font-size: 22px;
+  }
+  .technologies-links {
+    span:before {
+      content: ' ';
+    }
+  }
 }
 .clearfix {
   @include clearfix;

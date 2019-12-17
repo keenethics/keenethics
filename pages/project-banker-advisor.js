@@ -209,7 +209,7 @@ const ProjectBankerAdvisor = () => (
             />
             <a
               href="http://bankeradvisor.com"
-              rel="noopener noreferrer nofollow"
+              rel="noopener noreferrer"
               target="_blank"
               className="link"
               style={{ background: baseColor }}
