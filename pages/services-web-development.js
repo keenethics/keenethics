@@ -325,8 +325,6 @@ const ServicesWebDevelopment = () => {
           <p>
             These are some of the applications and websites that we have developed as a
             web application development company:
-            <br />
-            the Check Network, Banker Advisor, Paceup
           </p>
           <Works works={webDevelopmentWorks} rounded />
         </section>

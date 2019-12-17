@@ -39,7 +39,7 @@ const ServicesUiUxDesign = () => {
   </>,
     },
     {
-      icon: '/static/services/ui-ux-design/user.png',
+      icon: '/static/services/ui-ux-design/users.png',
       alt: 'Users',
       description:
   <>
@@ -258,11 +258,9 @@ const ServicesUiUxDesign = () => {
               <ul>
                 <li>Evaluate the result</li>
                 <li>
-                  Carry out&nbsp;
-                  <a href="/blog/the-value-of-user-testing" target="_blank">usability testing</a>
+                  <a href="/blog/the-value-of-user-testing" target="_blank">Test usability</a>
                 </li>
                 <li>Compile reports</li>
-                <li>Offer recommendations</li>
               </ul>
             </div>
           </div>
