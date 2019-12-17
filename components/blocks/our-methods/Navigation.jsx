@@ -10,39 +10,37 @@ const Navigation = ({
   increaseIndex,
   items,
   maxItems,
-}) => {
-  return (
-    <div className="our-methods--navigation">
-      <div className="our-methods--navigation-inner">
-        <a
-          href="#"
-          onClick={decreaseIndex}
-          className="our-methods--navigation-link-prev"
-        >
+}) => (
+  <div className="our-methods--navigation">
+    <div className="our-methods--navigation-inner">
+      <a
+        href="#"
+        onClick={decreaseIndex}
+        className="our-methods--navigation-link-prev"
+      >
           Prev
-        </a>
-        {items.map((item, i) => (
-          <NavigationItem
-            key={item.key}
-            index={i}
-            item={item}
-            isActive={activeIndex === i}
-            activeIndex={activeIndex}
-            setActiveIndex={setActiveIndex}
-            maxItems={maxItems}
-          />
-        ))}
-        <a
-          href="#"
-          onClick={increaseIndex}
-          className="our-methods--navigation-link-next"
-        >
+      </a>
+      {items.map((item, i) => (
+        <NavigationItem
+          key={item.key}
+          index={i}
+          item={item}
+          isActive={activeIndex === i}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          maxItems={maxItems}
+        />
+      ))}
+      <a
+        href="#"
+        onClick={increaseIndex}
+        className="our-methods--navigation-link-next"
+      >
           Next
-        </a>
-      </div>
+      </a>
     </div>
-  );
-};
+  </div>
+);
 
 Navigation.propTypes = {
   activeIndex: PropTypes.number.isRequired,

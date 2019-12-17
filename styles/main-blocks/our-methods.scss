@@ -1,41 +1,12 @@
-.block {
-  &.block-our-methods {
-    background: #fafafa;
-    padding: 0 44px;
-  }
-
-  &--header {
-    margin: 0 auto;
-    padding: 80px 0;
-    max-width: 780px;
-  }
-
-  &--header-title {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 44px;
-    text-align: center;
-    color: #12233d;
-    margin: 0 0 30px;
-  }
-
-  &--header-description {
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    color: #12233d;
-  }
+.block-our-methods {
+  background: #fafafa;
+  padding: 0 32px;
 }
 
 .our-methods {
   max-width: 990px;
   margin: 0 auto;
-  padding: 0 10px 80px;
+  padding: 0 0 80px;
   @include clearfix;
 
   &--navigation {
@@ -203,6 +174,10 @@
       &:active {
         color: #d62c2c;
       }
+    }
+
+    ul {
+      margin: 10px 0 0;
     }
   }
 
