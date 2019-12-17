@@ -1,5 +1,6 @@
 .our-mission {
   padding-top: 50px;
+  padding-bottom: 65px;
   position: relative;
 
   @media (min-width: $tablet-lg) {
@@ -8,6 +9,7 @@
 
   @media (min-width: $desktop-lg) {
     padding-top: 80px;
+    padding-bottom: 11px;
   }
 
   .our-mission-body {
@@ -41,7 +43,6 @@
     }
 
     @media (min-width: $desktop-sm) {
-      // margin: 70px auto 0;
       font-size: 44px;
       line-height: 60px;
     }
@@ -153,7 +154,6 @@
       &:last-of-type img {
         max-height: 35px;
         margin-bottom: -10px;
-        
       }
 
       h4 {

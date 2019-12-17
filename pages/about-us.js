@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/main';
 import OurStory from '../components/about-us/OurStory';
 import OurMission from '../components/about-us/OurMission';
+import OurValues from '../components/about-us/OurValues';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AboutUs extends React.Component {
@@ -38,6 +39,7 @@ class AboutUs extends React.Component {
           </div>
           <OurStory />
           <OurMission />
+          <OurValues />
         </section>
       </Layout>
     );
