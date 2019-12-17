@@ -2,8 +2,8 @@ import React from 'react';
 import Moment from 'moment';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import PostsContext from '../components/context/posts-context';
 import Slider from 'react-slick';
+import PostsContext from '../components/context/posts-context';
 
 const HomeFooter = ({
   section,
