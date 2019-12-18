@@ -32,7 +32,11 @@ const LetsStart = ({ section }) => (
 );
 
 LetsStart.propTypes = {
-  section: PropTypes.string.isRequired,
+  section: PropTypes.string,
+};
+
+LetsStart.defaultProps = {
+  section: '',
 };
 
 export default LetsStart;
