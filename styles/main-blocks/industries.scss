@@ -1,6 +1,7 @@
 .block-industries {
   position: relative;
   background: #12233d;
+  padding: 0 32px;
 
   .block--header-title {
     color: #fff;
@@ -14,6 +15,8 @@
     max-width: 990px;
     height: 60%;
     margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: content-box;
 
     .col-1-3 {
       position: relative;
@@ -75,6 +78,8 @@
   }
 
   &--big-item {
+    padding: 0 20px 0 0;
+
     &:hover {
       .industries--big-item-logo::before {
         transform: scale(1.5);
@@ -105,5 +110,34 @@
     font-size: 16px;
     font-weight: 700;
     margin: 0 0 4px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .block-industries {
+    .block-background .grid {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .industries--big-item {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  .industries--big-item-logo {
+    margin: 0 0 16px;
+  }
+
+  .industries--big-item-logo::before {
+    left: 50%;
+    transform: none;
+  }
+
+  .industries--small-item {
+    width: 50%;
+    text-align: center;
   }
 }

@@ -19,6 +19,7 @@ class Layout extends React.Component {
     super(props);
 
     this.state = {
+      isLoading: true,
       dimensions: {
         width: -1,
         height: -1,
@@ -32,6 +33,7 @@ class Layout extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions);
+
     this.updateDimensions();
   }
 
@@ -41,6 +43,7 @@ class Layout extends React.Component {
 
   updateDimensions() {
     this.setState({
+      isLoading: false,
       dimensions: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -57,6 +60,7 @@ class Layout extends React.Component {
 
   render() {
     const {
+      isLoading,
       dimensions,
     } = this.state;
     const {
@@ -73,6 +77,8 @@ class Layout extends React.Component {
     if (noMenu) {
       style.width = '100vw';
     }
+
+    if (isLoading) return null; // TODO: set preloader
 
     return (
       <div className="layout">
