@@ -95,6 +95,7 @@ class Navigation extends React.Component {
   }
 
   showSidebar() {
+    this.props.toggleNav();
     this.setState({
       showSidebar: true,
     });
@@ -104,7 +105,7 @@ class Navigation extends React.Component {
     if (!this.state.showSidebar) {
       return;
     }
-
+    this.props.toggleNav();
     this.setState({
       showSidebar: false,
     });
@@ -188,6 +189,7 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   router: PropTypes.object,
+  toggleNav: PropTypes.func.isRequired,
 };
 
 Navigation.defaultProps = {

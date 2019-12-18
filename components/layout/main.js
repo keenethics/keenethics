@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Promise from 'promise-polyfill';
+import classnames from 'classnames';
 
 import '../../styles/main.scss';
 
@@ -18,13 +19,16 @@ class Layout extends React.Component {
     super(props);
 
     this.state = {
+      isLoading: true,
       dimensions: {
         width: -1,
         height: -1,
       },
+      showNav: true,
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +43,7 @@ class Layout extends React.Component {
 
   updateDimensions() {
     this.setState({
+      isLoading: false,
       dimensions: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -46,8 +51,16 @@ class Layout extends React.Component {
     });
   }
 
+  toggleNav() {
+    const { showNav } = this.state;
+    this.setState({
+      showNav: !showNav,
+    });
+  }
+
   render() {
     const {
+      isLoading,
       dimensions,
     } = this.state;
     const {
@@ -55,22 +68,24 @@ class Layout extends React.Component {
       router,
       meta,
       noMenu,
+      className,
     } = this.props;
 
     const currentURL = router.route;
 
-    const style = { height: dimensions.height };
+    const style = {};
     if (noMenu) {
       style.width = '100vw';
     }
+
+    if (isLoading) return null; // TODO: set preloader
+
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
-        {noMenu ? null : <Navigation currentURL={currentURL} />}
-        <div className="content">
-
-          { /* TODO style={style} */}
-          <div className="content-inner">
+        {noMenu ? null : <Navigation currentURL={currentURL} toggleNav={this.toggleNav} />}
+        <div className={classnames('content', { 'nav-open': noMenu || (dimensions.width > 768) })}>
+          <div className={classnames('content-inner', className)} style={style}>
             { children }
           </div>
         </div>
@@ -87,6 +102,7 @@ Layout.propTypes = {
   router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Layout.defaultProps = {
@@ -94,6 +110,7 @@ Layout.defaultProps = {
   router: {},
   meta: {},
   noMenu: false,
+  className: '',
 };
 
 export default withRouter(Layout);

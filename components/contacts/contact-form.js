@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW, JeanA } from '../../static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
 import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
@@ -180,7 +180,12 @@ const ContactForm = () => {
             text={(
               <>
 I want to use a&nbsp;
-                <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
+                <a
+                  href="https://mailchi.mp/keenethics/offers-for-keen-subscribers"
+                  className="grey sub-dis"
+                >
+                  subscriber discount
+                </a>
               </>
 )}
             name="estimateFormIsSubscriber"

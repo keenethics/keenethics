@@ -1,0 +1,225 @@
+.home-footer {
+  display: flex;
+  padding: 96px 44px;
+  background-color: #12233D;
+  color: #fff;
+  flex-direction: column;
+
+  .home-footer-row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .home-footer-list {
+      width: 25%;
+
+      .home-footer-list-item:first-child {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .home-footer-list-item__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        transition: .5s;
+
+        &:hover {
+          font-weight: 600;
+          opacity: .8;
+        }
+      }
+      &.align-right {
+        text-align: right;
+      }
+    }
+    .footer-estimation {
+      background: linear-gradient(12.16deg, #DE3535 2.37%, #E3621D 96.81%);
+      color: #fff;
+    }
+    .flag-country-wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &-flag {
+        line-height: 0;
+        padding: 4px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        position: absolute;
+        left: 0;
+        top: 0;
+        .flag {
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          width: 30px;
+          height: 30px;
+        }
+        @include breakpoint(sm-max) {
+          padding: 6px;
+        }
+      }
+      .country-text {
+        margin-left: 50px;
+        position: relative;
+        top: 7px;
+        .country {
+          font-weight: bold;
+          font-size: 18px;
+          color: #fff;
+        }
+        .address {
+          color: #b8bdc5;
+          font-weight: normal;
+          font-size: 14px;
+          margin-top:14px;
+        }
+      }
+      @include breakpoint(sm-max) {
+        margin-bottom: 16px;
+        justify-content: center;
+      }
+    }
+    &.home-footer-countries {
+      padding: 70px 0 40px;
+    }
+    &.footer-blog {
+      flex-direction: column;
+      .footer-slider-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .horizontal-divider {
+    width: 100%;
+    height: 1px;
+    margin: 50px auto;
+    background-color: #35445a;
+  }
+  .slider-container, .footer-posts {
+    display: flex;
+  }
+  .slide-container {
+    .slide-item {
+      padding: 15px;
+      display: flex;
+      font-size: 14px;
+      .slide-date {
+        font-weight: 200;
+        color: #87919e;
+      }
+      .slide-title {
+        font-weight: 600;
+        line-height: 1.8;
+        margin: 0 32px;
+      }
+    }
+  }
+  .slick-list {
+    padding: 15px;
+  }
+  .slick-arrow {
+    border: none;
+    background-color: unset;
+    background-repeat: no-repeat;
+    border-radius: unset;
+    box-shadow: none;
+    width: 18px;
+    height: 34px;
+    &:before {
+      content: unset;
+    }
+    &.slick-prev {
+      background-image: url('/static/images/svg/home/left-arr.svg');
+    }
+    &.slick-next {
+      background-image: url('/static/images/svg/home/right-arr.svg');
+    }
+  }
+  
+}
+
+.bell-icon {
+  width: 14px;
+  height: 17px;
+  background-image: url('/static/images/svg/home/Group 197.svg');
+  display: inline-block;
+  margin: 0px 15px;
+  position: relative;
+  top: 2px;
+}
+
+@media (min-width: 1024px) {
+  .home-footer {
+    .footer-posts {
+      display: none;
+    }
+  }
+  .footer-responsive {
+    display: flex;
+  }
+  .home-footer-nav {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .home-footer {
+    .footer-slider {
+      display: none;
+    }
+    .home-footer-countries {
+      // width: 50%;
+      // flex-direction: column;
+      .flag-country-wrapper {
+        justify-content: unset;
+        position: relative;
+        .country-text {
+          margin-left: 70px;
+        }
+      }
+    }
+    .home-footer-row {
+      &.footer-site-nav {
+        display: none;
+      }
+      .home-footer-list {
+        width: unset;
+        &.align-right {
+          display: none;
+        }
+      }
+      .home-footer-nav {
+        width: 50%;
+        padding-left: 50px;
+        display: flex;
+        .home-footer-list-tablet {
+          width: 50%;
+          .home-footer-list-item {
+            margin-top: 25px;
+          }
+          .home-footer-list-item__link {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            &:hover {
+              color: #E3621D;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .home-footer {
+    padding: 44px;
+    .home-footer-row .home-footer-nav {
+      display: none;
+    }
+  } 
+}

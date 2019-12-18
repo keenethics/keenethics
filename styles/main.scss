@@ -14,6 +14,7 @@
 @import "blog";
 @import "filter";
 @import 'pages/common';
+@import 'pages/main';
 @import "pages/project";
 @import "pages/team";
 @import "pages/contact";
@@ -30,3 +31,13 @@
 @import "../components/content/FeaturesList";
 @import "../components/content/CallToActionButton";
 @import "../components/notify/notify";
+
+@import "main-blocks/common";
+@import "main-blocks/our-methods";
+@import "main-blocks/methodologies";
+@import "main-blocks/industries";
+@import "main-blocks/tech-stack";
+@import "main-blocks/lets-start.scss";
+@import "main-blocks/top-section.scss";
+@import "main-blocks/home-footer.scss";
+

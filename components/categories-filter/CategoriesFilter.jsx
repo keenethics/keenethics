@@ -125,7 +125,7 @@ class CategoriesFilter extends React.Component {
     } = this.props;
 
     router.replace({
-      pathname: `/${pageTitle}`,
+      pathname: pageTitle || '/portfolio',
       query: { chosen: categoriesList.join(',') },
     });
     filterOnChange(categoriesList);

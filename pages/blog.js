@@ -100,7 +100,6 @@ class Blog extends React.Component {
       if (post.fields && post.fields.categories) {
         return _.intersection(post.fields.categories, selectedPosts).length ? [...acc, post] : acc;
       }
-
       return acc;
     }, []);
   };
