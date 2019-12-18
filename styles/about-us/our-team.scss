@@ -51,6 +51,11 @@
     }
   }
 
+  .pictures-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
   .pictures {
     height: 185px;
     width: calc(325px * 5 + 25px * 4);

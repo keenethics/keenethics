@@ -1,15 +1,15 @@
 import React from 'react';
-import { useSpring } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
+import { useRouter } from 'next/router';
 import { times } from 'lodash';
 
 import CategoryButton from '../categories-filter/CategoryButton';
 
 const OurTeam = () => {
+  const router = useRouter();
   const redirect = () => {
-    console.log('rendering');
+    router.push('/careers');
   };
-  
+
   return (
     <div className="our-team">
       <h2>Meet Our Team</h2>
@@ -25,17 +25,24 @@ const OurTeam = () => {
         category="Open Positions"
         isActive
       />
-      <div className="pictures">
-        {
-          times(5, (index) => (
-            <div className="pictures-item">
-              <img
-                alt={`team ${index + 1}`}
-                src={`static/images/about-us/team-images/${index + 1}.jpg`}
-              />
-            </div>
-          ))
-        }
+      <div className="pictures-wrapper">
+        <div
+          className="pictures"
+        >
+          {
+            times(5, (index) => (
+              <div
+                className="pictures-item"
+                key={index}
+              >
+                <img
+                  alt={`team ${index + 1}`}
+                  src={`static/images/about-us/team-images/${index + 1}.jpg`}
+                />
+              </div>
+            ))
+          }
+        </div>
       </div>
       <p className="description">
         Now is the perfect time to join KeenEthics!
