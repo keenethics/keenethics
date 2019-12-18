@@ -55,7 +55,7 @@ Person.defaultProps = {
 };
 
 LinkTo.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

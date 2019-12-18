@@ -96,16 +96,16 @@ class Portfolio extends React.Component {
     }
     const portfolioComponent = (
       <section className="portfolio page__wrapper">
-        <div className="page__header">
-          {topTitle || (
+        {topTitle || (
+          <div className="page__header">
             <h1 className="page__title">
               <em>Keen</em>
               &nbsp;projects
               <br />
               we put into action
             </h1>
-          )}
-        </div>
+          </div>
+        )}
         <CategoriesFilter
           categoriesList={categoriesList}
           selectedCategories={selectedCategories}

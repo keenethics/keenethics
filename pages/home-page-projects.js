@@ -2,25 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Portfolio from './portfolio';
 
-const Projects = ({ section, isMobile }) => {
-  const topTitle = (
-    <h1 className="home-section-title">
-      Our Projects
-    </h1>
-  );
-  return (
-    <div className="section fp-auto-height projects" id={section}>
-      <div className="fw-section">
-        <Portfolio
-          isFullPage
-          pageTitle="/"
-          topTitle={topTitle}
-          isMobile={isMobile}
-        />
+const Projects = ({ section, isMobile }) => (
+  <div className="block block-projects" id={section}>
+    <header className="block--header">
+      <div className="block--header-title">
+        Our Projects
       </div>
+    </header>
+    <div className="block--content">
+      <Portfolio
+        isFullPage
+        pageTitle="/"
+        topTitle=" "
+        isMobile={isMobile}
+      />
     </div>
-  );
-};
+  </div>
+);
 
 Projects.propTypes = {
   isMobile: PropTypes.bool.isRequired,
