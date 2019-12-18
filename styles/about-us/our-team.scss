@@ -1,6 +1,13 @@
 .our-team {
   padding: 50px 0 50px;
 
+  h2 {
+    @media (min-width: $desktop-sm) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+
   p {
     padding: 0 25px;
     color: #12233D;
@@ -16,6 +23,17 @@
     @media (min-width: $tablet-lg) {
       margin: 20px auto 0;
       line-height: 24px;
+    }
+
+    @media (min-width: $desktop-sm) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 760px;
+      margin: 25px auto 0;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -40,14 +58,19 @@
     display: flex;
     flex-flow: row nowrap;
 
-    img {
+    &-item {
       height: 100%;
       width: 325px;
-      object-fit: cover;
 
       &:not(:last-of-type) {
         margin-right: 25px;
       }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     @media (min-width: $tablet-lg) {
@@ -55,11 +78,57 @@
       height: 220px;
       width: calc(390px * 5 + 15px * 4);
 
-      img {
+      &-item {
         width: 390px;
 
         &:not(:last-of-type) {
           margin-right: 15px;
+        }
+      }
+    }
+
+    @media (min-width: $desktop-lg) {
+      margin-top: 55px;
+      flex-flow: row wrap;
+      width: 100%;
+      height: auto;
+      padding: 0 150px;
+
+      &-item {
+        width: calc(33.3% - 10px);
+        margin-bottom: 15px;
+        margin-right: 0 !important;
+        height: 0;
+        padding-bottom: 30%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: auto;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &:first-of-type,
+        &:nth-of-type(2) {
+          width: calc(50% - 8px);
+        }
+
+        &:first-of-type {
+          margin-right: 16px !important;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          margin-right: 15px !important;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          padding-bottom: 20%;
         }
       }
     }
@@ -79,6 +148,13 @@
       display: flex;
       justify-content: space-between;
       max-width: 90%;
+    }
+
+    @media (min-width: $desktop-lg) {
+      font-size: 18px;
+      margin-top: 10px;
+      max-width: none;
+      padding: 0 240px;
     }
 
     button {

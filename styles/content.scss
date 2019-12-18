@@ -12,11 +12,16 @@
   }
   &.nav-open {
     padding-left: 160px;
+
+    .content-inner {
+      width: calc(100vw - 160px);
+    }
   }
 }
 .content-inner {
   position: relative;
   height: 100vh;
+  width: 100vw;
   overflow-y: auto;
   overflow-x: hidden;
   &.home-full-vh {

@@ -17,6 +17,7 @@ const OurTeam = () => {
         We work hand-in-hand to deliver robust software solutions to our business partners.
         This is our corporate culture, and we want
         <br />
+        {' '}
         you to be a part of it!
       </p>
       <CategoryButton
@@ -27,10 +28,12 @@ const OurTeam = () => {
       <div className="pictures">
         {
           times(5, (index) => (
-            <img
-              alt={`team ${index + 1}`}
-              src={`static/images/about-us/team-images/${index + 1}.jpg`}
-            />
+            <div className="pictures-item">
+              <img
+                alt={`team ${index + 1}`}
+                src={`static/images/about-us/team-images/${index + 1}.jpg`}
+              />
+            </div>
           ))
         }
       </div>
