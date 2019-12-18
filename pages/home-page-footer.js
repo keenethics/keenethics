@@ -168,7 +168,7 @@ const HomeFooter = ({
           </ul>
         </div>
       </div>
-      
+
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">

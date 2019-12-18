@@ -216,7 +216,10 @@
 }
 
 @include for-mobile {
-  .home-footer .home-footer-row .home-footer-nav {
-    display: none;
-  }
+  .home-footer {
+    padding: 44px;
+    .home-footer-row .home-footer-nav {
+      display: none;
+    }
+  } 
 }
