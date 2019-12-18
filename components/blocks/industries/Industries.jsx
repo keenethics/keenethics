@@ -18,9 +18,9 @@ const Industries = () => (
             <div className="industries--big-item">
               <div className="industries--big-item-logo">
                 <img
-                  src="/static/main-blocks/industries/education.svg"
-                  width="33px"
-                  height="28px"
+                  src="/static/main-blocks/industries/large/icon-education.svg"
+                  width="54px"
+                  height="34px"
                   alt="Education industries"
                 />
               </div>
@@ -36,9 +36,9 @@ const Industries = () => (
             <div className="industries--big-item">
               <div className="industries--big-item-logo">
                 <img
-                  src="/static/main-blocks/industries/education.svg"
-                  width="33px"
-                  height="28px"
+                  src="/static/main-blocks/industries/large/icon-business.svg"
+                  width="54px"
+                  height="34px"
                   alt="Education industries"
                 />
               </div>
@@ -54,9 +54,9 @@ const Industries = () => (
             <div className="industries--big-item">
               <div className="industries--big-item-logo">
                 <img
-                  src="/static/main-blocks/industries/education.svg"
-                  width="33px"
-                  height="28px"
+                  src="/static/main-blocks/industries/large/icon-healthcare.svg"
+                  width="54px"
+                  height="34px"
                   alt="Education industries"
                 />
               </div>
@@ -73,10 +73,10 @@ const Industries = () => (
           <div className="industries--small-item">
             <div className="industries--small-item-logo">
               <img
-                src="/static/main-blocks/industries/education.svg"
-                width="33px"
-                height="28px"
-                alt="Education industries"
+                src="/static/main-blocks/industries/small/icon-retail.svg"
+                width="32px"
+                height="27px"
+                alt="Retail industries"
               />
             </div>
             <div className="industries--small-item-title">
@@ -86,10 +86,10 @@ const Industries = () => (
           <div className="industries--small-item">
             <div className="industries--small-item-logo">
               <img
-                src="/static/main-blocks/industries/education.svg"
-                width="33px"
-                height="28px"
-                alt="Education industries"
+                src="/static/main-blocks/industries/small/icon-agriculture.svg"
+                width="32px"
+                height="27px"
+                alt="Agriculture industries"
               />
             </div>
             <div className="industries--small-item-title">
@@ -99,10 +99,10 @@ const Industries = () => (
           <div className="industries--small-item">
             <div className="industries--small-item-logo">
               <img
-                src="/static/main-blocks/industries/education.svg"
-                width="33px"
-                height="28px"
-                alt="Education industries"
+                src="/static/main-blocks/industries/small/icon-hospitality.svg"
+                width="32px"
+                height="27px"
+                alt="Hospitality and Entertainment industries"
               />
             </div>
             <div className="industries--small-item-title">
@@ -112,10 +112,10 @@ const Industries = () => (
           <div className="industries--small-item">
             <div className="industries--small-item-logo">
               <img
-                src="/static/main-blocks/industries/education.svg"
-                width="33px"
-                height="28px"
-                alt="Education industries"
+                src="/static/main-blocks/industries/small/icon-real-estate.svg"
+                width="32px"
+                height="27px"
+                alt="Real Estate industries"
               />
             </div>
             <div className="industries--small-item-title">
@@ -125,10 +125,10 @@ const Industries = () => (
           <div className="industries--small-item">
             <div className="industries--small-item-logo">
               <img
-                src="/static/main-blocks/industries/education.svg"
-                width="33px"
-                height="28px"
-                alt="Education industries"
+                src="/static/main-blocks/industries/small/icon-finance.svg"
+                width="32px"
+                height="27px"
+                alt="Finance and Banking industries"
               />
             </div>
             <div className="industries--small-item-title">
