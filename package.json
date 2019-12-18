@@ -51,6 +51,7 @@
     "react-share": "^3.0.0",
     "react-slick": "^0.15.4",
     "react-slidedown": "^2.4.4",
+    "react-spring": "^8.0.27",
     "react-syntax-highlighter": "^11.0.2",
     "react-use-gesture": "^6.0.14",
     "string-format-validation": "^2.0.2",
