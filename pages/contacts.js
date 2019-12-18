@@ -199,9 +199,7 @@ const MobileWishlist = ({ wishlist }) => {
         type="button"
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
-      >
-        {''}
-      </button>
+      />
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
           <span key={Math.random()} className="wish-item">
