@@ -370,7 +370,7 @@
     flex-wrap: wrap;
     position: relative;
     .home-section-plates-item {
-      flex: 1 0 21%;
+      width: 25%;
       justify-content: flex-end;
       flex-direction: column;
       display: flex;
@@ -1455,13 +1455,14 @@ $show-slide-pos: 0px;
 }
 
 @media (max-width: 1024px) {
-  .container-top .home-section-plates-item {
-    width: unset;
-  }
+  // .container-top .home-section-plates-item {
+  //   width: unset;
+  // }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container-top .home-section-plates-item {
     width: 21%;
+    flex: 1 0 21%;
   }
 }
 

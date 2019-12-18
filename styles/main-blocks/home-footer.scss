@@ -33,12 +33,11 @@
       &.align-right {
         text-align: right;
       }
-      .footer-estimation {
-        background: linear-gradient(12.16deg, #DE3535 2.37%, #E3621D 96.81%);
-        color: #fff;
-      }
     }
-
+    .footer-estimation {
+      background: linear-gradient(12.16deg, #DE3535 2.37%, #E3621D 96.81%);
+      color: #fff;
+    }
     .flag-country-wrapper {
       display: flex;
       align-items: center;
@@ -160,11 +159,64 @@
       display: none;
     }
   }
+  .footer-responsive {
+    display: flex;
+  }
+  .home-footer-nav {
+    display: none;
+  }
 }
 @media (max-width: 1024px) {
   .home-footer {
     .footer-slider {
       display: none;
     }
+    .home-footer-countries {
+      // width: 50%;
+      // flex-direction: column;
+      .flag-country-wrapper {
+        justify-content: unset;
+        position: relative;
+        .country-text {
+          margin-left: 70px;
+        }
+      }
+    }
+    .home-footer-row {
+      &.footer-site-nav {
+        display: none;
+      }
+      .home-footer-list {
+        width: unset;
+        &.align-right {
+          display: none;
+        }
+      }
+      .home-footer-nav {
+        width: 50%;
+        padding-left: 50px;
+        display: flex;
+        .home-footer-list-tablet {
+          width: 50%;
+          .home-footer-list-item {
+            margin-top: 25px;
+          }
+          .home-footer-list-item__link {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            &:hover {
+              color: #E3621D;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .home-footer .home-footer-row .home-footer-nav {
+    display: none;
   }
 }
