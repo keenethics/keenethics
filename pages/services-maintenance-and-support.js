@@ -80,7 +80,7 @@ const MaintenanceAndSupport = () => {
           <div className="maintenance-and-support-list">
             <div className="maintenance-and-support-item">
               <div>
-                <img style={{ width: '50px' }} src="/static/services/working-impeccably.svg" alt="" />
+                <img style={{ width: '50px' }} src="/static/services/maintenance-and-support/internet.png" alt="Internet" />
                 <b>The industry is changing.</b>
               </div>
               <p>
@@ -91,7 +91,7 @@ const MaintenanceAndSupport = () => {
             </div>
             <div className="maintenance-and-support-item">
               <div>
-                <img style={{ width: '50px' }} src="/static/services/working-impeccably.svg" alt="" />
+                <img style={{ width: '50px' }} src="/static/services/maintenance-and-support/settings.png" alt="Settings" />
                 <b>Technology is changing.</b>
               </div>
               <p>
@@ -102,7 +102,7 @@ const MaintenanceAndSupport = () => {
             </div>
             <div className="maintenance-and-support-item">
               <div>
-                <img style={{ width: '50px' }} src="/static/services/working-impeccably.svg" alt="" />
+                <img style={{ width: '50px' }} src="/static/services/maintenance-and-support/suitcase.png" alt="Suitcase" />
                 <b>Your business is changing.</b>
               </div>
               <p>
