@@ -38,8 +38,8 @@ const platesContent = [
 
 ];
 
-const OurServices = ({ section, show }) => (
-  <div className="section our-services" id={section}>
+const OurServices = ({ show }) => (
+  <div className="section our-services">
     <h1 className={classnames('home-section-title', {
       'fade-in-timed-out': show,
     })}
@@ -71,7 +71,6 @@ const OurServices = ({ section, show }) => (
 );
 
 OurServices.propTypes = {
-  section: PropTypes.string.isRequired,
   show: PropTypes.bool,
 };
 

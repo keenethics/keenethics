@@ -1,4 +1,7 @@
 .block {
+  position: relative;
+  padding: 0 32px;
+
   &--header {
     margin: 0 auto;
     padding: 80px 0;
