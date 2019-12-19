@@ -6,6 +6,7 @@ import OurMission from '../components/about-us/OurMission';
 import OurValues from '../components/about-us/OurValues';
 import OurTeam from '../components/about-us/OurTeam';
 import LetsStart from './home-page-lets-start';
+import MeetOurLeaders from '../components/about-us/MeetOurLeaders';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AboutUs extends React.Component {
@@ -42,6 +43,7 @@ class AboutUs extends React.Component {
           <OurStory />
           <OurMission />
           <OurValues />
+          <MeetOurLeaders />
           <OurTeam />
           <LetsStart />
         </section>
