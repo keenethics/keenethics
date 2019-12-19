@@ -1,39 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import Link from 'next/link';
 
 const platesContent = [
   {
-    icon: 'front-end-1.svg',
+    icon: 'icon-web.svg',
     text: 'Web Development',
+    href: 'services-web-development',
   },
   {
-    icon: 'mobile-dev.svg',
+    icon: 'icon-mobile.svg',
     text: 'Mobile Development',
+    href: 'services-mobile-development',
   },
   {
-    icon: 'rocket-icon.svg',
+    icon: 'icon-mvp.svg',
     text: 'Minimum Viable Product',
+    href: 'approach-minimum-viable-product',
   },
   {
-    icon: 'pwa.svg',
+    icon: 'icon-pwa.svg',
     text: 'PWA Development',
+    href: 'tech-apps-progressive-web-apps',
   },
   {
-    icon: 'staff-aug.svg',
+    icon: 'icon-team.svg',
     text: 'Staff Augmentation',
+    href: 'services-dedicated-development-team',
   },
   {
-    icon: 'cloud.svg',
+    icon: 'icon-cloud.svg',
     text: 'Cloud Appliction Development Service',
+    href: 'services-cloud-application-development',
   },
   {
-    icon: 'robot.svg',
+    icon: 'icon-ai.svg',
     text: 'Chatbots & AI Development',
+    href: 'services-chatbots-artificial-intelligence',
   },
   {
-    icon: 'home.svg',
+    icon: 'icon-iot.svg',
     text: 'Internet of Things Development Services',
+    href: 'services-internet-of-things',
   },
 
 ];
@@ -49,20 +58,23 @@ const OurServices = ({ show }) => (
         We are sure to contribute to the success of your solution no matter what the task.
       </div>
     </header>
-    <div className="our-services">
+    <div className="block--content our-services">
       <div className={classnames('home-section-plates', {
         'fade-in-timed-out': show,
       })}
       >
         {platesContent.map((el) => (
-          <div className="home-section-plates-item" key={el.text}>
-            <img className="plate-img" src={`/static/images/svg/${el.icon}`} alt="service icon" />
-          </div>
+          <Link href={el.href} key={el.text}>
+            <div className="home-section-plates-item">
+              <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
+              <p className="plate-text">{el.text}</p>
+            </div>
+          </Link>
         ))}
-        <div className="plates-grid plates-grid-v horizontal" />
-        <div className="plates-grid plates-grid-v start" />
-        <div className="plates-grid plates-grid-v mid" />
-        <div className="plates-grid plates-grid-v end" />
+        <div className="plates-grid horizontal" />
+        <div className="plates-grid start" />
+        <div className="plates-grid mid" />
+        <div className="plates-grid end" />
       </div>
     </div>
   </div>

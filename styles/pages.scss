@@ -357,10 +357,10 @@
 
 .our-services {
   @media (min-width: 1024px) {
-    padding: 0 50px;
+    padding: 32px 0;
   }
   @include for-tablet {
-    padding: 20px 40px;
+    padding: 20px 0;
   }
   .home-section-description {
     font-size: 18px;
@@ -370,25 +370,43 @@
     margin: 30px auto 0;
   }
 }
+
 .home-section-plates {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
   .home-section-plates-item {
-    width: 25%;
-    justify-content: flex-end;
+    // width: 25%;
     flex-direction: column;
     display: flex;
     height: 275px;
-    padding-bottom: 50px;
+    // padding-bottom: 75px;
+    padding: 0 15px 75px;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 0 2px #D62C2C;
+      color: #D62C2C;
+    }
+    .plate-img {
+      margin: auto;
+    }
+    .plate-text {
+      height: 1em;
+      max-width: 172px;
+      margin: 0 auto;
+    }
   }
   .plates-grid {
-    top: 25%;
+    top: 20%;
     width: 1px;
-    background: #B6B5B5;
-    opacity: 0.35;
-    height: 50%;
+    background: #b6b5b5;
+    opacity: .35;
+    height: 60%;
     position: absolute;
+    
     &.start {
       left: 25%;
     }
@@ -793,6 +811,7 @@ $show-slide-pos: 0px;
 
 .section-founders {
  display: flex;
+ padding-top: 50px;
  .founders-text-section {
     display: flex;
     flex-direction: column;
@@ -1454,33 +1473,28 @@ $show-slide-pos: 0px;
 
 // breakpoints styles
 // breakpoints
-@media (max-width: 1024px) {
-  .section.our-services .home-section-description {
-    width: unset;
-  }
-  .container-top {
-    .keen-blog {
-      padding: 0 34px;
-    }
+@media (min-width: 1024px) {
+  .our-services .home-section-plates-item {
+    flex: 1 0 200px;
   }
 }
 
 @media (max-width: 1024px) {
-  // .container-top .home-section-plates-item {
-  //   width: unset;
-  // }
-}
-@media (max-width: 768px) {
-  .container-top .home-section-plates-item {
-    width: 21%;
-    flex: 1 0 21%;
+  .home-section-plates {
+    justify-content: center
   }
-}
-
-@include for-tablet {
-  .plates-grid {
+  .our-services .plates-grid {
     display: none;
   }
+}
+// @media (max-width: 768px) {
+//   .our-services .home-section-plates-item {
+    
+//   }
+// }
+
+@include for-tablet {
+  
   .section-founders {
     flex-direction: column;
     .founders-text-section {
@@ -1491,14 +1505,5 @@ $show-slide-pos: 0px;
         width: 100%;
       }
     }
-  }
-  .container-top {
-    .keen-blog {
-      padding: 0 20px;
-      .page__item {
-        width: 100%;
-      }
-    }
-
   }
 }
