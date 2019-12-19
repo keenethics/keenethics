@@ -357,10 +357,10 @@
 
 .our-services {
   @media (min-width: 1024px) {
-    padding: 32px 50px;
+    padding: 32px 0;
   }
   @include for-tablet {
-    padding: 20px 40px;
+    padding: 20px 0;
   }
   .home-section-description {
     font-size: 18px;
@@ -370,50 +370,22 @@
     margin: 30px auto 0;
   }
 }
-// .home-section-plates {
-//   display: flex;
-//   flex-wrap: wrap;
-//   position: relative;
-//   .home-section-plates-item {
-//     width: 25%;
-//     justify-content: flex-end;
-//     flex-direction: column;
-//     display: flex;
-//     height: 275px;
-//     padding-bottom: 50px;
-//   }
-//   .plates-grid {
-//     top: 25%;
-//     width: 1px;
-//     background: #B6B5B5;
-//     opacity: 0.35;
-//     height: 50%;
-//     position: absolute;
-//     &.start {
-//       left: 25%;
-//     }
-//     &.mid {
-//       left: 50%;
-//     }
-//     &.end {
-//       left:75%;
-//     }
-    
-//   }
-  
-// }
+
 .home-section-plates {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
   .home-section-plates-item {
-    width: 25%;
+    // width: 25%;
     flex-direction: column;
     display: flex;
     height: 275px;
-    padding-bottom: 75px;
+    // padding-bottom: 75px;
+    padding: 0 15px 75px;
     text-align: center;
-    transition: .5s;
+    transition: .2s;
+    cursor: pointer;
     &:hover {
       box-shadow: 0 0 0 2px #D62C2C;
       color: #D62C2C;
@@ -1495,21 +1467,18 @@ $show-slide-pos: 0px;
 
 // breakpoints styles
 // breakpoints
-@media (max-width: 1024px) {
-  .our-services .home-section-description {
-    width: unset;
-  }
-  .container-top {
-    .keen-blog {
-      padding: 0 34px;
-    }
+@media (min-width: 1024px) {
+  .our-services .home-section-plates-item {
+    flex: 1 0 200px;
   }
 }
 
 @media (max-width: 1024px) {
-  .our-services .home-section-plates-item {
-    width: unset;
-    flex: 1 0 21%;
+  .home-section-plates {
+    justify-content: center
+  }
+  .our-services .plates-grid {
+    display: none;
   }
 }
 // @media (max-width: 768px) {
@@ -1519,9 +1488,7 @@ $show-slide-pos: 0px;
 // }
 
 @include for-tablet {
-  .our-services .plates-grid {
-    display: none;
-  }
+  
   .section-founders {
     flex-direction: column;
     .founders-text-section {
@@ -1532,14 +1499,5 @@ $show-slide-pos: 0px;
         width: 100%;
       }
     }
-  }
-  .container-top {
-    .keen-blog {
-      padding: 0 20px;
-      .page__item {
-        width: 100%;
-      }
-    }
-
   }
 }
