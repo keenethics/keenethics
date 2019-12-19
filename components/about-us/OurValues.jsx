@@ -31,15 +31,19 @@ const OurValues = () => {
     setStep(currentSlide);
   }, 100);
 
+  const handleResize = () => {
+    setOffsets({ target: slidesRef.current });
+  };
+
   useEffect(() => {
     if (slidesRef !== null) {
-      window.addEventListener('resize', setOffsets);
+      window.addEventListener('resize', handleResize);
       slidesRef.current.addEventListener('scroll', watchScroll);
       setOffsets({ target: { children: slidesRef.current.children } });
     }
 
     return () => {
-      window.removeEventListener('resize', setOffsets);
+      window.removeEventListener('resize', handleResize);
       slidesRef.current.removeEventListener('scroll', watchScroll);
     };
   }, [slidesRef]);

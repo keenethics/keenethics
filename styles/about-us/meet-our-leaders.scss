@@ -7,12 +7,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
   .heading {
     @media(min-width: $tablet-lg) {
       flex: 0 0 50%;
-      padding-left: 85px;
+      padding-left: 90px;
+      padding-top: 160px;
     }
     @media(min-width: $desktop-sm) {
       padding-left: 150px;
@@ -22,7 +23,8 @@
   }
   .leaders {
     @media(min-width: $tablet-lg) {
-      margin-top: 60px;
+      max-width: 50%;
+      padding-top: 60px;
     }
     @media(min-width: $desktop-sm) {
       flex-grow: 1;
@@ -48,7 +50,7 @@
   p {
     font-size: 14px;
     line-height: 21px;
-    padding: 15px 0 40px 0;
+    padding-top: 15px;
     margin: 0 auto;
     width: 80%;
     text-align: center;
@@ -57,6 +59,7 @@
       line-height: 28px;
       text-align: left;
       margin: 0;
+      padding-top: 20px;
     }
     @media(min-width: $desktop-sm) {
       font-size: 18px;
@@ -66,39 +69,60 @@
   }
 
   .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 0 55px;
-    width: calc(170px * 2 + 30px + 55px * 2);
-    margin-bottom: 25px;
-    @media(min-width: $tablet-lg) {
-      padding: 0 45px;
-      width: calc(170px * 2 + 90px + 45px * 2);
-    }
     @media(min-width: $desktop-sm) {
       padding: 0 15px;
       width: calc(200px * 2 + 100px + 50px * 2);
       margin-top: 35px;
     }
+
+    &.mobile {
+      width: 100%;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      padding: 0 55px;
+      margin-bottom: 10px;
+      
+      @media (min-width: $tablet-lg) {
+        padding: 0 45px;
+        height: 410px;
+        margin-bottom: 15px;
+      }
+
+      .gallery-inner {
+        display: flex;
+        flex-flow: row nowrap;
+        width: calc(170px * 5  + 30px * 4);
+        margin-top: 45px;
+
+        @media (min-width: $tablet-lg) {
+          margin-top: 0;
+          width: calc(200px * 5 + 40px * 4);
+        }
+      }
+    }
   }
 
   figure {
     width: 170px;
-    height: 325px;
+    flex: 0 0 170px;
+    margin-right: 25px;
+
     @media(min-width: $tablet-lg) {
-      width: 200px;
-      height: 350px;
+      flex: 0 0 200px;
+      margin-right: 40px;
     }
     @media(min-width: $desktop-sm) {
       width: 260px;
-      height: 450px;
+      margin-right: 50px;
     }
-    &:not(:last-of-type) {
-      margin-right: 30px;
-      @media(min-width: $desktop-sm) {
-        margin-right: 50px;
-      }
+
+    &:last-of-type {
+      margin-right: 55px;
     }
+
     .wrapper {
       position: relative;
       &:hover {
@@ -171,7 +195,7 @@
     justify-content: center;
     @media(min-width: $tablet-lg) {
       justify-content: flex-start;
-      padding: 55px;
+      margin: 15px 0 45px 55px;
     }
     @media(min-width: $desktop-sm) {
       padding: 65px 10px;

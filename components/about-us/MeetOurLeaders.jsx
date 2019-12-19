@@ -1,4 +1,7 @@
 import React from 'react';
+import LeadersMobile from './LeadersMobile';
+
+import leadersData from '../../data/leaders';
 
 const MeetOurLeaders = () => (
   <div className="meet-our-leaders">
@@ -9,8 +12,10 @@ const MeetOurLeaders = () => (
       </p>
     </div>
     <div className="leaders">
-      <div className="gallery">
-        <figure>
+      <LeadersMobile data={leadersData} />
+      {/* <div className="gallery">
+        
+         <figure>
           <div className="wrapper">
             <img src="../../static/images/about-us/max-savonin.jpg" alt="Max Savonin" />
             <div className="overlay">
@@ -35,7 +40,7 @@ const MeetOurLeaders = () => (
             <h3>Max Savonin</h3>
             <p>Chief Executive Officer</p>
           </figcaption>
-        </figure>
+        </figure> 
       </div>
       <ul className="values-toggler">
         <li
@@ -49,6 +54,7 @@ const MeetOurLeaders = () => (
         <li />
         <li />
       </ul>
+      */}
     </div>
   </div>
 );
