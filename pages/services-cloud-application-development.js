@@ -21,7 +21,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Scalable</b>
     <br />
-    &nbsp;Cloud solutions are perfectly scalable, and they easily adapt to workload fluctuations.
+    Cloud solutions are perfectly scalable, and they easily adapt to workload fluctuations.
   </>,
     },
     {
@@ -31,7 +31,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Data-friendly</b>
     <br />
-    &nbsp;Cloud apps can be seamlessly integrated with a database, data can be easily recovered.
+    Cloud apps can be seamlessly integrated with a database, data can be easily recovered.
   </>,
     },
     {
@@ -41,7 +41,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Reliable</b>
     <br />
-    &nbsp;Cloud-based applications are designed to withstand a heavy data load.
+    Cloud-based applications are designed to withstand a heavy data load.
   </>,
     },
     {
@@ -51,7 +51,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Easily managed</b>
     <br />
-    &nbsp;Cloud solutions are easier for the client to manage rather than
+    Cloud solutions are easier for the client to manage rather than
     traditional on-site solutions.
   </>,
     },
@@ -62,7 +62,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Convenient</b>
     <br />
-    &nbsp;Cloud-based solutions can be accessed from any location at any given point in time.
+    Cloud-based solutions can be accessed from any location at any given point in time.
   </>,
     },
     {
@@ -72,7 +72,7 @@ const ServicesCloudAppDev = () => {
   <>
     <b>Secure</b>
     <br />
-    &nbsp;These solutions are dependable if they are built properly and all the regulations
+    These solutions are dependable if they are built properly and all the regulations
     are followed.
   </>,
     },
