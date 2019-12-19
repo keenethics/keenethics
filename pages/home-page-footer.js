@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import FooterSlider from '../components/blocks/footer/footer-slider';
+import SocialButton from '../components/social-buttons/main';
 
 const HomeFooter = ({
   section,
@@ -176,6 +177,23 @@ const HomeFooter = ({
           <span className="bell-icon" />
         </div>
         <FooterSlider />
+      </div>
+      <div className="home-footer-row footer-links">
+        <div className="social-icons footer-links-terms">
+          <SocialButton />
+        </div>
+        <div className="footer-links-terms">
+          <Link href="#">
+            <a href="#" className="footer-links-link">
+              Privacy Statement
+            </a>
+          </Link>
+          <Link href="#">
+            <a href="#" className="footer-links-link">
+              Terms of Use
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   </div>

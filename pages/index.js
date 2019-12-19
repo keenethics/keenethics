@@ -82,6 +82,7 @@ export default class Index extends React.Component {
         // isDesktop,
       } = this.state;
       if (!isMobile && e.target.innerWidth < 768) {
+        console.log(isMobile);
         this.state.fpAPI.destroy();
         this.setState({
           isMobile: true,

@@ -4,35 +4,35 @@ import classnames from 'classnames';
 
 const platesContent = [
   {
-    icon: 'front-end-1.svg',
+    icon: 'icon-web.svg',
     text: 'Web Development',
   },
   {
-    icon: 'mobile-dev.svg',
+    icon: 'icon-mobile.svg',
     text: 'Mobile Development',
   },
   {
-    icon: 'rocket-icon.svg',
+    icon: 'icon-mvp.svg',
     text: 'Minimum Viable Product',
   },
   {
-    icon: 'pwa.svg',
+    icon: 'icon-pwa.svg',
     text: 'PWA Development',
   },
   {
-    icon: 'staff-aug.svg',
+    icon: 'icon-team.svg',
     text: 'Staff Augmentation',
   },
   {
-    icon: 'cloud.svg',
+    icon: 'icon-cloud.svg',
     text: 'Cloud Appliction Development Service',
   },
   {
-    icon: 'robot.svg',
+    icon: 'icon-ai.svg',
     text: 'Chatbots & AI Development',
   },
   {
-    icon: 'home.svg',
+    icon: 'icon-iot.svg',
     text: 'Internet of Things Development Services',
   },
 
@@ -59,7 +59,8 @@ const OurServices = ({ section, show }) => (
     >
       {platesContent.map((el) => (
         <div className="home-section-plates-item" key={el.text}>
-          <img className="plate-img" src={`/static/images/svg/${el.icon}`} alt="service icon" />
+          <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
+          <p className="plate-text">{el.text}</p>
         </div>
       ))}
       <div className="plates-grid plates-grid-v horizontal" />
