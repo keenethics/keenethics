@@ -6,6 +6,7 @@ import Main from '../components/blocks/main/Main';
 import OurMethods from '../components/blocks/our-methods/OurMethods';
 import Industries from '../components/blocks/industries/Industries';
 import TechStack from '../components/blocks/tech-stack/TechStack';
+import Partners from '../components/blocks/partners/Partners';
 import OurServices from './our-services';
 import Founders from './founders';
 import Projects from './home-page-projects';
@@ -120,6 +121,7 @@ export default class Index extends React.Component {
             posts={posts}
             setPostsContext={this.setPostsContext}
           />
+          <Partners />
           <LetsStart />
           <HomeFooter />
         </PostsContext.Provider>

@@ -616,6 +616,7 @@ $show-slide-pos: 0px;
 .home-page-rates-container {
   position: absolute;
   bottom: 0;
+  padding: 0 0 26px;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -634,7 +635,8 @@ $show-slide-pos: 0px;
       display: inline-block;
       text-transform: uppercase;
       line-height: 1.2;
-      width: 130px;
+      width: 140px;
+
       &.link:before {
         content: '';
         display: block;
@@ -642,10 +644,10 @@ $show-slide-pos: 0px;
         width: 28px;
         height: 28px;
         border-radius: 50%;
+        top: 3px;
         left: -46px;
       }
       &.link-upwork {
-        width: 106px;
         &:before {
           background: url('/static/images/svg/upwork 2.svg') no-repeat center;
         }
@@ -655,6 +657,10 @@ $show-slide-pos: 0px;
         &:before {
           background: url('/static/images/svg/upwork 3.svg') no-repeat center;
         }
+      }
+
+      &.link-clutch {
+        width: 150px;
       }
 
       &.link-clutch:before {
