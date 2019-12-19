@@ -14,27 +14,27 @@ import '../styles/content/development-and-quality-assurance.scss';
 const ServicesInternetOfThings = () => {
   const whatDoWeOfferIcons = [
     {
-      icon: '/static/services/development-and-quality-assurance/web-dev.png',
+      icon: '/static/services/development-and-quality-assurance/web-dev.svg',
       title: 'Custom Web App Development',
     },
     {
-      icon: '/static/services/development-and-quality-assurance/cloud.png',
+      icon: '/static/services/development-and-quality-assurance/cloud.svg',
       title: 'Cloud Application Development',
     },
     {
-      icon: '/static/services/development-and-quality-assurance/phone.png',
+      icon: '/static/services/development-and-quality-assurance/phone.svg',
       title: 'Mobile App Development',
     },
     {
-      icon: '/static/services/development-and-quality-assurance/iot.png',
+      icon: '/static/services/development-and-quality-assurance/iot.svg',
       title: 'Internet of Things Development',
     },
     {
-      icon: '/static/services/development-and-quality-assurance/icon-pwa.svg',
+      icon: '/static/services/development-and-quality-assurance/pwa.svg',
       title: 'Progressive Web App Development',
     },
     {
-      icon: '/static/services/development-and-quality-assurance/chatbot.png',
+      icon: '/static/services/development-and-quality-assurance/chatbot.svg',
       title: 'AI and Chatbot Development',
     },
   ];

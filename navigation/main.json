@@ -121,6 +121,18 @@
         "type": "icon"
       },
       {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "href": "/services-maintenance-and-support",
+        "icon": {
+          "name": "icon-maintenance-and-support",
+          "alt": "Maintenance and Support"
+        },
+        "type": "icon"
+      },
+      {
         "name": "Development and Quality Assurance",
         "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
         "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
@@ -141,6 +153,18 @@
         "icon": {
           "name": "design-icon",
           "alt": "Internet of Things"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "AI and Chatbot Development",
+        "metaTitle": "AI Chatbot Development Services – Keenethics",
+        "description": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "href": "/services-chatbots-artificial-intelligence",
+        "icon": {
+          "name": "icon-ai-chatbots",
+          "alt": "AI and Chatbot Development"
         },
         "type": "icon"
       }
