@@ -1,29 +1,23 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+
 import Posts from '../components/blog/posts';
 import PostsContext from '../components/context/posts-context';
 
-const KeenBlog = ({ section }) => {
+const KeenBlog = () => {
   const posts = useContext(PostsContext);
-  const topTitle = (
-    <h1 className="home-section-title">
-      Keen Blog
-    </h1>
-  );
+
   return (
-    <div className="section fp-auto-height keen-blog" id={section}>
-      {topTitle}
-      <Posts posts={posts.slice(-2)} />
+    <div className="block block-blog">
+      <header className="block--header">
+        <div className="block--header-title">
+          Keen Blog
+        </div>
+      </header>
+      <div className="block--content">
+        <Posts posts={posts.slice(-3)} />
+      </div>
     </div>
   );
-};
-
-KeenBlog.propTypes = {
-  section: PropTypes.string,
-};
-
-KeenBlog.defaultProps = {
-  section: '',
 };
 
 export default KeenBlog;

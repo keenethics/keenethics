@@ -1,18 +1,19 @@
 .tech-stack {
   &--block {
-    margin: 100px 0 0;
+    max-width: 990px;
+    margin: 0 auto 20px;
   }
 
   &--block-title {
     color: #12233d;
-    margin: 0 0 40px;
-    font-weight: bold;
-    font-size: 24px;
+    margin: 0 0 35px;
+    font-weight: 600;
+    font-size: 20px;
 
     &::after {
       content: '';
       display: block;
-      margin: 36px 0 0;
+      margin: 24px 0 0;
       background: #d62624;
       width: 86px;
       height: 2px;
@@ -21,6 +22,7 @@
 
   &--block-list {
     margin: 25px 0;
+
     @include clearfix;
   }
 
@@ -28,7 +30,14 @@
     display: flex;
     float: left;
     align-items: center;
-    height: 80px;
-    margin: 0 50px 0 0;
+    width: 96px;
+    height: 50px;
+    margin: 0 20px 40px 0;
+
+    img {
+      display: block;
+      width: 96px;
+      height: 50px;
+    }
   }
 }
