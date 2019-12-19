@@ -5,6 +5,8 @@ import { ContactUsContext } from '../context/contacts-context';
 import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
+  const DEFAULT_FILENAME = 'Attach your file';
+  const DEFAULT_FILESIZE = 'up to 10MB';
   const [stage, setStage] = useState({
     value: null,
     error: false,
@@ -14,7 +16,7 @@ const EstimateForm = () => {
     error: false,
   });
   const [pm, setPm] = useState({
-    value: null,
+    value: '',
     error: false,
   });
   const [budget, setBudget] = useState({
@@ -49,13 +51,13 @@ const EstimateForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState('Attach you file');
-  const [fileSize, setFileSize] = useState('up to 10MB');
+  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
+  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
   const unattachFile = (err) => {
     setFile(err);
-    setFileName('Attach you file');
-    setFileSize('up to 10MB');
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
   };
 
   const {
@@ -931,16 +933,20 @@ Start
             </div>
             <div className="input-cols">
               <FileUpload
-                text={(fileName.length > 10 && fileName !== 'Attach you file')
+                text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
                   ? fileName.substring(0, 10).concat('...')
                   : fileName}
                 limit={fileSize}
                 allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
                 onChange={
                   (e) => {
-                    setFile(e.target.files[0]);
-                    setFileName(e.target.files[0].name);
-                    setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
+                    if ((e.target.files[0] || {}).name) {
+                      setFile(e.target.files[0]);
+                      setFileName((e.target.files[0] || {}).name);
+                      setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
+                    } else {
+                      unattachFile({ value: '', error: false });
+                    }
                   }
                 }
               />
