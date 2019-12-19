@@ -159,15 +159,16 @@
           background: url('/static/images/svg/home/linkedin-button.svg') no-repeat;
         }
         &.soc-3 a {
-          background: url('/static/images/svg/home/github-logo.svg') no-repeat;
-          color: red;
-          background-color: blue;
+          background: url('/static/images/svg/home/github-logo (1).svg') no-repeat;
         }
         &.soc-5 a {
           background: url('/static/images/svg/home/twitter.svg') no-repeat;
         }
+        &.soc-6 {
+          display: none;
+        }
         &.soc-instagram a {
-          background: url('/static/images/svg/soc-instagram.svg') no-repeat;
+          background: url('/static/images/svg/home/instagram-logo(2).svg') no-repeat;
         }
       }
     }
