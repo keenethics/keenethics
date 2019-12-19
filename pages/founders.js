@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const Founders = ({ section }) => (
-  <div className="section fp-auto-height" id={section}>
-    <div className="section-founders">
+  <div className="block block-founders" id={section}>
+    <div className="section-founders block--content">
       <div className="founders-text-section">
         <h2 className="text-section-title">
           We founded KeenEthics because we knew that the tech world could do better.

@@ -1,7 +1,7 @@
 .lets-start {
     display: flex;
     justify-content: space-around;
-    padding: 130px 44px 0 16%;
+    padding-top: 130px;
     .lets-start-section {
         width: 50%;
         &.lets-start-text {
@@ -41,7 +41,7 @@
 
 @media (max-width: 660px) {
     .lets-start {
-        padding: 120px 24px 0;
+        padding-top: 120px;
         position: relative;
         justify-content: flex-start;
         .lets-start-text {
@@ -61,6 +61,12 @@
     .lets-start {
         .lets-start-text {
             width: 100%;
+        }
+        .lets-start__author-position {
+            max-width: 200px;
+        }
+        .lets-start-img {
+            background-size: 130%;
         }
     }
       

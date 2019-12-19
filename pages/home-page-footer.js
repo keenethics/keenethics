@@ -6,10 +6,9 @@ import SocialButton from '../components/social-buttons/main';
 
 const HomeFooter = ({
   section,
-  // isDesktop,
 }) => (
-  <div className="section fp-auto-height" id={section}>
-    <div className="home-footer">
+  <div className="block-footer" id={section}>
+    <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
@@ -200,7 +199,6 @@ const HomeFooter = ({
 );
 HomeFooter.propTypes = {
   section: PropTypes.string,
-  // isDesktop: PropTypes.bool.isRequired,
 };
 
 HomeFooter.defaultProps = {
