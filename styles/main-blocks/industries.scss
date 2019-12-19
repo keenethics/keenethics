@@ -163,3 +163,21 @@
     margin: 0 auto 4px;
   }
 }
+
+.see-projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 0 50px;
+
+  &--text {
+    margin-right: 15px;
+  }
+
+  .button {
+    background: linear-gradient(12.16deg, #DE3535 3.82%, #E3621D 96.18%);
+    color: #fff;
+  }
+}
