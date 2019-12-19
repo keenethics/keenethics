@@ -18,7 +18,7 @@ const WhyKeenethicsList = (props) => (
 );
 
 WhyKeenethicsList.propTypes = {
-  list: PropTypes.object,
+  list: PropTypes.array,
 };
 
 WhyKeenethicsList.defaultProps = {
