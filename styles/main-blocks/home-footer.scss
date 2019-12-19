@@ -1,6 +1,6 @@
 .home-footer {
   display: flex;
-  padding: 96px 44px;
+  padding: 96px 44px 44px;
   background-color: #12233D;
   color: #fff;
   flex-direction: column;
@@ -140,7 +140,49 @@
       background-image: url('/static/images/svg/home/right-arr.svg');
     }
   }
-  
+  .footer-links {
+    align-items: center;
+    .social-icons {
+      li {
+        a {
+          display: block;
+          width: 30px;
+          height: 30px;
+          background-size: 100%;
+          margin: 0 0 10px;
+        }
+        &.soc-1 a {
+          background: url('/static/images/svg/home/facebook-log.svg') no-repeat;
+          color: red;
+        }
+        &.soc-2 a {
+          background: url('/static/images/svg/home/linkedin-button.svg') no-repeat;
+        }
+        &.soc-3 a {
+          background: url('/static/images/svg/home/github-logo (1).svg') no-repeat;
+        }
+        &.soc-5 a {
+          background: url('/static/images/svg/home/twitter.svg') no-repeat;
+        }
+        &.soc-6 {
+          display: none;
+        }
+        &.soc-instagram a {
+          background: url('/static/images/svg/home/instagram-logo(2).svg') no-repeat;
+        }
+      }
+    }
+    .footer-links-terms {
+      .footer-links-link {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 30px;
+        &:hover {
+          color: #E3621D;
+        }
+      }
+    }
+  }
 }
 
 .bell-icon {
@@ -215,10 +257,21 @@
   }
 }
 
+@include for-tablet {
+  .home-footer .footer-links {
+    justify-content: center;
+    .social-icons {
+      display: none;
+    }
+  }
+}
 @include for-mobile {
   .home-footer {
     padding: 44px;
     .home-footer-row .home-footer-nav {
+      display: none;
+    }
+    .horizontal-divider {
       display: none;
     }
   } 
