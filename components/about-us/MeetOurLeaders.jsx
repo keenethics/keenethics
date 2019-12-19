@@ -14,8 +14,8 @@ const MeetOurLeaders = () => (
           <div className="wrapper">
             <img src="../../static/images/about-us/max-savonin.jpg" alt="Max Savonin" />
             <div className="overlay">
-              <a href='#'>Send an email</a>
-              <a href='#'>LinkedIn</a>
+              <a href="#">Send an email</a>
+              <a href="#">LinkedIn</a>
             </div>
           </div>
           <figcaption>
@@ -27,8 +27,8 @@ const MeetOurLeaders = () => (
           <div className="wrapper">
             <img src="../../static/images/about-us/max-savonin.jpg" alt="Max Savonin" />
             <div className="overlay">
-              <a href='#'>Send an email</a>
-              <a href='#'>LinkedIn</a>
+              <a href="#">Send an email</a>
+              <a href="#">LinkedIn</a>
             </div>
           </div>
           <figcaption>

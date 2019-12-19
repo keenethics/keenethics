@@ -36,11 +36,17 @@
   }
 
   .buttons {
-    display: inline-block;
+    display: flex;
+    flex-flow: row nowrap;
     padding: 0 25px;
     white-space: nowrap;
     margin-bottom: 30px;
-    transition: transform .3s ease;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
 
     button {
       display: inline-block;
@@ -76,20 +82,26 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: calc(100% * 4);
+    width: 100%;
     margin-bottom: 30px;
 
-    @media (min-width: $tablet-lg) {
-      width: calc(750px * 4);
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
     }
+    -ms-overflow-style: none;
 
-    @media (min-width: $desktop-lg) {
-      width: calc(900px * 4);
-    }
+    // @media (min-width: $tablet-lg) {
+    //   width: calc(750px * 4);
+    // }
+
+    // @media (min-width: $desktop-lg) {
+    //   width: calc(900px * 4);
+    // }
 
     li {
       color: #12233D;
-      flex: 1 1 100%;
+      min-width: 100%;
       padding: 0 25px;
       display: flex;
       justify-content: flex-start;
