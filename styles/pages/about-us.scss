@@ -1,7 +1,5 @@
 .page__about-us {
   padding: 0;
-  // TODO remove
-  padding-bottom: 2000px;
 
   .page__header {
     padding: 105px 25px 60px;
@@ -116,5 +114,17 @@
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.1px;
+  }
+
+  .lets-start {
+
+    @media (min-width: $desktop-md) {
+      padding: 80px 150px 0 19%;
+
+      .lets-start-text {
+        padding-top: 20px;
+      }
+    }
+    
   }
 }
