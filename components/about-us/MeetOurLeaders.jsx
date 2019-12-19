@@ -1,5 +1,6 @@
 import React from 'react';
 import LeadersMobile from './LeadersMobile';
+import LeadersDesktop from './LeadersDesktop';
 
 import leadersData from '../../data/leaders';
 
@@ -13,48 +14,7 @@ const MeetOurLeaders = () => (
     </div>
     <div className="leaders">
       <LeadersMobile data={leadersData} />
-      {/* <div className="gallery">
-        
-         <figure>
-          <div className="wrapper">
-            <img src="../../static/images/about-us/max-savonin.jpg" alt="Max Savonin" />
-            <div className="overlay">
-              <a href="#">Send an email</a>
-              <a href="#">LinkedIn</a>
-            </div>
-          </div>
-          <figcaption>
-            <h3>Max Savonin</h3>
-            <p>Chief Executive Officer</p>
-          </figcaption>
-        </figure>
-        <figure>
-          <div className="wrapper">
-            <img src="../../static/images/about-us/max-savonin.jpg" alt="Max Savonin" />
-            <div className="overlay">
-              <a href="#">Send an email</a>
-              <a href="#">LinkedIn</a>
-            </div>
-          </div>
-          <figcaption>
-            <h3>Max Savonin</h3>
-            <p>Chief Executive Officer</p>
-          </figcaption>
-        </figure> 
-      </div>
-      <ul className="values-toggler">
-        <li
-          className="active"
-        />
-        <li />
-        <li />
-        <li />
-        <li />
-        <li />
-        <li />
-        <li />
-      </ul>
-      */}
+      <LeadersDesktop data={leadersData} />
     </div>
   </div>
 );

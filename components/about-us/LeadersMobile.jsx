@@ -60,7 +60,7 @@ const LeadersMobile = ({ data }) => {
         </div>
       </div>
 
-      <ul className="values-toggler">
+      <ul className="values-toggler mobile">
         {
           data.map((_, i) => (
             <li

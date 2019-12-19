@@ -10,7 +10,7 @@
   h2 {
     margin-bottom: 30px;
 
-    @media (min-width: $desktop-lg) {
+    @media (min-width: $desktop-md) {
       font-size: 34px;
       line-height: 40px;
       margin-bottom: 25px;
@@ -28,10 +28,10 @@
       margin-bottom: 30px;
     }
 
-    @media (min-width: $desktop-lg) {
+    @media (min-width: $desktop-md) {
       font-size: 18px;
       line-height: 28px;
-      margin-bottom: 65px;
+      margin-bottom: 120px;
     }
   }
 
@@ -73,8 +73,9 @@
       margin-bottom: 50px;
     }
 
-    @media (min-width: $desktop-lg) {
-      margin-bottom: 100px;
+    @media (min-width: $desktop-md) {
+      margin-bottom: 90px;
+      justify-content: center;
     }
   }
 
@@ -153,11 +154,26 @@
         }
       }
 
-      @media (min-width: $desktop-lg) {
-        
+      @media (min-width: $desktop-md) {
+        height: 440px;
+        max-width: none;
+
+        img {
+          width: 620px;
+        }
 
         h4 {
           font-size: 24px;
+        }
+
+        .caption {
+          max-width: 520px;
+          padding: 55px 40px;
+
+          p {
+            font-size: 16px;
+            line-height: 26px;
+          }
         }
       }
     }
