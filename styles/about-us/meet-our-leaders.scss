@@ -116,6 +116,32 @@
       }
 
       flex-flow: row nowrap;
+
+      figure {
+        overflow: hidden;
+
+        .figure-images {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 300%;
+          transition: transform .3s ease;
+
+          .wrapper {
+            flex: 0 0 260px;
+          }
+        }
+
+        .figcaptions {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 300%;
+          transition: transform .3s ease;
+
+          figcaption {
+            flex: 0 0 260px;
+          }
+        }
+      }
     }
   }
 

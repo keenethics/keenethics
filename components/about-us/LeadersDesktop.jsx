@@ -11,48 +11,104 @@ const LeadersDesktop = ({ data }) => {
   const arrowClick = ({ target: { classList } }) => {
     if (classList.contains('left') && step > 0) {
       setStep(step - 1);
-    } else if (classList.contains('right') && step < data.length) {
+    } else if (classList.contains('right') && step < 2) {
       setStep(step + 1);
     }
   };
+
+  // animation required even number of pictures but we have odd
+  const leftData = [...data];
+  leftData.push(data[0]);
+
+  console.log('before', [...leftData]);
+
+  const rightData = leftData.splice(leftData.length / 2, leftData.length);
+  console.log('left', leftData);
+  console.log('right', rightData);
 
   return (
     <>
       <div className="gallery desktop">
         <figure>
-          <div className="wrapper">
-            <img
-              src={`static/images/about-us/leaders/max-savonin.jpg`}
-              alt="Max Savonin"
-            />
-            <div className="overlay">
-              <a href="#">Send an email</a>
-              <a href="#">LinkedIn</a>
-            </div>
+          <div
+            className="figure-images"
+            style={{
+              transform: `translateX(-${step * 260}px)`,
+            }}
+          >
+            {
+              leftData
+                .map((item) => (
+                  <div className="wrapper" key={item.name}>
+                    <img
+                      src={`static/images/about-us/leaders/${item.picture}.jpg`}
+                      alt={item.name}
+                    />
+                    <div className="overlay">
+                      <a href={item.email}>Send an email</a>
+                      <a href={item.linkedin}>LinkedIn</a>
+                    </div>
+                  </div>
+                ))
+            }
           </div>
 
-          <figcaption>
-            <h3>Max Savonin</h3>
-            <p>Chief Executive Officer</p>
-          </figcaption>
+          <div
+            className="figcaptions"
+            style={{
+              transform: `translateX(-${step * 260}px)`,
+            }}
+          >
+            {
+              leftData.map((item) => (
+                <figcaption key={item.position}>
+                  <h3>{item.name}</h3>
+                  <p>{item.position}</p>
+                </figcaption>
+              ))
+            }
+          </div>
         </figure>
 
         <figure>
-          <div className="wrapper">
-            <img
-              src={`static/images/about-us/leaders/irene-krot.jpg`}
-              alt="Irene Krot"
-            />
-            <div className="overlay">
-              <a href="#">Send an email</a>
-              <a href="#">LinkedIn</a>
-            </div>
+          <div
+            className="figure-images"
+            style={{
+              transform: `translateX(-${step * 260}px)`,
+            }}
+          >
+            {
+              rightData
+                .map((item) => (
+                  <div className="wrapper" key={item.name}>
+                    <img
+                      src={`static/images/about-us/leaders/${item.picture}.jpg`}
+                      alt={item.name}
+                    />
+                    <div className="overlay">
+                      <a href={item.email}>Send an email</a>
+                      <a href={item.linkedin}>LinkedIn</a>
+                    </div>
+                  </div>
+                ))
+              }
           </div>
 
-          <figcaption>
-            <h3>Irene Krot</h3>
-            <p>Head of Partner Engagement</p>
-          </figcaption>
+          <div
+            className="figcaptions"
+            style={{
+              transform: `translateX(-${step * 260}px)`,
+            }}
+          >
+            {
+              rightData.map((item) => (
+                <figcaption key={item.position}>
+                  <h3>{item.name}</h3>
+                  <p>{item.position}</p>
+                </figcaption>
+              ))
+            }
+          </div>
         </figure>
       </div>
 
