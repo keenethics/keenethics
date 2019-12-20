@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, memo } from 'react';
 
 import Posts from '../components/blog/posts';
 import PostsContext from '../components/context/posts-context';
@@ -14,10 +14,10 @@ const KeenBlog = () => {
         </div>
       </header>
       <div className="block--content">
-        <Posts posts={posts.slice(-3)} />
+        <Posts posts={posts.slice(-2)} />
       </div>
     </div>
   );
 };
 
-export default KeenBlog;
+export default memo(KeenBlog);

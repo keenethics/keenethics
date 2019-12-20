@@ -100,16 +100,10 @@ export default class Index extends React.Component {
         <OurMethods />
         <Industries />
         <Founders />
-        <Projects
-          isMobile={isMobile}
-        />
+        <Projects />
         <TechStack />
         <PostsContext.Provider value={posts}>
-          <Blog
-            posts={posts}
-            setPostsContext={this.setPostsContext}
-            isMobile={isMobile}
-          />
+          <Blog />
           <Partners />
           <LetsStart />
           <HomeFooter />
