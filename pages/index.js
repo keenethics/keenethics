@@ -51,75 +51,64 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
-
-    // this.setPostsContext = this.setPostsContext.bind(this);
-    // this.getPosts = this.getPosts.bind(this);
+    this.state = {
+      isLoading: true,
+      isMobile: false,
+    };
   }
-
-  // componentDidMount() {
-  // window.addEventListener('resize', (e) => {
-  //   const {
-  //     isMobile,
-  //     // isDesktop,
-  //   } = this.state;
-  //   if (!isMobile && e.target.innerWidth < 768) {
-  //     this.setState({
-  //       isMobile: true,
-  //       isFPDestroyed: true,
-  //     });
-  //     return;
-  //   }
-  //   if (isMobile && e.target.innerWidth >= 768) {
-  //     this.setState({
-  //       isMobile: false,
-  //       isFPDestroyed: false,
-  //     });
-  //   }
-  // if (isDesktop && e.target.innerWidth <= 1024) {
-  //   this.setState({
-  //     isDesktop: false,
-  //   });
-  // }
-  // if (!isDesktop && e.target.innerWidth >= 1024) {
-  //   this.setState({
-  //     isDesktop: true,
-  //   });
-  // }
-  // });
-  // this.getPosts();
-  // this.setState({ isMobile: window.innerWidth <= 768 });
-  // }
 
   static async getInitialProps() {
     const contResp = await getPostsList();
 
     return { posts: contResp && contResp.items ? contResp.items : [] };
   }
-  // const getPosts = async () => {
-  //   const res = await getPostsList();
-  //   const posts = res.items;
-  //   setTest(posts.slice(-2));
-  //   setPostsContext(posts);
-  // };
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', ({ target }) => {
+        if (target) {
+          this.setState({
+            isLoading: false,
+            isMobile: target.innerWidth < 768,
+          });
+        }
+      });
+
+      this.setState({
+        isLoading: false,
+        isMobile: window.innerWidth < 768,
+      });
+    }
+  }
 
   render() {
     const { posts } = this.props;
+    const {
+      isLoading,
+      isMobile,
+    } = this.state;
+
+    if (isLoading) return null;
 
     return (
       <Layout>
         <JsonLd data={companyData} />
         <Main />
-        <OurServices />
+        <OurServices
+          isMobile={isMobile}
+        />
         <OurMethods />
         <Industries />
         <Founders />
-        <Projects />
+        <Projects
+          isMobile={isMobile}
+        />
         <TechStack />
         <PostsContext.Provider value={posts}>
           <Blog
             posts={posts}
             setPostsContext={this.setPostsContext}
+            isMobile={isMobile}
           />
           <Partners />
           <LetsStart />
