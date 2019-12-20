@@ -71,8 +71,10 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      .home-page-large-title, .home-page-small-title {
-        color: #fff;
+      .home-page-content-titles {
+        .home-page-large-title, .home-page-small-title {
+          color: #fff;
+        }
       }
     }
     .vertical-line {
