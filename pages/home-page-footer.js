@@ -41,57 +41,57 @@ const services = [
 const industries = [
   {
     title: 'Education',
-    url: ''
+    url: '',
   },
   {
     title: 'Business',
-    url: ''
+    url: '',
   },
   {
     title: 'Healthcare',
-    url: ''
+    url: '',
   },
   {
     title: 'Retail',
-    url: ''
+    url: '',
   },
   {
     title: 'Agriculture',
-    url: ''
+    url: '',
   },
   {
     title: 'Hospitality and Entertainment',
-    url: ''
+    url: '',
   },
   {
     title: 'Real Estate',
-    url: ''
+    url: '',
   },
   {
     title: 'Finance and Banking',
-    url: ''
+    url: '',
   },
 ];
 const technologies = [
   {
     title: 'AMP Development ',
-    url: ''
+    url: '',
   },
   {
     title: 'Team Enhancement ',
-    url: ''
+    url: '',
   },
   {
     title: 'Support & Tech Consultancy',
-    url: ''
+    url: '',
   },
   {
     title: 'Chatbots & Programmable Voice',
-    url: ''
+    url: '',
   },
   {
     title: 'Internet of Things',
-    url: ''
+    url: '',
   },
 ];
 const careers = [

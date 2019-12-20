@@ -75,7 +75,17 @@
     padding-bottom: 24px;
   }
 
+  .page__item {
+    width: 50%;
+  }
+
   .page__item-figure {
     background: transparent;
+  }
+}
+
+@media (max-width: 440px) {
+  .block.block-blog .page__item {
+    width: 100%;
   }
 }

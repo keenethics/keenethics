@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SeeProjects from './SeeProjects';
+
 const Industries = () => (
   <div className="block block-industries">
     <div className="block-content">
@@ -137,6 +139,7 @@ const Industries = () => (
               </div>
             </div>
           </div>
+          <SeeProjects />
         </div>
       </div>
     </div>
