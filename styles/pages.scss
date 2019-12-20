@@ -99,63 +99,69 @@
   float: left;
   width: calc(100% - 350px);
   height: 100%;
-  .home-page-large-title {
-    font-size: 44px;
-    color: #12233D;
-    letter-spacing: 1px;
-    margin: 0px 0 28px;
-    font-weight: 900;
-    line-height: 60px;
-    &.faded {
-      opacity: 0;
-      animation: fade-out-title 2s linear;
+  display: flex;
+  flex-direction: column;
+  .home-page-content-titles {
+    flex-grow: 1;
+    .home-page-large-title {
+      font-size: 44px;
+      color: #12233D;
+      letter-spacing: 1px;
+      margin: 0px 0 28px;
+      font-weight: 900;
+      line-height: 60px;
+      &.faded {
+        opacity: 0;
+        animation: fade-out-title 2s linear;
+      }
+      @include for-mobile {
+        font-size: 24px;
+        line-height: 34px;
+      }
     }
-    @include for-mobile {
-      font-size: 24px;
-      line-height: 34px;
-    }
-  }
-  h2 {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .8);
-    line-height: 1.2;
-
-    @include for-mobile {
-      margin-right: 40px;
-    }
-    .dash {
-      display: inline-block;
-      position: relative;
-      vertical-align: top;
-      margin: 0 16px 0 8px;
-      top: 7px;
-      width: 22px;
-      height: 1px;
-      background: #bfafc6;
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 6px;
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .8);
+      line-height: 1.2;
+  
+      @include for-mobile {
+        margin-right: 40px;
+      }
+      .dash {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        margin: 0 16px 0 8px;
+        top: 7px;
+        width: 22px;
         height: 1px;
         background: #bfafc6;
-        left: auto;
-        right: -9px;
-        top: 0;
+  
+        &:after {
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 1px;
+          background: #bfafc6;
+          left: auto;
+          right: -9px;
+          top: 0;
+        }
+      }
+    }
+    .home-page-small-title {
+      color: #12233D;
+      text-transform: uppercase;
+      font-weight: bold;
+      &.faded {
+        opacity: 0;
+        animation: fade-out-top 1s linear;
       }
     }
   }
-  .home-page-small-title {
-    color: #12233D;
-    text-transform: uppercase;
-    font-weight: bold;
-    &.faded {
-      opacity: 0;
-      animation: fade-out-top 1s linear;
-    }
-  }
+  
   .button {
     border-radius: 35px;
     padding: 18px 60px;
@@ -632,11 +638,8 @@ $show-slide-pos: 0px;
 	}
 }
 .home-page-rates-container {
-  position: absolute;
-  bottom: 0;
   padding: 0 0 26px;
   display: flex;
-  width: 100%;
   justify-content: flex-start;
 
   .home-page-content-link {
@@ -853,6 +856,20 @@ $show-slide-pos: 0px;
       margin-right: 16px;
       &:hover {
         opacity: .35;
+      }
+    }
+    li {
+      &.soc-1 a {
+        background: url('/static/images/svg/home/social/facebook-log.svg') no-repeat;
+      }
+      &.soc-2 a {
+        background: url('/static/images/svg/home/social/linkedin-button.svg') no-repeat;
+      }
+      &.soc-3 a {
+        background: url('/static/images/svg/home/social/github-logo.svg') no-repeat;
+      }
+      &.soc-5 a {
+        background: url('/static/images/svg/home/social/twitter.svg') no-repeat;
       }
     }
   }
@@ -1472,6 +1489,36 @@ $show-slide-pos: 0px;
 
 // breakpoints styles
 // breakpoints
+
+@media (min-width: 1440px) {
+  .home-page {
+    .home-page-content {
+      margin: 0 auto;
+      .home-page-small-title {
+        font-size: 22px
+      }
+      .vertical-line {
+        height: 111px;
+      }
+      .home-page-large-title {
+        font-size: 72px;
+      }
+      .home-page-rates-container {
+        .home-page-content-link a {
+          width: 205px;
+          font-size: 22px;
+        }
+      }
+      .home-page-content-link a.link-clutch {
+        width: 240px;
+      }
+    }
+  }
+  .side-info-top .side-info-top-content {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 1024px) {
   .our-services .home-section-plates-item {
     flex: 1 0 200px;

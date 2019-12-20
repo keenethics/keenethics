@@ -8,22 +8,24 @@ const Main = () => (
   <div className="block block-main">
     <div className="home-page">
       <div className="home-page-content">
-        <div className="social-icons home-page-social">
-          <SocialButton />
+        <div className="home-page-content-titles">
+          <div className="social-icons home-page-social">
+            <SocialButton />
+          </div>
+          <h4 className="home-page-small-title">
+            Keen &amp; Ethical Software
+            <br />
+            Development
+          </h4>
+          <div className="vertical-line" />
+          <h1 className="home-page-large-title">
+            Full-cycle
+            <br />
+            web and mobile
+            <br />
+            development partner
+          </h1>
         </div>
-        <h4 className="home-page-small-title">
-          Keen &amp; Ethical Software
-          <br />
-          Development
-        </h4>
-        <div className="vertical-line" />
-        <h1 className="home-page-large-title">
-          Full-cycle
-          <br />
-          web and mobile
-          <br />
-          development partner
-        </h1>
         <div className="home-page-rates-container">
           <div className="home-page-content-link">
             <a
