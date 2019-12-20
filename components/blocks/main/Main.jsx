@@ -13,13 +13,13 @@ const Main = () => (
             <SocialButton />
           </div>
           <h4 className="home-page-small-title">
-            Keen &amp; Ethical Software
+            WE SOLVE YOUR BUSINESS CHALLENGES
             <br />
-            Development
+            WITH FULL-CYCLE DEVELOPMENT
           </h4>
           <div className="vertical-line" />
           <h1 className="home-page-large-title">
-            Full-cycle
+            Ethical
             <br />
             web and mobile
             <br />
@@ -67,7 +67,7 @@ const Main = () => (
         </Link>
       </div>
       <div className="scroll-info-container">
-        <p className="vertical-text">scroll down to see more</p>
+        <p className="vertical-text">SCROLL DOWN TO LEARN MORE</p>
         <button className="mouse-scroll" type="button">
           <span className="mouse-scroll-wheel" />
         </button>

@@ -21,27 +21,27 @@ const platesContent = [
   },
   {
     icon: 'icon-pwa.svg',
-    text: 'PWA Development',
+    text: 'Progressive Web Apps',
     href: 'tech-apps-progressive-web-apps',
   },
   {
     icon: 'icon-team.svg',
-    text: 'Staff Augmentation',
+    text: 'Dedicated Development Team',
     href: 'services-dedicated-development-team',
   },
   {
     icon: 'icon-cloud.svg',
-    text: 'Cloud Appliction Development Service',
+    text: 'Cloud App Development',
     href: 'services-cloud-application-development',
   },
   {
     icon: 'icon-ai.svg',
-    text: 'Chatbots & AI Development',
+    text: 'Chatbots & Artificial Intelligence',
     href: 'services-chatbots-artificial-intelligence',
   },
   {
     icon: 'icon-iot.svg',
-    text: 'Internet of Things Development Services',
+    text: 'Internet of Things',
     href: 'services-internet-of-things',
   },
 
