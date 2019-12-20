@@ -257,7 +257,7 @@ const ServicesInternetOfThings = () => {
                 <img style={{ maxHeight: '100px' }} src="/static/services/internet-of-things/images.png" alt="C" />
               </li>
               <li className="technologies-item">
-                <img style={{ maxHeight: '100px' }} src="/static/services/internet-of-things/c++logo.png" alt="C++" />
+                <img style={{ maxHeight: '100px' }} src="/static/services/internet-of-things/cpluspluslogo.png" alt="C++" />
               </li>
               <li className="technologies-item">
                 <img style={{ maxHeight: '100px' }} src="/static/services/internet-of-things/esp32.png" alt="ESP32" />
