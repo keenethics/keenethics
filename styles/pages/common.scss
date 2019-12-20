@@ -19,6 +19,7 @@
 
 .page__header {
   padding: 75px 0 60px;
+  text-align: center;
 
   @media (min-width: $tablet-sm) {
     padding: 115px 0 95px;
@@ -59,6 +60,7 @@
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: left;
 
   font-size: 28px;
   line-height: 40px;

@@ -54,6 +54,7 @@
     "react-slick": "^0.15.4",
     "react-slidedown": "^2.4.4",
     "react-syntax-highlighter": "^11.0.2",
+    "react-use-gesture": "^6.0.14",
     "string-format-validation": "^2.0.2",
     "webpack": "^4.39.3"
   },
