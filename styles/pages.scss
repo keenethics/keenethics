@@ -1482,8 +1482,13 @@ $show-slide-pos: 0px;
   .home-section-plates {
     justify-content: center
   }
-  .our-services .plates-grid {
-    display: none;
+  .our-services {
+    .plates-grid {
+      display: none;
+    }
+    .home-section-plates-item {
+      flex: 1 0 30%;
+    }
   }
 }
 // @media (max-width: 768px) {
@@ -1504,5 +1509,14 @@ $show-slide-pos: 0px;
         width: 100%;
       }
     }
+  }
+  .our-services .home-section-plates-item {
+    flex: 1 0 30%;
+  }
+}
+
+@include for-mobile {
+  .our-services .home-section-plates-item {
+    flex: 1 0 50%;
   }
 }

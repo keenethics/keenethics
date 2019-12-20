@@ -113,9 +113,11 @@
         padding: 15px;
         display: flex;
         font-size: 14px;
+        text-align: left;
         .slide-date {
           font-weight: 200;
           color: #87919e;
+          min-width: 50px;
         }
         .slide-title {
           font-weight: 600;
@@ -188,6 +190,9 @@
         }
       }
     }
+  }
+  .footer-slider {
+    padding: 0 70px;
   }
 }
 
@@ -281,7 +286,7 @@
 @include for-mobile {
   .block-footer {
     .home-footer {
-      padding: 44px;
+      padding: 32px;
       .align-right {
         display: block;
         text-align: left;
@@ -295,6 +300,9 @@
       }
       .home-footer-nav {
         display: none;
+      }
+      .footer-links {
+        font-size: 12px;
       }
     }
   }

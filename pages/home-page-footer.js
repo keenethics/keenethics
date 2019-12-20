@@ -7,7 +7,7 @@ import SocialButton from '../components/social-buttons/main';
 const HomeFooter = ({
   section,
 }) => (
-  <div className="block-footer" id={section}>
+  <div className="block block-footer" id={section}>
     <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
