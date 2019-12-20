@@ -19,7 +19,7 @@ const Founders = ({ section }) => (
 
         </p>
         <Link href="/contacts?activeForm=estimate">
-          <a className="button contacts-goal">Our Story</a>
+          <a className="button contacts-goal orange-btn">Our Story</a>
         </Link>
       </div>
       <div className="founders-img-container">

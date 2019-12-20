@@ -178,7 +178,7 @@ class Navigation extends React.Component {
           </ul>
           <div className="navigation-footer">
             <Link href="/contacts">
-              <a className="button contacts-goal">Contact us</a>
+              <a className="button contacts-goal orange-btn">Contact us</a>
             </Link>
           </div>
         </div>

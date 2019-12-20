@@ -813,7 +813,20 @@ $show-slide-pos: 0px;
     }
   }
 }
-
+body .orange-btn {
+  background: linear-gradient(12.15deg, #DE3535 3.82%, #E3621D 96.18%);
+  color: #fff;
+  &:hover {
+    box-shadow: 0px 4px 8px rgba(227, 98, 29, 0.4);
+    background: linear-gradient(12.15deg, #DE3535 3.82%, #E3621D 96.18%);
+    color: #fff;
+  }
+  &:active:hover {
+    color: #fff;
+    background: linear-gradient(12.15deg, #C22929 3.82%, #D05B1D 96.18%);
+    box-shadow: 0px 4px 8px rgba(227, 98, 29, 0.4);
+  }
+}
 .section-founders {
  display: flex;
  padding-top: 50px;

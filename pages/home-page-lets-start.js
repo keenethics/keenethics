@@ -25,7 +25,7 @@ const LetsStart = ({ section }) => (
               Head of Partner Engagement
           </p>
           <Link href="/contacts?activeForm=estimate">
-            <a className="button lets-start-btn">Let&#39;s start</a>
+            <a className="button lets-start-btn orange-btn">Let&#39;s start</a>
           </Link>
         </div>
         <div className="lets-start-section lets-start-img">
