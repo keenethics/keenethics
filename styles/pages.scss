@@ -72,6 +72,9 @@
       justify-content: center;
       flex-direction: column;
       .home-page-content-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .home-page-large-title, .home-page-small-title {
           color: #fff;
         }
