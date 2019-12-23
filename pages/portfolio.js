@@ -64,6 +64,10 @@ class Portfolio extends React.Component {
     return { selectedCategories, categoriesList: uniqCategories };
   }
 
+  filterOnChange(selectedCategories) {
+    this.setState({ selectedCategories });
+  }
+
   worksCountFor(work) {
     const { selectedCategories } = this.state;
     // When no categories selected - show all works
@@ -73,10 +77,6 @@ class Portfolio extends React.Component {
     return work.category.main.some((category) => selectedCategories.includes(category));
   }
 
-  filterOnChange(selectedCategories) {
-    this.setState({ selectedCategories });
-  }
-
   wrapperCondition(component) {
     return <Layout>{component}</Layout>;
   }
@@ -84,15 +84,14 @@ class Portfolio extends React.Component {
   render() {
     const { selectedCategories, categoriesList } = this.state;
     const {
-      isFullPage,
+      postIds,
       pageTitle,
       topTitle,
       isMobile,
     } = this.props;
-    const filteredWorks = works.filter(this.worksCountFor);
-    let worksSliceToShow = 0;
-    if (isFullPage) {
-      worksSliceToShow = isMobile ? filteredWorks.length - 2 : filteredWorks.length - 3;
+    let filteredWorks = works.filter(this.worksCountFor);
+    if (postIds.length && selectedCategories.length) {
+      filteredWorks = filteredWorks.slice(isMobile ? -2 : -3);
     }
     const portfolioComponent = (
       <section className="portfolio page__wrapper">
@@ -112,30 +111,33 @@ class Portfolio extends React.Component {
           filterOnChange={this.filterOnChange}
           pageTitle={pageTitle || 'portfolio'}
         />
-        {
-          works.length
-            ? <Works works={filteredWorks.slice(worksSliceToShow)} />
-            : null
-        }
+        {(!selectedCategories.length && postIds.length) && (
+          <Works works={
+            filteredWorks.filter((work) => postIds.some((title) => title === work.title))
+              .slice(isMobile ? -2 : 0)
+          }
+          />
+        )}
+        {works.length && selectedCategories.length ? <Works works={filteredWorks} /> : null}
       </section>
     );
-    return isFullPage ? portfolioComponent : this.wrapperCondition(portfolioComponent);
+    return postIds.length ? portfolioComponent : this.wrapperCondition(portfolioComponent);
   }
 }
 
 Portfolio.propTypes = {
   router: PropTypes.object,
-  isFullPage: PropTypes.bool,
+  postIds: PropTypes.array,
   pageTitle: PropTypes.string,
   topTitle: PropTypes.node,
   isMobile: PropTypes.bool,
 };
 Portfolio.defaultProps = {
   router: {},
-  isFullPage: false,
+  postIds: [],
+  isMobile: false,
   pageTitle: '',
   topTitle: '',
-  isMobile: false,
 };
 
 export default withRouter(Portfolio);
