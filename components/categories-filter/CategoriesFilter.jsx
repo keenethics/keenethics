@@ -7,36 +7,40 @@ import { SlideDown } from 'react-slidedown';
 
 import CategoryButton from './CategoryButton';
 
-// button width + margin-right
-const CATEGORY_BUTTON_WIDTH_DESKTOP = 150 + 10;
-
-const getVisibleLinksAmount = (screenWidth) => {
-  if (screenWidth >= 960 && screenWidth < 1024) {
-    return 3;
-  }
-  if (screenWidth >= 1024 && screenWidth < 1280) {
-    return 2;
-  }
-  if (screenWidth >= 1280 && screenWidth < 1440) {
-    return 4;
-  }
-  if (screenWidth >= 1440 && screenWidth < 1600) {
-    return 6;
-  }
-  if (screenWidth >= 1600) {
-    return 8;
-  }
-  return NaN;
-};
+// button width
+const CATEGORY_BUTTON_WIDTH_DESKTOP = 170;
 
 class CategoriesFilter extends React.Component {
   handleResize = debounce(() => {
     const { isMobile } = this.state;
-    if (window.innerWidth < 960 && !isMobile) {
-      this.setState({ isMobile: true });
-    } else if (window.innerWidth >= 960 && (isMobile || isMobile === null)) {
-      this.setState({ isMobile: false, isExpanded: false });
+    const { categoriesList } = this.props;
+    const newState = {};
+
+    const leftMenuWidth = 160;
+    const containerPadding = 30;
+    const rigthButtonsWidth = 300;
+
+    const buttonsWidth = CATEGORY_BUTTON_WIDTH_DESKTOP * categoriesList.length;
+
+    // TODO Replace -10 with scroll width
+    newState.sliderWidth = window.innerWidth - leftMenuWidth - 2
+      * containerPadding - rigthButtonsWidth - 10;
+
+    if (newState.sliderWidth >= buttonsWidth) {
+      newState.arrowsIsHidden = true;
+    } else {
+      newState.arrowsIsHidden = false;
     }
+
+    newState.scroll = 0;
+
+    if (window.innerWidth < 994 && !isMobile) {
+      newState.isMobile = true;
+    } else if (window.innerWidth >= 994 && (isMobile || isMobile === null)) {
+      newState.isMobile = false;
+      newState.isExpanded = false;
+    }
+    this.setState({ ...newState });
   })
 
   constructor() {
@@ -45,6 +49,8 @@ class CategoriesFilter extends React.Component {
       isExpanded: false,
       isMobile: null,
       scroll: 0,
+      sliderWidth: 0,
+      arrowsIsHidden: false,
     };
   }
 
@@ -62,27 +68,52 @@ class CategoriesFilter extends React.Component {
   }
 
   scroll = (step) => {
-    const { scroll } = this.state;
+    const { scroll, sliderWidth } = this.state;
     const { categoriesList } = this.props;
 
-    // prevent switching to unexistent steps
-    if (
-      (step === -1 && scroll === 0)
-      || (step === 1 && scroll === categoriesList.length)
-    ) {
-      return;
-    }
+    const buttonsWidth = CATEGORY_BUTTON_WIDTH_DESKTOP * categoriesList.length - 0;
 
-    // prevent scrolling to blank space
-    if (
-      step === 1
-      && scroll > categoriesList.length - getVisibleLinksAmount(window.innerWidth)
-    ) {
-      return;
-    }
+    let newScroll;
 
-    this.setState({ scroll: scroll + step });
+    if (step === 1) {
+      newScroll = scroll - 250;
+      if ((buttonsWidth - sliderWidth) + newScroll < 0) {
+        newScroll = sliderWidth - buttonsWidth - 10;
+        setTimeout(() => {
+          this.setState({ scroll: newScroll + 10 });
+        }, 100);
+      }
+    } else if (step === -1) {
+      newScroll = scroll + 250;
+      if (newScroll > 0) {
+        newScroll = 10;
+        setTimeout(() => {
+          this.setState({ scroll: newScroll - 10 });
+        }, 100);
+      }
+    }
+    this.setState({ scroll: newScroll });
   };
+
+  scrollIfOutside = (category) => {
+    const { scroll, sliderWidth } = this.state;
+    const { categoriesList } = this.props;
+    const leftPosition = categoriesList.indexOf(category) * CATEGORY_BUTTON_WIDTH_DESKTOP;
+
+    if (scroll + leftPosition < 0) {
+      setTimeout(() => {
+        this.setState({ scroll: leftPosition * -1 });
+      }, 100);
+    }
+
+    const rigthPosition = (categoriesList.indexOf(category) + 1) * CATEGORY_BUTTON_WIDTH_DESKTOP;
+
+    if (scroll + rigthPosition > sliderWidth) {
+      setTimeout(() => {
+        this.setState({ scroll: sliderWidth - rigthPosition });
+      }, 100);
+    }
+  }
 
   selectCategory = (category) => {
     const {
@@ -96,6 +127,7 @@ class CategoriesFilter extends React.Component {
 
     if (position === -1) {
       selectedItems.push(category);
+      this.scrollIfOutside(category);
     } else {
       selectedItems.splice(position, 1);
     }
@@ -133,7 +165,12 @@ class CategoriesFilter extends React.Component {
 
   render() {
     const { pageTitle, categoriesList, selectedCategories } = this.props;
-    const { isExpanded, isMobile, scroll } = this.state;
+    const {
+      isExpanded,
+      isMobile,
+      scroll,
+      arrowsIsHidden,
+    } = this.state;
 
     return (
       <>
@@ -200,13 +237,13 @@ class CategoriesFilter extends React.Component {
           }
 
           {
-            isMobile === false
+            !isMobile
             && (
               <div className="filter__wrapper">
                 <ul className="filter__list">
                   <div
                     className="filter__categories"
-                    style={{ left: scroll * (-1 * CATEGORY_BUTTON_WIDTH_DESKTOP) }}
+                    style={{ left: scroll }}
                   >
                     {categoriesList.map((category) => (
                       <li className="filter__item" key={category}>
@@ -220,20 +257,22 @@ class CategoriesFilter extends React.Component {
                   </div>
                 </ul>
 
-                <div className="filter__arrows">
-                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-                  <button
-                    type="button"
-                    className="filter__arrow filter__arrow-left"
-                    onClick={() => this.scroll(-1)}
-                  />
-                  {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-                  <button
-                    type="button"
-                    className="filter__arrow filter__arrow-right"
-                    onClick={() => this.scroll(1)}
-                  />
-                </div>
+                {!arrowsIsHidden && (
+                  <div className="filter__arrows">
+                    <button
+                      type="button"
+                      className="filter__arrow filter__arrow-left"
+                      onClick={() => this.scroll(-1)}
+                      label="previous"
+                    />
+                    <button
+                      type="button"
+                      className="filter__arrow filter__arrow-right"
+                      onClick={() => this.scroll(1)}
+                      label="next"
+                    />
+                  </div>
+                )}
 
                 <div className="filter__controls">
                   <CategoryButton

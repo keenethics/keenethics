@@ -69,7 +69,7 @@ class Portfolio extends React.Component {
     const { selectedCategories, categoriesList } = this.state;
 
     return (
-      <Layout>
+      <Layout style={{ overflowY: 'scroll' }}>
         <section className="portfolio page__wrapper">
           <div className="page__header">
             <h1 className="page__title">

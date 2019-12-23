@@ -8,6 +8,7 @@
   &__wrapper {
     @media (min-width: $desktop-xs) {
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -51,9 +52,10 @@
   }
 
   &__list {
-    margin-top: 20px;
-    // 3px for proper displaying of focused outline
+    margin: 20px;
     padding: 3px 3px 0;
+    margin: 0;
+    position: relative;
 
     @media (min-width: $tablet-sm) {
       display: flex;
@@ -62,67 +64,63 @@
     @media (min-width: $desktop-xs) {
       position: relative;
       overflow: hidden;
-      flex-grow: 1;
-      max-width: calc(150px * 3 + 10px * 2);
-      padding: 0;
-      margin-right: auto;
-      margin-top: 0;
-    }
-
-    @media (min-width: $desktop-sm) {
-      max-width: calc(150px * 2 + 10px);
-    }
-
-    @media (min-width: $desktop-md) {
-      max-width: calc(150px * 4 + 10px * 3);
-    }
-
-    @media (min-width: $desktop-lg) {
-      max-width: calc(150px * 5 + 10px * 4);
-    }
-
-    @media (min-width: $desktop-xl) {
-      max-width: calc(150px * 6 + 10px * 5);
-    }
-
-    @media (min-width: $desktop-xl) {
-      max-width: calc(150px * 8 + 10px * 7);
+      padding: 0 15px;
+      margin: 0 -15px;
+      width: calc(100% - 285px);
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+      }
+      &:before {
+        left: 0;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0) 100%);
+      }
+      &:after {
+        right: 0;
+        background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 40%, rgba(255,255,255,0) 100%);
+      }
     }
   }
 
   &__categories {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    margin: -5px;
+    padding-top: 15px;
 
     @media (min-width: $tablet-sm) {
-      width: 310px;
+      margin: -10px;
+      padding-right: 20px;
     }
 
     @media (min-width: $desktop-xs) {
       width: auto;
       flex-wrap: nowrap;
-      position: absolute;
+      align-items: center;
+      position: relative;
       left: 0;
-      transition: left .3s ease;
+      padding: 0;
+      transition: left .2s ease;
 
       .filter__item {
-        flex: 150px 0 0;
-        &:not(:last-of-type) {
-          margin-right: 10px;
-        }
+        width: 170px;
       }
     }
   }
 
   &__arrows {
-    width: calc(32px + 32px + 10px + 10px);
+    width: 100px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 5px 0 10px;
   }
 
   &__arrow {
@@ -133,6 +131,7 @@
     border-radius: 50%;
     background-color: #F2F3F5;
     position: relative;
+    cursor: pointer;
 
     &:before {
       content: '';
@@ -162,24 +161,38 @@
 
   &__controls {
     display: flex;
+    padding-top: 10px;
     width: 100%;
     list-style: none;
+    justify-content: flex-end;
+
+    .filter__btn {
+      width: 100px;
+    }
+
+    .filter__item {
+      width: unset;
+    }
 
     @media (min-width: $tablet-sm) {
-      width: 150px;
+      width: 100px;
       flex-direction: column-reverse;
       justify-content: flex-end;
       margin-left: auto;
+      padding-top: 15px;
 
       .filter__item {
         width: 100%;
+        padding: 0;
       }
     }
 
     @media (min-width: $desktop-xs) {
-      width: calc(150px * 2 + 15px);
+      width: 200px;
       flex-flow: row nowrap;
       margin-left: 0;
+      padding: 0;
+      align-items: center;
       .filter__item {
         width: 150px;
         &:first-of-type {
@@ -190,22 +203,23 @@
   }
 
   &__item {
-    width: calc(50% - 5px);
-    margin-bottom: 15px;
+    padding: 5px;
+    width: 50%;
 
-    @media (min-width: $mobile-md) {
-      width: calc(50% - 7.5px);
+    @media (min-width: $tablet-sm) {
+      padding: 10px;
     }
 
     @media (min-width: $desktop-xs) {
       margin-bottom: 0;
+      width: 50%;
     }
   }
 
   &__btn {
     width: 100%;
     height: 36px;
-    padding: 0;
+    padding: 0 7px;
     border: none;
     background: #F2F3F5;
     border-radius: 20px;
@@ -214,6 +228,9 @@
     line-height: 36px;
     cursor: pointer;
     font-family: 'Raleway', sans-serif, Arial, 'Helvetica Neue', Helvetica;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &.-hidden {
       visibility: hidden;

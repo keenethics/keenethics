@@ -55,20 +55,22 @@ class Layout extends React.Component {
       router,
       meta,
       noMenu,
+      style,
     } = this.props;
 
     const currentURL = router.route;
 
-    const style = { height: dimensions.height };
+    const contentInnerStyle = { ...style, height: dimensions.height };
     if (noMenu) {
-      style.width = '100vw';
+      contentInnerStyle.width = '100vw';
     }
+
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
         {noMenu ? null : <Navigation currentURL={currentURL} />}
         <div className="content">
-          <div className="content-inner" style={style}>
+          <div className="content-inner" style={contentInnerStyle}>
             { children }
           </div>
         </div>
@@ -85,6 +87,7 @@ Layout.propTypes = {
   router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 Layout.defaultProps = {
@@ -92,6 +95,7 @@ Layout.defaultProps = {
   router: {},
   meta: {},
   noMenu: false,
+  style: {},
 };
 
 export default withRouter(Layout);

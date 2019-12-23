@@ -8,7 +8,7 @@ const Works = ({ works, rounded }) => (
   <div className="portfolio-works">
     <div className={classNames('page__list', { '-rounded': rounded })}>
       {works.map((work) => (
-        <ListItem work={work} rounded={rounded} />
+        <ListItem work={work} rounded={rounded} key={work.title} />
       ))}
     </div>
   </div>

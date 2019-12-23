@@ -5,15 +5,11 @@
   position: relative;
 
   @media (min-width: $mobile-md) {
-    padding: 0 25px 40px;
+    padding: 0 15px 40px;
   }
 
   @media (min-width: $tablet-sm) {
     padding: 0 30px 40px;
-  }
-
-  @media (min-width: $desktop-lg) {
-    padding: 0 40px 40px;
   }
 }
 
@@ -100,6 +96,15 @@
   width: 100%;
   margin: 0;
   transition: transform 0.1s ease-in-out;
+  animation: fade .5s ease-in-out;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   &:before {
     display: none;
   }
