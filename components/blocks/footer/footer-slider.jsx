@@ -21,11 +21,17 @@ PostItem.propTypes = {
   post: PropTypes.object.isRequired,
 };
 
-const FooterSlider = () => {
+const FooterSlider = ({
+  isMobile,
+  isTablet,
+}) => {
   const posts = React.useContext(PostsContext) || [];
+  let slidesToShow = 3;
+  if (isTablet) slidesToShow = 2;
+  if (isMobile) slidesToShow = 1;
   const settings = {
     className: 'footer-slider',
-    slidesToShow: 3,
+    slidesToShow,
   };
 
   return (
@@ -39,15 +45,13 @@ const FooterSlider = () => {
           </div>
         ))}
       </Slider>
-      <div className="footer-posts">
-        {posts.slice(-2).map((post) => (
-          <div className="slide-container" key={post.fields.slug}>
-            <PostItem post={post} />
-          </div>
-        ))}
-      </div>
     </>
   );
+};
+
+FooterSlider.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+  isTablet: PropTypes.bool.isRequired,
 };
 
 export default FooterSlider;

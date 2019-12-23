@@ -17,7 +17,8 @@
 
       .home-footer-list {
         width: 25%;
-
+        line-height: 24px;
+        
         .home-footer-list-item:first-child {
           font-size: 16px;
           font-weight: 600;
@@ -225,9 +226,9 @@
 @media (max-width: 1024px) {
   .block-footer {
     .home-footer {
-      .footer-slider {
-        display: none;
-      }
+      // .footer-slider {
+      //   display: none;
+      // }
       .home-footer-countries {
         // width: 50%;
         // flex-direction: column;
@@ -275,18 +276,26 @@
 
 @include for-tablet {
   .block-footer {
-    .home-footer .footer-links {
-      justify-content: center;
-      .social-icons {
-        display: none;
+    padding: 0 25px 50px;
+    .home-footer {
+      padding: 0;
+      .footer-slider {
+        padding: 0 30px 0 15px;
+      }
+      .footer-links {
+        justify-content: center;
+        .social-icons {
+          display: none;
+        }
       }
     }
   }
 }
 @include for-mobile {
   .block-footer {
+    padding: 0 20px 50px;
     .home-footer {
-      padding: 32px;
+      padding: 0;
       .align-right {
         display: block;
         text-align: left;
@@ -300,6 +309,9 @@
       }
       .home-footer-nav {
         display: none;
+      }
+      .footer-slider {
+        padding: 0 30px 0 15px;
       }
       .footer-links {
         font-size: 12px;

@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Portfolio from './portfolio';
 
-const Projects = () => (
+
+const Projects = ({ minimize }) => (
   <div className="block block-projects">
     <header className="block--header">
       <div className="block--header-title">
@@ -13,9 +15,14 @@ const Projects = () => (
         isFullPage
         pageTitle="/"
         topTitle=" "
+        isMobile={minimize}
       />
     </div>
   </div>
 );
+
+Projects.propTypes = {
+  minimize: PropTypes.bool.isRequired,
+};
 
 export default Projects;

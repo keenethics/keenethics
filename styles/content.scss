@@ -27,9 +27,6 @@
   &.home-full-vh {
     height: 100%;
   }
-  @include for-tablet {
-    margin-left: -1px;
-  }
 }
 .content-navigation {
   overflow: hidden;

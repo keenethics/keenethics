@@ -54,6 +54,8 @@ export default class Index extends React.Component {
     this.state = {
       isLoading: true,
       isMobile: false,
+      isTablet: false,
+      isTabletL: false,
     };
   }
 
@@ -69,14 +71,18 @@ export default class Index extends React.Component {
         if (target) {
           this.setState({
             isLoading: false,
-            isMobile: target.innerWidth < 768,
+            isTabletL: target.innerWidth <= 1024 && target.innerWidth > 768,
+            isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
+            isMobile: target.innerWidth <= 480,
           });
         }
       });
 
       this.setState({
         isLoading: false,
-        isMobile: window.innerWidth < 768,
+        isTabletL: window.innerWidth <= 1024 && window.innerWidth > 768,
+        isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
+        isMobile: window.innerWidth <= 480,
       });
     }
   }
@@ -86,6 +92,8 @@ export default class Index extends React.Component {
     const {
       isLoading,
       isMobile,
+      isTablet,
+      isTabletL,
     } = this.state;
 
     if (isLoading) return null;
@@ -100,13 +108,20 @@ export default class Index extends React.Component {
         <OurMethods />
         <Industries />
         <Founders />
-        <Projects />
+        <Projects
+          minimize={isTabletL || isTablet || isMobile}
+        />
         <TechStack />
         <PostsContext.Provider value={posts}>
-          <Blog />
+          <Blog
+            isTabletL={isTabletL}
+          />
           <Partners />
           <LetsStart />
-          <HomeFooter />
+          <HomeFooter
+            isMobile={isMobile}
+            isTablet={isTablet}
+          />
         </PostsContext.Provider>
       </Layout>
     );
