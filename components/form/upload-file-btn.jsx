@@ -29,7 +29,7 @@ export default class FileUpload extends Component {
           <img src="/static/images/svg/file.svg" alt="File" />
         </label>
         <input id={this.id} type="file" name="file" onChange={onChange} />
-        <span className="file-upload-desc">{ allowedExts }</span>
+        <div className="file-upload-desc">{ allowedExts }</div>
       </div>
     );
   }

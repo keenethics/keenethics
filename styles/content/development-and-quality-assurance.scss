@@ -1,0 +1,17 @@
+.content-block {
+  .qa-services-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .qa-services-item {
+      margin: 20px 10px;
+      line-height: 25px;
+      text-align: center;
+      align-self: flex-start;
+      max-width: 250px;
+      @media (max-width: 580px) {
+        max-width: 350px;
+      }
+    }
+  }
+}

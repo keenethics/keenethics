@@ -44,7 +44,7 @@ const ProjectMyGrassGrowth = () => (
             />
             <p>
               The main purpose of the app is to show a prognosis for the farmer&apos;s and help them
-              manage the feeding their herds, grazing and mowing their paddocks, based on by
+              manage the feeding their herds, grazing and mowing their paddocks, based on
               user&apos;s data and the a set of formulas. Application helps farmers to graze cows
               and make related calculations.
             </p>

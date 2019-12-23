@@ -5,6 +5,8 @@ import { ContactUsContext } from '../context/contacts-context';
 import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
+  const DEFAULT_FILENAME = 'Attach your file';
+  const DEFAULT_FILESIZE = 'up to 10MB';
   const [stage, setStage] = useState({
     value: null,
     error: false,
@@ -49,7 +51,14 @@ const EstimateForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState('Attach you file');
+  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
+  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
+
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
+  };
 
   const {
     isPending,
@@ -111,6 +120,10 @@ const EstimateForm = () => {
       .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
+          if (json.errorField === 'name') setName(json);
+          if (json.errorField === 'email') setEmailEstimate(json);
+          if (json.errorField === 'message') setMessageEstimate(json);
+          if (json.errorField === 'file') unattachFile(json);
         }
 
         setIsPending(false);
@@ -432,7 +445,7 @@ Project management
                   <input
                     name="isPMrequired"
                     type="radio"
-                    value="Yes, please"
+                    value="Yes, I need project management"
                     id="iNeedPM"
                     onChange={(event) => {
                       setPm({
@@ -440,7 +453,7 @@ Project management
                         error: '',
                       });
                     }}
-                    checked={pm.value === 'Yes, please'}
+                    checked={pm.value === 'Yes, I need project management'}
                   />
                   <label htmlFor="iNeedPM" className="label-for-radio-btn">
                     Yes, I need project management
@@ -450,7 +463,7 @@ Project management
                   <input
                     name="isPMrequired"
                     type="radio"
-                    value="No, thank you"
+                    value="No, I do not need project management"
                     id="iDontNeedPM"
                     onChange={(event) => {
                       setPm({
@@ -458,7 +471,7 @@ Project management
                         error: '',
                       });
                     }}
-                    checked={pm.value === 'No, thank you'}
+                    checked={pm.value === 'No, I do not need project management'}
                   />
                   <label htmlFor="iDontNeedPM" className="label-for-radio-btn">
                     No, I do not need project management
@@ -869,6 +882,9 @@ Start
                     <label htmlFor="name">Name</label>
                   </div>
                 </div>
+                <div className={name.errorField ? 'error-message' : 'error-none'}>
+                  {name.status}
+                </div>
               </div>
               <div className="input-cols">
                 <div className="input-wrap">
@@ -889,6 +905,9 @@ Start
                     <label htmlFor="emailEstimate">Email</label>
                   </div>
                 </div>
+                <div className={emailEstimate.errorField ? 'error-message' : 'error-none'}>
+                  {emailEstimate.status}
+                </div>
               </div>
 
               <div className="input-wrap input-wrap-ta">
@@ -908,21 +927,28 @@ Start
                   placeholder="Your message (optional)"
                 />
               </div>
+              <div className={messageEstimate.errorField ? 'error-message' : 'error-none'}>
+                {messageEstimate.status}
+              </div>
             </div>
             <div className="input-cols">
               <FileUpload
-                text={(fileName.length > 10 && fileName !== 'Attach you file')
+                text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
                   ? fileName.substring(0, 10).concat('...')
                   : fileName}
-                limit="up to 10MB"
+                limit={fileSize}
                 allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
                 onChange={
                   (e) => {
                     setFile(e.target.files[0]);
                     setFileName(e.target.files[0].name);
+                    setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
                   }
                 }
               />
+              <div className={file.errorField ? 'error-message' : 'error-none'}>
+                {file.status}
+              </div>
             </div>
             <div className="grey-checkbox-wrapper">
               <Checkbox
@@ -930,7 +956,7 @@ Start
                 text={(
                   <>
 I want to use a&nbsp;
-                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" className="grey sub-dis">subscriber discount</a>
+                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
                   </>
 )}
                 name="estimateFormIsSubscriberDiscount"
@@ -962,6 +988,10 @@ I want to use a&nbsp;
               >
                 send
               </button>
+            </div>
+            <div className="privacy-policy">
+                By submitting, I agree to KeenEthics’&nbsp;
+              <a href="/privacy-policy" target="_blank">Privacy Policy</a>
             </div>
           </div>
         )}

@@ -20,7 +20,7 @@ const ServicesInternetOfThings = () => {
   <>
     <b>Scalable</b>
     <br />
-    &nbsp;The Internet of Things system can be scaled up or down when needed. It is a network
+    The Internet of Things system can be scaled up or down when needed. It is a network
     of interconnected modules, so some nodes can be taken away and new nodes can be added.
   </>,
     },
@@ -31,7 +31,7 @@ const ServicesInternetOfThings = () => {
   <>
     <b>Consistent</b>
     <br />
-    &nbsp;A properly developed IoT solution shows stable performance. In the well-designed IoT
+    A properly developed IoT solution shows stable performance. In the well-designed IoT
     system, data flows are not interrupted, and the product functions consistently.
   </>,
     },
@@ -42,7 +42,7 @@ const ServicesInternetOfThings = () => {
   <>
     <b>Future-proof</b>
     <br />
-    &nbsp;The IoT market niche is growing at a rapid pace, and it is promised a bright future.
+    The IoT market niche is growing at a rapid pace, and it is promised a bright future.
     You can see it yourself if you consider how fitness trackers and smart speakers conquer the
     hearts of regular users.
   </>,
@@ -54,7 +54,7 @@ const ServicesInternetOfThings = () => {
   <>
     <b>User-friendly</b>
     <br />
-    &nbsp;IoT solutions greatly simplify the lives of average users. Smart homes, smart speakers,
+    IoT solutions greatly simplify the lives of average users. Smart homes, smart speakers,
     and wearable devices – these are designed to make our life easier and more enjoyable.
   </>,
     },
@@ -153,7 +153,7 @@ const ServicesInternetOfThings = () => {
           <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$1 612 billion</h2>
           <p className="text-center">
             is the projected size of the global IoT market in 2025, according to&nbsp;
-            <a href="https://www.marketsandmarkets.com/Market-Reports/cloud-computing-market-234.html" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
+            <a href="https://www.statista.com/statistics/976313/global-iot-market-size/" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
             .
           </p>
         </section>
@@ -284,13 +284,13 @@ const ServicesInternetOfThings = () => {
             system of beacons, set up trackers and the mobile app, and instruct managers on how
             to use Asama.
           </p>
+        </section>
+        <section>
+          <img src="/static/services/internet-of-things/asama-items.png" alt="Asama Items" />
           <CallToActionButton
             title="learn more"
             href="/contacts"
           />
-        </section>
-        <section>
-          <img src="/static/services/internet-of-things/asama-items.png" alt="Asama Items" />
           <p>
             Another company we have provided Internet of Things development services with is PREE.
             See the case study to learn more about it.

@@ -204,6 +204,7 @@ export default class Careers extends React.Component {
               </div>
               {!status || <div className="career-form-status">{status}</div>}
               <button
+                style={{ padding: '15px 20px' }}
                 type="submit"
                 className={isPending ? 'button button-send pending' : 'button button-send'}
               >

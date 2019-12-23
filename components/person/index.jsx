@@ -29,8 +29,10 @@ const Person = ({
     <div>
       {onClick ? (
         <LinkTo onClick={onClick}>
-          <span className="name">{name}</span>
-          <span className="position">{position}</span>
+          <>
+            <span className="name">{name}</span>
+            <span className="position">{position}</span>
+          </>
         </LinkTo>
       ) : (
         <>
