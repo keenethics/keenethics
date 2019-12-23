@@ -12,7 +12,7 @@ const mobileYearOffsets = [
   '0',
   '-90px',
   '-210px',
-  '-333px',
+  '-363px',
 ];
 
 const OurStory = () => {

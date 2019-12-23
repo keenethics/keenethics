@@ -18,8 +18,6 @@ const LeadersDesktop = ({ data }) => {
 
   // animation required even number of pictures but we have odd
   const leftData = [...data];
-  leftData.push(data[0]);
-
   const rightData = leftData.splice(leftData.length / 2, leftData.length);
 
   return (
