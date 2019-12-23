@@ -940,10 +940,11 @@ Start
                 allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
                 onChange={
                   (e) => {
-                    if ((e.target.files[0] || {}).name) {
-                      setFile(e.target.files[0]);
-                      setFileName((e.target.files[0] || {}).name);
-                      setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
+                    const fileObj = e.target.files[0];
+                    if (fileObj) {
+                      setFile(fileObj);
+                      setFileName(fileObj.name);
+                      setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `); // 1mb = 1000000
                     } else {
                       unattachFile({ value: '', error: false });
                     }
