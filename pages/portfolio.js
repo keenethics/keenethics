@@ -89,10 +89,7 @@ class Portfolio extends React.Component {
       topTitle,
       isMobile,
     } = this.props;
-    let filteredWorks = works.filter(this.worksCountFor);
-    if (postIds.length && selectedCategories.length) {
-      filteredWorks = filteredWorks.slice(isMobile ? -2 : -3);
-    }
+    const filteredWorks = works.filter(this.worksCountFor);
     const portfolioComponent = (
       <section className="portfolio page__wrapper">
         {topTitle || (
@@ -111,14 +108,16 @@ class Portfolio extends React.Component {
           filterOnChange={this.filterOnChange}
           pageTitle={pageTitle || 'portfolio'}
         />
-        {(!selectedCategories.length && postIds.length) && (
+        {postIds.length && (
           <Works works={
-            filteredWorks.filter((work) => postIds.some((title) => title === work.title))
-              .slice(isMobile ? -2 : 0)
+            filteredWorks.filter((work) => {
+              if (!selectedCategories.length) return postIds.some((title) => title === work.title);
+              return true;
+            }).slice(isMobile ? -2 : -3)
           }
           />
         )}
-        {works.length && selectedCategories.length ? <Works works={filteredWorks} /> : null}
+        {works.length && !postIds.length ? <Works works={filteredWorks} /> : null}
       </section>
     );
     return postIds.length ? portfolioComponent : this.wrapperCondition(portfolioComponent);
