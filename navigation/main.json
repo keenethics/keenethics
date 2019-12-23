@@ -5,7 +5,7 @@
       {
         "name": "Web Development",
         "description": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks",
-        "metaTitle": "Web Development Company – KeenEthics",
+        "metaTitle": "Custom web application development – KeenEthics",
         "metaDescription": "High-quality and fault-tolerant web platforms for the Internet and private networks",
         "href": "/services-web-development",
         "icon": {
@@ -62,10 +62,10 @@
         "type": "icon"
       },
       {
-        "name": "Outstaffing",
+        "name": "Dedicated Development Team",
         "description": "Process of using by one company another`s company staff",
-        "metaTitle": "Outstaffing company that helps to find highly qualified developers - KeenEthics",
-        "metaDescription": "Maintaining control, improving team skillset, and reducing HR costs with team augmentation services.",
+        "metaTitle": "Dedicated Software Development Teams – KeenEthics",
+        "metaDescription": "Maintain control, improve team skill set, and reduce HR costs with dedicated development team from KeenEthics.",
         "href": "/services-outstaffing",
         "icon": {
           "name": "outs",
@@ -117,6 +117,54 @@
         "icon": {
           "name": "iot-icon",
           "alt": "Internet of Things"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "href": "/services-maintenance-and-support",
+        "icon": {
+          "name": "icon-maintenance-and-support",
+          "alt": "Maintenance and Support"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "Development and Quality Assurance",
+        "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
+        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "href": "/services-development-and-quality-assurance",
+        "icon": {
+          "name": "icon-development-and-testing",
+          "alt": "Development and Quality Assurance"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "metaTitle": "UI UX Design Services, Hire UI/UX Designers - Keenethics",
+        "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "metaDescription": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "href": "/services-ui-ux-design",
+        "icon": {
+          "name": "design-icon",
+          "alt": "Internet of Things"
+        },
+        "type": "icon"
+      },
+      {
+        "name": "AI and Chatbot Development",
+        "metaTitle": "AI Chatbot Development Services – Keenethics",
+        "description": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "href": "/services-chatbots-artificial-intelligence",
+        "icon": {
+          "name": "icon-ai-chatbots",
+          "alt": "AI and Chatbot Development"
         },
         "type": "icon"
       }

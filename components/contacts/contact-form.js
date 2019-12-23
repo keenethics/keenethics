@@ -17,6 +17,8 @@ const handleStatusResponse = (response) => {
 };
 
 const ContactForm = () => {
+  const DEFAULT_FILENAME = 'Attach your file';
+  const DEFAULT_FILESIZE = 'up to 10MB';
   const {
     isPending,
     setIsPending,
@@ -46,12 +48,22 @@ const ContactForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState('Attach you file');
+  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
+  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
     setEmail({ value: '', error: false });
     setMessage({ value: '', error: false });
+    setFile({ value: '', error: false });
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
+  };
+
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
   };
 
   const onSubmit = (e) => {
@@ -81,6 +93,10 @@ const ContactForm = () => {
       .then((json) => {
         if (json && json.errorField) {
           setNotifyMessage(json.status.toString());
+          if (json.errorField === 'firstname') setFirstname(json);
+          if (json.errorField === 'email') setEmail(json);
+          if (json.errorField === 'message') setMessage(json);
+          if (json.errorField === 'file') unattachFile(json);
         }
 
         setIsPending(false);
@@ -90,7 +106,6 @@ const ContactForm = () => {
           setInitialState();
         }
       })
-      // eslint-disable-next-line no-console
       .catch((err) => console.error(err));
   };
   return (
@@ -119,6 +134,9 @@ const ContactForm = () => {
             <span className="highlight" />
             <label htmlFor="firstname">Name</label>
           </div>
+          <div className={firstname.errorField ? 'error-message' : 'error-none'}>
+            {firstname.status}
+          </div>
         </div>
         <div className="input-cols">
           <div className="input-wrap">
@@ -141,6 +159,9 @@ const ContactForm = () => {
               <label htmlFor="email">Email</label>
             </div>
           </div>
+          <div className={email.errorField ? 'error-message' : 'error-none'}>
+            {email.status}
+          </div>
         </div>
         <div className="input-wrap">
           <textarea
@@ -159,29 +180,39 @@ const ContactForm = () => {
             value={message.value}
           />
         </div>
+        <div className={message.errorField ? 'error-message' : 'error-none'}>
+          {message.status}
+        </div>
         <div className="input-cols">
           <FileUpload
-            text={(fileName.length > 10 && fileName !== 'Attach you file')
+            id="contact-us-file-upload"
+            text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
               ? fileName.substring(0, 10).concat('...')
               : fileName}
-            limit="up to 10MB"
+            limit={fileSize}
             allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
             onChange={
               (e) => {
                 setFile(e.target.files[0]);
                 setFileName(e.target.files[0].name);
+                setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
               }
             }
           />
+          <div className={file.errorField ? 'error-message' : 'error-none'}>
+            {file.status}
+          </div>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
             text={(
               <>
-I want to use a&nbsp;
+                I want to use a&nbsp;
                 <a
                   href="https://mailchi.mp/keenethics/offers-for-keen-subscribers"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grey sub-dis"
                 >
                   subscriber discount
@@ -208,9 +239,8 @@ I want to use a&nbsp;
           </button>
         </div>
         <div className="privacy-policy">
-            By submting I agree to KeenEthics’
-          {' '}
-          <a href="/privacy-policy" classNamve="">Privacy Policy</a>
+            By submitting, I agree to KeenEthics’&nbsp;
+          <a href="/privacy-policy" target="_blank">Privacy Policy</a>
         </div>
       </form>
     </div>

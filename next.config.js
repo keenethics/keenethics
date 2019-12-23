@@ -21,7 +21,11 @@ module.exports = withSass({
       }
     }
 
-    config.plugins.push(new webpack.EnvironmentPlugin(['REACT_APP_SPACE_ID', 'REACT_APP_ACCESS_TOKEN', 'REACT_APP_PREVIEW_TOKEN']));
+    config.plugins.push(new webpack.EnvironmentPlugin([
+      'REACT_APP_SPACE_ID',
+      'REACT_APP_ACCESS_TOKEN',
+      'REACT_APP_PREVIEW_TOKEN',
+    ]));
 
     return config;
   },

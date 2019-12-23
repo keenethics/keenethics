@@ -1,0 +1,28 @@
+.content-block {
+  .chatbots-and-ai-technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .chatbots-and-ai-technologies-item {
+      margin: 20px 10px;
+      line-height: 25px;
+      text-align: center;
+      align-self: flex-start;
+      img {
+        display: inline-block;
+        max-height: 50px;
+        margin: 10px;
+      }
+
+      &-1 {
+        width: 250px;
+      }
+      &-2 {
+        width: 290px;
+      }
+      &-3 {
+        width: 210px;
+      }
+    }
+  }
+}

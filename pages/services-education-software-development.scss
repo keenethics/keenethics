@@ -36,4 +36,9 @@
       }
     }
   }
+  .technologies-links {
+    span:before {
+      content: ' ';
+    }
+  }
 }

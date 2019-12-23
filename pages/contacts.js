@@ -44,7 +44,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         </button>
         <div className="address-telephone-wrapper">
           <a
-            href="https://goo.gl/maps/eaAU8qqLZoo"
+            href="https://goo.gl/maps/bwz3k5aHf8oGyAzx8"
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
@@ -52,7 +52,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
             ,&nbsp;
             <span itemProp="streetAddress">Kulparkivska St, 59</span>
           </a>
-          <a href="tel:+380947106105">
+          <a href="tel:+380947106105" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +38 (094) 710 61 05
             </span>
@@ -92,7 +92,7 @@ Netherlands
         </div>
         <div className="address-telephone-wrapper">
           <a
-            href="https://goo.gl/maps/JRXdtT7aaRE5b2Hd6"
+            href="https://goo.gl/maps/d4wXL4X3QiqfnLSWA"
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
@@ -106,7 +106,7 @@ Netherlands
 5346 RT
             </span>
           </a>
-          <a href="tel:+31202620944">
+          <a href="tel:+31202620944" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +31 20 262 0944
             </span>
@@ -145,16 +145,16 @@ Netherlands
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
-            <span itemProp="addressLocality">New York</span>
+            <span itemProp="addressLocality">New York,&nbsp;</span>
             <span itemProp="streetAddress">
               1412 Broadway,&nbsp;
               <br className="display-block-sm" />
               21st floor, 2200
               <br />
-              NY 10028
+              NY 10018
             </span>
           </a>
-          <a href="tel:+19292141392">
+          <a href="tel:+19292141392" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
               +1 (929) 214 1392
             </span>
@@ -277,9 +277,9 @@ const Contacts = ({ router }) => {
     const getLoction = async () => {
       const res = await fetch('/api/location');
       const json = await res.json();
-      const location = json.location;
+      const location = json.location || {};
 
-      setSelectedCountry(location.countryCode);
+      setSelectedCountry(location.country);
     };
 
     getLoction();

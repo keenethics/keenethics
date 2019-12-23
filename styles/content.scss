@@ -6,7 +6,7 @@
   vertical-align: top;
   -webkit-overflow-scrolling: touch;
   // max-width: calc(100% - 160px);
-  
+
   @include for-tablet-max {
     max-width: 100%;
   }
@@ -208,7 +208,7 @@
   }
   .portfolio-works {
     .portfolio__item {
-      
+
     }
     .portfolio__item-figure {
       box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
@@ -294,12 +294,23 @@
       margin: 30px auto;
     }
   }
+  .subtitle-web-dev {
+    color: #4c4d51;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 41px;
+    font-size: 22px;
+  }
+  .technologies-links {
+    span:before {
+      content: ' ';
+    }
+  }
 }
 .clearfix {
   @include clearfix;
 }
 
-// breakpoints
 @media (max-width: 1024px) {
   .our-services, .founders {
     padding: 0 44px;
