@@ -17,6 +17,8 @@ const handleStatusResponse = (response) => {
 };
 
 const ContactForm = () => {
+  const DEFAULT_FILENAME = 'Attach your file';
+  const DEFAULT_FILESIZE = 'up to 10MB';
   const {
     isPending,
     setIsPending,
@@ -46,22 +48,22 @@ const ContactForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState('Attach you file');
-  const [fileSize, setFileSize] = useState('up to 10MB');
+  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
+  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
     setEmail({ value: '', error: false });
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
-    setFileName('Attach you file');
-    setFileSize('up to 10MB');
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
   };
 
   const unattachFile = (err) => {
     setFile(err);
-    setFileName('Attach you file');
-    setFileSize('up to 10MB');
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
   };
 
   const onSubmit = (e) => {
@@ -184,7 +186,7 @@ const ContactForm = () => {
         <div className="input-cols">
           <FileUpload
             id="contact-us-file-upload"
-            text={(fileName.length > 10 && fileName !== 'Attach you file')
+            text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
               ? fileName.substring(0, 10).concat('...')
               : fileName}
             limit={fileSize}
