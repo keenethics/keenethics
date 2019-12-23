@@ -167,6 +167,18 @@
           "alt": "AI and Chatbot Development"
         },
         "type": "icon"
+      },
+      {
+        "name": "Software Deployment and Implementation",
+        "metaTitle": "Software Deployment and Implementation Solutions – KeenEthics",
+        "description": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
+        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
+        "href": "/software-deployment",
+        "icon": {
+          "name": "icon-ai-chatbots",
+          "alt": "Software Deployment and Implementation"
+        },
+        "type": "icon"
       }
     ]
   },
