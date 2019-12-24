@@ -279,7 +279,8 @@ export default class Post extends React.Component {
     });
   }
 
-  componentWillReceiveProps(nextProps) {
+  // eslint-disable-next-line camelcase
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.title !== this.props.title) {
       document.querySelector('.content-inner').scrollTo(0, 0);
     }

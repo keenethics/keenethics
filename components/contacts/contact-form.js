@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW, JeanA } from '../../static/contacts/contacts-data';
+import { MaxS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
 import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
@@ -63,12 +63,6 @@ const ContactForm = () => {
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
     unattachFile({ value: '', error: false });
-    setFileName(DEFAULT_FILENAME);
-    setFileSize(DEFAULT_FILESIZE);
-  };
-
-  const unattachFile = (err) => {
-    setFile(err);
     setFileName(DEFAULT_FILENAME);
     setFileSize(DEFAULT_FILESIZE);
   };
@@ -223,7 +217,7 @@ const ContactForm = () => {
                 I want to use a&nbsp;
                 <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
               </>
-)}
+            )}
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"
