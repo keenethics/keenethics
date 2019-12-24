@@ -72,6 +72,9 @@
       justify-content: center;
       flex-direction: column;
       .home-page-content-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .home-page-large-title, .home-page-small-title {
           color: #fff;
         }
@@ -611,6 +614,9 @@ $show-slide-pos: 0px;
     @include for-tablet {
       margin-right: 30px;
     }
+    @include for-mobile {
+      padding-left: 40px;
+    }
     a {
       font-size: 14px;
       position: relative;
@@ -673,6 +679,14 @@ $show-slide-pos: 0px;
         }
         &.link-upwork:before {
           background: url('/static/images/svg/upwork 3.svg') no-repeat center;
+        }
+      }
+      @include for-mobile {
+        &.link:before {
+          width: 22px;
+          height: 22px;
+          background-size: 100%;
+          left: -40px;
         }
       }
     }

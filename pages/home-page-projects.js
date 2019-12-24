@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Portfolio from './portfolio';
+import { homePageWorks } from '../main.config';
 
 
 const Projects = ({ minimize }) => (
@@ -12,7 +13,7 @@ const Projects = ({ minimize }) => (
     </header>
     <div className="block--content">
       <Portfolio
-        isFullPage
+        postIds={homePageWorks}
         pageTitle="/"
         topTitle=" "
         isMobile={minimize}
