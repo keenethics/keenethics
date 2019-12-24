@@ -63,6 +63,14 @@ const ContactForm = () => {
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
     unattachFile({ value: '', error: false });
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
+  };
+
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
   };
 
   const onSubmit = (e) => {

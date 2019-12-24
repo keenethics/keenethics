@@ -139,7 +139,7 @@ const ServicesBusinessAnalysis = () => {
     on which you find to be more suitable. The pricing policy we offer will be equally suitable
     for a start-up and for a large corporation. IT business analysis services and software solutions
     we offer are cost-efficient.&nbsp;
-    <a href="/contacts?activeForm=estimate">Let us estimate your project</a>
+    <a href="/contacts?activeForm=estimate" target="_blank">Let us estimate your project</a>
   </>,
     },
     {
@@ -161,7 +161,7 @@ const ServicesBusinessAnalysis = () => {
     and cost-efficient manner, we do not forget about the quality of the results. Our
     professionals are experts in what they do. They will provide
     you with business analysis training if you ask. See our&nbsp;
-    <a href="/portfolio">case studies</a>
+    <a href="/portfolio" target="_blank">case studies</a>
     &nbsp;to make sure!
   </>,
     },
@@ -170,7 +170,7 @@ const ServicesBusinessAnalysis = () => {
       desc:
   <>
     We do everything to ensure the security of your&nbsp;
-    <a href="/blog/1543388400000-your-data-is-safe-in-ukraine">information and data</a>
+    <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">information and data</a>
     &nbsp;at all stages of project development, including business analysis services.
     Together with general data safety measures, we take some industry-specific and
     technology-specific steps. You can read more about these at our blog!
@@ -278,7 +278,7 @@ const ServicesBusinessAnalysis = () => {
             <li className="challenges-item">
               <p className="text-bold">
                 5. Developing&nbsp;
-                <a href="/approach-minimum-viable-product">minimum viable product</a>
+                <a href="/approach-minimum-viable-product" target="_blank">minimum viable product</a>
               </p>
             </li>
             <li className="challenges-item">

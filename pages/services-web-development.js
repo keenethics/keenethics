@@ -171,14 +171,21 @@ const ServicesWebDevelopment = () => {
           </h2>
           <p className="technologies-links">
             These are the technologies that help us do it:
-            <span><a href="/services-web-development-node">Node.js</a></span>
-            <span><a href="/tech-front-end-angular">Angular</a></span>
-            <span><a href="/tech-front-end-react">React</a></span>
-            <span><a href="/tech-front-end-aurelia">Aurelia</a></span>
-            <span><a href="/tech-front-end-vue">Vue</a></span>
-            <span><a href="/tech-back-end-express">Express</a></span>
-            <span><a href="https://github.com/keenethics/svelte-notifications">Svelte</a></span>
-            <span><a href="/services-web-development-meteor">Meteor</a></span>
+            <span><a href="/services-web-development-node" target="_blank">Node.js</a></span>
+            ,
+            <span><a href="/tech-front-end-angular" target="_blank">Angular</a></span>
+            ,
+            <span><a href="/tech-front-end-react" target="_blank">React</a></span>
+            ,
+            <span><a href="/tech-front-end-aurelia" target="_blank">Aurelia</a></span>
+            ,
+            <span><a href="/tech-front-end-vue" target="_blank">Vue</a></span>
+            ,
+            <span><a href="/tech-back-end-express" target="_blank">Express</a></span>
+            ,
+            <span><a href="https://github.com/keenethics/svelte-notifications" target="_blank" rel="noopener noreferrer nofollow">Svelte</a></span>
+            ,
+            <span><a href="/services-web-development-meteor" target="_blank">Meteor</a></span>
             .
           </p>
           <div className="project-content-more">
@@ -213,9 +220,9 @@ const ServicesWebDevelopment = () => {
           </div>
           <p>
             The database technology that we integrate are&nbsp;
-            <a href="/tech-data-base-mongo">MongoDB</a>
+            <a href="/tech-data-base-mongo" target="_blank">MongoDB</a>
             &nbsp;and&nbsp;
-            <a href="/tech-data-base-mysql">MySQL</a>
+            <a href="/tech-data-base-mysql" target="_blank">MySQL</a>
             .
           </p>
           <div className="project-content-more">
@@ -230,9 +237,9 @@ const ServicesWebDevelopment = () => {
           </div>
           <p>
             The API integration technologies we use are&nbsp;
-            <a href="/tech-api-integration-rest">REST</a>
+            <a href="/tech-api-integration-rest" target="_blank">REST</a>
             &nbsp;and&nbsp;
-            <a href="/tech-api-integration-graphql">GraphQL</a>
+            <a href="/tech-api-integration-graphql" target="_blank">GraphQL</a>
             .
           </p>
           <div className="project-content-more">
@@ -325,8 +332,6 @@ const ServicesWebDevelopment = () => {
           <p>
             These are some of the applications and websites that we have developed as a
             web application development company:
-            <br />
-            the Check Network, Banker Advisor, Paceup
           </p>
           <Works works={webDevelopmentWorks} rounded />
         </section>

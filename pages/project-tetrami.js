@@ -55,7 +55,7 @@ const ProjectTetrami = () => (
               </p>
             </section>
             <img
-              src="/static/portfolio/tetrami/tetramix.png"
+              src="/static/portfolio/tetrami/tetrami-phone-set.png"
               alt="Tetrami"
               className="image-gaps"
               style={{ marginBottom: '50px' }}
