@@ -2,7 +2,6 @@
   height: 100%;
   background: #fff;
   vertical-align: top;
-  box-shadow: 0 2px 19px rgba(80, 116, 165, .1);
   position: fixed;
   left: 0;
   top: 0;
@@ -69,7 +68,6 @@
   left: 0;
   top: 0;
   background: #fff;
-  box-shadow: 0 2px 20px rgba(80, 116, 165, .1);
 
   .logo {
     display: block;
@@ -86,7 +84,6 @@
   left: 0;
   bottom: 0;
   background: #fff;
-  box-shadow: 0 -4px 20px rgba(80, 116, 165, .1);
   text-align: center;
 
   .button {
@@ -140,46 +137,36 @@
   }
 }
 .navigation-content {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: 160px;
   height: 100%;
-  padding: 54px 0 75px;
   box-sizing: border-box;
   overflow: hidden;
 
   .navigation-item {
-    width: 160px;
+    width: 100%;
     display: block;
-    border-bottom: 1px solid #eef0f1;
     box-sizing: border-box;
 
-    &:last-child {
-      border: none;
-    }
     &:hover {
-      background: rgba(245, 249, 250, .5);
-    }
-    &:hover .subnavigation {
-      display: block;
-      position: absolute;
-      left: 160px;
-      top: 0;
-      width: 160px;
-      z-index: 9999;
-    }
-    &.current {
-      width: 320px;
-      background: #f5f9fa;
-
-      &.is-link {
-        width: 160px;
+      .navigation-point .navigation-cell {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       }
+    }
 
+    &.current {
       .subnavigation {
         display: block;
         position: absolute;
         left: 160px;
         top: 0;
         z-index: 100;
+      }
+
+      .navigation-point .navigation-cell {
+        border-bottom: 1px solid #d62c2c;
       }
     }
     .subnavigation .navigation-item.current {
@@ -189,19 +176,21 @@
 }
 
 .navigation-point {
-  display: table;
-  width: 100%;
+  display: flex;
+  align-items: center;
   height: 100%;
-  color: #2d4352;
+  color: #000;
   cursor: pointer;
   text-decoration: none;
+  padding: 0 20px 0 30px;
+  box-sizing: border-box;
 
   .navigation-cell {
     position: relative;
-    display: table-cell;
-    vertical-align: middle;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    padding: 0 20px 0 30px;
+    padding: 5px 2px;
+    border-bottom: 1px solid #fff;
 
     > i {
       display: block;
@@ -225,6 +214,35 @@
 
     img {
       width: 100%;
+    }
+  }
+}
+
+@include for-mobile {
+  .navigation.is-open {
+    width: 100%;
+
+    .navigation-content {
+      align-content: flex-start;
+    }
+
+    .navigation-inner {
+      width: 100%;
+    }
+
+    .navigation-content {
+      width: 100%;
+    }
+
+    .navigation-point {
+      padding: 24px 0;
+      margin: 0 24px;
+
+      border-bottom: 1px solid rgba(#12233d, 0.1);
+    }
+
+    .navigation-cell {
+      border: none;
     }
   }
 }

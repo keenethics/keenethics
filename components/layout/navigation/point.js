@@ -51,7 +51,12 @@ export default class NavigationPoint extends React.Component {
       case 'icon': return (
         <span className="navigation-cell">
           <span className="navigation-icon">
-            <img src={`/static/images/svg/${icon.name || ''}.svg`} width="30px" height="30px" alt={icon.alt || ''} />
+            <img
+              src={`/static/images/svg/${icon.name || ''}.svg`}
+              width="30px"
+              height="30px"
+              alt={icon.alt || ''}
+            />
           </span>
           {name}
         </span>
@@ -79,7 +84,6 @@ export default class NavigationPoint extends React.Component {
 
     const {
       children,
-      height,
       currentPoint,
       currentSubpoint,
     } = this.props;
@@ -91,7 +95,11 @@ export default class NavigationPoint extends React.Component {
     });
 
     return (
-      <li className={className} role="presentation" id={currentSubpoint ? 'current-subpoint' : ''} style={{ height }}>
+      <li
+        className={className}
+        role="presentation"
+        id={currentSubpoint ? 'current-subpoint' : ''}
+      >
         {this.renderPoint()}
         {children}
       </li>
@@ -111,7 +119,6 @@ NavigationPoint.propTypes = {
     number: PropTypes.string,
     type: PropTypes.string,
   }),
-  height: PropTypes.string,
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
   scroll: PropTypes.func,
@@ -128,7 +135,6 @@ NavigationPoint.defaultProps = {
     number: '01',
     type: '',
   },
-  height: '0px',
   currentPoint: false,
   currentSubpoint: false,
   scroll: null,

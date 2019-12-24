@@ -1,22 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const Founders = ({ section }) => (
-  <div className="block block-founders" id={section}>
+const Founders = () => (
+  <div className="block block-founders">
     <div className="section-founders block--content">
       <div className="founders-text-section">
         <h2 className="text-section-title">
           We found KeenEthics because we knew that the tech world could do better.
         </h2>
         <p className="text-section-description">
-        We are the leaders at KeenEthics: Max Savonin,
-        the CEO, and Alex Pletnov, the CTO.
-        Back in 2015, we co-founded KeenEthics
-        Because we believed that we can make an
-        Important contribution to the industry.
-        We strive to make the tech world play ethically.
-
+          We are the leaders at KeenEthics: Max Savonin,
+          the CEO, and Alex Pletnov, the CTO.
+          Back in 2015, we co-founded KeenEthics
+          Because we believed that we can make an
+          Important contribution to the industry.
+          We strive to make the tech world play ethically.
         </p>
         <Link href="/contacts?activeForm=estimate">
           <a className="button contacts-goal orange-btn">Our Story</a>
@@ -28,9 +26,5 @@ const Founders = ({ section }) => (
     </div>
   </div>
 );
-
-Founders.propTypes = {
-  section: PropTypes.string.isRequired,
-};
 
 export default Founders;

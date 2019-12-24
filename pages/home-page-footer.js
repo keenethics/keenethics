@@ -115,7 +115,7 @@ const HomeFooter = ({
             <h5>Services</h5>
           </li>
           {services.map((el) => (
-            <li className="home-footer-list-item">
+            <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>
           ))}
@@ -125,7 +125,7 @@ const HomeFooter = ({
             <h5>Industries</h5>
           </li>
           {industries.map((el) => (
-            <li className="home-footer-list-item">
+            <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>
           ))}
@@ -135,7 +135,7 @@ const HomeFooter = ({
             <h5>Technologies</h5>
           </li>
           {technologies.map((el) => (
-            <li className="home-footer-list-item">
+            <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>
           ))}
@@ -145,7 +145,7 @@ const HomeFooter = ({
             <h5>Careers</h5>
           </li>
           {careers.map((el) => (
-            <li className="home-footer-list-item">
+            <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>
           ))}

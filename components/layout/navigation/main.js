@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { withRouter } from 'next/router';
 
 import React from 'react';
@@ -96,6 +95,7 @@ class Navigation extends React.Component {
 
   showSidebar() {
     this.props.toggleNav();
+
     this.setState({
       showSidebar: true,
     });
@@ -121,7 +121,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const { showSidebar, dimensions } = this.state;
+    const { showSidebar } = this.state;
     const { router } = this.props;
 
     const currentURL = router;
@@ -151,15 +151,8 @@ class Navigation extends React.Component {
         <div className="navigation-hamburger" onClick={this.showSidebar} onKeyDown={this.showSidebar} role="presentation">
           <span />
         </div>
-        <div className="navigation-inner" style={{ height: dimensions.height }}>
-          <div className="navigation-header">
-            <Link href="/">
-              <a className="logo">
-                <img src="/static/images/svg/logo.svg" alt="KeenEthics" width="120px" />
-              </a>
-            </Link>
-          </div>
-          <ul className="navigation-content" style={{ height: dimensions.height }}>
+        <div className="navigation-inner">
+          <ul className="navigation-content">
             {navigation.map((n, i) => {
               if (n.type && n.type === 'hidden') {
                 return null;
@@ -176,11 +169,6 @@ class Navigation extends React.Component {
               );
             })}
           </ul>
-          <div className="navigation-footer">
-            <Link href="/contacts">
-              <a className="button contacts-goal orange-btn">Contact us</a>
-            </Link>
-          </div>
         </div>
       </div>
     );

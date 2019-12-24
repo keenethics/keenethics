@@ -1,5 +1,12 @@
 [
   {
+    "name": "Home",
+    "description": "Have an idea? We can`t wait to help you implement it!",
+    "metaTitle": "Contacts - Office And Locations - KeenEthics",
+    "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
+    "href": "/"
+  },
+  {
     "name": "Services",
     "points": [
       {
@@ -367,8 +374,7 @@
     "description": "Have an idea? We can`t wait to help you implement it!",
     "metaTitle": "Contacts - Office And Locations - KeenEthics",
     "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
-    "href": "/contacts",
-    "type": "hidden"
+    "href": "/contacts"
   },
   {
     "name": "Privacy Policy",
