@@ -9,6 +9,8 @@
     padding-top: 60px;
     position: relative;
     z-index: 1;
+    min-height: 630px;
+    max-height: 630px;
 
     &-body {
       display: flex;
@@ -21,6 +23,8 @@
 
   @media (min-width: $desktop-md) {
     padding-top: 95px;
+    min-height: 780px;
+    max-height: 780px;
 
     h2 {
       font-size: 34px;
@@ -237,10 +241,11 @@
       min-width: calc(350px * 4);
       position: relative;
       z-index: -1;
-    }
 
-    @media (min-width: $desktop-md) {
-      min-width: calc(650px * 4);
+      flex-flow: column nowrap;
+      align-items: stretch;
+      min-width: 0;
+      height: calc(100% * 4);
     }
 
     &-item {
@@ -251,8 +256,9 @@
 
       @media (min-width: $tablet-lg) {
         padding: 0;
-        flex: 1 1 350px;
+        flex: 0 0 470px;
         transition-duration: .3s;
+        padding-right: 20px;
       }
 
       @media (min-width: $desktop-md) {
@@ -363,6 +369,7 @@
             width: 1px;
             top: -50%;
             bottom: 0;
+            z-index: -1;
           }
 
           em {
@@ -389,6 +396,7 @@
             height: 300%;
             width: 1px;
             background-color: #334154;
+            z-index: -1;
           }
 
           em {
