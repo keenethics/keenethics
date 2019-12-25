@@ -71,11 +71,11 @@
 
     @media (min-width: $tablet-lg) {
       margin-bottom: 50px;
+      justify-content: center;
     }
 
     @media (min-width: $desktop-md) {
       margin-bottom: 90px;
-      justify-content: center;
     }
   }
 
@@ -91,14 +91,6 @@
       display: none;
     }
     -ms-overflow-style: none;
-
-    // @media (min-width: $tablet-lg) {
-    //   width: calc(750px * 4);
-    // }
-
-    // @media (min-width: $desktop-lg) {
-    //   width: calc(900px * 4);
-    // }
 
     li {
       color: #12233D;
@@ -130,6 +122,10 @@
         font-size: 14px;
         line-height: 26px;
         text-align: left;
+
+        a {
+          color: inherit;
+        }
       }
 
       @media (min-width: $tablet-lg) {
