@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import { withRouter } from 'next/router';
 
 import React, { useState, useEffect } from 'react';

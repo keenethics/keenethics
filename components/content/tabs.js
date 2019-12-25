@@ -59,7 +59,7 @@ export default class PageTabs extends React.Component {
       slidesToShow: points.length > 6 ? 6 : points.length,
       slidesToScroll: 1,
       initialSlide: 0,
-      init: this.sliderInit,
+      onInit: this.sliderInit,
       draggable: false,
       responsive: [
         {
