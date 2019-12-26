@@ -51,7 +51,7 @@ export default class Careers extends React.Component {
       slidesToShow: 3,
       afterChange: this.sliderChange,
       initialSlide: this.state.activeItemIndex,
-      init: this.sliderInit,
+      onInit: this.sliderInit,
       centerMode: true,
       responsive: [
         {

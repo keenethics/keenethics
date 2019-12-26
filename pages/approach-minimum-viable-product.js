@@ -202,6 +202,7 @@ const ApproachMinimumValProduct = () => (
         If you are interested in MVP development services,
         please, feel free to&nbsp;
         <Link href="/contacts">contact us</Link>
+        .
       </p>
     </div>
   </Layout>

@@ -51,17 +51,18 @@ const ContactForm = () => {
   const [fileName, setFileName] = useState(DEFAULT_FILENAME);
   const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
+  };
+
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
     setEmail({ value: '', error: false });
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
-    setFileName(DEFAULT_FILENAME);
-    setFileSize(DEFAULT_FILESIZE);
-  };
-
-  const unattachFile = (err) => {
-    setFile(err);
+    unattachFile({ value: '', error: false });
     setFileName(DEFAULT_FILENAME);
     setFileSize(DEFAULT_FILESIZE);
   };
@@ -193,9 +194,14 @@ const ContactForm = () => {
             allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
             onChange={
               (e) => {
-                setFile(e.target.files[0]);
-                setFileName(e.target.files[0].name);
-                setFileSize(` ${Math.round(e.target.files[0].size / 10000) / 100} MB `); // 1mb = 1000000
+                const fileObj = e.target.files[0];
+                if (fileObj) {
+                  setFile(fileObj);
+                  setFileName(fileObj.name);
+                  setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `); // 1mb = 1000000
+                } else {
+                  unattachFile({ value: '', error: false });
+                }
               }
             }
           />
@@ -218,7 +224,7 @@ const ContactForm = () => {
                   subscriber discount
                 </a>
               </>
-)}
+            )}
             name="estimateFormIsSubscriber"
             id="estimateFormIsSubscriber"
             value="estimateFormIsSubscriber"

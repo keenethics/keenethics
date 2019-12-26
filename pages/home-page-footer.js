@@ -106,6 +106,8 @@ const careers = [
 ];
 const HomeFooter = ({
   section,
+  isMobile,
+  isTablet,
 }) => (
   <div className="block block-footer" id={section}>
     <div className="home-footer block--footer-content">
@@ -268,7 +270,10 @@ const HomeFooter = ({
           Latest in Blog
           <span className="bell-icon" />
         </div>
-        <FooterSlider />
+        <FooterSlider
+          isMobile={isMobile}
+          isTablet={isTablet}
+        />
       </div>
       <div className="home-footer-row footer-links">
         <div className="social-icons footer-links-terms">
@@ -292,6 +297,8 @@ const HomeFooter = ({
 );
 HomeFooter.propTypes = {
   section: PropTypes.string,
+  isMobile: PropTypes.bool.isRequired,
+  isTablet: PropTypes.bool.isRequired,
 };
 
 HomeFooter.defaultProps = {

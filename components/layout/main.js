@@ -69,15 +69,16 @@ class Layout extends React.Component {
       meta,
       noMenu,
       className,
+      style,
     } = this.props;
 
     const currentURL = router.route;
 
-    const style = {};
-    if (noMenu) {
-      style.width = '100vw';
-    }
+    const contentInnerStyle = { ...style, height: dimensions.height };
 
+    if (noMenu) {
+      contentInnerStyle.width = '100vw';
+    }
     if (isLoading) return null; // TODO: set preloader
 
     return (
@@ -85,7 +86,7 @@ class Layout extends React.Component {
         <Head currentURL={currentURL} meta={meta} />
         {noMenu ? null : <Navigation currentURL={currentURL} toggleNav={this.toggleNav} />}
         <div className={classnames('content', { 'nav-open': noMenu || (dimensions.width > 768) })}>
-          <div className={classnames('content-inner', className)} style={style}>
+          <div className={classnames('content-inner', className)} style={contentInnerStyle}>
             { children }
           </div>
         </div>
@@ -103,6 +104,7 @@ Layout.propTypes = {
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
   className: PropTypes.string,
+  style: PropTypes.object,
 };
 
 Layout.defaultProps = {
@@ -111,6 +113,7 @@ Layout.defaultProps = {
   meta: {},
   noMenu: false,
   className: '',
+  style: {},
 };
 
 export default withRouter(Layout);
