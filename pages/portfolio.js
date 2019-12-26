@@ -94,7 +94,7 @@ class Portfolio extends React.Component {
           filterOnChange={this.filterOnChange}
           pageTitle={pageTitle || 'portfolio'}
         />
-        {postIds.length && (
+        {postIds.length > 0 && (
           <Works works={
             filteredWorks.filter((work) => {
               if (!selectedCategories.length) return postIds.some((title) => title === work.title);
@@ -103,7 +103,7 @@ class Portfolio extends React.Component {
           }
           />
         )}
-        {works.length && !postIds.length ? <Works works={filteredWorks} /> : null}
+        {works.length > 0 && !postIds.length ? <Works works={filteredWorks} /> : null}
       </section>
     );
     return postIds.length ? portfolioComponent : this.wrapperCondition(portfolioComponent);
