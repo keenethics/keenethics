@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router';
+import Link from 'next/link';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -21,36 +22,20 @@ class Navigation extends React.Component {
     super(props);
 
     this.state = {
-      dimensions: {
-        width: -1,
-        height: -1,
-      },
       showSidebar: false,
     };
 
     this.getPointContent = this.getPointContent.bind(this);
-    this.getPointHeight = this.getPointHeight.bind(this);
     this.showSidebar = this.showSidebar.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
-
-    this.updateDimensions();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
   }
 
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
 
-    if (points && this.state.dimensions.height > -1) {
+    if (points) {
       return (
-        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+        <ul className="subnavigation">
           <div
             ref={(n) => { this.wrapper = n; }}
             id={currentPoint && currentSubpoint ? 'subnavigation-inner-current' : ''}
@@ -60,7 +45,6 @@ class Navigation extends React.Component {
               <Point
                 key={p.name}
                 element={p}
-                height={this.getPointHeight(points.length)}
                 currentSubpoint={currentPoint && currentSubpoint === i}
                 scroll={this.constructor.scrollToActiveSubpoint}
               />
@@ -71,7 +55,7 @@ class Navigation extends React.Component {
     }
     if (points && this.state.dimensions.height < 0) {
       return (
-        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+        <ul className="subnavigation">
           <div className="subnavigation-loading" />
         </ul>
       );
@@ -81,16 +65,6 @@ class Navigation extends React.Component {
     }
 
     return null;
-  }
-
-  getPointHeight(numberOfPoints) {
-    const { height } = this.state.dimensions;
-
-    if ((height / numberOfPoints) > 90) {
-      return `${100 / numberOfPoints}%`;
-    }
-
-    return '90px';
   }
 
   showSidebar() {
@@ -111,15 +85,6 @@ class Navigation extends React.Component {
     });
   }
 
-  updateDimensions() {
-    this.setState({
-      dimensions: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      },
-    });
-  }
-
   render() {
     const { showSidebar } = this.state;
     const { router } = this.props;
@@ -127,7 +92,6 @@ class Navigation extends React.Component {
     const currentURL = router;
 
     const { navigation } = config;
-    const height = `${100 / navigation.filter((n) => !n.type && n.type !== 'hidden').length}%`;
 
     let currentPoint = null;
     let currentSubpoint = null;
@@ -152,6 +116,11 @@ class Navigation extends React.Component {
           <span />
         </div>
         <div className="navigation-inner">
+          <Link href="/">
+            <a className="navigation-icon">
+              <img src="/static/images/logo.svg" alt="Keenethics" />
+            </a>
+          </Link>
           <ul className="navigation-content">
             {navigation.map((n, i) => {
               if (n.type && n.type === 'hidden') {
@@ -161,7 +130,6 @@ class Navigation extends React.Component {
                 <Point
                   key={n.name}
                   element={n}
-                  height={height}
                   currentPoint={currentPoint === i}
                 >
                   {this.getPointContent(n, currentPoint === i, currentSubpoint)}

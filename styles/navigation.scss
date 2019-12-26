@@ -46,7 +46,7 @@
 .navigation-inner {
   position: relative;
   min-width: 160px;
-  height: 100%;
+  height: calc(100% - 76px);
   background: #fff;
 
   @include for-tablet {
@@ -59,7 +59,17 @@
       z-index: 9999;
       @include visible(true);
     }
-  };
+  }
+
+  .navigation-icon {
+    display: block;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      padding: 24px 0;
+    }
+  }
 }
 .navigation-header {
   position: absolute;
