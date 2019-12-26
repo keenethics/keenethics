@@ -293,6 +293,145 @@ const HomeFooter = ({
         </div>
       </div>
     </div>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "KeenEthics",
+            "url": "https://keenethics.com",
+            "logo": "https://keenethics.com/static/images/svg/logo.svg",
+            "contactPoint": [{
+              "@type": "ContactPoint",
+              "telephone": "+38 (096) 814 72 66",
+              "contactType": "sales",
+              "areaServed": "UA",
+              "availableLanguage": "Ukrainian"
+            },{
+              "@type": "ContactPoint",
+              "telephone": "+31 20 262 0944",
+              "contactType": "sales",
+              "areaServed": "NL",
+              "availableLanguage": "Dutch"
+            },{
+              "@type": "ContactPoint",
+              "telephone": "+1 (929) 214 1392",
+              "contactType": "sales",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            }],
+            "sameAs": [
+              "https://www.facebook.com/keenethics.development",
+              "https://twitter.com/keen_ethics",
+              "https://www.instagram.com/keen_ethics",
+              "https://www.youtube.com/channel/UCRO9xu-d9sYAjNu0mOABQSQ",
+              "https://www.linkedin.com/company/keen-ethics",
+              "https://github.com/keenethics"
+            ]
+          }
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "KeenEthics",
+            "image": "https://keenethics.com/static/images/svg/logo.svg",
+            "url": "https://keenethics.com",
+            "telephone": "+38 (096) 814 72 66",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Kulparkivska St, 59",
+              "addressLocality": "Lviv",
+              "postalCode": "79000",
+              "addressCountry": "UA"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 49.82696869999999,
+              "longitude": 23.990278200000034
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "20:00"
+            },
+          }
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "KeenEthics",
+            "image": "https://keenethics.com/static/images/svg/logo.svg",
+            "url": "https://keenethics.com",
+            "telephone": "+31 20 262 0944",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Oude litherweg 2,",
+              "addressLocality": "Oss",
+              "postalCode": "5346 RT",
+              "addressCountry": "NL"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.771189,
+              "longitude": 5.514320999999995
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          }
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "KeenEthics",
+            "image": "https://keenethics.com/static/images/svg/logo.svg",
+            "url": "https://keenethics.com",
+            "telephone": "+1 (929) 214 1392",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1412 Broadway, 21st floor",
+              "addressLocality": "New York",
+              "addressRegion": "NY",
+              "postalCode": "2200",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.7536222,
+              "longitude": -73.98654920000001
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+          }
+        `,
+      }}
+    />
   </div>
 );
 HomeFooter.propTypes = {
