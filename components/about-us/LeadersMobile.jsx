@@ -29,7 +29,11 @@ const LeadersMobile = ({ data }) => {
       gallery.current.addEventListener('scroll', handleScroll);
     }
 
-    return () => gallery.removeEventListener('scroll', handleScroll);
+    return () => {
+      if (gallery && gallery.removeEventListener) {
+        gallery.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, [gallery]);
 
   return (

@@ -46,7 +46,7 @@
 .navigation-inner {
   position: relative;
   min-width: 160px;
-  height: calc(100% - 76px);
+  height: 100%;
   background: #fff;
 
   @include for-tablet {
@@ -63,11 +63,13 @@
 
   .navigation-icon {
     display: block;
+    height: 28px;
+    padding: 18px 0 22px;
+    box-sizing: content-box;
 
     img {
       display: block;
       margin: 0 auto;
-      padding: 24px 0;
     }
   }
 }
@@ -151,7 +153,7 @@
   flex-wrap: wrap;
   align-content: space-around;
   width: 160px;
-  height: 100%;
+  height: calc(100% - 68px);
   box-sizing: border-box;
   overflow: hidden;
 
@@ -159,6 +161,7 @@
     width: 100%;
     display: block;
     box-sizing: border-box;
+    overflow: hidden;
 
     &:hover {
       .navigation-point .navigation-cell {
@@ -167,20 +170,9 @@
     }
 
     &.current {
-      .subnavigation {
-        display: block;
-        position: absolute;
-        left: 160px;
-        top: 0;
-        z-index: 100;
-      }
-
       .navigation-point .navigation-cell {
         border-bottom: 1px solid #d62c2c;
       }
-    }
-    .subnavigation .navigation-item.current {
-      width: 160px;
     }
   }
 }

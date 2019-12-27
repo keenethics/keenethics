@@ -53,13 +53,6 @@ class Navigation extends React.Component {
         </ul>
       );
     }
-    if (points && this.state.dimensions.height < 0) {
-      return (
-        <ul className="subnavigation">
-          <div className="subnavigation-loading" />
-        </ul>
-      );
-    }
     if (!points) {
       return null;
     }
@@ -109,6 +102,8 @@ class Navigation extends React.Component {
         currentPoint = i;
       }
     });
+
+    console.log(navigation);
 
     return (
       <div className={showSidebar ? 'navigation is-open' : 'navigation'}>

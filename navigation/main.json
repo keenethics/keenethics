@@ -8,6 +8,7 @@
   },
   {
     "name": "Services",
+    "href": "/services-web-development",
     "points": [
       {
         "name": "Web Development",
@@ -179,6 +180,7 @@
   },
   {
     "name": "Approach",
+    "href": "/approach-lean-approach",
     "points": [
       {
         "name": "Lean Approach",
@@ -248,6 +250,7 @@
   },
   {
     "name": "Technologies",
+    "href": "/tech-apps",
     "points": [
       {
         "name": "Apps",
@@ -302,7 +305,11 @@
     ]
   },
   {
-    "name": "Portfolio",
+    "name": "About us",
+    "href": "/about-us"
+  },
+  {
+    "name": "Projects",
     "description": "???",
     "metaTitle": "Portfolio KeenEthics",
     "metaDescription": "???",
@@ -345,32 +352,7 @@
     "href": "/blog"
   },
   {
-    "name": "About",
-    "points": [
-      {
-        "name": "Team",
-        "description": "Meet our Squad",
-        "href": "/about-team",
-        "icon": {
-          "name": "team",
-          "alt": "Team"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "Open Source",
-        "description": "Ethical support for the community",
-        "href": "/about-open-source",
-        "icon": {
-          "name": "open-source",
-          "alt": "Open source"
-        },
-        "type": "icon"
-      }
-    ]
-  },
-  {
-    "name": "Contacts",
+    "name": "Contact us",
     "description": "Have an idea? We can`t wait to help you implement it!",
     "metaTitle": "Contacts - Office And Locations - KeenEthics",
     "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
