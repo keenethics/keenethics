@@ -2,33 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const StoryItemDescription = ({ text, links, visible }) => {
+export const ItemDescription = ({ text, links, visible }) => {
   const linkRegex = /%(.*?)%/ig;
   const parts = text.split(linkRegex);
 
-  return (
-    <li>
-      {
-        parts.map((part) => {
-          if (links[part]) {
-            return (
-              <a
-                key={part}
-                href={links[part]}
-                tabIndex={!visible ? '-1' : '0'}
-              >
-                {part}
-              </a>
-            );
-          }
-          return part;
-        })
-      }
-    </li>
-  );
+  return parts.map((part) => {
+    if (links && links[part]) {
+      return (
+        <a
+          key={part}
+          href={links[part]}
+          tabIndex={!visible ? '-1' : '0'}
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
 };
 
-StoryItemDescription.propTypes = {
+ItemDescription.propTypes = {
   text: PropTypes.string.isRequired,
   links: PropTypes.object.isRequired,
   visible: PropTypes.bool.isRequired,
@@ -60,12 +54,14 @@ const StoryItem = ({
     </div>
     <ul className="notes">
       {items.map((item, i) => (
-        <StoryItemDescription
-          text={item}
-          links={links}
-          key={i}
-          visible={visible}
-        />
+        <li>
+          <ItemDescription
+            text={item}
+            links={links}
+            key={i}
+            visible={visible}
+          />
+        </li>
       ))}
     </ul>
   </div>

@@ -12,8 +12,15 @@ const mobileYearOffsets = [
   '0',
   '-90px',
   '-210px',
-  '-333px',
+  '-363px',
 ];
+
+const getOffset = (step) => {
+  if (window.innerWidth < 768) {
+    return { transform: `translateX(${-25 * step}%)` };
+  }
+  return { transform: `translateY(${-25 * step}%)` };
+};
 
 const OurStory = () => {
   const [step, _setStep] = useState(0);
@@ -71,7 +78,7 @@ const OurStory = () => {
         </div>
         <div
           className="story"
-          style={{ transform: `translateX(${-25 * step}%)` }}
+          style={getOffset(step)}
         >
           {storyData.map((_step, i) => (
             <StoryItem

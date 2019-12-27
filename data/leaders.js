@@ -9,8 +9,7 @@ const leadersData = [
   {
     name: 'Alex Pletnov',
     position: 'Chief Technical Officer',
-    // change later
-    picture: 'max-savonin',
+    picture: 'alex-pletnev',
     linkedin: 'https://www.linkedin.com/in/oleksiy-pletnov-212b3764/',
     email: 'mailto:oleksiy.pletnov@keenethics.com',
   },
@@ -34,6 +33,13 @@ const leadersData = [
     picture: 'oksana-pleten',
     linkedin: 'https://www.linkedin.com/in/oksana-pleten-636014138/',
     email: 'mailto:oksana.pleten@keenethics.com',
+  },
+  {
+    name: 'Pavlo Klymenko',
+    position: 'Head of Product Management',
+    picture: 'pavlo-klymenko',
+    linkedin: 'https://www.linkedin.com/in/pavlo-klymenko/',
+    email: 'mailto:pavlo.klymenko@keenethics.com',
   },
 ];
 

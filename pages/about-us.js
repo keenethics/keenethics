@@ -7,10 +7,50 @@ import OurValues from '../components/about-us/OurValues';
 import OurTeam from '../components/about-us/OurTeam';
 import LetsStart from './home-page-lets-start';
 import MeetOurLeaders from '../components/about-us/MeetOurLeaders';
+import { getPostsList } from '../lib/contentful';
+import PostsContext from '../components/context/posts-context';
+import HomeFooter from './home-page-footer';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AboutUs extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isMobile: false,
+      isTablet: false,
+      posts: [],
+    };
+  }
+
+  async componentDidMount() {
+    const { posts } = this.state;
+    if (!posts || !posts.length) {
+      const blogPosts = await getPostsList();
+      if (blogPosts && blogPosts.items) {
+        this.setState({ posts: blogPosts.items });
+      }
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', ({ target }) => {
+        if (target) {
+          this.setState({
+            isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
+            isMobile: target.innerWidth <= 480,
+          });
+        }
+      });
+
+      this.setState({
+        isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
+        isMobile: window.innerWidth <= 480,
+      });
+    }
+  }
+
   render() {
+    const { isMobile, isTablet, posts } = this.state;
     return (
       <Layout>
         <section className="page__wrapper page__about-us">
@@ -47,6 +87,12 @@ class AboutUs extends React.Component {
           <OurTeam />
           <LetsStart />
         </section>
+        <PostsContext.Provider value={posts}>
+          <HomeFooter
+            isMobile={isMobile}
+            isTablet={isTablet}
+          />
+        </PostsContext.Provider>
       </Layout>
     );
   }
