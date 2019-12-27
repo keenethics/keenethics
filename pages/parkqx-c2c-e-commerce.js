@@ -75,7 +75,7 @@ const ProjectPrix = () => (
               ,
               <span style={{ marginLeft: '.25em' }}><Link href="/tech-data-base-mongo">MongoDB</Link></span>
               , Firebase, Twilio, and
-              <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-react-native">React Native</Link></span>
+              <span style={{ marginLeft: '.25em' }}><Link href="/tech-apps-react-native">React Native</Link></span>
               .
             </p>
             <ul className="technologies-list">
