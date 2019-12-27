@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import SeeProjects from './SeeProjects';
 
 const Industries = () => (
@@ -18,58 +19,64 @@ const Industries = () => (
         <div className="industries">
           <div className="industries-big grid">
             <div className="col-1-3">
-              <div className="industries--big-item">
-                <div className="industries--big-item-logo">
-                  <img
-                    src="/static/main-blocks/industries/large/icon-education.svg"
-                    width="54px"
-                    height="34px"
-                    alt="Education industries"
-                  />
+              <Link href="/services-education-software-development">
+                <div className="industries--big-item">
+                  <div className="industries--big-item-logo">
+                    <img
+                      src="/static/main-blocks/industries/large/icon-education.svg"
+                      width="54px"
+                      height="34px"
+                      alt="Education industries"
+                    />
+                  </div>
+                  <div className="industries--big-item-title">
+                    Education
+                  </div>
+                  <div className="industries--big-item-description">
+                    Software Development
+                  </div>
                 </div>
-                <div className="industries--big-item-title">
-                  Education
-                </div>
-                <div className="industries--big-item-description">
-                  Software Development
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-1-3">
-              <div className="industries--big-item">
-                <div className="industries--big-item-logo">
-                  <img
-                    src="/static/main-blocks/industries/large/icon-business.svg"
-                    width="54px"
-                    height="34px"
-                    alt="Education industries"
-                  />
+              <Link href="/services-business-administration-development">
+                <div className="industries--big-item">
+                  <div className="industries--big-item-logo">
+                    <img
+                      src="/static/main-blocks/industries/large/icon-business.svg"
+                      width="54px"
+                      height="34px"
+                      alt="Education industries"
+                    />
+                  </div>
+                  <div className="industries--big-item-title">
+                    Business
+                  </div>
+                  <div className="industries--big-item-description">
+                    Administration Development
+                  </div>
                 </div>
-                <div className="industries--big-item-title">
-                  Business
-                </div>
-                <div className="industries--big-item-description">
-                  Administration Development
-                </div>
-              </div>
+              </Link>
             </div>
             <div className="col-1-3">
-              <div className="industries--big-item">
-                <div className="industries--big-item-logo">
-                  <img
-                    src="/static/main-blocks/industries/large/icon-healthcare.svg"
-                    width="54px"
-                    height="34px"
-                    alt="Education industries"
-                  />
+              <Link href="/services-custom-healthcare-software-development">
+                <div className="industries--big-item">
+                  <div className="industries--big-item-logo">
+                    <img
+                      src="/static/main-blocks/industries/large/icon-healthcare.svg"
+                      width="54px"
+                      height="34px"
+                      alt="Education industries"
+                    />
+                  </div>
+                  <div className="industries--big-item-title">
+                    Healthcare
+                  </div>
+                  <div className="industries--big-item-description">
+                    Software Development
+                  </div>
                 </div>
-                <div className="industries--big-item-title">
-                  Healthcare
-                </div>
-                <div className="industries--big-item-description">
-                  Software Development
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="industries-small">

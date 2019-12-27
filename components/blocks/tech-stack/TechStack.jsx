@@ -95,13 +95,13 @@ const TechStack = () => (
             Databases
           </div>
           <div className="tech-stack--block-list">
-            <Link href="/services-web-development">
+            <Link href="/tech-data-base-mongo">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/mongodb.svg" alt="mongodb" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/mongodb-color.svg" alt="mongodb" />
               </div>
             </Link>
-            <Link href="/services-web-development">
+            <Link href="/tech-data-base-mysql">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/mysql.svg" alt="mysql" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/mysql-color.svg" alt="mysql" />
@@ -114,31 +114,31 @@ const TechStack = () => (
             API Integration
           </div>
           <div className="tech-stack--block-list">
-            <Link href="/services-web-development">
+            <Link href="/tech-api-integration-rest">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/rest.svg" alt="rest" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/rest-color.svg" alt="rest" />
               </div>
             </Link>
-            <Link href="/services-web-development">
+            <Link href="/tech-api-integration-paypal">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/paypal.svg" alt="paypal" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/paypal-color.svg" alt="paypal" />
               </div>
             </Link>
-            <Link href="/services-web-development">
+            <Link href="/tech-api-integration-graphql">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/graphql.svg" alt="graphql" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/graphql-color.svg" alt="graphql" />
               </div>
             </Link>
-            <Link href="/services-web-development">
+            <Link href="/tech-api-integration-braintree">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/braintree.svg" alt="braintree" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/braintree-color.svg" alt="braintree" />
               </div>
             </Link>
-            <Link href="/services-web-development">
+            <Link href="/tech-api-integration-stripe">
               <div className="tech-stack--block-item">
                 <img src="/static/main-blocks/tech-stack/stripe.svg" alt="stripe" />
                 <img className="toggle-color" src="/static/main-blocks/tech-stack/stripe-color.svg" alt="stripe" />

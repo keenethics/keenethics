@@ -18,7 +18,7 @@ const Founders = ({ section }) => (
         We strive to make the tech world play ethically.
 
         </p>
-        <Link href="/contacts?activeForm=estimate">
+        <Link href="/about-us">
           <a className="button contacts-goal orange-btn">Our Story</a>
         </Link>
       </div>
