@@ -4,7 +4,7 @@ import Testimonial from './Testimonial';
 import Author from './Author';
 
 const Partners = () => {
-  const length = 3;
+  const length = 4;
   const [index, setIndex] = useState(0);
 
   const increaseIndex = (e) => {
@@ -63,17 +63,22 @@ const Partners = () => {
               <Testimonial
                 isVisible={index === 1}
               >
-                They really get startups and are
-                able to work without perfect project-plans - making clever and reasonable
-                assumptions. Great team, solid communication and fast-paced, high-quality
-                development.
+                Due to their responsiveness & patience, the collaboration itself progressed smoothly
+                from start to finish, resulting in a high quality product & ensuring their continued
+                engagement. KeenEthics’ skill set was exactly what was needed, & despite a language
+                difference, communications never suffered.
               </Testimonial>
               <Testimonial
                 isVisible={index === 2}
               >
-                Great team, solid communication and fast-paced, high-quality development.
-                We were impressed with Keenethics from the get-go. They really get startups and are
-                able to work without perfect project-plans - making clever and reasonable.
+                Despite the physical distance and never meeting each other in person, KeenEthics has
+                built a complicated dairy industry related webapp for us. I found the cooperation in
+                the development of this tool good, honest and straightforward.
+              </Testimonial>
+              <Testimonial
+                isVisible={index === 3}
+              >
+                KeenEthics delivers the required tasks within the time frame and at high quality.
               </Testimonial>
             </div>
             <div
@@ -92,17 +97,24 @@ const Partners = () => {
             />
             <Author
               isVisible={index === 1}
-              avatar="jens-munch"
-              name="Jens Munch"
-              from="the UK"
-              position="Founder of Pace, a revenue management software provider"
+              avatar="mike-casey"
+              name="Mike Casey"
+              from="the USA, Georgia"
+              position="Founder at Banker Advisor, an investment banking company"
             />
             <Author
               isVisible={index === 2}
-              avatar="jens-munch"
-              name="Jens Munch"
+              avatar="wim-honkoop"
+              name="Wim Honkoop"
+              from="the Netherlands"
+              position="Founder at My Grass Growth, an agriculture company"
+            />
+            <Author
+              isVisible={index === 3}
+              avatar="andreas-feller"
+              name="Andreas Feller"
               from="the UK"
-              position="Founder of Pace, a revenue management software provider"
+              position="Co-Founder & COO at WorldLabs, a business incubator platform"
             />
           </div>
         </div>
