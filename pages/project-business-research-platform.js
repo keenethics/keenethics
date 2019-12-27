@@ -8,7 +8,7 @@ import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#4b6a6a';
 
-const ProjectPrix = () => (
+const ProjectBusinessResearchPlatform = () => (
   <Layout>
     <div className="content-wrap">
       <div className="content-block content-block-project">
@@ -274,4 +274,4 @@ const ProjectPrix = () => (
   </Layout>
 );
 
-export default ProjectPrix;
+export default ProjectBusinessResearchPlatform;
