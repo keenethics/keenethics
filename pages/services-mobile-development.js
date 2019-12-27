@@ -41,7 +41,7 @@ const ServicesMobileDevelopment = () => {
       icon: '/static/services/search.svg',
       alt: 'search icon',
       description: 'Do you doubt whether your business idea is worth implementing?',
-      additionalText: <p>Let our developers create a <Link href="/services-proof"><a>Proof of Concept</a></Link> for you, and you will have this question answered by your users themselves.</p>,
+      additionalText: <p>Let our developers create a <Link href="/services-business-analysis"><a>Proof of Concept</a></Link> for you, and you will have this question answered by your users themselves.</p>,
     },
   ];
   const servicesList = [

@@ -10,9 +10,7 @@ import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 
-import PageTabs from '../components/content/tabs';
-
-import { servicesOutstaffing, works } from '../main.config';
+import { works } from '../main.config';
 
 const whyStaffAugmentation = [
   {
@@ -69,7 +67,6 @@ const whyStaffAugmentation = [
 const ServicesOutstaffing = () => (
   <Layout>
     <ContentNavigation image="outstaffing" />
-    <PageTabs points={servicesOutstaffing()} />
     <div className="content-block">
       <section>
         <h1 className="text-center">Dedicated Development Team</h1>
@@ -176,7 +173,7 @@ const ServicesOutstaffing = () => (
           <p>OneRemission is a custom healthcare mobile solution.  The idea of it is to help patients who survived cancer and their families minimize the risk of cancer recurrence. As of now, it is one of the best and most popular chatbot-based Integrative Oncology applications. It encompasses best diet, exercise, sleep, and stress management practices for cancer and post-cancer care.</p>
           <div>
             <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-apple">iOS</Link></div>
-            <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/services-web-development-node">Node.js</Link>, <Link href="/tech-data-base-mongo">MongoDB</Link>, Wit.ai, <Link href="/services-web-development-chatbot">BotPress</Link>, WebSocket</div>
+            <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/services-web-development-node">Node.js</Link>, <Link href="/tech-data-base-mongo">MongoDB</Link>, Wit.ai, <Link href="/services-chatbots-artificial-intelligence">BotPress</Link>, WebSocket</div>
             <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link></div>
           </div>
           <Works rounded works={works.filter(({ title }) => ['OneRemission'].includes(title))} />

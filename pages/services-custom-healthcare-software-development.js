@@ -353,7 +353,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               ,&nbsp;
               <span>Wit.ai</span>
               ,&nbsp;
-              <Link href="/services-web-development-chatbot">BotPress</Link>
+              <Link href="/services-chatbots-artificial-intelligence">BotPress</Link>
               ,&nbsp;
               <span>WebSocket</span>
             </div>

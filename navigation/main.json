@@ -74,17 +74,6 @@
         "type": "icon"
       },
       {
-        "name": "Proof of Concept",
-        "metaTitle": "The Proof Of Concept Solution - KeenEthics",
-        "description": "Realization of a certain method or idea in order to demonstrate its feasibility",
-        "href": "/services-proof",
-        "icon": {
-          "name": "pcon",
-          "alt": "Proof of concept"
-        },
-        "type": "icon"
-      },
-      {
         "name": "Business Analysis",
         "metaTitle": "Business Analysis – KeenEthics",
         "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",

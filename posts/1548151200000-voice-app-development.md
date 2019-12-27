@@ -39,7 +39,7 @@ Voice devices and applications are a major AI advancement, which enables us to u
   </p>
 </div>
 
-For us as the developers and businesses using voice technology, its major importance lies in the opportunity to transform traditional messenger bots into voice [chatbots](/services-web-development-chatbot), which are more appealing to the end user.
+For us as the developers and businesses using voice technology, its major importance lies in the opportunity to transform traditional messenger bots into voice [chatbots](/services-chatbots-artificial-intelligence), which are more appealing to the end user.
 
 ## Major Industry Challenges
 

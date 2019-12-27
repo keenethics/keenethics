@@ -524,7 +524,7 @@ const ServicesWebDevelopmentE = () => (
           &nbsp;services. We are also willing to assist you with&nbsp;
           <a href="/tech-apps-progressive-web-apps" target="_blank">progressive web apps</a>
           &nbsp;or&nbsp;
-          <a href="/services-web-development-chatbot" target="_blank">chatbots</a>
+          <a href="/services-chatbots-artificial-intelligence" target="_blank">chatbots</a>
           .
         </p>
 

@@ -9,7 +9,6 @@ import {
   config,
   servicesWebDevelopmentTabs,
   servicesMobileDevelopment,
-  servicesOutstaffing,
   techApps,
   techFrontEnd,
   techBackEnd,
@@ -52,7 +51,6 @@ const LayoutHead = (props) => {
   if (!currentPoint) {
     const subnavigation = servicesWebDevelopmentTabs()
       .concat(
-        servicesOutstaffing(),
         servicesMobileDevelopment(),
         techApps(),
         techFrontEnd(),
