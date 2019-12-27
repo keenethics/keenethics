@@ -40,7 +40,7 @@ const storyData = [
     },
   },
   {
-    year: '2019',
+    year: '2019 - 2020',
     title: 'KeenEthics continues developing.',
     items: [
       'We have announced a few important partnerships, got enlisted in a couple of top software development rankings, and attended numerous international events.',
@@ -49,10 +49,6 @@ const storyData = [
     engineers: '40+',
     partners: '20+',
   },
-  // {
-  //   year: '2020',
-  //   title: 'Write your history with KeenEthics!',
-  // },
 ];
 
 export default storyData;

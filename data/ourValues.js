@@ -6,13 +6,19 @@ const ourValuesData = [
   },
   {
     title: 'Ethical Approach',
-    description: 'We care about our corporate culture to enjoy the time we spend among our colleagues. We support a few social projects helping orphans, senior citizens, sick kids, impoverished people, and stray animals. Climate change is a real threat, and we understand the responsibility we have to shoulder. We cooperate with a few local sustainability initiatives, recycle garbage, encourage our employees to commute to work by bicycle, and reduce our energy consumption.',
+    description: 'We care about %our corporate culture% to enjoy the time we spend among our colleagues. We support a few social projects helping orphans, senior citizens, sick kids, impoverished people, and stray animals. Climate change is a real threat, and we understand the responsibility we have to shoulder. We cooperate with a few local sustainability initiatives, recycle garbage, encourage our employees to commute to work by bicycle, and reduce our energy consumption.',
     image: 'static/images/about-us/ethical-approach.jpg',
+    links: {
+      'our corporate culture': '/blog/1548831600000-creating-corporate-culture',
+    },
   },
   {
     title: 'Quality and Excellence',
-    description: 'All our team members are JS-oriented. Most of them are W3Schools certified or have 10+ years of experience. We have a Single Project Office. BAs, UX/UI designers, developers, and QAs work hand-in-hand. They ensure the efficiency of project planning and development. Also, some developers have a solid background in game development. Besides, we offer a one-month-long warranty period for every product we develop.',
+    description: 'All our team members are JS-oriented. Most of them are W3Schools certified or have 10+ years of experience. We have a Single Project Office. BAs, UX/UI designers, developers, and QAs work hand-in-hand. They ensure the efficiency of project planning and development. Also, some developers have a solid background in game development. Besides, we offer a one-month-long %warranty period% for every product we develop.',
     image: 'static/images/about-us/business-value.jpg',
+    links: {
+      'warranty period': '/services-maintenance-support',
+    },
   },
   {
     title: 'Knowledge-Sharing',

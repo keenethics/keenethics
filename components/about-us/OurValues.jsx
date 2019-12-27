@@ -3,6 +3,7 @@ import { throttle, last } from 'lodash';
 
 import CategoryButton from '../categories-filter/CategoryButton';
 import ourValuesData from '../../data/ourValues';
+import { ItemDescription } from './StoryItem';
 
 const steps = ourValuesData.map((v) => v.title);
 
@@ -77,7 +78,13 @@ const OurValues = () => {
               <img src={value.image} alt={value.title} />
               <div className="caption">
                 <h4>{value.title}</h4>
-                <p>{value.description}</p>
+                <p>
+                  <ItemDescription
+                    text={value.description}
+                    links={value.links}
+                    visible
+                  />
+                </p>
               </div>
             </li>
           ))

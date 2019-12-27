@@ -28,7 +28,7 @@ export default {
       value: 'Development and testing',
       icon: 'method-icon-development-and-testing',
       component: DevelopmentDescription,
-      href: '/services-development-quality-assurance',
+      href: '/services-development-and-quality-assurance',
     },
     {
       key: 'softwaredeployment',
@@ -42,7 +42,7 @@ export default {
       value: 'Maintenance and support',
       icon: 'method-icon-maintance-and-support',
       component: MaintenanceDescription,
-      href: '/services-maintenance-support',
+      href: '/services-maintenance-and-support',
     },
   ],
 };

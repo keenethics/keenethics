@@ -8,7 +8,7 @@ const SeeProjects = () => (
       For more projects in these and other industries, check out our Case Studies.
     </div>
     <div className="see-projects--button">
-      <Link href="/projects">
+      <Link href="/portfolio">
         <a className="button">See Projects</a>
       </Link>
     </div>

@@ -6,9 +6,11 @@ const Description = ({
 }) => (
   <>
     <p>
-      Software grows outdated, technical errors occur, and the project idea undergoes changes. We
-      provide you with continuous maintenance and support to keep your product updated, relevant,
-      and perfectly functioning.
+      Before deploying software, we make sure that
+      it fully complies with legal, ethical, and data
+      security guidelines. We publish it only after we
+      double-check that it is free of bugs and fully
+      meets the expectations of our partner.
     </p>
 
     {children}
