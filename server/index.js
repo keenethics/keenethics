@@ -155,10 +155,9 @@ app.prepare().then(() => {
     };
 
     const html = `
-      <p>${firstname.value} ${lastname.value}</p>
+      <p>${firstname.value}</p>
       <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${email.value}</p>
-      <p>Phone: ${phone.value}</p>
       <p>I want to use a subscriber discount: ${isSubscriber ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
@@ -288,7 +287,6 @@ app.prepare().then(() => {
       <p>${name.value}</p>
       <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${emailEstimate.value}</p>
-      <p>Phone: ${phoneEstimate.value}</p>
       <p>Stage: ${stage.value}</p>
       <p>Services: ${servicesEstimate}</p>
       <p>Require PM/Product manager: ${pm.value}</p>
