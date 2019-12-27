@@ -15,74 +15,74 @@ describe('Check Services web development page', () => {
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
 		await page.click('div.slick-slide.slick-active a.content-tabs-item[href="/services-web-development-e-commerce"]');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-e-commerce']");
-	});
+	}, 10000);
 	test("content_tabs-2 chat bots page", async () => {
 		await page.goto(`${PATH}/services-web-development`);
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
 		await page.click('div.slick-slide.slick-active a.content-tabs-item[href="/services-web-development-chatbot"]');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-chatbot']");
-	});
+	}, 10000);
 	test("content_tabs-3 website node js page", async () => {
 		await page.goto(`${PATH}/services-web-development`);
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
 		await page.click('div.slick-slide.slick-active a.content-tabs-item[href="/services-web-development-node"]');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-node']");
-	});
+	}, 10000);
 	test("content_tabs-4 meteor.js page", async () => {
 		await page.goto(`${PATH}/services-web-development`);
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
 		await page.click('div.slick-slide.slick-active a.content-tabs-item[href="/services-web-development-meteor"]');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-meteor']");
-	});
+	}, 10000);
 	test("content_tabs-5 programmable voice page", async () => {
 		await page.goto(`${PATH}/services-web-development`);
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development']");
 		await page.click('div.slick-slide.slick-active a.content-tabs-item[href="/services-web-development-programmable-voice"]');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-programmable-voice']");
-	});
+	}, 10000);
 
 	test("carousel_next_btn-1 e-commerce page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-e-commerce']");
-	});
+	}, 10000);
 	test("carousel_next_btn-2 chatbot page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-chatbot']");
-	});
+	}, 10000);
 	test("carousel_next_btn-3 node page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-node']");
-	});
+	}, 10000);
 	test("carousel_next_btn-4 meteor page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-meteor']");
-	});
+	}, 10000);
 	test("carousel_next_btn-5 programmable voice page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-programmable-voice']");
-	});
+	}, 10000);
 	test("carousel_next_btn-6 back to e-commerce page", async () => {
 		await page.click('a.content-navigation-carousel-link.next');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-e-commerce']");
-	});
+	}, 10000);
 	test("carousel_prev_btn-1 back to programmable voice page", async () => {
 		await page.click('a.content-navigation-carousel-link.prev');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-programmable-voice']");
-	});
+	}, 10000);
 	test("carousel_prev_btn-2 back to meteor page", async () => {
 		await page.click('a.content-navigation-carousel-link.prev');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-meteor']");
-	});
+	}, 10000);
 	test("carousel_prev_btn-3 back to node page", async () => {
 		await page.click('a.content-navigation-carousel-link.prev');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-node']");
-	});
+	}, 10000);
 	test("carousel_prev_btn-4 back to chatbot page", async () => {
 		await page.click('a.content-navigation-carousel-link.prev');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-chatbot']");
-	});
+	}, 10000);
 	test("carousel_prev_btn-5 back to e-commerce page", async () => {
 		await page.click('a.content-navigation-carousel-link.prev');
 		await page.waitForSelector("a.content-navigation-carousel-link.current[href='/services-web-development-e-commerce']");
-	});
+	}, 10000);
 });
