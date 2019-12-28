@@ -14,6 +14,7 @@ import Navigation from './navigation/main';
 if (typeof window !== 'undefined' && !window.Promise) {
   window.Promise = Promise;
 }
+
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +54,7 @@ class Layout extends React.Component {
 
   toggleNav() {
     const { showNav } = this.state;
+
     this.setState({
       showNav: !showNav,
     });
@@ -84,7 +86,13 @@ class Layout extends React.Component {
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
-        {noMenu ? null : <Navigation currentURL={currentURL} toggleNav={this.toggleNav} />}
+        {noMenu || (
+          <Navigation
+            currentURL={currentURL}
+            toggleNav={this.toggleNav}
+            isTablet={dimensions.width < 769}
+          />
+        )}
         <div className={classnames('content', { 'nav-open': noMenu || (dimensions.width > 768) })}>
           <div className={classnames('content-inner', className)} style={contentInnerStyle}>
             { children }

@@ -63,8 +63,12 @@ class Navigation extends React.Component {
   showSidebar() {
     this.props.toggleNav();
 
+    const {
+      showSidebar,
+    } = this.state;
+
     this.setState({
-      showSidebar: true,
+      showSidebar: !showSidebar,
     });
   }
 
@@ -80,7 +84,7 @@ class Navigation extends React.Component {
 
   render() {
     const { showSidebar } = this.state;
-    const { router } = this.props;
+    const { router, isTablet } = this.props;
 
     const currentURL = router;
 
@@ -103,16 +107,19 @@ class Navigation extends React.Component {
       }
     });
 
-    console.log(navigation);
-
     return (
       <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
-        <div className="navigation-hamburger" onClick={this.showSidebar} onKeyDown={this.showSidebar} role="presentation">
+        <div
+          className="navigation-hamburger"
+          onClick={this.showSidebar}
+          onKeyDown={this.showSidebar}
+          role="presentation"
+        >
           <span />
         </div>
         <div className="navigation-inner">
           <Link href="/">
-            <a className="navigation-icon">
+            <a className="navigation-logo">
               <img src="/static/images/logo.svg" alt="Keenethics" />
             </a>
           </Link>
@@ -126,8 +133,9 @@ class Navigation extends React.Component {
                   key={n.name}
                   element={n}
                   currentPoint={currentPoint === i}
+                  isTablet={isTablet}
                 >
-                  {this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                  {isTablet && this.getPointContent(n, currentPoint === i, currentSubpoint)}
                 </Point>
               );
             })}
@@ -141,10 +149,12 @@ class Navigation extends React.Component {
 Navigation.propTypes = {
   router: PropTypes.object,
   toggleNav: PropTypes.func.isRequired,
+  isTablet: PropTypes.bool,
 };
 
 Navigation.defaultProps = {
   router: {},
+  isTablet: false,
 };
 
 export default withRouter(ClickOutside(Navigation));

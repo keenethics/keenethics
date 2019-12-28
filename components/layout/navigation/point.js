@@ -12,21 +12,15 @@ export default class NavigationPoint extends React.Component {
     this.renderPointContent = this.renderPointContent.bind(this);
   }
 
-  componentDidMount() {
+  renderPoint() {
     const {
-      currentSubpoint,
-      scroll,
+      element: {
+        href,
+      },
+      isTablet,
     } = this.props;
 
-    if (currentSubpoint) {
-      scroll(document.getElementById('current-subpoint').offsetTop);
-    }
-  }
-
-  renderPoint() {
-    const { element: { href } } = this.props;
-
-    return href ? (
+    return href && !isTablet ? (
       <Link href={href}>
         <a className="navigation-point">{this.renderPointContent()}</a>
       </Link>
@@ -98,7 +92,6 @@ export default class NavigationPoint extends React.Component {
       <li
         className={className}
         role="presentation"
-        id={currentSubpoint ? 'current-subpoint' : ''}
       >
         {this.renderPoint()}
         {children}
@@ -121,7 +114,7 @@ NavigationPoint.propTypes = {
   }),
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
-  scroll: PropTypes.func,
+  isTablet: PropTypes.bool,
 };
 NavigationPoint.defaultProps = {
   children: null,
@@ -137,5 +130,5 @@ NavigationPoint.defaultProps = {
   },
   currentPoint: false,
   currentSubpoint: false,
-  scroll: null,
+  isTablet: false,
 };

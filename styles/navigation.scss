@@ -22,6 +22,7 @@
 
   @include for-tablet {
     @include visible(true);
+    z-index: 9999;
   }
   span {
     display: block;
@@ -56,12 +57,17 @@
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 9999;
+      z-index: 9990;
       @include visible(true);
+
+      .navigation-hamburger {
+        background: transparent;
+        box-shadow: none;
+      }
     }
   }
 
-  .navigation-icon {
+  .navigation-logo {
     display: block;
     height: 28px;
     padding: 18px 0 22px;
@@ -118,34 +124,6 @@
     cursor: pointer;
     box-sizing: border-box;
     font-weight: 700;
-  }
-}
-.subnavigation {
-  display: none;
-  width: 160px;
-  background: #fff;
-  overflow: hidden;
-  border-left: 1px solid #eef0f1;
-  box-sizing: border-box;
-
-  .subnavigation-inner {
-    width: 160px;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0 100px 0 0;
-    box-sizing: content-box;
-
-    .navigation-cell {
-      padding: 10px 5px;
-      text-align: center;
-      font-size: 13px;
-    }
-  }
-  .subnavigation-loading {
-    width: 160px;
-    height: 100vh;
-    background: #fff;
   }
 }
 .navigation-content {
@@ -209,7 +187,7 @@
       margin-top: -15px;
     }
   }
-  .navigation-icon {
+  .navigation-logo {
     display: block;
     width: 30px;
     margin: 0 auto 8px;
@@ -220,20 +198,52 @@
   }
 }
 
-@include for-mobile {
+.subnavigation {
+  box-sizing: border-box;
+
+  .subnavigation-inner {
+    box-sizing: content-box;
+    padding: 20px 0;
+
+    .navigation-item {
+      padding: 0 0 0 48px;
+
+      .navigation-point {
+        padding: 0;
+        margin: 0;
+        border: none;
+      }
+
+      .navigation-cell {
+        padding: 12px 0;
+        font-size: 14px;
+        color: #12233d;
+      }
+    }
+  }
+  .subnavigation-loading {
+    width: 160px;
+    height: 100vh;
+    background: #fff;
+  }
+}
+
+@include for-tablet {
   .navigation.is-open {
     width: 100%;
 
     .navigation-content {
-      align-content: flex-start;
+      display: block;
     }
 
     .navigation-inner {
       width: 100%;
+      overflow-y: auto;
     }
 
     .navigation-content {
       width: 100%;
+      height: auto;
     }
 
     .navigation-point {
@@ -243,7 +253,11 @@
       border-bottom: 1px solid rgba(#12233d, 0.1);
     }
 
-    .navigation-cell {
+    .navigation-content .navigation-item .navigation-point .navigation-cell {
+      border: none;
+    }
+
+    .navigation-content .navigation-item:hover .navigation-point .navigation-cell {
       border: none;
     }
   }

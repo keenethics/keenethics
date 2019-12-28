@@ -130,7 +130,7 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, .8);
       line-height: 1.2;
-  
+
       @include for-mobile {
         margin-right: 40px;
       }
@@ -143,7 +143,7 @@
         width: 22px;
         height: 1px;
         background: #bfafc6;
-  
+
         &:after {
           content: '';
           position: absolute;
@@ -166,7 +166,7 @@
       }
     }
   }
-  
+
   .button {
     border-radius: 35px;
     padding: 18px 60px;
@@ -378,7 +378,7 @@
     opacity: .35;
     height: 60%;
     position: absolute;
-    
+
     &.start {
       left: 25%;
     }
@@ -1405,7 +1405,7 @@ body .orange-btn {
 
 .scroll-info-container {
   position: absolute;
-  top: 60vh;
+  top: 65vh;
   right: -175px;
   width: 600px;
   display: flex;
@@ -1418,8 +1418,9 @@ body .orange-btn {
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
-    margin-right: 200px;
+    margin-right: 180px;
     position: relative;
+
     &:after {
       content: '';
       height: 1px;
@@ -1531,12 +1532,12 @@ body .orange-btn {
 }
 // @media (max-width: 768px) {
 //   .our-services .home-section-plates-item {
-    
+
 //   }
 // }
 
 @include for-tablet {
-  
+
   .section-founders {
     flex-direction: column;
     .founders-text-section {
