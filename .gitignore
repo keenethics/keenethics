@@ -1,12 +1,14 @@
+node_modules
+
 .DS_Store
+
 .next
 .idea
+.vscode
 .projectile
-node_modules
 
 yarn-error.log
 private.config.js
 
-/static/main.css
 .css.map
 .env

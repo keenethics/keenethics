@@ -199,6 +199,7 @@
 }
 
 .subnavigation {
+  display: none;
   box-sizing: border-box;
 
   .subnavigation-inner {
@@ -249,8 +250,53 @@
     .navigation-point {
       padding: 24px 0;
       margin: 0 24px;
-
       border-bottom: 1px solid rgba(#12233d, 0.1);
+    }
+
+    .navigation-item.points {
+      position: relative;
+
+
+      &::before, &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 9px;
+        height: 1px;
+        background: #12233d;
+        top: 34px;
+        right: 24px;
+        transition: transform 0.2s, background 0.2s;
+      }
+
+      &::before {
+        transform: rotate(40deg);
+        right: 30px;
+      }
+
+      &::after {
+        transform: rotate(-40deg);
+      }
+    }
+
+    .navigation-item.expanded {
+      &::before {
+        transform: rotate(-40deg);
+        background: #d62c2c;
+      }
+
+      &::after {
+        transform: rotate(40deg);
+        background: #d62c2c;
+      }
+
+      .subnavigation {
+        display: block;
+      }
+
+      .navigation-point {
+        border-color: rgba(#d62c2c, 0.1);
+      }
     }
 
     .navigation-content .navigation-item .navigation-point .navigation-cell {

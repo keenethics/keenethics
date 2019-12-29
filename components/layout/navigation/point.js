@@ -8,24 +8,55 @@ export default class NavigationPoint extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isExpanded: false,
+    };
+
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
+    this.toggleSubpoints = this.toggleSubpoints.bind(this);
+  }
+
+  toggleSubpoints() {
+    const { isExpanded } = this.state;
+
+    this.setState({
+      isExpanded: !isExpanded,
+    });
   }
 
   renderPoint() {
     const {
       element: {
         href,
+        points,
       },
       isTablet,
     } = this.props;
 
+
+    if (!points && href) {
+      return (
+        <Link href={href}>
+          <a className="navigation-point">
+            {this.renderPointContent()}
+          </a>
+        </Link>
+      );
+    }
+
     return href && !isTablet ? (
       <Link href={href}>
-        <a className="navigation-point">{this.renderPointContent()}</a>
+        <a className="navigation-point">
+          {this.renderPointContent()}
+        </a>
       </Link>
     ) : (
-      <span className="navigation-point">
+      <span
+        className="navigation-point"
+        onClick={this.toggleSubpoints}
+        role="presentation"
+      >
         {this.renderPointContent()}
       </span>
     );
@@ -71,8 +102,13 @@ export default class NavigationPoint extends React.Component {
 
   render() {
     const {
-      element: { name },
+      element: {
+        name,
+        points,
+      },
     } = this.props;
+
+    const { isExpanded } = this.state;
 
     if (!name) return null;
 
@@ -85,7 +121,9 @@ export default class NavigationPoint extends React.Component {
     const className = cn({
       'navigation-item': true,
       current: currentPoint || currentSubpoint,
+      expanded: isExpanded,
       'is-link': !children,
+      points,
     });
 
     return (
@@ -109,6 +147,7 @@ NavigationPoint.propTypes = {
       name: PropTypes.string,
       alt: PropTypes.string,
     }),
+    points: PropTypes.array,
     number: PropTypes.string,
     type: PropTypes.string,
   }),
@@ -125,6 +164,7 @@ NavigationPoint.defaultProps = {
       name: '',
       alt: '',
     },
+    points: null,
     number: '01',
     type: '',
   },

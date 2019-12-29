@@ -45,6 +45,7 @@ class Navigation extends React.Component {
               <Point
                 key={p.name}
                 element={p}
+                isSubpoint
                 currentSubpoint={currentPoint && currentSubpoint === i}
                 scroll={this.constructor.scrollToActiveSubpoint}
               />
