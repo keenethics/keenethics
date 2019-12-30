@@ -1,5 +1,18 @@
 [
   {
+    "title": "B2C Online Store",
+    "metaTitle": "B2C Online Store – KeenEthics Case Study",
+    "href": "/project-b2c-online-store",
+    "imgSrc": "b2c-online-store/b2c-online-store.png",
+    "category": {
+      "main": [
+        "E-Commerce"
+      ]
+    },
+    "description": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance",
+    "metaDescription": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance"
+  },
+  {
     "title": "Business Research Platform",
     "metaTitle": "Business Research Platform – KeenEthics Case Study",
     "href": "/project-business-research-platform",
