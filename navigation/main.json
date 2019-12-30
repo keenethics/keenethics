@@ -169,14 +169,14 @@
         "type": "icon"
       },
       {
-        "name": "Software Deployment and Implementation",
-        "metaTitle": "Software Deployment and Implementation Solutions – KeenEthics",
-        "description": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
-        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
-        "href": "/software-deployment",
+        "name": "Business Administration Software",
+        "metaTitle": "Business Administration Software – KeenEthics Blog",
+        "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "href": "/services-business-administration-software-development",
         "icon": {
-          "name": "software-deployment",
-          "alt": "Software Deployment and Implementation"
+          "name": "business-administration-software",
+          "alt": "Business Administration Software"
         },
         "type": "icon"
       }
