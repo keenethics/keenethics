@@ -115,7 +115,7 @@ const BusinessAdministrationSoftware = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            BusinessAdministrationSoftware
+            Business Administration Software
           </h1>
           <p className="text-center text-italic">
             Helping your business grow, automating mundane tasks, and boosting productivity
