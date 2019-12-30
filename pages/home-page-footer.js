@@ -108,6 +108,29 @@ const careers = [
     url: '',
   },
 ];
+
+const fullCycleMethod = [
+  {
+    title: '01   Business Analysi',
+    url: 'services-business-analysis',
+  },
+  {
+    title: '02   UI/UX Design',
+    url: 'services-ui-ux-design',
+  },
+  {
+    title: '03   Development and Testing',
+    url: 'services-web-development-meteor',
+  },
+  {
+    title: '04   Software Deployment',
+    url: 'services-software-deployment',
+  },
+  {
+    title: '05   Maintenance and Support',
+    url: 'services-maintenance-support',
+  },
+];
 const HomeFooter = ({
   section,
   isMobile,
@@ -131,6 +154,14 @@ const HomeFooter = ({
             <h5>Industries</h5>
           </li>
           {industries.map((el) => (
+            <li className="home-footer-list-item" key={el.title}>
+              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+            </li>
+          ))}
+          <li className="home-footer-list-item home-footer-list__title">
+            <h5>Full-cycle Method</h5>
+          </li>
+          {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>

@@ -18,7 +18,11 @@
       .home-footer-list {
         width: 25%;
         line-height: 24px;
-
+        .home-footer-list__title {
+          font-size: 16px;
+          font-weight: 600;
+          margin: 30px 0 20px;
+        }
         .home-footer-list-item:first-child {
           font-size: 16px;
           font-weight: 600;
