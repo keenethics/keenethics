@@ -2,8 +2,8 @@
   {
     "name": "Home",
     "description": "Have an idea? We can`t wait to help you implement it!",
-    "metaTitle": "KeenEthics",
-    "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
+    "metaTitle": "KeenEthics: Ethical web and mobile development partner",
+    "metaDescription": "We are an ethical software development partner based in Eastern Europe and represented in the Netherlands and the United States. We focus on delivering web and mobile projects from idea to continuous support.",
     "href": "/"
   },
   {
@@ -74,7 +74,7 @@
         "description": "Process of using by one company another`s company staff",
         "metaTitle": "Dedicated Software Development Teams – KeenEthics",
         "metaDescription": "Maintain control, improve team skill set, and reduce HR costs with dedicated development team from KeenEthics.",
-        "href": "/services-outstaffing",
+        "href": "/services-dedicated-development-team",
         "icon": {
           "name": "outs",
           "alt": "Outstaffing"
@@ -182,6 +182,18 @@
         "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
         "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
         "href": "/services-business-administration-software-development",
+        "icon": {
+          "name": "business-administration-software",
+          "alt": "Business Administration Software"
+        },
+        "type": "default"
+      },
+      {
+        "name": "Software Deployment",
+        "metaTitle": "Software Deployment and Implementation Solutions",
+        "description": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
+        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
+        "href": "/services-software-deployment",
         "icon": {
           "name": "business-administration-software",
           "alt": "Business Administration Software"
