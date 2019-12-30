@@ -163,28 +163,6 @@
     "name": "Approach",
     "points": [
       {
-        "name": "Lean Approach",
-        "description": "Systematic method for the elimination of waste",
-        "href": "/approach-lean-approach",
-        "icon": {
-          "name": "lean",
-          "alt": "Lean approach"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "Agile Project Management",
-        "description": "Alterative, incremental method of managing the design and build activities of engineering",
-        "href": "/approach-agile-project-management",
-        "metaTitle": "Agile project management companies",
-        "metaDescription": "Agile Project Management services and Agile solutions from KeenEthics services help deliver your business software on time and on budget.",
-        "icon": {
-          "name": "agile",
-          "alt": "Agile project management"
-        },
-        "type": "icon"
-      },
-      {
         "name": "Minimum Viable Product",
         "description": "A product with just enough features to gather comprehensive qualitative feedback",
         "metaTitle": "MVP development company",
@@ -193,36 +171,6 @@
         "icon": {
           "name": "min-valuable",
           "alt": "Minimum viable product"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "Cutting Edge Technologies",
-        "description": "We use only the best and the most up-to-date technologies",
-        "href": "/approach-cutting-edge",
-        "icon": {
-          "name": "cutting",
-          "alt": "Cutting edge technologies"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "High Performance",
-        "description": "Why our team is very creative and productive",
-        "href": "/approach-high-performance",
-        "icon": {
-          "name": "high-performance",
-          "alt": "High performance"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "High Quality Software",
-        "description": "Well-tested, carefully-crafted masterpiece",
-        "href": "/approach-high-quality",
-        "icon": {
-          "name": "high-quality",
-          "alt": "High quality software"
         },
         "type": "icon"
       }
