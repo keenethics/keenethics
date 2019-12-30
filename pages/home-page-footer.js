@@ -41,57 +41,61 @@ const services = [
 const industries = [
   {
     title: 'Education',
-    url: '',
+    url: 'services-education-software-development',
   },
   {
     title: 'Business',
-    url: '',
+    url: 'services-business-administration-development',
   },
   {
     title: 'Healthcare',
-    url: '',
-  },
-  {
-    title: 'Retail',
-    url: '',
-  },
-  {
-    title: 'Agriculture',
-    url: '',
-  },
-  {
-    title: 'Hospitality and Entertainment',
-    url: '',
-  },
-  {
-    title: 'Real Estate',
-    url: '',
-  },
-  {
-    title: 'Finance and Banking',
-    url: '',
+    url: 'services-custom-healthcare-software-development',
   },
 ];
 const technologies = [
   {
-    title: 'AMP Development ',
-    url: '',
+    title: 'Node js',
+    url: 'services-web-development-node',
   },
   {
-    title: 'Team Enhancement ',
-    url: '',
+    title: 'Angular',
+    url: 'tech-front-end-angular',
   },
   {
-    title: 'Support & Tech Consultancy',
-    url: '',
+    title: 'React',
+    url: 'tech-front-end-react',
   },
   {
-    title: 'Chatbots & Programmable Voice',
-    url: '',
+    title: 'React Native',
+    url: 'tech-apps-react-native',
   },
   {
-    title: 'Internet of Things',
-    url: '',
+    title: 'Aurelia',
+    url: 'tech-front-end-aurelia',
+  },
+  {
+    title: 'Vue js',
+    url: 'tech-front-end-vue',
+  },
+  {
+    title: 'Express',
+    url: 'tech-back-end-express',
+  },
+  {
+    title: 'Electron',
+    url: 'tech-apps-electron',
+  },
+  {
+    title: 'Cordova',
+    url: 'tech-apps-cordova',
+  },
+  {
+    title: 'PhoneGap',
+    url: 'tech-apps-phonegap',
+  },
+  {
+    title: 'Meteor',
+    url: 'services-web-development-meteor',
   },
 ];
 const careers = [
@@ -225,19 +229,19 @@ const HomeFooter = ({
         <div className="home-footer-nav">
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Home</a></Link>
+              <Link href="/"><a className="home-footer-list-item__link">Home</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Services</a></Link>
+              <Link href="services-web-development"><a className="home-footer-list-item__link">Services</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="#"><a className="home-footer-list-item__link">Industries</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Technologies</a></Link>
+              <Link href="tech-apps"><a className="home-footer-list-item__link">Technologies</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="contact-us"><a className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="contacts">
@@ -249,16 +253,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="about-us"><a className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Portfolio</a></Link>
+              <Link href="portfolio"><a className="home-footer-list-item__link">Portfolio</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="careers"><a className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="blog"><a className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>

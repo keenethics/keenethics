@@ -29,11 +29,15 @@
           color: #fff;
           text-decoration: none;
           font-size: 12px;
-          transition: .5s;
+          transition: .1s;
 
           &:hover {
-            font-weight: 600;
+            text-decoration: underline;
+            color: #DE4F4F;
             opacity: .8;
+          }
+          &:active {
+            color: #D62C2C;
           }
         }
         &.align-right {
@@ -261,7 +265,11 @@
               font-size: 14px;
               text-decoration: none;
               &:hover {
-                color: #E3621D;
+                text-decoration: underline;
+                color: #DE4F4F;
+              }
+              &:active {
+                color: #D62C2C;
               }
             }
           }
