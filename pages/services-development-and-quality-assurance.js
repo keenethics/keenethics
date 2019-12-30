@@ -11,7 +11,7 @@ import { works } from '../main.config';
 import Works from '../components/portfolio/works';
 import '../styles/content/development-and-quality-assurance.scss';
 
-const ServicesInternetOfThings = () => {
+const DevelopmentAndQualityAssurance = () => {
   const whatDoWeOfferIcons = [
     {
       icon: '/static/services/development-and-quality-assurance/web-dev.svg',
@@ -286,4 +286,4 @@ const ServicesInternetOfThings = () => {
   );
 };
 
-export default ServicesInternetOfThings;
+export default DevelopmentAndQualityAssurance;

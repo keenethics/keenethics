@@ -20,7 +20,7 @@ const Industries = () => (
           <div className="industries-big grid">
             <div className="col-1-3">
               <Link href="/services-education-software-development">
-                <div className="industries--big-item">
+                <a className="industries--big-item">
                   <div className="industries--big-item-logo">
                     <img
                       src="/static/main-blocks/industries/large/icon-education.svg"
@@ -35,12 +35,12 @@ const Industries = () => (
                   <div className="industries--big-item-description">
                     Software Development
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
             <div className="col-1-3">
-              <Link href="/services-business-administration-development">
-                <div className="industries--big-item">
+              <Link href="/services-business-administration-software-development">
+                <a className="industries--big-item">
                   <div className="industries--big-item-logo">
                     <img
                       src="/static/main-blocks/industries/large/icon-business.svg"
@@ -55,12 +55,12 @@ const Industries = () => (
                   <div className="industries--big-item-description">
                     Administration Development
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
             <div className="col-1-3">
               <Link href="/services-custom-healthcare-software-development">
-                <div className="industries--big-item">
+                <a className="industries--big-item">
                   <div className="industries--big-item-logo">
                     <img
                       src="/static/main-blocks/industries/large/icon-healthcare.svg"
@@ -75,7 +75,7 @@ const Industries = () => (
                   <div className="industries--big-item-description">
                     Software Development
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
           </div>
