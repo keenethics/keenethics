@@ -86,6 +86,9 @@
             font-size: 14px;
             margin-top:14px;
           }
+          .country-link {
+            text-decoration: none;
+          }
         }
         @include breakpoint(sm-max) {
           margin-bottom: 16px;
