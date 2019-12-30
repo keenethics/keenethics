@@ -10,11 +10,5 @@
     "name": "MySQL",
     "description": "Most popular SQL-database",
     "icon": "icon-mysql"
-  },
-  {
-    "href": "/tech-data-base-postgresql",
-    "name": "PostgreSQL",
-    "description": "SQL-database with advanced features",
-    "icon": "icon-post"
   }
 ]

@@ -15,18 +15,6 @@
         "type": "icon"
       },
       {
-        "name": "Desktop Applications",
-        "description": "Native applications with flawless workflow",
-        "metaTitle": "Desktop Application Development Company & Desktop Software App Development - KeenEthics",
-        "metaDescription": "Looking to hire Desktop Application developers? KeenEthics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today",
-        "href": "/services-desktop-applications",
-        "icon": {
-          "name": "dapp",
-          "alt": "Desktop applications"
-        },
-        "type": "icon"
-      },
-      {
         "name": "Mobile Development",
         "description": "Slick and fast iOS and Android apps for your needs",
         "metaTitle": "Mobile App Development Company - KeenEthics",
@@ -179,26 +167,6 @@
   {
     "name": "Technologies",
     "points": [
-      {
-        "name": "Apps",
-        "description": "Slick mobile apps for both, Android and iOS",
-        "href": "/tech-apps",
-        "icon": {
-          "name": "apps",
-          "alt": "Apps"
-        },
-        "type": "icon"
-      },
-      {
-        "name": "Front-End",
-        "description": "Front-end development is a process of the creation site’s client-side",
-        "href": "/tech-front-end",
-        "icon": {
-          "name": "front-end",
-          "alt": "Front-end"
-        },
-        "type": "icon"
-      },
       {
         "name": "Back-End",
         "description": "Flawless code with no exceptions",

@@ -6,12 +6,6 @@
     "icon": "icon-rn"
   },
   {
-    "href": "/tech-front-end-redux",
-    "name": "Redux",
-    "description": "Organizing state in React-applciation",
-    "icon": "icon-redux"
-  },
-  {
     "href": "/tech-front-end-angular",
     "name": "Angular",
     "metaTitle": "AngularJS Development Services, Angular JS App Development Company",
@@ -36,11 +30,5 @@
     "name": "Vue JS",
     "description": "Popular lightweight library for UI",
     "icon": "icon-vue"
-  },
-  {
-    "href": "/tech-front-end-next",
-    "name": "Next JS",
-    "description": "Fullstack framework aiming simplicity combined with powerful features",
-    "icon": "icon-next"
   }
 ]
