@@ -1,0 +1,17 @@
+.content-block {
+  .software-deployment-services {
+    margin: 25px -15px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    .software-deployment-services-item {
+      padding: 15px;
+      margin: 0;
+      width: 50%;
+      box-sizing: border-box;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
