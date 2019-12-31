@@ -52,7 +52,7 @@ Recently, KeenEthics received five stars from the founder of Ideal Role.
 
 Also, KeenEthics received a perfect 5-star review from the CEO of an EdTech company.
 
-<div class="text-center" style="margin: 40px auto; max-width: 600px;">
+<div class="text-center" style="margin: 40px auto;">
   <img src="/static/posts/keenethics-continues-collecting-stellar-client-reviews-at-clutch/clutch-screen-shot-1.jpg" alt="clutch screen shot">
 </div>
 
