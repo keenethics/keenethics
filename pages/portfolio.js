@@ -55,7 +55,6 @@ class Portfolio extends React.Component {
       .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
 
-    console.log(categories);
     const uniqCategories = [...new Set(categories)];
     // no selected categories by default
     const selectedCategories = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
