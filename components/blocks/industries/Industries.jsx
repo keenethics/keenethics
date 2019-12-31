@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SeeProjects from './SeeProjects';
 
 const Industries = () => (
-  <div className="block block-industries">
+  <div className="block block-industries" id="industries">
     <div className="block-content">
       <header className="block--header">
         <div className="block--header-title">

@@ -1439,10 +1439,9 @@ body .orange-btn {
     border: 1px solid #fff;
     border-radius: 30px;
     background: 0 0;
-    cursor: pointer;
     display: inline-block;
     transform: rotate(-90deg);
-    cursor: pointer;
+    cursor: initial;
     &:after {
       content: '';
       width: 2px;
@@ -1494,6 +1493,7 @@ body .orange-btn {
       }
       .home-page-large-title {
         font-size: 72px;
+        line-height: 85px;
       }
       .home-page-rates-container {
         .home-page-content-link a {
