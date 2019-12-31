@@ -3,6 +3,8 @@
 
   .page__header {
     padding: 105px 25px 60px;
+    max-width: 990px;
+    margin: 0 auto;
 
     @media (min-width: $tablet-sm) {
       br.mobile-only {
@@ -17,7 +19,7 @@
     }
 
     @media (min-width: $desktop-md) {
-      padding-left: 245px;
+      // padding-left: 245px;
       padding-bottom: 90px;
     }
 
@@ -125,6 +127,6 @@
         padding-top: 20px;
       }
     }
-    
+
   }
 }

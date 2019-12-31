@@ -263,9 +263,7 @@ const Contacts = ({ router }) => {
 
   const [isPending, setIsPending] = useState(false);
   const [status, setStatus] = useState('');
-  const [activeContactForm, setActiveContactForm] = useState(
-    query.activeForm !== 'estimate',
-  );
+  const [activeContactForm, setActiveContactForm] = useState(!query.activeform || query.activeform !== 'estimate');
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -285,6 +283,10 @@ const Contacts = ({ router }) => {
 
     getLoction();
   }, []);
+
+  useEffect(() => {
+    setActiveContactForm(!query.activeform || query.activeform !== 'estimate');
+  }, [query]);
 
   let person;
   if (selectedCountry === 'NL') person = PaulW;
