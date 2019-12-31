@@ -345,19 +345,15 @@
       },
       {
         "name": "Business apps",
-        "href": "/portfolio?chosen=Business apps"
+        "href": "/portfolio?chosen=Business"
       },
       {
         "name": "Educational apps",
-        "href": "/portfolio?chosen=Educational apps"
+        "href": "/portfolio?chosen=Education"
       },
       {
         "name": "Consumer apps",
-        "href": "/portfolio?chosen=Consumer apps"
-      },
-      {
-        "name": "Other",
-        "href": "/portfolio?chosen=Other"
+        "href": "/portfolio?chosen=E-Commerce"
       }
     ]
   },

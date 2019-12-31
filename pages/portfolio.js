@@ -32,6 +32,21 @@ class Portfolio extends React.Component {
 
     this.worksCountFor = this.worksCountFor.bind(this);
     this.filterOnChange = this.filterOnChange.bind(this);
+    this.setCategoryList = this.setCategoryList.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    const { router } = this.props;
+
+    if (router.query.chosen !== prevProps.router.query.chosen) {
+      this.setCategoryList(router);
+    }
+  }
+
+  setCategoryList(router) {
+    this.setState({
+      ...this.getCategoriesList(router),
+    });
   }
 
   getCategoriesList(url) {
@@ -39,6 +54,8 @@ class Portfolio extends React.Component {
     const categories = works
       .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
+
+    console.log(categories);
     const uniqCategories = [...new Set(categories)];
     // no selected categories by default
     const selectedCategories = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
