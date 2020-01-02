@@ -18,7 +18,11 @@
       .home-footer-list {
         width: 25%;
         line-height: 24px;
-
+        .home-footer-list__title {
+          font-size: 16px;
+          font-weight: 600;
+          margin: 30px 0 20px;
+        }
         .home-footer-list-item:first-child {
           font-size: 16px;
           font-weight: 600;
@@ -29,11 +33,15 @@
           color: #fff;
           text-decoration: none;
           font-size: 12px;
-          transition: .5s;
+          transition: .1s;
 
           &:hover {
-            font-weight: 600;
+            text-decoration: underline;
+            color: #DE4F4F;
             opacity: .8;
+          }
+          &:active {
+            color: #D62C2C;
           }
         }
         &.align-right {
@@ -81,6 +89,9 @@
             font-weight: normal;
             font-size: 14px;
             margin-top:14px;
+          }
+          .country-link {
+            text-decoration: none;
           }
         }
         @include breakpoint(sm-max) {
@@ -261,7 +272,11 @@
               font-size: 14px;
               text-decoration: none;
               &:hover {
-                color: #E3621D;
+                text-decoration: underline;
+                color: #DE4F4F;
+              }
+              &:active {
+                color: #D62C2C;
               }
             }
           }

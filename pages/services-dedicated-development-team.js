@@ -128,7 +128,7 @@ const ServicesOutstaffing = () => (
           <br />
           Since communication among team members needs to be continuous and requirements may change regularly, Agile Project Management technology is what you need. You can use Scrum, Kanban, XP, or Lean – whatever suits your needs best.
         </p>
-        <img style={{ margin: '30px auto', maxWidth: '600px' }} src="/static/services/outstaffing/outstaffing-img.png" alt="Outstaffing features" />
+        <img style={{ margin: '30px auto' }} src="/static/services/outstaffing/outstaffing-img.png" alt="Outstaffing features" />
       </section>
       <section>
         <h2>Why KeenEthics?</h2>
