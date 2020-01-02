@@ -1520,6 +1520,21 @@ body .orange-btn {
 }
 
 @media (max-width: 1024px) {
+  .home-page {
+    .social-icons.home-page-social {
+      margin-bottom: 0;
+    }
+    .home-page-content-titles .home-page-large-title {
+      font-size: 34px;
+      line-height: 1.2em;
+    }
+    .home-page-rates-container {
+      flex-direction: column;
+      .home-page-content-link:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
   .home-section-plates {
     justify-content: center
   }
