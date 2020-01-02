@@ -13,7 +13,7 @@ import Works from '../components/portfolio/works';
 
 import '../styles/content/services-chatbots-artificial-intelligence.scss';
 
-const ServicesCloudAppDev = () => {
+const ChatbotsArtificialIntelligence = () => {
   const whatIsBusinessAnalysis = [
     {
       icon: '/static/services/services-chatbots-artificial-intelligence/dimension.png',
@@ -254,4 +254,4 @@ const ServicesCloudAppDev = () => {
   );
 };
 
-export default ServicesCloudAppDev;
+export default ChatbotsArtificialIntelligence;

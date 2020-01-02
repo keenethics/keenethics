@@ -144,6 +144,18 @@
           "alt": "AI and Chatbot Development"
         },
         "type": "icon"
+      },
+      {
+        "name": "Business Administration Software",
+        "metaTitle": "Business Administration Software – KeenEthics Blog",
+        "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "href": "/services-business-administration-software-development",
+        "icon": {
+          "name": "business-administration-software",
+          "alt": "Business Administration Software"
+        },
+        "type": "icon"
       }
     ]
   },
