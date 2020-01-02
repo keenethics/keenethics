@@ -132,11 +132,10 @@ const fullCycleMethod = [
   },
 ];
 const HomeFooter = ({
-  section,
   isMobile,
   isTablet,
 }) => (
-  <div className="block block-footer" id={section}>
+  <div className="block block-footer">
     <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
@@ -476,12 +475,8 @@ const HomeFooter = ({
   </div>
 );
 HomeFooter.propTypes = {
-  section: PropTypes.string,
   isMobile: PropTypes.bool.isRequired,
   isTablet: PropTypes.bool.isRequired,
 };
 
-HomeFooter.defaultProps = {
-  section: '',
-};
 export default HomeFooter;

@@ -48,7 +48,7 @@ const platesContent = [
 ];
 
 const OurServices = ({ show }) => (
-  <div className="block block-our-services" id="services">
+  <div className="block block-our-services">
     <header className="block--header">
       <div className="block--header-title">
         Our services

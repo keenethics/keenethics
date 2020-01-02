@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const TechStack = () => (
-  <div className="block block-tech-stack" id="tech-stack">
+  <div className="block block-tech-stack">
     <header className="block--header">
       <div className="block--header-title">
         Our tech stack

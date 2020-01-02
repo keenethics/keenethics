@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const LetsStart = ({ section }) => (
-  <div className="block block-lets-start" id={section}>
+const LetsStart = () => (
+  <div className="block block-lets-start">
     <div className="block--content">
       <div className="lets-start">
         <div className="lets-start-section lets-start-text">
@@ -35,13 +34,5 @@ const LetsStart = ({ section }) => (
     </div>
   </div>
 );
-
-LetsStart.propTypes = {
-  section: PropTypes.string,
-};
-
-LetsStart.defaultProps = {
-  section: '',
-};
 
 export default LetsStart;

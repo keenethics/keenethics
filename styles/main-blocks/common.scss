@@ -66,6 +66,14 @@
   .page__item-figure {
     background: transparent;
   }
+
+  .filter__list::before {
+    background: linear-gradient(to right,#fafafa 0, rgba(#fafafa, .8) 40%, rgba(#fafafa, 0) 100%);
+  }
+
+  .filter__list::after {
+    background: linear-gradient(to left,#fafafa 0, rgba(#fafafa, .8) 40%, rgba(#fafafa, 0) 100%);
+  }
 }
 
 .block.block-blog {
