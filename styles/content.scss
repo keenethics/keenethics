@@ -24,6 +24,7 @@
   width: 100vw;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   &.home-full-vh {
     height: 100%;
   }

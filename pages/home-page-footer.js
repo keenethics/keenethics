@@ -41,57 +41,61 @@ const services = [
 const industries = [
   {
     title: 'Education',
-    url: '',
+    url: 'services-education-software-development',
   },
   {
     title: 'Business',
-    url: '',
+    url: 'services-business-administration-development',
   },
   {
     title: 'Healthcare',
-    url: '',
-  },
-  {
-    title: 'Retail',
-    url: '',
-  },
-  {
-    title: 'Agriculture',
-    url: '',
-  },
-  {
-    title: 'Hospitality and Entertainment',
-    url: '',
-  },
-  {
-    title: 'Real Estate',
-    url: '',
-  },
-  {
-    title: 'Finance and Banking',
-    url: '',
+    url: 'services-custom-healthcare-software-development',
   },
 ];
 const technologies = [
   {
-    title: 'AMP Development ',
-    url: '',
+    title: 'Node js',
+    url: 'services-web-development-node',
   },
   {
-    title: 'Team Enhancement ',
-    url: '',
+    title: 'Angular',
+    url: 'tech-front-end-angular',
   },
   {
-    title: 'Support & Tech Consultancy',
-    url: '',
+    title: 'React',
+    url: 'tech-front-end-react',
   },
   {
-    title: 'Chatbots & Programmable Voice',
-    url: '',
+    title: 'React Native',
+    url: 'tech-apps-react-native',
   },
   {
-    title: 'Internet of Things',
-    url: '',
+    title: 'Aurelia',
+    url: 'tech-front-end-aurelia',
+  },
+  {
+    title: 'Vue js',
+    url: 'tech-front-end-vue',
+  },
+  {
+    title: 'Express',
+    url: 'tech-back-end-express',
+  },
+  {
+    title: 'Electron',
+    url: 'tech-apps-electron',
+  },
+  {
+    title: 'Cordova',
+    url: 'tech-apps-cordova',
+  },
+  {
+    title: 'PhoneGap',
+    url: 'tech-apps-phonegap',
+  },
+  {
+    title: 'Meteor',
+    url: 'services-web-development-meteor',
   },
 ];
 const careers = [
@@ -102,6 +106,29 @@ const careers = [
   {
     title: 'Events',
     url: '',
+  },
+];
+
+const fullCycleMethod = [
+  {
+    title: '01   Business Analysi',
+    url: 'services-business-analysis',
+  },
+  {
+    title: '02   UI/UX Design',
+    url: 'services-ui-ux-design',
+  },
+  {
+    title: '03   Development and Testing',
+    url: 'services-web-development-meteor',
+  },
+  {
+    title: '04   Software Deployment',
+    url: 'services-software-deployment',
+  },
+  {
+    title: '05   Maintenance and Support',
+    url: 'services-maintenance-support',
   },
 ];
 const HomeFooter = ({
@@ -127,6 +154,14 @@ const HomeFooter = ({
             <h5>Industries</h5>
           </li>
           {industries.map((el) => (
+            <li className="home-footer-list-item" key={el.title}>
+              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+            </li>
+          ))}
+          <li className="home-footer-list-item home-footer-list__title">
+            <h5>Full-cycle Method</h5>
+          </li>
+          {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
             </li>
@@ -166,9 +201,11 @@ const HomeFooter = ({
                   />
                 </span>
                 <div className="country-text">
-                  <span className="country" itemProp="addressRegion">
-                    Ukraine
-                  </span>
+                  <a className="country-link" href="https://www.google.com/maps/place/KeenEthics/@49.8269687,23.9880895,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae7fa87f09d6f:0x9ac85f44cbcb9257!8m2!3d49.8269687!4d23.9902782">
+                    <span className="country" itemProp="addressRegion">
+                      Ukraine
+                    </span>
+                  </a>
                   <p className="address">Lviv, Kulparkivska St. 59</p>
                 </div>
               </div>
@@ -185,9 +222,11 @@ const HomeFooter = ({
                   />
                 </span>
                 <div className="country-text">
-                  <span className="country" itemProp="addressRegion">
-                    Netherlands
-                  </span>
+                  <a className="country-link" href="https://www.google.com/maps/place/KeenEthics/@51.7713527,5.5118959,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6fdf815ac947b:0xf0d1841b4903762b!8m2!3d51.7713569!4d5.5141752">
+                    <span className="country" itemProp="addressRegion">
+                      Netherlands
+                    </span>
+                  </a>
                   <p className="address">Oss, Oude litherweg 2, 5346 RT</p>
                 </div>
               </div>
@@ -204,9 +243,11 @@ const HomeFooter = ({
                   />
                 </span>
                 <div className="country-text">
-                  <span className="country" itemProp="addressRegion">
-                    USA
-                  </span>
+                  <a className="country-link" href="https://www.google.com/maps/place/Workville/@40.7536262,-73.9887379,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab050f01bb:0xc4f59321f603c1a3!8m2!3d40.7536222!4d-73.9865492">
+                    <span className="country" itemProp="addressRegion">
+                      USA
+                    </span>
+                  </a>
                   <p className="address">New York, 1412 Broadway, 21st floor, 2200</p>
                 </div>
               </div>
@@ -225,19 +266,19 @@ const HomeFooter = ({
         <div className="home-footer-nav">
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Home</a></Link>
+              <Link href="/"><a className="home-footer-list-item__link">Home</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Services</a></Link>
+              <a href="#services" className="home-footer-list-item__link">Services</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Industries</a></Link>
+              <a href="#industries" className="home-footer-list-item__link">Industries</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Technologies</a></Link>
+              <a href="#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="contact-us"><a className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="contacts">
@@ -249,16 +290,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="about-us"><a className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Portfolio</a></Link>
+              <a href="#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="careers"><a className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="#"><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="blog"><a className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>

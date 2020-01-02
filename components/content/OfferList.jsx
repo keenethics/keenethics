@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../../styles/content/OfferList.scss';
-
 const OfferList = (props) => (
   <div className="offers-list">
     {

@@ -195,3 +195,35 @@
     }
   }
 }
+
+@include for-tablet {
+  .our-values .buttons {
+    overflow: hidden;
+    display: block;
+
+    button {
+      float: left;
+      display: block;
+      width: 48%;
+      margin: 0 1% 6px;
+
+      &:not(:last-of-type) {
+        margin: 0 1% 6px;
+      }
+    }
+  }
+}
+
+@include for-mobile {
+  .our-values .buttons {
+    button {
+      display: block;
+      width: 100%;
+      margin: 0 0 6px;
+
+      &:not(:last-of-type) {
+        margin: 0 0 6px;
+      }
+    }
+  }
+}

@@ -61,7 +61,7 @@ const TechAppsProg = () => (
         </div>
         <p>Progressive web app development comprises optimal software development practices for the purpose of striking the golden mean between a website and a mobile app. It is implemented with the help of service workers – JS files that enable offline information storage and app execution.</p>
         <img
-          style={{ maxWidth: '500px', margin: '25px auto 35px auto' }}
+          style={{ margin: '25px auto 35px auto' }}
           src="/static/services/tech-apps-progressive-web-apps/tech-apps-progressive-web-apps-functionality.jpg"
           alt="Functionality"
         />
