@@ -13,6 +13,7 @@ import ContactForm from '../components/contacts/contact-form';
 import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
+import mobileScrollIntoView from '../helpers/scroll-effects';
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
@@ -28,6 +29,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           className="container-btn"
           onClick={() => {
             setSelectedCountry('UA');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -71,6 +73,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           className="container-btn"
           onClick={() => {
             setSelectedCountry('NL');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -125,6 +128,7 @@ Netherlands
           className="container-btn"
           onClick={() => {
             setSelectedCountry('US');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -294,7 +298,7 @@ const Contacts = ({ router }) => {
   else person = MaxS;
   return (
     <Layout>
-      <div className="contacts-page">
+      <div className="contacts-page" id="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),
           ...person,
