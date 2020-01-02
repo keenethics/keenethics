@@ -5,7 +5,7 @@ import { homePageWorks } from '../main.config';
 
 
 const Projects = ({ minimize }) => (
-  <div className="block block-projects">
+  <div className="block block-projects" id="projects">
     <header className="block--header">
       <div className="block--header-title">
         Our Projects

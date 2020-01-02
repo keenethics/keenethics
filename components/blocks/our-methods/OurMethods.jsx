@@ -39,7 +39,7 @@ const OurMethods = () => {
   };
 
   return (
-    <div className="block block-our-methods">
+    <div className="block block-our-methods" id="methods">
       <header className="block--header">
         <div className="block--header-title">
           Our methods

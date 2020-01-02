@@ -7,7 +7,7 @@ const KeenBlog = () => {
   const posts = useContext(PostsContext);
 
   return (
-    <div className="block block-blog">
+    <div className="block" id="blog">
       <header className="block--header">
         <div className="block--header-title">
           Keen Blog

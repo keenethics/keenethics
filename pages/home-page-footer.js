@@ -100,12 +100,24 @@ const technologies = [
 ];
 const careers = [
   {
-    title: 'Vacancies',
-    url: '',
+    title: 'About Us',
+    url: '/about-us',
   },
   {
-    title: 'Events',
-    url: '',
+    title: 'Projects',
+    url: '/portfolio',
+  },
+  {
+    title: 'Blog',
+    url: '/blog',
+  },
+  {
+    title: 'Careers',
+    url: '/careers',
+  },
+  {
+    title: 'Contact Us',
+    url: 'contacts',
   },
 ];
 
@@ -140,7 +152,7 @@ const HomeFooter = ({
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <h5>Services</h5>
+            <a href="#services" className="home-footer-list__title home-footer-list-item__link"><h5>Services</h5></a>
           </li>
           {services.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -150,7 +162,7 @@ const HomeFooter = ({
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <h5>Industries</h5>
+            <a href="#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
           </li>
           {industries.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -158,7 +170,7 @@ const HomeFooter = ({
             </li>
           ))}
           <li className="home-footer-list-item home-footer-list__title">
-            <h5>Full-cycle Method</h5>
+            <a href="#methods" className="home-footer-list__title home-footer-list-item__link"><h5>Full-cycle Method</h5></a>
           </li>
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -168,7 +180,7 @@ const HomeFooter = ({
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <h5>Technologies</h5>
+            <a href="#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
           </li>
           {technologies.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -176,13 +188,10 @@ const HomeFooter = ({
             </li>
           ))}
         </ul>
-        <ul className="home-footer-list">
-          <li className="home-footer-list-item">
-            <h5>Careers</h5>
-          </li>
+        <ul className="home-footer-list title-links">
           {careers.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url}><a className="home-footer-list__title home-footer-list-item__link">{el.title}</a></Link>
             </li>
           ))}
         </ul>
@@ -277,7 +286,7 @@ const HomeFooter = ({
               <a href="#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="contact-us"><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="contacts"><a className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="contacts">
