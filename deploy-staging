@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm run build
+
 ssh root@167.71.71.176 pm2 stop server
 ssh root@167.71.71.176 rm -rf /home/keenethics
 
