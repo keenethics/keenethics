@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const LetsStart = () => (
-  <div className="block block-lets-start">
+  <div id="lets-start" className="block block-lets-start">
     <div className="block--content">
       <div className="lets-start">
         <div className="lets-start-section lets-start-text">

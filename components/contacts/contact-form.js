@@ -4,7 +4,6 @@ import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
 import { MaxS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
-import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -17,8 +16,6 @@ const handleStatusResponse = (response) => {
 };
 
 const ContactForm = () => {
-  const DEFAULT_FILENAME = 'Attach your file';
-  const DEFAULT_FILESIZE = 'up to 10MB';
   const {
     isPending,
     setIsPending,
@@ -48,13 +45,9 @@ const ContactForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
-  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
   const unattachFile = (err) => {
     setFile(err);
-    setFileName(DEFAULT_FILENAME);
-    setFileSize(DEFAULT_FILESIZE);
   };
 
   const setInitialState = () => {
@@ -63,8 +56,6 @@ const ContactForm = () => {
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
     unattachFile({ value: '', error: false });
-    setFileName(DEFAULT_FILENAME);
-    setFileSize(DEFAULT_FILESIZE);
   };
 
   const onSubmit = (e) => {
@@ -183,31 +174,6 @@ const ContactForm = () => {
         </div>
         <div className={message.errorField ? 'error-message' : 'error-none'}>
           {message.status}
-        </div>
-        <div className="input-cols">
-          <FileUpload
-            id="contact-us-file-upload"
-            text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
-              ? fileName.substring(0, 10).concat('...')
-              : fileName}
-            limit={fileSize}
-            allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
-            onChange={
-              (e) => {
-                const fileObj = e.target.files[0];
-                if (fileObj) {
-                  setFile(fileObj);
-                  setFileName(fileObj.name);
-                  setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `); // 1mb = 1000000
-                } else {
-                  unattachFile({ value: '', error: false });
-                }
-              }
-            }
-          />
-          <div className={file.errorField ? 'error-message' : 'error-none'}>
-            {file.status}
-          </div>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox

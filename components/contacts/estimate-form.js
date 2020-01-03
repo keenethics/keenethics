@@ -2,11 +2,8 @@ import React, { useState, useContext, useEffect } from 'react';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
-import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
-  const DEFAULT_FILENAME = 'Attach your file';
-  const DEFAULT_FILESIZE = 'up to 10MB';
   const [stage, setStage] = useState({
     value: null,
     error: false,
@@ -51,13 +48,9 @@ const EstimateForm = () => {
     value: '',
     error: false,
   });
-  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
-  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
 
   const unattachFile = (err) => {
     setFile(err);
-    setFileName(DEFAULT_FILENAME);
-    setFileSize(DEFAULT_FILESIZE);
   };
 
   const {
@@ -929,30 +922,6 @@ Start
               </div>
               <div className={messageEstimate.errorField ? 'error-message' : 'error-none'}>
                 {messageEstimate.status}
-              </div>
-            </div>
-            <div className="input-cols">
-              <FileUpload
-                text={(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
-                  ? fileName.substring(0, 10).concat('...')
-                  : fileName}
-                limit={fileSize}
-                allowedExts=".pdf, doc, docx, jpeg, jpg, png, xls, xlsx, ppt, pptx"
-                onChange={
-                  (e) => {
-                    const fileObj = e.target.files[0];
-                    if (fileObj) {
-                      setFile(fileObj);
-                      setFileName(fileObj.name);
-                      setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `); // 1mb = 1000000
-                    } else {
-                      unattachFile({ value: '', error: false });
-                    }
-                  }
-                }
-              />
-              <div className={file.errorField ? 'error-message' : 'error-none'}>
-                {file.status}
               </div>
             </div>
             <div className="grey-checkbox-wrapper">

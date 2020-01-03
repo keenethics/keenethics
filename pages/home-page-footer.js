@@ -147,7 +147,7 @@ const HomeFooter = ({
   isMobile,
   isTablet,
 }) => (
-  <div className="block block-footer">
+  <div id="footer" className="block block-footer">
     <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
@@ -329,14 +329,14 @@ const HomeFooter = ({
           <SocialButton />
         </div>
         <div className="footer-links-terms">
-          <Link href="#">
+          <Link href="/privacy-policy">
             <a className="footer-links-link">
               Privacy Statement
             </a>
           </Link>
-          <Link href="#">
+          <Link href="/cookie-policy">
             <a className="footer-links-link">
-              Terms of Use
+              Cookie Policy
             </a>
           </Link>
         </div>

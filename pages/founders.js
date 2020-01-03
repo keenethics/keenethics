@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const Founders = () => (
-  <div className="block block-founders">
+  <div id="founders" className="block block-founders">
     <div className="section-founders block--content">
       <div className="founders-text-section">
         <h2 className="text-section-title">

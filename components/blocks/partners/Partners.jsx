@@ -36,7 +36,7 @@ const Partners = () => {
   };
 
   return (
-    <div className="block block-partners">
+    <div id="partners" className="block block-partners">
       <header className="block--header">
         <div className="block--header-title">
           Our partner testimonials

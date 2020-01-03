@@ -1,329 +1,193 @@
 [
   {
     "name": "Home",
-    "description": "Have an idea? We can`t wait to help you implement it!",
+    "description": "Ethical web and mobile development partner.",
     "metaTitle": "KeenEthics: Ethical web and mobile development partner",
-    "metaDescription": "We are an ethical software development partner based in Eastern Europe and represented in the Netherlands and the United States. We focus on delivering web and mobile projects from idea to continuous support.",
+    "metaDescription": "We are an ethical web and mobile development partner based in Eastern Europe and represented in the Netherlands and the United States. We focus on delivering web and mobile projects from idea to continuous support.",
     "href": "/"
   },
   {
     "name": "Services",
-    "href": "/services-web-development",
+    "href": "#services",
     "points": [
       {
         "name": "Web Development",
-        "description": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks",
+        "description": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks.",
         "metaTitle": "Custom web application development – KeenEthics",
-        "metaDescription": "High-quality and fault-tolerant web platforms for the Internet and private networks",
+        "metaDescription": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks.",
         "href": "/services-web-development",
-        "icon": {
-          "name": "web",
-          "alt": "Web development"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Desktop Applications",
-        "description": "Native applications with flawless workflow",
-        "metaTitle": "Desktop Application Development Company & Desktop Software App Development - KeenEthics",
-        "metaDescription": "Looking to hire Desktop Application developers? KeenEthics, a desktop app development company, specializes in Desktop Application  development services. Hire our desktop app developers today",
-        "href": "/services-desktop-applications",
-        "icon": {
-          "name": "dapp",
-          "alt": "Desktop applications"
-        },
         "type": "default"
       },
       {
         "name": "Mobile Development",
-        "description": "Slick and fast iOS and Android apps for your needs",
-        "metaTitle": "Mobile App Development Company - KeenEthics",
-        "metaDescription": "Looking to hire mobile app developers? KeenEthics, a mobile app development company, specializes in mobile application development services. Hire our mobile app developers today",
+        "description": "We offer exactly the applications that you need.",
+        "metaTitle": "Mobile app development company - KeenEthics",
+        "metaDescription": "We offer exactly the applications that you need.",
         "href": "/services-mobile-development",
-        "icon": {
-          "name": "mdev",
-          "alt": "Mobile development"
-        },
         "type": "default"
       },
       {
-        "name": "Education Software Development",
-        "description": "Revolutionizing the world of personal, academic, and professional development",
-        "metaTitle": "Education Software Development Company, E-learning Software Solutions – KeenEthics",
-        "metaDescription": "Revolutionizing the world of personal, academic, and professional development",
-        "href": "/services-education-software-development",
-        "icon": {
-          "name": "esd",
-          "alt": "Education Software Development"
-        },
+        "name": "Minimum Viable Product",
+        "description": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
+        "metaTitle": "Minimum Viable Product development - KeenEthics",
+        "metaDescription": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
+        "href": "/approach-minimum-viable-product",
         "type": "default"
       },
       {
-        "name": "Custom Healthcare Software Development",
-        "metaTitle": "Healthcare Software Development, Custom Medical Solutions – KeenEthics",
-        "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
-        "href": "/services-custom-healthcare-software-development",
-        "icon": {
-          "name": "icon-healthcare",
-          "alt": "Custom Healthcare Software Development"
-        },
+        "name": "Progressive Web Apps",
+        "description": "Fast, reliable, and engaging mobile-ready web apps with little effort.",
+        "metaTitle": "Progressive Web App development - KeenEthics",
+        "metaDescription": " Fast, reliable, and engaging mobile-ready web apps with little effort.",
+        "href": "/tech-apps-progressive-web-apps",
         "type": "default"
       },
       {
         "name": "Dedicated Development Team",
-        "description": "Process of using by one company another`s company staff",
-        "metaTitle": "Dedicated Software Development Teams – KeenEthics",
-        "metaDescription": "Maintain control, improve team skill set, and reduce HR costs with dedicated development team from KeenEthics.",
+        "description": "Maintaining control, improving team skill set, and reducing HR costs.",
+        "metaTitle": "Dedicated development team service - KeenEthics",
+        "metaDescription": "Maintaining control, improving team skill set, and reducing HR costs.",
         "href": "/services-dedicated-development-team",
-        "icon": {
-          "name": "outs",
-          "alt": "Outstaffing"
-        },
         "type": "default"
       },
       {
-        "name": "Proof of Concept",
-        "metaTitle": "The Proof Of Concept Solution - KeenEthics",
-        "description": "Realization of a certain method or idea in order to demonstrate its feasibility",
-        "href": "/services-proof",
-        "icon": {
-          "name": "pcon",
-          "alt": "Proof of concept"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Business Analysis",
-        "metaTitle": "Business Analysis – KeenEthics",
-        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
-        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
-        "href": "/services-business-analysis",
-        "icon": {
-          "name": "business-analytics",
-          "alt": "Business Analysis"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Cloud Application Development",
-        "metaTitle": "Cloud Application Development Services – KeenEthics",
-        "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
-        "metaDescription": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
-        "href": "/services-cloud-application-development",
-        "icon": {
-          "name": "cloud-icon",
-          "alt": "Cloud Application Development"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Internet of Things (IoT)",
-        "metaTitle": "Internet of Things (IoT) Development Services – KeenEthics",
-        "description": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
-        "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business.",
-        "href": "/services-internet-of-things",
-        "icon": {
-          "name": "iot-icon",
-          "alt": "Internet of Things"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Maintenance and Support",
-        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
-        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
-        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
-        "href": "/services-maintenance-and-support",
-        "icon": {
-          "name": "icon-maintenance-and-support",
-          "alt": "Maintenance and Support"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Development and Quality Assurance",
-        "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
-        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
-        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
-        "href": "/services-development-and-quality-assurance",
-        "icon": {
-          "name": "icon-development-and-testing",
-          "alt": "Development and Quality Assurance"
-        },
-        "type": "default"
-      },
-      {
-        "name": "UI/UX Design",
-        "metaTitle": "UI UX Design Services, Hire UI/UX Designers - Keenethics",
-        "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
-        "metaDescription": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
-        "href": "/services-ui-ux-design",
-        "icon": {
-          "name": "design-icon",
-          "alt": "Internet of Things"
-        },
-        "type": "default"
-      },
-      {
-        "name": "AI and Chatbot Development",
-        "metaTitle": "AI Chatbot Development Services – Keenethics",
-        "description": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
-        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "name": "Chatbots and Artificial Intelligence",
+        "description": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
+        "metaTitle": "Chatbots and artificial intelligence - KeenEthics",
+        "metaDescription": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
         "href": "/services-chatbots-artificial-intelligence",
-        "icon": {
-          "name": "icon-ai-chatbots",
-          "alt": "AI and Chatbot Development"
-        },
         "type": "default"
       },
       {
-        "name": "Business Administration Software",
-        "metaTitle": "Business Administration Software – KeenEthics Blog",
-        "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "href": "/services-business-administration-software-development",
-        "icon": {
-          "name": "business-administration-software",
-          "alt": "Business Administration Software"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Software Deployment",
-        "metaTitle": "Software Deployment and Implementation Solutions",
-        "description": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
-        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
-        "href": "/services-software-deployment",
-        "icon": {
-          "name": "business-administration-software",
-          "alt": "Business Administration Software"
-        },
+        "name": "Internet of Things",
+        "description": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "metaTitle": "Internet of things - KeenEthics",
+        "metaDescription": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
+        "href": "/services-internet-of-things",
         "type": "default"
       }
     ]
   },
   {
-    "name": "Approach",
-    "href": "/approach-lean-approach",
+    "name": "Industries",
+    "href": "#industries",
     "points": [
       {
-        "name": "Lean Approach",
-        "description": "Systematic method for the elimination of waste",
-        "href": "/approach-lean-approach",
-        "icon": {
-          "name": "lean",
-          "alt": "Lean approach"
-        },
+        "name": "Education Software Development",
+        "description": "Revolutionizing the world of personal, academic, and professional development",
+        "metaTitle": "Education software development company – KeenEthics",
+        "metaDescription": "Revolutionizing the world of personal, academic, and professional development",
+        "href": "/services-education-software-development",
+        "type": "default"
+      },
+	   {
+        "name": "Business Administration Software Development",
+        "metaTitle": "Business administration software development – KeenEthics",
+        "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "href": "/services-business-administration-development",
         "type": "default"
       },
       {
-        "name": "Agile Project Management",
-        "description": "Alterative, incremental method of managing the design and build activities of engineering",
-        "href": "/approach-agile-project-management",
-        "metaTitle": "Agile project management companies",
-        "metaDescription": "Agile Project Management services and Agile solutions from KeenEthics services help deliver your business software on time and on budget.",
-        "icon": {
-          "name": "agile",
-          "alt": "Agile project management"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Minimum Viable Product",
-        "description": "A product with just enough features to gather comprehensive qualitative feedback",
-        "metaTitle": "MVP development company",
-        "metaDescription": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
-        "href": "/approach-minimum-viable-product",
-        "icon": {
-          "name": "min-valuable",
-          "alt": "Minimum viable product"
-        },
-        "type": "default"
-      },
-      {
-        "name": "Cutting Edge Technologies",
-        "description": "We use only the best and the most up-to-date technologies",
-        "href": "/approach-cutting-edge",
-        "icon": {
-          "name": "cutting",
-          "alt": "Cutting edge technologies"
-        },
-        "type": "default"
-      },
-      {
-        "name": "High Performance",
-        "description": "Why our team is very creative and productive",
-        "href": "/approach-high-performance",
-        "icon": {
-          "name": "high-performance",
-          "alt": "High performance"
-        },
-        "type": "default"
-      },
-      {
-        "name": "High Quality Software",
-        "description": "Well-tested, carefully-crafted masterpiece",
-        "href": "/approach-high-quality",
-        "icon": {
-          "name": "high-quality",
-          "alt": "High quality software"
-        },
+        "name": "Healthcare Software Development",
+        "metaTitle": "Healthcare Software Development – KeenEthics",
+        "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
+		    "metaDescription": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
+        "href": "https://keenethics.com/services-custom-healthcare-software-development",
         "type": "default"
       }
     ]
   },
   {
     "name": "Technologies",
-    "href": "/tech-apps",
+    "href": "#tech-stack",
     "points": [
       {
-        "name": "Apps",
-        "description": "Slick mobile apps for both, Android and iOS",
-        "href": "/tech-apps",
-        "icon": {
-          "name": "apps",
-          "alt": "Apps"
-        },
+        "name": "Node.js Development Services",
+        "metaTitle": "Node.js development services – KeenEthics",
+        "description": "The optimal environment for sustainable, scalable, and resource-efficient apps",
+        "metaDescription": "The optimal environment for sustainable, scalable, and resource-efficient apps",
+        "href": "/services-web-development-node",
+        "type": "default"
+      },
+ 	    {
+        "name": "AngularJS Development Services",
+        "metaTitle": "Angular development services – KeenEthics",
+        "description": "Using the scalable, reliable, self-sufficient, and multifunctional  framework",
+        "metaDescription": "Using the scalable, reliable, self-sufficient, and multifunctional  framework",
+        "href": "/tech-front-end-angular",
+        "type": "default"
+      },
+ 	   {
+        "name": "React JS Development Company",
+        "metaTitle": "React JS development company – KeenEthics",
+        "description": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
+        "metaDescription": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
+        "href": "/tech-front-end-react",
+        "type": "default"
+      },
+ 	   {
+        "name": "React Native Developers",
+        "metaTitle": "React Native developers – KeenEthics",
+        "description": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
+        "metaDescription": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
+        "href": "/tech-apps-react-native",
+        "type": "default"
+      },
+ 	   {
+        "name": "Aurelia Development Services",
+        "metaTitle": "Aurelia development services – KeenEthics",
+        "description": "Aurelia.js development is ideal for those next-generation apps and has a lot of features that really make a difference",
+        "metaDescription": "Aurelia.js development is ideal for those next-generation apps and has a lot of features that really make a difference",
+        "href": "/tech-front-end-aurelia",
+        "type": "default"
+      },
+	   {
+        "name": "Vue.js Development Services",
+        "metaTitle": "Vue.js development services – KeenEthics",
+        "description": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
+        "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
+        "href": "/tech-front-end-vue",
+        "type": "default"
+      },
+   	  {
+        "name": "Express.js Development Services",
+        "metaTitle": "Express.js development services – KeenEthics",
+        "description": "Using the lightweight and time-efficient web and mobile development framework.",
+        "metaDescription": "Using the lightweight and time-efficient web and mobile development framework.",
+        "href": "/tech-back-end-express",
         "type": "default"
       },
       {
-        "name": "Front-End",
-        "description": "Front-end development is a process of the creation site’s client-side",
-        "href": "/tech-front-end",
-        "icon": {
-          "name": "front-end",
-          "alt": "Front-end"
-        },
+        "name": "Electron Development Services",
+        "metaTitle": "Electron development services – KeenEthics",
+        "description": "Electron is a convenient and popular runtime framework for creating cross-platform desktop apps.",
+        "metaDescription": "Electron is a convenient and popular runtime framework for creating cross-platform desktop apps.",
+        "href": "/tech-apps-electron",
         "type": "default"
       },
       {
-        "name": "Back-End",
-        "description": "Flawless code with no exceptions",
-        "href": "/tech-back-end",
-        "icon": {
-          "name": "back-end",
-          "alt": "Back-end"
-        },
+        "name": "Cordova Development Services",
+        "metaTitle": "Cordova development services – KeenEthics",
+        "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "href": "/tech-apps-cordova",
         "type": "default"
       },
       {
-        "name": "DataBase",
-        "description": "Tons of information precisely used and securely stored",
-        "href": "/tech-data-base",
-        "icon": {
-          "name": "data-base",
-          "alt": "Database"
-        },
+        "name": "PhoneGap App Development Services",
+        "metaTitle": "PhoneGap app development services – KeenEthics",
+        "description": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap Development services to a software provider.",
+        "metaDescription": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap Development services to a software provider.",
+        "href": "/tech-apps-phonegap",
         "type": "default"
       },
       {
-        "name": "API Integration",
-        "description": "We will integrate everything you need",
-        "href": "/tech-api-integration",
-        "icon": {
-          "name": "API-integration",
-          "alt": "API integration"
-        },
+        "name": "Meteor JS Development Services",
+        "metaTitle": "Meteor JS development services – KeenEthics",
+        "description": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
+        "metaDescription": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
+        "href": "/services-web-development-meteor",
         "type": "default"
       }
     ]
@@ -334,9 +198,9 @@
   },
   {
     "name": "Projects",
-    "description": "???",
-    "metaTitle": "Portfolio KeenEthics",
-    "metaDescription": "???",
+    "description": "Keen projects we put into action.",
+    "metaTitle": "Projects – KeenEthics",
+    "metaDescription": "Keen projects we put into action.",
     "href": "/portfolio",
     "points": [
       {
@@ -359,31 +223,39 @@
   },
   {
     "name": "Careers",
-    "description": "",
-    "metaTitle": "Careers at Software Development Company - KeenEthics",
-    "metaDescription": "Careers at software development company KeenEthics",
+    "description": "Find your vocation at an ethical JavaScript development company KeenEthics",
+    "metaTitle": "Careers - KeenEthics",
+    "metaDescription": "Find your vocation at an ethical JavaScript development company KeenEthics",
     "href": "/careers"
   },
   {
     "name": "Blog",
     "description": "Articles based on our experience",
-    "metaTitle": "Web Development News & Ideas - Blog KeenEthics",
-    "metaDescription": "Read the latest news and opinions about software development from KeenEthics Blog - all articles are based on our experience!",
+    "metaTitle": "Web and mobile development blog - KeenEthics",
+    "metaDescription": "Read the latest news and opinions about software development from KeenEthics Blog - all articles are based on our experience.",
     "href": "/blog"
   },
   {
-    "name": "Contact us",
-    "description": "Have an idea? We can`t wait to help you implement it!",
-    "metaTitle": "Contacts - Office And Locations - KeenEthics",
-    "metaDescription": "Have an idea? We can`t wait to help you implement it! Contact KeenEthics software development company to get a professional insight into your business idea!",
+    "name": "Contact Us",
+    "description": "Contact KeenEthics to solve your business challenges with full-cycle development.",
+    "metaTitle": "Contact Us - KeenEthics",
+    "metaDescription": "Contact KeenEthics to solve your business challenges with full-cycle development.",
     "href": "/contacts"
   },
   {
-    "name": "Privacy Policy",
-    "description": "...",
-    "metaTitle": "KeenEthics’ Privacy Policy",
-    "metaDescription": "...",
+    "name": "GDPR Privacy Policy",
+    "description": "For a better experience, while using our Services, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address.",
+    "metaTitle": "GDPR privacy policy - KeenEthics",
+    "metaDescription": "For a better experience, while using our Services, we may require you to provide us with certain personally identifiable information, including but not limited to your name, phone number, and postal address.",
     "href": "/privacy-policy",
+    "type": "hidden"
+  },
+  {
+    "name": "Cookie Policy",
+    "description": "As is common practice with almost all professional websites, this site uses cookies, which are tiny files that are downloaded to your computer to improve your experience.",
+    "metaTitle": "Cookie policy - KeenEthics",
+    "metaDescription": "As is common practice with almost all professional websites, this site uses cookies, which are tiny files that are downloaded to your computer to improve your experience.",
+    "href": "/cookie-policy",
     "type": "hidden"
   }
 ]

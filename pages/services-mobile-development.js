@@ -96,7 +96,7 @@ const ServicesMobileDevelopment = () => {
           <ul className="mobile-development-list">
             {
               servicesList.map(({ icon, title, href }) => (
-                <li className="mobile-development-item">
+                <li className="mobile-development-item" key={href}>
                   <figure>
                     <img src={icon} alt={title} />
                     <figcaption className="mobile-development-figcaption">

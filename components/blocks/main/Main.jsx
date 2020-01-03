@@ -5,7 +5,7 @@ import React from 'react';
 import SocialButton from '../../social-buttons/main';
 
 const Main = () => (
-  <div className="block block-main">
+  <div id="main" className="block block-main">
     <div className="home-page">
       <div className="home-page-content">
         <div className="home-page-content-titles">
