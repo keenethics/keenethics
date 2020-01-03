@@ -402,14 +402,14 @@ class ServicesWebDevelopment extends React.Component {
               information about our clients or operations.
             </p>
           </section>
-          <LetsStart />
-          <PostsContext.Provider value={posts}>
-            <Footer
-              isMobile={isMobile}
-              isTablet={isTablet}
-            />
-          </PostsContext.Provider>
         </div>
+        <LetsStart />
+        <PostsContext.Provider value={posts}>
+          <Footer
+            isMobile={isMobile}
+            isTablet={isTablet}
+          />
+        </PostsContext.Provider>
       </Layout>
     );
   }
