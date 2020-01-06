@@ -4,6 +4,7 @@ import data from './data';
 
 import Navigation from './Navigation';
 import Content from './Content';
+import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
 const { navigation, items } = data;
 
@@ -38,8 +39,11 @@ const OurMethods = () => {
     setActiveIndex(nextIndex);
   };
 
+  const section = 'methods';
+  const ref = useScrollToAnchor(section);
+
   return (
-    <div className="block block-our-methods" id="methods">
+    <div className="block block-our-methods" id={section} ref={ref}>
       <header className="block--header">
         <div className="block--header-title">
           Our methods
