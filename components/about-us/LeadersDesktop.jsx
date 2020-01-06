@@ -9,14 +9,25 @@ const LeadersDesktop = ({ data }) => {
   const [step, setStep] = useState(0);
 
   const arrowClick = ({ target: { classList } }) => {
-    if (classList.contains('left') && step > 0) {
-      setStep(step - 1);
-    } else if (classList.contains('right') && step < 2) {
-      setStep(step + 1);
+    if (classList.contains('left')) {
+      if (step === 0) {
+        setStep(2);
+      } else {
+        setStep(step - 1);
+      }
+    } else if (classList.contains('right')) {
+      if (step === 2) {
+        setStep(0);
+      } else {
+        setStep(step + 1);
+      }
     }
   };
 
-  // animation required even number of pictures but we have odd
+  const stepClick = (toStep) => {
+    setStep(toStep);
+  };
+
   const leftData = [...data];
   const rightData = leftData.splice(leftData.length / 2, leftData.length);
 
@@ -116,6 +127,7 @@ const LeadersDesktop = ({ data }) => {
             <li
               key={i}
               className={i === step ? 'active' : ''}
+              onClick={stepClick.bind(null, i)}
             />
           ))
         }
