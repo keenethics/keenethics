@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from 'next/link';
 
+import useScrollToAnchor from '../helpers/useScrollToAnchor';
+
 const platesContent = [
   {
     icon: 'icon-web.svg',
@@ -47,38 +49,43 @@ const platesContent = [
 
 ];
 
-const OurServices = ({ show }) => (
-  <div className="block block-our-services" id="services">
-    <header className="block--header">
-      <div className="block--header-title">
-        Our services
-      </div>
-      <div className="block--header-description">
-        You can rely on us to cover any product development need you have.
-        We are sure to contribute to the success of your solution no matter what the task.
-      </div>
-    </header>
-    <div className="block--content our-services">
-      <div className={classnames('home-section-plates', {
-        'fade-in-timed-out': show,
-      })}
-      >
-        {platesContent.map((el) => (
-          <Link href={el.href} key={el.text}>
-            <div className="home-section-plates-item">
-              <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
-              <p className="plate-text">{el.text}</p>
-            </div>
-          </Link>
-        ))}
-        <div className="plates-grid horizontal" />
-        <div className="plates-grid start" />
-        <div className="plates-grid mid" />
-        <div className="plates-grid end" />
+const OurServices = ({ show }) => {
+  const section = 'services';
+  const ref = useScrollToAnchor(section);
+
+  return (
+    <div className="block block-our-services" id={section} ref={ref}>
+      <header className="block--header">
+        <div className="block--header-title">
+          Our services
+        </div>
+        <div className="block--header-description">
+          You can rely on us to cover any product development need you have.
+          We are sure to contribute to the success of your solution no matter what the task.
+        </div>
+      </header>
+      <div className="block--content our-services">
+        <div className={classnames('home-section-plates', {
+          'fade-in-timed-out': show,
+        })}
+        >
+          {platesContent.map((el) => (
+            <Link href={el.href} key={el.text}>
+              <div className="home-section-plates-item">
+                <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
+                <p className="plate-text">{el.text}</p>
+              </div>
+            </Link>
+          ))}
+          <div className="plates-grid horizontal" />
+          <div className="plates-grid start" />
+          <div className="plates-grid mid" />
+          <div className="plates-grid end" />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 OurServices.propTypes = {
   show: PropTypes.bool,
