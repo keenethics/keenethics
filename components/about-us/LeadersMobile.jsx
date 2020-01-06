@@ -30,8 +30,8 @@ const LeadersMobile = ({ data }) => {
     }
 
     return () => {
-      if (gallery && gallery.removeEventListener) {
-        gallery.removeEventListener('scroll', handleScroll);
+      if (gallery && gallery.current) {
+        gallery.current.removeEventListener('scroll', handleScroll);
       }
     };
   }, [gallery]);
