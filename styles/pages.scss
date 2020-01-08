@@ -847,6 +847,9 @@ body .orange-btn {
     a {
       opacity: .15;
       margin-right: 16px;
+      width: 24px;
+      height: 24px;
+
       &:hover {
         opacity: .35;
       }
@@ -863,6 +866,13 @@ body .orange-btn {
       }
       &.soc-5 a {
         background: url('/static/images/svg/home/social/twitter.svg') no-repeat;
+      }
+      &.soc-6 a {
+        background: url('/static/images/svg/upwork-black.svg') top left no-repeat;
+        background-size: 24px;
+      }
+      &.soc-instagram a {
+        background: url('/static/images/svg/soc-instagram-black.svg') top left no-repeat;
       }
     }
   }
