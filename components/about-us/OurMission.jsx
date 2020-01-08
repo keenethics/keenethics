@@ -54,7 +54,7 @@ const OurMission = () => {
       <h2>We strive for a tech world devoted to the social good</h2>
       <div className="our-mission-body">
         <h3>
-          <span>Our missions </span>
+          <span>Our mission </span>
           in our social projects
         </h3>
         <div className="missions">
