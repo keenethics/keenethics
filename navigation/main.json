@@ -8,7 +8,7 @@
   },
   {
     "name": "Services",
-    "href": "#services",
+    "href": "/#services",
     "points": [
       {
         "name": "Web Development",
@@ -70,7 +70,7 @@
   },
   {
     "name": "Industries",
-    "href": "#industries",
+    "href": "/#industries",
     "points": [
       {
         "name": "Education Software Development",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Technologies",
-    "href": "#tech-stack",
+    "href": "/#tech-stack",
     "points": [
       {
         "name": "Node.js Development Services",
