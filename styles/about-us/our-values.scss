@@ -129,17 +129,25 @@
         }
       }
 
+      @media (min-width: 425px) {
+        .img-wrap {
+          padding-bottom: 55%;
+        }
+      }
+
       @media (min-width: $tablet-lg) {
         flex-flow: row nowrap;
         padding: 0;
 
-        img {
-          margin-right: 20px;
+        .img-wrap {
+          margin: 0 20px;
+          flex: 1 1 50%;
         }
 
         .caption {
           padding: 30px;
           margin-right: 20px;
+          flex: 1 1 50%;
         }
 
         h4 {
