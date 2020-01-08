@@ -14,13 +14,32 @@ class Slider extends React.Component {
 
   render() {
     const { values, setRef, onStepChange } = this.props;
+    const sliderBreakpoints = [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 1.14,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ];
+
     return (
       <SlickSlider
-        slidesToShow={1}
+        slidesToShow={1.5}
+        responsive={sliderBreakpoints}
         className="values-slides"
+        centerMode
+        centerPadding="0"
         ref={setRef}
+        arrows={false}
         beforeChange={(_, toStep) => {
-          onStepChange(toStep, true);
+          onStepChange(Math.floor(toStep), true);
         }}
       >
         {
