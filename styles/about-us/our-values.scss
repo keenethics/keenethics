@@ -138,6 +138,7 @@
       @media (min-width: $tablet-lg) {
         flex-flow: row nowrap;
         padding: 0;
+        display: inline-flex !important;
 
         .img-wrap {
           margin: 0 20px;
@@ -163,8 +164,10 @@
         height: 440px;
         max-width: none;
 
-        img {
-          width: 620px;
+        .img-wrap {
+          align-self: stretch;
+          height: auto;
+          padding-bottom: 0;
         }
 
         h4 {

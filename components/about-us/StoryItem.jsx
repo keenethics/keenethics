@@ -22,9 +22,13 @@ export const ItemDescription = ({ text, links, visible }) => {
   });
 };
 
+ItemDescription.defaultProps = {
+  links: null,
+};
+
 ItemDescription.propTypes = {
   text: PropTypes.string.isRequired,
-  links: PropTypes.object.isRequired,
+  links: PropTypes.object,
   visible: PropTypes.bool.isRequired,
 };
 
@@ -54,11 +58,10 @@ const StoryItem = ({
     </div>
     <ul className="notes">
       {items.map((item, i) => (
-        <li>
+        <li key={i}>
           <ItemDescription
             text={item}
             links={links}
-            key={i}
             visible={visible}
           />
         </li>
