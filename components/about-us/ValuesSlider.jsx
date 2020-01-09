@@ -20,6 +20,7 @@ class Slider extends React.Component {
         settings: {
           slidesToShow: 1.14,
           centerPadding: 0,
+          centerMode: true,
         },
       },
       {
@@ -27,6 +28,7 @@ class Slider extends React.Component {
         settings: {
           slidesToShow: 1,
           centerPadding: 0,
+          centerMode: true,
         },
       },
     ];
@@ -36,8 +38,8 @@ class Slider extends React.Component {
         slidesToShow={1.3}
         responsive={sliderBreakpoints}
         className="values-slides"
-        centerMode
-        centerPadding="20%"
+        // centerMode
+        // centerPadding="20%"
         ref={setRef}
         arrows={false}
         beforeChange={(_, toStep) => {
