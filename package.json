@@ -36,7 +36,7 @@
     "micro": "^9.3.4",
     "moment": "^2.24.0",
     "nanoid": "^2.1.9",
-    "next": "^9.1.7",
+    "next": "9.1.1",
     "nodemailer": "^6.4.2",
     "nodemailer-mailgun-transport": "^2.0.0",
     "nprogress": "^0.2.0",
