@@ -27,7 +27,7 @@ const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const checkAttachment = require('./attachment-validator');
-const autoReplyMailOptilns = require('./autoReplyMailOptilns');
+const autoReplyMailOptions = require('./autoReplyMailOptions');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -181,9 +181,11 @@ app.prepare().then(() => {
       });
 
       transporter.sendMail(
-        autoReplyMailOptilns(selectedCountry, firstname.value, email.value),
+        autoReplyMailOptions(selectedCountry, firstname.value, email.value),
         (e) => {
-          if (e) throw e;
+          if (e) {
+            throw e;
+          }
         },
       );
     });
@@ -196,7 +198,7 @@ app.prepare().then(() => {
       // eslint-disable-next-line
       subscription_status: !!isSubscriber ? 'Subscribed' : 'Unsubscribed',
     };
-
+    console.log('sending stuff to hubspot');
     sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
@@ -316,7 +318,7 @@ app.prepare().then(() => {
         status: 'Message sent',
       });
       transporter.sendMail(
-        autoReplyMailOptilns(selectedCountry, name.value, emailEstimate.value),
+        autoReplyMailOptions(selectedCountry, name.value, emailEstimate.value),
         (e) => {
           if (e) throw e;
         },
