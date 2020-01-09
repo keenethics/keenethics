@@ -1,5 +1,5 @@
 .our-values {
-  padding: 65px 0 30px;
+  padding: 65px 0 5px;
   text-align: center;
   background-color: #F9F9FB;
 
@@ -80,29 +80,29 @@
   }
 
   .values-slides {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
     width: 100%;
-    margin-bottom: 30px;
 
-    overflow-x: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    li {
+    .slide {
       color: #12233D;
-      min-width: 100%;
       padding: 0 25px;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
 
+      .img-wrap {
+        position: relative;
+        height: 0;
+        padding-bottom: 115%;
+        overflow: hidden;
+      }
+
       img {
         width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         object-fit: cover;
       }
 
@@ -129,17 +129,25 @@
         }
       }
 
+      @media (min-width: 425px) {
+        .img-wrap {
+          padding-bottom: 55%;
+        }
+      }
+
       @media (min-width: $tablet-lg) {
         flex-flow: row nowrap;
         padding: 0;
 
-        img {
-          margin-right: 20px;
+        .img-wrap {
+          margin: 0 20px;
+          flex: 1 1 50%;
         }
 
         .caption {
           padding: 30px;
           margin-right: 20px;
+          flex: 1 1 50%;
         }
 
         h4 {
@@ -177,16 +185,27 @@
   }
 
   .values-toggler {
+    margin-top: 10px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 
     li {
       width: 70px;
-      height: 2px;
-      background-color: #D2D2D2;
+      height: 30px;
+      position: relative;
+      
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 14px;
+        width: 100%;
+        height: 2px;
+        background-color: #D2D2D2;
+      }
 
-      &.active {
+      &.active:before {
         background-color: #D62624;
       }
 
