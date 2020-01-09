@@ -4,6 +4,7 @@ import { withRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { get } from 'lodash';
 
 import { MaxS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
@@ -261,13 +262,21 @@ const ThankYou = () => (
     </a>
   </div>
 );
+const shouldShowForm = (query, formName) => {
+  const activeForm = get(query, 'activeForm', get(query, 'activeform', null));
+  return activeForm === formName;
+};
 
 const Contacts = ({ router }) => {
   const { query } = router;
+  const FORM_NAMES = {
+    estimate: 'estimate',
+  };
 
   const [isPending, setIsPending] = useState(false);
   const [status, setStatus] = useState('');
-  const [activeContactForm, setActiveContactForm] = useState(!query.activeform || query.activeform !== 'estimate');
+  const [activeContactForm, setActiveContactForm] = useState(!shouldShowForm(query,
+    FORM_NAMES.estimate));
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -289,7 +298,7 @@ const Contacts = ({ router }) => {
   }, []);
 
   useEffect(() => {
-    setActiveContactForm(!query.activeform || query.activeform !== 'estimate');
+    setActiveContactForm(!shouldShowForm(query, FORM_NAMES.estimate));
   }, [query]);
 
   let person;
