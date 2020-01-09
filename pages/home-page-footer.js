@@ -277,13 +277,13 @@ const HomeFooter = ({
               <Link href="/"><a className="home-footer-list-item__link">Home</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="#services" className="home-footer-list-item__link">Services</a>
+              <a href="/#services" className="home-footer-list-item__link">Services</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="#industries" className="home-footer-list-item__link">Industries</a>
+              <a href="/#industries" className="home-footer-list-item__link">Industries</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="#tech-stack" className="home-footer-list-item__link">Technologies</a>
+              <a href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
               <Link href="contacts"><a className="home-footer-list-item__link">Contact us</a></Link>
@@ -301,7 +301,7 @@ const HomeFooter = ({
               <Link href="about-us"><a className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="#projects" className="home-footer-list-item__link">Portfolio</a>
+              <a href="/#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
               <Link href="careers"><a className="home-footer-list-item__link">Careers</a></Link>
