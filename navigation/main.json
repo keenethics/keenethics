@@ -115,7 +115,7 @@
         "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
         "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
         "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
-        "href": "/services-maintenance-and-support",
+        "href": "/services-maintenance-support",
         "type": "default",
         "outsideMenu": true
       },
@@ -124,7 +124,7 @@
         "metaTitle": "Business Administration Software – KeenEthics Blog",
         "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
         "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "href": "/services-business-administration-software-development",
+        "href": "/services-business-administration-development",
         "type": "default",
         "outsideMenu": true
       }
