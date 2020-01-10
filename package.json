@@ -53,6 +53,7 @@
     "react-share": "^4.0.1",
     "react-slick": "^0.25.2",
     "react-slidedown": "^2.4.5",
+    "react-swipeable": "^5.5.0",
     "react-syntax-highlighter": "^12.2.1",
     "react-use-gesture": "^6.0.14",
     "string-format-validation": "^2.0.2",
