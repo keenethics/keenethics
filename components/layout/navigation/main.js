@@ -140,7 +140,11 @@ class Navigation extends React.Component {
                   currentPoint={currentPoint === i}
                   isTablet={isTablet}
                 >
-                  {isTablet && this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                  {
+                    isTablet
+                      ? this.getPointContent(n, currentPoint === i, currentSubpoint)
+                      : null
+                  }
                 </Point>
               );
             })}

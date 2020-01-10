@@ -1,4 +1,6 @@
+const path = require('path');
 const { messageFromMax, messageFromPaul, messageFromJean } = require('./autoReplyMails');
+
 
 module.exports = (country, name, email) => {
   const mailAuthor = {
@@ -14,12 +16,13 @@ module.exports = (country, name, email) => {
   return {
     from: mailAuthor[country] ? mailAuthor[country] : mailAuthor.UA,
     to: email,
+    bcc: 'business@keenethics.com',
     subject: 'Thank you for getting in touch! My KeenEthics team is busy delivering on your request.',
     html: html[country] ? html[country] : html.UA,
     attachments: [
       {
         filename: 'keenethics-logo.svg',
-        path: `${__dirname}/../static/images/keenethics.png`,
+        path: path.resolve(__dirname, '../public/static/images/keenethics.png'),
         cid: 'keenethics',
       },
     ],

@@ -3,7 +3,7 @@ const storyData = [
     year: '2015',
     title: 'KeenEthics was established.',
     items: [
-      'Founders of KeenEthics, Max, and Oleksiy both started their careers in the IT industry but were not satisfied with the environment.      ',
+      'Founders of KeenEthics, Max, and Oleksiy both started their careers in the IT industry but were not satisfied with the environment.',
       'KeenEthics was set up to better than a typical outsourcing company.',
     ],
     engineers: '7',
@@ -15,7 +15,7 @@ const storyData = [
     items: [
       'The first step was with the newest and most popular technology of that time, Meteor, which was our main technical focus.',
       'We launched a “Standing Tables” project, aimed to design and manufacture safe working surfaces.',
-      'Since we were good at Meteor, we were able to start working with a few long-term projects like %Knote% (called Knotable at that time)',
+      'Since we were good at Meteor, we were able to start working with a few long-term projects like %Knote% (called Knotable at that time).',
     ],
     engineers: '20',
     partners: '2',
@@ -28,9 +28,9 @@ const storyData = [
     title: 'KeenEthics chose a path to follow.',
     items: [
       'The tech stack was broadened to satisfy all the needs and requests of our customers.',
-      'We moved to a new office',
+      'We moved to a new office.',
       'We started supporting the educational project %Let Kids Move% and %Hebron Academy%.',
-      'We’ve involved industry experts and set up decentralized decision making within a company',
+      'We’ve involved industry experts and set up decentralized decision making within a company.',
     ],
     engineers: '36',
     partners: '12',
