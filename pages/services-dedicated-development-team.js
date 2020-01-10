@@ -3,7 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 
 import Layout from '../components/layout/main';
-import './services-education-software-development.scss';
+import ContentNavigation from '../components/content/navigation';
+
+import './services-education-software-development';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
@@ -110,6 +112,7 @@ class ServicesOutstaffing extends React.Component {
 
     return (
       <Layout>
+        <ContentNavigation />
         <div className="content-block service-team">
           <section>
             <h1 className="text-center">Dedicated Development Team</h1>
@@ -178,19 +181,19 @@ class ServicesOutstaffing extends React.Component {
           </section>
           <section>
             <h2>Why KeenEthics?</h2>
-    
+
             <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth</h3>
             <p>Your project will grow with us because that is what you hire dedicated developers for. We will provide the most skillful professionals that you ask us for. If you need UI/UX designers, software developers, QA specialists, AI or IoT specialists, or Cloud Architects – <Link href="/contacts">contact us</Link> with no hesitation.</p>
-    
+
             <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value</h3>
             <p>Whatever cooperation model we base our partnership on, we strive for our business relationship to be open, transparent, and mutually beneficial. We employ the ethical approach towards our clients and partners. Here at KeenEthics, we believe that a pleasant atmosphere on the project and effective communication are the two pillars of business success. Read more about our <Link href="/blog/1548831600000-creating-corporate-culture">ethical values and corporate culture</Link>.</p>
-    
+
             <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span> Launching in a matter of weeks</h3>
             <p>We understand that time is the most precious asset you have. We want to waste neither your energy nor your patience. Thus, our specialists will start working on your project as a dedicated development team as soon as you confirm your willingness to cooperate with us and we solve all legal questions.</p>
-    
+
             <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span> Bringing tech expertise</h3>
             <p>Our team members are experts in what they do, but we are still working to improve their performance. At KeenEthics, internal and external knowledge-sharing events take place regularly. We conduct code evaluation, pair programming, and brainstorming sessions. In the unlikely case of your dissatisfaction with us, we offer a warranty period for our team services. To learn more about it, please <Link href="/contacts">contact our representative</Link>.</p>
-    
+
             <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data</h3>
             <p>Your <Link href="/blog/1543388400000-your-data-is-safe-in-ukraine">data safety</Link> is our priority. Our dedicated software development team will make sure that your application is immune to safety errors or external attacks. Regardless of the industry you are in or the tech stack you use, KeenEthics experts understand the need to protect your project and know which safety measures to take.</p>
           </section>

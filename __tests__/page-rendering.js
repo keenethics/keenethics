@@ -25,16 +25,16 @@ var getRoadmap = function(elements) {
 };
 
 getRoadmap(mainNavigation);
-getRoadmap(servicesWebDevelopmentElements);
-getRoadmap(servicesMobileDevelopmentElements);
-getRoadmap(servicesOutstaffingElements);
-getRoadmap(techAppsElements);
-getRoadmap(techFrontEndElements);
-getRoadmap(techBackEndElements);
-getRoadmap(techDatabaseElements);
-getRoadmap(techApiIntegrationElements);
-getRoadmap(worksElements);
-getRoadmap(blog);
+// getRoadmap(servicesWebDevelopmentElements);
+// getRoadmap(servicesMobileDevelopmentElements);
+// getRoadmap(servicesOutstaffingElements);
+// getRoadmap(techAppsElements);
+// getRoadmap(techFrontEndElements);
+// getRoadmap(techBackEndElements);
+// getRoadmap(techDatabaseElements);
+// getRoadmap(techApiIntegrationElements);
+// getRoadmap(worksElements);
+// getRoadmap(blog);
 
 describe('Page rendering', () => {
   navigation.forEach((nav) => {
