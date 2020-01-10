@@ -1,6 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
+
+import React from 'react';
+
 import Layout from '../components/layout/main';
+import ContentNavigation from '../components/content/navigation';
+
 import './services-education-software-development.scss';
 
 import Works from '../components/portfolio/works';
@@ -148,6 +152,7 @@ class ServicesWebDevelopment extends React.Component {
 
     return (
       <Layout>
+        <ContentNavigation />
         <div className="content-block service-webdev">
           <section>
             <h1 className="text-center">Custom Web Application Development</h1>
