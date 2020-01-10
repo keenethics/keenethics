@@ -139,7 +139,7 @@ const ServicesBusinessAnalysis = () => {
     on which you find to be more suitable. The pricing policy we offer will be equally suitable
     for a start-up and for a large corporation. IT business analysis services and software solutions
     we offer are cost-efficient.&nbsp;
-    <a href="/contacts?activeForm=estimate" target="_blank">Let us estimate your project</a>
+    <a href="/contacts?activeform=estimate" target="_blank">Let us estimate your project</a>
   </>,
     },
     {

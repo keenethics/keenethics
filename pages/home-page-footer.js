@@ -263,7 +263,7 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link href="contacts?activeForm=estimate">
+              <Link href="contacts?activeform=estimate">
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
