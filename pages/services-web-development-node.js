@@ -161,7 +161,7 @@ const ServicesWebDevelopmentNode = () => {
           <p>The quality of the final product should be the first priority of a Node.js development company. With us, you can be sure that <b>the solution is robust and the code is clean</b>. We assess all the risks and pay close attention to quality assurance.</p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
-          <Works works={nodeJsWorks} rounded />
+          <Works works={nodeJsWorks} />
         </section>
       </div>
     </Layout>

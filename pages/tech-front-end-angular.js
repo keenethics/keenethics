@@ -144,7 +144,7 @@ const TechBackEndExpress = () => (
       <section>
         <h2>Angular Solutions</h2>
         <p>These are some of custom AngularJS development solutions that our team has developed:</p>
-        <Works rounded works={works.filter(({ title }) => ['Education System Platform', 'Black Book', 'Tetrami'].includes(title))} />
+        <Works works={works.filter(({ title }) => ['Education System Platform', 'Black Book', 'Tetrami'].includes(title))} />
       </section>
       <section>
         <h2>Now, let’s discuss your business idea!</h2>

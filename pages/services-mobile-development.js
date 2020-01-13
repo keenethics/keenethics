@@ -134,7 +134,7 @@ const ServicesMobileDevelopment = () => {
           <p>You can see hundreds of people a day wearing smartwatches or fitness trackers, so why don’t you use it in your favor?  Wearable devices have already become a usual thing, and an ideal mobile application is the one that uses them to provide a better, more personalized service to the user.</p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
-          <Works works={mobileDevelopmentWorks} rounded />
+          <Works works={mobileDevelopmentWorks} />
         </section>
       </div>
     </Layout>

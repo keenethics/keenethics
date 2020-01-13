@@ -213,7 +213,7 @@ const SoftwareDeploymentAndImplementation = () => {
             These are some of the applications and websites that we have provided
             software deployment services with:
           </p>
-          <Works works={softwareDeploymentWorks} rounded />
+          <Works works={softwareDeploymentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

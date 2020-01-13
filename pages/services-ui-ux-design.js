@@ -331,7 +331,7 @@ const ServicesUiUxDesign = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some of the cloud applications that we have developed:</p>
-          <Works works={webDevelopmentWorks} rounded />
+          <Works works={webDevelopmentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

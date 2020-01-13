@@ -159,7 +159,7 @@ const ServicesMobileDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 4 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
           </div>
 
           <div>
@@ -172,7 +172,7 @@ const ServicesMobileDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Waterfall</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['Education System Platform'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['Education System Platform'].includes(title))} />
           </div>
 
           <div>
@@ -185,7 +185,7 @@ const ServicesMobileDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers</div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
           </div>
         </section>
 

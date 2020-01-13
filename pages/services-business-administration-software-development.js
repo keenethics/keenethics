@@ -330,7 +330,7 @@ const BusinessAdministrationSoftware = () => {
                 : 3 full-stack developers, 1 QA specialist, and 1 PM
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['WorkBooking'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['WorkBooking'].includes(title))} />
           </div>
           <div>
             <p className="text-bold text-center">The Check Network</p>
@@ -364,7 +364,7 @@ const BusinessAdministrationSoftware = () => {
                 : 3 full-stack developers and 1 QA specialist
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['The Check Network'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['The Check Network'].includes(title))} />
           </div>
           <div>
             <p className="text-bold text-center">Black Book</p>
@@ -400,7 +400,7 @@ const BusinessAdministrationSoftware = () => {
                 : 1 full-stack developer and 1 QA specialist
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['Black Book'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['Black Book'].includes(title))} />
           </div>
         </section>
         <section>
