@@ -342,18 +342,18 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <div style={{ marginBottom: '5px' }}>
               <b>Platform</b>
               :&nbsp;
-              <Link href="/services-mobile-development-apple">iOS</Link>
+              <Link href="/services-mobile-development-apple"><a>iOS</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
               <b>Technologies</b>
               :&nbsp;
-              <Link href="/services-web-development-node">Node.js</Link>
+              <Link href="/services-web-development-node"><a>Node.js</a></Link>
               ,&nbsp;
-              <Link href="/tech-data-base-mongo">Mongo</Link>
+              <Link href="/tech-data-base-mongo"><a>Mongo</a></Link>
               ,&nbsp;
               <span>Wit.ai</span>
               ,&nbsp;
-              <Link href="/services-web-development-chatbot">BotPress</Link>
+              <Link href="/services-web-development-chatbot"><a>BotPress</a></Link>
               ,&nbsp;
               <span>WebSocket</span>
             </div>
@@ -363,7 +363,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <Link
                 href="/blog/how-to-choose-your-optimal-development-methodology"
               >
-                Kanban
+                <a>Kanban</a>
               </Link>
             </div>
             <div style={{ marginBottom: '25px' }}>
@@ -377,10 +377,10 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <h3>Hospital Marketing Administration System</h3>
             <p>This system was developed to facilitate and optimize business processes in dental clinics. This web platform is commercial, meaning that it does not serve a single clinic but is available for purchase. It is expected to be used specifically by a front desk assistant, a marketing specialist, and a patient consultant. In general, it helps to automate documentation and improve patient service.</p>
             <div style={{ marginBottom: '5px' }}>
-              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+              <b>Platform</b>: <Link href="/services-web-development"><a>Web platform</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Technologies</b>: <Link href="/tech-front-end-react">React</Link>, <Link href="/tech-front-end-redux">Redux</Link>, <Link href="/tech-back-end-express">Express</Link>, RethinkDB, and Webpack2
+              <b>Technologies</b>: <Link href="/tech-front-end-react"><a>React</a></Link>, <Link href="/tech-front-end-redux"><a>Redux</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link>, RethinkDB, and Webpack2
             </div>
             <div style={{ marginBottom: '5px' }}>
               <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link>
@@ -410,13 +410,13 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <h3>Digital Hospital App</h3>
             <p>This platform is called a digital hospital since it provides patients with high-quality end-to-end medical care. Here, users can request an appointment with a medical specialist providing cancer care, hair treatment, eye treatment, fertility treatment, as well as with doctors making cosmetic, weight loss, and orthopedic surgeries. The digital hospital is aimed at transforming the outdated and inefficient, traditional healthcare system.</p>
             <div style={{ marginBottom: '5px' }}>
-              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+              <b>Platform</b>: <Link href="/services-web-development"><a>Web platform</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Technologies</b>: <Link href="/tech-front-end-react">React</Link> and <Link href="/services-web-development-node">Node.js</Link>
+              <b>Technologies</b>: <Link href="/tech-front-end-react"><a>React</a></Link> and <Link href="/services-web-development-node"><a>Node.js</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Scrum</a></Link>
             </div>
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 2 full-stack software developers and 1 QA specialist
@@ -428,13 +428,13 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <h3>Diagnostic Appointment Scheduling System</h3>
             <p>This healthcare booking service enables patient to find and schedule medical appointments without wasting time while holding on a line or standing in a queue. Besides, they conduct numerous successful public health events to encourage healthy lifestyle, support people suffering from diabetes or living through menopause, help to prevent cardiovascular diseases, or encourage to give up on smoking.</p>
             <div style={{ marginBottom: '5px' }}>
-              <b>Platform</b>: <Link href="/services-web-development">Web platform</Link>
+              <b>Platform</b>: <Link href="/services-web-development"><a>Web platform</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Technologies</b>: SQLite, <Link href="/tech-front-end-react">React</Link> and <Link href="/tech-front-end-redux">Redux</Link>
+              <b>Technologies</b>: SQLite, <Link href="/tech-front-end-react"><a>React</a></Link> and <Link href="/tech-front-end-redux"><a>Redux</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Scrum</a></Link>
             </div>
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 2 full-stack software developers, 1 PM, and 1 QA specialist

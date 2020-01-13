@@ -137,7 +137,7 @@ const ServicesMobileDevelopment = () => {
                     <img src={icon} alt={title} />
                     <figcaption className="mobile-development-figcaption">
                       {
-                        href ? <Link href={href}>{title}</Link> : title
+                        href ? <Link href={href}><a>{title}</a></Link> : title
                       }
                     </figcaption>
                   </figure>
@@ -154,8 +154,8 @@ const ServicesMobileDevelopment = () => {
             <p>SelfLeaders delivers training events for professional and personal development in self-leadership for businesses of different sizes, NGOs, and the public sector. This app is a set of personal growth tools for those who organize and participate in educational events. It provides an opportunity to conduct workshops with interactive materials, videos, presentations, etc.</p>
 
             <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android">Android</Link> and <Link href="/services-mobile-development-apple">iOS</Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor">Meteor</Link>, <Link href="/tech-api-integration-graphql">GraphQL</Link>, and <Link href="/tech-front-end-react">React</Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android"><a>Android</a></Link> and <Link href="/services-mobile-development-apple"><a>iOS</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link>, <Link href="/tech-api-integration-graphql"><a>GraphQL</a></Link>, and <Link href="/tech-front-end-react"><a>React</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 4 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
             </div>
@@ -167,8 +167,8 @@ const ServicesMobileDevelopment = () => {
             <p>It is an educational project, which enables high-level education officials to keep track of the learning progress of a certain student, school, region, and the country overall. This analysis provides valuable data on how educational processes may be optimized in the pursuit of reaching optimal learning results. This data is important for making sure that all schools across all regions are funded sufficiently and justly and no students are left underprivileged.</p>
 
             <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development">Web</Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-front-end-angular">Angular</Link>, <Link href="/services-web-development-node">Node.js</Link>, <Link href="/tech-back-end-express">Express</Link> and <Link href="/tech-data-base-mongo">MongoDB</Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development"><a>Web</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-front-end-angular"><a>Angular</a></Link>, <Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link> and <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Waterfall</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
             </div>
@@ -180,8 +180,8 @@ const ServicesMobileDevelopment = () => {
             <p>ComicEnglish is a service that helps users develop their language skills by playing games with the English learning chatbot. It includes quests of various difficulty levels and language competence. The gamified platform motivates users to stay on the track of learning English with rewards and multiple fun features.</p>
 
             <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android">Android</Link> and <Link href="/services-mobile-development-apple">iOS</Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor">Meteor</Link> and Ionic</div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android"><a>Android</a></Link> and <Link href="/services-mobile-development-apple"><a>iOS</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and Ionic</div>
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers</div>
             </div>

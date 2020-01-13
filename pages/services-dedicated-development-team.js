@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -122,7 +123,9 @@ class ServicesOutstaffing extends React.Component {
             <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$507.2 billion</h2>
               <p className="text-center">
                 is the projected size of the global software market in 2021, according to&nbsp;
-                <a href="https://www.statista.com/statistics/963597/software-revenue-worldwide/" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
+                <Link href="https://www.statista.com/statistics/963597/software-revenue-worldwide/">
+                  <a target="_blank" rel="noopener noreferrer nofollow">Statista</a>
+                </Link>
                 .
               </p>
             <h2>What Is a Dedicated Development Team?</h2>
@@ -204,9 +207,9 @@ class ServicesOutstaffing extends React.Component {
               <h3>WorldLabs</h3>
               <p>WordLabs is a web platform for startuppers, entrepreneurs, and business owners. It helps the global business community push forward innovative ideas. The idea of this project is to empower people to drive technological progress. WordLabs is not a typical business incubator. It is a revolutionary business communication platform built with the needs of society in mind.</p>
               <div>
-                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development">Web</Link></div>
-                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-data-base-mongo">MongoDB</Link>, <Link href="/tech-back-end-meteor">Meteor</Link> and <Link href="/tech-front-end-react">React</Link></div>
-                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development"><a>Web</a></Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link>, <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and <Link href="/tech-front-end-react"><a>React</a></Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Kanban</a></Link></div>
               </div>
               <Works rounded works={works.filter(({ title }) => ['WorldLabs'].includes(title))} />
             </div>
@@ -214,9 +217,9 @@ class ServicesOutstaffing extends React.Component {
               <h3>My Grass Growth</h3>
               <p>My Grass Growth is an agricultural web app. The purpose of it is to help farmers manage the feeding process of their herds. The app offers forecasts on grazing and mowing paddocks, which are based on the user's data and some agricultural formulas.</p>
               <div>
-                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development">Web</Link></div>
-                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor">Meteor</Link> and Blaze</div>
-                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Scrum</Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development"><a>Web</a></Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and Blaze</div>
+                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Scrum</a></Link></div>
               </div>
               <Works rounded works={works.filter(({ title }) => ['My Grass Growth'].includes(title))} />
             </div>
@@ -224,9 +227,9 @@ class ServicesOutstaffing extends React.Component {
               <h3>OneRemission</h3>
               <p>OneRemission is a custom healthcare mobile solution.  The idea of it is to help patients who survived cancer and their families minimize the risk of cancer recurrence. As of now, it is one of the best and most popular chatbot-based Integrative Oncology applications. It encompasses best diet, exercise, sleep, and stress management practices for cancer and post-cancer care.</p>
               <div>
-                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-apple">iOS</Link></div>
-                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/services-web-development-node">Node.js</Link>, <Link href="/tech-data-base-mongo">MongoDB</Link>, Wit.ai, <Link href="/services-web-development-chatbot">BotPress</Link>, WebSocket</div>
-                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-apple"><a>iOS</a></Link></div>
+                <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link>, Wit.ai, <Link href="/services-web-development-chatbot"><a>BotPress</a></Link>, WebSocket</div>
+                <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Kanban</a></Link></div>
               </div>
               <Works rounded works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
             </div>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import React from 'react';
 
 import Layout from '../components/layout/main';
@@ -122,7 +124,11 @@ const ChatbotsArtificialIntelligence = () => {
           <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$1.25 billion</h2>
           <p className="text-center">
             is the projected size of the global chatbot market in 2025, according to&nbsp;
-            <a href="https://www.statista.com/statistics/656596/worldwide-chatbot-market/" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
+            <Link href="https://www.statista.com/statistics/656596/worldwide-chatbot-market/">
+              <a target="_blank" rel="noopener noreferrer nofollow">
+                Statista
+              </a>
+            </Link>
             .
           </p>
         </section>
@@ -175,13 +181,21 @@ const ChatbotsArtificialIntelligence = () => {
             <div className="chatbots-and-ai-technologies-item chatbots-and-ai-technologies-item-2">
               <b>Voice-based chatbots:</b>
               <br />
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+              <Link href="https://aws.amazon.com/">
+                <a target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+              </Link>
               ,&nbsp;
-              <a href="https://www.luis.ai/home" target="_blank" rel="noopener noreferrer nofollow">Microsoft LUIS</a>
+              <Link href="https://www.luis.ai/home">
+                <a target="_blank" rel="noopener noreferrer nofollow">Microsoft LUIS</a>
+              </Link>
               ,&nbsp;
-              <a href="https://developers.google.com/assistant" target="_blank" rel="noopener noreferrer nofollow">Google Assistant</a>
+              <Link href="https://developers.google.com/assistant">
+                <a target="_blank" rel="noopener noreferrer nofollow">Google Assistant</a>
+              </Link>
               <br />
-              <a href="/services-web-development-node" target="_blank" rel="noopener noreferrer">Node.js</a>
+              <Link href="/services-web-development-node">
+                <a target="_blank" rel="noopener noreferrer">Node.js</a>
+              </Link>
               <br />
               <br />
               <img src="/static/services/services-chatbots-artificial-intelligence/aws.png" alt="AWS" />
@@ -193,10 +207,14 @@ const ChatbotsArtificialIntelligence = () => {
             <div className="chatbots-and-ai-technologies-item chatbots-and-ai-technologies-item-3">
               <b>AI-powered algorithms:</b>
               <br />
-              <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer nofollow">TensorFlow</a>
+              <Link href="https://www.tensorflow.org/">
+                <a target="_blank" rel="noopener noreferrer nofollow">TensorFlow</a>
+              </Link>
               ,
               <br />
-              <a href="https://brain.js.org/#/" target="_blank" rel="noopener noreferrer nofollow">Brain.js</a>
+              <Link href="https://brain.js.org/#/">
+                <a target="_blank" rel="noopener noreferrer nofollow">Brain.js</a>
+              </Link>
               <br />
               <br />
               <img src="/static/services/services-chatbots-artificial-intelligence/tf_logo.png" alt="TensorFlow" />
@@ -214,7 +232,9 @@ const ChatbotsArtificialIntelligence = () => {
           <img src="/static/services/services-chatbots-artificial-intelligence/asama-logo.png" alt="Asama logo" />
           <br />
           <p>
-            <a href="https://asama.tech/eng" target="_blank" rel="noopener noreferrer nofollow">Asama</a>
+            <Link href="https://asama.tech/eng">
+              <a target="_blank" rel="noopener noreferrer nofollow">Asama</a>
+            </Link>
             &nbsp;is an IoT-based employee tracking solution developed by KeenEthics and powered by
             Artificial Intelligence. The system consists of fitness trackers, BLE beacons, and
             AI-powered mobile app. It may work in any sphere where the activity and movement of

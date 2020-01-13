@@ -145,13 +145,13 @@ const ServicesWebDevelopmentNode = () => {
             }
           </ul>
         </section>
-        
+
         <section>
           <h2>Why KeenEthics?</h2>
           <h3 className="red-italic-title">Any app for any industry.</h3>
           <p>As an experienced Node.js development company, we can <b>build a variety of server tools and applications</b>, Node.js chatbots, complex websites, real-time applications, and more. For years, our specialists have provided Node.js development services for Finance & Banking Industry, Medical Services, E-commerce, Transportation, Education, and other industries.</p>
 
-          <h3 className="red-italic-title">Reasonable price and data safety.</h3>  
+          <h3 className="red-italic-title">Reasonable price and data safety.</h3>
           <p>We offer a <b>reasonable pricing policy</b> and the opportunity to choose a paying model you prefer, should it be a fixed price or a “<Link href="/blog/1554420300000-estimates"><a>Time & Materials</a></Link>” approach. We perfectly follow <Link href="/blog/1543388400000-your-data-is-safe-in-ukraine"><a>data security</a></Link> regulations and the requirements of the NDA you choose to sign.</p>
 
           <h3 className="red-italic-title">Cooperation and communication.</h3>
