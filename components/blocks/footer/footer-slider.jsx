@@ -8,7 +8,7 @@ const PostItem = ({ post }) => (
 
   <div className="slide-item">
     <div className="slide-date">
-      {Moment(post.fields.publishDate).format('D MMM, YYYY')}
+      {Moment(post.fields.publishDate).format('D MMM, YYYY').toUpperCase()}
     </div>
     <div className="slide-title">
       {post.fields.title}
