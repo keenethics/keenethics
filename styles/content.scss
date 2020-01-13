@@ -1,30 +1,24 @@
 @import "./helpers/responsive-mixin";
 
 .content {
-  flex-grow: 1;
   min-height: 100%;
-  vertical-align: top;
+  padding-left: 160px;
+  box-sizing: border-box;
+
   -webkit-overflow-scrolling: touch;
-  // max-width: calc(100% - 160px);
 
   @include for-tablet-max {
     max-width: 100%;
-  }
-  &.nav-open {
-    padding-left: 160px;
-
-    .content-inner {
-      width: calc(100vw - 160px);
-    }
   }
 }
 .content-inner {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+
   &.home-full-vh {
     height: 100%;
   }
@@ -317,9 +311,7 @@
 
 @include for-tablet {
   .content {
-    &.nav-open {
-      padding-left: 0px;
-    }
+    padding-left: 0px;
   }
   .founders {
     padding: 0 34px;

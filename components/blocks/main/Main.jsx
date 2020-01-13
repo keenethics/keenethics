@@ -62,7 +62,7 @@ const Main = () => (
         </div>
       </div>
       <div className="side-info-top">
-        <Link href="/contacts?activeForm=estimate">
+        <Link href="/contacts?activeform=estimate">
           <a className="button contacts-goal side-info-top-content">Free estimate</a>
         </Link>
       </div>

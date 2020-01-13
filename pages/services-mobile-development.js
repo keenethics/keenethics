@@ -5,7 +5,10 @@ import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import PageTabs from '../components/content/tabs';
 
-import { servicesMobileDevelopment, works } from '../main.config';
+import {
+  servicesMobileDevelopment,
+  works,
+} from '../main.config';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
@@ -79,10 +82,28 @@ const ServicesMobileDevelopment = () => {
         </section>
         <section>
           <h2>What Is Mobile Development?</h2>
-          <p>Due to the rapid growth of the smartphone market, mobile development is the most popular service in the IT industry, and the number of companies providing it is immense.</p>
-          <p>What makes us different from the sweeping majority of such agencies is that we do not ask ourselves “<span className="text-italic">How to develop the app?</span>”. Instead, we ask “<span className="text-italic">Why to develop the app?</span>”.</p>
-          <p>As a mobile application development company, we want to be sure that our products are actively used and dearly loved by the users and that they solve all the needs of the business owner. Therefore, our developers would be glad not only to follow your requirements but also to help you collect them if you do not have any. We want to make sure that the idea behind the final product is fully viable and destined to succeed.</p>
-          <p>Here at KeenEthics, we offer custom mobile app development services. In our case, custom stands for the one that would fully meet your interests and our values: we strive to ensure the transparent development process and to provide the final product of the highest quality.</p>
+          <p>
+            Due to the rapid growth of the smartphone market, mobile development is the most popular
+            service in the IT industry, and the number of companies providing it is immense.
+          </p>
+          <p>
+            What makes us different from the sweeping majority of such agencies is that we do not
+            ask ourselves “<span className="text-italic">How to develop the app?</span>”. Instead,
+            we ask “<span className="text-italic">Why to develop the app?</span>”.
+          </p>
+          <p>
+            As a mobile application development company, we want to be sure that our products are
+            actively used and dearly loved by the users and that they solve all the needs of the
+            business owner. Therefore, our developers would be glad not only to follow your
+            requirements but also to help you collect them if you do not have any. We want to make
+            sure that the idea behind the final product is fully viable and destined to succeed.
+          </p>
+          <p>
+            Here at KeenEthics, we offer custom mobile app development services. In our case,
+            custom stands for the one that would fully meet your interests and our values: we
+            strive to ensure the transparent development process and to provide the final product
+            of the highest quality.
+          </p>
         </section>
 
         <section>
@@ -95,14 +116,19 @@ const ServicesMobileDevelopment = () => {
           <h2>What Mobile App Development Services Do We Offer?</h2>
           <ul className="mobile-development-list">
             {
-              servicesList.map(({ icon, title, href }) => (
-                <li className="mobile-development-item" key={href}>
+              servicesList.map(({
+                icon,
+                title,
+                href,
+              }) => (
+                <li
+                  className="mobile-development-item"
+                  key={`${href}${title}`}
+                >
                   <figure>
                     <img src={icon} alt={title} />
                     <figcaption className="mobile-development-figcaption">
-                      {
-                        href ? <Link href={href}>{title}</Link> : title
-                      }
+                      {href ? <Link href={href}><a>{title}</a></Link> : title}
                     </figcaption>
                   </figure>
                 </li>
@@ -113,25 +139,57 @@ const ServicesMobileDevelopment = () => {
 
         <section>
           <h2>Why KeenEthics?</h2>
-          <p>As a custom mobile app development company, we offer exactly the applications that you need.</p>
+          <p>
+            As a custom mobile app development company, we offer exactly the applications that you
+            need.
+          </p>
 
           <h3 className="red-italic-title">Cutting edge.</h3>
-          <p>As nobody is surprised by an average mobile app, we offer you a progressive one. Progressive web applications combine the best functions of mobile and web apps, all for the best experience of the user. Fast, reliable, and engaging, easily-developed and resource-efficient — our apps will become the optimal solution both for your business and for your users.</p>
+          <p>
+            As nobody is surprised by an average mobile app, we offer you a progressive one.
+            Progressive web applications combine the best functions of mobile and web apps, all for
+            the best experience of the user. Fast, reliable, and engaging, easily-developed and
+            resource-efficient — our apps will become the optimal solution both for your business
+            and for your users.
+          </p>
 
           <h3 className="red-italic-title">Well-designed.</h3>
-          <p>People are judged by their appearance, and so are mobile applications. Our UI/UX designers are eager and ready to develop a unique outstanding design for your application.</p>
+          <p>
+            People are judged by their appearance, and so are mobile applications. Our UI/UX
+            designers are eager and ready to develop a unique outstanding design for your
+            application.
+          </p>
 
           <h3 className="red-italic-title">Perfectly functional.</h3>
-          <p>Nothing can spoil the user experience more than an annoying software bug or an excessively long loading time. Not only we look for the best mobile app development solutions, but also we provide continuous maintenance and support to constantly improve the app.</p>
+          <p>
+            Nothing can spoil the user experience more than an annoying software bug or an
+            excessively long loading time. Not only we look for the best mobile app development
+            solutions, but also we provide continuous maintenance and support to constantly improve
+            the app.
+          </p>
 
           <h3 className="red-italic-title">Relevant.</h3>
-          <p>Creating a perfect technical solution is not enough for the app to be loved and popular. To ensure the best user experience and to provide all the necessary features and services without overloading the app with unnecessary stuff, our mobile app development team conducts a comprehensive discovery stage.</p>
+          <p>
+            Creating a perfect technical solution is not enough for the app to be loved and popular.
+            To ensure the best user experience and to provide all the necessary features and
+            services without overloading the app with unnecessary stuff, our mobile app development
+            team conducts a comprehensive discovery stage.
+          </p>
 
           <h3 className="red-italic-title">Social.</h3>
-          <p>The importance of Facebook, Instagram, and Twitter is the one you cannot deny. We make sure that all your wishes and expectations on the social integration of your app are fulfilled.</p>
+          <p>
+            The importance of Facebook, Instagram, and Twitter is the one you cannot deny. We make
+            sure that all your wishes and expectations on the social integration of your app are
+            fulfilled.
+          </p>
 
           <h3 className="red-italic-title">Compatible.</h3>
-          <p>You can see hundreds of people a day wearing smartwatches or fitness trackers, so why don’t you use it in your favor?  Wearable devices have already become a usual thing, and an ideal mobile application is the one that uses them to provide a better, more personalized service to the user.</p>
+          <p>
+            You can see hundreds of people a day wearing smartwatches or fitness trackers, so why
+            don’t you use it in your favor?  Wearable devices have already become a usual thing,
+            and an ideal mobile application is the one that uses them to provide a better, more
+            personalized service to the user.
+          </p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
           <Works works={mobileDevelopmentWorks} />

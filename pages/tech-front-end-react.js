@@ -90,7 +90,7 @@ const TechFrontEndReact = () => (
           alt="Why React JS?"
         />
         <FeaturesList list={whyReactJs} titleBold />
-        <CallToActionButton title="ESTIMATE YOUR PROJECT" href="/contacts?activeForm=estimate" />
+        <CallToActionButton title="ESTIMATE YOUR PROJECT" href="/contacts?activeform=estimate" />
       </section>
 
       <section>
@@ -119,7 +119,7 @@ const TechFrontEndReact = () => (
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth.</h3>
         <p>You can request Reactjs development services and robust solutions in multiple industries, including <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer nofollow">education</a>, e-commerce, healthcare, finance, business services, fashion, food, real estate, and logistics. Our Reactjs developers have not just technical expertise but also industry-specific skills and knowledge.</p>
 
-        <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>  
+        <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>
         <p>We are ethical towards our employees, partners, and customers. You can be sure that we communicate and cooperate with the principles of honesty and transparency because ethics is more than just a part of our corporate name.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span> Launching in a matter of weeks.</h3>

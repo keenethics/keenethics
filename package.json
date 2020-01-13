@@ -8,6 +8,7 @@
     "start": "cross-env NODE_ENV=production node server/index.js",
     "lint": "eslint . --ext .jsx,.js --fix",
     "test": "jest",
+    "test-page-rendering": "jest __tests__/page-rendering.js",
     "analyze": "cross-env ANALYZE=1 next build",
     "deploy": "bash deploy",
     "endtoend": "jest --config=__tests__/endtoend/jest.config.js --runInBand"

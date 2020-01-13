@@ -43,7 +43,7 @@ const Industries = () => {
                 </Link>
               </div>
               <div className="col-1-3">
-                <Link href="/services-business-administration-software-development">
+                <Link href="/services-business-administration-development">
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
                       <img

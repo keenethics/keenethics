@@ -132,7 +132,7 @@ const fullCycleMethod = [
   },
   {
     title: '03   Development and Testing',
-    url: 'services-web-development-meteor',
+    url: 'services-development-and-quality-assurance',
   },
   {
     title: '04   Software Deployment',
@@ -263,7 +263,7 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link href="contacts?activeForm=estimate">
+              <Link href="contacts?activeform=estimate">
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>

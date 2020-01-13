@@ -23,7 +23,7 @@ const LetsStart = () => (
           <p className="lets-start__author-position">
               Head of Partner Engagement
           </p>
-          <Link href="/contacts?activeForm=estimate">
+          <Link href="/contacts?activeform=estimate">
             <a className="button lets-start-btn orange-btn">Let&#39;s start</a>
           </Link>
         </div>
