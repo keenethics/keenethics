@@ -1,6 +1,6 @@
 .block-footer {
   background-color: #12233D;
-  
+
   .home-footer {
     display: flex;
     padding: 96px 44px 44px;
@@ -114,6 +114,19 @@
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 20px;
+        }
+        .home-footer-link {
+          color: #fff;
+          text-decoration: none;
+          transition: .1s;
+          &:hover {
+            text-decoration: underline;
+            color: #DE4F4F;
+            opacity: .8;
+          }
+          &:active {
+            color: #D62C2C;
+          }
         }
       }
     }
