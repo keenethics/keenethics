@@ -198,7 +198,7 @@ app.prepare().then(() => {
       // eslint-disable-next-line
       subscription_status: !!isSubscriber ? 'Subscribed' : 'Unsubscribed',
     };
-    console.log('sending stuff to hubspot');
+
     sendContactToHubSpot(hubSpotParameters);
   });
   server.post('/estimate', (req, res) => {
