@@ -49,8 +49,10 @@
         &.align-right {
           text-align: right;
         }
-        &.title-links .home-footer-list-item:first-child {
-          margin-bottom: 0;
+        &.title-links {
+          .home-footer-list-item {
+            margin-bottom: 8px;
+          }
         }
       }
       .footer-estimation {
