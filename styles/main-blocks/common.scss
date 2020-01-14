@@ -76,6 +76,10 @@
     background: transparent;
   }
 
+  .page__item-date {
+    text-transform: uppercase;
+  }
+
   .filter__list::before {
     background: linear-gradient(to right,#fafafa 0, rgba(#fafafa, .8) 40%, rgba(#fafafa, 0) 100%);
   }

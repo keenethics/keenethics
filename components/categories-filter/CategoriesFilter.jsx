@@ -23,7 +23,7 @@ class CategoriesFilter extends React.Component {
     const buttonsWidth = CATEGORY_BUTTON_WIDTH_DESKTOP * categoriesList.length;
 
     // TODO Replace -10 with scroll width
-    
+
     const elem = document.getElementById('filter__list');
     newState.sliderWidth = !elem ? (window.innerWidth - leftMenuWidth - 2
       * containerPadding - rigthButtonsWidth) : elem.clientWidth;

@@ -15,7 +15,7 @@ const Blog = ({ minimize }) => {
         </div>
       </header>
       <div className="block--content">
-        <Posts posts={posts.slice(minimize ? -2 : -3)} />
+        <Posts posts={posts.slice(0, minimize ? 2 : 3)} />
       </div>
     </div>
   );
