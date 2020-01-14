@@ -192,7 +192,7 @@ const ServicesMobileDevelopment = () => {
           </p>
 
           <h3>These are some of the Node.js applications and websites we have developed:</h3>
-          <Works works={mobileDevelopmentWorks} rounded />
+          <Works works={mobileDevelopmentWorks} />
         </section>
       </div>
     </Layout>

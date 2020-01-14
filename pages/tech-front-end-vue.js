@@ -271,7 +271,7 @@ const TechFrontEndVue = () => {
                 : 1 PO, 1 PM, 1 Tech Lead, 2 full-stack developers, 1 UI/UX designer, 1 QA
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['Attendance'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['Attendance'].includes(title))} />
           </div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>

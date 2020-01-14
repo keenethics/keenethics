@@ -300,7 +300,7 @@ const ServicesBusinessAnalysis = () => {
             These are some of applications and websites we have provided business
             analysis services for:
           </p>
-          <Works works={webDevelopmentWorks} rounded />
+          <Works works={webDevelopmentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

@@ -262,7 +262,7 @@ const ChatbotsArtificialIntelligence = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some mobile applications augmented with chatbots that we have developed: </p>
-          <div><Works works={webDevelopmentWorks} rounded /></div>
+          <div><Works works={webDevelopmentWorks} /></div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

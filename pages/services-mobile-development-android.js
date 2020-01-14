@@ -80,7 +80,7 @@ const ServicesWebDevelopmentAndroid = () => (
       <section>
         <h2>Why KeenEthics?</h2>
         <p>Check out some of the Android mobile applications we have developed:</p>
-        <Works works={androidWorks} rounded />
+        <Works works={androidWorks} />
       </section>
     </div>
   </Layout>

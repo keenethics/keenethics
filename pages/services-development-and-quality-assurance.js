@@ -274,7 +274,7 @@ const DevelopmentAndQualityAssurance = () => {
             These are some web and mobile apps we have provided development and
             software Quality Assurance testing services to:
           </p>
-          <Works works={webDevelopmentWorks} rounded />
+          <Works works={webDevelopmentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton
