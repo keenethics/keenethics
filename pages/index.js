@@ -122,7 +122,7 @@ export default class Index extends React.Component {
         <TechStack />
         <PostsContext.Provider value={posts}>
           <Blog
-            isTabletL={isTabletL}
+            minimize={isTabletL || isTablet || isMobile}
           />
           <Partners />
           <LetsStart />

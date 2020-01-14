@@ -123,7 +123,7 @@ const careers = [
 
 const fullCycleMethod = [
   {
-    title: '01   Business Analysi',
+    title: '01   Business Analysis',
     url: 'services-business-analysis',
   },
   {
