@@ -1,6 +1,10 @@
-import React from 'react';
 import Link from 'next/link';
+
+import React from 'react';
+
 import Layout from '../components/layout/main';
+import ContentNavigation from '../components/content/navigation';
+
 import './services-education-software-development.scss';
 
 import Works from '../components/portfolio/works';
@@ -148,6 +152,7 @@ class ServicesWebDevelopment extends React.Component {
 
     return (
       <Layout>
+        <ContentNavigation />
         <div className="content-block service-webdev">
           <section>
             <h1 className="text-center">Custom Web Application Development</h1>
@@ -174,7 +179,7 @@ class ServicesWebDevelopment extends React.Component {
               These are some of the applications and websites that we have developed as a
               web application development company:
             </p>
-            <Works works={webDevelopmentWorks} rounded />
+            <Works works={webDevelopmentWorks} />
           </section>
           <section>
             <h2>Why Custom Web Application Development Services?</h2>
@@ -357,7 +362,7 @@ class ServicesWebDevelopment extends React.Component {
               not compromise quality. If you are not convinced,&nbsp;
               <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer nofollow">see what our long-term partner has to say</a>
               &nbsp;or&nbsp;
-              <a href="/contacts?activeForm=estimate" target="_blank">let us estimate your project</a>
+              <a href="/contacts?activeform=estimate" target="_blank">let us estimate your project</a>
               !
             </p>
 

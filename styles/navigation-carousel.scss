@@ -18,6 +18,8 @@
   padding: 0 0 0 45px;
 
   .content {
+    min-height: auto;
+    padding: 0;
     transition: transform .3s ease-in-out;
   }
   .name {

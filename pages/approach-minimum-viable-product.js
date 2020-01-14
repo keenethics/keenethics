@@ -201,7 +201,11 @@ const ApproachMinimumValProduct = () => (
       <p style={{ fontWeight: 700 }}>
         If you are interested in MVP development services,
         please, feel free to&nbsp;
-        <Link href="/contacts">contact us</Link>
+        <Link href="/contacts">
+          <a>
+            contact us
+          </a>
+        </Link>
         .
       </p>
     </div>

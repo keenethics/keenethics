@@ -59,12 +59,74 @@
         "type": "default"
       },
       {
+        "name": "Cloud Application Development",
+        "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "metaTitle": "Cloud Application – KeenEthics",
+        "metaDescription": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
+        "href": "/services-cloud-application-development",
+        "type": "default"
+      },
+      {
         "name": "Internet of Things",
         "description": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
         "metaTitle": "Internet of things - KeenEthics",
         "metaDescription": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
         "href": "/services-internet-of-things",
         "type": "default"
+      },
+      {
+        "name": "Business Analysis",
+        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "metaTitle": "Business Analysis – KeenEthics",
+        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "href": "/services-business-analysis",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "UI/UX Design",
+        "metaTitle": "UI UX Design Services, Hire UI/UX Designers - Keenethics",
+        "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "metaDescription": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "href": "/services-ui-ux-design",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Development and Quality Assurance",
+        "metaTitle": "Software Development and Quality Assurance Services - KeenEthics",
+        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "href": "/services-development-and-quality-assurance",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Software Deployment and Implementation Services",
+        "metaTitle": "Software Deployment and Implementation Services - KeenEthics",
+        "description": "",
+        "metaDescription": "",
+        "href": "/services-software-deployment",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "href": "/services-maintenance-support",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Business Administration Software",
+        "metaTitle": "Business Administration Software – KeenEthics Blog",
+        "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "metaDescription": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
+        "href": "/services-business-administration-development",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },
@@ -93,7 +155,7 @@
         "metaTitle": "Healthcare Software Development – KeenEthics",
         "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
 		    "metaDescription": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
-        "href": "https://keenethics.com/services-custom-healthcare-software-development",
+        "href": "/services-custom-healthcare-software-development",
         "type": "default"
       }
     ]
@@ -103,15 +165,15 @@
     "href": "/#tech-stack",
     "points": [
       {
-        "name": "Node.js Development Services",
-        "metaTitle": "Node.js development services – KeenEthics",
+        "name": "Node.js",
+        "metaTitle": "Node.js – KeenEthics",
         "description": "The optimal environment for sustainable, scalable, and resource-efficient apps",
         "metaDescription": "The optimal environment for sustainable, scalable, and resource-efficient apps",
         "href": "/services-web-development-node",
         "type": "default"
       },
  	    {
-        "name": "AngularJS Development Services",
+        "name": "Angular",
         "metaTitle": "Angular development services – KeenEthics",
         "description": "Using the scalable, reliable, self-sufficient, and multifunctional  framework",
         "metaDescription": "Using the scalable, reliable, self-sufficient, and multifunctional  framework",
@@ -119,15 +181,15 @@
         "type": "default"
       },
  	   {
-        "name": "React JS Development Company",
-        "metaTitle": "React JS development company – KeenEthics",
+        "name": "React",
+        "metaTitle": "React development company – KeenEthics",
         "description": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
         "metaDescription": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
         "href": "/tech-front-end-react",
         "type": "default"
       },
  	   {
-        "name": "React Native Developers",
+        "name": "React Native",
         "metaTitle": "React Native developers – KeenEthics",
         "description": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
         "metaDescription": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
@@ -135,7 +197,7 @@
         "type": "default"
       },
  	   {
-        "name": "Aurelia Development Services",
+        "name": "Aurelia",
         "metaTitle": "Aurelia development services – KeenEthics",
         "description": "Aurelia.js development is ideal for those next-generation apps and has a lot of features that really make a difference",
         "metaDescription": "Aurelia.js development is ideal for those next-generation apps and has a lot of features that really make a difference",
@@ -143,7 +205,7 @@
         "type": "default"
       },
 	   {
-        "name": "Vue.js Development Services",
+        "name": "Vue.js",
         "metaTitle": "Vue.js development services – KeenEthics",
         "description": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
         "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
@@ -151,7 +213,7 @@
         "type": "default"
       },
    	  {
-        "name": "Express.js Development Services",
+        "name": "Express.js",
         "metaTitle": "Express.js development services – KeenEthics",
         "description": "Using the lightweight and time-efficient web and mobile development framework.",
         "metaDescription": "Using the lightweight and time-efficient web and mobile development framework.",
@@ -159,7 +221,7 @@
         "type": "default"
       },
       {
-        "name": "Electron Development Services",
+        "name": "Electron",
         "metaTitle": "Electron development services – KeenEthics",
         "description": "Electron is a convenient and popular runtime framework for creating cross-platform desktop apps.",
         "metaDescription": "Electron is a convenient and popular runtime framework for creating cross-platform desktop apps.",
@@ -167,7 +229,7 @@
         "type": "default"
       },
       {
-        "name": "Cordova Development Services",
+        "name": "Cordova",
         "metaTitle": "Cordova development services – KeenEthics",
         "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
         "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
@@ -175,15 +237,15 @@
         "type": "default"
       },
       {
-        "name": "PhoneGap App Development Services",
-        "metaTitle": "PhoneGap app development services – KeenEthics",
-        "description": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap Development services to a software provider.",
-        "metaDescription": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap Development services to a software provider.",
+        "name": "PhoneGap",
+        "metaTitle": "PhoneGap development services – KeenEthics",
+        "description": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap to a software provider.",
+        "metaDescription": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap to a software provider.",
         "href": "/tech-apps-phonegap",
         "type": "default"
       },
       {
-        "name": "Meteor JS Development Services",
+        "name": "Meteor",
         "metaTitle": "Meteor JS development services – KeenEthics",
         "description": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
         "metaDescription": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",

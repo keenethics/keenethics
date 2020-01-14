@@ -42,7 +42,7 @@ export default {
       value: 'Maintenance and support',
       icon: 'method-icon-maintance-and-support',
       component: MaintenanceDescription,
-      href: '/services-maintenance-and-support',
+      href: '/services-maintenance-support',
     },
   ],
 };

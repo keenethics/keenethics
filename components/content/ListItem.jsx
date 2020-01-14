@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Link from 'next/link';
 import _ from 'lodash';
+import classnames from 'classnames';
 import Moment from 'react-moment';
 
 /**
@@ -50,7 +50,7 @@ const getDataFromProperty = (item) => {
   throw new Error('Wrong item object supplied.');
 };
 
-const ListItem = ({ work, rounded }) => {
+const ListItem = ({ work, posts }) => {
   const {
     title,
     // description,
@@ -62,7 +62,7 @@ const ListItem = ({ work, rounded }) => {
   } = getDataFromProperty(work);
 
   return (
-    <div className={classNames('page__item', { '-rounded': rounded })}>
+    <div className={classnames('page__item', { '-rounded': !posts })}>
       <Link href={url} as={asUrl}>
         <a className="page__item-link">
           <figure className="page__item-figure">
@@ -102,7 +102,6 @@ const ListItem = ({ work, rounded }) => {
 };
 
 ListItem.propTypes = {
-  rounded: PropTypes.bool,
   work: PropTypes.shape({
     href: PropTypes.string,
     imgSrc: PropTypes.string,
@@ -110,10 +109,10 @@ ListItem.propTypes = {
     category: PropTypes.object,
     slug: PropTypes.string,
   }).isRequired,
+  posts: PropTypes.bool,
 };
 
 ListItem.defaultProps = {
-  rounded: false,
+  posts: false,
 };
-
 export default ListItem;

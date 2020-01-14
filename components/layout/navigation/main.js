@@ -41,15 +41,19 @@ class Navigation extends React.Component {
             id={currentPoint && currentSubpoint ? 'subnavigation-inner-current' : ''}
             className="subnavigation-inner"
           >
-            {points.map((p, i) => (
-              <Point
-                key={p.name}
-                element={p}
-                isSubpoint
-                currentSubpoint={currentPoint && currentSubpoint === i}
-                scroll={this.constructor.scrollToActiveSubpoint}
-              />
-            ))}
+            {points.map((p, i) => {
+              if (p.outsideMenu) return null;
+
+              return (
+                <Point
+                  key={p.name}
+                  element={p}
+                  isSubpoint
+                  currentSubpoint={currentPoint && currentSubpoint === i}
+                  scroll={this.constructor.scrollToActiveSubpoint}
+                />
+              );
+            })}
           </div>
         </ul>
       );
@@ -126,9 +130,9 @@ class Navigation extends React.Component {
           </Link>
           <ul className="navigation-content">
             {navigation.map((n, i) => {
-              if (n.type && n.type === 'hidden') {
-                return null;
-              }
+              if (n.type && n.type === 'hidden') return null;
+              if (n.outsideMenu) return null;
+
               return (
                 <Point
                   key={n.name}

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Portfolio from './portfolio';
+
 import { homePageWorks } from '../main.config';
+
+import Portfolio from './portfolio';
 
 
 const Projects = ({ minimize }) => (

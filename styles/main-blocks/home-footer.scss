@@ -1,6 +1,5 @@
 .block-footer {
   background-color: #12233D;
-  
   .home-footer {
     display: flex;
     padding: 96px 44px 44px;
@@ -50,8 +49,10 @@
         &.align-right {
           text-align: right;
         }
-        &.title-links .home-footer-list-item:first-child {
-          margin-bottom: 0;
+        &.title-links {
+          .home-footer-list-item {
+            margin-bottom: 8px;
+          }
         }
       }
       .footer-estimation {
@@ -115,6 +116,19 @@
           font-weight: 600;
           margin-bottom: 20px;
         }
+        .home-footer-link {
+          color: #fff;
+          text-decoration: none;
+          transition: .1s;
+          &:hover {
+            text-decoration: underline;
+            color: #DE4F4F;
+            opacity: .8;
+          }
+          &:active {
+            color: #D62C2C;
+          }
+        }
       }
     }
     .horizontal-divider {
@@ -137,10 +151,21 @@
           color: #87919e;
           min-width: 50px;
         }
-        .slide-title {
+        .slide-link {
           font-weight: 600;
           line-height: 1.8;
+          color: #fff;
           margin: 0 32px;
+          font-size: 14px;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+            color: #DE4F4F;
+          }
+          &:active {
+            color: #D62C2C;
+          }
         }
       }
     }
@@ -169,31 +194,47 @@
       align-items: center;
       .social-icons {
         li {
+          margin: 0 5px;
           a {
             display: block;
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             background-size: 100%;
             margin: 0 0 10px;
           }
           &.soc-1 a {
             background: url('/static/images/svg/home/facebook-log.svg') no-repeat;
-            color: red;
+            &:hover {
+              background: url('/static/images/svg/soc-i-1.svg') no-repeat;
+            }
+            
           }
           &.soc-2 a {
             background: url('/static/images/svg/home/linkedin-button.svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-2.svg') no-repeat;
+            }
           }
           &.soc-3 a {
             background: url('/static/images/svg/home/github-logo (1).svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-3.svg') no-repeat;
+            }
           }
           &.soc-5 a {
             background: url('/static/images/svg/home/twitter.svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-5.svg') no-repeat;
+            }
           }
           &.soc-6 {
             display: none;
           }
           &.soc-instagram a {
             background: url('/static/images/svg/home/instagram-logo(2).svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-instagram.svg') no-repeat;
+            }
           }
         }
       }
@@ -202,6 +243,7 @@
           color: #fff;
           text-decoration: none;
           margin-right: 30px;
+          font-size: 14px;
           &:hover {
             color: #E3621D;
           }

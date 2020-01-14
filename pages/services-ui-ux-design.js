@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import React from 'react';
 
 import Layout from '../components/layout/main';
@@ -121,7 +123,11 @@ const ServicesUiUxDesign = () => {
     Our UX UI designers are interested in getting ahead with your project as soon as possible.
     Each wasted day is a wasted opportunity. Along with our expert Project Managers,
     they will help you&nbsp;
-    <a href="/blog/how-to-choose-your-optimal-development-methodology" target="_blank">choose the optimal development methodology</a>
+    <Link href="/blog/how-to-choose-your-optimal-development-methodology">
+      <a target="_blank">
+        choose the optimal development methodology
+      </a>
+    </Link>
     . Your project will be launched in a matter of weeks.
   </>,
     },
@@ -131,7 +137,9 @@ const ServicesUiUxDesign = () => {
   <>
     Our design team creates elegant, simple, and responsive web interfaces and mobile app designs,
     which correspond to the latest tendencies in the market. Check our&nbsp;
-    <a href="/portfolio" target="_blank">case studies</a>
+    <Link href="/portfolio">
+      <a target="_blank">case studies</a>
+    </Link>
     &nbsp;to see our web design services yourself! If needed, our UX UI designers may also conduct
     a design workshop or offer consultation about graphic design services and design process.
   </>,
@@ -141,7 +149,9 @@ const ServicesUiUxDesign = () => {
       desc:
   <>
     We understand how important your&nbsp;
-    <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">data security</a>
+    <Link href="/blog/1543388400000-your-data-is-safe-in-ukraine">
+      <a target="_blank">data security</a>
+    </Link>
     &nbsp;is to you and we are ready to ensure it at all stages of project development. We will take
     all the necessary physical, technical, and legal measures to protect your data. Sign
     a non-disclosure agreement with us and be sure that it stays safe.
@@ -202,7 +212,11 @@ const ServicesUiUxDesign = () => {
                     <img style={{ height: '70px', alignSelf: 'flex-start' }} src={icon} alt={title} />
                     <figcaption className="mobile-development-figcaption">
                       {
-                        href ? <a href={href}>{title}</a> : title
+                        href ? (
+                          <Link href={href}>
+                            <a>{title}</a>
+                          </Link>
+                        ) : title
                       }
                     </figcaption>
                   </figure>
@@ -258,7 +272,9 @@ const ServicesUiUxDesign = () => {
               <ul>
                 <li>Evaluate the result</li>
                 <li>
-                  <a href="/blog/the-value-of-user-testing" target="_blank">Test usability</a>
+                  <Link href="/blog/the-value-of-user-testing">
+                    <a target="_blank">Test usability</a>
+                  </Link>
                 </li>
                 <li>Compile reports</li>
               </ul>
@@ -331,7 +347,7 @@ const ServicesUiUxDesign = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some of the cloud applications that we have developed:</p>
-          <Works works={webDevelopmentWorks} rounded />
+          <Works works={webDevelopmentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

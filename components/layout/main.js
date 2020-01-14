@@ -78,9 +78,6 @@ class Layout extends React.Component {
 
     const contentInnerStyle = { ...style, height: dimensions.height };
 
-    if (noMenu) {
-      contentInnerStyle.width = '100vw';
-    }
     if (isLoading) return null; // TODO: set preloader
 
     return (
@@ -93,7 +90,7 @@ class Layout extends React.Component {
             isTablet={dimensions.width < 769}
           />
         )}
-        <div className={classnames('content', { 'nav-open': noMenu || (dimensions.width > 768) })}>
+        <div className="content">
           <div className={classnames('content-inner', className)} style={contentInnerStyle}>
             { children }
           </div>

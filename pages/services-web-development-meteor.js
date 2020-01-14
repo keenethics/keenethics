@@ -265,7 +265,7 @@ const ServicesWebDevelopmentMeteor = () => {
                 : 4 full-stack developers, 1 QA specialist, and 1 Project Manager.
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
           </div>
           <div>
             <p className="text-bold text-center">ComicEnglish</p>
@@ -299,7 +299,7 @@ const ServicesWebDevelopmentMeteor = () => {
                 : 2 full-stack developers.
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
           </div>
           <div>
             <p className="text-bold text-center">Tetrami</p>
@@ -340,7 +340,7 @@ const ServicesWebDevelopmentMeteor = () => {
                 : 3 full-stack developers, 1 QA specialist, and 1 Project Manager.
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['Tetrami'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} />
           </div>
           <div>
             <p className="text-bold text-center">The Check Network</p>
@@ -377,7 +377,7 @@ const ServicesWebDevelopmentMeteor = () => {
                 : 3 full-stack developers, 1 QA specialist.
               </div>
             </div>
-            <Works rounded works={works.filter(({ title }) => ['The Check Network'].includes(title))} />
+            <Works works={works.filter(({ title }) => ['The Check Network'].includes(title))} />
           </div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>

@@ -1,9 +1,10 @@
 import React, { useContext, memo } from 'react';
+import PropTypes from 'prop-types';
 
 import Posts from '../components/blog/posts';
 import PostsContext from '../components/context/posts-context';
 
-const KeenBlog = () => {
+const Blog = ({ minimize }) => {
   const posts = useContext(PostsContext);
 
   return (
@@ -14,10 +15,14 @@ const KeenBlog = () => {
         </div>
       </header>
       <div className="block--content">
-        <Posts posts={posts.slice(-2)} />
+        <Posts posts={posts.slice(0, minimize ? 2 : 3)} />
       </div>
     </div>
   );
 };
 
-export default memo(KeenBlog);
+Blog.propTypes = {
+  minimize: PropTypes.bool.isRequired,
+};
+
+export default memo(Blog);

@@ -123,7 +123,7 @@ const careers = [
 
 const fullCycleMethod = [
   {
-    title: '01   Business Analysi',
+    title: '01   Business Analysis',
     url: 'services-business-analysis',
   },
   {
@@ -132,7 +132,7 @@ const fullCycleMethod = [
   },
   {
     title: '03   Development and Testing',
-    url: 'services-web-development-meteor',
+    url: 'services-development-and-quality-assurance',
   },
   {
     title: '04   Software Deployment',
@@ -263,7 +263,7 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link href="contacts?activeForm=estimate">
+              <Link href="contacts?activeform=estimate">
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -316,7 +316,7 @@ const HomeFooter = ({
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">
-          Latest in Blog
+          <Link href="blog"><a className="home-footer-link">Latest in Blog</a></Link>
           <span className="bell-icon" />
         </div>
         <FooterSlider

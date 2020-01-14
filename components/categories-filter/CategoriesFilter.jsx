@@ -23,8 +23,10 @@ class CategoriesFilter extends React.Component {
     const buttonsWidth = CATEGORY_BUTTON_WIDTH_DESKTOP * categoriesList.length;
 
     // TODO Replace -10 with scroll width
-    newState.sliderWidth = window.innerWidth - leftMenuWidth - 2
-      * containerPadding - rigthButtonsWidth - 10;
+
+    const elem = document.getElementById('filter__list');
+    newState.sliderWidth = !elem ? (window.innerWidth - leftMenuWidth - 2
+      * containerPadding - rigthButtonsWidth) : elem.clientWidth;
 
     if (newState.sliderWidth >= buttonsWidth) {
       newState.arrowsIsHidden = true;
@@ -243,7 +245,7 @@ class CategoriesFilter extends React.Component {
             !isMobile
             && (
               <div className="filter__wrapper">
-                <ul className="filter__list">
+                <ul className="filter__list" id="filter__list">
                   <div
                     className="filter__categories"
                     style={{ left: scroll }}

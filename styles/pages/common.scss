@@ -67,7 +67,14 @@
   }
 
   .bell {
-    transform: translateY(5px);
+    transform: translateY(2px);
+    height: 23px;
+    @media (min-width: $tablet-sm) {
+      height: 26px;
+    }
+    @media (min-width: $desktop-md) {
+      height: 35px;
+    }
   }
 
   @media (min-width: $tablet-sm) {
@@ -219,7 +226,7 @@
     line-height: 16px;
     color: #12233D;
     padding: 4px 0 4px 8px;
-
+    text-transform: uppercase;
     margin-left: auto;
   }
 
@@ -278,5 +285,14 @@
         }
       }
     }
+  }
+}
+
+.invisible-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  :hover {
+    cursor: pointer;
   }
 }

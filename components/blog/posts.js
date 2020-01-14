@@ -10,7 +10,7 @@ const Posts = ({ posts }) => (
         fields: { slug },
       } = post;
 
-      return (<ListItem work={post.fields} key={slug} />);
+      return (<ListItem work={post.fields} key={slug} posts />);
     })}
   </div>
 );

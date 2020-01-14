@@ -232,7 +232,7 @@ const ServicesCloudAppDev = () => {
             value we have built,&nbsp;
             <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer nofollow">seewhat our long-term partner has to say</a>
             .&nbsp;
-            <a href="/contacts?activeForm=estimate">Let us estimate your project</a>
+            <a href="/contacts?activeform=estimate">Let us estimate your project</a>
             , and youwill see whether the business value is worth the effort.
           </p>
 
@@ -279,7 +279,7 @@ const ServicesCloudAppDev = () => {
         <section>
           <h2>Portfolio</h2>
           <p>These are some of the cloud applications that we have developed:</p>
-          <div><Works works={webDevelopmentWorks} rounded /></div>
+          <div><Works works={webDevelopmentWorks} /></div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

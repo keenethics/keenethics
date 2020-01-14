@@ -57,6 +57,8 @@ export default class Index extends React.Component {
       isTablet: false,
       isTabletL: false,
     };
+
+    this.listener = null;
   }
 
   static async getInitialProps() {
@@ -67,7 +69,7 @@ export default class Index extends React.Component {
 
   componentDidMount() {
     if (typeof window !== 'undefined') {
-      window.addEventListener('resize', ({ target }) => {
+      this.listener = window.addEventListener('resize', ({ target }) => {
         if (target) {
           this.setState({
             isLoading: false,
@@ -84,6 +86,12 @@ export default class Index extends React.Component {
         isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
         isMobile: window.innerWidth <= 480,
       });
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.listener) {
+      window.removeEventListener(this.listener);
     }
   }
 
@@ -114,7 +122,7 @@ export default class Index extends React.Component {
         <TechStack />
         <PostsContext.Provider value={posts}>
           <Blog
-            isTabletL={isTabletL}
+            minimize={isTabletL || isTablet || isMobile}
           />
           <Partners />
           <LetsStart />

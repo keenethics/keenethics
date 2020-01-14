@@ -22,6 +22,7 @@
     text-align: center;
     color: #12233d;
     margin: 0 0 30px;
+    text-transform: capitalize;
 
     &:last-child {
       margin: 0;
@@ -61,10 +62,22 @@
 
   .page__wrapper {
     padding: 0;
+    .portfolio-works {
+      padding-bottom: 75px;
+      .page__item-tags {
+        .page__item-tag {
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   .page__item-figure {
     background: transparent;
+  }
+
+  .page__item-date {
+    text-transform: uppercase;
   }
 
   .filter__list::before {

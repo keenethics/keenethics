@@ -12,6 +12,7 @@
   },
   "rules": {
     "semi": 2,
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-param-reassign": 0,
     "prefer-destructuring": 0,
     "class-methods-use-this": 0,
