@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { times } from 'lodash';
@@ -36,6 +38,14 @@ const LeadersMobile = ({ data }) => {
     };
   }, [gallery]);
 
+  const handleNavClick = (toStep) => {
+    gallery.current.children[0].children[toStep].scrollIntoView({
+      behavior: 'smooth',
+      inline: 'start',
+      block: 'nearest',
+    });
+  };
+
   return (
     <>
       <div className="gallery mobile" ref={gallery}>
@@ -70,6 +80,7 @@ const LeadersMobile = ({ data }) => {
             <li
               key={i}
               className={i <= step ? 'active' : ''}
+              onClick={() => handleNavClick(i)}
             />
           ))
         }
