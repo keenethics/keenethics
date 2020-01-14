@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import RocketHeader from './RocketHeader';
+import TextHeader from './TextHeader';
 
-export default () => {
+const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback }) => {
   const [value, setValue] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   function handleClick() {
     const emailRegexp = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
@@ -15,7 +18,7 @@ export default () => {
     if (isError) return;
     setSuccess(true);
     setValue('');
-
+    if (successCallback) successCallback();
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/blog/subscribe', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -36,15 +39,26 @@ export default () => {
     if (error) setError(false);
     if (success) setSuccess(false);
   }
-
+  let subHeaderText = '';
+  if (!error && !success) {
+    subHeaderText = (
+      <>
+        Get the latest JavaScript insights from the company that knows your business and your industry. <br />
+        Subscribe to our bimonthly newsletter.
+      </>
+    );
+  } else if (success) {
+    subHeaderText = 'You have successfully subscribed to our digest!';
+  } else {
+    subHeaderText = 'Oops, there has been a mistake. Please, try again.';
+  }
+  const Header = useRocketHeader ? RocketHeader : TextHeader;
   return (
     <div className="subscribe-panel">
-      {success ? (
-        <h4 className="green-text-flash">Thank you for subscribing!</h4>
-      ) : (
-        <h4>Don&apos;t miss updates from us!</h4>
-      )}
-      {success ? <p>&nbsp;</p> : <p>Subscribe to our bimonthly newsletter.</p>}
+      <Header success={success} error={error} />
+      <p className="subscribe-panel-text">
+        {subHeaderText}
+      </p>
       <div className="subscribe-panel-input-group">
         <input
           onChange={handleChange}
@@ -63,3 +77,14 @@ export default () => {
     </div>
   );
 };
+
+NewsletterSubscriptionForm.propTypes = {
+  useRocketHeader: PropTypes.bool,
+  successCallback: PropTypes.func,
+};
+
+NewsletterSubscriptionForm.defaultProps = {
+  useRocketHeader: false,
+};
+
+export default NewsletterSubscriptionForm;

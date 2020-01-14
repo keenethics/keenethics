@@ -621,27 +621,86 @@ div.person {
 
 .subscribe-panel {
   margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 
   @include breakpoint(md) {
     padding: 0 130px;
   }
-
+  &-container {
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:  white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    flex-direction: column;
+    padding: 22px;
+    &.show {
+      display: flex;
+    }
+  }
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0px;
+  }
+  &-rocket {
+    height: 132px;
+    @media (min-width: $desktop-md) {
+      height: 208px;
+    }
+    @media (min-width: $desktop-lg) {
+      height: 252px;
+    }
+  }
+  &-close {
+    position: fixed;
+    display: block;
+    top: 5%;
+    right: 7%;
+  }
+  &-thanks-button {
+    margin-top: 48px;
+    color: rgba(45, 67, 82, 0.8);
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+  }
   h4 {
     color: #df544d;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin: 14px 0 7px;
+    margin: 82px 0 7px;
+    span.black {
+      color: black;
+    }
   }
   p {
-    color: #84827f;
-    font-size: 14px;
+    font-family: Raleway;
+    font-size: 18px;
+    line-height: 28px;
+    color: #2D4352;
     font-weight: 400;
-    line-height: 1;
     letter-spacing: 0.56px;
     text-align: center;
-    margin-bottom: 16px;
+    margin: 24px 22px 16px 22px;
+    @media (min-width: $desktop-md) {
+      margin-top: 48px;
+    }
   }
   &-input-group {
     display: flex;
@@ -657,18 +716,23 @@ div.person {
       background-color: #ebebeb;
       flex-grow: 1;
       border-radius: 35px 0 0 35px;
+      margin-top: 33px;
       margin-right: -40px;
       z-index: 0;
-
+      outline: none;
       color: #84827f;
       font-weight: 400;
       line-height: 1;
       padding: 10px 40px 10px 28px;
       font-size: 16px;
-
+      width: 400px;
+      @media (min-width: $desktop-md) {
+        margin-top: 48px;
+        width: 500px;
+      }
       @include breakpoint(mobile) {
         width: 100%;
-        margin: 0;
+        margin: 33px 0px 0px 0px;
         border-radius: 35px;
         padding: 10px 28px;
       }
@@ -689,7 +753,10 @@ div.person {
     button.btn {
       z-index: 0;
       padding: 16px 45px;
-
+      margin-top: 33px;
+      @media (min-width: $desktop-md) {
+        margin-top: 48px;
+      }
       @include breakpoint(mobile) {
         margin: 10px 0 0 0;
         flex-grow: 1;
@@ -783,4 +850,8 @@ button.btn {
 
 i {
   font-style: italic;
+}
+
+.subscribe-panel {
+  
 }
