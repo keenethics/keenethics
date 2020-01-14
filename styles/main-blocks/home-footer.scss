@@ -169,31 +169,47 @@
       align-items: center;
       .social-icons {
         li {
+          margin: 0 5px;
           a {
             display: block;
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             background-size: 100%;
             margin: 0 0 10px;
           }
           &.soc-1 a {
             background: url('/static/images/svg/home/facebook-log.svg') no-repeat;
-            color: red;
+            &:hover {
+              background: url('/static/images/svg/soc-i-1.svg') no-repeat;
+            }
+            
           }
           &.soc-2 a {
             background: url('/static/images/svg/home/linkedin-button.svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-2.svg') no-repeat;
+            }
           }
           &.soc-3 a {
             background: url('/static/images/svg/home/github-logo (1).svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-3.svg') no-repeat;
+            }
           }
           &.soc-5 a {
             background: url('/static/images/svg/home/twitter.svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-i-5.svg') no-repeat;
+            }
           }
           &.soc-6 {
             display: none;
           }
           &.soc-instagram a {
             background: url('/static/images/svg/home/instagram-logo(2).svg') no-repeat;
+            &:hover {
+              background: url('/static/images/svg/soc-instagram.svg') no-repeat;
+            }
           }
         }
       }

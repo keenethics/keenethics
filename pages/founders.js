@@ -21,7 +21,7 @@ const Founders = () => (
         </Link>
       </div>
       <div className="founders-img-container">
-        <img className="founders-img" src="static/images/founders.jpg" alt="founders" />
+        <img className="founders-img" src="static/images/D3X_3157 1 (2) 2.jpg" alt="founders" />
       </div>
     </div>
   </div>

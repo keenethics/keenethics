@@ -46,7 +46,7 @@ const OurMethods = () => {
     <div className="block block-our-methods" id={section} ref={ref}>
       <header className="block--header">
         <div className="block--header-title">
-          Our methods
+          Our Full-Cycle Method
         </div>
         <div className="block--header-description">
           We guide businesses through every stage of software development while
