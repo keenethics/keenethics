@@ -152,7 +152,7 @@ const MaintenanceAndSupport = () => {
             These are some apps and websites that we provide application maintenance
             and support services with:
           </p>
-          <Works works={webDevelopmentWorks} rounded />
+          <Works works={webDevelopmentWorks} />
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
         <CallToActionButton

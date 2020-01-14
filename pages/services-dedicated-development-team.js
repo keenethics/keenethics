@@ -138,7 +138,7 @@ class ServicesOutstaffing extends React.Component {
               These are some of the applications and websites that we have developed as a
               web application development company:
             </p>
-            <Works works={webDevelopmentWorks} rounded />
+            <Works works={webDevelopmentWorks} />
           </section>
           <section>
             <h2>Why Dedicated Development Team Services?</h2>
@@ -211,7 +211,7 @@ class ServicesOutstaffing extends React.Component {
                 <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link>, <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and <Link href="/tech-front-end-react"><a>React</a></Link></div>
                 <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Kanban</a></Link></div>
               </div>
-              <Works rounded works={works.filter(({ title }) => ['WorldLabs'].includes(title))} />
+              <Works works={works.filter(({ title }) => ['WorldLabs'].includes(title))} />
             </div>
             <div>
               <h3>My Grass Growth</h3>
@@ -221,7 +221,7 @@ class ServicesOutstaffing extends React.Component {
                 <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and Blaze</div>
                 <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Scrum</a></Link></div>
               </div>
-              <Works rounded works={works.filter(({ title }) => ['My Grass Growth'].includes(title))} />
+              <Works works={works.filter(({ title }) => ['My Grass Growth'].includes(title))} />
             </div>
             <div>
               <h3>OneRemission</h3>
@@ -231,7 +231,7 @@ class ServicesOutstaffing extends React.Component {
                 <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link>, Wit.ai, <Link href="/services-web-development-chatbot"><a>BotPress</a></Link>, WebSocket</div>
                 <div style={{ marginBottom: '5px' }}><b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Kanban</a></Link></div>
               </div>
-              <Works rounded works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
+              <Works works={works.filter(({ title }) => ['OneRemission'].includes(title))} />
             </div>
           </section>
         </div>

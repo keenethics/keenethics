@@ -179,7 +179,7 @@ class ServicesWebDevelopment extends React.Component {
               These are some of the applications and websites that we have developed as a
               web application development company:
             </p>
-            <Works works={webDevelopmentWorks} rounded />
+            <Works works={webDevelopmentWorks} />
           </section>
           <section>
             <h2>Why Custom Web Application Development Services?</h2>
