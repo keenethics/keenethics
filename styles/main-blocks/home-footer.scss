@@ -1,6 +1,5 @@
 .block-footer {
   background-color: #12233D;
-  
   .home-footer {
     display: flex;
     padding: 96px 44px 44px;
@@ -115,6 +114,19 @@
           font-weight: 600;
           margin-bottom: 20px;
         }
+        .home-footer-link {
+          color: #fff;
+          text-decoration: none;
+          transition: .1s;
+          &:hover {
+            text-decoration: underline;
+            color: #DE4F4F;
+            opacity: .8;
+          }
+          &:active {
+            color: #D62C2C;
+          }
+        }
       }
     }
     .horizontal-divider {
@@ -137,10 +149,21 @@
           color: #87919e;
           min-width: 50px;
         }
-        .slide-title {
+        .slide-link {
           font-weight: 600;
           line-height: 1.8;
+          color: #fff;
           margin: 0 32px;
+          font-size: 14px;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+            color: #DE4F4F;
+          }
+          &:active {
+            color: #D62C2C;
+          }
         }
       }
     }
@@ -218,6 +241,7 @@
           color: #fff;
           text-decoration: none;
           margin-right: 30px;
+          font-size: 14px;
           &:hover {
             color: #E3621D;
           }
