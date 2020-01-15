@@ -100,7 +100,7 @@
       .gallery-inner {
         display: flex;
         flex-flow: row nowrap;
-        width: calc(170px * 5  + 30px * 4);
+        width: calc(170px * 6  + 30px * 5);
         margin-top: 45px;
 
         @media (min-width: $tablet-lg) {

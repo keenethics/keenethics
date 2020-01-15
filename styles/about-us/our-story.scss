@@ -105,6 +105,10 @@
         font-weight: bold;
       }
 
+      &:focus {
+        outline: none;
+      }
+
       @media (min-width: $tablet-lg) {
         width: 140px !important;
         margin-right: 0 !important;
