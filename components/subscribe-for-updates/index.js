@@ -43,7 +43,10 @@ const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback }) => {
   if (!error && !success) {
     subHeaderText = (
       <>
-        Get the latest JavaScript insights from the company that knows your business and your industry. <br />
+        Get the latest JavaScript insights from the company that knows your business and your
+        industry.
+        {' '}
+        <br />
         Subscribe to our bimonthly newsletter.
       </>
     );
@@ -85,6 +88,7 @@ NewsletterSubscriptionForm.propTypes = {
 
 NewsletterSubscriptionForm.defaultProps = {
   useRocketHeader: false,
+  successCallback: () => {},
 };
 
 export default NewsletterSubscriptionForm;

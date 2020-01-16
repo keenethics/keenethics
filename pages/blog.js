@@ -99,7 +99,7 @@ class Blog extends React.Component {
   closeSubscribeModal = () => {
     this.setState({
       isSubscribeModalOpen: false,
-    })
+    });
   }
 
   render() {
@@ -114,7 +114,11 @@ class Blog extends React.Component {
               <h1 className="page__title">
                 <em>keen</em>
                 &nbsp;blog&nbsp;
-                <button className="invisible-button" onClick={this.openSubscribeModal}>
+                <button
+                  className="invisible-button"
+                  onClick={this.openSubscribeModal}
+                  type="button"
+                >
                   <BellIcon />
                 </button>
                 <br />

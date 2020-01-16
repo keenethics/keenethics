@@ -29,12 +29,32 @@ const FooterSlider = ({
   isTablet,
 }) => {
   const posts = React.useContext(PostsContext) || [];
+
   let slidesToShow = 3;
   if (isTablet) slidesToShow = 2;
   if (isMobile) slidesToShow = 1;
+
   const settings = {
     className: 'footer-slider',
     slidesToShow,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
 
   return (

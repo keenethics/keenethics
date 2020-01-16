@@ -9,24 +9,26 @@ const RocketHeader = ({ success, error }) => {
     return (
       <>
         <RocketBlueSVG />
-        <h4>KEEN <span className="black">BLOG</span></h4>
+        <h4>
+KEEN
+          <span className="black">BLOG</span>
+        </h4>
       </>
     );
-  } else if (success) {
+  } if (success) {
     return (
       <>
         <RocketRedSVG />
         <h4>SUCCESSFULLY</h4>
       </>
-    )
-  } else {
-    return (
-      <>
-        <RocketFailSVG />
-        <h4>SOMETHING WENT WRONG</h4>
-      </>
-    )
+    );
   }
+  return (
+    <>
+      <RocketFailSVG />
+      <h4>SOMETHING WENT WRONG</h4>
+    </>
+  );
 };
 
 RocketHeader.propTypes = {
