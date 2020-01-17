@@ -85,17 +85,21 @@ const Industries = () => {
             </div>
             <div className="industries-small">
               <div className="industries--small-item">
-                <div className="industries--small-item-logo">
-                  <img
-                    src="/static/main-blocks/industries/small/icon-retail.svg"
-                    width="32px"
-                    height="27px"
-                    alt="Retail industries"
-                  />
-                </div>
-                <div className="industries--small-item-title">
-                  Retail
-                </div>
+                <Link href="/services-retail-software-development">
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <img
+                        src="/static/main-blocks/industries/small/icon-retail.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Retail industries"
+                      />
+                    </div>
+                    <div className="industries--small-item-title link">
+                      Retail
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
