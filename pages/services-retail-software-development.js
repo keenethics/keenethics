@@ -13,34 +13,26 @@ const ServicesWebDevelopmentE = () => (
     <ContentNavigation image="web_development" points={servicesWebDevelopmentTabs()} />
     <div className="content-block">
       <section>
-        <h1 className="text-center">Ecommerce Development Services</h1>
+        <h1 className="text-center">Retail Software Development Services</h1>
         <p className="text-center text-italic">
-          Solving software challenges associated with medical responsibility, patient ethics, high
+          Solving retail challenges associated with medical responsibility, patient ethics, high
           costs, technological advancement, and holistic approach
         </p>
         <CallToActionButton />
       </section>
       <section>
-        <h2>Ecommerce Industry</h2>
+        <h2>Retail Industry</h2>
         <p>
           Life is getting busier and faster. People have neither time nor opportunity to
           spend their time shopping for clothes, groceries, electronics, cosmetics, or
           furniture. It is much easier to order food online and get it delivered right
           to your door. Booking a hotel suite and buying tickets for a holiday trip also
-          went 100 percent online.&nbsp;
-          <a
-            href="https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            The size of the global ecommerce market
-          </a>
-          &nbsp;has almost doubled from $1,845 billion in 2016 to $3,453 billion in 2019. By 2021,
-          it is expected to reach $4,878 billion. This thousand-billion-dollar industry
-          provides numerous business opportunities for those who choose to enter it.
+          went 100 percent online.In 2023, the industry is about to reach $30 trillion
+          in global revenue, compared to $23 trillion in 2017. This thousands-billion-dollar
+          industry provides numerous business opportunities for those who choose to enter it.
         </p>
         <p>
-        There are 6 types of ecommerce:
+        There are 6 types of retail software solutions:
           <br />
           <b>#1 B2B</b>
             &nbsp;– Business-to-Business
@@ -63,7 +55,7 @@ const ServicesWebDevelopmentE = () => (
         </p>
       </section>
       <section>
-        <h2>Challenges in Ecommerce Development Services</h2>
+        <h2>Challenges in Retail Development Services</h2>
         <ul className="challenges-list">
           <li className="challenges-item">
             <h3>
@@ -114,18 +106,18 @@ const ServicesWebDevelopmentE = () => (
               Once you open an online store, how do you make sure that your business does
               not lose the personal touch with the target market? In other words,&nbsp;
               <strong>
-                how can you reach your customers when running a digital ecommerce platform?
+                how can you reach your customers when running a digital retail platform?
               </strong>
             </p>
           </li>
           <li className="challenges-item">
             <ul>
               <li>
-                Hire an ecommerce development team to build a robust product customized
+                Hire a retail software development team to build a robust product customized
                 for the needs of your business.
               </li>
               <li>
-                Align your ecommerce platform with your internal sales channels.
+                Align your retail software solutions with your internal sales channels.
               </li>
               <li>
                 Inform your loyal customers about the transition of your business into the online
@@ -144,7 +136,7 @@ const ServicesWebDevelopmentE = () => (
               may be hard. Existing methods differ in terms of safety features, costs,
               opportunities, localization, and convenience.
               <br />
-              <strong>What is the best payment model to choose?</strong>
+              <strong>What is the best payment model to choose for your retail business?</strong>
             </p>
           </li>
           <li className="challenges-item">
@@ -215,13 +207,13 @@ const ServicesWebDevelopmentE = () => (
                 >
                   data security regulations
                 </a>
-                &nbsp;for ecommerce web development services.
+                &nbsp;for retail development.
               </li>
               <li>
                 Choose a reliable payment model.
               </li>
               <li>
-                Integrate your ecommerce platform only with secure social networking websites.
+                Integrate your retail platform only with secure social networking websites.
               </li>
               <li>
                 Let your users, both buyers and sellers, sign a comprehensive privacy agreement.
@@ -286,7 +278,7 @@ const ServicesWebDevelopmentE = () => (
         />
       </section>
       <section>
-        <h2>Custom Ecommerce Development Services We Offer</h2>
+        <h2>Custom Retail Development Services We Offer</h2>
         <ul className="mobile-development-list">
           <li className="mobile-development-item">
             <figure>
@@ -297,7 +289,7 @@ const ServicesWebDevelopmentE = () => (
                 height="100"
               />
               <figcaption className="mobile-development-figcaption">
-                Ecommerce Web Development Services and Design
+                Retail Web Development Services and Design
               </figcaption>
             </figure>
           </li>
@@ -323,7 +315,7 @@ const ServicesWebDevelopmentE = () => (
                 height="100"
               />
               <figcaption className="mobile-development-figcaption">
-                Ecommerce Mobile App Design and Development
+                Retail Mobile App Design and Development
               </figcaption>
             </figure>
           </li>
@@ -401,8 +393,9 @@ const ServicesWebDevelopmentE = () => (
           <p>
             Tetrami is a brand new “deal” shopping project with a unique discounting method,
             where people can find the product or service they need and try to purchase it with
-            a considerable discount. While Tetrami offers delivery only to the USA addresses,
-            it does accept orders from other countries if users organize shipping on their own.
+            a considerable discount. While this retail business offers delivery only to the
+            USA addresses, it does accept orders from other countries if users organize shipping on
+            their own.
           </p>
           <div style={{ marginBottom: '5px' }}>
             <b>Platform</b>
@@ -439,7 +432,7 @@ const ServicesWebDevelopmentE = () => (
           <h3>ParkQX</h3>
           <p>
             The goal of ParkQX is to make parking routine easy, hassle-free,
-            climate neutral, and convenient. It helps drivers (Renters) find,
+            climate neutral, and convenient. This e-commerce software helps drivers (Renters) find,
             book, and pay for a parking spot with their credit card in a few simple taps.
             At the same time, it lets parking spot owners (Lenders) turn their unused
             parking space into money.
@@ -477,7 +470,7 @@ const ServicesWebDevelopmentE = () => (
       <section>
         <h2>Why KeenEthics?</h2>
         <p>
-          As an ecommerce website development company, we are devoted to the needs of
+          As a retail website development company, we are devoted to the needs of
           your business and the best interests of your users.
         </p>
 
@@ -486,9 +479,9 @@ const ServicesWebDevelopmentE = () => (
           &nbsp;Empowering growth
         </h3>
         <p>
-          We help companies requesting ecommerce website development services grow. We develop
-          customized solutions to help them retain their customers. Besides, we offer
-          SEO-optimization services for their websites.
+          We help companies requesting retail software solutions grow. We develop
+          customized e-commerce software solutions to help them retain their customers.
+          Besides, we offer SEO-optimization services for their websites.
         </p>
 
         <h3 className="red-italic-title">
@@ -496,7 +489,7 @@ const ServicesWebDevelopmentE = () => (
           &nbsp;Building value
         </h3>
         <p>
-          We believe in business ethics and transparency. As an ecommerce development company,
+          We believe in business ethics and transparency. As a retail software development company,
           we help our partners fully comply with ethical guidelines and data security
           regulations to ensure the best experience for their customers.
         </p>
@@ -508,7 +501,7 @@ const ServicesWebDevelopmentE = () => (
         <p>
           We are willing to start working on your project as fast as possible. Thus, we
           promptly provide you with a team of full-stack software developers, QA specialists,
-          and UI/UX designers. Led by a dedicated PM, they will offer you the best ecommerce
+          and UI/UX designers. Led by a dedicated PM, they will offer you the best retail
           development services.
         </p>
 
@@ -517,7 +510,7 @@ const ServicesWebDevelopmentE = () => (
           &nbsp;Bringing tech expertise
         </h3>
         <p>
-          Our highly skilled ecommerce development team is ready to offer&nbsp;
+          Our highly skilled retail software development team is ready to offer&nbsp;
           <a href="/services-mobile-development" target="_blank">mobile app development</a>
           &nbsp;and&nbsp;
           <a href="/services-web-development" target="_blank">web platform development</a>
