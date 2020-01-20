@@ -841,6 +841,7 @@ body .orange-btn {
     z-index: 600;
     display: flex;
     margin-bottom: 60px;
+
     @include for-tablet {
       display: none;
     }
@@ -1531,8 +1532,9 @@ body .orange-btn {
 
 @media (max-width: 1024px) {
   .home-page {
+
     .social-icons.home-page-social {
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
     .home-page-content-titles .home-page-large-title {
       font-size: 34px;
