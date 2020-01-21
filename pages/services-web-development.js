@@ -113,8 +113,6 @@ class ServicesWebDevelopment extends React.Component {
   constructor() {
     super();
     this.state = {
-      isMobile: false,
-      isTablet: false,
       posts: [],
     };
   }
@@ -127,27 +125,9 @@ class ServicesWebDevelopment extends React.Component {
         this.setState({ posts: blogPosts.items });
       }
     }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', ({ target }) => {
-        if (target) {
-          this.setState({
-            isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
-            isMobile: target.innerWidth <= 480,
-          });
-        }
-      });
-
-      this.setState({
-        isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
-        isMobile: window.innerWidth <= 480,
-      });
-    }
   }
 
   render() {
-    const { isMobile, isTablet, posts } = this.state;
-
     return (
       <Layout>
         <ContentNavigation />
