@@ -50,7 +50,7 @@ const getDataFromProperty = (item) => {
   throw new Error('Wrong item object supplied.');
 };
 
-const ListItem = ({ work, posts }) => {
+const ListItem = ({ work }) => {
   const {
     title,
     // description,
@@ -62,7 +62,7 @@ const ListItem = ({ work, posts }) => {
   } = getDataFromProperty(work);
 
   return (
-    <div className={classnames('page__item', { '-rounded': !posts })}>
+    <div className={classnames('page__item')}>
       <Link href={url} as={asUrl}>
         <a className="page__item-link">
           <figure className="page__item-figure">
@@ -109,10 +109,6 @@ ListItem.propTypes = {
     category: PropTypes.object,
     slug: PropTypes.string,
   }).isRequired,
-  posts: PropTypes.bool,
 };
 
-ListItem.defaultProps = {
-  posts: false,
-};
 export default ListItem;

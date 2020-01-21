@@ -5,7 +5,7 @@ import ListItem from '../content/ListItem';
 
 const Works = ({ works }) => (
   <div className="portfolio-works">
-    <div className="page__list -rounded">
+    <div className="page__list">
       {works.map((work) => (
         <ListItem
           key={work.href}
