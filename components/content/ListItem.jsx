@@ -50,7 +50,7 @@ const getDataFromProperty = (item) => {
   throw new Error('Wrong item object supplied.');
 };
 
-const ListItem = ({ work, posts }) => {
+const ListItem = ({ work }) => {
   const {
     title,
     // description,
@@ -62,7 +62,7 @@ const ListItem = ({ work, posts }) => {
   } = getDataFromProperty(work);
 
   return (
-    <div className={classnames('page__item', { '-rounded': !posts })}>
+    <div className={classnames('page__item')}>
       <Link href={url} as={asUrl}>
         <a className="page__item-link">
           <figure className="page__item-figure">
@@ -70,6 +70,7 @@ const ListItem = ({ work, posts }) => {
               <img src={imgUrl} alt={title} className="page__item-img" />
             </div>
             <figcaption className="page__item-figcaption">
+              {!publishDate && <h3 className="page__item-title">{title}</h3>}
               <div className="page__item-figcaption-heading">
                 <ul className="page__item-tags">
                   {
@@ -92,7 +93,7 @@ const ListItem = ({ work, posts }) => {
                   )
                 }
               </div>
-              <h3 className="page__item-title">{title}</h3>
+              {publishDate && <h3 className="page__item-title">{title}</h3>}
             </figcaption>
           </figure>
         </a>
@@ -109,10 +110,6 @@ ListItem.propTypes = {
     category: PropTypes.object,
     slug: PropTypes.string,
   }).isRequired,
-  posts: PropTypes.bool,
 };
 
-ListItem.defaultProps = {
-  posts: false,
-};
 export default ListItem;
