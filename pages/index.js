@@ -12,7 +12,6 @@ import Founders from './founders';
 import Projects from './home-page-projects';
 import Blog from './home-page-blog';
 import LetsStart from './home-page-lets-start';
-import HomeFooter from './home-page-footer';
 import { getPostsList } from '../lib/contentful';
 import PostsContext from '../components/context/posts-context';
 
@@ -107,31 +106,31 @@ export default class Index extends React.Component {
     if (isLoading) return null;
 
     return (
-      <Layout>
-        <JsonLd data={companyData} />
-        <Main />
-        <OurServices
-          isMobile={isMobile}
-        />
-        <OurMethods />
-        <Industries />
-        <Founders />
-        <Projects
-          minimize={isTabletL || isTablet || isMobile}
-        />
-        <TechStack />
-        <PostsContext.Provider value={posts}>
+      <PostsContext.Provider value={posts}>
+        <Layout>
+          <JsonLd data={companyData} />
+          <Main />
+          <OurServices
+            isMobile={isMobile}
+          />
+          <OurMethods />
+          <Industries />
+          <Founders />
+          <Projects
+            minimize={isTabletL || isTablet || isMobile}
+          />
+          <TechStack />
           <Blog
             minimize={isTabletL || isTablet || isMobile}
           />
           <Partners />
           <LetsStart />
-          <HomeFooter
+          {/* <HomeFooter
             isMobile={isMobile}
             isTablet={isTablet}
-          />
-        </PostsContext.Provider>
-      </Layout>
+          /> */}
+        </Layout>
+      </PostsContext.Provider>
     );
   }
 }

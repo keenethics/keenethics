@@ -306,7 +306,7 @@ const Contacts = ({ router }) => {
   else if (selectedCountry === 'US') person = JeanA;
   else person = MaxS;
   return (
-    <Layout>
+    <Layout noFooter>
       <div className="contacts-page" id="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),

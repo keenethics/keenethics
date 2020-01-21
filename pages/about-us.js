@@ -9,7 +9,6 @@ import LetsStart from './home-page-lets-start';
 import MeetOurLeaders from '../components/about-us/MeetOurLeaders';
 import { getPostsList } from '../lib/contentful';
 import PostsContext from '../components/context/posts-context';
-import HomeFooter from './home-page-footer';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AboutUs extends React.Component {
@@ -87,12 +86,6 @@ class AboutUs extends React.Component {
           <OurTeam />
           <LetsStart />
         </section>
-        <PostsContext.Provider value={posts}>
-          <HomeFooter
-            isMobile={isMobile}
-            isTablet={isTablet}
-          />
-        </PostsContext.Provider>
       </Layout>
     );
   }

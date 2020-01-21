@@ -11,9 +11,7 @@ import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 import LetsStart from './home-page-lets-start';
-import Footer from './home-page-footer';
 import { getPostsList } from '../lib/contentful';
-import PostsContext from '../components/context/posts-context';
 
 import { works } from '../main.config';
 
@@ -409,12 +407,6 @@ class ServicesWebDevelopment extends React.Component {
           </section>
         </div>
         <LetsStart />
-        <PostsContext.Provider value={posts}>
-          <Footer
-            isMobile={isMobile}
-            isTablet={isTablet}
-          />
-        </PostsContext.Provider>
       </Layout>
     );
   }

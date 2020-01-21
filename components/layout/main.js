@@ -9,6 +9,8 @@ import classnames from 'classnames';
 import '../../styles/main.scss';
 
 import Head from './head';
+import Footer from './footer';
+
 import Navigation from './navigation/main';
 
 if (typeof window !== 'undefined' && !window.Promise) {
@@ -70,6 +72,7 @@ class Layout extends React.Component {
       router,
       meta,
       noMenu,
+      noFooter,
       className,
       style,
     } = this.props;
@@ -79,6 +82,9 @@ class Layout extends React.Component {
     const contentInnerStyle = { ...style, height: dimensions.height };
 
     if (isLoading) return null; // TODO: set preloader
+
+    const isTablet = dimensions.width <= 768 && dimensions.width > 480;
+    const isMobile = dimensions.width <= 480;
 
     return (
       <div className="layout">
@@ -92,7 +98,13 @@ class Layout extends React.Component {
         )}
         <div className="content">
           <div className={classnames('content-inner', className)} style={contentInnerStyle}>
-            { children }
+            {children}
+            {noFooter || (
+              <Footer
+                isMobile={isMobile}
+                isTablet={isTablet}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -108,6 +120,7 @@ Layout.propTypes = {
   router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
+  noFooter: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,
 };
@@ -117,6 +130,7 @@ Layout.defaultProps = {
   router: {},
   meta: {},
   noMenu: false,
+  noFooter: false,
   className: '',
   style: {},
 };
