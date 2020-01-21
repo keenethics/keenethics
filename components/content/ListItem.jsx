@@ -70,6 +70,7 @@ const ListItem = ({ work }) => {
               <img src={imgUrl} alt={title} className="page__item-img" />
             </div>
             <figcaption className="page__item-figcaption">
+              {!publishDate && <h3 className="page__item-title">{title}</h3>}
               <div className="page__item-figcaption-heading">
                 <ul className="page__item-tags">
                   {
@@ -92,7 +93,7 @@ const ListItem = ({ work }) => {
                   )
                 }
               </div>
-              <h3 className="page__item-title">{title}</h3>
+              {publishDate && <h3 className="page__item-title">{title}</h3>}
             </figcaption>
           </figure>
         </a>
