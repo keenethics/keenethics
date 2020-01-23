@@ -3,6 +3,8 @@ const path = require('path');
 const dotenv = require('dotenv-safe');
 require('isomorphic-fetch');
 
+const Sentry = require('@sentry/node');
+
 const { NODE_ENV, ENV_PATH } = process.env;
 const envDefaultPath = path.resolve(__dirname, '../.env');
 const pathToEnvFile = (fs.existsSync(ENV_PATH) && ENV_PATH) || (fs.existsSync(envDefaultPath)
@@ -23,7 +25,6 @@ const formatValidation = require('string-format-validation');
 const geoip = require('geoip-lite');
 const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
-const { postsDatePair } = require('./postsort.config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const checkAttachment = require('./attachment-validator');
@@ -35,6 +36,10 @@ const DEFAULT_PORT = 3000;
 const app = next({ dev });
 
 const handle = app.getRequestHandler();
+
+if (!dev) {
+  Sentry.init({ dsn: 'https://531a4ece3b5840049dd4e9d86db81ac5@sentry.io/1889982' });
+}
 
 const sendContactToHubSpot = (hubSpotParameters) => {
   const fields = Object.keys(hubSpotParameters)
@@ -399,99 +404,6 @@ app.prepare().then(() => {
         status: 'Message sent',
       });
     });
-  });
-  server.get('/api/posts', (req, res) => {
-    const sortedPosts = postsDatePair.sort((a, b) => b.createdAt - a.createdAt);
-
-    const result = sortedPosts
-      .map((file) => {
-        const fileStat = fs.existsSync(path.resolve(__dirname, `../posts/${file.filename}`));
-        if (!fileStat) { console.error(`File ${file.filename} does not exist!`); return null; }
-        const text = fs.readFileSync(path.resolve(__dirname, `../posts/${file.filename}`), 'utf8');
-        const author = (/Author: (.*?)\n/g).exec(text)[1];
-        const title = (/Title: (.*?)\n/g).exec(text)[1];
-        const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-        const categoriesString = (/Categories: (.*?)\n/g).exec(text)[1];
-        const categories = categoriesString.split(', ');
-        let image = (/Preview image: (.*?)\n/g).exec(text);
-        const date = file.createdAt;
-
-        if (image && image[1]) {
-          image = image[1];
-        } else {
-          image = '/static/images/astronauts.jpg';
-        }
-
-        return {
-          title,
-          subtitle,
-          author,
-          href: file.filename.slice(0, -3),
-          image,
-          date,
-          categories,
-        };
-      })
-      .filter((v) => v !== null);
-    res.send(result);
-  });
-  server.get('/api/posts/:name', (req, res) => {
-    if (req.params && req.params.name) {
-      fs.stat(path.resolve(__dirname, `../posts/${req.params.name}.md`), (err) => {
-        if (err == null) {
-          const filename = `${req.params.name}.md`;
-          const sortedPosts = postsDatePair
-            .sort((a, b) => b.createdAt - a.createdAt);
-
-
-          const postIndex = sortedPosts.map(({ fln }) => fln).indexOf(filename);
-          const hrefToPreviousPost = postIndex <= 0 ? '' : `${sortedPosts[postIndex - 1].filename.replace('.md', '')}`;
-          const hrefToNextPost = postIndex >= (sortedPosts.length - 1) ? '' : `${sortedPosts[postIndex + 1].filename.replace('.md', '')}`;
-          const text = fs.readFileSync(path.resolve(__dirname, `../posts/${req.params.name}.md`), 'utf8');
-
-          const content = text.substring(text.indexOf('\n\n'));
-          const author = (/Author: (.*?)\n/g).exec(text)[1];
-          const title = (/Title: (.*?)\n/g).exec(text)[1];
-          const subtitle = (/Subtitle: (.*?)\n/g).exec(text)[1];
-          const metaTitle = (/Meta title: (.*?)\n/g).exec(text)[1];
-          const metaDescription = (/Meta description: (.*?)\n/g).exec(text)[1];
-          let image = (/Preview image: (.*?)\n/g).exec(text);
-
-          let date = sortedPosts[postIndex].createdAt;
-          const newDate = (/New Date: (.*?)\n/g).exec(text);
-
-          if (newDate && newDate[1]) {
-            date = newDate[1];
-          }
-
-          if (image && image[1]) {
-            image = image[1];
-          } else {
-            image = '/static/images/astronauts.jpg';
-          }
-
-          const post = {
-            title,
-            subtitle,
-            metaTitle,
-            metaDescription,
-            author,
-            href: req.params.name.slice(3, -3),
-            image,
-            date,
-            content,
-            hrefToPreviousPost,
-            hrefToNextPost,
-          };
-
-          res.send(post);
-        } else if (err.code === 'ENOENT') {
-          res.status(404).send({ statusCode: 404 });
-        } else {
-          res.status(500).send({ statusCode: 500 });
-        }
-      });
-    }
   });
 
   server.get('/blog/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name }));
