@@ -504,31 +504,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-outstaffing-senior</loc>
+    <loc>https://keenethics.com/services-dedicated-development-team</loc>
     <lastmod>2018-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-outstaffing-team</loc>
-    <lastmod>2018-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/services-outstaffing-technical-consultancy</loc>
-    <lastmod>2018-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/services-outstaffing</loc>
-    <lastmod>2018-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/services-proof</loc>
+    <loc>https://keenethics.com/services-business-analysis</loc>
     <lastmod>2018-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -553,12 +535,6 @@
   </url>
   <url>
     <loc>https://keenethics.com/services-web-development-node</loc>
-    <lastmod>2018-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/services-web-development-programmable-voice</loc>
     <lastmod>2018-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -732,7 +708,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/tech-front-end-react-native</loc>
+    <loc>https://keenethics.com/tech-apps-react-native</loc>
     <lastmod>2018-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

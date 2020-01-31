@@ -6,11 +6,13 @@ import Link from 'next/link';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
+
 import './services-education-software-development';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
+
 import { getPostsList } from '../lib/contentful';
 import LetsStart from './home-page-lets-start';
 

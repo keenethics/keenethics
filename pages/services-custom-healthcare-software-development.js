@@ -353,7 +353,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               ,&nbsp;
               <span>Wit.ai</span>
               ,&nbsp;
-              <Link href="/services-web-development-chatbot"><a>BotPress</a></Link>
+              <Link href="/services-chatbots-artificial-intelligence"><a>BotPress</a></Link>
               ,&nbsp;
               <span>WebSocket</span>
             </div>
@@ -380,7 +380,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <b>Platform</b>: <Link href="/services-web-development"><a>Web platform</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Technologies</b>: <Link href="/tech-front-end-react"><a>React</a></Link>, <Link href="/tech-front-end-redux"><a>Redux</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link>, RethinkDB, and Webpack2
+              <b>Technologies</b>: <Link href="/tech-front-end-react"><a>React</a></Link>, Redux, <Link href="/tech-back-end-express"><a>Express</a></Link>, RethinkDB, and Webpack2
             </div>
             <div style={{ marginBottom: '5px' }}>
               <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link>
@@ -431,7 +431,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <b>Platform</b>: <Link href="/services-web-development"><a>Web platform</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Technologies</b>: SQLite, <Link href="/tech-front-end-react"><a>React</a></Link> and <Link href="/tech-front-end-redux"><a>Redux</a></Link>
+              <b>Technologies</b>: SQLite, <Link href="/tech-front-end-react"><a>React</a></Link> and Redux
             </div>
             <div style={{ marginBottom: '5px' }}>
               <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Scrum</a></Link>

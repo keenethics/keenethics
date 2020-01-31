@@ -8,13 +8,6 @@
     "icon": "icon-e"
   },
   {
-    "href": "/services-web-development-chatbot",
-    "name": "Chat Bots",
-    "metaTitle": "Chatbot Development Company | Microsoft Bot Framework Development - KeenEthics",
-    "description": "Talking to AI was never that easy",
-    "icon": "icon-chat-bots"
-  },
-  {
     "href": "/services-web-development-node",
     "name": "Website Node JS",
     "metaTitle": "Node JS Development Company - KeenEthics",
@@ -30,7 +23,7 @@
     "icon": "icon-meteor"
   },
   {
-    "href": "/services-web-development-programmable-voice",
+    "href": "/services-web-development",
     "name": "Programmable Voice",
     "metaTitle": "Programmable Voice Development - KeenEthics",
     "description": "When computer can replace a human",

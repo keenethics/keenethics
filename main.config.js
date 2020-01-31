@@ -1,7 +1,6 @@
 import mainNavigation from './navigation/main.json';
 import servicesWebDevelopmentElements from './navigation/servicesWebDevelopment.json';
 import servicesMobileDevelopmentElements from './navigation/servicesMobileDevelopment.json';
-import servicesOutstaffingElements from './navigation/servicesOutstaffing.json';
 import techAppsElements from './navigation/techApps.json';
 import techFrontEndElements from './navigation/techFrontEnd.json';
 import techBackEndElements from './navigation/techBackEnd.json';
@@ -74,11 +73,6 @@ export const servicesWebDevelopmentTabs = () => servicesWebDevelopmentElements.m
 });
 
 export const servicesMobileDevelopment = () => servicesMobileDevelopmentElements.map((e) => {
-  e.metaDescription = maskDescription(e.name2);
-  return e;
-});
-
-export const servicesOutstaffing = () => servicesOutstaffingElements.map((e) => {
   e.metaDescription = maskDescription(e.name2);
   return e;
 });

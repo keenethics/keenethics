@@ -11,11 +11,5 @@
     "name": "Meteor",
     "description": "Fullstack real-time framework",
     "icon": "icon-meteor_"
-  },
-  {
-    "href": "/tech-back-end-hapi",
-    "name": "HAPI",
-    "description": "node.js-based backend framework",
-    "icon": "icon-hapi"
   }
 ]

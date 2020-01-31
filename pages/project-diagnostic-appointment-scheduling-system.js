@@ -55,7 +55,7 @@ const ProjectPrix = () => (
                 Two full-stack software developers, one professional PM, and one expert QA specialist have been developing the hospital management system software.
               </p>
               <h3>Technologies</h3>
-              <p>This hospital software project has been developed with the usage of Python, Django, SQLite, <Link href="/tech-front-end-react">React</Link> and <Link href="/tech-front-end-redux">Redux</Link>.</p>
+              <p>This hospital software project has been developed with the usage of Python, Django, SQLite, <Link href="/tech-front-end-react">React</Link> and Redux.</p>
               <ul className="technologies-list">
                 <li className="technologies-item">
                   <img style={{ maxHeight: '90px' }} src="/static/portfolio/technologies/react-logo.svg" alt="react" />

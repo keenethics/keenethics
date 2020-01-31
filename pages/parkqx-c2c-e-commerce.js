@@ -69,13 +69,13 @@ const ProjectPrix = () => (
               and
               <span style={{ margin: '0 .25em' }}><Link href="/services-mobile-development-apple">iOS</Link></span>
               platforms. As for the development technologies, we use
-              <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-redux">Redux</Link></span>
+              <span style={{ marginLeft: '.25em' }}>Redux</span>
               ,
               <span style={{ marginLeft: '.25em' }}><Link href="/services-web-development-node">Node.js</Link></span>
               ,
               <span style={{ marginLeft: '.25em' }}><Link href="/tech-data-base-mongo">MongoDB</Link></span>
               , Firebase, Twilio, and
-              <span style={{ marginLeft: '.25em' }}><Link href="/tech-front-end-react-native">React Native</Link></span>
+              <span style={{ marginLeft: '.25em' }}><Link href="/tech-apps-react-native">React Native</Link></span>
               .
             </p>
             <ul className="technologies-list">

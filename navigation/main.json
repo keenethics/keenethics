@@ -135,6 +135,14 @@
     "href": "/#industries",
     "points": [
       {
+        "name": "Minimum Viable Product",
+        "description": "A product with just enough features to gather comprehensive qualitative feedback",
+        "metaTitle": "MVP development company",
+        "metaDescription": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
+        "href": "/approach-minimum-viable-product",
+        "type": "default"
+      },
+      {
         "name": "Education Software Development",
         "description": "Revolutionizing the world of personal, academic, and professional development",
         "metaTitle": "Education software development company – KeenEthics",
