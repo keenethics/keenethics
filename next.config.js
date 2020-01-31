@@ -8,7 +8,11 @@ module.exports = withSass({
   webpack(config) {
     const { rules } = config.module;
 
-    const scssTestIndex = rules.findIndex((el) => el.test.test('.scss'));
+    const scssTestIndex = rules.findIndex((el) => {
+      if (el.test) return el.test.test('.scss');
+
+      return false;
+    });
 
     if (scssTestIndex > -1) {
       const scssTest = rules[scssTestIndex];
@@ -21,7 +25,11 @@ module.exports = withSass({
       }
     }
 
-    config.plugins.push(new webpack.EnvironmentPlugin(['REACT_APP_SPACE_ID', 'REACT_APP_ACCESS_TOKEN', 'REACT_APP_PREVIEW_TOKEN']));
+    config.plugins.push(new webpack.EnvironmentPlugin([
+      'REACT_APP_SPACE_ID',
+      'REACT_APP_ACCESS_TOKEN',
+      'REACT_APP_PREVIEW_TOKEN',
+    ]));
 
     return config;
   },

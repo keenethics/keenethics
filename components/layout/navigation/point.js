@@ -8,30 +8,55 @@ export default class NavigationPoint extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isExpanded: false,
+    };
+
     this.renderPoint = this.renderPoint.bind(this);
     this.renderPointContent = this.renderPointContent.bind(this);
+    this.toggleSubpoints = this.toggleSubpoints.bind(this);
   }
 
-  componentDidMount() {
-    const {
-      currentSubpoint,
-      scroll,
-    } = this.props;
+  toggleSubpoints() {
+    const { isExpanded } = this.state;
 
-    if (currentSubpoint) {
-      scroll(document.getElementById('current-subpoint').offsetTop);
-    }
+    this.setState({
+      isExpanded: !isExpanded,
+    });
   }
 
   renderPoint() {
-    const { element: { href } } = this.props;
+    const {
+      element: {
+        href,
+        points,
+      },
+      isTablet,
+    } = this.props;
 
-    return href ? (
+
+    if (!points && href) {
+      return (
+        <Link href={href}>
+          <a className="navigation-point">
+            {this.renderPointContent()}
+          </a>
+        </Link>
+      );
+    }
+
+    return href && !isTablet ? (
       <Link href={href}>
-        <a className="navigation-point">{this.renderPointContent()}</a>
+        <a className="navigation-point">
+          {this.renderPointContent()}
+        </a>
       </Link>
     ) : (
-      <span className="navigation-point">
+      <span
+        className="navigation-point"
+        onClick={this.toggleSubpoints}
+        role="presentation"
+      >
         {this.renderPointContent()}
       </span>
     );
@@ -51,7 +76,12 @@ export default class NavigationPoint extends React.Component {
       case 'icon': return (
         <span className="navigation-cell">
           <span className="navigation-icon">
-            <img src={`/static/images/svg/${icon.name || ''}.svg`} width="30px" height="30px" alt={icon.alt || ''} />
+            <img
+              src={`/static/images/svg/${icon.name || ''}.svg`}
+              width="30px"
+              height="30px"
+              alt={icon.alt || ''}
+            />
           </span>
           {name}
         </span>
@@ -72,14 +102,18 @@ export default class NavigationPoint extends React.Component {
 
   render() {
     const {
-      element: { name },
+      element: {
+        name,
+        points,
+      },
     } = this.props;
+
+    const { isExpanded } = this.state;
 
     if (!name) return null;
 
     const {
       children,
-      height,
       currentPoint,
       currentSubpoint,
     } = this.props;
@@ -87,11 +121,16 @@ export default class NavigationPoint extends React.Component {
     const className = cn({
       'navigation-item': true,
       current: currentPoint || currentSubpoint,
+      expanded: isExpanded,
       'is-link': !children,
+      points,
     });
 
     return (
-      <li className={className} role="presentation" id={currentSubpoint ? 'current-subpoint' : ''} style={{ height }}>
+      <li
+        className={className}
+        role="presentation"
+      >
         {this.renderPoint()}
         {children}
       </li>
@@ -108,13 +147,13 @@ NavigationPoint.propTypes = {
       name: PropTypes.string,
       alt: PropTypes.string,
     }),
+    points: PropTypes.array,
     number: PropTypes.string,
     type: PropTypes.string,
   }),
-  height: PropTypes.string,
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
-  scroll: PropTypes.func,
+  isTablet: PropTypes.bool,
 };
 NavigationPoint.defaultProps = {
   children: null,
@@ -125,11 +164,11 @@ NavigationPoint.defaultProps = {
       name: '',
       alt: '',
     },
+    points: null,
     number: '01',
     type: '',
   },
-  height: '0px',
   currentPoint: false,
   currentSubpoint: false,
-  scroll: null,
+  isTablet: false,
 };

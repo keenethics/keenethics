@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { withRouter } from 'next/router';
+import Link from 'next/link';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -22,58 +22,39 @@ class Navigation extends React.Component {
     super(props);
 
     this.state = {
-      dimensions: {
-        width: -1,
-        height: -1,
-      },
       showSidebar: false,
     };
 
     this.getPointContent = this.getPointContent.bind(this);
-    this.getPointHeight = this.getPointHeight.bind(this);
     this.showSidebar = this.showSidebar.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
-
-    this.updateDimensions();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
   }
 
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
 
-    if (points && this.state.dimensions.height > -1) {
+    if (points) {
       return (
-        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
+        <ul className="subnavigation">
           <div
             ref={(n) => { this.wrapper = n; }}
             id={currentPoint && currentSubpoint ? 'subnavigation-inner-current' : ''}
             className="subnavigation-inner"
           >
-            {points.map((p, i) => (
-              <Point
-                key={p.name}
-                element={p}
-                height={this.getPointHeight(points.length)}
-                currentSubpoint={currentPoint && currentSubpoint === i}
-                scroll={this.constructor.scrollToActiveSubpoint}
-              />
-            ))}
+            {points.map((p, i) => {
+              if (p.outsideMenu) return null;
+
+              return (
+                <Point
+                  key={p.name}
+                  element={p}
+                  isSubpoint
+                  currentSubpoint={currentPoint && currentSubpoint === i}
+                  scroll={this.constructor.scrollToActiveSubpoint}
+                />
+              );
+            })}
           </div>
-        </ul>
-      );
-    }
-    if (points && this.state.dimensions.height < 0) {
-      return (
-        <ul className="subnavigation" style={{ height: `${this.state.dimensions.height}px` }}>
-          <div className="subnavigation-loading" />
         </ul>
       );
     }
@@ -84,19 +65,15 @@ class Navigation extends React.Component {
     return null;
   }
 
-  getPointHeight(numberOfPoints) {
-    const { height } = this.state.dimensions;
-
-    if ((height / numberOfPoints) > 90) {
-      return `${100 / numberOfPoints}%`;
-    }
-
-    return '90px';
-  }
-
   showSidebar() {
+    this.props.toggleNav();
+
+    const {
+      showSidebar,
+    } = this.state;
+
     this.setState({
-      showSidebar: true,
+      showSidebar: !showSidebar,
     });
   }
 
@@ -104,29 +81,19 @@ class Navigation extends React.Component {
     if (!this.state.showSidebar) {
       return;
     }
-
+    this.props.toggleNav();
     this.setState({
       showSidebar: false,
     });
   }
 
-  updateDimensions() {
-    this.setState({
-      dimensions: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      },
-    });
-  }
-
   render() {
-    const { showSidebar, dimensions } = this.state;
-    const { router } = this.props;
+    const { showSidebar } = this.state;
+    const { router, isTablet } = this.props;
 
     const currentURL = router;
 
     const { navigation } = config;
-    const height = `${100 / navigation.filter((n) => !n.type && n.type !== 'hidden').length}%`;
 
     let currentPoint = null;
     let currentSubpoint = null;
@@ -147,39 +114,41 @@ class Navigation extends React.Component {
 
     return (
       <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
-        <div className="navigation-hamburger" onClick={this.showSidebar} onKeyDown={this.showSidebar} role="presentation">
+        <div
+          className="navigation-hamburger"
+          onClick={this.showSidebar}
+          onKeyDown={this.showSidebar}
+          role="presentation"
+        >
           <span />
         </div>
-        <div className="navigation-inner" style={{ height: dimensions.height }}>
-          <div className="navigation-header">
-            <Link href="/">
-              <a className="logo">
-                <img src="/static/images/svg/logo.svg" alt="KeenEthics" width="120px" />
-              </a>
-            </Link>
-          </div>
-          <ul className="navigation-content" style={{ height: dimensions.height }}>
+        <div className="navigation-inner">
+          <Link href="/">
+            <a className="navigation-logo">
+              <img src="/static/images/logo.svg" alt="Keenethics" />
+            </a>
+          </Link>
+          <ul className="navigation-content">
             {navigation.map((n, i) => {
-              if (n.type && n.type === 'hidden') {
-                return null;
-              }
+              if (n.type && n.type === 'hidden') return null;
+              if (n.outsideMenu) return null;
+
               return (
                 <Point
                   key={n.name}
                   element={n}
-                  height={height}
                   currentPoint={currentPoint === i}
+                  isTablet={isTablet}
                 >
-                  {this.getPointContent(n, currentPoint === i, currentSubpoint)}
+                  {
+                    isTablet
+                      ? this.getPointContent(n, currentPoint === i, currentSubpoint)
+                      : null
+                  }
                 </Point>
               );
             })}
           </ul>
-          <div className="navigation-footer">
-            <Link href="/contacts">
-              <a className="button contacts-goal">Contact us</a>
-            </Link>
-          </div>
         </div>
       </div>
     );
@@ -188,10 +157,13 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   router: PropTypes.object,
+  toggleNav: PropTypes.func.isRequired,
+  isTablet: PropTypes.bool,
 };
 
 Navigation.defaultProps = {
   router: {},
+  isTablet: false,
 };
 
 export default withRouter(ClickOutside(Navigation));

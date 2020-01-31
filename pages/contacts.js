@@ -4,6 +4,7 @@ import { withRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { get } from 'lodash';
 
 import { MaxS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
@@ -13,6 +14,7 @@ import ContactForm from '../components/contacts/contact-form';
 import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
+import mobileScrollIntoView from '../helpers/scroll-effects';
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
@@ -28,6 +30,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           className="container-btn"
           onClick={() => {
             setSelectedCountry('UA');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -71,6 +74,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           className="container-btn"
           onClick={() => {
             setSelectedCountry('NL');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -125,6 +129,7 @@ Netherlands
           className="container-btn"
           onClick={() => {
             setSelectedCountry('US');
+            mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
@@ -200,7 +205,9 @@ const MobileWishlist = ({ wishlist }) => {
         type="button"
         className={classnames('expand-icon', { down: isCollapsed })}
         onClick={() => setIsCollapsed(!isCollapsed)}
-      />
+      >
+        &nbsp;
+      </button>
       <div className={`wish-list ${isCollapsed ? 'collapsed' : ''}`}>
         {wishlist.map((item) => (
           <span key={Math.random()} className="wish-item">
@@ -255,15 +262,21 @@ const ThankYou = () => (
     </a>
   </div>
 );
+const shouldShowForm = (query, formName) => {
+  const activeForm = get(query, 'activeForm', get(query, 'activeform', null));
+  return activeForm === formName;
+};
 
 const Contacts = ({ router }) => {
   const { query } = router;
+  const FORM_NAMES = {
+    estimate: 'estimate',
+  };
 
   const [isPending, setIsPending] = useState(false);
   const [status, setStatus] = useState('');
-  const [activeContactForm, setActiveContactForm] = useState(
-    query.activeForm !== 'estimate',
-  );
+  const [activeContactForm, setActiveContactForm] = useState(!shouldShowForm(query,
+    FORM_NAMES.estimate));
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -284,13 +297,17 @@ const Contacts = ({ router }) => {
     getLoction();
   }, []);
 
+  useEffect(() => {
+    setActiveContactForm(!shouldShowForm(query, FORM_NAMES.estimate));
+  }, [query]);
+
   let person;
   if (selectedCountry === 'NL') person = PaulW;
   else if (selectedCountry === 'US') person = JeanA;
   else person = MaxS;
   return (
-    <Layout>
-      <div className="contacts-page">
+    <Layout noFooter>
+      <div className="contacts-page" id="contacts-page">
         {Person({
           onClick: () => setActiveContactForm(true),
           ...person,

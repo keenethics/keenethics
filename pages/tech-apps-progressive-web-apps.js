@@ -61,7 +61,7 @@ const TechAppsProg = () => (
         </div>
         <p>Progressive web app development comprises optimal software development practices for the purpose of striking the golden mean between a website and a mobile app. It is implemented with the help of service workers – JS files that enable offline information storage and app execution.</p>
         <img
-          style={{ maxWidth: '500px', margin: '25px auto 35px auto' }}
+          style={{ margin: '25px auto 35px auto' }}
           src="/static/services/tech-apps-progressive-web-apps/tech-apps-progressive-web-apps-functionality.jpg"
           alt="Functionality"
         />
@@ -84,7 +84,7 @@ const TechAppsProg = () => (
         <p>We offer a <b>reasonable pricing policy</b> and the opportunity to choose a paying model you prefer. We perfectly follow <b>data security regulations</b> and the requirements of the NDA you choose to sign.</p>
 
         <h3 className="red-italic-title"><span>4</span>Devoted to consistency.</h3>
-        <p>We offer you <b>full-cycle cooperation</b>, and we will be glad to take your project from an idea to a perfectly functioning and continuously improved final product. We will also encourage you to <Link href="/blog/1553896800000-how-to-monitor-your-project-distantly">monitor the project</Link> and communicate with our team continuously.</p>
+        <p>We offer you <b>full-cycle cooperation</b>, and we will be glad to take your project from an idea to a perfectly functioning and continuously improved final product. We will also encourage you to <Link href="/blog/1553896800000-how-to-monitor-your-project-distantly"><a>monitor the project</a></Link> and communicate with our team continuously.</p>
       </section>
       <section>
         <h2 style={{ marginBottom: 0 }}>Now, let’s discuss your business idea!</h2>

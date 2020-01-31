@@ -1,0 +1,119 @@
+.page__about-us {
+  padding: 0;
+
+  .page__header {
+    padding: 105px 25px 60px;
+    max-width: 990px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-sm) {
+      br.mobile-only {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-xs) {
+      em {
+        margin-left: 8px;
+      }
+    }
+
+    @media (min-width: $desktop-md) {
+      padding-bottom: 90px;
+    }
+
+    br {
+      &.desktop-plus {
+        display: none;
+
+        @media(min-width: $desktop-xs) {
+          display: block;
+        }
+      }
+
+      &.tablet {
+        @media (min-width: $desktop-xs) {
+          display: none;
+        }
+      }
+    }
+
+    h5, p {
+      max-width: 780px;
+      text-align: left;
+      color: #12233D;
+      font-size: 14px;
+      line-height: 24px;
+
+      @media (min-width: $tablet-sm) {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 80%;
+      }
+
+      @media (min-width: $desktop-md) {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 780px;
+        text-align: center;
+      }
+    }
+
+    h5 {
+      margin-top: 25px;
+      font-weight: bold;
+      letter-spacing: -0.1px;
+
+      @media (min-width: $tablet-sm) {
+        margin-top: 40px;
+      }
+
+      @media (min-width: $desktop-md) {
+        margin-top: 50px;
+      }
+    }
+
+    p {
+      margin-top: 25px;
+
+      @media (min-width: $tablet-sm) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .separator {
+    margin-top: 20px;
+    width: 175px;
+    height: 2px;
+    background-color: #D62624;
+
+    @media (min-width: $tablet-sm) {
+      margin-top: 40px;
+    }
+
+    @media (min-width: $desktop-md) {
+      margin-top: 50px;
+      margin-left: calc(780px / 2 - 85px);
+    }
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 44px;
+    text-align: center;
+
+    @media (min-width: $tablet-lg) {
+      font-size: 28px;
+    }
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+}

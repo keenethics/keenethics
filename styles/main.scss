@@ -14,14 +14,38 @@
 @import "blog";
 @import "filter";
 @import 'pages/common';
+@import 'pages/main';
 @import "pages/project";
 @import "pages/team";
 @import "pages/contact";
 @import "pages/error";
 @import "pages/promo";
+@import "pages/about-us";
+@import "pages/service-pages";
+@import "about-us/our-story";
+@import "about-us/our-mission";
+@import "about-us/our-values";
+@import "about-us/our-team";
+@import "about-us/meet-our-leaders";
+
+
+@import "content/offer-list";
 
 @import "portfolio/PortfolioTechnologyTags";
 @import "portfolio/PortfolioFeedback";
+
 @import "../components/content/FeaturesList";
 @import "../components/content/CallToActionButton";
 @import "../components/notify/notify";
+
+@import "main-blocks/main";
+@import "main-blocks/common";
+@import "main-blocks/our-methods";
+@import "main-blocks/methodologies";
+@import "main-blocks/industries";
+@import "main-blocks/tech-stack";
+@import "main-blocks/lets-start";
+@import "main-blocks/partners";
+@import "main-blocks/top-section";
+@import "main-blocks/home-footer";
+

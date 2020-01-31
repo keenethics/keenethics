@@ -5,20 +5,17 @@
   position: relative;
 
   @media (min-width: $mobile-md) {
-    padding: 0 25px 40px;
+    padding: 0 15px 40px;
   }
 
   @media (min-width: $tablet-sm) {
     padding: 0 30px 40px;
   }
-
-  @media (min-width: $desktop-lg) {
-    padding: 0 40px 40px;
-  }
 }
 
 .page__header {
   padding: 75px 0 60px;
+  text-align: center;
 
   @media (min-width: $tablet-sm) {
     padding: 115px 0 95px;
@@ -59,6 +56,7 @@
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: left;
 
   font-size: 28px;
   line-height: 40px;
@@ -69,7 +67,14 @@
   }
 
   .bell {
-    transform: translateY(5px);
+    transform: translateY(2px);
+    height: 23px;
+    @media (min-width: $tablet-sm) {
+      height: 26px;
+    }
+    @media (min-width: $desktop-md) {
+      height: 35px;
+    }
   }
 
   @media (min-width: $tablet-sm) {
@@ -100,6 +105,15 @@
   width: 100%;
   margin: 0;
   transition: transform 0.1s ease-in-out;
+  animation: fade .5s ease-in-out;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   &:before {
     display: none;
   }
@@ -212,64 +226,16 @@
     line-height: 16px;
     color: #12233D;
     padding: 4px 0 4px 8px;
-
+    text-transform: uppercase;
     margin-left: auto;
   }
+}
 
-  /*
-    Rounded images (for service/blog-post pages
-  */
-  &.-rounded {
-    padding: 10px;
-    width: 280px;
-
-    .page__item {
-      &-figure {
-        border-radius: 8px;
-        overflow: hidden;
-        transition: box-shadow .3s ease;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-        &:hover {
-          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-        }
-      }
-
-      &-figcaption {
-        padding: 15px 15px 25px;
-        align-items: center;
-        flex-direction: column-reverse;
-      }
-
-      &-figcaption-heading {
-        margin-bottom: 0;
-      }
-
-      &-title {
-        margin: 0 0 10px!important;
-        color: rgba(0,0,0,.9);
-        font-size: 24px;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      &-tags {
-        width: 100%;
-        justify-content: center;
-        margin: 0;
-      }
-
-      &-tag {
-        background-color: #fff;
-        color: rgba(0,0,0,.7);
-        font-size: 14px;
-        line-height: 24px;
-        font-weight: normal;
-        text-transform: capitalize;
-        padding: 0;
-        &:before {
-          display: none;
-        }
-      }
-    }
+.invisible-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  :hover {
+    cursor: pointer;
   }
 }

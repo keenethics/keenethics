@@ -1,0 +1,107 @@
+.block {
+  position: relative;
+  padding: 0 32px;
+
+  &--header {
+    margin: 0 auto;
+    padding: 80px 0;
+    max-width: 780px;
+  }
+
+  &--content {
+    max-width: 990px;
+    margin: 0 auto;
+  }
+
+  &--header-title {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 44px;
+    text-align: center;
+    color: #12233d;
+    margin: 0 0 30px;
+    text-transform: capitalize;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &--header-description {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #12233d;
+  }
+
+  &-content {
+    position: relative;
+    z-index: 9000;
+  }
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.block.block-projects {
+  background: #fafafa;
+
+  &--header {
+    padding-bottom: 24px;
+  }
+
+  .page__wrapper {
+    padding: 0;
+    .portfolio-works {
+      padding-bottom: 75px;
+    }
+  }
+
+  .page__item-figure {
+    background: transparent;
+  }
+
+  .page__item-date {
+    text-transform: uppercase;
+  }
+
+  .filter__list::before {
+    background: linear-gradient(to right,#fafafa 0, rgba(#fafafa, .8) 40%, rgba(#fafafa, 0) 100%);
+  }
+
+  .filter__list::after {
+    background: linear-gradient(to left,#fafafa 0, rgba(#fafafa, .8) 40%, rgba(#fafafa, 0) 100%);
+  }
+}
+
+.block.block-blog {
+  background: #fafafa;
+
+  &--header {
+    padding-bottom: 24px;
+  }
+
+  .page__item {
+    width: 50%;
+  }
+
+  .page__item-figure {
+    background: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .block.block-blog .page__item {
+    width: 100%;
+  }
+}

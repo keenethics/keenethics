@@ -18,13 +18,6 @@ class Error extends React.Component {
 
   render() {
     const { router } = this.props;
-    const baseURLs = [];
-
-    config.navigation.forEach((p) => {
-      if (!p.points) {
-        baseURLs.push(p);
-      }
-    });
 
     return (
       <Layout noMenu>
@@ -59,6 +52,7 @@ class Error extends React.Component {
                 onClick={(e) => {
                   if (typeof window !== 'undefined') {
                     e.preventDefault();
+
                     router.push('/');
                   }
                 }}
@@ -67,8 +61,7 @@ class Error extends React.Component {
                 <span>go home</span>
               </a>
               <div className="base-urls">
-                <a href="/">Home</a>
-                {baseURLs.map(({ name, href }) => <a key={name} href={href}>{name}</a>)}
+                {config.navigation.map(({ name, href }) => <a key={name} href={href}>{name}</a>)}
               </div>
             </section>
           </div>

@@ -4,27 +4,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Promise from 'promise-polyfill';
+import classnames from 'classnames';
 
 import '../../styles/main.scss';
 
 import Head from './head';
+import Footer from './footer';
+
 import Navigation from './navigation/main';
 
 if (typeof window !== 'undefined' && !window.Promise) {
   window.Promise = Promise;
 }
+
 class Layout extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isLoading: true,
       dimensions: {
         width: -1,
         height: -1,
       },
+      showNav: true,
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +46,7 @@ class Layout extends React.Component {
 
   updateDimensions() {
     this.setState({
+      isLoading: false,
       dimensions: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -46,8 +54,17 @@ class Layout extends React.Component {
     });
   }
 
+  toggleNav() {
+    const { showNav } = this.state;
+
+    this.setState({
+      showNav: !showNav,
+    });
+  }
+
   render() {
     const {
+      isLoading,
       dimensions,
     } = this.state;
     const {
@@ -55,21 +72,39 @@ class Layout extends React.Component {
       router,
       meta,
       noMenu,
+      noFooter,
+      className,
+      style,
     } = this.props;
 
     const currentURL = router.route;
 
-    const style = { height: dimensions.height };
-    if (noMenu) {
-      style.width = '100vw';
-    }
+    const contentInnerStyle = { ...style, height: dimensions.height };
+
+    if (isLoading) return null; // TODO: set preloader
+
+    const isTablet = dimensions.width <= 768 && dimensions.width > 480;
+    const isMobile = dimensions.width <= 480;
+
     return (
       <div className="layout">
         <Head currentURL={currentURL} meta={meta} />
-        {noMenu ? null : <Navigation currentURL={currentURL} />}
+        {noMenu || (
+          <Navigation
+            currentURL={currentURL}
+            toggleNav={this.toggleNav}
+            isTablet={dimensions.width < 769}
+          />
+        )}
         <div className="content">
-          <div className="content-inner" style={style}>
-            { children }
+          <div className={classnames('content-inner', className)} style={contentInnerStyle}>
+            {children}
+            {noFooter || (
+              <Footer
+                isMobile={isMobile}
+                isTablet={isTablet}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -85,6 +120,9 @@ Layout.propTypes = {
   router: PropTypes.object,
   meta: PropTypes.object,
   noMenu: PropTypes.bool,
+  noFooter: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };
 
 Layout.defaultProps = {
@@ -92,6 +130,9 @@ Layout.defaultProps = {
   router: {},
   meta: {},
   noMenu: false,
+  noFooter: false,
+  className: '',
+  style: {},
 };
 
 export default withRouter(Layout);

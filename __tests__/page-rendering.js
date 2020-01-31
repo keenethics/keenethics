@@ -33,8 +33,8 @@ getRoadmap(techFrontEndElements);
 getRoadmap(techBackEndElements);
 getRoadmap(techDatabaseElements);
 getRoadmap(techApiIntegrationElements);
-getRoadmap(worksElements);
-getRoadmap(blog);
+// getRoadmap(worksElements);
+// getRoadmap(blog);
 
 describe('Page rendering', () => {
   navigation.forEach((nav) => {

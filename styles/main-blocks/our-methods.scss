@@ -1,0 +1,214 @@
+.block-our-methods {
+  background: #fafafa;
+  padding: 0 32px;
+}
+
+.our-methods {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 0 80px;
+  @include clearfix;
+
+  &--navigation {
+    float: left;
+    width: 50%;
+    padding: 0 25px 0 0;
+    box-sizing: border-box;
+  }
+
+  &--content {
+    float: left;
+    width: 50%;
+  }
+
+  &--navigation-wrapper {
+    margin: 0 auto;
+    padding: 80px 0;
+    max-width: 780px;
+  }
+
+  &--navigation-item {
+    margin: 32px 0;
+    transition: .5s;
+
+    a {
+      text-decoration: none;
+      font-family: Raleway;
+      font-size: 18px;
+      line-height: 22px;
+      color: #12233d;
+    }
+
+    &.active a {
+      font-weight: 600;
+    }
+  }
+
+  &--navigation-item-count {
+    font-family: Open Sans;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #12233d;
+    margin: 0 49px 0 0;
+  }
+
+  &--navigation-link-next {
+    display: block;
+    width: 15px;
+    height: 8px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url('/static/images/svg/arrow-small-down.svg') no-repeat center;
+    background-size: 15px 8px;
+    margin: 0 2px;
+  }
+
+  &--navigation-link-prev {
+    display: block;
+    width: 15px;
+    height: 8px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url('/static/images/svg/arrow-small-up.svg') no-repeat center;
+    background-size: 15px 8px;
+    margin: 0 2px;
+  }
+
+  &--content-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 60px;
+    user-select: none;
+
+    .our-methods--content-icon-inner {
+      position: relative;
+      width: 110px;
+      height: 110px;
+    }
+
+    .our-methods--content-icon-link {
+      width: 41px;
+      background-size: 41px 11px;
+      margin: 0 10px 0 0;
+      padding: 0 0 26px 0;
+      transition: all 250ms;
+      display: none;
+
+      cursor: pointer;
+
+      span {
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 15px;
+        display: block;
+        text-align: left;
+        color: #6f798a;
+      }
+
+      &.prev {
+        background: url('/static/images/svg/arrow-long-left.svg') no-repeat center bottom;
+        margin: 0 10px 0 0;
+
+        span {
+          text-align: left;
+        }
+
+        &:hover {
+          transform: translateX(-8px);
+        }
+      }
+
+      &.next {
+        background: url('/static/images/svg/arrow-long-right.svg') no-repeat center bottom;
+        margin: 0 0 0 10px;
+
+        span {
+          text-align: right;
+        }
+
+        &:hover {
+          transform: translateX(8px);
+        }
+      }
+    }
+
+    .our-methods--content-icon-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 35px;
+      z-index: 20;
+    }
+
+    .our-methods--content-icon-circle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 110px;
+      height: 110px;
+      background: url('/static/main-blocks/our-methods/circle.svg') no-repeat center;
+      background-size: 110px 110px;
+      transition: all 250ms;
+      transition-timing-function: linear;
+    }
+  }
+
+  &--content-description {
+    font-size: 16px;
+    color: #12233d;
+    line-height: 26px;
+    min-height: 250px;
+
+    a {
+      display: inline-block;
+      color: #12233d;
+      margin: 30px 0 0;
+
+      &:hover {
+        color: #de4f4f;
+      }
+
+      &:active {
+        color: #d62c2c;
+      }
+    }
+
+    ul {
+      margin: 10px 0 0;
+    }
+  }
+
+  &--content-description-title {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 30px;
+    display: none;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .our-methods--navigation {
+    display: none;
+  }
+
+  .our-methods--content {
+    width: 100%;
+  }
+
+  .our-methods--content-description-title {
+    display: block;
+  }
+  .our-methods--content-icon .our-methods--content-icon-link {
+    display: block;
+  }
+}

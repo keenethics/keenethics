@@ -95,7 +95,7 @@ const TechBackEndExpress = () => (
         />
         <FeaturesList list={whyExpressJs} titleBold />
 
-        <CallToActionButton title="ESTIMATE YOUR PROJECT" href="/contacts?activeForm=estimate" />
+        <CallToActionButton title="ESTIMATE YOUR PROJECT" href="/contacts?activeform=estimate" />
       </section>
 
       <section>
@@ -125,7 +125,7 @@ const TechBackEndExpress = () => (
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth.</h3>
         <p>Regardless of the industry you are in, we strive for you to reach the best business outcome. You will be offered to cooperate with a professional specializing in your industry, should you be <a href="/services-education-software-development" target="_blank" rel="noopener noreferrer nofollow">developing an educational app</a>, a healthcare management system, or an e-commerce platform.</p>
 
-        <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>  
+        <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value.</h3>
         <p>You can be sure that our cooperation will be built on the principles of honesty, transparency, and efficiency. As an <a href="/blog/1551175200000-our-ethical-dimension" target="_blank" rel="noopener noreferrer nofollow">ethical company</a>, we prioritize the interests and needs of our partners and users.</p>
 
         <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span> Launching in a matter of weeks.</h3>
@@ -141,7 +141,7 @@ const TechBackEndExpress = () => (
       <section>
         <h2>Portfolio</h2>
         <p>As an Express.js development company we have created:</p>
-        <Works rounded works={works.filter(({ title }) => ['Education System Platform', 'Pree', 'Banker Advisor'].includes(title))} />
+        <Works works={works.filter(({ title }) => ['Education System Platform', 'Pree', 'Banker Advisor'].includes(title))} />
       </section>
 
       <CallToActionButton title="CONTACT US" href="/contacts" />

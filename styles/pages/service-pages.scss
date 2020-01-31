@@ -1,0 +1,16 @@
+.service-webdev,
+.service-team {
+  &.content-block {
+    ul li {
+      &:before {
+        display: none;
+      }
+    }
+
+    .social-icons ul li {
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+    }
+  }
+}

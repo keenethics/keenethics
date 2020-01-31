@@ -27,7 +27,7 @@ export default function FeaturesList({ list, titleItalic, titleBold }) {
                 {description}
               </figcaption>
             </figure>
-            { additionalText && <p className="features-additional-text" style={icon ? null : { marginTop: '15px' }}>{additionalText}</p> }
+            {additionalText && <div className="features-additional-text" style={icon ? null : { marginTop: '15px' }}>{additionalText}</div> }
           </li>
         ))
       }

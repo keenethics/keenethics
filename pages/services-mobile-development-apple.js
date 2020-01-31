@@ -80,7 +80,7 @@ const ServicesWebDevelopmentApple = () => (
       <section>
         <h2>Why KeenEthics?</h2>
         <h3>Check out some of the iOS mobile applications we have developed:</h3>
-        <Works works={iosWorks} rounded />
+        <Works works={iosWorks} />
       </section>
     </div>
   </Layout>

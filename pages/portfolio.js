@@ -32,12 +32,21 @@ class Portfolio extends React.Component {
 
     this.worksCountFor = this.worksCountFor.bind(this);
     this.filterOnChange = this.filterOnChange.bind(this);
+    this.setCategoryList = this.setCategoryList.bind(this);
   }
 
-  componentDidMount() {
-    const subnavigation = document.querySelector('.navigation-item.current > .subnavigation');
-    subnavigation.style.display = 'none';
-    subnavigation.parentElement.classList.add('is-link');
+  componentDidUpdate(prevProps) {
+    const { router } = this.props;
+
+    if (router.query.chosen !== prevProps.router.query.chosen) {
+      this.setCategoryList(router);
+    }
+  }
+
+  setCategoryList(router) {
+    this.setState({
+      ...this.getCategoriesList(router),
+    });
   }
 
   getCategoriesList(url) {
@@ -45,6 +54,7 @@ class Portfolio extends React.Component {
     const categories = works
       .map((work) => work.category.main)
       .reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []); // flatten
+
     const uniqCategories = [...new Set(categories)];
     // no selected categories by default
     const selectedCategories = chosenCategory ? transformateCategories(chosenCategory.split(','), uniqCategories)
@@ -65,12 +75,26 @@ class Portfolio extends React.Component {
     this.setState({ selectedCategories });
   }
 
-  render() {
-    const { selectedCategories, categoriesList } = this.state;
+  wrapperCondition(component) {
+    return <Layout>{component}</Layout>;
+  }
 
-    return (
-      <Layout>
-        <section className="portfolio page__wrapper">
+  render() {
+    const {
+      selectedCategories,
+      categoriesList,
+    } = this.state;
+    const {
+      postIds,
+      pageTitle,
+      topTitle,
+      isMobile,
+    } = this.props;
+    const filteredWorks = works.filter(this.worksCountFor);
+
+    const portfolioComponent = (
+      <section className="portfolio page__wrapper">
+        {topTitle || (
           <div className="page__header">
             <h1 className="page__title">
               <em>Keen</em>
@@ -79,28 +103,42 @@ class Portfolio extends React.Component {
               we put into action
             </h1>
           </div>
-          <CategoriesFilter
-            categoriesList={categoriesList}
-            selectedCategories={selectedCategories}
-            filterOnChange={this.filterOnChange}
-            pageTitle="portfolio"
-          />
-          {
-            works.length
-              ? <Works works={works.filter(this.worksCountFor)} />
-              : null
+        )}
+        <CategoriesFilter
+          categoriesList={categoriesList}
+          selectedCategories={selectedCategories}
+          filterOnChange={this.filterOnChange}
+          pageTitle={pageTitle || 'portfolio'}
+        />
+        {postIds.length > 0 && (
+          <Works works={
+            filteredWorks.filter((work) => {
+              if (!selectedCategories.length) return postIds.some((title) => title === work.title);
+              return true;
+            }).slice(isMobile ? -2 : -3)
           }
-        </section>
-      </Layout>
+          />
+        )}
+        {works.length > 0 && !postIds.length ? <Works works={filteredWorks} /> : null}
+      </section>
     );
+    return postIds.length ? portfolioComponent : this.wrapperCondition(portfolioComponent);
   }
 }
 
 Portfolio.propTypes = {
   router: PropTypes.object,
+  postIds: PropTypes.array,
+  pageTitle: PropTypes.string,
+  topTitle: PropTypes.node,
+  isMobile: PropTypes.bool,
 };
 Portfolio.defaultProps = {
   router: {},
+  postIds: [],
+  isMobile: false,
+  pageTitle: '',
+  topTitle: '',
 };
 
 export default withRouter(Portfolio);

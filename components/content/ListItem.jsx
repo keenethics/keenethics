@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Link from 'next/link';
 import _ from 'lodash';
+import classnames from 'classnames';
 import Moment from 'react-moment';
 
 /**
@@ -39,7 +39,7 @@ const getDataFromProperty = (item) => {
       description: null,
       imgUrl: `https://${
         _.get(item.heroImage, 'fields.file.url')
-      }?fm=jpg&fl=progressive&q=85&w=350`,
+      }?fm=jpg&fl=progressive&q=85&w=450`,
       url: `/post?name=${item.slug}`,
       asUrl: `/blog/${item.slug}`,
       tags: item.categories,
@@ -50,7 +50,7 @@ const getDataFromProperty = (item) => {
   throw new Error('Wrong item object supplied.');
 };
 
-const ListItem = ({ work, rounded }) => {
+const ListItem = ({ work }) => {
   const {
     title,
     // description,
@@ -62,7 +62,7 @@ const ListItem = ({ work, rounded }) => {
   } = getDataFromProperty(work);
 
   return (
-    <div className={classNames('page__item', { '-rounded': rounded })}>
+    <div className={classnames('page__item')}>
       <Link href={url} as={asUrl}>
         <a className="page__item-link">
           <figure className="page__item-figure">
@@ -70,6 +70,7 @@ const ListItem = ({ work, rounded }) => {
               <img src={imgUrl} alt={title} className="page__item-img" />
             </div>
             <figcaption className="page__item-figcaption">
+              {!publishDate && <h3 className="page__item-title">{title}</h3>}
               <div className="page__item-figcaption-heading">
                 <ul className="page__item-tags">
                   {
@@ -92,7 +93,7 @@ const ListItem = ({ work, rounded }) => {
                   )
                 }
               </div>
-              <h3 className="page__item-title">{title}</h3>
+              {publishDate && <h3 className="page__item-title">{title}</h3>}
             </figcaption>
           </figure>
         </a>
@@ -102,7 +103,6 @@ const ListItem = ({ work, rounded }) => {
 };
 
 ListItem.propTypes = {
-  rounded: PropTypes.bool,
   work: PropTypes.shape({
     href: PropTypes.string,
     imgSrc: PropTypes.string,
@@ -110,10 +110,6 @@ ListItem.propTypes = {
     category: PropTypes.object,
     slug: PropTypes.string,
   }).isRequired,
-};
-
-ListItem.defaultProps = {
-  rounded: false,
 };
 
 export default ListItem;

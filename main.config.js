@@ -105,3 +105,9 @@ export const spaceships = {
 };
 
 export const works = worksElements;
+
+export const homePageWorks = [
+  'WorldLabs',
+  'SelfLeaders',
+  'OneRemission',
+];

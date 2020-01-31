@@ -113,8 +113,7 @@
   display: inline-block;
   position: relative;
   height: 60px;
-  padding: 0 34px 0 74px;
-  line-height: 62px;
+  padding: 19px 34px 19px 74px;
   border: 2px solid #fff;
   color: #fff;
   text-transform: uppercase;
@@ -122,6 +121,7 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 .btn-e span {
   display: inline-block;
@@ -132,7 +132,7 @@
   position: absolute;
   display: block;
   left: -45px;
-  top: 48%;
+  top: 45%;
   width: 21px;
   height: 2px;
   background-color: #fff;
@@ -150,12 +150,12 @@
   content: "";
   display: block;
   left: -45px;
-  top: 48%;
+  top: 45%;
   margin-top: -5px;
   border-width: 2px;
 }
 .btn-e:hover span:before, .btn-e:hover span:after {
-  animation: moveLeft 3s linear infinite;
+  animation: moveLeft 2s linear infinite;
 }
 
 @keyframes moveLeft {
@@ -174,9 +174,10 @@
   margin: 25px 15px 15px;
 
   a {
+    display: inline-block;
     color: rgba(255, 255, 255, .4);
     text-decoration: none;
-    padding: 0 10px;
+    padding: 5px 8px;
 
     &:hover {
       color: #fff;
