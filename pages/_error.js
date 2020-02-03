@@ -20,7 +20,7 @@ class Error extends React.Component {
     const { router } = this.props;
 
     return (
-      <Layout noMenu>
+      <Layout noMenu noFooter>
         <div className="page-404 slide-block main">
           <div className="circles">
             <section>
