@@ -1,0 +1,84 @@
+.approach-minimum-viable-product-page {
+  .page-header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    background: none;
+    padding: inherit;
+    text-align: center;
+    width: 100%;
+    h1 {
+      color: black;
+    }
+    .italic {
+      font-style: italic;
+    }
+    .big-bold {
+      font-weight: bold;
+      font-size: 38px;
+      padding: 10px 0 0px;
+    }
+    .negative-margin-top {
+      margin-top: -20px;
+    }
+  }
+  .learn-more {
+    width: 300px;
+    margin: auto;
+  }
+  .development-services {
+    display: block;
+    .icon {
+      margin: 20px auto;
+      display: block;
+      height: 60px;
+      width: 60px;
+    }
+    div {
+      display: inline-block;
+      width: 50%;
+      margin: 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .why-mvp-section {
+    display: flex;
+    align-items: center;
+    img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin-right: 24px;
+    }
+    .description {
+      h3 {
+        font-weight: bold;
+      }
+      display: inline-block;
+    }
+  }
+  .learn-more-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  }
+  .why-keenethics-section {
+    h3 {
+      color: #d62c2c;
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+  .case-studies {
+    h3 {
+      font-weight: bold;
+    }
+  }
+  .lets-start-section {
+    margin: -150px auto -30px;
+  }
+}
