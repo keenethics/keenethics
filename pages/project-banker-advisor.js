@@ -15,7 +15,7 @@ const ProjectBankerAdvisor = () => (
         <div className="project-content">
           <div className="project-content-summary" style={{ background: baseColor }}>
             <div className="project-content-summary-inner">
-              <h2 className="title">Banker Advisor</h2>
+              <h2 className="title">BankerAdvisor</h2>
               <p className="description">
                 Investment banking tool
               </p>
@@ -24,7 +24,7 @@ const ProjectBankerAdvisor = () => (
             <div className="project-content-preview">
               <div className="project-content-preview-inner">
                 <img src="/static/images/project/macbook.png" alt="macbook" className="macbook" />
-                <img src="/static/images/project/banker-advisor.png" alt="Banker Advisor" className="screen" />
+                <img src="/static/images/project/banker-advisor.png" alt="BankerAdvisor" className="screen" />
               </div>
             </div>
             <Background />
@@ -58,7 +58,7 @@ const ProjectBankerAdvisor = () => (
             </p>
             <img
               src="/static/images/project/banker-advisor-prew-1.jpg"
-              alt="Banker Advisor"
+              alt="BankerAdvisor"
               className="image-gaps"
             />
             <div className="title">Customer’s story</div>
@@ -90,7 +90,7 @@ const ProjectBankerAdvisor = () => (
             </p>
             <img
               src="/static/images/project/banker-advisor-prew-2.jpg"
-              alt="Banker Advisor"
+              alt="BankerAdvisor"
               className="image-gaps"
             />
             <div className="double-column-wrapper retreat">
@@ -113,7 +113,7 @@ const ProjectBankerAdvisor = () => (
                 </div>
               </div>
               <div className="column">
-                <img src="static/images/project/banker-advisor-how-it-works.jpg" alt="How Banker Advisor works" />
+                <img src="static/images/project/banker-advisor-how-it-works.jpg" alt="How BankerAdvisor works" />
               </div>
             </div>
             <div className="title">Background</div>
@@ -123,15 +123,17 @@ const ProjectBankerAdvisor = () => (
             <div className="project-content-chapter">
               <p className="chapter-title chapter-title-upper">Research</p>
               <p className="chapter-paragraph">
-                Our clients thoroughly researched the demand for the service they
-                wanted to have developed. The market niche was not yet taken.
-                Likewise, we did not find any similar services or direct competitors,
-                and given the obvious need the service, the app has a vast potential.
+                The discovery stage was conducted together with our partner company&nbsp;
+                <a href="https://qubstudio.com/" target="_blank" rel="noopener noreferrer nofollow">Qubstudio</a>
+                . Together with our clients, they thoroughly researched the demand for the service
+                to be developed. The market niche was not yet taken. Likewise, we did not find any
+                similar services or direct competitors, and given the obvious need the service,
+                the app has a vast potential.
               </p>
             </div>
             <img
               src="/static/images/project/banker-advisor-prew-4.png"
-              alt="Banker Advisor"
+              alt="BankerAdvisor"
               className="image-gaps"
             />
             <div className="double-column-wrapper retreat">
@@ -153,12 +155,12 @@ const ProjectBankerAdvisor = () => (
                 </div>
               </div>
               <div className="column">
-                <img src="static/images/project/banker-advisor-personas.jpg" alt="Banker Advisor personas" />
+                <img src="static/images/project/banker-advisor-personas.jpg" alt="BankerAdvisor personas" />
               </div>
             </div>
             <img
               src="/static/images/project/banker-advisor-prew-5.png"
-              alt="Banker Advisor"
+              alt="BankerAdvisor"
               className="image-gaps"
             />
             <div className="project-content-chapter">
@@ -204,7 +206,7 @@ const ProjectBankerAdvisor = () => (
             <PortfolioTechnologyTags tags={['Keystonejs', 'React', 'Redux', 'Express', 'Node.js', 'SCSS', 'Mongodb', 'Mongoose', 'AWS (SES, SNS, S3, EC2)']} />
             <img
               src="/static/images/project/banker-advisor-prew-3.png"
-              alt="Banker Advisor"
+              alt="BankerAdvisor"
               className="image-gaps"
             />
             <a

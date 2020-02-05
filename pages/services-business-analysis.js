@@ -117,7 +117,7 @@ const ServicesBusinessAnalysis = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['ParkQX', 'WorkBooking', 'Banker Advisor'].includes(title),
+    ({ title }) => ['ParkQX', 'WorkBooking', 'BankerAdvisor'].includes(title),
   );
 
   const whyKeenethics = [

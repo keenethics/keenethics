@@ -63,7 +63,7 @@ const DevelopmentAndQualityAssurance = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['Banker Advisor', 'WorkBooking', 'OneRemission'].includes(title),
+    ({ title }) => ['BankerAdvisor', 'WorkBooking', 'OneRemission'].includes(title),
   );
 
   return (

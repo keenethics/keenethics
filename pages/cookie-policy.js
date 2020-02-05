@@ -7,7 +7,7 @@ import LetsStart from './home-page-lets-start';
 
 const CookiePolicy = ({ router }) => (
   <Layout currentURL={router.current}>
-    <div className="page__wrapper">
+    <div className="page__wrapper p-b-0">
       <div className="page__header">
         <h1 className="page__title">Cookie Policy</h1>
       </div>
