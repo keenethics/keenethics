@@ -36,7 +36,7 @@ const MaintenanceAndSupport = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['SelfLeaders', 'Banker Advisor', 'WorldLabs'].includes(title),
+    ({ title }) => ['SelfLeaders', 'BankerAdvisor', 'WorldLabs'].includes(title),
   );
 
   return (

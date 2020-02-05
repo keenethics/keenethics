@@ -136,7 +136,7 @@ Scrum is an iterative managerial framework, and if the team faces an unplanned t
   </figure>
   <div style="display: flex; align-items: flex-start;">
     <img style="width: 50px;" src="/static/portfolio/icons/quotes.svg" alt="quotes">
-    <p style="padding-left: 15px; font-style: italic;">On the <a href="/project-banker-advisor" target="_blank" rel="noopener noreferrer">Banker Advisor</a> project, we decided to use Scrum because there was no complete vision of the final product, and our company had to conduct profound research before we started the development itself. Based on our experience and continuous testing, we have managed to create a product that fully satisfies the expectations of a user.</p>
+    <p style="padding-left: 15px; font-style: italic;">On the <a href="/project-banker-advisor" target="_blank" rel="noopener noreferrer">BankerAdvisor</a> project, we decided to use Scrum because there was no complete vision of the final product, and our company had to conduct profound research before we started the development itself. Based on our experience and continuous testing, we have managed to create a product that fully satisfies the expectations of a user.</p>
   </div>
 </div>
 

@@ -160,7 +160,7 @@ const ServicesUiUxDesign = () => {
   ];
 
   const webDevelopmentWorks = works.filter(
-    ({ title }) => ['ParkQX', 'SelfLeaders', 'Pree', 'Banker Advisor', 'WorkBooking'].includes(title),
+    ({ title }) => ['ParkQX', 'SelfLeaders', 'Pree', 'BankerAdvisor', 'WorkBooking'].includes(title),
   );
 
   return (

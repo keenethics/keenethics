@@ -70,7 +70,7 @@ const whyStaffAugmentation = [
   },
 ];
 
-const webDevelopmentWorks = works.filter(({ title }) => ['The Check Network', 'Banker Advisor', 'Paceup'].includes(title));
+const webDevelopmentWorks = works.filter(({ title }) => ['The Check Network', 'BankerAdvisor', 'Paceup'].includes(title));
 
 class ServicesOutstaffing extends React.Component {
   constructor() {
