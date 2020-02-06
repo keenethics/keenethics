@@ -4,7 +4,7 @@ import Link from 'next/link';
 import _ from 'lodash';
 import classnames from 'classnames';
 import Moment from 'react-moment';
-
+import Webp from '../webp';
 /**
  * Convert blog-post/portfolio-item to same scheme:
  * {
@@ -25,6 +25,7 @@ const getDataFromProperty = (item) => {
       title: item.title,
       description: item.description,
       imgUrl: `/static/portfolio/${item.imgSrc}`,
+      webpUrl: item.webpSrc ? `/static/portfolio/${item.webpSrc}` : null,
       url: item.href,
       asUrl: item.href,
       tags: item.category.main,
@@ -59,6 +60,7 @@ const ListItem = ({ work }) => {
     asUrl,
     tags,
     publishDate,
+    webpUrl,
   } = getDataFromProperty(work);
 
   return (
@@ -67,7 +69,18 @@ const ListItem = ({ work }) => {
         <a className="page__item-link">
           <figure className="page__item-figure">
             <div className="page__item-figure-img-wrap">
-              <img src={imgUrl} alt={title} className="page__item-img" />
+              {
+                webpUrl
+                  ? (
+                    <Webp
+                      src={webpUrl}
+                      fallbackImg={imgUrl}
+                      alt={title}
+                      className="page__item-img"
+                    />
+                  )
+                  : <img src={imgUrl} alt={title} className="page__item-img" />
+              }
             </div>
             <figcaption className="page__item-figcaption">
               {!publishDate && <h3 className="page__item-title">{title}</h3>}
