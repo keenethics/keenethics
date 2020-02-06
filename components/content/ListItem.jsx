@@ -71,12 +71,14 @@ const ListItem = ({ work }) => {
             <div className="page__item-figure-img-wrap">
               {
                 webpUrl
-                  ? <Webp
+                  ? (
+                    <Webp
                       src={webpUrl}
                       fallbackImg={imgUrl}
                       alt={title}
                       className="page__item-img"
                     />
+                  )
                   : <img src={imgUrl} alt={title} className="page__item-img" />
               }
             </div>
