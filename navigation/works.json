@@ -4,6 +4,7 @@
     "metaTitle": "B2C Online Store – KeenEthics Case Study",
     "href": "/project-b2c-online-store",
     "imgSrc": "b2c-online-store/b2c-online-store.png",
+    "webpSrc": "b2c-online-store/b2c-online-store.webp",
     "category": {
       "main": [
         "E-commerce"
@@ -17,6 +18,7 @@
     "metaTitle": "Business Research Platform – KeenEthics Case Study",
     "href": "/project-business-research-platform",
     "imgSrc": "the-business-research-platform/the-business-research-platform.jpg",
+    "webpSrc": "the-business-research-platform/the-business-research-platform.webp",
     "category": {
       "main": [
         "Business"
@@ -30,6 +32,7 @@
     "metaTitle": "WorldLabs – KeenEthics Projects",
     "href": "/project-worldlabs",
     "imgSrc": "worldlabs/wl-screenshot.jpg",
+    "webpSrc": "worldlabs/wl-screenshot.webp",
     "category": {
       "main": [
         "Business"
@@ -43,6 +46,7 @@
     "metaTitle": "Case study: Blood Test Application – KeenEthics",
     "href": "/project-blood-test-application",
     "imgSrc": "blood-test-application/blood-test-application.jpg",
+    "webpSrc": "blood-test-application/blood-test-application.webp",
     "category": {
       "main": [
         "Healthcare"
@@ -56,6 +60,7 @@
     "metaTitle": "Case study: Digital Hospital App - KeenEthics",
     "href": "/project-digital-hospital-app",
     "imgSrc": "digital-hospital-app/digital-hospital-app.jpg",
+    "webpSrc": "digital-hospital-app/digital-hospital-app.webp",
     "category": {
       "main": [
         "Healthcare"
@@ -68,6 +73,7 @@
     "title": "ParkQX",
     "href": "/parkqx-c2c-e-commerce",
     "imgSrc": "parkqx/parkqx.jpg",
+    "webpSrc": "parkqx/parkqx.webp",
     "category": {
       "main": [
         "E-commerce"
@@ -79,6 +85,7 @@
     "title": "Education System Platform",
     "href": "/project-education-system-platform",
     "imgSrc": "education-system-platform.jpg",
+    "webpSrc": "education-system-platform.webp",
     "category": {
       "main": [
         "Education"
@@ -90,6 +97,7 @@
     "title": "OneRemission",
     "href": "/project-one-remission",
     "imgSrc": "one-remission/one-remission.jpg",
+    "webpSrc": "one-remission/one-remission.webp",
     "category": {
       "main": [
         "Healthcare"
@@ -102,6 +110,7 @@
     "metaTitle": "Case study: Diagnostic Appointment Scheduling System  KeenEthics",
     "href": "/project-diagnostic-appointment-scheduling-system",
     "imgSrc": "diagnostic-appointment-scheduling-system/diagnostic-appointment-scheduling-system.jpg",
+    "webpSrc": "diagnostic-appointment-scheduling-system/diagnostic-appointment-scheduling-system.webp",
     "category": {
       "main": [
         "Healthcare"
@@ -114,6 +123,7 @@
     "title": "Pree",
     "href": "/project-pree",
     "imgSrc": "pree.jpg",
+    "webpSrc": "pree.webp",
     "category": {
       "main": [
         "E-commerce"
@@ -126,6 +136,7 @@
     "metaTitle": "Case study: Hospital Marketing Administration System – KeenEthics",
     "href": "/project-hospital-marketing-administration-system",
     "imgSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.jpg",
+    "webpSrc": "hospital-marketing-administration-system/hospital-marketing-administration-system-prew.webp",
     "category": {
       "main": [
         "Healthcare"
@@ -138,6 +149,7 @@
     "title": "SelfLeaders",
     "href": "/project-self-leaders",
     "imgSrc": "selfleaders.jpg",
+    "webpSrc": "selfleaders.webp",
     "category": {
       "main": [
         "Education"
@@ -149,6 +161,7 @@
     "title": "BankerAdvisor",
     "href": "/project-banker-advisor",
     "imgSrc": "banker-advisor.jpg",
+    "webpSrc": "banker-advisor.webp",
     "category": {
       "main": [
         "Finance & Banking"
@@ -171,6 +184,7 @@
     "title": "Tetrami",
     "href": "/project-tetrami",
     "imgSrc": "tetrami.jpg",
+    "webpSrc": "tetrami.webp",
     "category": {
       "main": [
         "E-commerce"
@@ -182,6 +196,7 @@
     "title": "WorkBooking",
     "href": "/project-workbooking",
     "imgSrc": "workbooking.jpg",
+    "webpSrc": "workbooking.webp",
     "category": {
       "main": [
         "Business"
@@ -193,6 +208,7 @@
     "title": "Paceup",
     "href": "/project-paceup",
     "imgSrc": "paceup/paceup.jpg",
+    "webpSrc": "paceup/paceup.webp",
     "category": {
       "main": [
         "Hospitality"
@@ -204,6 +220,7 @@
     "title": "My Grass Growth",
     "href": "/project-my-grass-growth",
     "imgSrc": "my-grass-growth.jpg",
+    "webpSrc": "my-grass-growth.webp",
     "category": {
       "main": [
         "Agriculture"
@@ -215,6 +232,7 @@
     "title": "Pollen",
     "href": "/project-pollen",
     "imgSrc": "pollen.jpg",
+    "webpSrc": "pollen.webp",
     "category": {
       "main": [
         "Business"
@@ -231,12 +249,14 @@
       ]
     },
     "imgSrc": "barfrogs.jpg",
+    "webpSrc": "barfrogs.webp",
     "description": "Find an event you are interested in"
   },
   {
     "title": "Phenix",
     "href": "/project-phenix",
     "imgSrc": "phenix.jpg",
+    "webpSrc": "phenix.webp",
     "category": {
       "main": [
         "Entertainment"
@@ -253,12 +273,14 @@
       ]
     },
     "imgSrc": "wargaming.jpg",
+    "webpSrc": "wargaming.webp",
     "description": "Platform for forecasting and validation of business strategies for companies."
   },
   {
     "title": "Plutio",
     "href": "/project-plutio",
     "imgSrc": "plutio.jpg",
+    "webpSrc": "plutio.webp",
     "category": {
       "main": [
         "Business"
@@ -270,6 +292,7 @@
     "title": "The Check Network",
     "href": "/project-the-check-network",
     "imgSrc": "the-check-network/the-check-network.jpg",
+    "webpSrc": "the-check-network/the-check-network.webp",
     "category": {
       "main": [
         "Business"
@@ -281,6 +304,7 @@
     "title": "ComicEnglish",
     "href": "/project-comic-english",
     "imgSrc": "comicenglish.jpg",
+    "webpSrc": "comicenglish.webp",
     "category": {
       "main": [
         "Education"
@@ -292,6 +316,7 @@
     "title": "Knote",
     "href": "/project-knote",
     "imgSrc": "knote.jpg",
+    "webpSrc": "knote.webp",
     "category": {
       "main": [
         "Real Estate"
@@ -303,6 +328,7 @@
     "title": "Knotel",
     "href": "/project-knotel",
     "imgSrc": "knotel.jpg",
+    "webpSrc": "knotel.webp",
     "category": {
       "main": [
         "Real Estate"
@@ -315,6 +341,7 @@
     "metaTitle": "Case study: Let’s Start Coding – KeenEthics",
     "href": "/project-lets-start-coding",
     "imgSrc": "lets-start-coding/lets-start-coding.jpg",
+    "webpSrc": "lets-start-coding/lets-start-coding.webp",
     "category": {
       "main": [
         "Education"
