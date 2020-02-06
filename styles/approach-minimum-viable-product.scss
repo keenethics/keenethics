@@ -1,4 +1,8 @@
 .approach-minimum-viable-product-page {
+  h1 {
+    color: black;
+    text-align: center;
+  }
   .page-header {
     display: flex;
     justify-content: center;
@@ -8,9 +12,6 @@
     padding: inherit;
     text-align: center;
     width: 100%;
-    h1 {
-      color: black;
-    }
     .italic {
       font-style: italic;
     }
@@ -24,7 +25,7 @@
     }
   }
   .learn-more {
-    width: 300px;
+    width: 200px;
     margin: auto;
   }
   .development-services {
@@ -63,13 +64,15 @@
   .learn-more-button-container {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin: 30px 0px 50px;
   }
   .why-keenethics-section {
     h3 {
       color: #d62c2c;
+      font-style: italic;
       span {
-        font-size: 30px;
+        padding-right: 5px;
+        font-size: 32px;
       }
     }
   }
