@@ -812,7 +812,8 @@ body .orange-btn {
     flex-direction: column;
     justify-content: center;
     font-size: 18px;
-    width: 40%;
+    width: 326px;
+    min-width: 326px;
     line-height: 28px;
     .text-section-title {
       font-weight: 600;
@@ -1565,7 +1566,7 @@ body .orange-btn {
 //   }
 // }
 
-@include for-tablet {
+@include for-tablet-max {
 
   .section-founders {
     flex-direction: column;
