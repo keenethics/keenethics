@@ -13,9 +13,9 @@ const Main = () => (
             <SocialButton />
           </div>
           <h4 className="home-page-small-title">
-            WE SOLVE YOUR BUSINESS CHALLENGES
+            CODE FOR BUSINESS
             <br />
-            WITH FULL-CYCLE DEVELOPMENT
+            CARE FOR THE WORLD
           </h4>
           <div className="vertical-line" />
           <h1 className="home-page-large-title">
@@ -44,7 +44,7 @@ const Main = () => (
               target="_blank"
               rel="noreferrer noopener nofollow"
             >
-              5-stars rated company at Clutch
+              5-star rated company on Clutch
             </a>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Main = () => (
       </div>
       <div className="side-info-top">
         <Link href="/contacts?activeform=estimate">
-          <a className="button contacts-goal side-info-top-content">Free estimate</a>
+          <a className="button contacts-goal side-info-top-content">Project estimate</a>
         </Link>
       </div>
       <div className="scroll-info-container">

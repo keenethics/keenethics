@@ -349,7 +349,7 @@ const Contacts = ({ router }) => {
                   )}
                   type="button"
                 >
-                  Free estimate
+                  Project estimate
                 </button>
               </div>
               <div
@@ -394,7 +394,7 @@ const Contacts = ({ router }) => {
                     )}
                     type="button"
                   >
-                    Free estimate
+                    Project estimate
                   </button>
                 </div>
                 <ContactsProvider

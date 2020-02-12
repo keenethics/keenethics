@@ -180,14 +180,14 @@ const ContactForm = () => {
             className="grey"
             text={(
               <>
-                I want to use a&nbsp;
+                I want to join KeenEthics in a social project like&nbsp;
                 <a
-                  href="https://mailchi.mp/keenethics/offers-for-keen-subscribers"
+                  href="https://letkidsmove.org/en"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="grey sub-dis"
                 >
-                  subscriber discount
+                  Let Kids Move
                 </a>
               </>
             )}

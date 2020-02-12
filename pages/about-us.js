@@ -13,17 +13,9 @@ const AboutUs = () => (
     <section className="page__wrapper page__about-us">
       <div className="page__header">
         <h1 className="page__title">
-          we solve&nbsp;
-          <br className="desktop-plus" />
-          your
-          <br className="tablet" />
-          <em>
-            business&nbsp;
-            <br className="mobile-only" />
-            challenges
-          </em>
+          CODE FOR BUSINESS
           <br />
-          WITH FULL-CYCLE DEVELOPMENT
+          CARE FOR THE WORLD
         </h1>
         <div className="separator" />
         <h5>

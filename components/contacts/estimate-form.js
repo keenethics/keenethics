@@ -929,10 +929,17 @@ Start
                 className="grey"
                 text={(
                   <>
-I want to use a&nbsp;
-                    <a href="https://mailchi.mp/keenethics/offers-for-keen-subscribers" target="_blank" rel="noopener noreferrer" className="grey sub-dis">subscriber discount</a>
+                    I want to join KeenEthics in a social project like&nbsp;
+                    <a
+                      href="https://letkidsmove.org/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="grey sub-dis"
+                    >
+                      Let Kids Move
+                    </a>
                   </>
-)}
+                )}
                 name="estimateFormIsSubscriberDiscount"
                 id="estimateFormIsSubscriberDiscount"
                 value="estimateFormIsSubscriberDiscount"
