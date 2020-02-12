@@ -412,7 +412,7 @@ export default class Post extends React.Component {
                 },
                 publisher: {
                   '@type': 'Organization',
-                  name: 'Moz',
+                  name: 'KeenEthics',
                   url: 'https://keenethics.com/',
                   sameAs: ['https://www.facebook.com/keenethics.development/', 'https://www.linkedin.com/company/keen-ethics/', 'https://github.com/keenethics', 'https://twitter.com/keen_ethics', 'https://www.upwork.com/o/companies/~0106b5437592391f94/', 'https://www.instagram.com/keen_ethics/'],
                   logo: {

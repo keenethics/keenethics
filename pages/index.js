@@ -15,37 +15,6 @@ import LetsStart from './home-page-lets-start';
 import { getPostsList } from '../lib/contentful';
 import PostsContext from '../components/context/posts-context';
 
-const JsonLd = ({ data }) => (
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-  />
-);
-
-JsonLd.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
-const companyData = {
-  '@context': 'http://www.schema.org',
-  '@type': 'Organization',
-  name: 'KeenEthics',
-  url: 'https://keenethics.com/',
-  description: 'Custom Software Development Company',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Kulparkivska St, 59',
-    addressLocality: 'Lviv',
-    postalCode: '79000',
-    addressCountry: 'Ukraine',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+38 (096) 814 72 66',
-    contactType: 'Sales Representative',
-  },
-};
-
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -102,7 +71,6 @@ export default class Index extends React.Component {
     return (
       <PostsContext.Provider value={posts}>
         <Layout>
-          <JsonLd data={companyData} />
           <Main />
           <OurServices
             isMobile={isMobile}

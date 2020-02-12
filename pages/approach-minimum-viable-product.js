@@ -10,9 +10,9 @@ import { works } from '../main.config';
 
 import Works from '../components/portfolio/works';
 
-const workbookingDescription = works.find(work => work.title === 'WorkBooking');
-const oneRemissionDescription = works.find(work => work.title === 'OneRemission');
-const bankerAdvisorDescription = works.find(work => work.title === 'BankerAdvisor');
+const workbookingDescription = works.find((work) => work.title === 'WorkBooking');
+const oneRemissionDescription = works.find((work) => work.title === 'OneRemission');
+const bankerAdvisorDescription = works.find((work) => work.title === 'BankerAdvisor');
 
 const ApproachMinimumValProduct = () => (
   <Layout>
@@ -244,7 +244,7 @@ const ApproachMinimumValProduct = () => (
             : 2 developers and 1 PM
           </p>
         </div>
-        <Works works={[oneRemissionDescription]}/>
+        <Works works={[oneRemissionDescription]} />
         <h3>Banker Advisor</h3>
         <p>
           Banker Advisor is a platform where users can choose a provider of
@@ -289,7 +289,7 @@ const ApproachMinimumValProduct = () => (
             : 5 developers, 1 QA, and 1 PM
           </p>
         </div>
-        <Works works={[bankerAdvisorDescription]}/>
+        <Works works={[bankerAdvisorDescription]} />
         <h3>WorkBooking</h3>
         <p>
           WorkBooking is a platform for job search and headhunting.
@@ -327,7 +327,7 @@ const ApproachMinimumValProduct = () => (
             : 3 full-stack developers, 1 QA specialist, and 1 PM
           </p>
         </div>
-        <Works works={[workbookingDescription]}/>
+        <Works works={[workbookingDescription]} />
       </div>
       <h1>Now, let’s discuss your business idea!</h1>
 
