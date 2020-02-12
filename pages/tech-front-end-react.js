@@ -134,7 +134,7 @@ const TechFrontEndReact = () => (
 
       <section>
         <h2>React Projects</h2>
-        <Works works={works.filter(({ title }) => ['SelfLeaders', 'Banker Advisor', 'WorkBooking'].includes(title))} />
+        <Works works={works.filter(({ title }) => ['SelfLeaders', 'BankerAdvisor', 'WorkBooking'].includes(title))} />
       </section>
 
       <CallToActionButton title="CONTACT US" href="/contacts" />

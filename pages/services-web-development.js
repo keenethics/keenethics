@@ -107,7 +107,7 @@ const whatDoWeOfferIcons = [
   },
 ];
 
-const webDevelopmentWorks = works.filter(({ title }) => ['The Check Network', 'Banker Advisor', 'Paceup'].includes(title));
+const webDevelopmentWorks = works.filter(({ title }) => ['The Check Network', 'BankerAdvisor', 'Paceup'].includes(title));
 
 class ServicesWebDevelopment extends React.Component {
   constructor() {

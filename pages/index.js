@@ -51,7 +51,6 @@ export default class Index extends React.Component {
     super(props);
 
     this.state = {
-      isLoading: true,
       isMobile: false,
       isTablet: false,
       isTabletL: false,
@@ -71,7 +70,6 @@ export default class Index extends React.Component {
       this.listener = window.addEventListener('resize', ({ target }) => {
         if (target) {
           this.setState({
-            isLoading: false,
             isTabletL: target.innerWidth <= 1024 && target.innerWidth > 768,
             isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
             isMobile: target.innerWidth <= 480,
@@ -80,7 +78,6 @@ export default class Index extends React.Component {
       });
 
       this.setState({
-        isLoading: false,
         isTabletL: window.innerWidth <= 1024 && window.innerWidth > 768,
         isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
         isMobile: window.innerWidth <= 480,
@@ -89,7 +86,7 @@ export default class Index extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.listener) {
+    if (typeof window !== 'undefined' && this.listener) {
       window.removeEventListener(this.listener);
     }
   }
@@ -97,13 +94,10 @@ export default class Index extends React.Component {
   render() {
     const { posts } = this.props;
     const {
-      isLoading,
       isMobile,
       isTablet,
       isTabletL,
     } = this.state;
-
-    if (isLoading) return null;
 
     return (
       <PostsContext.Provider value={posts}>
@@ -125,10 +119,6 @@ export default class Index extends React.Component {
           />
           <Partners />
           <LetsStart />
-          {/* <HomeFooter
-            isMobile={isMobile}
-            isTablet={isTablet}
-          /> */}
         </Layout>
       </PostsContext.Provider>
     );

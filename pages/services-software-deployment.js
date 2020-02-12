@@ -103,7 +103,7 @@ const SoftwareDeploymentAndImplementation = () => {
   ];
 
   const softwareDeploymentWorks = works.filter(
-    ({ title }) => ['OneRemission', 'SelfLeaders', 'Banker Advisor'].includes(title),
+    ({ title }) => ['OneRemission', 'SelfLeaders', 'BankerAdvisor'].includes(title),
   );
 
   return (

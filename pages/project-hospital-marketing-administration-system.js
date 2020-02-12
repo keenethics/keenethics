@@ -64,7 +64,7 @@ const ProjectPrix = () => (
                 From our side, a middle software developer, a Quality Assessment specialist, an HTML/CSS coder, and a UI/UX designer were working on the front-end for this project. A team lead and developers working on the back-end of the hospital management software were provided from the client’s side.
               </p>
               <h3>Technologies</h3>
-              <p>For the hospital management software development of this <Link href="/services-web-development">web platform</Link>, we have used such technologies as <Link href="/tech-front-end-react">React</Link>, <Link href="/tech-front-end-redux">Redux</Link>, <Link href="/tech-back-end-express">Express</Link>, RethinkDB, and Webpack2.</p>
+              <p>For the hospital management software development of this <Link href="/services-web-development">web platform</Link>, we have used such technologies as <Link href="/tech-front-end-react">React</Link>, Redux, <Link href="/tech-back-end-express">Express</Link>, RethinkDB, and Webpack2.</p>
               <ul className="technologies-list">
                 <li className="technologies-item">
                   <img style={{ maxHeight: '90px' }} src="/static/portfolio/technologies/react-logo.svg" alt="react" />

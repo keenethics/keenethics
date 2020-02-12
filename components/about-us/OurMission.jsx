@@ -45,8 +45,10 @@ class OurMission extends React.Component {
   }
 
   componentDidMount() {
-    this.adjustDimensions();
-    window.addEventListener('resize', this.adjustDimensions);
+    if (typeof window !== 'undefined') {
+      this.adjustDimensions();
+      window.addEventListener('resize', this.adjustDimensions);
+    }
   }
 
   componentDidUpdate(_, prevState) {
@@ -60,7 +62,9 @@ class OurMission extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.adjustDimensions);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.adjustDimensions);
+    }
   }
 
   setStep = (toStep) => {

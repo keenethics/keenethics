@@ -86,7 +86,7 @@ By doing so, you will be able to reassess your idea before starting the developm
 
 More than that, you should be prepared that your initial product idea is barely likely to stay intact. After the discovery stage, you might need to reevaluate your target audience, communication model, or pricing strategy. It is a natural process aimed to improve the final outcome, so if you trust your development partners, do not resist changes they offer.
 
-<p>At this point, you also need to decide which platforms you want your app to operate on, is it a <a href="/services-web-development" target="_blank" rel="noopener noreferrer nofollow">web</a>, a <a href="/services-desktop-applications" target="_blank" rel="noopener noreferrer">desktop</a>, or a <a href="/services-mobile-development" target="_blank" rel="noopener noreferrer nofollow">mobile</a> platform. If that is a chatbot, you need to select channels it should support. Accordingly, your partners will help you to choose the technical stack, which would allow them to develop the best-functioning application.</p>
+<p>At this point, you also need to decide which platforms you want your app to operate on, is it a <a href="/services-web-development" target="_blank" rel="noopener noreferrer nofollow">web</a>, a desktop, or a <a href="/services-mobile-development" target="_blank" rel="noopener noreferrer nofollow">mobile</a> platform. If that is a chatbot, you need to select channels it should support. Accordingly, your partners will help you to choose the technical stack, which would allow them to develop the best-functioning application.</p>
 
 ## Hand In Your Idea to the Developers
 

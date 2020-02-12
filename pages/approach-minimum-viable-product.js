@@ -1,213 +1,337 @@
 import React from 'react';
 import Link from 'next/link';
-
+import RocketIcon from '../components/approach-minimum-viable-product/RocketIcon';
+import GlassIcon from '../components/approach-minimum-viable-product/GlassIcon';
 import Layout from '../components/layout/main';
+import LetsStart from './home-page-lets-start';
 import ContentNavigation from '../components/content/navigation';
+
+import { works } from '../main.config';
+
+import Works from '../components/portfolio/works';
+
+const workbookingDescription = works.find(work => work.title === 'WorkBooking');
+const oneRemissionDescription = works.find(work => work.title === 'OneRemission');
+const bankerAdvisorDescription = works.find(work => work.title === 'BankerAdvisor');
 
 const ApproachMinimumValProduct = () => (
   <Layout>
-    <ContentNavigation image="min" />
-    <div className="content-block">
-      <h1 style={{ marginBottom: 0 }}>
-        Minimum Viable Product: Between an Idea and the Product
-      </h1>
-      <p style={{ fontStyle: 'italic' }}>
-        A product with just enough features to gather comprehensive qualitative
-        feedback
-      </p>
-      <p>
-        Every customer wants to be heard and understood. The software world
-        offers an excessive number of apps and websites, but only some of them
-        receive users’ attention and love. To find out whether your idea can
-        find a place in this competitive environment, create a minimum viable
-        product first or partner up with an agency that can provide you with MVP
-        development services.
-      </p>
-      <section>
-        <h2>What Is MVP?</h2>
-        <p>
-          The minimum viable product is a perfect opportunity to let potential
-          users voice their attitude and to test out a product before its final
-          launch. Gathering and analyzing qualitative feedback is a primary task
-          of an MVP development company. Based on such findings, the business
-          modifies its product idea to meet the customer’s expectations. After
-          that, another MVP is created and tested, the customer research
-          findings are updated, and the project is adjusted accordingly. This
-          process turns into a cycle of MVP product development and takes place
-          over and over again until the ultimate customer satisfaction is
-          reached.
+    <ContentNavigation />
+    <div className="content-block approach-minimum-viable-product-page">
+      <div className="page-header">
+        <h1>MVP Development Services</h1>
+
+        <p className="italic">
+          Using a resource-efficient approach to test the viability of your business idea
         </p>
-      </section>
-      <section>
-        <h2>How MVP Software Development Is Conducted?</h2>
-        <p>
-          Each and every product is different, and so is the process of its
-          development. Before we jump into details as for how MVP software
-          development is carried out, we want to point out that it is an
-          individual and iterative process.
-        </p>
-        <p>
-          At first, you have an idea. Even if you feel that it is revolutionary
-          and genius, in fact, it still may be rather vague.
-        </p>
-        <p>
-          Our task as of an MVP development company is to help you put this idea
-          into practice. We start with conducting research: we study the needs,
-          interests, and demographic characteristics of the target audience, we
-          analyze the strengths and weaknesses of competitors, we check out all
-          the features we may implement and select the best ones of them. The
-          information is organized and presented with the help of graphs,
-          charts, tables, or any other visuals we agree on.
-        </p>
-        <p>Now, your idea seems clearer, but it still not presentable.</p>
-        <p>
-          We create a Proof of Concept. Basically, it is aimed at summarizing
-          the discovery stage and verifying that a theoretical idea can be put
-          into practice.
-        </p>
-        <p>
-          Ok, you know that your idea is feasible and comprehensive. You know
-          that it can be done, but how?
-        </p>
-        <p>
-          We need to understand what the user wants to see once they open the
-          application, which actions they are most likely to take, or how they
-          think. For this purpose, we map a user journey – a visual
-          representation of a hypothetical user and their experience with the
-          app from the minute they realize the need in a certain service,
-          through the moment they first find and click through your app, and up
-          until they make a decision whether to make this service a part of
-          their lifestyle.
-        </p>
-        <p>
-          After that, we develop a prototype, which is a simplified version of
-          the product. It is interactive and working, it demonstrates the final
-          product design and navigation.
-        </p>
-        <p>
-          Here, you have your idea implemented. Kind of. It can be shown to all
-          the stakeholders but not to the client as long as it is just a rough
-          draft.
-        </p>
-        <p>
-          We make ultimate decisions about UI/UX and finalize the visual design,
-          after which we start coding the minimum viable product.
-        </p>
-        <p>
-          Your idea is illustrated, put in the code, and partially implemented –
-          ready to meet its first user.
-        </p>
-        <p>
-          We finish the process of MVP software development, launch the MVP,
-          gather customers’ feedback, and analyze the results, according to
-          which the MVP is modified.
-        </p>
-        <p>
-          Once you see that your customers are fully satisfied, you are willing
-          to start implementing the final product.
-        </p>
-        <h3>MVP Product Development Cycle</h3>
-        <img
-          src="/static/approach/m-v-p/mvp-1.jpg"
-          alt="MVP Product Development Cycle"
-        />
-        <h3>For Example?</h3>
-        <p>
-          Let’s imagine, you want to create a bicycle. A cool, sturdy, and
-          eco-friendly bicycle.
-        </p>
-        <p>
-          What if the potential clients do not like it and your effort goes in
-          vain? Or what if you are on a shoestring budget and you need to
-          persuade investors first?
-        </p>
-        <p>
-          You conduct a discovery stage: what a bike is, what parts it consists
-          of, what bikes people like, and what riders complain about. After
-          that, you answer the most important question: what you can do to make
-          your bicycle stand out among the others.
-        </p>
-        <p>
-          Let’s say, you found out how to create a bicycle chain that never
-          falls out the chainring. Once you have a clear idea, you create your
-          mechanism: a chain, with a chainring and pedals – your proof of
-          concept. You show it to your investors, tell them more about your
-          idea, and receive their approval and support to keep going with the
-          project.
-        </p>
-        <img
-          src="/static/approach/m-v-p/mvp-2.jpg"
-          alt="MVP Product Development Cycle"
-        />
-        <p>
-          Yet, it is not the time for the final bicycle as you have not seen it
-          yet in actual size. You create a full-scale copy of the bicycle,
-          carefully choose all the colors and materials, make it resemble a real
-          product. However, the pedals won’t spin yet, and the steering wheel
-          won’t turn. This is your prototype – looks pretty impressive but does
-          not work yet.
-        </p>
-        <img
-          src="/static/approach/m-v-p/mvp-3.jpg"
-          alt="MVP Product Development Cycle"
-        />
-        <p>
-          Your investors again review the idea and approve your design, but now
-          they need to see the functionality. You again create a full-scale
-          bicycle, but now, it has a working wheel, pedals, breaks, gears, and a
-          sit. That is going to be your MVP. At this point, you can actually let
-          your users try it out. They get on a bike, test it, and share their
-          opinion with you. The more people tried it, the more comprehensive
-          feedback you have. However, be sure not to show your bicycle to the
-          people you do not trust or they leak your idea to a next-door guy who
-          also makes bikes for a living.
-        </p>
-        <img
-          src="/static/approach/m-v-p/mvp-4.jpg"
-          alt="MVP Product Development Cycle"
-        />
-        <p>
-          Subsequently, you modify your product in accordance with what your
-          customers had to say until you are sure that you get it.
-        </p>
-        <p>
-          And only after all these steps, when you have received financial
-          support from your investors and approval of your customers, you are
-          ready to launch manufacturing. You change a wooden seat with a
-          cushioned one, install safety lights on your bicycle, lubricate the
-          bicycle chain, put stickers and a bell, develop a marketing campaign,
-          and start selling your product.
-        </p>
-        <img
-          src="/static/approach/m-v-p/mvp-5.jpg"
-          alt="MVP Product Development Cycle"
-        />
-      </section>
-      <section>
-        <h2>Why Is MVP Important?</h2>
-        <p>
-          The MVP framework can and should be used within industries of all
-          sorts. While for the manufacturers of traditional goods, it is a long
-          and strenuous process, for the software developers, it is rather
-          simple and accessible. Therefore, if the decision of any other
-          business to disregard the minimum viable product development when
-          creating something innovative is somehow understandable and can be
-          justified, for a software development company, it is unforgivable.
-          Eventually, if one decides to run a risk and implement the idea before
-          checking up with the target audience, they put money, time, effort,
-          energy, inspiration, and supporters on the line.
-        </p>
-      </section>
-      <p style={{ fontWeight: 700 }}>
-        If you are interested in MVP development services,
-        please, feel free to&nbsp;
         <Link href="/contacts">
-          <a>
-            contact us
-          </a>
+          <a className="button button-send learn-more">Learn more</a>
         </Link>
-        .
+        <p className="big-bold"> By 6 times </p>
+        <p className="negative-margin-top">
+          less time it takes to develop an MVP than to develop a full app.
+        </p>
+      </div>
+
+      <h1>What Is MVP Development Services?</h1>
+
+      <p>
+        The minimum viable product is a product with a minimum necessary set of features,
+        which is developed in a short period of time. The idea of MVP software development
+        is to test the viability of your product idea – to see if the market needs it,
+        if the users like it, and show you can improve it. This lets you make sure that
+        your product will be competitive before you actually start investing in full-scaled
+        software product development. Along with proof of concept,&nbsp;
+        <Link href="/blog/1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way">
+          <a>prototype</a>
+        </Link>
+        ,
+        and&nbsp;
+        <Link href="/blog/1521631041972-the-importance-of-mockups">
+          <a>mockup</a>
+        </Link>
+        ,
+        the minimum viable product is an important stage of the product discovery process.
       </p>
+
+      <h1>What MVP Development Services Do We Offer?</h1>
+      <div className="development-services">
+        <div>
+          <RocketIcon className="icon" />
+          <p>MVP as a Part of Discovery Stage</p>
+        </div>
+        <div>
+          <GlassIcon className="icon" />
+          <p>MVP Exclusively</p>
+        </div>
+      </div>
+      <p>
+        Ideally, we start with product discovery and go through prototyping
+        before we start developing MVP. However, if you have already completed
+        the discovery and prototyping stages yourself or with a different agency,
+        we will gladly continue from where you stopped.
+      </p>
+      <h1>Why MVP?</h1>
+      <div className="why-mvp-section">
+        <img
+          src="static/images/mvp1.png"
+          alt=""
+        />
+        <div className="description">
+          <h3>Decisive</h3>
+          <p>
+            A minimum viable product is a chance to test the viability of your business
+            idea and to decide whether it is worth implementing with a minimum business risk.
+          </p>
+        </div>
+      </div>
+      <div className="why-mvp-section">
+        <img
+          src="static/images/mvp2.png"
+          alt=""
+        />
+        <div className="description">
+          <h3>Resource-efficient</h3>
+          <p>
+          The minimum viable product development takes about 6 times less time and costs
+          than the development of a full app and saves you a lot of effort.
+          </p>
+        </div>
+      </div>
+      <div className="why-mvp-section">
+        <img
+          src="static/images/mvp3.png"
+          alt=""
+        />
+        <div className="description">
+          <h3>Persuasive</h3>
+          <p>
+            As MVP is faster to develop, you will be able to demonstrate your product
+            to the investors and sponsors sooner.
+            This will guarantee you another round of investment.
+          </p>
+        </div>
+      </div>
+      <div className="why-mvp-section">
+        <img
+          src="static/images/mvp4.png"
+          alt=""
+        />
+        <div className="description">
+          <h3>Insightful</h3>
+          <p>
+            An MVP development company lets you understand the needs and
+            interests of your users better. MVP offers a unique insight
+            into the market you strive to enter.
+          </p>
+        </div>
+      </div>
+      <div className="learn-more-button-container">
+        <Link href="/contacts">
+          <a className="button button-send learn-more">Learn more</a>
+        </Link>
+      </div>
+
+      <h1>Why KeenEthics?</h1>
+
+      <div className="why-keenethics-section">
+        <h3>
+          <span>1</span>
+          {' '}
+          Empowering growth
+        </h3>
+        <p>
+          There is a sense to develop a minimum viable product
+          only if the result is of a high quality and the MVP
+          development process itself is fast and cost-efficient.
+          Otherwise, MVP may turn out to be just a waste of money.
+          We will not let that happen to you. Instead, we will put
+          our best effort into developing a great product with minimum
+          time and cost risks. This is how we empower your business growth.
+        </p>
+        <h3>
+          <span>2</span>
+          {' '}
+          Building value
+        </h3>
+        <p>
+          The ethics is our mission, not just a part of our name. We want to
+          be honest with you. If the MVP proves that your product is not
+          viable, we will not try to convince you to develop a full app.
+          Instead, we can offer&nbsp;
+          <Link href="/services-business-analysis">
+            <a>business analysis services</a>
+          </Link>
+          , which will
+          help you advance your idea. We understand how important your
+          idea is, and we will do our best to let it blossom.
+        </p>
+        <h3>
+          <span>3</span>
+          {' '}
+          Launching in a matter of weeks
+        </h3>
+        <p>
+          Time-efficiency is one of the primary reasons you have opted in
+          favor of MVP development services. Why to lose time on preparing
+          the project launch? The partner engagement process can take as
+          little as a week or two if organized properly. Our expert Partner
+          Engagement Manager will help you enter the project development
+          stage in the shortest terms.
+        </p>
+        <h3>
+          <span>4</span>
+          {' '}
+          Bringing tech expertise
+        </h3>
+        <p>
+          We have almost five years of experience of working with startup
+          projects. In fact, we launched a few startups inside our company.
+          Our MVP development company understands the challenges you face
+          and the needs you have. We will help you translate your idea into
+          the essential set of features, advise on a development approach,
+          and suggest the most effective technology stack.
+        </p>
+        <h3>
+          <span>5</span>
+          {' '}
+          Protecting your data
+        </h3>
+        <p>
+          The last thing you want when trying to bring your innovative idea
+          to life is to have it stolen. Our team uses secure communication
+          channels and servers for nobody to access the data unwarrantably.
+          Also, before we start cooperating, we offer you to sign a
+          Non-Disclosure Agreement for you to be sure that we do not
+          publicize your project idea.
+        </p>
+      </div>
+      <h1>Case Studies</h1>
+      <div className="case-studies">
+        <h3>OneRemission</h3>
+        <p>
+          The idea of this iOS app is to simplify and improve the quality
+          of cancer survivors’ lives. The minimum viable product development
+          showed that it will be the first chatbot-based mobile app in the
+          field of Integrative Oncology. The goal of it is impressive –  to
+          educate people who successfully fought cancer and those who take
+          care of them about how to avoid the disease from reoccurring. We are
+          proud to have been involved in such a socially significant project.
+          Today, the project often receives positive reviews.
+        </p>
+        <div>
+          <p>
+            <b>Platform</b>
+            :&nbsp;
+            <Link href="/services-mobile-development-apple">
+              <a>iOS</a>
+            </Link>
+          </p>
+          <p>
+            <b>Technologies</b>
+            : MongoDB,&nbsp;
+            <Link href="/services-web-development-node">
+              <a>Node.js</a>
+            </Link>
+        , Wit.ai, BotPress, WebSocket
+          </p>
+          <p>
+            <b>Methodology</b>
+            : Kanban
+          </p>
+          <p>
+            <b>Team</b>
+            : 2 developers and 1 PM
+          </p>
+        </div>
+        <Works works={[oneRemissionDescription]}/>
+        <h3>Banker Advisor</h3>
+        <p>
+          Banker Advisor is a platform where users can choose a provider of
+          financial services that suits them the most. When you think about
+          going on a trip or looking for a restaurant to eat at, you go to
+          TripAdvisor. Banker Advisor founder was wondering, why there was
+          no such service for the investment and banking industry? We helped
+          him test his idea and turn it into a great well-thought-out web solution.
+          This platform offers a full picture of the financial institutions in a
+          certain location in a certain industry sector.
+        </p>
+        <div>
+          <p>
+            <b>Platform</b>
+            :&nbsp;
+            <Link href="/services-web-development">
+              <a>Web</a>
+            </Link>
+          </p>
+          <p>
+            <b>Technologies</b>
+            : Keystonejs,&nbsp;
+            <Link href="/tech-front-end-react">
+              <a>React</a>
+            </Link>
+          , Redux,&nbsp;
+            <Link href="/tech-back-end-express">
+              <a>Express</a>
+            </Link>
+          ,&nbsp;
+            <Link href="/services-web-development-node">
+              <a>Node.js</a>
+            </Link>
+          ,SCSS, MongoDB, Mongoose, AWS (SES, SNS, S3, EC2)
+          </p>
+          <p>
+            <b>Methodology</b>
+            : Kanban
+          </p>
+          <p>
+            <b>Team</b>
+            : 5 developers, 1 QA, and 1 PM
+          </p>
+        </div>
+        <Works works={[bankerAdvisorDescription]}/>
+        <h3>WorkBooking</h3>
+        <p>
+          WorkBooking is a platform for job search and headhunting.
+          It brings together employers who look for employees and
+          professionals who look for a job. Suitable both for commercial
+          businesses and for NGOs, it can be accessed on any device.
+          To win over the Austrian market, the platform has been augmented
+          with convenient tools for searching and scheduling. We understood
+          that we needed those features after we tested the MVP.
+        </p>
+        <div>
+          <b>Platform</b>
+          :&nbsp;
+          <Link href="/services-web-development">
+            <a>Web</a>
+          </Link>
+          <p>
+            <b>Technologies</b>
+            :&nbsp;
+            <Link href="/tech-back-end-meteor">
+              <a>Meteor</a>
+            </Link>
+            ,&nbsp;
+            <Link href="/tech-front-end-react">
+              <a>React</a>
+            </Link>
+            , and MongoDB
+          </p>
+          <p>
+            <b>Methodology</b>
+            : Scrum
+          </p>
+          <p>
+            <b>Team</b>
+            : 3 full-stack developers, 1 QA specialist, and 1 PM
+          </p>
+        </div>
+        <Works works={[workbookingDescription]}/>
+      </div>
+      <h1>Now, let’s discuss your business idea!</h1>
+
+      <LetsStart className="lets-start-section" />
     </div>
   </Layout>
 );

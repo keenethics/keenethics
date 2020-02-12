@@ -13,7 +13,9 @@ import Footer from './footer';
 
 import Navigation from './navigation/main';
 
-if (typeof window !== 'undefined' && !window.Promise) {
+const isClient = typeof window !== 'undefined';
+
+if (isClient && !window.Promise) {
   window.Promise = Promise;
 }
 
@@ -22,7 +24,6 @@ class Layout extends React.Component {
     super(props);
 
     this.state = {
-      isLoading: true,
       dimensions: {
         width: -1,
         height: -1,
@@ -35,23 +36,28 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
+    if (isClient) {
+      window.addEventListener('resize', this.updateDimensions);
 
-    this.updateDimensions();
+      this.updateDimensions();
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
+    if (isClient) {
+      window.removeEventListener('resize', this.updateDimensions);
+    }
   }
 
   updateDimensions() {
-    this.setState({
-      isLoading: false,
-      dimensions: {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      },
-    });
+    if (isClient) {
+      this.setState({
+        dimensions: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        },
+      });
+    }
   }
 
   toggleNav() {
@@ -64,7 +70,6 @@ class Layout extends React.Component {
 
   render() {
     const {
-      isLoading,
       dimensions,
     } = this.state;
     const {
@@ -79,12 +84,10 @@ class Layout extends React.Component {
 
     const currentURL = router.route;
 
-    const contentInnerStyle = { ...style, height: dimensions.height };
+    const contentInnerStyle = { ...style };
 
-    if (isLoading) return null; // TODO: set preloader
-
-    const isTablet = dimensions.width <= 768 && dimensions.width > 480;
-    const isMobile = dimensions.width <= 480;
+    const isTablet = isClient ? (dimensions.width <= 768 && dimensions.width > 480) : false;
+    const isMobile = isClient ? dimensions.width <= 480 : false;
 
     return (
       <div className="layout">
@@ -93,7 +96,7 @@ class Layout extends React.Component {
           <Navigation
             currentURL={currentURL}
             toggleNav={this.toggleNav}
-            isTablet={dimensions.width < 769}
+            isTablet={isTablet}
           />
         )}
         <div className="content">

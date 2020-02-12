@@ -16,10 +16,14 @@ const mobileYearOffsets = [
 ];
 
 const getOffset = (step) => {
-  if (window.innerWidth < 768) {
-    return { transform: `translateX(${-25 * step}%)` };
+  if (typeof window !== 'undefined') {
+    if (window.innerWidth < 768) {
+      return { transform: `translateX(${-25 * step}%)` };
+    }
+    return { transform: `translateY(${-25 * step}%)` };
   }
-  return { transform: `translateY(${-25 * step}%)` };
+
+  return {};
 };
 
 const OurStory = () => {
@@ -33,7 +37,7 @@ const OurStory = () => {
 
   const bind = useGesture({
     onDragEnd: throttle(({ vxvy }) => {
-      if (window.innerWidth > 1024) {
+      if (typeof window !== 'undefined' && window.innerWidth > 1024) {
         return;
       }
       const vx = Math.abs(vxvy[0]);

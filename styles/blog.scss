@@ -657,10 +657,10 @@ div.person {
   }
   &-rocket {
     height: 132px;
-    @media (min-width: $desktop-md) {
+    @media (min-width: $desktop-md) and (min-height: 700px) {
       height: 208px;
     }
-    @media (min-width: $desktop-lg) {
+    @media (min-width: $desktop-lg) and (min-height: 700px){
       height: 252px;
     }
   }
@@ -698,7 +698,7 @@ div.person {
     letter-spacing: 0.56px;
     text-align: center;
     margin: 24px 22px 16px 22px;
-    @media (min-width: $desktop-md) {
+    @media (min-width: $desktop-md) and (min-height: 580px) {
       margin-top: 48px;
     }
   }

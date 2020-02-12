@@ -100,7 +100,7 @@ const Partners = () => {
               avatar="mike-casey"
               name="Mike Casey"
               from="the USA, Georgia"
-              position="Founder at Banker Advisor, an investment banking company"
+              position="Founder at BankerAdvisor, an investment banking company"
             />
             <Author
               isVisible={index === 2}

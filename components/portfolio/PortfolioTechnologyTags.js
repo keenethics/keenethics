@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 const links = {
   meteor: '/tech-back-end-meteor',
   react: '/tech-front-end-react',
-  reactnative: '/tech-front-end-react-native',
+  reactnative: '/tech-apps-react-native',
   mongo: '/tech-data-base-mongo',
   express: '/tech-back-end-express',
-  redux: '/tech-front-end-redux',
   nodejs: '/services-web-development-node',
   cordova: '/tech-apps-cordova',
   angular: '/tech-front-end-angular',
