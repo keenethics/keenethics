@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
+
 import { withRouter } from 'next/router';
 
 import React, { useState, useEffect } from 'react';
@@ -6,7 +7,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
 
-import { MaxS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
+import { IreneK, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -23,11 +24,13 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
-        className={classnames({ 'arrow-left-triangle': selectedCountry === 'UA' || !selectedCountry })}
       >
         <button
           type="button"
-          className="container-btn"
+          className={classnames({
+            'container-btn': true,
+            'arrow-left-triangle': selectedCountry === 'UA' || !selectedCountry,
+          })}
           onClick={() => {
             setSelectedCountry('UA');
             mobileScrollIntoView('contacts-page');
@@ -67,11 +70,13 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
-        className={classnames({ 'arrow-left-triangle': selectedCountry === 'NL' })}
       >
         <button
           type="button"
-          className="container-btn"
+          className={classnames({
+            'container-btn': true,
+            'arrow-left-triangle': selectedCountry === 'NL',
+          })}
           onClick={() => {
             setSelectedCountry('NL');
             mobileScrollIntoView('contacts-page');
@@ -86,7 +91,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
               />
             </span>
             <span className="country" itemProp="addressRegion">
-Netherlands
+              Netherlands
             </span>
           </div>
         </button>
@@ -108,7 +113,7 @@ Netherlands
               {' '}
               <br className="display-block-sm" />
               {' '}
-5346 RT
+              5346 RT
             </span>
           </a>
           <a href="tel:+31202620944" target="_blank" rel="noopener noreferrer">
@@ -122,11 +127,13 @@ Netherlands
         itemProp="address"
         itemScope
         itemType="http://schema.org/PostalAddress"
-        className={classnames({ 'arrow-left-triangle': selectedCountry === 'US' })}
       >
         <button
           type="button"
-          className="container-btn"
+          className={classnames({
+            'container-btn': true,
+            'arrow-left-triangle': selectedCountry === 'US',
+          })}
           onClick={() => {
             setSelectedCountry('US');
             mobileScrollIntoView('contacts-page');
@@ -304,7 +311,7 @@ const Contacts = ({ router }) => {
   let person;
   if (selectedCountry === 'NL') person = PaulW;
   else if (selectedCountry === 'US') person = JeanA;
-  else person = MaxS;
+  else person = IreneK;
   return (
     <Layout noFooter>
       <div className="contacts-page" id="contacts-page">

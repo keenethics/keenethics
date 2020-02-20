@@ -22,9 +22,9 @@ export default class FileUpload extends Component {
         <label htmlFor={this.id} className="custom-file-upload">
           { text }
           <span>
-(
+            (
             { limit }
-)
+            )
           </span>
           <img src="/static/images/svg/file.svg" alt="File" />
         </label>

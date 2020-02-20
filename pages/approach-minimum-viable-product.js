@@ -93,8 +93,8 @@ const ApproachMinimumValProduct = () => (
         <div className="description">
           <h3>Resource-efficient</h3>
           <p>
-          The minimum viable product development takes about 6 times less time and costs
-          than the development of a full app and saves you a lot of effort.
+            The minimum viable product development takes about 6 times less time and costs
+            than the development of a full app and saves you a lot of effort.
           </p>
         </div>
       </div>
@@ -233,7 +233,7 @@ const ApproachMinimumValProduct = () => (
             <Link href="/services-web-development-node">
               <a>Node.js</a>
             </Link>
-        , Wit.ai, BotPress, WebSocket
+            , Wit.ai, BotPress, WebSocket
           </p>
           <p>
             <b>Methodology</b>
@@ -270,15 +270,15 @@ const ApproachMinimumValProduct = () => (
             <Link href="/tech-front-end-react">
               <a>React</a>
             </Link>
-          , Redux,&nbsp;
+            , Redux,&nbsp;
             <Link href="/tech-back-end-express">
               <a>Express</a>
             </Link>
-          ,&nbsp;
+            ,&nbsp;
             <Link href="/services-web-development-node">
               <a>Node.js</a>
             </Link>
-          ,SCSS, MongoDB, Mongoose, AWS (SES, SNS, S3, EC2)
+            ,SCSS, MongoDB, Mongoose, AWS (SES, SNS, S3, EC2)
           </p>
           <p>
             <b>Methodology</b>

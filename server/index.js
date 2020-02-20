@@ -163,7 +163,7 @@ app.prepare().then(() => {
       <p>${firstname.value}</p>
       <p>Selected country: ${countrys[selectedCountry] ? countrys[selectedCountry] : countrys.UA}</p>
       <p>Email: ${email.value}</p>
-      <p>I want to use a subscriber discount: ${isSubscriber ? 'Checked' : 'Unchecked'}</p>
+      <p>I want to join KeenEthics in a social project: ${isSubscriber ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${message.value}</div>
     `;
     const mailOptions = {
@@ -186,7 +186,15 @@ app.prepare().then(() => {
       });
 
       transporter.sendMail(
-        autoReplyMailOptions(selectedCountry, firstname.value, email.value),
+        autoReplyMailOptions(
+          selectedCountry,
+          'contacts',
+          {
+            name: firstname.value,
+            email: email.value,
+            message: message.value,
+          },
+        ),
         (e) => {
           if (e) {
             throw e;
@@ -300,7 +308,7 @@ app.prepare().then(() => {
       <p>Budget: ${budget.value}</p>
       <p>Timeframe: ${timeframe.value}</p>
       <p>Start: ${start.value}</p>
-      <p>I want to use a subscriber discount: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
+      <p>I want to join KeenEthics in a social project: ${hasDiscount ? 'Checked' : 'Unchecked'}</p>
       <div style="margin-top: 10px; border-top: 1px solid #eee; padding-top: 10px;">${messageEstimate.value}</div>
     `;
 
@@ -322,6 +330,7 @@ app.prepare().then(() => {
         errorField: {},
         status: 'Message sent',
       });
+
       transporter.sendMail(
         autoReplyMailOptions(selectedCountry, name.value, emailEstimate.value),
         (e) => {

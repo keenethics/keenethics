@@ -72,7 +72,7 @@ const DevelopmentAndQualityAssurance = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-          Development and Quality Assurance Services
+            Development and Quality Assurance Services
           </h1>
           <p className="text-center text-italic">
             Creating a perfect final product with thorough development and expert Quality

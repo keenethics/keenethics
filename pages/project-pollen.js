@@ -18,7 +18,7 @@ const ProjectPollen = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-4 months
+                4 months
               </h3>
               <p className="description">
                 Organizing social-campaigns via Gmail contacts

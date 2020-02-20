@@ -62,7 +62,7 @@ const TechAppsAcc = () => (
         <li>
           <strong>Faster website loading times</strong>
           {' '}
-- By eliminating useless
+          - By eliminating useless
           elements, the page becomes less bloated and the overall load time is
           reduced. Visitors to your site will enjoy the fact that the layout is
           clear and responsive;
@@ -70,7 +70,7 @@ const TechAppsAcc = () => (
         <li>
           <strong>Increased mobile ranking</strong>
           {' '}
-- Despite the fact that AMP
+          - Despite the fact that AMP
           is not a ranking booster, it still has an impact on the rank of the
           website because your pages load faster. If by any chance Google starts
           to prioritize AMP-powered pages, your SERP rank will increase
@@ -79,7 +79,7 @@ const TechAppsAcc = () => (
         <li>
           <strong>Improved server response</strong>
           {' '}
-- If your business
+          - If your business
           experience a huge influx of users, the stress they put on the server
           will essentially be reduced. This will lead to reduced expenses as you
           server maintenance procedures will be cut in half. Not to mention the
@@ -89,14 +89,14 @@ const TechAppsAcc = () => (
         <li>
           <strong>Improved SEO</strong>
           {' '}
-- The need for customized content will
+          - The need for customized content will
           be reduced and you will able to gather data much faster. Moreover,
           your page will show up in the search engine more frequently;
         </li>
         <li>
           <strong>No need for a dedicated map site</strong>
           {' '}
-- you don&apos;t have to
+          - you don&apos;t have to
           create an XML file for your site as Google will pick them for you.
         </li>
       </ul>

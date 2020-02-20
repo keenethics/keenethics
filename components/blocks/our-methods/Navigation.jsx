@@ -18,7 +18,7 @@ const Navigation = ({
         onClick={decreaseIndex}
         className="our-methods--navigation-link-prev"
       >
-          Prev
+        Prev
       </a>
       {items.map((item, i) => (
         <NavigationItem
@@ -36,7 +36,7 @@ const Navigation = ({
         onClick={increaseIndex}
         className="our-methods--navigation-link-next"
       >
-          Next
+        Next
       </a>
     </div>
   </div>

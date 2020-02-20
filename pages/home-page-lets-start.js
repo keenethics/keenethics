@@ -18,10 +18,10 @@ const LetsStart = () => (
 
           </p>
           <p className="lets-start__author">
-              Irene Krot
+            Irene Krot
           </p>
           <p className="lets-start__author-position">
-              Head of Partner Engagement
+            Head of Partner Engagement
           </p>
           <Link href="/contacts?activeform=estimate">
             <a className="button lets-start-btn orange-btn">Let&#39;s start</a>

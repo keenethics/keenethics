@@ -18,7 +18,7 @@ const ProjectKnotel = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-Developing since May 2015
+                Developing since May 2015
               </h3>
               <p className="description">
                 A tool for online collaboration and task-management

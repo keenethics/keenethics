@@ -1,4 +1,4 @@
-export const MaxS = {
+export const IreneK = {
   name: 'Talk to Irene Krot',
   position: 'Head of Engagement',
   imgSrc: 'static/images/irene_krot.png',

@@ -19,7 +19,7 @@ const ProjectMyGrassGrowth = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-6 months
+                6 months
               </h3>
               <p className="description">
                 Keep you cows healthy and well-fed

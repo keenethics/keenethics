@@ -18,7 +18,7 @@ const ProjectBarfrogs = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-5 months, 1 developer
+                5 months, 1 developer
               </h3>
               <p className="description">
                 Find the Place to Hang out with Bar Frogs
@@ -54,8 +54,8 @@ const ProjectBarfrogs = () => (
               she wants to do, and the app offers the suggestions that match the preferences.
             </p>
             <p>
-            The thing that Goodge and Facebook don’t have is the automatic integration of Bar Page
-            with its events, which shows the users the most relevant details about the location.
+              The thing that Goodge and Facebook don’t have is the automatic integration of Bar Page
+              with its events, which shows the users the most relevant details about the location.
             </p>
             <div className="title">The Challenge</div>
             <p>

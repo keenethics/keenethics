@@ -32,7 +32,7 @@ const ServicesWebDevelopmentE = () => (
           industry provides numerous business opportunities for those who choose to enter it.
         </p>
         <p>
-        There are 6 types of retail software solutions:
+          There are 6 types of retail software solutions:
           <br />
           <b>#1 B2B</b>
             &nbsp;– Business-to-Business

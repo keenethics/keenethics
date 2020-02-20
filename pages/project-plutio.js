@@ -18,7 +18,7 @@ const ProjectPlutio = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-3 months (beginning 2017)
+                3 months (beginning 2017)
               </h3>
               <p className="description">
                 Business management platform

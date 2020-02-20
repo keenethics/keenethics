@@ -1,24 +1,38 @@
 const path = require('path');
-const { messageFromMax, messageFromPaul, messageFromJean } = require('./autoReplyMails');
+const {
+  messageFromIrene,
+  messageFromPaul,
+  messageFromJean,
+} = require('./autoReplyMails');
 
+module.exports = (country, type, data) => {
+  const {
+    email,
+  } = data;
 
-module.exports = (country, name, email) => {
-  const mailAuthor = {
-    NL: 'paul.van.workum@keenethics.com',
-    US: 'jean.marc.arsan@keenethics.com',
-    UA: 'maxim.savonin@keenethics.com',
-  };
-  const html = {
-    NL: messageFromPaul(name),
-    US: messageFromJean(name),
-    UA: messageFromMax(name),
-  };
+  let from = 'irene.krot@keenethics.com';
+  let html = '';
+
+  switch (country) {
+    case 'NL':
+      from = 'paul.van.workum@keenethics.com';
+      html = messageFromPaul(type, data);
+      break;
+    case 'US':
+      from = 'jean.marc.arsan@keenethics.com';
+      html = messageFromJean(type, data);
+      break;
+    default:
+      from = 'irene.krot@keenethics.com';
+      html = messageFromIrene(type, data);
+  }
+
   return {
-    from: mailAuthor[country] ? mailAuthor[country] : mailAuthor.UA,
+    from,
     to: email,
-    bcc: 'business@keenethics.com',
-    subject: 'Thank you for getting in touch! My KeenEthics team is busy delivering on your request.',
-    html: html[country] ? html[country] : html.UA,
+    // bcc: 'business@keenethics.com',
+    subject: 'Thank you for being in touch with KeenEthics! I am happy to deliver on your request',
+    html,
     attachments: [
       {
         filename: 'keenethics-logo.svg',

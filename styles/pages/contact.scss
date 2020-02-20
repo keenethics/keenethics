@@ -47,7 +47,8 @@
   }
 
   address {
-    margin: auto 50px 0;
+    margin: 50px 0 0;
+    padding: 0 0 20px;
 
     @include breakpoint(md-max) {
       margin: 50px auto auto 0px;
@@ -68,6 +69,18 @@
 
         @include breakpoint(sm-max) {
           display: block;
+        }
+
+        .container-btn {
+          position: relative;
+          padding: 10px 50px;
+          margin: 0 0 4px;
+
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
         }
 
         & > a {
@@ -107,7 +120,8 @@
         }
 
         .address-telephone-wrapper {
-          padding-left: 43px;
+          padding-left: 96px;
+
           @include breakpoint(sm-max) {
             padding-left: 0;
           }
@@ -139,8 +153,8 @@
         }
 
         .additional-info-wrapper {
-          padding-left: 43px;
-          padding-top: 5px;
+          padding-left: 96px;
+          padding-bottom: 2px;
           line-height: 16px;
 
           @include breakpoint(sm-max) {
@@ -192,13 +206,13 @@
       }
 
       li:not(:last-child) {
-        margin-bottom: 42px;
+        margin-bottom: 25px;
 
         @include breakpoint(lg-max) {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
         @include breakpoint(sm-max) {
-          margin-bottom: 46px;
+          margin-bottom: 40px;
         }
       }
     }
@@ -1943,38 +1957,29 @@
 
 .arrow-left-triangle {
   position: relative;
+
   &:before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -50px;
-    height: calc(100% + 40px);
-    width: calc(100% + 100px);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: rgba(0,0,0,.15);
     overflow: hidden;
-    @include breakpoint(md-max) {
-      left: 0;
-      width: calc(100% + 50px);
-    }
-    @include breakpoint(sm-max) {
-      left: -40px;
-      width: calc(100% + 40px);
-    }
   }
   &:after {
     content: '';
     position: absolute;
-    top: 6px;
-    right: -50px;
+    top: 50%;
+    right: 0;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right:10px solid #fff;
     overflow: hidden;
-    @include breakpoint(md-max) {
-      right: -54px;
-    }
+    transform: translateY(-50%);
   }
 }
 

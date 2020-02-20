@@ -44,7 +44,7 @@ export default class AboutTeam extends Component {
         <div className="team-page page">
           <div className="team-page-content">
             <h1 className="team-page-title">
-Team
+              Team
               <span>Astronaut office</span>
             </h1>
             <div className="ships">

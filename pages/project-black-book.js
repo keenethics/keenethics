@@ -19,7 +19,7 @@ const ProjectBlackBook = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-7 months. 1 developer.
+                7 months. 1 developer.
               </h3>
               <p className="description">
                 Display the statistics of company employees

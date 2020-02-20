@@ -88,7 +88,7 @@ export default class AboutSocialSide extends React.Component {
                 functionality and creation of the administrative area - this is the backend
                 development.
                 <br />
-Website backend development process is a web programming, the
+                Website backend development process is a web programming, the
                 purpose of which is to implement server-side of site, integrate database connect it
                 with user&apos;s (front-end) side. Backend development also includes software setup
                 on a server.

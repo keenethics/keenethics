@@ -10,7 +10,7 @@ const RocketHeader = ({ success, error }) => {
       <>
         <RocketBlueSVG />
         <h4>
-KEEN
+          KEEN
           <span className="black">BLOG</span>
         </h4>
       </>

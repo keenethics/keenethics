@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { MaxS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
+import { IreneK, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -26,7 +26,7 @@ const ContactForm = () => {
   let person;
   if (selectedCountry === 'NL') person = PaulW;
   else if (selectedCountry === 'US') person = JeanA;
-  else person = MaxS;
+  else person = IreneK;
   const [firstname, setFirstname] = useState({
     value: '',
     error: false,
@@ -211,7 +211,7 @@ const ContactForm = () => {
           </button>
         </div>
         <div className="privacy-policy">
-            By submitting, I agree to KeenEthics’&nbsp;
+          By submitting, I agree to KeenEthics’&nbsp;
           <a href="/privacy-policy" target="_blank">Privacy Policy</a>
         </div>
       </form>

@@ -31,40 +31,40 @@ const EcommerceDevelopmentServices = () => (
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-The size of the global ecommerce market
+            The size of the global ecommerce market
           </a>
           {' '}
-has almost doubled from $1,845 billion in 2016
+          has almost doubled from $1,845 billion in 2016
           to $3,453 billion in 2019. By 2021, it is expected to reach $4,878 billion.
           This thousand-billion-dollar industry provides numerous business opportunities for those
           who choose to enter it.
         </p>
         <p>
-        There are 6 types of ecommerce:
+          There are 6 types of ecommerce:
           <br />
           <b>#1 B2B</b>
           {' '}
-– Business-to-Business
+          – Business-to-Business
           <br />
           <b>#2 B2C</b>
           {' '}
-– Business-to-Consumer
+          – Business-to-Consumer
           <br />
           <b>#3 B2A</b>
           {' '}
-– Business-to-Administration
+          – Business-to-Administration
           <br />
           <b>#4 C2B</b>
           {' '}
-– Consumer-to-Business
+          – Consumer-to-Business
           <br />
           <b>#5 C2C</b>
           {' '}
-– Consumer-to-Consumer
+          – Consumer-to-Consumer
           <br />
           <b>#6 P2P</b>
           {' '}
-– Peer-to-Peer
+          – Peer-to-Peer
           <br />
         </p>
       </section>
@@ -121,8 +121,8 @@ has almost doubled from $1,845 billion in 2016
               not lose the personal touch with the target market? In other words,
               {' '}
               <strong>
-how can
-              you reach your customers when running a digital ecommerce platform?
+                how can
+                you reach your customers when running a digital ecommerce platform?
               </strong>
             </p>
           </li>
@@ -167,7 +167,7 @@ how can
                   PayPal
                 </a>
                 {' '}
-– available
+                – available
                 in 200 countries, 8 payment methods, 2.9% fee plus $0.30 per transaction.
               </li>
               <li>
@@ -179,7 +179,7 @@ how can
                   Braintree
                 </a>
                 {' '}
-– available
+                – available
                 in 46 countries, 18 payment methods, 2.9% fee.
               </li>
               <li>
@@ -187,7 +187,7 @@ how can
                   Stripe
                 </a>
                 {' '}
-– available
+                – available
                 in 26 countries, 14 payment methods, 2.9% fee plus $0.30 per incoming transaction.
               </li>
               <li>
@@ -200,7 +200,7 @@ how can
                 >
                   many others
                 </a>
-...
+                ...
               </li>
             </ul>
           </li>
@@ -222,10 +222,10 @@ how can
                 Closely follow
                 {' '}
                 <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">
-                data security regulations
+                  data security regulations
                 </a>
                 {' '}
-for ecommerce web development services.
+                for ecommerce web development services.
               </li>
               <li>
                 Choose a reliable payment model.
@@ -246,8 +246,8 @@ for ecommerce web development services.
               {' '}
               <br />
               <strong>
-              How can you ensure that the app you have developed recently will not be
-              outdated in a short period of time?
+                How can you ensure that the app you have developed recently will not be
+                outdated in a short period of time?
               </strong>
             </p>
           </li>
@@ -260,7 +260,7 @@ for ecommerce web development services.
                 Design your platform as a&nbsp;
                 <a href="/tech-apps-progressive-web-apps" target="_blank">progressive web app</a>
                 {' '}
-to
+                to
                 make your app faster, more reliable, and engaging.
               </li>
               <li>
@@ -269,7 +269,7 @@ to
                   voice assistant
                 </a>
                 {' '}
-into
+                into
                 your platform.
               </li>
               <li>
@@ -279,7 +279,7 @@ into
                 <a href="/blog/1554793200000-indoor-positioning-in-retail" target="_blank">
                   indoor positioning system
                 </a>
-.
+                .
               </li>
             </ul>
           </li>
@@ -411,33 +411,33 @@ into
           </p>
           <div style={{ marginBottom: '5px' }}>
             <b>Platform</b>
-:
+            :
             <a href="/services-web-development" target="_blank">
-Web
+              Web
             </a>
-,
+            ,
             <a href="/services-mobile-development-android" target="_blank">
-Android
+              Android
             </a>
-, and
+            , and
             <a href="/services-mobile-development-apple" target="_blank">iOS</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
             <b>Platform</b>
-:
+            :
             <a href="/tech-back-end-meteor" target="_blank">
-Meteor
+              Meteor
             </a>
-, Blaze, Ionic, and
+            , Blaze, Ionic, and
             <a href="/tech-front-end-angular" target="_blank">Angular</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
             <b>Methodology</b>
-: Kanban
+            : Kanban
           </div>
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>
-: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.
+            : 3 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
           <Works works={works.filter(({ title }) => ['Tetrami'].includes(title))} />
         </div>
@@ -455,34 +455,34 @@ Meteor
           </p>
           <div style={{ marginBottom: '5px' }}>
             <b>Platform</b>
-:
+            :
             <a href="/services-mobile-development-android" target="_blank">Android</a>
             {' '}
-and&nbsp;
+            and&nbsp;
             <a href="/services-mobile-development-apple" target="_blank">iOS</a>
           </div>
           <div style={{ marginBottom: '5px' }}>
             <b>Technologies</b>
-: Redux,
+            : Redux,
             <a href="/services-web-development-node" target="_blank">
-Node.js
+              Node.js
             </a>
-,
+            ,
             <a href="/tech-data-base-mongo" target="_blank">
-MongoDB
+              MongoDB
             </a>
-, Firebase, Twilio,
+            , Firebase, Twilio,
             <a href="/tech-apps-react-native" target="_blank">
-            React Native Maps, React Native Push Notifications
+              React Native Maps, React Native Push Notifications
             </a>
           </div>
           <div style={{ marginBottom: '5px' }}>
             <b>Methodology</b>
-: Scrum
+            : Scrum
           </div>
           <div style={{ marginBottom: '25px' }}>
             <b>Team</b>
-: 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 Project Manager.
+            : 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 Project Manager.
           </div>
           <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} />
         </div>
@@ -497,7 +497,7 @@ MongoDB
         <h3 className="red-italic-title">
           <span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span>
           {' '}
-Empowering growth
+          Empowering growth
         </h3>
         <p>
           We help companies requesting ecommerce website development services grow. We develop
@@ -510,7 +510,7 @@ Empowering growth
         <h3 className="red-italic-title">
           <span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span>
           {' '}
-Building value
+          Building value
         </h3>
         <p>
           We believe in business ethics and transparency. As an ecommerce development company, we
@@ -522,7 +522,7 @@ Building value
         <h3 className="red-italic-title">
           <span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span>
           {' '}
-Launching in a matter of weeks
+          Launching in a matter of weeks
         </h3>
         <p>
           We are willing to start working on your project as fast as possible. Thus, we promptly
@@ -534,7 +534,7 @@ Launching in a matter of weeks
         <h3 className="red-italic-title">
           <span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span>
           {' '}
-Bringing tech expertise
+          Bringing tech expertise
         </h3>
         <p>
           Our highly skilled ecommerce development team is ready
@@ -542,23 +542,23 @@ Bringing tech expertise
           {' '}
           <a href="/services-mobile-development" target="_blank">mobile app development</a>
           {' '}
-and&nbsp;
+          and&nbsp;
           <a href="/services-web-development" target="_blank">web platform development</a>
           {' '}
-services.
+          services.
           We are also willing to assist you
           with
           <a href="/tech-apps-progressive-web-apps" target="_blank">progressive web apps</a>
           {' '}
-or&nbsp;
+          or&nbsp;
           <a href="/services-web-development-chatbot" target="_blank">chatbots</a>
-.
+          .
         </p>
 
         <h3 className="red-italic-title">
           <span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span>
           {' '}
-Protecting your data
+          Protecting your data
         </h3>
         <p>
           We greatly value your project idea, so we abide by all
@@ -568,7 +568,7 @@ Protecting your data
             data security
           </a>
           {' '}
-regulations.
+          regulations.
           We will respect your desire to stay private about ecommerce development services if you
           choose to sign a non-disclosure agreement.
         </p>

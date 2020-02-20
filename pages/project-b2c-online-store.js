@@ -177,7 +177,7 @@ const ProjectOnlineStore = () => (
               </p>
               <h3>Technologies</h3>
               <p>
-              This web platform has been developed with the help of
+                This web platform has been developed with the help of
                 <span className="technologies-links">
                   <span><Link href="/services-web-development-meteor">Meteor</Link></span>
                   ,

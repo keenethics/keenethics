@@ -18,7 +18,7 @@ const ProjectPhenix = () => (
               <h3 className="duration">
                 <span>Duration:</span>
                 {' '}
-5 months, project continues
+                5 months, project continues
               </h3>
               <p className="description">
                 Online video-streaming

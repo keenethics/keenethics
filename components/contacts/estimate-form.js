@@ -186,7 +186,7 @@ const EstimateForm = () => {
             <div className="question-title mb-0">
               <span className="question-number">1.</span>
               {' '}
-Stage
+              Stage
             </div>
             <div className="estimate-input-cols">
               <div className="standard-radio-input">
@@ -257,7 +257,7 @@ Stage
             <div className="question-title">
               <span className="question-number">2.</span>
               {' '}
-Services needed
+              Services needed
             </div>
             <div className="estimate-input-cols">
               <p>Software development</p>
@@ -426,12 +426,12 @@ Services needed
             <div className="question-title">
               <span className="question-number">3.</span>
               {' '}
-Project management
+              Project management
             </div>
             <div className="estimate-input-cols">
               <p className="text-normal text-label">
                 Do you require a product manager or a project manager,
-                 who will save your time by describing, assigning, and prioritizing tasks?
+                who will save your time by describing, assigning, and prioritizing tasks?
               </p>
               <div className="options-wrapper odd-options-number">
                 <div className="input-radio-wrap">
@@ -551,7 +551,7 @@ Project management
                     checked={budget.value === 'More than $45,000'}
                   />
                   <label htmlFor="budgetMoreThen" className="label-for-radio-btn">
-                  More than $45,000
+                    More than $45,000
                   </label>
                 </div>
                 <div className="input-radio-wrap">
@@ -597,7 +597,7 @@ Project management
             <div className="question-title">
               <span className="question-number">5.</span>
               {' '}
-Timeframe
+              Timeframe
             </div>
             <div className="estimate-input-cols">
               <div className="options-wrapper odd-options-number">
@@ -711,7 +711,7 @@ Timeframe
             <div className="question-title">
               <span className="question-number">6.</span>
               {' '}
-Start
+              Start
             </div>
             <div className="estimate-input-cols">
               <div className="options-wrapper">
@@ -971,7 +971,7 @@ Start
               </button>
             </div>
             <div className="privacy-policy">
-                By submitting, I agree to KeenEthics’&nbsp;
+              By submitting, I agree to KeenEthics’&nbsp;
               <a href="/privacy-policy" target="_blank">Privacy Policy</a>
             </div>
           </div>

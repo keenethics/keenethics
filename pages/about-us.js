@@ -23,10 +23,10 @@ const AboutUs = () => (
           and represented in the Netherlands and the United States.
         </h5>
         <p>
-        Since 2015, we have been solving business challenges with full-cycle development.
-        More than 40 companies have turned their ideas into lucrative products with us.
-        The successful web and mobile projects include PWA, MVP, chatbots and
-        AI-powered, cloud and IoT solutions.
+          Since 2015, we have been solving business challenges with full-cycle development.
+          More than 40 companies have turned their ideas into lucrative products with us.
+          The successful web and mobile projects include PWA, MVP, chatbots and
+          AI-powered, cloud and IoT solutions.
         </p>
       </div>
       <OurStory />

@@ -163,7 +163,7 @@ const ServicesWebDevelopmentMeteor = () => {
           <CallToActionButton />
           <h2 style={{ fontSize: '40px', fontWeight: 900, marginBottom: '1em' }}>19,000</h2>
           <p className="text-center">
-          is the number of websites powered by Meteor, according to&nbsp;
+            is the number of websites powered by Meteor, according to&nbsp;
             <a href="https://www.lambdatest.com/blog/top-javascript-frameworks-for-2019/" target="_blank" rel="noopener noreferrer nofollow">LambdaTest</a>
             .
           </p>

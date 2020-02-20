@@ -222,11 +222,11 @@ const PromoPage = () => {
           <div className="promo-container">
             <section className="top-section">
               <h1 className="top-section-title">
-ETHICAL
+                ETHICAL
                 <br />
-DEVELOPMENT
+                DEVELOPMENT
                 <br />
-OF KEEN WEB APPS
+                OF KEEN WEB APPS
               </h1>
             </section>
             <section>
