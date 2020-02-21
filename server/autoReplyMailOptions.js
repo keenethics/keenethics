@@ -10,7 +10,7 @@ module.exports = (country, type, data) => {
     email,
   } = data;
 
-  let from = 'irene.krot@keenethics.com';
+  let from = 'irene@keenethics.com';
   let html = '';
 
   switch (country) {
@@ -23,14 +23,14 @@ module.exports = (country, type, data) => {
       html = messageFromJean(type, data);
       break;
     default:
-      from = 'irene.krot@keenethics.com';
+      from = 'irene@keenethics.com';
       html = messageFromIrene(type, data);
   }
 
   return {
     from,
     to: email,
-    // bcc: 'business@keenethics.com',
+    bcc: 'business@keenethics.com',
     subject: 'Thank you for being in touch with KeenEthics! I am happy to deliver on your request',
     html,
     attachments: [

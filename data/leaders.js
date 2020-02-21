@@ -12,7 +12,7 @@ const leadersData = [
     position: 'Head of Partner Engagement',
     picture: 'irene-krot',
     linkedin: 'https://www.linkedin.com/in/irene-krot-458840119/',
-    email: 'mailto:irene.krot@keenethics.com',
+    email: 'mailto:irene@keenethics.com',
   },
   {
     name: 'Oksana Pleten',
