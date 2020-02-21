@@ -59,7 +59,7 @@ module.exports = {
   <ul style="font-size:14px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-left:0;list-style-type:none;" >
     <li style="display:inline-block;margin-left:0;">Irene Krot <span style="color:red;" >•</span></li>
     <li style="display:inline-block;margin-left:0;">Head of Engagement <span style="color:red;" >•</span></li>
-    <li style="display:inline-block;margin-left:0;"><a href="mailto:irene.krot@keenethics.com">irene.krot@keenethics.com</a> <span style="color:red;" >•</span></li>
+    <li style="display:inline-block;margin-left:0;"><a href="mailto:irene@keenethics.com">irene@keenethics.com</a> <span style="color:red;" >•</span></li>
     <li style="display:inline-block;margin-left:0;">Mobile: <a href="tel:+380947106105">+38 (094) 710 61 05</a> <span style="color:red;" >•</span></li>
   </ul>
 
