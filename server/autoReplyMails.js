@@ -14,10 +14,10 @@ const renderPreFooter = (type, data) => {
   <li>Name: ${data.name || '-'}</li>
   <li>Stage: ${data.stage}</li>
   <li>Services Needed: ${data.services}</li>
-  <li>Project management: ${data.pm}</li>
-  <li>Expected budget: ${data.budget}</li>
-  <li>Timeframe: ${data.timeframe}</li>
-  <li>Start: ${data.start}</li>
+  <li>Project management: ${data.pm || '-'}</li>
+  <li>Expected budget: ${data.budget || '-'}</li>
+  <li>Timeframe: ${data.timeframe || '-'}</li>
+  <li>Start: ${data.start || '-'}</li>
   <li>Your message: ${data.message || '-'}</li>
 </ol>
 `;

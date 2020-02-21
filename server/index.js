@@ -332,7 +332,21 @@ app.prepare().then(() => {
       });
 
       transporter.sendMail(
-        autoReplyMailOptions(selectedCountry, name.value, emailEstimate.value),
+        autoReplyMailOptions(
+          selectedCountry,
+          'estimate',
+          {
+            name: name.value,
+            email: emailEstimate.value,
+            stage: stage.value,
+            services: servicesEstimate,
+            pm: pm.value,
+            budget: budget.value,
+            timeframe: timeframe.value,
+            start: start.value,
+            message: messageEstimate.value,
+          },
+        ),
         (e) => {
           if (e) throw e;
         },
