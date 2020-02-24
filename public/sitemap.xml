@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://keenethics.com/</loc>
     <lastmod>2020-02-18</lastmod>
@@ -328,7 +329,7 @@
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url> 
+  </url>
   <url>
     <loc>https://keenethics.com/tech-front-end-react</loc>
     <lastmod>2020-02-18</lastmod>
@@ -436,7 +437,7 @@
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url> 
+  </url>
     <url>
     <loc>https://keenethics.com/blog/iot-and-node-js</loc>
     <lastmod>2020-02-18</lastmod>
@@ -855,3 +856,4 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+</urlset>
