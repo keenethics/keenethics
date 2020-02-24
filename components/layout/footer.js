@@ -7,95 +7,95 @@ import SocialButton from '../social-buttons/main';
 const services = [
   {
     title: 'Web Development',
-    url: 'services-web-development',
+    url: '/services-web-development',
   },
   {
     title: 'Mobile Development',
-    url: 'services-mobile-development',
+    url: '/services-mobile-development',
   },
   {
     title: 'Minimum Viable Product',
-    url: 'approach-minimum-viable-product',
+    url: '/approach-minimum-viable-product',
   },
   {
     title: 'Progressive Web Apps',
-    url: 'tech-apps-progressive-web-apps',
+    url: '/tech-apps-progressive-web-apps',
   },
   {
     title: 'Dedicated Development Team',
-    url: 'services-dedicated-development-team',
+    url: '/services-dedicated-development-team',
   },
   {
     title: 'Cloud App Development',
-    url: 'services-cloud-application-development',
+    url: '/services-cloud-application-development',
   },
   {
     title: 'Chatbots & Artificial Intelligence',
-    url: 'services-chatbots-artificial-intelligence',
+    url: '/services-chatbots-artificial-intelligence',
   },
   {
     title: 'Internet of Things',
-    url: 'services-internet-of-things',
+    url: '/services-internet-of-things',
   },
 ];
 const industries = [
   {
     title: 'Education',
-    url: 'services-education-software-development',
+    url: '/services-education-software-development',
   },
   {
     title: 'Business',
-    url: 'services-business-administration-development',
+    url: '/services-business-administration-development',
   },
   {
     title: 'Healthcare',
-    url: 'services-custom-healthcare-software-development',
+    url: '/services-custom-healthcare-software-development',
   },
 ];
 const technologies = [
   {
     title: 'Node js',
-    url: 'services-web-development-node',
+    url: '/services-web-development-node',
   },
   {
     title: 'Angular',
-    url: 'tech-front-end-angular',
+    url: '/tech-front-end-angular',
   },
   {
     title: 'React',
-    url: 'tech-front-end-react',
+    url: '/tech-front-end-react',
   },
   {
     title: 'React Native',
-    url: 'tech-apps-react-native',
+    url: '/tech-apps-react-native',
   },
   {
     title: 'Aurelia',
-    url: 'tech-front-end-aurelia',
+    url: '/tech-front-end-aurelia',
   },
   {
     title: 'Vue js',
-    url: 'tech-front-end-vue',
+    url: '/tech-front-end-vue',
   },
   {
     title: 'Express',
-    url: 'tech-back-end-express',
+    url: '/tech-back-end-express',
   },
   {
     title: 'Electron',
-    url: 'tech-apps-electron',
+    url: '/tech-apps-electron',
   },
   {
     title: 'Cordova',
-    url: 'tech-apps-cordova',
+    url: '/tech-apps-cordova',
   },
   {
     title: 'PhoneGap',
-    url: 'tech-apps-phonegap',
+    url: '/tech-apps-phonegap',
   },
   {
     title: 'Meteor',
-    url: 'services-web-development-meteor',
+    url: '/services-web-development-meteor',
   },
 ];
 const careers = [
@@ -117,30 +117,30 @@ const careers = [
   },
   {
     title: 'Contact Us',
-    url: 'contacts',
+    url: '/contacts',
   },
 ];
 
 const fullCycleMethod = [
   {
     title: '01   Business Analysis',
-    url: 'services-business-analysis',
+    url: '/services-business-analysis',
   },
   {
     title: '02   UI/UX Design',
-    url: 'services-ui-ux-design',
+    url: '/services-ui-ux-design',
   },
   {
     title: '03   Development and Testing',
-    url: 'services-development-and-quality-assurance',
+    url: '/services-development-and-quality-assurance',
   },
   {
     title: '04   Software Deployment',
-    url: 'services-software-deployment',
+    url: '/services-software-deployment',
   },
   {
     title: '05   Maintenance and Support',
-    url: 'services-maintenance-support',
+    url: '/services-maintenance-support',
   },
 ];
 const HomeFooter = ({
