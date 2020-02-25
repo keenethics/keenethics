@@ -383,7 +383,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
               <b>Technologies</b>: <Link href="/tech-front-end-react"><a>React</a></Link>, Redux, <Link href="/tech-back-end-express"><a>Express</a></Link>, RethinkDB, and Webpack2
             </div>
             <div style={{ marginBottom: '5px' }}>
-              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology">Kanban</Link>
+              <b>Methodology</b>: <Link href="/blog/how-to-choose-your-optimal-development-methodology"><a>Kanban</a></Link>
             </div>
             <div style={{ marginBottom: '25px' }}>
               <b>Team</b>: 1 middle software developer, 1 QA specialist, 1 HTML/CSS coder, and 1 UI/UX designer
@@ -395,7 +395,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
             <h3>Blood Testing Application</h3>
             <p>It is a blood test management application, the idea of which is to help people record and understand their blood test results. Such a service may not be relevant for average people but it is utterly important for patients with specific health conditions, such as diabetes. This app is augmented with AI, serves an educational function, allows creating a unique user profile, features a Q&A section and a messenger.</p>
             <div style={{ marginBottom: '5px' }}>
-              <b>Platform</b>: <Link href="/services-mobile-development">Mobile application</Link>
+              <b>Platform</b>: <Link href="/services-mobile-development"><a>Mobile application</a></Link>
             </div>
             <div style={{ marginBottom: '5px' }}>
               <b>Technologies</b>: UI/UX design only – Adobe Photoshop, Sketch, InVision App, and Avocode

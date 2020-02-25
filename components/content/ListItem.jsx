@@ -65,7 +65,7 @@ const ListItem = ({ work }) => {
 
   return (
     <div className={classnames('page__item')}>
-      <Link href={url} as={asUrl}>
+      <Link href={url} as={asUrl} prefetch={false}>
         <a className="page__item-link">
           <figure className="page__item-figure">
             <div className="page__item-figure-img-wrap">

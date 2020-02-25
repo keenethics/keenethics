@@ -23,7 +23,7 @@ const Industries = () => {
           <div className="industries">
             <div className="industries-big grid">
               <div className="col-1-3">
-                <Link href="/services-education-software-development">
+                <Link href="/services-education-software-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
                       <img
@@ -43,7 +43,7 @@ const Industries = () => {
                 </Link>
               </div>
               <div className="col-1-3">
-                <Link href="/services-business-administration-development">
+                <Link href="/services-business-administration-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
                       <img
@@ -63,7 +63,7 @@ const Industries = () => {
                 </Link>
               </div>
               <div className="col-1-3">
-                <Link href="/services-custom-healthcare-software-development">
+                <Link href="/services-custom-healthcare-software-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
                       <img
@@ -85,7 +85,7 @@ const Industries = () => {
             </div>
             <div className="industries-small">
               <div className="industries--small-item">
-                <Link href="/services-retail-software-development">
+                <Link href="/services-retail-software-development" prefetch={false}>
                   <a className="link">
                     <div className="industries--small-item-logo">
                       <img

@@ -2,16 +2,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { isWebpSupported } from 'react-image-webp/dist/utils';
+// import { isWebpSupported } from 'react-image-webp/dist/utils';
 
 const Webp = ({
-  className, style, src, fallbackImg, alt,
+  className, style, fallbackImg, alt,
 }) => {
-  let isWebpFormatSupported = false;
+  // let isWebpFormatSupported = false;
   // try catch block is needed for nextjs static optimization
   // because isWebpSupported uses html page elements to work
   try {
-    isWebpFormatSupported = isWebpSupported();
+    // isWebpFormatSupported = isWebpSupported();
   } catch (e) {
     console.warn('Error while checking webp format. This isn\'t critical');
     console.error(e.message);
@@ -20,7 +20,7 @@ const Webp = ({
     <img
       className={className}
       style={style}
-      src={isWebpFormatSupported ? src : fallbackImg}
+      src={fallbackImg}
       alt={alt}
     />
   );
@@ -28,7 +28,7 @@ const Webp = ({
 Webp.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
-  src: PropTypes.string.isRequired,
+  // src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   fallbackImg: PropTypes.string.isRequired,
 };

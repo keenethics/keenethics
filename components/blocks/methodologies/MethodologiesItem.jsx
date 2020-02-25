@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const MethodologiesItem = ({
   methodology,
 }) => (
-  <Link href={methodology.url}>
+  <Link href={methodology.url} prefetch={false}>
     <a className="methodologies--item">
       <span className="methodologies--item-value">
         {methodology.value}

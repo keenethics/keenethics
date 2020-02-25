@@ -156,7 +156,9 @@ const HomeFooter = ({
           </li>
           {services.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url} prefetch={false}>
+                <a className="home-footer-list-item__link">{el.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -166,7 +168,9 @@ const HomeFooter = ({
           </li>
           {industries.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url} prefetch={false}>
+                <a className="home-footer-list-item__link">{el.title}</a>
+              </Link>
             </li>
           ))}
           <li className="home-footer-list-item home-footer-list__title">
@@ -174,7 +178,9 @@ const HomeFooter = ({
           </li>
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url} prefetch={false}>
+                <a className="home-footer-list-item__link">{el.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -184,14 +190,18 @@ const HomeFooter = ({
           </li>
           {technologies.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url} prefetch={false}>
+                <a className="home-footer-list-item__link">{el.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
         <ul className="home-footer-list title-links">
           {careers.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
-              <Link href={el.url}><a className="home-footer-list__title home-footer-list-item__link">{el.title}</a></Link>
+              <Link href={el.url} prefetch={false}>
+                <a className="home-footer-list__title home-footer-list-item__link">{el.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -263,7 +273,7 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link href="contacts?activeform=estimate">
+              <Link href="contacts?activeform=estimate" prefetch={false}>
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -286,10 +296,10 @@ const HomeFooter = ({
               <a href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="contacts"><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="contacts" prefetch={false}><a className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="contacts">
+              <Link href="contacts" prefetch={false}>
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -298,16 +308,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="about-us"><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="about-us" prefetch={false}><a className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <a href="/#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="careers"><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="careers" prefetch={false}><a className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="blog"><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="blog" prefetch={false}><a className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>
@@ -316,7 +326,7 @@ const HomeFooter = ({
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">
-          <Link href="blog"><a className="home-footer-link">Latest in Blog</a></Link>
+          <Link href="blog" prefetch={false}><a className="home-footer-link">Latest in Blog</a></Link>
           <span className="bell-icon" />
         </div>
         <FooterSlider
@@ -329,12 +339,12 @@ const HomeFooter = ({
           <SocialButton />
         </div>
         <div className="footer-links-terms">
-          <Link href="/privacy-policy">
+          <Link href="/privacy-policy" prefetch={false}>
             <a className="footer-links-link">
               Privacy Statement
             </a>
           </Link>
-          <Link href="/cookie-policy">
+          <Link href="/cookie-policy" prefetch={false}>
             <a className="footer-links-link">
               Cookie Policy
             </a>

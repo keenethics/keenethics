@@ -55,10 +55,10 @@ class Blog extends React.Component {
   componentDidMount() {
     document.body.style.overflowY = 'hidden';
 
-    const { url, posts } = this.props;
+    const { router, posts } = this.props;
 
     if (posts && posts.length) {
-      this.setState({ ...getCategoriesList({ url, posts }) });
+      this.setState({ ...getCategoriesList({ url: router.pathname, posts }) });
     }
   }
 
@@ -145,13 +145,11 @@ class Blog extends React.Component {
 }
 
 Blog.propTypes = {
-  url: PropTypes.object,
   router: PropTypes.object,
   posts: PropTypes.array,
 };
 
 Blog.defaultProps = {
-  url: {},
   router: {},
   posts: [],
 };

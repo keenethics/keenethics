@@ -70,7 +70,7 @@ const OurServices = ({ show }) => {
         })}
         >
           {platesContent.map((el) => (
-            <Link href={el.href} key={el.text}>
+            <Link href={el.href} key={el.text} prefetch={false}>
               <div className="home-section-plates-item">
                 <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
                 <p className="plate-text">{el.text}</p>

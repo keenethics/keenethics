@@ -92,7 +92,7 @@ class ContentNavigation extends React.Component {
           )}
           <div className="content-navigation-carousel">
             <div className="content-navigation-carousel-inner">
-              <Link href={this.points.prev.href}>
+              <Link href={this.points.prev.href} prefetch={false}>
                 <a className="content-navigation-carousel-link prev">
                   <div className="content">
                     <div className="name">{this.points.prev.name}</div>
@@ -100,13 +100,13 @@ class ContentNavigation extends React.Component {
                   </div>
                 </a>
               </Link>
-              <Link href={this.points.current.href}>
+              <Link href={this.points.current.href} prefetch={false}>
                 <a className="content-navigation-carousel-link current">
                   <div className="name">{this.points.current.name}</div>
                   <div className="description">{this.points.current.description || ''}</div>
                 </a>
               </Link>
-              <Link href={this.points.next.href}>
+              <Link href={this.points.next.href} prefetch={false}>
                 <a className="content-navigation-carousel-link next">
                   <div className="content">
                     <div className="name">{this.points.next.name}</div>

@@ -3,7 +3,6 @@
 var mainNavigation = require('../navigation/main.json');
 var servicesWebDevelopmentElements = require('../navigation/servicesWebDevelopment.json');
 var servicesMobileDevelopmentElements = require('../navigation/servicesMobileDevelopment.json');
-var servicesOutstaffingElements = require('../navigation/servicesOutstaffing.json');
 var techAppsElements = require('../navigation/techApps.json');
 var techFrontEndElements = require('../navigation/techFrontEnd.json');
 var techBackEndElements = require('../navigation/techBackEnd.json');
@@ -27,7 +26,6 @@ var getRoadmap = function(elements) {
 getRoadmap(mainNavigation);
 getRoadmap(servicesWebDevelopmentElements);
 getRoadmap(servicesMobileDevelopmentElements);
-getRoadmap(servicesOutstaffingElements);
 getRoadmap(techAppsElements);
 getRoadmap(techFrontEndElements);
 getRoadmap(techBackEndElements);

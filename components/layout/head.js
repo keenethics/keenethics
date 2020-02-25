@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Router, { withRouter } from 'next/router';
+import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import NProgress from 'nprogress';
 
 import {
   config,
@@ -16,10 +15,6 @@ import {
   techApiIntegration,
   works,
 } from '../../main.config';
-
-Router.onRouteChangeStart = () => NProgress.start();
-Router.onRouteChangeComplete = () => NProgress.done();
-Router.onRouteChangeError = () => NProgress.done();
 
 const DEFAULT_DESCRIPTION = 'KeenEthics is an Eastern European software development company, that provides custom software development for your business';
 const DEFAULT_TITLE = 'Custom Software Development Company - KeenEthics';

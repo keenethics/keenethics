@@ -37,7 +37,7 @@ export default class NavigationPoint extends React.Component {
 
     if (!points && href) {
       return (
-        <Link href={href}>
+        <Link href={href} prefetch={false}>
           <a className="navigation-point">
             {this.renderPointContent()}
           </a>
@@ -46,7 +46,7 @@ export default class NavigationPoint extends React.Component {
     }
 
     return href && !isTablet ? (
-      <Link href={href}>
+      <Link href={href} prefetch={false}>
         <a className="navigation-point">
           {this.renderPointContent()}
         </a>
