@@ -40,7 +40,7 @@ const getDataFromProperty = (item) => {
       description: null,
       imgUrl: `https://${
         _.get(item.heroImage, 'fields.file.url')
-      }?fm=jpg&fl=progressive&q=85&w=450`,
+      }?fm=jpg&fl=progressive&q=85&w=600`,
       url: `/post?name=${item.slug}`,
       asUrl: `/blog/${item.slug}`,
       tags: item.categories,
