@@ -93,14 +93,16 @@ class Blog extends React.Component {
   };
 
   openSubscribeModal = () => {
-    this.props.router.replace(`${this.props.router.pathname}#subscribe`);
+    const { router } = this.props;
+    router.replace(`${router.pathname}#subscribe`);
     this.setState({
       isSubscribeModalOpen: true,
     });
   }
 
   closeSubscribeModal = () => {
-    this.props.router.replace(this.props.router.pathname);
+    const { router } = this.props;
+    router.replace(router.pathname);
     this.setState({
       isSubscribeModalOpen: false,
     });

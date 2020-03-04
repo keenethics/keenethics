@@ -166,6 +166,9 @@
         opacity: 0;
         animation: fade-out-top 1s linear;
       }
+      @media (max-width: 420px) {
+        font-size: 12px;
+      }
     }
   }
 
