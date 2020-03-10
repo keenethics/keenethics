@@ -120,11 +120,11 @@ const ProjectWorkbooking = () => (
               </div>
             </div>
 
-            <div className="project-content-chapter custom">
+            <div className="project-content-chapter">
               <img className="chapter-image" src="static/images/project/workbooking-monitors.png" alt="Workbooking" />
             </div>
 
-            <div className="project-content-chapter custom">
+            <div className="project-content-chapter" style={{ marginBottom: '50px' }}>
               <img className="chapter-image" src="static/images/project/workbooking-leptop.png" alt="Workbooking" />
             </div>
           </div>
