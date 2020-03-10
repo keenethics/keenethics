@@ -27,9 +27,9 @@ const ApproachMinimumValProduct = () => (
         <Link href="/contacts">
           <a className="button button-send learn-more">Learn more</a>
         </Link>
-        <p className="big-bold"> By 6 times </p>
+        <h2 className="text-bold"> 6 times faster </h2>
         <p className="negative-margin-top">
-          less time it takes to develop an MVP than to develop a full app.
+          it is to develop an MVP than a full app.
         </p>
       </div>
 

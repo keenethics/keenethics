@@ -15,15 +15,15 @@ module.exports = (country, type, data) => {
 
   switch (country) {
     case 'NL':
-      from = 'paul.van.workum@keenethics.com';
+      from = 'Paul from KeenEthics paul.van.workum@keenethics.com';
       html = messageFromPaul(type, data);
       break;
     case 'US':
-      from = 'jean.marc.arsan@keenethics.com';
+      from = 'Jean-Marc from KeenEthics jean.marc.arsan@keenethics.com';
       html = messageFromJean(type, data);
       break;
     default:
-      from = 'irene@keenethics.com';
+      from = 'Irene from KeenEthics irene@keenethics.com';
       html = messageFromIrene(type, data);
   }
 

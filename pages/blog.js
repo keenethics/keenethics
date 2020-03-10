@@ -57,6 +57,8 @@ class Blog extends React.Component {
 
     const { router, posts } = this.props;
 
+    if (router.asPath === '/blog#subscribe') this.openSubscribeModal();
+
     if (posts && posts.length) {
       this.setState({ ...getCategoriesList({ url: router.pathname, posts }) });
     }
@@ -91,12 +93,16 @@ class Blog extends React.Component {
   };
 
   openSubscribeModal = () => {
+    const { router } = this.props;
+    router.replace(`${router.pathname}#subscribe`);
     this.setState({
       isSubscribeModalOpen: true,
     });
   }
 
   closeSubscribeModal = () => {
+    const { router } = this.props;
+    router.replace(router.pathname);
     this.setState({
       isSubscribeModalOpen: false,
     });

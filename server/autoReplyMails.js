@@ -29,26 +29,27 @@ const renderPreFooter = (type, data) => {
 module.exports = {
   messageFromIrene(type, data) {
     return `
-<div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;" >
+<div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;color:#000;" >
   <p style="font-size:14px;" >
     Hello there ${data.name || ''},
   </p>
   <p style="font-size:14px;">
-    Thank you for getting in touch!</br>
+    Thank you for getting in touch!<br>
     I will get back to you <strong>within 23 hours</strong> but you can
     <a href="https://calendly.com/irene-keenethics" target="_blank">book a meeting with me</a>
     for the earliest time available.
   </p>
   <p style="font-size:14px;">
     Have in mind, you will receive additional questions because making software is
-    close to rocket science and every detail counts.</br>
+    close to rocket science and every detail counts.<br>
     Meanwhile, you can jump-start the <del>rocket</del> project by
     <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
       signing the NDA
     </a>
   </p>
   <p style="font-size:14px;">
-    Talk to you soon,</br>Irene
+    Talk to you soon, <br>
+    Irene
   </p>
   <p style="font-size:14px;margin: 10px 0 0;" >
     P.S. Just in case, here is the copy of your submission:
@@ -69,26 +70,26 @@ module.exports = {
   },
   messageFromPaul(type, data) {
     return `
-    <div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;" >
+    <div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;color:#000;" >
     <p style="font-size:14px;">
       Hello there ${data.name || ''},
     </p>
     <p style="font-size:14px;">
-      Thank you for getting in touch!</br>
+      Thank you for getting in touch!<br>
       I will get back to you <strong>within 23 hours</strong> but you can reach me on the phone at
       <a href="tel:+31202620944" target="_blank">+31 20 262 0944</a>
       right now.
     </p>
     <p style="font-size:14px;">
       Have in mind, you will receive additional questions because making software is
-      close to rocket science and every detail counts.</br>
+      close to rocket science and every detail counts.<br>
       Meanwhile, you can jump-start the <del>rocket</del> project by
       <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
         signing the NDA
       </a>
     </p>
     <p style="font-size:14px;">
-      Talk to you soon,</br>Paul
+      Talk to you soon,<br>Paul
     </p>
     <p style="font-size:14px;margin: 10px 0 0;" >
       P.S. Just in case, here is the copy of your submission:
@@ -109,26 +110,26 @@ module.exports = {
   },
   messageFromJean(type, data) {
     return `
-    <div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;" >
+    <div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;color:#000;" >
   <p style="font-size:14px;">
     Hello there ${data.name || ''},
   </p>
   <p style="font-size:14px;">
-    Thank you for getting in touch!</br>
+    Thank you for getting in touch!<br>
     I will get back to you <strong>within 23 hours</strong> but you can reach me on the phone at
     <a href="tel:+19292141392" target="_blank">+1 (929) 214 1392</a>
     right now.
   </p>
   <p style="font-size:14px;">
     Have in mind, you will receive additional questions because making software is
-    close to rocket science and every detail counts.</br>
+    close to rocket science and every detail counts.<br>
     Meanwhile, you can jump-start the <del>rocket</del> project by
     <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
       signing the NDA
     </a>
   </p>
   <p style="font-size:14px;">
-    Talk to you soon,</br>Jean-Marc
+    Talk to you soon,<br>Jean-Marc
   </p>
   <p style="font-size:14px;margin: 10px 0 0;" >
     P.S. Just in case, here is the copy of your submission:

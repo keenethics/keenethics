@@ -13,14 +13,16 @@ const AboutUs = () => (
     <section className="page__wrapper page__about-us">
       <div className="page__header">
         <h1 className="page__title">
-          CODE FOR BUSINESS
+          CODE FOR BUSINESS&nbsp;
+          <span className="color-red">•</span>
           <br />
-          CARE FOR THE WORLD
+          CARE&nbsp;
+          <span className="color-red">FOR THE WORLD</span>
         </h1>
         <div className="separator" />
         <h5>
-          KeenEthics is an ethical web and mobile development partner based in Eastern Europe
-          and represented in the Netherlands and the United States.
+          KeenEthics is a full-cycle software development partner based in Lviv, Ukraine, and
+          locally represented in Oss, the Netherlands.
         </h5>
         <p>
           Since 2015, we have been solving business challenges with full-cycle development.
