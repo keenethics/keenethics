@@ -26,7 +26,7 @@ class Navigation extends React.Component {
     };
 
     this.getPointContent = this.getPointContent.bind(this);
-    this.showSidebar = this.showSidebar.bind(this);
+    this.toggleSidebar = this.toggleSidebar.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
@@ -65,7 +65,7 @@ class Navigation extends React.Component {
     return null;
   }
 
-  showSidebar() {
+  toggleSidebar() {
     this.props.toggleNav();
 
     const {
@@ -89,7 +89,7 @@ class Navigation extends React.Component {
 
   render() {
     const { showSidebar } = this.state;
-    const { router, isTablet } = this.props;
+    const { router, isBurgerMenu } = this.props;
 
     const currentURL = router;
 
@@ -116,8 +116,8 @@ class Navigation extends React.Component {
       <div className={showSidebar ? 'navigation is-open' : 'navigation'}>
         <div
           className="navigation-hamburger"
-          onClick={this.showSidebar}
-          onKeyDown={this.showSidebar}
+          onClick={this.toggleSidebar}
+          onKeyDown={this.toggleSidebar}
           role="presentation"
         >
           <span />
@@ -138,10 +138,10 @@ class Navigation extends React.Component {
                   key={n.name}
                   element={n}
                   currentPoint={currentPoint === i}
-                  isTablet={isTablet}
+                  isBurgerMenu={isBurgerMenu}
                 >
                   {
-                    isTablet
+                    isBurgerMenu
                       ? this.getPointContent(n, currentPoint === i, currentSubpoint)
                       : null
                   }
@@ -158,12 +158,12 @@ class Navigation extends React.Component {
 Navigation.propTypes = {
   router: PropTypes.object,
   toggleNav: PropTypes.func.isRequired,
-  isTablet: PropTypes.bool,
+  isBurgerMenu: PropTypes.bool,
 };
 
 Navigation.defaultProps = {
   router: {},
-  isTablet: false,
+  isBurgerMenu: false,
 };
 
 export default withRouter(ClickOutside(Navigation));
