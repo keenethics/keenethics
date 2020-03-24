@@ -96,7 +96,7 @@ class Layout extends React.Component {
           <Navigation
             currentURL={currentURL}
             toggleNav={this.toggleNav}
-            isTablet={isTablet}
+            isBurgerMenu={isTablet || isMobile}
           />
         )}
         <div className="content">

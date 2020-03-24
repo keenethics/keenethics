@@ -31,9 +31,8 @@ export default class NavigationPoint extends React.Component {
         href,
         points,
       },
-      isTablet,
+      isBurgerMenu,
     } = this.props;
-
 
     if (!points && href) {
       return (
@@ -45,7 +44,7 @@ export default class NavigationPoint extends React.Component {
       );
     }
 
-    return href && !isTablet ? (
+    return href && !isBurgerMenu ? (
       <Link href={href} prefetch={false}>
         <a className="navigation-point">
           {this.renderPointContent()}
@@ -153,7 +152,7 @@ NavigationPoint.propTypes = {
   }),
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
-  isTablet: PropTypes.bool,
+  isBurgerMenu: PropTypes.bool,
 };
 NavigationPoint.defaultProps = {
   children: null,
@@ -170,5 +169,5 @@ NavigationPoint.defaultProps = {
   },
   currentPoint: false,
   currentSubpoint: false,
-  isTablet: false,
+  isBurgerMenu: false,
 };
