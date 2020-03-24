@@ -649,6 +649,15 @@
         font-size: 14px;
         line-height: 16px;
       }
+      &::placeholder {
+        color: #353535 !important;  
+        opacity: 1 !important;
+        line-height: 24px;
+        @media (min-width: 400px) {
+          content: 'lolkek'; 
+        }
+      }
+  
     }
   }
 

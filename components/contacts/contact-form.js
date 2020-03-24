@@ -4,6 +4,7 @@ import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
 import { IreneK, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
+import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -22,6 +23,8 @@ const ContactForm = () => {
     setStatus,
     setNotifyMessage,
     selectedCountry,
+    file,
+    setFile,
   } = useContext(ContactUsContext);
   let person;
   if (selectedCountry === 'NL') person = PaulW;
@@ -41,21 +44,12 @@ const ContactForm = () => {
   });
   const [isSubscriber, setIsSubscriber] = useState(false);
   const [hasDiscount] = useState(false);
-  const [file, setFile] = useState({
-    value: '',
-    error: false,
-  });
-
-  const unattachFile = (err) => {
-    setFile(err);
-  };
 
   const setInitialState = () => {
     setFirstname({ value: '', error: false });
     setEmail({ value: '', error: false });
     setMessage({ value: '', error: false });
     setFile({ value: '', error: false });
-    unattachFile({ value: '', error: false });
   };
 
   const onSubmit = (e) => {
@@ -88,7 +82,7 @@ const ContactForm = () => {
           if (json.errorField === 'firstname') setFirstname(json);
           if (json.errorField === 'email') setEmail(json);
           if (json.errorField === 'message') setMessage(json);
-          if (json.errorField === 'file') unattachFile(json);
+          if (json.errorField === 'file') setFile(json);
         }
 
         setIsPending(false);
@@ -162,7 +156,7 @@ const ContactForm = () => {
               error: message.error,
             })}
             name="message"
-            placeholder="Your message"
+            placeholder="Your message &#10;(project description)"
             onChange={(event) => {
               setMessage({
                 value: event.target.value,
@@ -174,6 +168,12 @@ const ContactForm = () => {
         </div>
         <div className={message.errorField ? 'error-message' : 'error-none'}>
           {message.status}
+        </div>
+        <div className="input-cols">
+          <FileUpload />
+          <div className={file.errorField ? 'error-message' : 'error-none'}>
+            {file.status}
+          </div>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox

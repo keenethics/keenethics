@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
+import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
@@ -44,15 +45,6 @@ const EstimateForm = () => {
   const [hasDiscount, setHasDiscount] = useState(false);
   const [wizardStage, setWizardStage] = useState(0);
 
-  const [file, setFile] = useState({
-    value: '',
-    error: false,
-  });
-
-  const unattachFile = (err) => {
-    setFile(err);
-  };
-
   const {
     isPending,
     setIsPending,
@@ -60,6 +52,8 @@ const EstimateForm = () => {
     setStatus,
     setWishlist,
     selectedCountry,
+    file,
+    setFile,
   } = useContext(ContactUsContext);
 
   useEffect(() => {
@@ -116,7 +110,7 @@ const EstimateForm = () => {
           if (json.errorField === 'name') setName(json);
           if (json.errorField === 'email') setEmailEstimate(json);
           if (json.errorField === 'message') setMessageEstimate(json);
-          if (json.errorField === 'file') unattachFile(json);
+          if (json.errorField === 'file') setFile(json);
         }
 
         setIsPending(false);
@@ -260,26 +254,65 @@ const EstimateForm = () => {
               Services needed
             </div>
             <div className="estimate-input-cols">
-              <p>Software development</p>
               <div className="options-wrapper">
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Web"
+                    text="Web development"
                     name="services"
                     id="web"
-                    value="Web app"
+                    value="Web development"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('Web app')}
+                    isChecked={services.value.includes('Web development')}
                   />
                 </div>
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Mobile"
+                    text="Mobile development"
                     name="services"
                     id="mobile"
-                    value="Mobile app"
+                    value="Mobile development"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('Mobile app')}
+                    isChecked={services.value.includes('Mobile development')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Dedicated development team"
+                    name="services"
+                    id="ddt"
+                    value="Dedicated development team"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Dedicated development team')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Cloud"
+                    name="services"
+                    id="cloud"
+                    value="Cloud"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Cloud')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Chatbots and AI"
+                    name="services"
+                    id="chatbots-ai"
+                    value="Chatbots and AI"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Chatbots and AI')}
+                  />
+                </div>
+                <div className="input-checkbox-wrap">
+                  <Checkbox
+                    text="Internet of things"
+                    name="services"
+                    id="iot"
+                    value="Internet of things"
+                    onChange={handleServicesChange}
+                    isChecked={services.value.includes('Internet of things')}
                   />
                 </div>
                 <div className="input-checkbox-wrap">
@@ -303,16 +336,16 @@ const EstimateForm = () => {
                   />
                 </div>
               </div>
-              <p>Other services</p>
+              <p>Development stages needed</p>
               <div className="options-wrapper odd-options-number">
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Team augmentation"
+                    text="Business analysis"
                     name="services"
-                    id="еeam-enhancement"
-                    value="Team enhancement"
+                    id="business-analysis"
+                    value="Business analysis"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('Team enhancement')}
+                    isChecked={services.value.includes('Business analysis')}
                   />
                 </div>
                 <div className="input-checkbox-wrap">
@@ -327,82 +360,32 @@ const EstimateForm = () => {
                 </div>
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="MVP"
+                    text="Development and testing"
                     name="services"
-                    id="mvp"
-                    value="MVP"
+                    id="development-and-testing"
+                    value="Development and testing"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('MVP')}
+                    isChecked={services.value.includes('Development and testing')}
                   />
                 </div>
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="PoC"
+                    text="Software deployment"
                     name="services"
-                    id="poc"
-                    value="PoC"
+                    id="software-deployment"
+                    value="Software deployment"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('PoC')}
+                    isChecked={services.value.includes('Software deployment')}
                   />
                 </div>
                 <div className="input-checkbox-wrap">
                   <Checkbox
-                    text="Tech support"
+                    text="Maintenance and support"
                     name="services"
-                    id="tech-support"
-                    value="Tech support"
+                    id="maintenance-and-support"
+                    value="Maintenance and support"
                     onChange={handleServicesChange}
-                    isChecked={services.value.includes('Tech support')}
-                  />
-                </div>
-                <div className="input-checkbox-wrap">
-                  <Checkbox
-                    text="Tech consultancy"
-                    name="services"
-                    id="tech-consultancy"
-                    value="Tech consultancy"
-                    onChange={handleServicesChange}
-                    isChecked={services.value.includes('Tech consultancy')}
-                  />
-                </div>
-                <div className="input-checkbox-wrap">
-                  <Checkbox
-                    text="Chatbots"
-                    name="services"
-                    id="chatbots"
-                    value="Chatbots"
-                    onChange={handleServicesChange}
-                    isChecked={services.value.includes('Chatbots')}
-                  />
-                </div>
-                <div className="input-checkbox-wrap">
-                  <Checkbox
-                    text="Programmable voice"
-                    name="services"
-                    id="programmable-voice"
-                    value="Programmable voice"
-                    onChange={handleServicesChange}
-                    isChecked={services.value.includes('Programmable voice')}
-                  />
-                </div>
-                <div className="input-checkbox-wrap">
-                  <Checkbox
-                    text="IoT"
-                    name="services"
-                    id="iot"
-                    value="IoT"
-                    onChange={handleServicesChange}
-                    isChecked={services.value.includes('IoT')}
-                  />
-                </div>
-                <div className="input-checkbox-wrap">
-                  <Checkbox
-                    text="Other services"
-                    name="services"
-                    id="other-services"
-                    value="Other services"
-                    onChange={handleServicesChange}
-                    isChecked={services.value.includes('Other services')}
+                    isChecked={services.value.includes('Maintenance and support')}
                   />
                 </div>
               </div>
@@ -917,11 +900,17 @@ const EstimateForm = () => {
                   })
                   }
                   value={messageEstimate.value}
-                  placeholder="Your message (optional)"
+                  placeholder="Your message (project description)"
                 />
               </div>
               <div className={messageEstimate.errorField ? 'error-message' : 'error-none'}>
                 {messageEstimate.status}
+              </div>
+              <div className="input-cols">
+                <FileUpload />
+                <div className={file.errorField ? 'error-message' : 'error-none'}>
+                  {file.status}
+                </div>
               </div>
             </div>
             <div className="grey-checkbox-wrapper">

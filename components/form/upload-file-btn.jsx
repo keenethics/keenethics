@@ -1,51 +1,82 @@
-import React, { Component } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import nanoid from 'nanoid';
-import PropTypes from 'prop-types';
-import '../../styles/form/upload-btn.scss';
+import { ContactUsContext } from '../context/contacts-context';
 
-export default class FileUpload extends Component {
-  constructor(props) {
-    super(props);
+const DEFAULT_FILENAME = 'Attach your file';
+const DEFAULT_FILESIZE = 'up to 10MB';
+const allowedExts = ['pdf', 'doc', 'docx', 'jpeg', 'jpg', 'png', 'xls', 'xlsx', 'ppt', 'pptx'];
+const randomId = `upload-btn-${nanoid(8)}`;
 
-    this.id = props.id || `upload-btn-${nanoid(8)}`;
+const validateFile = (file) => {
+  const ext = file.name.split('.')[file.name.split('.').length - 1];
+  if (!allowedExts.includes(ext)) {
+    return 'Not allowed file type';
   }
-
-  render() {
-    const {
-      text,
-      limit,
-      allowedExts,
-      onChange,
-    } = this.props;
-    return (
-      <div className="file-upload-container">
-        <label htmlFor={this.id} className="custom-file-upload">
-          { text }
-          <span>
-            (
-            { limit }
-            )
-          </span>
-          <img src="/static/images/svg/file.svg" alt="File" />
-        </label>
-        <input id={this.id} type="file" name="file" onChange={onChange} />
-        <div className="file-upload-desc">{ allowedExts }</div>
-      </div>
-    );
+  if (file.size > 10000000) { // 10mb
+    return 'File size too large, please send the link instead';
   }
-}
+  return null;
+};
 
-FileUpload.propTypes = {
-  id: PropTypes.string,
-  text: PropTypes.string,
-  limit: PropTypes.string,
-  allowedExts: PropTypes.string,
-  onChange: PropTypes.func,
+const FileUpload = () => {
+  const [fileName, setFileName] = useState(DEFAULT_FILENAME);
+  const [fileSize, setFileSize] = useState(DEFAULT_FILESIZE);
+
+  const { setFile } = useContext(ContactUsContext);
+
+  const unattachFile = (err) => {
+    setFile(err);
+    setFileName(DEFAULT_FILENAME);
+    setFileSize(DEFAULT_FILESIZE);
+  };
+
+  useEffect(() => {
+    unattachFile({ value: '', error: false });
+  }, []);
+
+  return (
+    <div className="file-upload-container">
+      <label htmlFor={randomId} className="custom-file-upload">
+        {(fileName.length > 10 && fileName !== DEFAULT_FILENAME)
+          ? fileName.substring(0, 10).concat('...')
+          : fileName}
+        <span>
+          (
+          { fileSize }
+          )
+        </span>
+        <img src="/static/images/svg/file.svg" alt="File" />
+      </label>
+      <input
+        id={randomId}
+        type="file"
+        name="file"
+        onChange={
+          (e) => {
+            const fileObj = e.target.files[0];
+            if (fileObj) {
+              const error = validateFile(fileObj);
+              if (!error) {
+                setFile(fileObj);
+                setFileName(fileObj.name);
+                setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `);
+              } else {
+                unattachFile({
+                  value: null,
+                  error: true,
+                  status: error,
+                  errorField: 'file',
+                });
+              }
+            } else {
+              unattachFile({ value: '', error: false });
+            }
+          }
+        }
+      />
+      <div className="file-upload-desc">{ allowedExts.join(', ') }</div>
+    </div>
+  );
 };
-FileUpload.defaultProps = {
-  id: null,
-  text: '',
-  limit: '',
-  allowedExts: '',
-  onChange: null,
-};
+
+export default FileUpload;
