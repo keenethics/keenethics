@@ -34,6 +34,27 @@ const FileUpload = () => {
     unattachFile({ value: '', error: false });
   }, []);
 
+  const handleFileChange = (evt) => {
+    const fileObj = evt.target.files[0];
+    if (fileObj) {
+      const error = validateFile(fileObj);
+      if (!error) {
+        setFile(fileObj);
+        setFileName(fileObj.name);
+        setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `);
+      } else {
+        unattachFile({
+          value: null,
+          error: true,
+          status: error,
+          errorField: 'file',
+        });
+      }
+    } else {
+      unattachFile({ value: '', error: false });
+    }
+  };
+
   return (
     <div className="file-upload-container">
       <label htmlFor={randomId} className="custom-file-upload">
@@ -51,28 +72,7 @@ const FileUpload = () => {
         id={randomId}
         type="file"
         name="file"
-        onChange={
-          (e) => {
-            const fileObj = e.target.files[0];
-            if (fileObj) {
-              const error = validateFile(fileObj);
-              if (!error) {
-                setFile(fileObj);
-                setFileName(fileObj.name);
-                setFileSize(` ${(Math.round(fileObj.size / 10000) / 100) || '0.01'} MB `);
-              } else {
-                unattachFile({
-                  value: null,
-                  error: true,
-                  status: error,
-                  errorField: 'file',
-                });
-              }
-            } else {
-              unattachFile({ value: '', error: false });
-            }
-          }
-        }
+        onChange={handleFileChange}
       />
       <div className="file-upload-desc">{ allowedExts.join(', ') }</div>
     </div>
