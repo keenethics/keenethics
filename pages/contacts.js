@@ -154,7 +154,7 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
         </button>
         <div className="address-telephone-wrapper">
           <a
-            href="https://goo.gl/maps/SacJi7LxaXFfrad79"
+            href="https://goo.gl/maps/tg3pYa3wed1QFYH67"
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
@@ -287,6 +287,10 @@ const Contacts = ({ router }) => {
   const [notifyMessage, setNotifyMessage] = useState(null);
   const [wishlist, setWishlist] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [file, setFile] = useState({
+    value: null,
+    error: false,
+  });
 
   function onClick({ target }) {
     setActiveContactForm(target.name === 'contact-form-btn');
@@ -414,6 +418,8 @@ const Contacts = ({ router }) => {
                     setNotifyMessage,
                     setWishlist,
                     selectedCountry,
+                    file,
+                    setFile,
                   }}
                 >
                   <div
