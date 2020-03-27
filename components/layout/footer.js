@@ -273,7 +273,7 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
-              <Link href="contacts?activeform=estimate" prefetch={false}>
+              <Link href="/contacts?activeform=estimate" prefetch={false}>
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -296,10 +296,10 @@ const HomeFooter = ({
               <a href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="contacts" prefetch={false}><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="/contacts" prefetch={false}><a className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="contacts" prefetch={false}>
+              <Link href="/contacts" prefetch={false}>
                 <a className="button footer-estimation">
                   Free Estimation
                 </a>
@@ -308,16 +308,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="about-us" prefetch={false}><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="/about-us" prefetch={false}><a className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <a href="/#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="careers" prefetch={false}><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="/careers" prefetch={false}><a className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="blog" prefetch={false}><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="/blog" prefetch={false}><a className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>
@@ -326,7 +326,7 @@ const HomeFooter = ({
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">
-          <Link href="blog" prefetch={false}><a className="home-footer-link">Latest in Blog</a></Link>
+          <Link href="/blog" prefetch={false}><a className="home-footer-link">Latest in Blog</a></Link>
           <span className="bell-icon" />
         </div>
         <FooterSlider
