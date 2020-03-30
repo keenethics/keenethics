@@ -362,7 +362,9 @@ export default class Post extends React.Component {
 
             <footer className="blog-post-page-footer">
               {url && socialMediaShareButtons({ url: this.props.url.asPath })}
-              <SubscribePanel />
+              <SubscribePanel
+                subscriptionText="Subscribe to our monthly newsletter and join the ethical movement."
+              />
             </footer>
           </article>
 

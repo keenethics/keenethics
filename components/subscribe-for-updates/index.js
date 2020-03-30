@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import RocketHeader from './RocketHeader';
 import TextHeader from './TextHeader';
 
-const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback }) => {
+const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback, subscriptionText }) => {
   const [value, setValue] = useState('');
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -41,15 +41,7 @@ const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback }) => {
   }
   let subHeaderText = '';
   if (!error && !success) {
-    subHeaderText = (
-      <>
-        Get the latest JavaScript insights from the company that knows your business and your
-        industry.
-        {' '}
-        <br />
-        Subscribe to our bimonthly newsletter.
-      </>
-    );
+    subHeaderText = subscriptionText;
   } else if (success) {
     subHeaderText = 'You have successfully subscribed to our digest!';
   } else {
@@ -84,11 +76,20 @@ const NewsletterSubscriptionForm = ({ useRocketHeader, successCallback }) => {
 NewsletterSubscriptionForm.propTypes = {
   useRocketHeader: PropTypes.bool,
   successCallback: PropTypes.func,
+  subscriptionText: PropTypes.node,
 };
 
 NewsletterSubscriptionForm.defaultProps = {
   useRocketHeader: false,
   successCallback: () => {},
+  subscriptionText:
+  <>
+    Get the latest insights from the world of Tech4Good.
+    Each month – one interview with an inspiring leader of Tech4Good,
+    3 articles on business, and 3 articles on tech.
+    <br />
+    Subscribe to our monthly newsletter and join the ethical movement.
+  </>,
 };
 
 export default NewsletterSubscriptionForm;
