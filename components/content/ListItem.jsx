@@ -38,7 +38,7 @@ const getDataFromProperty = (item) => {
     return {
       title: item.title,
       description: null,
-      imgUrl: `${
+      imgUrl: `https:${
         _.get(item.heroImage, 'fields.file.url')
       }?fm=jpg&fl=progressive&q=85&w=600`,
       url: `/post?name=${item.slug}`,
