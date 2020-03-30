@@ -13,9 +13,13 @@ const Main = () => (
             <SocialButton />
           </div>
           <h4 className="home-page-small-title">
-            CODE FOR BUSINESS&nbsp;
-            <span className="color-red">•</span>
-            &nbsp;CARE FOR THE WORLD
+            CODE FOR BUSINESS
+            <span>
+              &nbsp;
+              <img className="keen-dot-home" src="/static/images/keen-dot.png" alt="" />
+              &nbsp;
+            </span>
+            CARE FOR THE WORLD
           </h4>
           <div className="vertical-line" />
           <h1 className="home-page-large-title">
