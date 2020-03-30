@@ -28,6 +28,7 @@ class Navigation extends React.Component {
     this.getPointContent = this.getPointContent.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.closeSidebar = this.closeSidebar.bind(this);
   }
 
   getPointContent(navigation, currentPoint, currentSubpoint) {
@@ -51,6 +52,7 @@ class Navigation extends React.Component {
                   isSubpoint
                   currentSubpoint={currentPoint && currentSubpoint === i}
                   scroll={this.constructor.scrollToActiveSubpoint}
+                  closeSidebar={this.closeSidebar}
                 />
               );
             })}
@@ -82,6 +84,12 @@ class Navigation extends React.Component {
       return;
     }
     this.props.toggleNav();
+    this.setState({
+      showSidebar: false,
+    });
+  }
+
+  closeSidebar() {
     this.setState({
       showSidebar: false,
     });
@@ -139,6 +147,7 @@ class Navigation extends React.Component {
                   element={n}
                   currentPoint={currentPoint === i}
                   isBurgerMenu={isBurgerMenu}
+                  closeSidebar={this.closeSidebar}
                 >
                   {
                     isBurgerMenu
