@@ -37,7 +37,12 @@ export default class NavigationPoint extends React.Component {
     if (!points && href) {
       return (
         <Link href={href} prefetch={false}>
-          <a className="navigation-point">
+          <a
+            className="navigation-point"
+            onClick={this.props.closeSidebar}
+            onKeyDown={this.props.closeSidebar}
+            role="presentation"
+          >
             {this.renderPointContent()}
           </a>
         </Link>
@@ -153,6 +158,7 @@ NavigationPoint.propTypes = {
   currentPoint: PropTypes.bool,
   currentSubpoint: PropTypes.bool,
   isBurgerMenu: PropTypes.bool,
+  closeSidebar: PropTypes.func,
 };
 NavigationPoint.defaultProps = {
   children: null,
@@ -170,4 +176,5 @@ NavigationPoint.defaultProps = {
   currentPoint: false,
   currentSubpoint: false,
   isBurgerMenu: false,
+  closeSidebar: null,
 };

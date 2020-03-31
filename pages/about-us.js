@@ -14,7 +14,9 @@ const AboutUs = () => (
       <div className="page__header">
         <h1 className="page__title">
           CODE FOR BUSINESS&nbsp;
-          <span className="color-red">•</span>
+          <nobr>
+            <img className="keen-dot" src="/static/images/keen-dot.png" alt="" />
+          </nobr>
           <br />
           CARE&nbsp;
           <span className="color-red">FOR THE WORLD</span>

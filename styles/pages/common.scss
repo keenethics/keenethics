@@ -243,3 +243,13 @@
 .p-b-0 { padding-bottom: 0; }
 
 .color-red { color: #D62C2C; }
+
+.keen-dot {
+  display: inline-block;
+  width: .4em;
+  padding-bottom: .14em;
+  &-home {
+    width: .4em;
+    padding-bottom: .18em;
+  }
+}
