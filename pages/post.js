@@ -309,8 +309,8 @@ export default class Post extends React.Component {
     }
 
     const meta = {};
-    if (metaTitle && metaDescription) {
-      meta.title = metaTitle;
+    meta.title = metaTitle || title || '';
+    if (metaDescription) {
       meta.description = metaDescription;
     }
     const { url } = this.state;
