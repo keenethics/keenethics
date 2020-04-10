@@ -259,6 +259,14 @@
         "metaDescription": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
         "href": "/services-web-development-meteor",
         "type": "default"
+      },
+      {
+        "name": "Svelte",
+        "metaTitle": "Svelte JS  development services – KeenEthics",
+        "description": "Svelte is a simple but incredibly efficient and performant user interface development framework. Unlike other frameworks, such as React or Vue, which allow you to write declarative code, with Svelte, you write imperative code.",
+        "metaDescription": "Svelte is a simple but incredibly efficient and performant user interface development framework. Unlike other frameworks, such as React or Vue, which allow you to write declarative code, with Svelte, you write imperative code.",
+        "href": "/tech-front-end-svelte",
+        "type": "default"
       }
     ]
   },

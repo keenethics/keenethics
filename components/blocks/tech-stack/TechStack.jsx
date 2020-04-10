@@ -82,10 +82,12 @@ const TechStack = () => {
                   <img className="toggle-color" src="/static/main-blocks/tech-stack/phonegap-color.svg" alt="phonegap" />
                 </div>
               </Link>
-              <div className="tech-stack--block-item">
-                <img src="/static/main-blocks/tech-stack/svelte.svg" alt="svelte" />
-                <img className="toggle-color" src="/static/main-blocks/tech-stack/svelte-color.svg" alt="svelte" />
-              </div>
+              <Link href="/tech-front-end-svelte" prefetch={false}>
+                <div className="tech-stack--block-item">
+                  <img src="/static/main-blocks/tech-stack/svelte.svg" alt="svelte" />
+                  <img className="toggle-color" src="/static/main-blocks/tech-stack/svelte-color.svg" alt="svelte" />
+                </div>
+              </Link>
               <Link href="/services-web-development-meteor" prefetch={false}>
                 <div className="tech-stack--block-item">
                   <img src="/static/main-blocks/tech-stack/meteor.svg" alt="meteor" />
