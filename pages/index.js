@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from '../components/layout/main';
 import Main from '../components/blocks/main/Main';
@@ -12,8 +11,6 @@ import Founders from './founders';
 import Projects from './home-page-projects';
 import Blog from './home-page-blog';
 import LetsStart from './home-page-lets-start';
-import { getPostsList } from '../lib/contentful';
-import PostsContext from '../components/context/posts-context';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -26,12 +23,6 @@ export default class Index extends React.Component {
     };
 
     this.listener = null;
-  }
-
-  static async getInitialProps() {
-    const contResp = await getPostsList();
-
-    return { posts: contResp && contResp.items ? contResp.items : [] };
   }
 
   componentDidMount() {
@@ -61,7 +52,6 @@ export default class Index extends React.Component {
   }
 
   render() {
-    const { posts } = this.props;
     const {
       isMobile,
       isTablet,
@@ -69,34 +59,24 @@ export default class Index extends React.Component {
     } = this.state;
 
     return (
-      <PostsContext.Provider value={posts}>
-        <Layout>
-          <Main />
-          <OurServices
-            isMobile={isMobile}
-          />
-          <OurMethods />
-          <Industries />
-          <Founders />
-          <Projects
-            minimize={isTabletL || isTablet || isMobile}
-          />
-          <TechStack />
-          <Blog
-            minimize={isTabletL || isTablet || isMobile}
-          />
-          <Partners />
-          <LetsStart />
-        </Layout>
-      </PostsContext.Provider>
+      <Layout>
+        <Main />
+        <OurServices
+          isMobile={isMobile}
+        />
+        <OurMethods />
+        <Industries />
+        <Founders />
+        <Projects
+          minimize={isTabletL || isTablet || isMobile}
+        />
+        <TechStack />
+        <Blog
+          minimize={isTabletL || isTablet || isMobile}
+        />
+        <Partners />
+        <LetsStart />
+      </Layout>
     );
   }
 }
-
-Index.propTypes = {
-  posts: PropTypes.array,
-};
-
-Index.defaultProps = {
-  posts: [],
-};

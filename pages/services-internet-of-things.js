@@ -127,7 +127,7 @@ const ServicesInternetOfThings = () => {
     KeenEthics takes all the technical and legal measures to ensure the data safety of your business
     and your users. We do not want any private information to be leaked or compromised, and we do
     everything possible to prevent it from happening. We stay&nbsp;
-    <a href="/post-preview/1543388400000-your-data-is-safe-in-ukraine">on guard of your data</a>
+    <a href="/blog/1543388400000-your-data-is-safe-in-ukraine">on guard of your data</a>
     .
   </>,
     },

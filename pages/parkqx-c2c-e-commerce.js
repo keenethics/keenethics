@@ -139,7 +139,7 @@ const ProjectPrix = () => (
             <CallToActionButton
               buttonBefore={(
                 <Link
-                  href="/portfolio?chosen=consumer%20apps"
+                  href="/portfolio"
                 >
                   <button type="button" className="call-to-cation-btn -secondary">
                     Other case studies
