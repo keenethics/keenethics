@@ -12,6 +12,8 @@ import Head from './head';
 import Footer from './footer';
 
 import Navigation from './navigation/main';
+import PostsContext from '../context/posts-context';
+import { getPostsList } from '../../lib/contentful';
 
 const isClient = typeof window !== 'undefined';
 
@@ -29,6 +31,7 @@ class Layout extends React.Component {
         height: -1,
       },
       showNav: true,
+      posts: [],
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -36,6 +39,10 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
+    getPostsList().then((res) => {
+      this.setState({ posts: res.items });
+    });
+
     if (isClient) {
       window.addEventListener('resize', this.updateDimensions);
 
@@ -71,6 +78,7 @@ class Layout extends React.Component {
   render() {
     const {
       dimensions,
+      posts,
     } = this.state;
     const {
       children,
@@ -103,10 +111,12 @@ class Layout extends React.Component {
           <div className={classnames('content-inner', className)} style={contentInnerStyle}>
             {children}
             {noFooter || (
-              <Footer
-                isMobile={isMobile}
-                isTablet={isTablet}
-              />
+              <PostsContext.Provider value={posts}>
+                <Footer
+                  isMobile={isMobile}
+                  isTablet={isTablet}
+                />
+              </PostsContext.Provider>
             )}
           </div>
         </div>
