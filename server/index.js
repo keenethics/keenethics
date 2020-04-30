@@ -38,7 +38,7 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 if (!dev) {
-  Sentry.init({ dsn: 'https://531a4ece3b5840049dd4e9d86db81ac5@sentry.io/1889982' });
+  Sentry.init({ dsn: process.env.SENTRY_DSN });
 }
 
 const sendContactToHubSpot = (hubSpotParameters) => {
@@ -178,6 +178,7 @@ app.prepare().then(() => {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
+        if (!dev) Sentry.captureException(err);
         throw err;
       }
       res.send({
@@ -197,6 +198,7 @@ app.prepare().then(() => {
         ),
         (e) => {
           if (e) {
+            if (!dev) Sentry.captureException(e);
             throw e;
           }
         },
