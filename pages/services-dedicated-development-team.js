@@ -120,14 +120,6 @@ class ServicesOutstaffing extends React.Component {
             <p className="text-center text-italic">Maintaining control, improving team skill set, and reducing HR costs</p>
           </section>
           <section>
-            <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$507.2 billion</h2>
-              <p className="text-center">
-                is the projected size of the global software market in 2021, according to&nbsp;
-                <Link href="https://www.statista.com/statistics/963597/software-revenue-worldwide/">
-                  <a target="_blank" rel="noopener noreferrer nofollow">Statista</a>
-                </Link>
-                .
-              </p>
             <h2>What Is a Dedicated Development Team?</h2>
             <p>Outstaffing is the process of hiring professional software developers to assist you with a project. These specialists work at the premises of their own agency. Meanwhile, your company manages and controls them. The greatest advantage of outstaffing is the simplicity of it. Do you realize the need for more team members on your project? Contact the agency providing dedicated development team and talk to developers they offer. As soon as you say “Deal!”, these specialists can start working on your project at once. Yes, it is that simple.</p>
             <p>Requesting outstaffing services is the way you bring the best talents into your development team without going through the typical HR recruitment and training routine.</p>
