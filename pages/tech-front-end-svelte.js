@@ -12,8 +12,9 @@ import { techFrontEnd } from '../main.config';
 import PostsContext from '../components/context/posts-context';
 import Posts from '../components/blog/posts';
 
-const TechFrontEndSvelte = () => {
-  const posts = useContext(PostsContext);
+const PageContent = () => {
+  const posts = useContext(PostsContext) || [];
+
   const whySvelte = [
     {
       icon: '/static/technologies/meteor/users.png',
@@ -129,7 +130,7 @@ const TechFrontEndSvelte = () => {
   ];
 
   return (
-    <Layout>
+    <>
       <ContentNavigation image="fe" points={techFrontEnd()} />
       <div className="content-block">
         <section>
@@ -198,8 +199,8 @@ const TechFrontEndSvelte = () => {
         </section>
         <section>
           <h2>Insights</h2>
-          <div>
-            <Posts posts={posts.filter(({ title }) => ['React vs Svelte: How to Build Messaging Components'].includes(title))} />
+          <div className="post-list-wrapper">
+            <Posts posts={posts.filter(({ fields }) => ['React vs Svelte: How to Build Messaging Components'].includes(fields.title.trim()))} />
           </div>
         </section>
         <h2>Now, let’s discuss your business idea!</h2>
@@ -208,8 +209,14 @@ const TechFrontEndSvelte = () => {
           href="/contacts"
         />
       </div>
-    </Layout>
+    </>
   );
 };
+
+const TechFrontEndSvelte = () => (
+  <Layout>
+    <PageContent />
+  </Layout>
+);
 
 export default TechFrontEndSvelte;

@@ -108,17 +108,17 @@ class Layout extends React.Component {
           />
         )}
         <div className="content">
-          <div className={classnames('content-inner', className)} style={contentInnerStyle}>
-            {children}
-            {noFooter || (
-              <PostsContext.Provider value={posts}>
+          <PostsContext.Provider value={posts}>
+            <div className={classnames('content-inner', className)} style={contentInnerStyle}>
+              {children}
+              {noFooter || (
                 <Footer
                   isMobile={isMobile}
                   isTablet={isTablet}
                 />
-              </PostsContext.Provider>
-            )}
-          </div>
+              )}
+            </div>
+          </PostsContext.Provider>
         </div>
       </div>
     );
