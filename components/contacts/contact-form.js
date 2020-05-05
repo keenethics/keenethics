@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import classnames from 'classnames';
+import ReactGA from 'react-ga';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
@@ -54,7 +55,11 @@ const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
+    ReactGA.event({
+      category: 'Form',
+      action: 'Contact us form',
+      transport: 'beacon',
+    });
     setIsPending(true);
 
     const formData = new FormData();

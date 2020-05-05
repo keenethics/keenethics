@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 
 import { withRouter } from 'next/router';
-
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
@@ -16,6 +16,11 @@ import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
 import mobileScrollIntoView from '../helpers/scroll-effects';
+
+function initializeReactGA() {
+  ReactGA.initialize(process.env.GA_KEY);
+}
+initializeReactGA();
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
