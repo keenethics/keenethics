@@ -55,12 +55,13 @@ const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    ReactGA.event({
-      category: 'Leadgen',
-      action: 'submit',
-      label: email.value,
-      transport: 'beacon',
-    });
+    ReactGA.ga(
+      'send',
+      'event',
+      'Leadgen',
+      'submit',
+      email.value,
+    );
     setIsPending(true);
 
     const formData = new FormData();
