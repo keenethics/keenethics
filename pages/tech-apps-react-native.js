@@ -163,16 +163,6 @@ const TechAppsRN = () => (
         <h1 className="text-center">React Native App Development</h1>
         <p className="text-center text-italic">Using a fast, convenient, performant, and universal framework to develop cross-platform mobile apps.</p>
         <CallToActionButton />
-        <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$1.25 billion</h2>
-        <p className="text-center">
-          is the projected size of the global chatbot market in 2025, according to&nbsp;
-          <Link href="https://www.statista.com/topics/1002/mobile-app-usage/">
-            <a target="_blank" rel="noopener noreferrer nofollow">
-              Statista
-            </a>
-          </Link>
-          .
-        </p>
       </section>
       <section>
         <h2>What Is React Native Application Development?</h2>
