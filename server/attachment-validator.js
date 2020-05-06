@@ -16,7 +16,7 @@ module.exports = (files) => {
     throw error;
   }
   const attachment = {
-    name: file.name,
+    filename: file.name,
     content: file.data,
     encoding: file.encoding,
     contentType: file.mimetype,
