@@ -15,7 +15,7 @@ const AboutUs = () => (
         <h1 className="page__title">
           CODE FOR BUSINESS&nbsp;
           <nobr>
-            <img className="keen-dot" src="/static/images/keen-dot.png" alt="" />
+            <img className="keen-dot" src="/static/images/keen-dot.svg" alt="" />
           </nobr>
           <br />
           CARE&nbsp;

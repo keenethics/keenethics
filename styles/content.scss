@@ -323,3 +323,19 @@
     padding: 0 24px;
   }
 }
+
+.post-list-wrapper {
+  ul {
+    margin: 0;
+    li {
+      padding: 0;
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  h3 { 
+    font-size: initial;
+  }
+}

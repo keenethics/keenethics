@@ -16,7 +16,7 @@ const Main = () => (
             CODE FOR BUSINESS
             <span>
               &nbsp;
-              <img className="keen-dot-home" src="/static/images/keen-dot.png" alt="" />
+              <img className="keen-dot-home" src="/static/images/keen-dot.svg" alt="" />
               &nbsp;
             </span>
             CARE FOR THE WORLD
