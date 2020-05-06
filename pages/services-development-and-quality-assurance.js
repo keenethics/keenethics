@@ -79,12 +79,6 @@ const DevelopmentAndQualityAssurance = () => {
             Assurance services
           </p>
           <CallToActionButton />
-          <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$507.2 billion</h2>
-          <p className="text-center">
-            is the projected size of the global software market in 2021, according to&nbsp;
-            <a href="https://www.statista.com/statistics/963597/software-revenue-worldwide/" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
-            .
-          </p>
         </section>
         <section>
           <h2>What Is Development and Quality Assurance?</h2>

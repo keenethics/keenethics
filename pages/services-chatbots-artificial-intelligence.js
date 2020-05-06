@@ -121,16 +121,6 @@ const ChatbotsArtificialIntelligence = () => {
             customer satisfaction
           </p>
           <CallToActionButton />
-          <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$1.25 billion</h2>
-          <p className="text-center">
-            is the projected size of the global chatbot market in 2025, according to&nbsp;
-            <Link href="https://www.statista.com/statistics/656596/worldwide-chatbot-market/">
-              <a target="_blank" rel="noopener noreferrer nofollow">
-                Statista
-              </a>
-            </Link>
-            .
-          </p>
         </section>
         <section>
           <h2>What Is AI and Chatbot Development?</h2>
