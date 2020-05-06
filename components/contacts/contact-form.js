@@ -56,8 +56,9 @@ const ContactForm = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     ReactGA.event({
-      category: 'Form',
-      action: 'Contact us form',
+      category: 'Leadgen',
+      action: 'submit',
+      label: email.value,
       transport: 'beacon',
     });
     setIsPending(true);

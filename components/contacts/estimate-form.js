@@ -81,8 +81,9 @@ const EstimateForm = () => {
     e.preventDefault();
 
     ReactGA.event({
-      category: 'Form',
-      action: 'Estimate form',
+      category: 'Leadgen',
+      action: 'submit',
+      label: emailEstimate.value,
       transport: 'beacon',
     });
     setIsPending(true);
