@@ -31,7 +31,6 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6",
     "express-uncapitalize": "^1.0.0",
-    "geoip-lite": "^1.4.0",
     "googleapis": "^47.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",

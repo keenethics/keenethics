@@ -298,11 +298,11 @@ const Contacts = ({ router }) => {
 
   useEffect(() => {
     const getLoction = async () => {
-      const res = await fetch('/api/location');
+      const res = await fetch('http://ip-api.com/json');
       const json = await res.json();
-      const location = json.location || {};
+      const location = json.countryCode || {};
 
-      setSelectedCountry(location.country);
+      setSelectedCountry(location);
     };
 
     getLoction();
