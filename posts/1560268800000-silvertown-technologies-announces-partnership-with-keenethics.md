@@ -2,7 +2,7 @@ Author: Walter Hendriks, Max Savonin
 Title: KeenEthics announces partnership with Silvertown Technologies
 Subtitle: KeenEthics announces partnership with Silvertown Technologies - KeenEthics Blog
 Meta title: KeenEthics announces partnership with Silvertown Technologies - KeenEthics Blog
-Meta description: Top-rated Upwork agency KeenEthics based in Lviv, Ukraine, complements Silvertown’s scale-up ambitions in ethical software development.
+Meta description: Top-rated Upwork agency KeenEthics complements Silvertown’s scale-up ambitions in ethical software development.
 Categories: From KeenEthics
 Preview image: /static/posts/silvertown-technologies-partnership/silvertown-technologies-partnership.jpg
 
@@ -48,8 +48,8 @@ Together Silvertown Technologies and KeenEthics look forward to sharing a vision
 
 ## About Silvertown Technologies
 
-<a href="//www.silvertowntechnologies.com" target="_blank" rel="noopener noreferrer nofollow">Silvertown Technologies</a> is a privately owned Dutch RegTech start-up focussed on Compliance, Privacy and Regulatory solutions. Our technology aims to create awareness in organizations while reducing impact from Regulations on the business process. 
-We believe in a diversified workplace that allows every individual to participate in accordance with their capabilities. 
+<a href="//www.silvertowntechnologies.com" target="_blank" rel="noopener noreferrer nofollow">Silvertown Technologies</a> is a privately owned Dutch RegTech start-up focussed on Compliance, Privacy and Regulatory solutions. Our technology aims to create awareness in organizations while reducing impact from Regulations on the business process.
+We believe in a diversified workplace that allows every individual to participate in accordance with their capabilities.
 
 ## About KeenEthics
 
