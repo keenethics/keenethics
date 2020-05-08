@@ -51,7 +51,7 @@ const LeadersMobile = ({ data }) => {
       <div className="gallery mobile" ref={gallery}>
         <div className="gallery-inner">
           {
-            data.map((item, index) => (
+            data.sort((a, b) => a.id - b.id).map((item, index) => (
               <figure key={index}>
                 <div className="wrapper">
                   <img
