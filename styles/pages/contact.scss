@@ -56,6 +56,7 @@
 
     @include breakpoint(sm-max) {
       margin-top: 15px;
+      // display: none;
     }
 
     .contacts-list {
@@ -650,14 +651,14 @@
         line-height: 16px;
       }
       &::placeholder {
-        color: #353535 !important;  
+        color: #353535 !important;
         opacity: 1 !important;
         line-height: 24px;
         @media (min-width: 400px) {
-          content: 'lolkek'; 
+          content: 'lolkek';
         }
       }
-  
+
     }
   }
 
@@ -1904,6 +1905,9 @@
           display: block !important;
         }
       }
+    }
+    &-hide {
+      display: none !important;
     }
   }
   &-inline-block {
