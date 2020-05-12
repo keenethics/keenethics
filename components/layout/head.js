@@ -16,8 +16,8 @@ import {
   works,
 } from '../../main.config';
 
-const DEFAULT_DESCRIPTION = 'KeenEthics is an Eastern European software development company, that provides custom software development for your business';
-const DEFAULT_TITLE = 'Custom Software Development Company - KeenEthics';
+const DEFAULT_DESCRIPTION = 'KeenEthics is an ethical web and mobile development partner based in Eastern Europe and represented in the Netherlands and the United States';
+const DEFAULT_TITLE = 'Ethical Web and Mobile Development Partner';
 
 const LayoutHead = (props) => {
   const { navigation } = config;
