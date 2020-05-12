@@ -275,7 +275,7 @@ const HomeFooter = ({
             <li className="home-footer-list-item">
               <Link href="/contacts?activeform=estimate" prefetch={false}>
                 <a className="button footer-estimation">
-                  Free Estimation
+                  Free Estimate
                 </a>
               </Link>
             </li>
@@ -301,7 +301,7 @@ const HomeFooter = ({
             <li className="home-footer-list-item">
               <Link href="/contacts" prefetch={false}>
                 <a className="button footer-estimation">
-                  Free Estimation
+                  Free Estimate
                 </a>
               </Link>
             </li>
