@@ -3,6 +3,7 @@
 import { withRouter } from 'next/router';
 
 import React, { useState, useEffect } from 'react';
+import * as Sentry from '@sentry/browser';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
@@ -16,6 +17,10 @@ import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
 import mobileScrollIntoView from '../helpers/scroll-effects';
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+});
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
