@@ -22,7 +22,6 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
-const geoip = require('geoip-lite');
 const fileUpload = require('express-fileupload');
 const { mailgunAuth, hubSpot } = require('./config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
@@ -505,19 +504,6 @@ app.prepare().then(() => {
   server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
-  });
-
-  server.get('/api/location', async (req, res) => {
-    try {
-      const ip = req.headers['x-forwarded-for']
-        || req.connection.remoteAddress
-        || req.socket.remoteAddress
-        || (req.connection.socket ? req.connection.socket.remoteAddress : null);
-      const location = await geoip.lookup(ip);
-      res.status(200).json({ location });
-    } catch (e) {
-      res.status(400).json({ location: '' });
-    }
   });
 
   server.get('*', (req, res) => handle(req, res));

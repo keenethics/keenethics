@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://keenethics.com/</loc>
@@ -25,43 +25,57 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-mobile-development-apple</loc>
+    <loc>
+    https://keenethics.com/services-mobile-development-apple
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-mobile-development-android</loc>
+    <loc>
+    https://keenethics.com/services-mobile-development-android
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/approach-minimum-viable-product</loc>
+    <loc>
+    https://keenethics.com/approach-minimum-viable-product
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/tech-apps-progressive-web-apps</loc>
+    <loc>
+    https://keenethics.com/tech-apps-progressive-web-apps
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-dedicated-development-team</loc>
+    <loc>
+    https://keenethics.com/services-dedicated-development-team
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-chatbots-artificial-intelligence</loc>
+    <loc>
+    https://keenethics.com/services-chatbots-artificial-intelligence
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-cloud-application-development</loc>
+    <loc>
+    https://keenethics.com/services-cloud-application-development
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -85,19 +99,25 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-development-and-quality-assurance</loc>
+    <loc>
+    https://keenethics.com/services-development-and-quality-assurance
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-software-deployment</loc>
+    <loc>
+    https://keenethics.com/services-software-deployment
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-maintenance-support</loc>
+    <loc>
+    https://keenethics.com/services-maintenance-support
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -109,25 +129,33 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-education-software-development</loc>
+    <loc>
+    https://keenethics.com/services-education-software-development
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-business-administration-development</loc>
+    <loc>
+    https://keenethics.com/services-business-administration-development
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-custom-healthcare-software-development</loc>
+    <loc>
+    https://keenethics.com/services-custom-healthcare-software-development
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-retail-software-development</loc>
+    <loc>
+    https://keenethics.com/services-retail-software-development
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -151,7 +179,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-business-research-platform</loc>
+    <loc>
+    https://keenethics.com/project-business-research-platform
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -163,13 +193,17 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-blood-test-application</loc>
+    <loc>
+    https://keenethics.com/project-blood-test-application
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-digital-hospital-app</loc>
+    <loc>
+    https://keenethics.com/project-digital-hospital-app
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -181,7 +215,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-education-system-platform</loc>
+    <loc>
+    https://keenethics.com/project-education-system-platform
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -199,7 +235,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-diagnostic-appointment-scheduling-system</loc>
+    <loc>
+    https://keenethics.com/project-diagnostic-appointment-scheduling-system
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -211,7 +249,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/project-hospital-marketing-administration-system</loc>
+    <loc>
+    https://keenethics.com/project-hospital-marketing-administration-system
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -312,14 +352,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
- <url>
+  <url>
     <loc>https://keenethics.com/#tech-stack</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/services-web-development-node</loc>
+    <loc>
+    https://keenethics.com/services-web-development-node
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -336,510 +378,748 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-apps-react-native</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-front-end-aurelia</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-front-end-vue</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-back-end-express</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-apps-electron</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-apps-cordova</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-apps-phonegap</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
-    <loc>https://keenethics.com/services-web-development-meteor</loc>
+  <url>
+    <loc>https://keenethics.com/tech-front-end-svelte</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
+    <loc>
+    https://keenethics.com/services-web-development-meteor
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://keenethics.com/tech-data-base-mongo</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-data-base-mysql</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-api-integration-rest</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-api-integration-paypal</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
-    <loc>https://keenethics.com/tech-api-integration-graphql</loc>
+  <url>
+    <loc>
+    https://keenethics.com/tech-api-integration-graphql
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
-    <loc>https://keenethics.com/tech-api-integration-braintree</loc>
+  <url>
+    <loc>
+    https://keenethics.com/tech-api-integration-braintree
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
     <loc>https://keenethics.com/tech-api-integration-stripe</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-    <url>
+  <url>
+    <loc>https://keenethics.com/tech-api-integration-elastic-search</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://keenethics.com/careers</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/blog/</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/iot-and-node-js</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/enhancing-customer-relationships-with-ai-and-crm</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-      <url>
-    <loc>https://keenethics.com/blog/mental-health</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-      <url>
-    <loc>https://keenethics.com/blog/self-development-software</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/dedicated-development-team</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/benefits-of-crm</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/nodejs-vs-python</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/pwa-vs-amp</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/1554243600000-open-source</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/1478674800000-svg-animation-scalable-vector-graphics</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/designing-project-development-strategy</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/simulation-gamification-of-education</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/1517306255770-docker-5-cases-when-you-should-not-use-it</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/the-value-of-user-testing</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/building-mhealth-app</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/keenethics-continues-collecting-stellar-client-reviews-at-clutch</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/1521631041972-the-importance-of-mockups</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/benefits-of-healthcare-crm-software</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/webgl-and-vue-how-to-animate-subtitles</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/mobile-health-technology-and-business-opportunities-it-offers</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/express-js-security-tips</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/four-questions-to-understand-if-you-need-pwa</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/what-are-the-advantages-of-node-js</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/angular-vs-react-what-to-choose-for-your-app</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/chatbots-healthcare-advantages-disadvantages</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/healthcare-data-security</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/keenethics-experience-sharing-how-to-create-a-simple-torrent-player</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-          <url>
-    <loc>https://keenethics.com/blog/5-reasons-to-build-a-custom-learning-management-system</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-        <url>
-    <loc>https://keenethics.com/blog/progressive-web-apps-vs-native-which-to-choose-and-when</loc>
+    <loc>https://keenethics.com/blog</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/blog/1560934800000-buy-or-develop-educational-app</loc>
+    <loc>https://keenethics.com/blog/leaders-of-tech4good-nick-gallo</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/blog/speed-reading-challenges-and-software-solutions</loc>
+    <loc>https://keenethics.com/blog/ecmascript-modules-nodejs-v14</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/blog/advancing-transport-networks-the-scientific-approach-and-software-solution</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/the-advantages-of-e-learning-for-business</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/learn-how-ai-can-revolutionize-your-educational-business</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/practical-tips-on-progressive-web-app-development</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/react-vs-svelte-how-to-build-messaging-components</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/how-to-choose-your-optimal-development-methodology</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/top-10-ways-an-educational-chatbot-can-revolutionize-your-business</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1560358800000-business-of-apps</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/how-create-e-learning-app-brings-value</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1560268800000-silvertown-technologies-announces-partnership-with-keenethics</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1556614800000-find-the-same</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/1559196000000-node-js-inject</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1555916400000-cto-as-a-service-for-startups</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1554420300000-estimates</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/1554572000000-refactoring</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://keenethics.com/blog/1554163400000-delegation</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1554333100000-solving-new-tasks</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keenethics.com/blog/1553896800000-how-to-monitor-your-project-distantly</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/1554793200000-indoor-positioning-in-retail</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-   <url>
-    <loc>https://keenethics.com/blog/1551175200000-our-ethical-dimension</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1551391200000-redline13-and-keenethics</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1548151200000-voice-app-development</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1548831600000-creating-corporate-culture</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1545289200000-why-should-you-choose-agencies-over-freelancers-in-outsourcing</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1545998400000-applications-business-tools-of-the-year</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-     <url>
-    <loc>https://keenethics.com/blog/1543388400000-your-data-is-safe-in-ukraine</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>   <url>
     <loc>https://keenethics.com/blog/1523533985420-startup-guide</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-     <url>
-    <loc>https://keenethics.com/blog/1486461600000-product-management-through-the-eyes-of-a-small-ukrainian-company</loc>
+  <url>
+    <loc>https://keenethics.com/blog/industry-standards-for-lms-software-development</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-     <url>
-    <loc>https://keenethics.com/blog/1517325231241-stop-losing-your-staff</loc>
+  <url>
+    <loc>https://keenethics.com/blog/software-testing-life-cycle</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-     <url>
-    <loc>https://keenethics.com/blog/1521640519375-cultural-factors-in-design</loc>
-    <lastmod>2020-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>   <url>
-    <loc>https://keenethics.com/blog/1471924800000-upgrading-your-meteor-app-to-http-2</loc>
+  <url>
+    <loc>https://keenethics.com/blog/7-reasons-to-develop-meteor-apps</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-     <url>
-    <loc>https://keenethics.com/blog/1497078000000-two-monitors-or-one-ultrawide</loc>
+  <url>
+    <loc>https://keenethics.com/blog/successful-minimum-viable-product</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-     <url>
-    <loc>https://keenethics.com/blog/1466575200000-js-onboarding</loc>
+  <url>
+    <loc>https://keenethics.com/blog/ux-audit</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/leaders-of-tech4good-let-kids-move</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/high-performance-computing-for-ai</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/types-of-software-testing</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/leaders-of-tech4good-jillian-kowalchuk</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/how-to-boost-productivity</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/qa-documentation</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/outsourcing-vs-outstaffing</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/minimum-viable-product</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/best-countries-for-hiring-dedicated-development-team</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/iot-and-node-js</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/enhancing-customer-relationships-with-ai-and-crm
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/mental-health</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/self-development-software
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/dedicated-development-team
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/php-vs-javascript
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/product-discovery
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/agile-testing
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/benefits-of-crm</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/nodejs-vs-python</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/pwa-vs-amp</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1554243600000-open-source
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1478674800000-svg-animation-scalable-vector-graphics
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/designing-project-development-strategy
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/simulation-gamification-of-education
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1517306255770-docker-5-cases-when-you-should-not-use-it
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/the-value-of-user-testing
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/blog/building-mhealth-app</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/keenethics-continues-collecting-stellar-client-reviews-at-clutch
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1521631041972-the-importance-of-mockups
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/benefits-of-healthcare-crm-software
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/webgl-and-vue-how-to-animate-subtitles
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/mobile-health-technology-and-business-opportunities-it-offers
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/express-js-security-tips
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/four-questions-to-understand-if-you-need-pwa
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/what-are-the-advantages-of-node-js
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/angular-vs-react-what-to-choose-for-your-app
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/chatbots-healthcare-advantages-disadvantages
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/healthcare-data-security
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/keenethics-experience-sharing-how-to-create-a-simple-torrent-player
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/5-reasons-to-build-a-custom-learning-management-system
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/progressive-web-apps-vs-native-which-to-choose-and-when
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1560934800000-buy-or-develop-educational-app
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/speed-reading-challenges-and-software-solutions
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/advancing-transport-networks-the-scientific-approach-and-software-solution
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/the-advantages-of-e-learning-for-business
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/learn-how-ai-can-revolutionize-your-educational-business
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/practical-tips-on-progressive-web-app-development
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/sdcr-report-lists-keenethics-in-top-software-development-companies-ranking
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/react-vs-svelte-how-to-build-messaging-components
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/how-to-choose-your-optimal-development-methodology
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/top-10-ways-an-educational-chatbot-can-revolutionize-your-business
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1560358800000-business-of-apps
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/how-create-e-learning-app-brings-value
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1556089200000-the-stories-of-an-avid-gamer-and-bug-hunter
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1560268800000-silvertown-technologies-announces-partnership-with-keenethics
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1556614800000-find-the-same
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1559196000000-node-js-inject
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1555077600000-hidden-and-not-hidden-code-pitfalls-of-one-website
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1555916400000-cto-as-a-service-for-startups
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1554572000000-refactoring
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1554163400000-delegation
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1554333100000-solving-new-tasks
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1553896800000-how-to-monitor-your-project-distantly
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1554793200000-indoor-positioning-in-retail
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1551175200000-our-ethical-dimension
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1551391200000-redline13-and-keenethics
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1548151200000-voice-app-development
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1548831600000-creating-corporate-culture
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1545289200000-why-should-you-choose-agencies-over-freelancers-in-outsourcing
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1545998400000-applications-business-tools-of-the-year
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1517766794846-what-is-prototype-and-how-to-eat-it-in-a-right-way
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1543388400000-your-data-is-safe-in-ukraine
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1486461600000-product-management-through-the-eyes-of-a-small-ukrainian-company
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1521640519375-cultural-factors-in-design
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1471924800000-upgrading-your-meteor-app-to-http-2
+    </loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>
+    https://keenethics.com/blog/1497078000000-two-monitors-or-one-ultrawide
+    </loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -851,7 +1131,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://keenethics.com/contacts?activeform=estimate</loc>
+    <loc>https://keenethics.com/privacy-policy</loc>
+    <lastmod>2020-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://keenethics.com/cookie-policy</loc>
     <lastmod>2020-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
