@@ -310,7 +310,7 @@ const Contacts = ({ router }) => {
     const getLoction = async () => {
       const res = await fetch('http://ip-api.com/json');
       const json = await res.json();
-      const location = json.countryCode || {};
+      const location = json.countryCode || 'UA';
 
       setSelectedCountry(location);
     };
