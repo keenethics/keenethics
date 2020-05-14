@@ -445,10 +445,22 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} selectedCountry={selectedCountry} />
+          <Address
+            className={classnames({
+              'display-block-sm-max': true,
+              'display-block-hide': notifyMessage === 'Message sent',
+            })}
+            setSelectedCountry={setSelectedCountry}
+            selectedCountry={selectedCountry}
+          />
         </div>
         {activeContactForm && (
-          <div className="social-icons display-block-sm-max">
+          <div className={classnames({
+            'social-icons': true,
+            'display-block-sm-max': true,
+            'display-block-hide': notifyMessage === 'Message sent',
+          })}
+          >
             <SocialButton />
           </div>
         )}
