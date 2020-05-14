@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
@@ -80,6 +81,13 @@ const EstimateForm = () => {
   function onSubmit(e) {
     e.preventDefault();
 
+    ReactGA.ga(
+      'send',
+      'event',
+      'Leadgen',
+      'submit',
+      emailEstimate.value,
+    );
     setIsPending(true);
 
     Sentry.setTag('email', emailEstimate.value);

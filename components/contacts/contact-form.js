@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
+import ReactGA from 'react-ga';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
@@ -55,7 +56,13 @@ const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
+    ReactGA.ga(
+      'send',
+      'event',
+      'Leadgen',
+      'submit',
+      email.value,
+    );
     setIsPending(true);
 
     Sentry.setTag('email', email.value);
