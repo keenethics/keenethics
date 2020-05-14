@@ -18,7 +18,7 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
     <div className="content-block">
       <section>
         <h1 className="text-center">
-          Custom Healthcare Software Development
+          Custom Healthcare Software Solutions
         </h1>
         <p className="text-center text-italic">
           Solving software challenges associated with medical responsibility, patient ethics, high

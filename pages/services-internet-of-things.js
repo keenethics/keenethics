@@ -143,7 +143,7 @@ const ServicesInternetOfThings = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            Internet of Things (IoT) Services
+            IoT Application Development Services
           </h1>
           <p className="text-center text-italic">
             Building effective, reliable, and secure IoT solutions, which will

@@ -133,7 +133,7 @@ class ServicesWebDevelopment extends React.Component {
         <ContentNavigation />
         <div className="content-block service-webdev">
           <section>
-            <h1 className="text-center">Custom Web Application Development</h1>
+            <h1 className="text-center">Custom Web Development Services</h1>
             <p className="text-center text-italic">Developing high-quality and fault-tolerant web platforms for the Internet and private networks</p>
           </section>
           <section>
