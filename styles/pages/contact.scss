@@ -56,7 +56,6 @@
 
     @include breakpoint(sm-max) {
       margin-top: 15px;
-      // display: none;
     }
 
     .contacts-list {
@@ -654,9 +653,6 @@
         color: #353535 !important;
         opacity: 1 !important;
         line-height: 24px;
-        @media (min-width: 400px) {
-          content: 'lolkek';
-        }
       }
 
     }
