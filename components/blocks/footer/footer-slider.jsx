@@ -10,7 +10,7 @@ const PostItem = ({ post: { fields: { publishDate, title, slug } } }) => (
     <div className="slide-date">
       {Moment(publishDate).format('D MMM, YYYY').toUpperCase()}
     </div>
-    <Link href={`blog/${slug}`}>
+    <Link as={`/blog/${slug}`} prefetch={false} href={`blog/${slug}`}>
       <a className="slide-link">
         <div>
           {title}
