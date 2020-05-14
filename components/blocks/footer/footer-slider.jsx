@@ -5,23 +5,20 @@ import Slider from 'react-slick';
 import Link from 'next/link';
 import PostsContext from '../../context/posts-context';
 
-const PostItem = ({ post: { fields: { publishDate, title, slug } } }) => {
-  console.log(slug);
-  return (
-    <div className="slide-item">
-      <div className="slide-date">
-        {Moment(publishDate).format('D MMM, YYYY').toUpperCase()}
-      </div>
-      <Link as={`/blog/${slug}`} prefetch={false} href={`blog/${slug}`}>
-        <a className="slide-link">
-          <div>
-            {title}
-          </div>
-        </a>
-      </Link>
+const PostItem = ({ post: { fields: { publishDate, title, slug } } }) => (
+  <div className="slide-item">
+    <div className="slide-date">
+      {Moment(publishDate).format('D MMM, YYYY').toUpperCase()}
     </div>
-  );
-};
+    <Link as={`/blog/${slug}`} prefetch={false} href={`blog/${slug}`}>
+      <a className="slide-link">
+        <div>
+          {title}
+        </div>
+      </a>
+    </Link>
+  </div>
+);
 
 PostItem.propTypes = {
   post: PropTypes.object.isRequired,
