@@ -13,7 +13,7 @@
       {
         "name": "Web Development",
         "description": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks.",
-        "metaTitle": "Custom web application development – KeenEthics",
+        "metaTitle": "Custom Web Development Services - KeenEthics",
         "metaDescription": "Developing high-quality and fault-tolerant web platforms for the Internet and private networks.",
         "href": "/services-web-development",
         "type": "default"
@@ -21,7 +21,7 @@
       {
         "name": "Mobile Development",
         "description": "We offer exactly the applications that you need.",
-        "metaTitle": "Mobile app development company - KeenEthics",
+        "metaTitle": "Mobile App Development Services - KeenEthics",
         "metaDescription": "We offer exactly the applications that you need.",
         "href": "/services-mobile-development",
         "type": "default"
@@ -37,7 +37,7 @@
       {
         "name": "Progressive Web Apps",
         "description": "Fast, reliable, and engaging mobile-ready web apps with little effort.",
-        "metaTitle": "Progressive Web App development - KeenEthics",
+        "metaTitle": "PWA App Development Company, PWA Mobile App Development - KeenEthics",
         "metaDescription": " Fast, reliable, and engaging mobile-ready web apps with little effort.",
         "href": "/tech-apps-progressive-web-apps",
         "type": "default"
@@ -69,7 +69,7 @@
       {
         "name": "Internet of Things",
         "description": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
-        "metaTitle": "Internet of things - KeenEthics",
+        "metaTitle": "IoT App Development Company, Hire IoT Developers - KeenEthics",
         "metaDescription": "Building effective, reliable, and secure IoT solutions, which will jump-start your business.",
         "href": "/services-internet-of-things",
         "type": "default"
@@ -85,7 +85,7 @@
       },
       {
         "name": "UI/UX Design",
-        "metaTitle": "UI UX Design Services, Hire UI/UX Designers - Keenethics",
+        "metaTitle": "UI/UX Design and Development Services, Hire UI/UX Developers",
         "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
         "metaDescription": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
         "href": "/services-ui-ux-design",
@@ -137,7 +137,7 @@
       {
         "name": "Education Software Development",
         "description": "Revolutionizing the world of personal, academic, and professional development",
-        "metaTitle": "Education software development company – KeenEthics",
+        "metaTitle": "Education Software Development Company - KeenEthics",
         "metaDescription": "Revolutionizing the world of personal, academic, and professional development",
         "href": "/services-education-software-development",
         "type": "default"
@@ -152,7 +152,7 @@
       },
       {
         "name": "Healthcare Software Development",
-        "metaTitle": "Healthcare Software Development – KeenEthics",
+        "metaTitle": "Custom Healthcare Software Development Company - KeenEthics",
         "description": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
 		    "metaDescription": "Solving healthcare app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
         "href": "/services-custom-healthcare-software-development",
@@ -166,7 +166,7 @@
     "points": [
       {
         "name": "Node.js",
-        "metaTitle": "Node.js – KeenEthics",
+        "metaTitle": "Node.JS Development Company, Node.JS Development Services - KeenEthics",
         "description": "The optimal environment for sustainable, scalable, and resource-efficient apps",
         "metaDescription": "The optimal environment for sustainable, scalable, and resource-efficient apps",
         "href": "/services-web-development-node",
@@ -182,7 +182,7 @@
       },
  	   {
         "name": "React",
-        "metaTitle": "React development company – KeenEthics",
+        "metaTitle": "React.JS Development Services, Hire ReactJS Developers - KeenEthics",
         "description": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
         "metaDescription": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
         "href": "/tech-front-end-react",
@@ -190,7 +190,7 @@
       },
  	   {
         "name": "React Native",
-        "metaTitle": "React Native developers – KeenEthics",
+        "metaTitle": "React Native Development Services - KeenEthics",
         "description": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
         "metaDescription": "With the help of React Native developers can create powerful hybrid apps for iOS, Android, and Windows.",
         "href": "/tech-apps-react-native",
@@ -238,7 +238,7 @@
       },
       {
         "name": "PhoneGap",
-        "metaTitle": "PhoneGap development services – KeenEthics",
+        "metaTitle": "PhoneGap Application Development Company, Hire Phonegap developers | KeenEthics",
         "description": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap to a software provider.",
         "metaDescription": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap to a software provider.",
         "href": "/tech-apps-phonegap",
