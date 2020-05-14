@@ -11,35 +11,39 @@ const links = {
   cordova: '/tech-apps-cordova',
   angular: '/tech-front-end-angular',
   android: '/services-mobile-development-android',
+  business: '/services-business-administration-development',
+  healthcare: '/services-custom-healthcare-software-development',
+  education: '/services-education-software-development',
+  businessadministration: '/services-business-administration-development',
 };
 
 const PortfolioTechnologyTags = ({ tags, style }) => (
   <div className="technology-tags-wrap">
     <ul className="technology-tags--list">
       {
-        tags.map((tag) => {
-          const href = links[tag.toLowerCase().replace(' ', '')];
-          return (
-            <li className="technology-tags--item" key={tag}>
-              {
-                href ? (
-                  <a
-                    className="technology-tag"
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={style}
-                  >
-                    {tag}
-                  </a>
-                ) : (
-                  <div className="technology-tag" style={style}>{tag}</div>
-                )
-              }
-            </li>
-          );
-        })
-      }
+          tags.map((tag) => {
+            const href = links[tag.toLowerCase().replace(' ', '')];
+            return (
+              <li className="technology-tags--item" key={tag}>
+                {
+                  href ? (
+                    <a
+                      className="technology-tag"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={style}
+                    >
+                      {tag}
+                    </a>
+                  ) : (
+                    <div className="technology-tag" style={style}>{tag}</div>
+                  )
+                }
+              </li>
+            );
+          })
+        }
     </ul>
   </div>
 );
