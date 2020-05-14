@@ -18,6 +18,12 @@ import Webp from '../webp';
  * }
  * @param {} item data object
  */
+
+const links = {
+  Business: '/services-business-administration-development',
+  Healthcare: '/services-custom-healthcare-software-development',
+  Education: '/services-education-software-development',
+};
 const getDataFromProperty = (item) => {
   // check if we got portfolio item
   if (!item.file && !item.slug && item.category) {
@@ -82,35 +88,60 @@ const ListItem = ({ work }) => {
                   : <img src={imgUrl} alt={title} className="page__item-img" />
               }
             </div>
-            <figcaption className="page__item-figcaption">
-              {!publishDate && <h3 className="page__item-title">{title}</h3>}
-              <div className="page__item-figcaption-heading">
-                <ul className="page__item-tags">
-                  {
-                    !!tags.length && tags.map((category) => (
-                      <li key={category}>
-                        <div className="page__item-tag">{category}</div>
-                      </li>
-                    ))
-                  }
-                </ul>
-                {
-                  publishDate
-                  && (
-                    <Moment
-                      format="MMM DD, YYYY"
-                      className="page__item-date"
-                    >
-                      {new Date(publishDate)}
-                    </Moment>
-                  )
-                }
-              </div>
-              {publishDate && <h3 className="page__item-title">{title}</h3>}
-            </figcaption>
           </figure>
         </a>
       </Link>
+      <div className="page__item-figcaption">
+        {!publishDate && (
+        <h3 className="page__item-title">
+          <Link href={url} as={asUrl} prefetch={false}>
+            {title}
+          </Link>
+        </h3>
+        )}
+        <div className="page__item-figcaption-heading">
+          <ul className="page__item-tags">
+            {
+              !!tags.length && tags.map((category) => {
+                const href = links[category];
+                console.log(href);
+                return (
+                  <li key={category}>
+                    <div className="page__item-tag">
+                      {
+                        href
+                          ? (
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ textDecoration: 'none', color: '#d42e2d' }}
+                              href={href}
+                            >
+                              {category}
+                            </a>
+                          )
+                          : <p>{category}</p>
+                      }
+                    </div>
+                  </li>
+                );
+              })
+            }
+          </ul>
+          {
+            publishDate
+            && (
+              <Moment
+                format="MMM DD, YYYY"
+                className="page__item-date"
+              >
+                {new Date(publishDate)}
+              </Moment>
+            )
+          }
+        </div>
+        {publishDate && <h3 className="page__item-title">{title}</h3>}
+      </div>
     </div>
   );
 };

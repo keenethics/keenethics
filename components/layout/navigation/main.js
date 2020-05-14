@@ -131,7 +131,7 @@ class Navigation extends React.Component {
           <span />
         </div>
         <div className="navigation-inner">
-          <Link href="/">
+          <Link href="/#main">
             <a className="navigation-logo">
               <img src="/static/images/logo.svg" alt="Keenethics" />
             </a>

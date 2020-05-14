@@ -3,6 +3,7 @@
 import { withRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
+import * as Sentry from '@sentry/browser';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
@@ -21,6 +22,10 @@ function initializeReactGA() {
   ReactGA.initialize(process.env.GA_KEY);
 }
 initializeReactGA();
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+});
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
@@ -303,11 +308,11 @@ const Contacts = ({ router }) => {
 
   useEffect(() => {
     const getLoction = async () => {
-      const res = await fetch('/api/location');
+      const res = await fetch('http://ip-api.com/json');
       const json = await res.json();
-      const location = json.location || {};
+      const location = json.countryCode || {};
 
-      setSelectedCountry(location.country);
+      setSelectedCountry(location);
     };
 
     getLoction();
@@ -445,10 +450,22 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} selectedCountry={selectedCountry} />
+          <Address
+            className={classnames({
+              'display-block-sm-max': true,
+              'display-block-hide': notifyMessage === 'Message sent',
+            })}
+            setSelectedCountry={setSelectedCountry}
+            selectedCountry={selectedCountry}
+          />
         </div>
         {activeContactForm && (
-          <div className="social-icons display-block-sm-max">
+          <div className={classnames({
+            'social-icons': true,
+            'display-block-sm-max': true,
+            'display-block-hide': notifyMessage === 'Message sent',
+          })}
+          >
             <SocialButton />
           </div>
         )}

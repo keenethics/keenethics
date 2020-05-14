@@ -91,7 +91,7 @@
   margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   list-style: none;
 
   &.-rounded {
@@ -129,7 +129,7 @@
   &-link {
     display: block;
     text-decoration: none;
-    height: 100%;
+    height: max-content;
   }
 
   &-figure {
@@ -176,13 +176,15 @@
     }
   }
 
-  &-title {
+  &-title a {
     margin: 0 0 10px 0 !important;
     color: #2D4352;
     font-size: 18px;
     font-weight: bold;
     line-height: 21px;
     text-align: left;
+    text-decoration: none;
+    display: block;
   }
 
   &-tags {

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import ReactGA from 'react-ga';
 import { ContactUsContext } from '../context/contacts-context';
@@ -64,6 +65,14 @@ const ContactForm = () => {
     );
     setIsPending(true);
 
+    Sentry.setTag('email', email.value);
+    Sentry.setTag('message', message.value);
+    Sentry.setTag('firsName', firstname.value);
+    Sentry.captureEvent({
+      message: 'Contact us',
+      level: 'info',
+    });
+
     const formData = new FormData();
     formData.append('file', file);
     formData.append('data', JSON.stringify({
@@ -99,7 +108,7 @@ const ContactForm = () => {
           setInitialState();
         }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => Sentry.captureException(err));
   };
   return (
     <div className="contacts-form">
@@ -177,7 +186,7 @@ const ContactForm = () => {
           {message.status}
         </div>
         <div className="input-cols">
-          <FileUpload />
+          {/* <FileUpload /> */}
           <div className={file.errorField ? 'error-message' : 'error-none'}>
             {file.status}
           </div>

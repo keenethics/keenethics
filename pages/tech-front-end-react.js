@@ -72,7 +72,7 @@ const TechFrontEndReact = () => (
     />
     <div className="content-block">
       <section>
-        <h1 className="text-center">React JS Development Company</h1>
+        <h1 className="text-center">React.JS Development Services</h1>
         <p className="text-center text-italic">Using a JS library for the development of responsive user interfaces and management of dynamically changing data.</p>
         <CallToActionButton />
       </section>

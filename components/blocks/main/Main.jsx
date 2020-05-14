@@ -16,7 +16,7 @@ const Main = () => (
             CODE FOR BUSINESS
             <span>
               &nbsp;
-              <img className="keen-dot-home" src="/static/images/keen-dot.png" alt="" />
+              <img className="keen-dot-home" src="/static/images/keen-dot.svg" alt="" />
               &nbsp;
             </span>
             CARE FOR THE WORLD
@@ -71,9 +71,13 @@ const Main = () => (
         </Link>
       </div>
       <div className="scroll-info-container">
-        <p className="vertical-text">SCROLL DOWN TO LEARN MORE</p>
+        <a href="/#services">
+          <p className="vertical-text">SCROLL DOWN TO LEARN MORE</p>
+        </a>
         <button className="mouse-scroll" type="button">
-          <span className="mouse-scroll-wheel" />
+          <a href="/#services">
+            <span className="mouse-scroll-wheel" />
+          </a>
         </button>
       </div>
       <div className="bg-scroll" />

@@ -169,7 +169,7 @@ const ServicesUiUxDesign = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            UI/UX Design
+            UI/UX Design and Development Services
           </h1>
           <p className="text-center text-italic">
             Creating elegant, responsive, and effectual user interface and experience

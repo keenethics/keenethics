@@ -143,19 +143,13 @@ const ServicesInternetOfThings = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            Internet of Things (IoT) Services
+            IoT Application Development Services
           </h1>
           <p className="text-center text-italic">
             Building effective, reliable, and secure IoT solutions, which will
             jump-start your business
           </p>
           <CallToActionButton />
-          <h2 style={{ fontSize: '40px', fontWeight: 900 }}>$1 612 billion</h2>
-          <p className="text-center">
-            is the projected size of the global IoT market in 2025, according to&nbsp;
-            <a href="https://www.statista.com/statistics/976313/global-iot-market-size/" target="_blank" rel="noopener noreferrer nofollow">Statista</a>
-            .
-          </p>
         </section>
         <section>
           <h2>What Is Internet of Things?</h2>
