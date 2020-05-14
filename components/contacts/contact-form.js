@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
@@ -57,6 +58,14 @@ const ContactForm = () => {
 
     setIsPending(true);
 
+    Sentry.setTag('email', email.value);
+    Sentry.setTag('message', message.value);
+    Sentry.setTag('firsName', firstname.value);
+    Sentry.captureEvent({
+      message: 'Contact us',
+      level: 'info',
+    });
+
     const formData = new FormData();
     formData.append('file', file);
     formData.append('data', JSON.stringify({
@@ -92,7 +101,7 @@ const ContactForm = () => {
           setInitialState();
         }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => Sentry.captureException(err));
   };
   return (
     <div className="contacts-form">
