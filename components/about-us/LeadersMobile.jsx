@@ -6,6 +6,7 @@ import { times } from 'lodash';
 
 const LeadersMobile = ({ data }) => {
   const [step, setStep] = useState(0);
+  const ourLeaders = [...data];
 
   const handleScroll = ({ target: { scrollLeft, clientWidth, scrollWidth } }) => {
     const scrollPercentage = Math.round(
@@ -51,7 +52,7 @@ const LeadersMobile = ({ data }) => {
       <div className="gallery mobile" ref={gallery}>
         <div className="gallery-inner">
           {
-            data.sort((a, b) => a.id - b.id).map((item, index) => (
+            ourLeaders.sort((a, b) => a.id - b.id).map((item, index) => (
               <figure key={index}>
                 <div className="wrapper">
                   <img
@@ -76,7 +77,7 @@ const LeadersMobile = ({ data }) => {
 
       <ul className="values-toggler mobile">
         {
-          data.map((_, i) => (
+          ourLeaders.map((_, i) => (
             <li
               key={i}
               className={i <= step ? 'active' : ''}
