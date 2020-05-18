@@ -480,7 +480,7 @@ app.prepare().then(() => {
           throw err;
         }
 
-        res.send({
+        return res.send({
           errorField: {},
           status: 'Email sent to company and subscriber',
         });
