@@ -160,7 +160,7 @@ const TechAppsRN = () => (
     />
     <div className="content-block">
       <section>
-        <h1 className="text-center">React Native App Development</h1>
+        <h1 className="text-center">React Native Development Services</h1>
         <p className="text-center text-italic">Using a fast, convenient, performant, and universal framework to develop cross-platform mobile apps.</p>
         <CallToActionButton />
       </section>

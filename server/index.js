@@ -178,7 +178,7 @@ app.prepare().then(() => {
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
         if (!dev) Sentry.captureException(err);
-        throw err;
+        return res.status(400).send(err);
       }
       res.send({
         errorField: {},
@@ -325,7 +325,8 @@ app.prepare().then(() => {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
-        throw err;
+        if (!dev) Sentry.captureException(err);
+        return res.status(400).send(err);
       }
       res.send({
         errorField: {},
@@ -349,7 +350,10 @@ app.prepare().then(() => {
           },
         ),
         (e) => {
-          if (e) throw e;
+          if (e) {
+            if (!dev) Sentry.captureException(e);
+            throw e;
+          }
         },
       );
     });

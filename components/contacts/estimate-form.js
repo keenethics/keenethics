@@ -1,4 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
+import ReactGA from 'react-ga';
+import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
@@ -79,7 +81,22 @@ const EstimateForm = () => {
   function onSubmit(e) {
     e.preventDefault();
 
+    ReactGA.ga(
+      'send',
+      'event',
+      'Leadgen',
+      'submit',
+      emailEstimate.value,
+    );
     setIsPending(true);
+
+    Sentry.setTag('email', emailEstimate.value);
+    Sentry.setTag('message', messageEstimate.value);
+    Sentry.setTag('firsName', name.value);
+    Sentry.captureEvent({
+      message: 'Contact us',
+      level: 'info',
+    });
 
     const formData = new FormData();
     formData.append('file', file);
@@ -119,7 +136,7 @@ const EstimateForm = () => {
         if (json.status.toString() === 'Message sent') {
           // setInitialState();
         }
-      });
+      }).catch((err) => Sentry.captureException(err));
   }
 
   function handleServicesChange(event) {
@@ -907,7 +924,7 @@ const EstimateForm = () => {
                 {messageEstimate.status}
               </div>
               <div className="input-cols">
-                <FileUpload />
+                {/* <FileUpload /> */}
                 <div className={file.errorField ? 'error-message' : 'error-none'}>
                   {file.status}
                 </div>

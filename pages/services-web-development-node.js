@@ -110,7 +110,7 @@ const ServicesWebDevelopmentNode = () => {
       <ContentNavigation image="web_development" points={servicesWebDevelopmentTabs()} />
       <div className="content-block">
         <section>
-          <h1 className="text-center">Node.js Development Services</h1>
+          <h1 className="text-center">Node.JS Development Company</h1>
           <p className="text-center text-italic">The optimal environment for sustainable, scalable, and resource-efficient apps</p>
           <CallToActionButton />
         </section>

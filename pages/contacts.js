@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 
 import { withRouter } from 'next/router';
-
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
+import * as Sentry from '@sentry/browser';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
@@ -16,6 +17,15 @@ import SocialButton from '../components/social-buttons/main';
 import Person from '../components/person';
 import { ContactsProvider } from '../components/context/contacts-context';
 import mobileScrollIntoView from '../helpers/scroll-effects';
+
+function initializeReactGA() {
+  ReactGA.initialize(process.env.GA_KEY);
+}
+initializeReactGA();
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+});
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
@@ -300,7 +310,7 @@ const Contacts = ({ router }) => {
     const getLoction = async () => {
       const res = await fetch('http://ip-api.com/json');
       const json = await res.json();
-      const location = json.countryCode || {};
+      const location = json.countryCode || 'UA';
 
       setSelectedCountry(location);
     };
@@ -440,10 +450,22 @@ const Contacts = ({ router }) => {
               </div>
             </div>
           )}
-          <Address className="display-block-sm-max" setSelectedCountry={setSelectedCountry} selectedCountry={selectedCountry} />
+          <Address
+            className={classnames({
+              'display-block-sm-max': true,
+              'display-block-hide': notifyMessage === 'Message sent',
+            })}
+            setSelectedCountry={setSelectedCountry}
+            selectedCountry={selectedCountry}
+          />
         </div>
         {activeContactForm && (
-          <div className="social-icons display-block-sm-max">
+          <div className={classnames({
+            'social-icons': true,
+            'display-block-sm-max': true,
+            'display-block-hide': notifyMessage === 'Message sent',
+          })}
+          >
             <SocialButton />
           </div>
         )}
