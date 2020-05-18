@@ -17,11 +17,11 @@ const leadersData = [
     id: 3,
   },
   {
-    name: 'Oksana Pleten',
-    position: 'Head of UX/UI Department',
-    picture: 'oksana-pleten',
-    linkedin: 'https://www.linkedin.com/in/oksana-pleten-636014138/',
-    email: 'mailto:oksana.pleten@keenethics.com',
+    name: 'Pavlo Klymenko',
+    position: 'Head of Product Management',
+    picture: 'pavlo-klymenko',
+    linkedin: 'https://www.linkedin.com/in/pavlo-klymenko/',
+    email: 'mailto:pavlo.klymenko@keenethics.com',
     id: 5,
   },
   // second column
@@ -34,11 +34,11 @@ const leadersData = [
     id: 2,
   },
   {
-    name: 'Pavlo Klymenko',
-    position: 'Head of Product Management',
-    picture: 'pavlo-klymenko',
-    linkedin: 'https://www.linkedin.com/in/pavlo-klymenko/',
-    email: 'mailto:pavlo.klymenko@keenethics.com',
+    name: 'Oksana Pleten',
+    position: 'Head of UX/UI Department',
+    picture: 'oksana-pleten',
+    linkedin: 'https://www.linkedin.com/in/oksana-pleten-636014138/',
+    email: 'mailto:oksana.pleten@keenethics.com',
     id: 4,
   },
   {

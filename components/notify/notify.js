@@ -17,7 +17,7 @@ export default function notyfy({ notifyMessage, setNotifyIsVisible, setNotifyMes
       }
     >
       {notifyMessage === 'Message sent'
-        ? 'Thank you for the request. We will get back to you within 1-2 business days.'
+        ? 'I will get back to you withing 23 hours'
         : notifyMessage}
     </div>
   );
