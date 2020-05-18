@@ -12,7 +12,7 @@ const TechDataBaseMysql = () => (
       points={techDatabase()}
     />
     <div className="content-block">
-      <h1>MySQL Development</h1>
+      <h1>MySQL Development  Services</h1>
       <p>
         When launching a website or a mobile app, you will need to involve MySQL developers in
         your project. In short, MySQL is a database management system. It is owned by Oracle

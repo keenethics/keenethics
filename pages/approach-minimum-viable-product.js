@@ -19,7 +19,7 @@ const ApproachMinimumValProduct = () => (
     <ContentNavigation />
     <div className="content-block approach-minimum-viable-product-page">
       <div className="page-header">
-        <h1>MVP Development Services</h1>
+        <h1>МVP Software Development</h1>
 
         <p className="italic">
           Using a resource-efficient approach to test the viability of your business idea

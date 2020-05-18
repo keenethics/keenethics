@@ -12,7 +12,7 @@ const TechDataBaseMongo = () => (
       points={techDatabase()}
     />
     <div className="content-block">
-      <h1>Mongo DB Developers</h1>
+      <h1>MongoDB Development  Services</h1>
       <p>
         MongoDB is a free and open-source cross-platform document-oriented database program,
         developed by MongoDB Inc. Today, MongoDB is the leading NoSQL database.

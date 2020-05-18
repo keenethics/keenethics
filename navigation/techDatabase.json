@@ -3,11 +3,13 @@
     "href": "/tech-data-base-mongo",
     "name": "Mongo",
     "description": "Fast noSQL database",
+    "metaTitle": "MongoDB Development Company | KeenEthics",
     "icon": "icon-mongo"
   },
   {
     "href": "/tech-data-base-mysql",
     "name": "MySQL",
+    "metaTitle": "MySQL Development Company | KeenEthics",
     "description": "Most popular SQL-database",
     "icon": "icon-mysql"
   }

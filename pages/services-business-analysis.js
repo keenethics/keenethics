@@ -184,7 +184,7 @@ const ServicesBusinessAnalysis = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            Business Analysis
+            Business Analysis Services
           </h1>
           <p className="text-center text-italic">
             Reducing development expenses and boosting sales through sound project research

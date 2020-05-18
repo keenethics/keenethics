@@ -45,7 +45,7 @@ const MaintenanceAndSupport = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            Maintenance and Support
+            Software Maintenance and Support
           </h1>
           <p className="text-center text-italic">
             Keeping your product updated, relevant, and perfectly functioning
