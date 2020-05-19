@@ -104,7 +104,6 @@ const ListItem = ({ work }) => {
             {
               !!tags.length && tags.map((category) => {
                 const href = links[category];
-                console.log(href);
                 return (
                   <li key={category}>
                     <div className="page__item-tag">

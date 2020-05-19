@@ -116,7 +116,7 @@ class ServicesOutstaffing extends React.Component {
         <ContentNavigation />
         <div className="content-block service-team">
           <section>
-            <h1 className="text-center">Dedicated Development Team</h1>
+            <h1 className="text-center">Dedicated Software Development Team</h1>
             <p className="text-center text-italic">Maintaining control, improving team skill set, and reducing HR costs</p>
           </section>
           <section>

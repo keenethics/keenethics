@@ -12,7 +12,7 @@ const TechApiIntegrationPayPal = () => (
       points={techApiIntegration()}
     />
     <div className="content-block">
-      <h2>PayPal API Integration Services</h2>
+      <h1>PayPal API Integration Services</h1>
       <p>
         Every E-Commerce project needs to be integrated with a Payment Processing System. We
         suggest choosing only trusted and world-known systems like PayPal Payment Processing

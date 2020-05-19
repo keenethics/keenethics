@@ -12,7 +12,7 @@ const TechApiIntegrationGraphql = () => (
       points={techApiIntegration()}
     />
     <div className="content-block">
-      <h1>GraphQL Development</h1>
+      <h1>GraphQL Development  Services</h1>
       <p>
         In short, what is GraphQL and how this technology can make your app greater?
       </p>

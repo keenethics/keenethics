@@ -121,7 +121,7 @@ const ServicesCloudAppDev = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            Cloud Application Development Services
+            Cloud Application Development
           </h1>
           <p className="text-center text-italic">
             Offering secure, reliable, and cost-efficient custom cloud solutions
