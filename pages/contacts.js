@@ -21,7 +21,6 @@ import mobileScrollIntoView from '../helpers/scroll-effects';
 function initializeReactGA() {
   ReactGA.initialize(process.env.GA_KEY);
 }
-initializeReactGA();
 
 function initializeSentry() {
   Sentry.init({
