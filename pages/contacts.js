@@ -23,9 +23,16 @@ function initializeReactGA() {
 }
 initializeReactGA();
 
-Sentry.init({
-  dsn: process.env.SENTRY_DSN,
-});
+function initializeSentry() {
+  Sentry.init({
+    dsn: process.env.SENTRY_DSN,
+  });
+}
+
+if (process.env.NODE_ENV !== 'development') {
+  initializeReactGA();
+  initializeSentry();
+}
 
 const Address = ({ className, setSelectedCountry, selectedCountry }) => (
   <address className={className}>
