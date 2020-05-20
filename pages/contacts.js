@@ -270,9 +270,9 @@ const ThankYou = () => (
       for the request!
     </h1>
     <h2 className="thanks-subheader">
-      We will get back to you within
+      I will get back to you within
       <br />
-      1-2 business days
+      23 hours
     </h2>
     <a href="/blog" className="button button-send">
       Read our blog
