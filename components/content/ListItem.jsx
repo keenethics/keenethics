@@ -23,6 +23,7 @@ const links = {
   Business: '/services-business-administration-development',
   Healthcare: '/services-custom-healthcare-software-development',
   Education: '/services-education-software-development',
+  Retail: '/services-retail-software-development',
 };
 const getDataFromProperty = (item) => {
   // check if we got portfolio item
