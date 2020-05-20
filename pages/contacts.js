@@ -270,7 +270,7 @@ const ThankYou = () => (
       for the request!
     </h1>
     <h2 className="thanks-subheader">
-      I will get back to you withing
+      I will get back to you within
       <br />
       23 hours
     </h2>
