@@ -20,7 +20,9 @@ const PrivacyPolicy = () => (
         <p>
           KeenEthics operates the &nbsp;
           <Link href="/">
-            https://keenethics.com/
+            <a href="/">
+              https://keenethics.com/
+            </a>
           </Link>
           &nbsp;
           website, which provides the software development services (or the Services).
