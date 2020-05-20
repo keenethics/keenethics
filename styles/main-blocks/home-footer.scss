@@ -94,12 +94,19 @@
           }
           .address {
             color: #b8bdc5;
+            display: block;
             font-weight: normal;
             font-size: 14px;
+            text-decoration: none;
             margin-top:14px;
           }
           .country-link {
             text-decoration: none;
+          }
+          &:hover .address {
+            text-decoration: underline;
+            color: #DE4F4F;
+            opacity: .8;
           }
         }
         @include breakpoint(sm-max) {
