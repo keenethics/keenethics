@@ -2,36 +2,42 @@
   {
     "href": "/tech-api-integration-rest",
     "name": "REST",
+    "metaTitle": "Rest API Development Company | KeenEthics",
     "description": "Organizing your backend endpoints",
     "icon": "icon-rest"
   },
   {
     "href": "/tech-api-integration-paypal",
     "name": "PayPal",
+    "metaTitle": "PayPal Integration Software Solutions | KeenEthics",
     "description": "Sending and receiving money online",
     "icon": "icon-paypal"
   },
   {
     "href": "/tech-api-integration-graphql",
     "name": "GraphQL",
+    "metaTitle": "GraphQL Development Company | KeenEthics",
     "description": "Smart organizing of dataflow between frontend and backend",
     "icon": "icon-grap"
   },
   {
     "href": "/tech-api-integration-braintree",
     "name": "Braintree",
+    "metaTitle": "Braintree Development Company - KeenEthics",
     "description": "Solution for accepting, splitting andprocessing payments online",
     "icon": "icon-brain"
   },
   {
     "href": "/tech-api-integration-elastic-search",
     "name": "Elastic Search",
+    "metaTitle": "Elasticsearch Development Company - KeenEthics",
     "description": "Popular search-engine",
     "icon": "icon-el"
   },
   {
     "href": "/tech-api-integration-stripe",
     "name": "Stripe",
+    "metaTitle": "Stripe API Integration Services - KeenEthics",
     "description": "Developer-friendly payments service",
     "icon": "icon-stripe"
   }

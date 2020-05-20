@@ -114,7 +114,7 @@ const ChatbotsArtificialIntelligence = () => {
       <div className="content-block">
         <section>
           <h1 className="text-center">
-            AI and Chatbot Development Services for Your Business
+            Ai Chatbot Development Services
           </h1>
           <p className="text-center text-italic">
             Automating monotonous tasks, improving your business performance, and boosting
