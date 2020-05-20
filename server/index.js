@@ -170,9 +170,6 @@ app.prepare().then(() => {
       to: 'business@keenethics.com',
       subject: `New message from ${email.value}`,
       html,
-      attachments: [
-        attachment,
-      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -195,13 +192,23 @@ app.prepare().then(() => {
             message: message.value,
           },
         ),
-        (e) => {
-          if (e) {
-            if (!dev) Sentry.captureException(e);
-            throw e;
-          }
-        },
-      );
+      ).catch((e) => {
+        if (!dev) Sentry.captureException(e);
+        throw e;
+      });
+
+      if (attachment) {
+        transporter.sendMail({
+          from: 'no-reply@keenethics.com',
+          to: 'business@keenethics.com',
+          subject: `File from ${email.value}`,
+          html: 'file',
+          attachments: [attachment],
+        }).catch((e) => {
+          if (!dev) Sentry.captureException(e);
+          throw e;
+        });
+      }
     });
 
     const hubSpotParameters = {
@@ -318,9 +325,6 @@ app.prepare().then(() => {
       to: 'business@keenethics.com',
       subject: `New message from ${emailEstimate.value}`,
       html,
-      attachments: [
-        attachment,
-      ],
     };
 
     transporter.sendMail(mailOptions, (err) => {
@@ -349,13 +353,23 @@ app.prepare().then(() => {
             message: messageEstimate.value,
           },
         ),
-        (e) => {
-          if (e) {
-            if (!dev) Sentry.captureException(e);
-            throw e;
-          }
-        },
-      );
+      ).catch((e) => {
+        if (!dev) Sentry.captureException(e);
+        throw e;
+      });
+
+      if (attachment) {
+        transporter.sendMail({
+          from: 'no-reply@keenethics.com',
+          to: 'business@keenethics.com',
+          subject: `File from ${emailEstimate.value}`,
+          html: 'file',
+          attachments: [attachment],
+        }).catch((e) => {
+          if (!dev) Sentry.captureException(e);
+          throw e;
+        });
+      }
     });
 
     const hubSpotParameters = {

@@ -186,7 +186,7 @@ const ContactForm = () => {
           {message.status}
         </div>
         <div className="input-cols">
-          {/* <FileUpload /> */}
+          <FileUpload />
           <div className={file.errorField ? 'error-message' : 'error-none'}>
             {file.status}
           </div>

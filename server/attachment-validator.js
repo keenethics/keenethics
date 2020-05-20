@@ -3,7 +3,7 @@ module.exports = (files) => {
     errorField: 'file',
     status: '',
   };
-  if (files === null) return {};
+  if (files === null) return null;
   const file = files.file;
   const allowedExts = ['pdf', 'doc', 'docx', 'jpeg', 'jpg', 'png', 'xls', 'xlsx', 'ppt', 'pptx'];
   const ext = file.name.split('.')[file.name.split('.').length - 1];
