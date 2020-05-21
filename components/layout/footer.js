@@ -395,7 +395,7 @@ const HomeFooter = ({
         <div className="footer-links-terms">
           <Link href="/privacy-policy" prefetch={false}>
             <a className="footer-links-link">
-              Privacy Statement
+              GDPR Privacy Policy
             </a>
           </Link>
           <Link href="/cookie-policy" prefetch={false}>

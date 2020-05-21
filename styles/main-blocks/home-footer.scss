@@ -103,7 +103,7 @@
           .country-link {
             text-decoration: none;
           }
-          &:hover .address {
+          .address:hover {
             text-decoration: underline;
             color: #DE4F4F;
             opacity: .8;
@@ -254,6 +254,7 @@
           font-size: 14px;
           &:hover {
             color: #E3621D;
+            text-decoration: underline;
           }
         }
       }
