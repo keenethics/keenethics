@@ -1,22 +1,33 @@
 import React from 'react';
+import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
+import LetsStart from './home-page-lets-start';
 
 const PrivacyPolicy = () => (
   <Layout>
     <div className="page-header">
       <div>
         <h1>
-          Privacy Policy
+          GDPR Privacy Policy
         </h1>
         <Background className="open-source-page-background" />
       </div>
     </div>
     <div className="content-block">
       <section>
-        <h2>GDPR Privacy Policy</h2>
-        <p>KeenEthics operates the https://keenethics.com/ website, which provides the software development services (or the Services).</p>
+        <p>
+          KeenEthics operates the &nbsp;
+          <Link href="/">
+            <a href="/">
+              https://keenethics.com/
+            </a>
+          </Link>
+          &nbsp;
+          website, which provides the software development services (or the Services).
+
+        </p>
         <p>
           This page is used to inform website visitors regarding our policies with the collection,
           use, and disclosure of Personal Information if anyone decided to use our Services, the
@@ -39,7 +50,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Information Collection and Use</h3>
+        <h2>Information Collection and Use</h2>
         <p>
           For a better experience, while using our Services, we may require you to provide us
           with certain personally identifiable information, including but not limited to your
@@ -48,7 +59,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Log Data</h3>
+        <h2>Log Data</h2>
         <p>
           We want to inform you that whenever you visit our Services, we collect information
           that your browser sends to us that is called Log Data. This Log Data may include
@@ -58,7 +69,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Cookies</h3>
+        <h2>Cookies</h2>
         <p>
           Cookies are files with a small amount of data that is commonly used as an anonymous
           unique identifier. These are sent to your browser from the website that you visit
@@ -72,7 +83,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Service Providers</h3>
+        <h2>Service Providers</h2>
         <p>We may employ third-party companies and individuals due to the following reasons:</p>
         <ul>
           <li>To facilitate our Services;</li>
@@ -88,7 +99,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Security</h3>
+        <h2>Security</h2>
         <p>
           We value your trust in providing us with your Personal Information, thus we are
           striving to use commercially acceptable means of protecting it. But remember that
@@ -97,7 +108,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Links to Other Sites</h3>
+        <h2>Links to Other Sites</h2>
         <p>
           Our Services may contain links to other sites. If you click on a third-party link,
           you will be directed to that site. Note that these external sites are not operated by us.
@@ -105,7 +116,7 @@ const PrivacyPolicy = () => (
           no control over and assume no responsibility for the content, privacy policies, or
           practices of any third-party sites or services.
         </p>
-        <h3>Children’s Privacy</h3>
+        <h2>Children’s Privacy</h2>
         <p>
           Our Services do not address anyone under the age of 13. We do not knowingly collect
           personally identifiable information from children under 13. In the case we discover
@@ -116,7 +127,7 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Changes to This Privacy Policy</h3>
+        <h2>Changes to This Privacy Policy</h2>
         <p>
           We may update our Privacy Policy from time to time. Thus, we advise you to review
           this page periodically for any changes. We will notify you of any changes by posting
@@ -125,11 +136,16 @@ const PrivacyPolicy = () => (
         </p>
       </section>
       <section>
-        <h3>Contact Us</h3>
+        <h2>Contact Us</h2>
         <p>
           If you have any questions or suggestions about our Privacy Policy, do not hesitate
-          to contact us at business@keenethics.com.
+          to contact us at
+          {' '}
+          <a href="mailto:business@keenethics.com">business@keenethics.com.</a>
         </p>
+      </section>
+      <section>
+        <LetsStart />
       </section>
     </div>
   </Layout>
