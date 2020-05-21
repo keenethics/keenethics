@@ -20,7 +20,7 @@ const PrivacyPolicy = () => (
         <p>
           KeenEthics operates the &nbsp;
           <Link href="/">
-            <a href="/">
+            <a>
               https://keenethics.com/
             </a>
           </Link>
@@ -144,10 +144,8 @@ const PrivacyPolicy = () => (
           <a href="mailto:business@keenethics.com">business@keenethics.com.</a>
         </p>
       </section>
-      <section>
-        <LetsStart />
-      </section>
     </div>
+    <LetsStart />
   </Layout>
 );
 

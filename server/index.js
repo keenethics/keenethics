@@ -135,12 +135,12 @@ app.prepare().then(() => {
       });
       return;
     }
-    if (!formatValidation.validate({ min: 0, max: 800 }, message.value)) {
+    if (!formatValidation.validate({ min: 3, max: 800 }, message.value)) {
       res.send({
         value: message.value,
         errorField: 'message',
         error: true,
-        status: 'The message must be not longer than 800 characters',
+        status: 'Wrong message length, it must be from 3 to 800 characters',
       });
       return;
     }
@@ -276,12 +276,12 @@ app.prepare().then(() => {
       });
       return;
     }
-    if (!formatValidation.validate({ max: 800 }, messageEstimate.value)) {
+    if (!formatValidation.validate({ min: 3, max: 800 }, messageEstimate.value)) {
       res.send({
         value: messageEstimate.value,
         errorField: 'message',
         error: true,
-        status: 'The message must be not longer than 800 characters',
+        status: 'Wrong message length, it must be from 3 to 800 characters',
       });
       return;
     }
