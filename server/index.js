@@ -31,12 +31,13 @@ const autoReplyMailOptions = require('./autoReplyMailOptions');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
+const isAnalyticsActive = Boolean(process.env.IS_ANALYTICS_ACIVE);
 
 const app = next({ dev });
 
 const handle = app.getRequestHandler();
 
-if (!dev) {
+if (!isAnalyticsActive) {
   Sentry.init({ dsn: process.env.SENTRY_DSN });
 }
 
@@ -177,7 +178,7 @@ app.prepare().then(() => {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
-        if (!dev) Sentry.captureException(err);
+        if (isAnalyticsActive) Sentry.captureException(err);
         return res.status(400).send(err);
       }
       res.send({
@@ -197,7 +198,7 @@ app.prepare().then(() => {
         ),
         (e) => {
           if (e) {
-            if (!dev) Sentry.captureException(e);
+            if (isAnalyticsActive) Sentry.captureException(e);
             throw e;
           }
         },
@@ -325,7 +326,7 @@ app.prepare().then(() => {
 
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
-        if (!dev) Sentry.captureException(err);
+        if (isAnalyticsActive) Sentry.captureException(err);
         return res.status(400).send(err);
       }
       res.send({
@@ -351,7 +352,7 @@ app.prepare().then(() => {
         ),
         (e) => {
           if (e) {
-            if (!dev) Sentry.captureException(e);
+            if (isAnalyticsActive) Sentry.captureException(e);
             throw e;
           }
         },
