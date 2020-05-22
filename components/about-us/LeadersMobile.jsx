@@ -2,11 +2,45 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
 import { times } from 'lodash';
+
+// dotsClass: 'values-toggler mobile',
+// customPaging(i) {
+//   return (
+//     <a>
+//       <li className="active" />
+//     </a>
+//   );
+// },
+// slidesToScroll: 2,
+// appendDots: (dots) => (
+//   <ul className="values-toggler mobile">
+//     {dots}
+//   </ul>
+// ),
+// };
 
 const LeadersMobile = ({ data }) => {
   const [step, setStep] = useState(0);
   const ourLeaders = [...data];
+  let sliderRef = null;
+
+  const stepper = (toStep) => {
+    sliderRef.slickGoTo(toStep * 2);
+    setStep(toStep);
+  };
+
+  const settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 2,
+    beforeChange: (_, toStep) => {
+      stepper(toStep);
+    },
+  };
 
   const handleScroll = ({ target: { scrollLeft, clientWidth, scrollWidth } }) => {
     const scrollPercentage = Math.round(
@@ -26,31 +60,44 @@ const LeadersMobile = ({ data }) => {
     });
     setStep(toStep);
   };
-  const gallery = useRef(null);
-  useEffect(() => {
-    if (gallery && gallery.current) {
-      gallery.current.addEventListener('scroll', handleScroll);
-    }
+  // const gallery = useRef(null);
+  // useEffect(() => {
+  //   if (gallery && gallery.current) {
+  //     gallery.current.addEventListener('scroll', handleScroll);
+  //   }
 
-    return () => {
-      if (gallery && gallery.current) {
-        gallery.current.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, [gallery]);
+  //   return () => {
+  //     if (gallery && gallery.current) {
+  //       gallery.current.removeEventListener('scroll', handleScroll);
+  //     }
+  //   };
+  // }, [gallery]);
 
-  const handleNavClick = (toStep) => {
-    gallery.current.children[0].children[toStep].scrollIntoView({
-      behavior: 'smooth',
-      inline: 'start',
-      block: 'nearest',
-    });
-  };
+  // const handleNavClick = (toStep) => {
+  //   // let stepper = 0;
+  //   // if (toStep <= 0) {
+  //   //   stepper = toStep;
+  //   // } else {
+  //   //   stepper = toStep + 1;
+  //   // }
+  //   // if (toStep >= ourLeaders.length - 1) stepper = toStep;
+  //   gallery.current.children[0].children[toStep].scrollIntoView({
+  //     behavior: 'smooth',
+  //     inline: 'start',
+  //     block: 'nearest',
+  //   });
+  // };
 
   return (
     <>
-      <div className="gallery mobile" ref={gallery}>
-        <div className="gallery-inner">
+      <div className="gallery mobile">
+        {/* <div className="gallery-inner"> */}
+        <Slider
+          swipeToSlide
+          className="hello"
+          ref={(node) => sliderRef = node}
+          {...settings}
+        >
           {
             ourLeaders.sort((a, b) => a.id - b.id).map((item, index) => (
               <figure key={index}>
@@ -72,16 +119,17 @@ const LeadersMobile = ({ data }) => {
               </figure>
             ))
           }
-        </div>
+        </Slider>
+        {/* </div> */}
       </div>
 
       <ul className="values-toggler mobile">
         {
-          ourLeaders.map((_, i) => (
+          ourLeaders.slice(0, 3).map((_, i) => (
             <li
               key={i}
-              className={i <= step ? 'active' : ''}
-              onClick={() => handleNavClick(i)}
+              className={i * 2 <= step ? 'active' : ''}
+              onClick={() => stepper(i)}
             />
           ))
         }
