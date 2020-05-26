@@ -3,7 +3,7 @@ import { withRouter } from 'next/router';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from '../components/layout/main';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 
 const CookiePolicy = ({ router }) => (
   <Layout currentURL={router.current}>
