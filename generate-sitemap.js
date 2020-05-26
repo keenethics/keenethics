@@ -7,7 +7,7 @@ const SPACE_ID = process.env.REACT_APP_SPACE_ID;
 const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
 const currentDate = new Date().toISOString().split('T')[0];
 const pagesName = fs.readdirSync('./pages')
-  .filter((file) => file.match(/^(?!_|post.*$).*\.js$/g))
+  .filter((file) => file.match(/^(?!_|post|index.*$).*\.js$/g))
   .map((name) => name.replace('.js', ''));
 
 const getPostsList = async () => {
