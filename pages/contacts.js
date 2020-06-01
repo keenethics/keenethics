@@ -308,9 +308,9 @@ const Contacts = ({ router }) => {
 
   useEffect(() => {
     const getLoction = async () => {
-      const res = await fetch('http://ip-api.com/json');
+      const res = await fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`);
       const json = await res.json();
-      const location = json.countryCode || 'UA';
+      const location = json.country || 'UA';
 
       setSelectedCountry(location);
     };
