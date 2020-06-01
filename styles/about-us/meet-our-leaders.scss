@@ -79,7 +79,7 @@
 
     &.mobile {
       width: 100%;
-      overflow-x: scroll;
+      // overflow-x: scroll;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -96,18 +96,6 @@
         padding: 0 35px 0 0;
         height: 410px;
         margin-bottom: 15px;
-      }
-
-      .gallery-inner {
-        display: flex;
-        flex-flow: row nowrap;
-        width: calc(170px * 6  + 30px * 5);
-        margin-top: 45px;
-
-        @media (min-width: $tablet-lg) {
-          margin-top: 0;
-          width: calc(200px * 5 + 40px * 4);
-        }
       }
     }
 
