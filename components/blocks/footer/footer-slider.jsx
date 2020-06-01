@@ -37,6 +37,8 @@ const FooterSlider = ({
   const settings = {
     className: 'footer-slider',
     slidesToShow,
+    initialSlide: 0,
+    rtl: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -62,11 +64,12 @@ const FooterSlider = ({
       <Slider
         {...settings}
       >
-        {posts.map((post) => (
-          <div className="slide-container" key={post.fields.slug}>
-            <PostItem post={post} />
-          </div>
-        ))}
+        {posts.sort((a, b) => Date.parse(a.fields.publishDate) - Date.parse(b.fields.publishDate))
+          .map((post) => (
+            <div className="slide-container" key={post.fields.slug}>
+              <PostItem post={post} />
+            </div>
+          ))}
       </Slider>
     </>
   );
