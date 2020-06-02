@@ -83,11 +83,13 @@ const EstimateForm = () => {
     setIsPending(true);
 
     Sentry.setTag('email', emailEstimate.value);
-    Sentry.setTag('message', messageEstimate.value);
     Sentry.setTag('firsName', name.value);
     Sentry.captureEvent({
       message: 'Contact us',
       level: 'info',
+      extra: {
+        leadMessage: messageEstimate.value,
+      },
     });
 
     const formData = new FormData();
