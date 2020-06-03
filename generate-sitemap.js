@@ -48,12 +48,11 @@ const getSitemapItems = (paths, basePath = '') => paths.map((path) => `
 `).join('');
 
 const generatePostsSitemap = async () => {
-  const posts = (await getPostsList()).items.map(({ fields }) => fields.slug);
+  const posts = (await getPostsList()).items.map(({ fields }) => fields.text);
   const pagesSitemap = getSitemapItems(pagesName);
   const postsSitemap = getSitemapItems(posts, 'blog/');
   const sitemap = sitemapWrapper(pagesSitemap, postsSitemap);
   fs.writeFileSync('./public/sitemap.xml', sitemap);
 };
-
 
 generatePostsSitemap();
