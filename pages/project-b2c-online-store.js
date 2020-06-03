@@ -115,11 +115,7 @@ const ProjectOnlineStore = () => (
                           ,
                           <span><Link href="/services-web-development-node">Node.js</Link></span>
                           ,
-                          <span><a href="https://www.reactioncommerce.com/" target="_blank" rel="noopener noreferrer nofollow">Reaction Commerce</a></span>
-                          ,
                           <span><Link href="/tech-data-base-mongo">MongoDB</Link></span>
-                          ,
-                          <span><a href="https://spreecommerce.org/" target="_blank" rel="noopener noreferrer nofollow">Spree Commerce</a></span>
                         </span>
                       </td>
                     </tr>

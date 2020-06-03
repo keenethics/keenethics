@@ -10,9 +10,10 @@
     align-items: stretch;
   }
   .heading {
+    margin-bottom: 30px;
     @media(min-width: $tablet-lg) {
-      flex: 0 0 50%;
-      padding-left: 90px;
+      flex: 0 0 45%;
+      padding-left: 75px;
       padding-top: 160px;
     }
     @media(min-width: $desktop-md) {
@@ -23,7 +24,7 @@
   }
   .leaders {
     @media(min-width: $tablet-lg) {
-      max-width: 50%;
+      max-width: 55%;
       padding-top: 60px;
     }
     @media(min-width: $desktop-md) {
@@ -78,7 +79,7 @@
 
     &.mobile {
       width: 100%;
-      overflow-x: scroll;
+      // overflow-x: scroll;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -90,23 +91,11 @@
       @media (min-width: $desktop-md) {
         display: none;
       }
-      
+
       @media (min-width: $tablet-lg) {
-        padding: 0 45px;
+        padding: 0 35px 0 0;
         height: 410px;
         margin-bottom: 15px;
-      }
-
-      .gallery-inner {
-        display: flex;
-        flex-flow: row nowrap;
-        width: calc(170px * 6  + 30px * 5);
-        margin-top: 45px;
-
-        @media (min-width: $tablet-lg) {
-          margin-top: 0;
-          width: calc(200px * 5 + 40px * 4);
-        }
       }
     }
 
@@ -166,6 +155,13 @@
 
     .wrapper {
       position: relative;
+      margin-right: 10px;
+      @media(min-width: $tablet-lg) {
+        margin-right: 10px;
+      }
+      @media(min-width: $desktop-md) {
+        margin-right: 0;
+      }
       &:hover {
         .overlay {
           height: 100%;
@@ -198,7 +194,7 @@
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
-      
+
       a {
         font-weight: 600;
         font-size: 16px;
@@ -255,7 +251,7 @@
       height: 30px;
       position: relative;
       cursor: pointer;
- 
+
       @media(min-width: $desktop-md) {
         width: 60px;
       }
