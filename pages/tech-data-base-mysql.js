@@ -298,7 +298,7 @@ const TechDataBaseMongo = () => (
             </div>
           </div>
           <Works
-            works={works.filter(({ title }) => ['BusinessResearchPlatform'].includes(title))}
+            works={works.filter(({ title }) => ['Business Research Platform'].includes(title))}
           />
         </div>
       </section>
