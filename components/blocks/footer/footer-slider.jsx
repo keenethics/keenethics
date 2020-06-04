@@ -64,7 +64,7 @@ const FooterSlider = ({
       <Slider
         {...settings}
       >
-        {posts.sort((a, b) => Date.parse(a.fields.publishDate) - Date.parse(b.fields.publishDate))
+        {posts.reverse()
           .map((post) => (
             <div className="slide-container" key={post.fields.slug}>
               <PostItem post={post} />
