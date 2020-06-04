@@ -97,45 +97,45 @@ const whyKeenEthicsList = [
     title: 'Empowering growth.',
     desc: `
     The software industry is so competitive that it barely gives
-    a chance for a mistake. At KeenEthics, we understand the pressure 
-    that the business world puts upon you, and we strive to help 
-    you succeed. By offering custom software solutions of high quality, 
+    a chance for a mistake. At KeenEthics, we understand the pressure
+    that the business world puts upon you, and we strive to help
+    you succeed. By offering custom software solutions of high quality,
     we empower the growth of your business.`,
   },
   {
     title: 'Building value.',
     desc: `
-    KeenEthics has a mission: We strive for a tech world devoted 
-    to the social good. We believe that the ethical attitude towards 
-    our employees, partners, fellow citizens, and the global community 
-    in general is the utmost value we can offer. When partnering up with 
+    KeenEthics has a mission: We strive for a tech world devoted
+    to the social good. We believe that the ethical attitude towards
+    our employees, partners, fellow citizens, and the global community
+    in general is the utmost value we can offer. When partnering up with
     KeenEthics, you can count on our honesty and transparency`,
   },
   {
     title: 'Launching in a matter of weeks.',
-    desc: ` 
-    The software industry competition requires you to think 
+    desc: `
+    The software industry competition requires you to think
     and act fast. If you are tired of endless calls and meetings,
-    of complex bureaucratic structures, we are here for you. 
-    Our Partner Engagement Manager will make sure that your communication 
+    of complex bureaucratic structures, we are here for you.
+    Our Partner Engagement Manager will make sure that your communication
     with us is efficient and concise. `,
   },
   {
     title: 'Bringing tech expertise.',
     desc: `
-    As a back-end development company, KeenEthics specializes in only two 
-    technologies – MySQL and MongoDB. Such a narrow focus lets 
-    us make sure that we excel in these technologies. Our 
-    MySQL developers will gladly share their technical 
+    As a back-end development company, KeenEthics specializes in only two
+    technologies – MySQL and MongoDB. Such a narrow focus lets
+    us make sure that we excel in these technologies. Our
+    MySQL developers will gladly share their technical
     and business-related experience with you. `,
   },
   {
     title: 'Protecting your data.',
     desc: `
-    Data safety should be your number one concern regardless 
-    of what app you plan to develop. This is where MySQL 
-    comes in handy. Known as an incredibly secure technology, 
-    MySQL database management system lets our developers ensure the 
+    Data safety should be your number one concern regardless
+    of what app you plan to develop. This is where MySQL
+    comes in handy. Known as an incredibly secure technology,
+    MySQL database management system lets our developers ensure the
     highest level of information and data safety. `,
   },
 ];
@@ -279,7 +279,11 @@ const TechDataBaseMongo = () => (
                 ,
                 <span>MySQL</span>
                 ,
-                <span>AWS (SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana)</span>
+                <span>
+                  AWS
+                  (SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana)
+
+                </span>
                 ,
                 <span>Serverless</span>
                 ,
