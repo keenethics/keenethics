@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import classNames from 'classnames';
 import { withRouter } from 'next/router';
 import { debounce } from 'lodash';
