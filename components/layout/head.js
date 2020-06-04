@@ -64,6 +64,7 @@ const LayoutHead = (props) => {
 
   let title = DEFAULT_TITLE;
   let description = DEFAULT_DESCRIPTION;
+  let noIndexMetaTag = false;
 
   if (meta) {
     title = meta.title || DEFAULT_TITLE;
@@ -78,11 +79,19 @@ const LayoutHead = (props) => {
   if (currentURL.pathname === '/post') {
     currentURL.pathname = router.asPath.replace('#', '?').split('?')[0];
   }
+  if (currentURL.pathname === '/project-lets-start-coding') {
+    noIndexMetaTag = true;
+  }
 
   return (
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
+      {
+        noIndexMetaTag ? (
+          <meta name="robots" content="noindex" />
+        ) : null
+      }
       <meta
         name="viewport"
         content="initial-scale=1.0, user-scalable=no, width=device-width"
