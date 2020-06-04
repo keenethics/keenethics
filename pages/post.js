@@ -153,7 +153,24 @@ const bodyOptions = {
         return filteredChildren[0];
       }
 
-      return <p>{children.filter((item) => !!item)}</p>;
+      return (
+        <p>
+          {children.reduce((acc, item) => {
+            if (typeof item === 'object' && item.type === 'a') {
+              const { props: { children: child, href } } = item;
+              const isNeddedNofollow = href.includes('https://keenethics.com');
+              if (isNeddedNofollow) {
+                acc.push(<a href={href}>{child}</a>);
+              } else {
+                acc.push(<a rel="nofollow" href={href}>{child}</a>);
+              }
+            } else if (item) {
+              acc.push(item);
+            }
+            return acc;
+          }, [])}
+        </p>
+      );
     },
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
