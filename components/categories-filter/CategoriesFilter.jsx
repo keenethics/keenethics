@@ -232,10 +232,8 @@ class CategoriesFilter extends React.Component {
                       </li>
                       <li className="filter__item">
                         <CategoryButton
-                          category={
-                            Link
-                          }
-                          buttonClick={this.selectAllCategories}
+                          category="Show All"
+                          buttonClick={() => router.push('/portfolio')}
                           className="-show-all"
                         />
                       </li>
