@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import classNames from 'classnames';
 import { withRouter } from 'next/router';
 import { debounce } from 'lodash';
@@ -169,7 +170,9 @@ class CategoriesFilter extends React.Component {
   }
 
   render() {
-    const { pageTitle, categoriesList, selectedCategories } = this.props;
+    const {
+      pageTitle, categoriesList, selectedCategories, router,
+    } = this.props;
     const {
       isExpanded,
       isMobile,
@@ -229,7 +232,9 @@ class CategoriesFilter extends React.Component {
                       </li>
                       <li className="filter__item">
                         <CategoryButton
-                          category="Show All"
+                          category={
+                            Link
+                          }
                           buttonClick={this.selectAllCategories}
                           className="-show-all"
                         />
@@ -287,7 +292,7 @@ class CategoriesFilter extends React.Component {
                   />
                   <CategoryButton
                     category="Show All"
-                    buttonClick={this.selectAllCategories}
+                    buttonClick={() => router.push('/portfolio')}
                     className="-show-all"
                   />
                 </div>
