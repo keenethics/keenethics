@@ -318,7 +318,6 @@ export default class Post extends React.Component {
       metaTitle,
       metaDescription,
     } = this.props;
-    console.log(bodyRich);
     const heroSrc = _.get(heroImage, 'fields.file.url', '');
     const heroTitle = _.get(heroImage, 'fields.title', '');
 
