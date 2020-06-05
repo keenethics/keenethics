@@ -10,7 +10,7 @@ export default function CallToActionButton({ title, href, buttonBefore }) {
       <a
         href={href}
         target="_blank"
-        rel="noopener noreferrer nofollow"
+        rel="noopener noreferrer"
       >
         <button
           className="call-to-cation-btn"
