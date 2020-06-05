@@ -66,11 +66,13 @@ const ContactForm = () => {
     setIsPending(true);
 
     Sentry.setTag('email', email.value);
-    Sentry.setTag('message', message.value);
     Sentry.setTag('firsName', firstname.value);
     Sentry.captureEvent({
       message: 'Contact us',
       level: 'info',
+      extra: {
+        leadMessage: message.value,
+      },
     });
 
     const formData = new FormData();

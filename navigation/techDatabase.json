@@ -3,14 +3,16 @@
     "href": "/tech-data-base-mongo",
     "name": "Mongo",
     "description": "Fast noSQL database",
-    "metaTitle": "MongoDB Development Company | KeenEthics",
+    "metaTitle": "MongoDB  development services – KeenEthics",
+    "metaDescription": "MongoDB is a flexible, scalable, and convenient database for the latest development challenges." ,
     "icon": "icon-mongo"
   },
   {
     "href": "/tech-data-base-mysql",
     "name": "MySQL",
-    "metaTitle": "MySQL Development Company | KeenEthics",
+    "metaTitle": "MySQL development services – KeenEthics",
     "description": "Most popular SQL-database",
+    "metaDescription": "MySQL is one of the most popular, simple, and secure database management system. It suits cloud development needs and is not going to grow outdated any time soon.",
     "icon": "icon-mysql"
   }
 ]

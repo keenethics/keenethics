@@ -169,7 +169,9 @@ class CategoriesFilter extends React.Component {
   }
 
   render() {
-    const { pageTitle, categoriesList, selectedCategories } = this.props;
+    const {
+      pageTitle, categoriesList, selectedCategories, router,
+    } = this.props;
     const {
       isExpanded,
       isMobile,
@@ -230,7 +232,7 @@ class CategoriesFilter extends React.Component {
                       <li className="filter__item">
                         <CategoryButton
                           category="Show All"
-                          buttonClick={this.selectAllCategories}
+                          buttonClick={() => router.push('/portfolio')}
                           className="-show-all"
                         />
                       </li>
@@ -287,7 +289,7 @@ class CategoriesFilter extends React.Component {
                   />
                   <CategoryButton
                     category="Show All"
-                    buttonClick={this.selectAllCategories}
+                    buttonClick={() => router.push('/portfolio')}
                     className="-show-all"
                   />
                 </div>
