@@ -1,8 +1,8 @@
 import React, { useContext, memo } from 'react';
 import PropTypes from 'prop-types';
 
-import Posts from '../components/blog/posts';
-import PostsContext from '../components/context/posts-context';
+import Posts from '../../blog/posts';
+import PostsContext from '../../context/posts-context';
 
 const Blog = ({ minimize }) => {
   const posts = useContext(PostsContext);

@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 const dotenv = require('dotenv-safe');
 require('isomorphic-fetch');
 
@@ -505,6 +507,16 @@ app.prepare().then(() => {
   server.get('/api/careers', async (req, res) => {
     const careers = await getCareers();
     res.send(JSON.stringify(careers));
+  });
+
+  server.get('/api/update-sitemap', async (req, res) => {
+    try {
+      if (req.query.key !== process.env.REACT_APP_ACCESS_TOKEN.toLocaleLowerCase()) throw new Error('Permission denied');
+      await exec('node generate-sitemap.js');
+      res.status(200).send('Sitemap updated');
+    } catch (err) {
+      res.status(403).send(err.message);
+    }
   });
 
   server.get('*', (req, res) => handle(req, res));

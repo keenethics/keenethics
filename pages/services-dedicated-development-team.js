@@ -14,7 +14,7 @@ import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 
 import { getPostsList } from '../lib/contentful';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { works } from '../main.config';
 

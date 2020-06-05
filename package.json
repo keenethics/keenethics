@@ -11,7 +11,8 @@
     "test-page-rendering": "jest __tests__/page-rendering.js",
     "analyze": "cross-env ANALYZE=1 next build",
     "deploy": "bash deploy",
-    "endtoend": "jest --config=__tests__/endtoend/jest.config.js --runInBand"
+    "endtoend": "jest --config=__tests__/endtoend/jest.config.js --runInBand",
+    "sitemap-gen": "node generate-sitemap"
   },
   "repository": {
     "type": "git",
