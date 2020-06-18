@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import _ from 'lodash';
+import { get } from 'lodash';
 import classnames from 'classnames';
-import Moment from 'react-moment';
 import Webp from '../webp';
+import dateParse from '../../helpers/date-parser';
 /**
  * Convert blog-post/portfolio-item to same scheme:
  * {
@@ -46,7 +46,7 @@ const getDataFromProperty = (item) => {
       title: item.title,
       description: null,
       imgUrl: `https:${
-        _.get(item.heroImage, 'fields.file.url')
+        get(item.heroImage, 'fields.file.url')
       }?fm=jpg&fl=progressive&q=85&w=600`,
       url: `/post?name=${item.slug}`,
       asUrl: `/blog/${item.slug}`,
@@ -131,12 +131,9 @@ const ListItem = ({ work }) => {
           {
             publishDate
             && (
-              <Moment
-                format="MMM DD, YYYY"
-                className="page__item-date"
-              >
-                {new Date(publishDate)}
-              </Moment>
+            <time className="page__item-date" dateTime={Date.parse(publishDate)}>
+              {dateParse(publishDate, 'MMM DD YYYY')}
+            </time>
             )
           }
         </div>
