@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { times } from 'lodash';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CategoryButton from '../categories-filter/CategoryButton';
 
 const OurTeam = () => {
@@ -35,10 +35,14 @@ const OurTeam = () => {
                 className="pictures-item"
                 key={index}
               >
-                <img
+                <LazyLoadImage
+                  src={`static/images/about-us/team-images/${index + 1}.webp`}
                   alt={`team ${index + 1}`}
-                  src={`static/images/about-us/team-images/${index + 1}.jpg`}
                 />
+                {/* <img
+                  alt={`team ${index + 1}`}
+                  src={`static/images/about-us/team-images/${index + 1}.webp`}
+                /> */}
               </div>
             ))
           }

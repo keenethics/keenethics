@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,11 +10,18 @@ import classnames from 'classnames';
 import '../../styles/main.scss';
 
 import Head from './head';
-import Footer from './footer';
 
-import Navigation from './navigation/main';
+// import Navigation from './navigation/main';
 import PostsContext from '../context/posts-context';
 import { getPostsList } from '../../lib/contentful';
+// import Footer from './footer';
+const Footer = dynamic(
+  () => import('./footer'),
+  { ssr: false },
+);
+const Navigation = dynamic(
+  () => import('./navigation/main'),
+);
 
 const isClient = typeof window !== 'undefined';
 
