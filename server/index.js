@@ -205,6 +205,7 @@ app.prepare().then(() => {
           }
         },
       );
+      return false;
     });
 
     const hubSpotParameters = {
@@ -359,6 +360,7 @@ app.prepare().then(() => {
           }
         },
       );
+      return false;
     });
 
     const hubSpotParameters = {

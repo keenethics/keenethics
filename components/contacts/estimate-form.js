@@ -4,7 +4,6 @@ import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
-import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
