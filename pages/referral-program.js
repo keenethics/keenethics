@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import Head from '../components/layout/head';
+import Partners from '../components/blocks/partners/Partners';
 
 const ReferralProgram = () => {
   const renderWelcomeBlock = () => (
@@ -122,6 +123,7 @@ const ReferralProgram = () => {
       <section className="page__wrapper page__referral-program">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}
+        <Partners />
       </section>
     </>
   );
