@@ -80,7 +80,7 @@
                     display: flex;
                     flex-direction: row;
                     line-height: 24px;
-                    margin: 5px auto;
+                    margin: 5px;
                     color: #12233D;
                     text-decoration: none;
                     p {
@@ -116,6 +116,7 @@
     .project-stage {
         background: #12233D;
         text-align: center;
+        position: relative;
         h2 {
             padding-top: 80px;
             color: #fff;
@@ -124,7 +125,162 @@
             line-height: 44px;
         }
         .stages {
-            padding-top: 50px;
+            padding: 50px 10px 132px;
+            max-width: 804px;
+            margin: 0 auto;
+            input { 
+                display: none; 
+            }
+            input + label { 
+                display: inline-block;
+            }
+            #exist:checked ~ .tab {
+                .startup-content {
+                    opacity: 0;
+                    height: 0; 
+                    overflow: hidden;
+                    animation-name: hideText;
+                    animation-duration: 300ms; 
+                    animation-fill-mode: backwards;
+                }
+                .exist-content {
+                    margin: 0;
+                    animation-delay: 300ms;
+                    animation-name: showText;
+                    animation-duration: 200ms; 
+                    animation-fill-mode: backwards;
+                }
+            }
+            #startup:checked ~ .tab {
+                .exist-content {
+                    opacity: 0;
+                    height: 0; 
+                    overflow: hidden;
+                    animation-name: hideText;
+                    animation-duration: 300ms; 
+                    animation-fill-mode: backwards;
+                }
+                .startup-content {
+                    margin: 0;
+                    animation-delay: 300ms;
+                    animation-name: showText;
+                    animation-duration: 200ms; 
+                    animation-fill-mode: backwards;
+                }
+            }
+            @keyframes hideText { 
+                0% {margin: 0;opacity: 1;height: auto;}
+                100%{margin: 0 200px 0 -200px;opacity: 0;height: 0; overflow: hidden;}
+            } 
+            @keyframes showText { 
+                0% {opacity: 0;height: 0;}
+                100%{opacity: 1;height: auto;}
+            }
+         
+            input + label {
+                color: #F9F9FB;
+                font-size: 24px;
+                line-height: 34px;
+                position: relative;
+                cursor: pointer;
+                width: calc(50% - 15px);
+                text-align: left;
+                border-bottom: rgba($color: #D62C2C, $alpha: 0.5) solid 2px;
+                display: inline-flex;
+                justify-content: flex-start;
+                align-items: center;
+                div {
+                    width: 61.44px;
+                    height: 61.44px; 
+                    border: rgba($color: #fff, $alpha: 0.4) 1px solid;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 14px;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        width: 33px;
+                        height: 42px;
+                        opacity: 0.5;
+                        transition: opacity 0.5s;
+                    }
+                    span.ellipse {
+                        width: 65px;
+                        height: 65px;
+                        transform: rotate(0deg);
+                        transition: transform 0.5s;
+                        svg {
+                            width: 31.5px;
+                            margin-left: -0.6px;
+                            height: 64px;
+                            opacity: 1;
+                            fill: #717B8B;
+                        }
+                    }
+                }
+                p {
+                    opacity: 0.5;
+                    transition: opacity 0.5s;
+                }
+            }
+            label:first-of-type {
+                margin-right: 15px;
+            }
+            label:last-of-type {
+                margin-left: 15px;
+            }
+            input:checked + label {
+                font-weight: bold;
+                cursor: default;
+                border-bottom: #D62C2C solid 4px;
+                p, div img {
+                    opacity: 1;
+                }
+                .ellipse {
+                    transform: rotate(-180deg);
+                    svg {
+                        fill: #D62C2C;
+                    }
+                }
+            }
+            input ~ .tab {
+                background-color: #293950;
+                padding: 40px;
+                color: #F9F9FB;
+                margin-top: -2px;
+                font-size: 18px;
+                line-height: 28px;
+                text-align: left;
+                min-height: 178px;
+                h3 {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: #fff;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .details-btn-holder {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            div {
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin: 0 auto 5px;
+                }
+            }
         }
     }
 }
