@@ -1,11 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Link from 'next/link';
 
 import Head from '../components/layout/head';
 import Partners from '../components/blocks/partners/Partners';
+import PhotoGallery from '../components/photo-gallery/PhotoGallery';
+
+const teamData = [
+  {
+    name: 'Oksana Pleten',
+    position: 'Head of UX/UI Department',
+    picture: 'static/images/referral-program/oksana-pleten.jpg',
+    listTitle: 'The UX/UI Designer',
+    listText: 'analyzes your business requirements and user needs to develop an exceptional User Experience and an elegant User Interface.',
+  }, {
+    name: 'Oksana Pleten',
+    position: 'The Solution Architect',
+    picture: 'static/images/referral-program/oksana-pleten.jpg',
+    listTitle: 'The Solution Architect',
+    listText: 'analyzes project specifications and design requirements and assesses them from a developer’s point of view. This specialist deals with the technical implementation of the project idea.',
+  }, {
+    name: 'Oksana Pleten',
+    position: 'The Project Manager',
+    picture: 'static/images/referral-program/oksana-pleten.jpg',
+    listTitle: 'The Project Manager',
+    listText: 'organizes the whole UX discovery process and draws out the most valuable knowledge and insights to maximize the outcome.',
+  }, {
+    name: 'Oksana Pleten',
+    position: 'Business Analytic',
+    picture: 'static/images/referral-program/oksana-pleten.jpg',
+    listTitle: 'Business Analytic',
+    listText: "explores project ideas, gathers requirements from all stakeholders, and researches the market including interviews with a target audience. The analyst's main responsibility is to build a solution that will bring you value.",
+  },
+];
 
 const ReferralProgram = () => {
+  const [projectStage, setProjectStage] = useState('startup');
+  const [showDetails, setShowDetails] = useState(true);
+  const [activeTeamMember, setActiveTeamMember] = useState(0);
+
   const renderWelcomeBlock = () => (
     <div className="welcome-block">
       <div className="welcome-block-left">
@@ -64,7 +97,7 @@ const ReferralProgram = () => {
       <div className="stages">
 
         <div className="tabs">
-          <input type="radio" name="tabs" id="startup" defaultChecked />
+          <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); setShowDetails(false); }} />
           <label htmlFor="startup">
             <div>
               <img src="/static/images/svg/startup_icon.svg" alt="A Startup Idea" />
@@ -77,7 +110,7 @@ const ReferralProgram = () => {
             <p>A Startup Idea</p>
           </label>
 
-          <input type="radio" name="tabs" id="exist" />
+          <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); setShowDetails(false); }} />
           <label htmlFor="exist">
             <div>
               <img src="/static/images/svg/project_icon.svg" alt="An Existing Product" />
@@ -106,13 +139,50 @@ const ReferralProgram = () => {
         <div className="details-btn-holder">
           <div>
             <img src="/static/images/svg/arrow-down-3.svg" alt="details" />
-            <Link href="">
+            <Link href="" onClick={() => setShowDetails(!showDetails)}>
               <a className="button">View Details</a>
             </Link>
           </div>
         </div>
       </div>
 
+    </div>
+  );
+
+  const renderProjectStageDetailsBlock = () => (
+    <div className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
+      <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
+        <h3>Free UX Discovery</h3>
+        <div className="details-content">
+          <div className="project-team">
+            <h5>Project Team:</h5>
+            <div className="list">
+              {teamData.map(({ listTitle, listText }, index) => (
+                <>
+                  <input
+                    type="radio"
+                    name="team-list"
+                    id={`team-member-${index}`}
+                    checked={activeTeamMember === index ? 'checked' : ''}
+                  />
+                  <label htmlFor="designer">
+                    <Link onClick={() => setActiveTeamMember(index)}>
+                      <span>{listTitle}</span>
+                      {' '}
+                      {listText}
+                    </Link>
+                  </label>
+                </>
+              ))}
+            </div>
+          </div>
+          <div className="project-team-gallery">
+            {activeTeamMember}
+            <PhotoGallery data={teamData} nextStep={activeTeamMember} />
+          </div>
+        </div>
+      </div>
+      <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>Free Quality Assurance</div>
     </div>
   );
 
@@ -123,6 +193,7 @@ const ReferralProgram = () => {
       <section className="page__wrapper page__referral-program">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}
+        {renderProjectStageDetailsBlock()}
         <Partners />
       </section>
     </>

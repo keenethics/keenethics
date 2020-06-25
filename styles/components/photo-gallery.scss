@@ -1,0 +1,112 @@
+.photo-gallery-container {
+    width: 100%;
+
+    .photo-gallery {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+
+        figure {
+            overflow: hidden;
+            width: 100%;
+            flex: 0 0 100%;
+
+            .figure-images {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                transition: transform .3s ease;
+
+                .wrapper {
+                    flex: 0 0 100%;
+                    position: relative;
+                    &:hover {
+                        .overlay {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .figcaptions {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                transition: transform .3s ease;
+
+                figcaption {
+                    flex: 0 0 100%;
+                    text-align: center;
+                    h3 {
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: bold;
+                        margin-top: 7px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 26px;
+                        width: 100%;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    .values-toggler {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding: 0;
+        width: 60%;
+        align-content: stretch;
+        margin: 15px auto;
+
+        li {
+            width: 100%;
+            height: 10px;
+            position: relative;
+            cursor: pointer;
+            margin: 0 5px;
+
+            &.active:after {
+                background-color: #D62624;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #D2D2D2;
+            }
+            &.arrow {
+                position: relative;
+                height: 31px;
+                width: 50px;
+                background-color: transparent;
+
+                &:after {
+                    top: 15px;
+                    height: 1px;
+                }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    transform: rotate(45deg);
+                    top: 12px;
+                }
+            }
+        }
+    }
+}
