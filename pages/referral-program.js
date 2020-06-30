@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Head from '../components/layout/head';
 import Partners from '../components/blocks/partners/Partners';
-import PhotoGallery from '../components/photo-gallery/PhotoGallery';
+import PhotoListGallery from '../components/photo-list-gallery';
 
 const teamData = [
   {
@@ -14,19 +14,19 @@ const teamData = [
     listTitle: 'The UX/UI Designer',
     listText: 'analyzes your business requirements and user needs to develop an exceptional User Experience and an elegant User Interface.',
   }, {
-    name: 'Oksana Pleten',
+    name: 'Solution Architect',
     position: 'The Solution Architect',
     picture: 'static/images/referral-program/oksana-pleten.jpg',
     listTitle: 'The Solution Architect',
     listText: 'analyzes project specifications and design requirements and assesses them from a developer’s point of view. This specialist deals with the technical implementation of the project idea.',
   }, {
-    name: 'Oksana Pleten',
+    name: 'Project Manager',
     position: 'The Project Manager',
     picture: 'static/images/referral-program/oksana-pleten.jpg',
     listTitle: 'The Project Manager',
     listText: 'organizes the whole UX discovery process and draws out the most valuable knowledge and insights to maximize the outcome.',
   }, {
-    name: 'Oksana Pleten',
+    name: 'Business Analytic',
     position: 'Business Analytic',
     picture: 'static/images/referral-program/oksana-pleten.jpg',
     listTitle: 'Business Analytic',
@@ -34,17 +34,82 @@ const teamData = [
   },
 ];
 
+const fundamentalGoals = [
+  {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/fundamental-goals1.jpg',
+    listTitle: 'Define the business solution.',
+    listText: ' You will receive a profile of your target audience and an analysis of your competitors. Afterward, we decide together which features you might want to add or subtract from your project.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/fundamental-goals1.jpg',
+    listTitle: 'Define the architecture and functionality.',
+    listText: ' At this step, we outline together essential functionality elements and set aside all the redundant features. If necessary, we also break the development into stages starting with a Minimum Viable Product. The end results will be actionable wireframes ready for development.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/fundamental-goals1.jpg',
+    listTitle: 'Estimate detailed project costs.',
+    listText: ' When you take time in the beginning and gather all the project details in one batch to see the maximum possible final cost, you see hidden costs and risks better. In these cases you will not deal with unplanned costs and over-budgeting.',
+  },
+];
+
+const weOfferYou = [
+  {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-offer1.jpg',
+    listTitle: 'A choice of one QA specialist',
+    listText: ' from our pool of available talents.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-offer1.jpg',
+    listTitle: 'Our professional will conduct end-to-end testing',
+    listText: ' of your software, document, and report all the existing bugs, identify bottlenecks and blind spots.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-offer1.jpg',
+    listTitle: 'For two weeks',
+    listText: ', this professional will check the quality of your project for free.',
+  },
+];
+
+const youReceive = [
+  {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-receive1.jpg',
+    listTitle: 'You get two weeks of software testing',
+    listText: ' of any type we agree on, free of charge.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-receive1.jpg',
+    listTitle: 'The QA will write all the testing documentation',
+    listText: ' including use cases, test cases, and bug reports.',
+  }, {
+    name: '',
+    position: '',
+    picture: 'static/images/referral-program/we-receive1.jpg',
+    listTitle: 'If you choose to continue working with anyone else',
+    listText: ', our QA specialist will prepare the list of best testing practices.',
+  },
+];
+
 const ReferralProgram = () => {
   const [projectStage, setProjectStage] = useState('startup');
-  const [showDetails, setShowDetails] = useState(true);
-  const [activeTeamMember, setActiveTeamMember] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
   const renderWelcomeBlock = () => (
-    <div className="welcome-block">
+    <div className="welcome-block" id="top">
       <div className="welcome-block-left">
         <div className="logo">
           <Link href="/#main">
-            <a role="presentation" className="navigation-logo">
+            <a className="navigation-logo" href="https://keenethics.com/" target="_blank" rel="noopener noreferrer">
               <img src="/static/images/logo.svg" alt="Keenethics" />
             </a>
           </Link>
@@ -139,12 +204,14 @@ const ReferralProgram = () => {
         <div className="details-btn-holder">
           <div>
             <img src="/static/images/svg/arrow-down-3.svg" alt="details" />
-            <Link href="" onClick={() => setShowDetails(!showDetails)}>
-              <a className="button">View Details</a>
-            </Link>
+            <a role="presentation" className="button" onClick={() => setShowDetails(!showDetails)}>View Details</a>
           </div>
         </div>
       </div>
+
+      <a href="#top" className="scroll-top-top">
+        <img src="/static/images/svg/scroll-to-top.svg" alt="scroll to top" />
+      </a>
 
     </div>
   );
@@ -153,36 +220,40 @@ const ReferralProgram = () => {
     <div className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
       <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
         <h3>Free UX Discovery</h3>
-        <div className="details-content">
-          <div className="project-team">
-            <h5>Project Team:</h5>
-            <div className="list">
-              {teamData.map(({ listTitle, listText }, index) => (
-                <>
-                  <input
-                    type="radio"
-                    name="team-list"
-                    id={`team-member-${index}`}
-                    checked={activeTeamMember === index ? 'checked' : ''}
-                  />
-                  <label htmlFor="designer">
-                    <Link onClick={() => setActiveTeamMember(index)}>
-                      <span>{listTitle}</span>
-                      {' '}
-                      {listText}
-                    </Link>
-                  </label>
-                </>
-              ))}
-            </div>
-          </div>
-          <div className="project-team-gallery">
-            {activeTeamMember}
-            <PhotoGallery data={teamData} nextStep={activeTeamMember} />
-          </div>
-        </div>
+        <PhotoListGallery
+          title="Project Team:"
+          data={teamData}
+          name="team-list"
+          direction="list-gallery"
+        />
+        <PhotoListGallery
+          title="Fundamental Goals:"
+          data={fundamentalGoals}
+          name="fundamental-goal"
+          direction="gallery-list"
+        />
       </div>
-      <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>Free Quality Assurance</div>
+      <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>
+        <h3>Free Quality Assurance</h3>
+        <PhotoListGallery
+          title="We offer you:"
+          data={weOfferYou}
+          name="we-offer"
+          direction="list-gallery"
+          galleryClassName="no-top-margin"
+        />
+        <PhotoListGallery
+          title="You receive:"
+          data={youReceive}
+          name="you-receive"
+          direction="gallery-list"
+          galleryClassName="no-top-margin"
+        />
+      </div>
+      <div className="lets-talk">
+        Does the offer look good?
+        <a role="presentation" className="button orange-btn">Let&#39;s talk</a>
+      </div>
     </div>
   );
 
@@ -190,7 +261,7 @@ const ReferralProgram = () => {
     <>
       <Head />
 
-      <section className="page__wrapper page__referral-program">
+      <section className="page__wrapper page__referral-program content">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}
         {renderProjectStageDetailsBlock()}

@@ -282,6 +282,13 @@
                 }
             }
         }
+        .scroll-top-top {
+            position: absolute;
+            right: 50px;
+            bottom: 40px;
+            width: 48px;
+            height: 96px;
+        }
     }
     #partners {
         overflow: hidden;
@@ -289,79 +296,22 @@
             font-weight: bold;
         }
     }
+    .hide {
+        display: none;
+    }
+    .show {
+        display: flex;
+    }
     .project-stage-details {
         margin: 95px 72px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .startup-details {
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            .details-content {
-                display: flex;
-                margin-top: 65px;
-                .project-team,
-                .project-team-gallery {
-                    flex: 1 1 50%;
-                    width: 50%;
-                }
-                h5 {
-                    font-weight: bold;
-                    font-size: 24px;
-                    line-height: 34px;
-                }
-                .project-team {
-                    margin: 0 30px 0 90px;
-                    .list {
-                        margin-top: 25px;
-                        display: flex;
-                        flex-direction: column;
-                        input {
-                            display: none;
-                        }
-                        label {
-                            font-size: 16px;
-                            line-height: 26px;
-                            margin: 12px 0;
-                            position: relative;
-                            padding-left: 20px;
-                            cursor: pointer;
-                            span {
-                                font-weight: bold;
-                            }
-                            &::before {
-                                content: "";
-                                width: 10px;
-                                height: 10px;
-                                background-color: rgba($color: #000000, $alpha: 0.5);
-                                border-radius: 50%;
-                                position: absolute;
-                                top: 7px;
-                                left: -5px;
-                            }
-                        }
-                        input:checked + label {
-                            &::before {
-                                background-color: #D62C2C;
-                            }
-                            span {
-                                color: #D62C2C;
-                            }
-                        }
-                    }
-                }
-                .project-team-gallery {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    .photo-gallery-container {
-                        width: 100%;
-                        max-width: 478px;
-                    }
-                }
-            }
+        &.hide {
+           @extend .hide; 
+        }
+        &.show {
+            @extend .show; 
         }
         h3 {
             font-weight: bold;
@@ -369,5 +319,31 @@
             line-height: 44px;
             text-align: center;
         }
+        .startup-details,
+        .existing-project-details {
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            &.hide {
+                @extend .hide; 
+            }
+            &.show {
+                @extend .show; 
+            }
+        }
+       .lets-talk {
+           display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 44px;
+            columns: #000;
+            margin: 60px auto;
+            a {
+                min-width: 172px;
+                margin-left: 40px;
+            }
+       }
     }
 }
