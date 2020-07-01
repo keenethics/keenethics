@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SlickSlider from 'react-slick';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { ItemDescription } from './StoryItem';
 

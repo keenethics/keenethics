@@ -37,7 +37,7 @@ const FooterSlider = ({
   const settings = {
     className: 'footer-slider',
     slidesToShow,
-    initialSlide: 0,
+    initialSlide: 2,
     rtl: true,
     responsive: [
       {

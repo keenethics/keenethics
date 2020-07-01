@@ -39,10 +39,6 @@ const OurTeam = () => {
                   src={`static/images/about-us/team-images/${index + 1}.webp`}
                   alt={`team ${index + 1}`}
                 />
-                {/* <img
-                  alt={`team ${index + 1}`}
-                  src={`static/images/about-us/team-images/${index + 1}.webp`}
-                /> */}
               </div>
             ))
           }
