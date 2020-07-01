@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SlickSlider from 'react-slick';
 
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { ItemDescription } from './StoryItem';
 
 class Slider extends React.Component {
@@ -50,10 +51,12 @@ class Slider extends React.Component {
           values.map((value) => (
             <div key={value.title} className="slide">
               <div className="img-wrap">
-                <img
-                  src={value.image}
-                  alt={value.title}
-                />
+                <LazyLoadComponent>
+                  <picture>
+                    <source srcSet={value.webpUrl} />
+                    <img src={value.image} alt={value.title} />
+                  </picture>
+                </LazyLoadComponent>
               </div>
               <div className="caption">
                 <h4>{value.title}</h4>
