@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SlickSlider from 'react-slick';
 
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { ItemDescription } from './StoryItem';
 
 class Slider extends React.Component {
@@ -37,6 +36,7 @@ class Slider extends React.Component {
     return (
       <SlickSlider
         slidesToShow={1.3}
+        lazyLoad={false}
         responsive={sliderBreakpoints}
         className="values-slides"
         // centerMode
@@ -47,30 +47,26 @@ class Slider extends React.Component {
           onStepChange(Math.floor(toStep), true);
         }}
       >
-        {
-          values.map((value) => (
-            <div key={value.title} className="slide">
-              <div className="img-wrap">
-                <LazyLoadComponent>
-                  <picture>
-                    <source srcSet={value.webpUrl} />
-                    <img src={value.image} alt={value.title} />
-                  </picture>
-                </LazyLoadComponent>
-              </div>
-              <div className="caption">
-                <h4>{value.title}</h4>
-                <p>
-                  <ItemDescription
-                    text={value.description}
-                    links={value.links}
-                    visible
-                  />
-                </p>
-              </div>
+        {values.map((value) => (
+          <div key={value.title} className="slide">
+            <div className="img-wrap">
+              <picture>
+                <source srcSet={value.webpUrl} />
+                <img src={value.image} alt={value.title} />
+              </picture>
             </div>
-          ))
-        }
+            <div className="caption">
+              <h4>{value.title}</h4>
+              <p>
+                <ItemDescription
+                  text={value.description}
+                  links={value.links}
+                  visible
+                />
+              </p>
+            </div>
+          </div>
+        ))}
       </SlickSlider>
     );
   }

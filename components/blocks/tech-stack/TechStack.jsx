@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { LazyLoadComponent, trackWindowScroll } from 'react-lazy-load-image-component';
 import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
 const TechStack = () => {
@@ -19,8 +19,6 @@ const TechStack = () => {
       <div className="block--content">
         <div className="tech-stack">
           <LazyLoadComponent>
-
-
             <div className="tech-stack--block">
               <div className="tech-stack--block-title">
                 JavaScript
@@ -163,4 +161,4 @@ const TechStack = () => {
   );
 };
 
-export default TechStack;
+export default trackWindowScroll(TechStack);

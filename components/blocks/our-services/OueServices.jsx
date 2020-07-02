@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from 'next/link';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
 const platesContent = [
@@ -99,4 +99,4 @@ OurServices.defaultProps = {
   show: false,
 };
 
-export default OurServices;
+export default trackWindowScroll(OurServices);
