@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 import Head from '../components/layout/head';
+import Footer from '../components/layout/footer';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
@@ -176,6 +177,10 @@ const ReferralProgram = () => {
     </div>
   );
 
+  const renderLetsDiscussBlock = () => (
+    <div className="lets-discuss-block" />
+  );
+
   return (
     <>
       <Head />
@@ -185,7 +190,10 @@ const ReferralProgram = () => {
         {renderProjectStageBlock()}
         {renderProjectStageDetailsBlock()}
         <Partners />
+        {renderLetsDiscussBlock()}
       </section>
+
+      <Footer openNewTab />
     </>
   );
 };
