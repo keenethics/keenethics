@@ -185,6 +185,8 @@ class CategoriesFilter extends React.Component {
       sliderWidth,
     } = this.state;
     const categoriesListFullWidth = categoriesList.length * CATEGORY_BUTTON_WIDTH_DESKTOP;
+    const { pathname } = router;
+    const hideShowAllButton = ['/portfolio', '/blog'];
 
     return (
       <>
@@ -278,6 +280,17 @@ class CategoriesFilter extends React.Component {
                     onClick={() => this.scroll(1)}
                     label="next"
                   />
+                  {
+                    hideShowAllButton.includes(pathname)
+                      ? null
+                      : (
+                        <CategoryButton
+                          category="Show All"
+                          buttonClick={() => router.push('/portfolio')}
+                          className="-show-all"
+                        />
+                      )
+                  }
                 </div>
               )}
 
