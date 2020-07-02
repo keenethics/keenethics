@@ -187,7 +187,6 @@ class CategoriesFilter extends React.Component {
     const categoriesListFullWidth = categoriesList.length * CATEGORY_BUTTON_WIDTH_DESKTOP;
     const { pathname } = router;
     const hideShowAllButton = ['/portfolio', '/blog'];
-    console.log(hideShowAllButton.includes(pathname));
 
     return (
       <>
