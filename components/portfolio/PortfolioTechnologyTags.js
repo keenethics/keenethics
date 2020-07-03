@@ -15,17 +15,18 @@ const links = {
   healthcare: '/services-custom-healthcare-software-development',
   education: '/services-education-software-development',
   businessadministration: '/services-business-administration-development',
+  mvp: '/approach-minimum-viable-product',
 };
 
 const PortfolioTechnologyTags = ({ tags, style }) => (
   <div className="technology-tags-wrap">
     <ul className="technology-tags--list">
       {
-          tags.map((tag) => {
-            const href = links[tag.toLowerCase().replace(' ', '')];
-            return (
-              <li className="technology-tags--item" key={tag}>
-                {
+        tags.map((tag) => {
+          const href = links[tag.toLowerCase().replace(' ', '')];
+          return (
+            <li className="technology-tags--item" key={tag}>
+              {
                   href ? (
                     <a
                       className="technology-tag"
@@ -40,9 +41,9 @@ const PortfolioTechnologyTags = ({ tags, style }) => (
                     <div className="technology-tag" style={style}>{tag}</div>
                   )
                 }
-              </li>
-            );
-          })
+            </li>
+          );
+        })
         }
     </ul>
   </div>
