@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-/* eslint-disable no-unused-expressions */
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function format_D_MMM_YYYY(year, month, day) {
@@ -17,11 +16,8 @@ function format_MMMM_DD_YYYY(year, month, day) {
 
 function dateParse(date, format) {
   const [year, month, day] = date.split('-');
-  let parseMonth = null;
+  const parseMonth = (month < 10) ? month[1] : month;
   // if the moth = 01,02,03 return 1,2,3 ;
-  (month < 10)
-    ? parseMonth = month[1]
-    : parseMonth = month;
   const actualMonth = months[parseMonth - 1];
 
   switch (format) {
