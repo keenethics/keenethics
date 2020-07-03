@@ -73,7 +73,12 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           >
             <span itemProp="addressLocality">Lviv</span>
             ,&nbsp;
-            <span itemProp="streetAddress">Kulparkivska St, 59</span>
+            <span itemProp="streetAddress">
+              Lytvynenka St, 3,
+              <br className="display-block-sm" />
+              {' '}
+              79000
+            </span>
           </a>
           <a href="tel:+380947106105" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
