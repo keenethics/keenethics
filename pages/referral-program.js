@@ -40,32 +40,40 @@ const ReferralProgram = () => {
             and I will introduce you to the benefits of working with us personally.
             <img src="/static/images/svg/quotes.svg" className="quotes right" alt="quotes" />
           </div>
-          <div className="contact-data">
-            <div className="seo-name">
-              Max Savonin
-              <p>CEO of KeenEthics</p>
+        </div>
+        <div className="tablet-content">
+          <div className="tablet-content-left">
+            <div className="contact-data">
+              <div className="seo-name">
+                Max Savonin
+                <p>CEO of KeenEthics</p>
+              </div>
+              <div>
+                <Link href="">
+                  <a className="button orange-btn">Book a meeting</a>
+                </Link>
+              </div>
             </div>
-            <div>
-              <Link href="">
-                <a className="button orange-btn">Book a meeting</a>
-              </Link>
+            <div className="mobile-content-right">
+              <img src="/static/images/referral-program/max-768.jpg" alt="Max Savonin" />
+            </div>
+            <div className="horizontal-line" />
+            <div className="contacts">
+              <a href="tel:+38 (094) 710 61 05">
+                <p><img src="/static/images/svg/icon-tel.svg" alt="tel" /></p>
+                +38 (094) 710 61 05
+              </a>
+              <a href="mailto:max.savonin@keenethics.com">
+                <p><img src="/static/images/svg/icon-mail.svg" alt="tel" /></p>
+                max.savonin@keenethics.com
+              </a>
+              <a href="skype:maxsav28">
+                <p><img src="/static/images/svg/skype.svg" alt="tel" /></p>
+                maxsav28
+              </a>
             </div>
           </div>
-        </div>
-        <div className="horizontal-line" />
-        <div className="contacts">
-          <a href="tel:+38 (094) 710 61 05">
-            <p><img src="/static/images/svg/icon-tel.svg" alt="tel" /></p>
-            +38 (094) 710 61 05
-          </a>
-          <a href="mailto:max.savonin@keenethics.com">
-            <p><img src="/static/images/svg/icon-mail.svg" alt="tel" /></p>
-            max.savonin@keenethics.com
-          </a>
-          <a href="skype:maxsav28">
-            <p><img src="/static/images/svg/skype.svg" alt="tel" /></p>
-            maxsav28
-          </a>
+          <div className="tablet-content-right" />
         </div>
       </div>
       <div className="welcome-block-right" />

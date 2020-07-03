@@ -15,16 +15,16 @@ const GalleryWithMenu = ({ data }) => {
             }}
           >
             {
-                            data
-                              .map((item, index) => (
-                                <div className="wrapper" key={`photo-${index}`}>
-                                  <img
-                                    src={item.image}
-                                    alt={item.image}
-                                  />
-                                </div>
-                              ))
-                        }
+              data
+                .map((item, index) => (
+                  <div className="wrapper" key={`photo-${index}`}>
+                    <img
+                      src={item.image}
+                      alt={item.image}
+                    />
+                  </div>
+                ))
+            }
           </div>
 
           <div
@@ -34,13 +34,13 @@ const GalleryWithMenu = ({ data }) => {
             }}
           >
             {
-                            data.map((item, index) => (
-                              <figcaption key={`figcaption-${index}`}>
-                                <h3>{item.contentTitle}</h3>
-                                <p>{item.content}</p>
-                              </figcaption>
-                            ))
-                        }
+              data.map((item, index) => (
+                <figcaption key={`figcaption-${index}`}>
+                  <h3>{item.contentTitle}</h3>
+                  <p>{item.content}</p>
+                </figcaption>
+              ))
+            }
           </div>
         </figure>
       </div>
@@ -50,7 +50,9 @@ const GalleryWithMenu = ({ data }) => {
             <path d="M24.7509 17.2354L39.6542 31.9781C40.0207 32.3406 40.6086 32.3406 40.9751 31.9781C41.3416 31.6155 41.3416 31.034 40.9751 30.6714L25.4079 15.2719C25.0413 14.9094 24.4535 14.9094 24.087 15.2719L8.52663 30.6714C8.34682 30.8493 8.25 31.0887 8.25 31.3213C8.25 31.5539 8.3399 31.7934 8.52663 31.9712C8.89316 32.3338 9.48099 32.3338 9.84753 31.9712L24.7509 17.2354Z" fill="#12233D" />
           </svg>
         </a>
-        {data.map(({ title, logo }, index) => (
+        {data.map(({
+          title, logo, contentTitle, content, image,
+        }, index) => (
           <a className="menu-item" key={`menu-item-${index}`} role="presentation" onClick={() => setActiveItem(index)}>
             <input
               type="radio"
@@ -63,7 +65,20 @@ const GalleryWithMenu = ({ data }) => {
             <label htmlFor={`menu-item-${index}`} key={`label-${index}`}>
               <img src={logo} alt={logo} />
               <p>{title}</p>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.3743 25.6372L6.95483 13.3516C6.64939 13.0495 6.15953 13.0495 5.85408 13.3516C5.54864 13.6538 5.54864 14.1383 5.85408 14.4405L18.8268 27.2734C19.1322 27.5755 19.6221 27.5755 19.9275 27.2734L32.8945 14.4405C33.0443 14.2923 33.125 14.0927 33.125 13.8989C33.125 13.7051 33.0501 13.5055 32.8945 13.3573C32.589 13.0552 32.0992 13.0552 31.7937 13.3573L19.3743 25.6372Z" fill="#12233D" />
+              </svg>
             </label>
+            <div className="mobile-container">
+              <img
+                src={image}
+                alt={image}
+              />
+              <figcaption>
+                <h3>{contentTitle}</h3>
+                <p>{content}</p>
+              </figcaption>
+            </div>
           </a>
         ))}
         <a className="menu-item arrow" role="presentation" onClick={() => setActiveItem(activeItem < data.length - 1 ? activeItem + 1 : data.length - 1)}>
