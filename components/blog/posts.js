@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import ListItem from '../content/ListItem';
 
-const Posts = ({ posts }) => (
-  <div className="page__list">
+const Posts = React.forwardRef(({ posts }, ref) => (
+  <div ref={ref} className="page__list">
     {posts.map((post) => {
       const {
         fields: { slug },
@@ -13,7 +13,7 @@ const Posts = ({ posts }) => (
       return (<ListItem work={post.fields} key={slug} posts />);
     })}
   </div>
-);
+));
 
 Posts.propTypes = {
   posts: PropTypes.array,
