@@ -25,6 +25,7 @@ const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const fileUpload = require('express-fileupload');
+const moment = require('moment');
 const { mailgunAuth, hubSpot } = require('./config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
@@ -497,6 +498,87 @@ app.prepare().then(() => {
     });
 
     return res.sendStatus(200);
+  });
+
+  server.post('/referral-program-send-email', (req, res) => {
+    const {
+      country,
+      selectedDate,
+      selectedTime,
+      name,
+      email,
+      phone,
+      idea,
+    } = JSON.parse(req.body.data);
+
+    if (!formatValidation.validate({ min: 3, max: 25 }, name)) {
+      res.send({
+        error: true,
+        status: 'Wrong name length, it must be from 3 to 25 characters',
+      });
+      return;
+    }
+    if (!formatValidation.validate({ type: 'email' }, email)) {
+      res.send({
+        error: true,
+        status: 'Wrong email address',
+      });
+      return;
+    }
+    if (!formatValidation.validate({ min: 3, max: 25 }, phone)) {
+      res.send({
+        error: true,
+        status: 'Wrong phone length',
+      });
+      return;
+    }
+    if (!country) {
+      res.send({
+        error: true,
+        status: 'Select you country',
+      });
+      return;
+    }
+    if (!selectedDate) {
+      res.send({
+        error: true,
+        status: 'Select date',
+      });
+      return;
+    }
+    if (!selectedTime) {
+      res.send({
+        error: true,
+        status: 'Select time',
+      });
+      return;
+    }
+
+    const html = `
+      <p>Dear ${name},</p>
+      <p>You have booked a meeting with Max Savonin</p>
+      <p>Date: ${moment(selectedDate).format('dddd, MMMM D, YYYY')}</p>
+      <p>Time: ${selectedTime}</p>
+      <p>Your country: ${country}</p>
+      <p>Your phone: ${phone}</p>
+      <p>${idea}</p>
+    `;
+    const mailOptions = {
+      from: 'business@keenethics.com',
+      to: email,
+      subject: 'Meeting with Max Savonin',
+      html,
+    };
+
+    transporter.sendMail(mailOptions, () => {
+      res.send({
+        error: false,
+        status: 'Message sent',
+      });
+
+      transporter.sendMail();
+      return false;
+    });
   });
 
   server.get('/post-preview/:name', (req, res) => app.render(req, res, '/post', { name: req.params.name, preview: true }));

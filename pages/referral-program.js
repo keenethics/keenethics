@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Calendar from 'react-calendar';
+import MultiSelect from 'react-multi-select-component';
+import moment from 'moment';
+import StringFormatValidation from 'string-format-validation';
 
 import Link from 'next/link';
 
@@ -16,9 +20,97 @@ import {
   UXDiscoveryDeliverables,
 } from '../data/referral-program';
 
+const handleStatusResponse = (response) => {
+  if (response.status >= 200 && response.status < 300) {
+    return response;
+  }
+
+  const error = new Error(response.statusText);
+  error.response = response;
+  throw error;
+};
+
 const ReferralProgram = () => {
   const [projectStage, setProjectStage] = useState('startup');
   const [showDetails, setShowDetails] = useState(false);
+  const [countryList, setCountryList] = useState([]);
+
+  const [meetingStep, setMeetingStep] = useState(1);
+  const [country, setCountry] = useState([]);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedTime, setSelectedTime] = useState([]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [idea, setIdea] = useState('');
+  const [showError, setShowError] = useState(false);
+  const [sendEmailResponse, setSendEmailResponse] = useState(null);
+
+  useEffect(() => {
+    fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes')
+      .then((response) => response.json())
+      .then((data) => {
+        const list = data.map(({ name: countryName, flag, callingCodes }) => ({
+          label: (
+            <div>
+              <img src={flag} alt={countryName} />
+              <span>{countryName}</span>
+            </div>
+          ),
+          flag,
+          value: countryName,
+          phoneCode: callingCodes.length > 0 ? callingCodes[0] : '',
+        }));
+        setCountryList(list);
+      });
+  }, []);
+
+  const validateForm = () => {
+    if (meetingStep === 1) {
+      if (selectedDate && country.length > 0 && selectedTime.length > 0) {
+        setShowError(false);
+        setMeetingStep(meetingStep + 1);
+      } else {
+        setShowError(true);
+      }
+      return;
+    }
+    if (meetingStep === 2) {
+      if (StringFormatValidation.validate({ min: 3, max: 25 }, name)
+        && StringFormatValidation.validate({ type: 'email' }, email)
+        && StringFormatValidation.validate({ min: 3, max: 25 }, phone)) {
+        setShowError(false);
+        setMeetingStep(meetingStep + 1);
+      } else {
+        setShowError(true);
+      }
+    }
+  };
+
+  const sendEmail = () => {
+    setSendEmailResponse(null);
+    const formData = new FormData();
+    formData.append('data', JSON.stringify({
+      country: country.length && country[0].value ? country[0].value : '',
+      selectedDate,
+      selectedTime: selectedTime.length && selectedTime[0].label ? selectedTime[0].label : '',
+      name,
+      email,
+      phone,
+      idea,
+    }));
+
+    fetch('/referral-program-send-email', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(handleStatusResponse)
+      .then((response) => response.json())
+      .then((json) => {
+        setSendEmailResponse(json);
+      })
+      .catch(() => { });
+  };
 
   const renderWelcomeBlock = () => (
     <div className="welcome-block" id="top">
@@ -49,9 +141,7 @@ const ReferralProgram = () => {
                 <p>CEO of KeenEthics</p>
               </div>
               <div>
-                <Link href="">
-                  <a className="button orange-btn">Book a meeting</a>
-                </Link>
+                <a href="#lets-discuss" className="button orange-btn">Book a meeting</a>
               </div>
             </div>
             <div className="mobile-content-right">
@@ -180,13 +270,248 @@ const ReferralProgram = () => {
       </div>
       <div className="lets-talk">
         Does the offer look good?
-        <a role="presentation" className="button orange-btn">Let&#39;s talk</a>
+        <a href="#lets-discuss" className="button orange-btn">Let&#39;s talk</a>
       </div>
     </div>
   );
 
+  const customCountryRenderer = (selected) => (selected.length
+    ? selected.map(({ label }) => label)
+    : 'Your Country');
+
+  const customTimeRenderer = (selected) => (selected.length
+    ? selected.map(({ label }) => label)
+    : 'Select exact time for a call');
+
+  const addMinutes = () => {
+    const year = moment(selectedDate).get('year');
+    const month = moment(selectedDate).get('month');
+    const date = moment(selectedDate).get('date');
+    const hour = moment(selectedDate).get('hour');
+    const minute = moment(selectedDate).get('minute');
+
+    const startDate = moment(`${date}/${month}/${year} 9:00AM`, 'D/M/YYYY hh:mmA');
+    const endDate = moment(`${date}/${month}/${year} 7:00PM`, 'D/M/YYYY hh:mmA');
+    const selectDate = moment(`${date}/${month}/${year} ${hour}:${minute}`, 'D/M/YYYY HH:mmA');
+
+    const dates = [];
+    while (startDate <= endDate) {
+      if (startDate >= selectDate) {
+        dates.push({
+          value: startDate.format('hh:mm A'),
+          label: startDate.format('hh:mm A'),
+        });
+      }
+      startDate.add(30, 'minute');
+    }
+
+    if (dates.length === 0) {
+      dates.push({
+        value: '',
+        label: '',
+      });
+    }
+    return dates;
+  };
+
   const renderLetsDiscussBlock = () => (
-    <div className="lets-discuss-block" />
+    <div id="lets-discuss" className="lets-discuss-block">
+      <h3>Let&#39;s discuss you business idea</h3>
+      <h5>A half hour talk with the CEO on how to support your project in the best possible way</h5>
+      <div className="checkmark-steps">
+        <div className={`checkmark ${meetingStep >= 1 ? 'active' : ''}`}>
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.1875L4.52 6L9 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <div className="line" />
+        <div className={`checkmark ${meetingStep >= 2 ? 'active' : ''}`}>
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.1875L4.52 6L9 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <div className="line" />
+        <div className={`checkmark ${meetingStep === 3 ? 'active' : ''}`}>
+          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.1875L4.52 6L9 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div className="lets-discuss-container">
+        <div className="lets-discuss-content">
+          <div className="circles-bg">
+            <svg width="205" height="251" viewBox="0 0 205 251" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="162.312" cy="42.875" r="42.5" fill="#DE4F4F" />
+              <circle cx="100" cy="151" r="99.5" stroke="#12233D" strokeDasharray="16 16" />
+            </svg>
+          </div>
+          <div className={`left-content ${meetingStep === 3 ? 'hide-content' : 'show-content'}`}>
+            <div className={`step-content ${meetingStep === 1 ? 'show' : 'hide'}`}>
+              <div className="title">Choose date:</div>
+              <Calendar
+                defaultView="month"
+                minDate={new Date()}
+                value={selectedDate}
+                onChange={(date) => { setSelectedDate(date); setSelectedTime([]); }}
+                navigationLabel={({
+                  date, locale,
+                }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
+              />
+              <div className="title">Choose time:</div>
+              <MultiSelect
+                id="countryList"
+                options={countryList}
+                hasSelectAll={false}
+                className={`country-list ${showError && country.length === 0 ? 'error' : ''}`}
+                onChange={(arr) => { setCountry([arr[arr.length - 1]]); return false; }}
+                value={country}
+                valueRenderer={customCountryRenderer}
+                disableSearch
+              />
+
+              <MultiSelect
+                id="timeList"
+                options={addMinutes()}
+                hasSelectAll={false}
+                className={`country-list ${showError && selectedTime.length === 0 ? 'error' : ''}`}
+                onChange={(time) => setSelectedTime([time[time.length - 1]])}
+                disableSearch
+                value={selectedTime}
+                valueRenderer={customTimeRenderer}
+              />
+            </div>
+            <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
+              <div className="title">Your Info:</div>
+              <input
+                type="text"
+                required
+                name="name"
+                value={name}
+                placeholder="Name"
+                minLength="2"
+                maxLength="25"
+                onChange={({ target: { value } }) => setName(value)}
+                className={showError && !StringFormatValidation.validate({ min: 3, max: 25 }, name) ? 'error' : ''}
+              />
+              <input
+                type="email"
+                required
+                name="email"
+                value={email}
+                placeholder="Email"
+                maxLength="50"
+                onChange={({ target: { value } }) => setEmail(value)}
+                className={showError && !StringFormatValidation.validate({ type: 'email' }, email) ? 'error' : ''}
+              />
+              <div className={`phone-holder ${showError
+                && !StringFormatValidation.validate({ min: 3, max: 10 }, phone) ? 'error' : ''}`}
+              >
+                {country.length && country[0] && country[0].phoneCode
+                  ? (
+                    <span>
+                      +
+                      {country[0].phoneCode}
+                    </span>
+                  )
+                  : ''}
+                <input
+                  type="number"
+                  required
+                  name="phone"
+                  value={phone}
+                  placeholder="Phone Number"
+                  onChange={({ target: { value } }) => setPhone(value)}
+                  minLength="2"
+                  maxLength="10"
+                />
+              </div>
+
+              <div className="title">Tell about your idea</div>
+              <textarea name="idea" value={idea} onChange={({ target: { value } }) => setIdea(value)} />
+            </div>
+          </div>
+          <div className={`right-content ${meetingStep === 3 ? 'center' : ''}`}>
+            <div className="step-content">
+              <div className="title">Your meeting</div>
+              <div className="meeting-content">
+                <div>With:</div>
+                <div className="with-content">
+                  <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
+                  <div>
+                    <div>Max Savonin</div>
+                    <div>Chief Executive Officer at KeenEthics</div>
+                  </div>
+                </div>
+                <div className="data">
+                  <span>Date:</span>
+                  {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
+                </div>
+                <div className="data">
+                  <span>Time:</span>
+                  {selectedTime.length > 0 && selectedTime[0].label ? selectedTime[0].label : ''}
+                </div>
+                <div className="data">
+                  <span>Your Country:</span>
+                  {country.length > 0 && country[0].value ? country[0].value : ''}
+                </div>
+                <br />
+                {meetingStep === 1
+                  ? ''
+                  : (
+                    <>
+                      <div className="data">
+                        <span>Your Name:</span>
+                        {name}
+                      </div>
+                      <div className="data">
+                        <span>Your phone:</span>
+                        {phone && country.length && country[0].phoneCode ? `+${country[0].phoneCode}` : ''}
+                        {phone}
+                      </div>
+                      <div className="data">
+                        <span>Your email:</span>
+                        {email}
+                      </div>
+                    </>
+                  )}
+                {meetingStep === 3 && sendEmailResponse && sendEmailResponse.status
+                  ? (
+                    <div className="mail-msg">{sendEmailResponse.status}</div>
+                  )
+                  : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="next-btn-holder">
+          {meetingStep > 1
+            ? (
+              <a className="button" role="presentation" onClick={() => setMeetingStep(meetingStep - 1)}>
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
+                </svg>
+                Back
+              </a>
+            )
+            : ''}
+          {meetingStep === 3
+            ? (
+              <a role="presentation" className="button orange-btn" onClick={() => sendEmail()}>
+                Confirn
+              </a>
+            )
+            : (
+              <a role="presentation" className="button orange-btn" onClick={() => validateForm()}>
+                Next
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.99459 4C8.28288 4 8.51351 4.08649 8.68649 4.25946L15.7351 11.2649C15.9369 11.4955 16.0378 11.7405 16.0378 12C16.0378 12.2595 15.9369 12.4901 15.7351 12.6919L8.68649 19.6973C8.48468 19.8991 8.25405 20 7.99459 20C7.73514 20 7.5045 19.8991 7.3027 19.6973C7.1009 19.4955 7 19.2649 7 19.0054C7 18.7459 7.1009 18.5153 7.3027 18.3135L13.6162 12L7.3027 5.68649C7.1009 5.48468 7 5.23964 7 4.95135C7 4.66306 7.09369 4.43243 7.28108 4.25946C7.46847 4.08649 7.70631 4 7.99459 4Z" fill="white" />
+                </svg>
+              </a>
+            )}
+
+        </div>
+      </div>
+    </div>
   );
 
   return (
@@ -201,7 +526,7 @@ const ReferralProgram = () => {
         {renderLetsDiscussBlock()}
       </section>
 
-      <Footer openNewTab />
+      <Footer openNewTab isTablet isMobile />
     </>
   );
 };
