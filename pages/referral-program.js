@@ -6,8 +6,7 @@ import StringFormatValidation from 'string-format-validation';
 
 import Link from 'next/link';
 
-import Head from '../components/layout/head';
-import Footer from '../components/layout/footer';
+import Layout from '../components/layout/main';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
@@ -515,9 +514,7 @@ const ReferralProgram = () => {
   );
 
   return (
-    <>
-      <Head />
-
+    <Layout noMenu layoutClass="referral-layout-page">
       <section className="page__wrapper page__referral-program content">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}
@@ -525,9 +522,7 @@ const ReferralProgram = () => {
         <Partners />
         {renderLetsDiscussBlock()}
       </section>
-
-      <Footer openNewTab isTablet isMobile />
-    </>
+    </Layout>
   );
 };
 
