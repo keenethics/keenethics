@@ -51,7 +51,7 @@ const ProjectBlackBook = () => (
                 <li>
                   Accepted
                   {' '}
-                  <Link href="/approach-minimum-viable-product">MVP</Link>
+                  <Link href="/approach-minimum-viable-product"><a>MVP</a></Link>
                   {' '}
                   and preceding development process of the next versions. We enabled
                   customer’s analytics and top management to keep an eye on the reports, to filter
