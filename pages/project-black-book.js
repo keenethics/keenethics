@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
@@ -48,7 +49,11 @@ const ProjectBlackBook = () => (
               <ul>
                 <li>The project is being built from scratch by KeenEthics;</li>
                 <li>
-                  Accepted MVP and preceding development process of the next versions. We enabled
+                  Accepted
+                  {' '}
+                  <Link href="/approach-minimum-viable-product"><a>MVP</a></Link>
+                  {' '}
+                  and preceding development process of the next versions. We enabled
                   customer’s analytics and top management to keep an eye on the reports, to filter
                   data and to have an access off-line;
                 </li>
