@@ -107,7 +107,7 @@ class Layout extends React.Component {
             isBurgerMenu={isTablet || isMobile}
           />
         )}
-        <div className="content">
+        <div className={noMenu ? 'content content-no-menu' : 'content'}>
           <PostsContext.Provider value={posts}>
             <div className={classnames('content-inner', className)} style={contentInnerStyle}>
               {children}

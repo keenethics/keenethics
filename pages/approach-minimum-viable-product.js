@@ -3,7 +3,7 @@ import Link from 'next/link';
 import RocketIcon from '../components/approach-minimum-viable-product/RocketIcon';
 import GlassIcon from '../components/approach-minimum-viable-product/GlassIcon';
 import Layout from '../components/layout/main';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 import ContentNavigation from '../components/content/navigation';
 
 import { works } from '../main.config';

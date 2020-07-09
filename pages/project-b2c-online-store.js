@@ -115,7 +115,11 @@ const ProjectOnlineStore = () => (
                           ,
                           <span><Link href="/services-web-development-node">Node.js</Link></span>
                           ,
+                          <span>Reaction Commerce</span>
+                          ,
                           <span><Link href="/tech-data-base-mongo">MongoDB</Link></span>
+                          ,
+                          <span>Spree Commerce</span>
                         </span>
                       </td>
                     </tr>

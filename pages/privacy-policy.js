@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 
 const PrivacyPolicy = () => (
   <Layout>

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+npm run sitemap-gen
 npm run build
 
 ssh root@107.170.121.178 pm2 stop server

@@ -5,7 +5,7 @@ import OurStory from '../components/about-us/OurStory';
 import OurMission from '../components/about-us/OurMission';
 import OurValues from '../components/about-us/OurValues';
 import OurTeam from '../components/about-us/OurTeam';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 import MeetOurLeaders from '../components/about-us/MeetOurLeaders';
 
 const AboutUs = () => (

@@ -12,3 +12,4 @@ private.config.js
 
 .css.map
 .env
+public/sitemap.xml

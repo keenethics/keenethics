@@ -10,7 +10,7 @@ import './services-education-software-development.scss';
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
-import LetsStart from './home-page-lets-start';
+import LetsStart from '../components/about-us/LetsStart';
 import { getPostsList } from '../lib/contentful';
 
 import { works } from '../main.config';

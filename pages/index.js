@@ -6,11 +6,11 @@ import OurMethods from '../components/blocks/our-methods/OurMethods';
 import Industries from '../components/blocks/industries/Industries';
 import TechStack from '../components/blocks/tech-stack/TechStack';
 import Partners from '../components/blocks/partners/Partners';
-import OurServices from './our-services';
-import Founders from './founders';
-import Projects from './home-page-projects';
-import Blog from './home-page-blog';
-import LetsStart from './home-page-lets-start';
+import OurServices from '../components/blocks/our-services/OueServices';
+import Founders from '../components/blocks/founders/founders';
+import Projects from '../components/blocks/projects/Projects';
+import Blog from '../components/blocks/keen-blog/Blog';
+import LetsStart from '../components/about-us/LetsStart';
 
 export default class Index extends React.Component {
   constructor(props) {
