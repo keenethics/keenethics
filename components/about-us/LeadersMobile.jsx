@@ -33,9 +33,8 @@ const LeadersMobile = ({ data }) => {
           ref={(node) => { sliderRef = node; }}
           {...settings}
         >
-          {ourLeaders
-            .sort((a, b) => a.id - b.id)
-            .map((item, index) => (
+          {
+            ourLeaders.sort((a, b) => a.id - b.id).map((item, index) => (
               <figure key={index}>
                 <div className="wrapper">
                   <img
@@ -53,18 +52,21 @@ const LeadersMobile = ({ data }) => {
                   <p>{item.position}</p>
                 </figcaption>
               </figure>
-            ))}
+            ))
+          }
         </Slider>
       </div>
 
       <ul className="values-toggler mobile">
-        {ourLeaders.slice(0, 3).map((_, i) => (
-          <li
-            key={i}
-            className={i <= step ? 'active' : ''}
-            onClick={() => stepper(i)}
-          />
-        ))}
+        {
+          ourLeaders.slice(0, 3).map((_, i) => (
+            <li
+              key={i}
+              className={i <= step ? 'active' : ''}
+              onClick={() => stepper(i)}
+            />
+          ))
+        }
       </ul>
     </>
   );
