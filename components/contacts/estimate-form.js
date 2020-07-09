@@ -924,11 +924,6 @@ const EstimateForm = () => {
               <div className={messageEstimate.errorField ? 'error-message' : 'error-none'}>
                 {messageEstimate.status}
               </div>
-              <div className="input-cols">
-                <div className={file.errorField ? 'error-message' : 'error-none'}>
-                  {file.status}
-                </div>
-              </div>
             </div>
             <div className="grey-checkbox-wrapper">
               <Checkbox

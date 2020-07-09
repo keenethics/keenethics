@@ -186,11 +186,6 @@ const ContactForm = () => {
         <div className={message.errorField ? 'error-message' : 'error-none'}>
           {message.status}
         </div>
-        <div className="input-cols">
-          <div className={file.errorField ? 'error-message' : 'error-none'}>
-            {file.status}
-          </div>
-        </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox
             className="grey"
