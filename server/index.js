@@ -178,42 +178,45 @@ app.prepare().then(() => {
       ],
     };
 
-    transporter.sendMail(mailOptions, (err) => {
-      if (err) {
-        if (isAnalyticsActive) Sentry.captureException(err);
-        return res.status(400).send(err);
-      }
-      res.send({
-        errorField: {},
-        status: 'Message sent',
-      });
-
-      transporter.sendMail(
-        autoReplyMailOptions(
-          selectedCountry,
-          'contacts',
-          {
-            name: firstname.value,
-            email: email.value,
-            message: message.value,
-          },
-        ),
-        (e) => {
-          if (e) {
-            if (isAnalyticsActive) Sentry.captureException(e);
-            throw e;
-          }
+    transporter.sendMail(
+      autoReplyMailOptions(
+        selectedCountry,
+        'contacts',
+        {
+          name: firstname.value,
+          email: email.value,
+          message: message.value,
         },
-      );
-    });
+      ),
+      (e) => {
+        if (e) {
+          if (isAnalyticsActive) Sentry.captureException(e);
+          return res.send({
+            value: email.value,
+            errorField: 'email',
+            error: true,
+            status: 'Wrong email address',
+          });
+        }
+        transporter.sendMail(mailOptions, (err) => {
+          if (err) {
+            if (isAnalyticsActive) Sentry.captureException(err);
+            return res.status(400).send(err);
+          }
+          return res.send({
+            errorField: {},
+            status: 'Message sent',
+          });
+        });
+      },
+    );
 
     const hubSpotParameters = {
       firstname: firstname.value,
       lastname: lastname.value,
       email: email.value,
       phone: phone.value.toString(),
-      // eslint-disable-next-line
-      subscription_status: !!isSubscriber ? 'Subscribed' : 'Unsubscribed',
+      subscription_status: isSubscriber ? 'Subscribed' : 'Unsubscribed',
     };
 
     sendContactToHubSpot(hubSpotParameters);
@@ -326,40 +329,45 @@ app.prepare().then(() => {
       ],
     };
 
-    transporter.sendMail(mailOptions, (err) => {
-      if (err) {
-        if (isAnalyticsActive) Sentry.captureException(err);
-        return res.status(400).send(err);
-      }
-      res.send({
-        errorField: {},
-        status: 'Message sent',
-      });
-
-      transporter.sendMail(
-        autoReplyMailOptions(
-          selectedCountry,
-          'estimate',
-          {
-            name: name.value,
-            email: emailEstimate.value,
-            stage: stage.value,
-            services: servicesEstimate,
-            pm: pm.value,
-            budget: budget.value,
-            timeframe: timeframe.value,
-            start: start.value,
-            message: messageEstimate.value,
-          },
-        ),
-        (e) => {
-          if (e) {
-            if (isAnalyticsActive) Sentry.captureException(e);
-            throw e;
-          }
+    transporter.sendMail(
+      autoReplyMailOptions(
+        selectedCountry,
+        'estimate',
+        {
+          name: name.value,
+          email: emailEstimate.value,
+          stage: stage.value,
+          services: servicesEstimate,
+          pm: pm.value,
+          budget: budget.value,
+          timeframe: timeframe.value,
+          start: start.value,
+          message: messageEstimate.value,
         },
-      );
-    });
+      ),
+      (e) => {
+        if (e) {
+          if (isAnalyticsActive) Sentry.captureException(e);
+          return res.send({
+            value: emailEstimate.value,
+            errorField: 'email',
+            error: true,
+            status: 'Wrong email address',
+          });
+        }
+
+        transporter.sendMail(mailOptions, (err) => {
+          if (err) {
+            if (isAnalyticsActive) Sentry.captureException(err);
+            return res.status(400).send(err);
+          }
+          return res.send({
+            errorField: {},
+            status: 'Message sent',
+          });
+        });
+      },
+    );
 
     const hubSpotParameters = {
       name: name.value,

@@ -4,7 +4,6 @@ import * as Sentry from '@sentry/browser';
 import classnames from 'classnames';
 import Checkbox from '../form/checkbox';
 import { ContactUsContext } from '../context/contacts-context';
-import FileUpload from '../form/upload-file-btn';
 
 const EstimateForm = () => {
   const [stage, setStage] = useState({
@@ -924,12 +923,6 @@ const EstimateForm = () => {
               </div>
               <div className={messageEstimate.errorField ? 'error-message' : 'error-none'}>
                 {messageEstimate.status}
-              </div>
-              <div className="input-cols">
-                {/* <FileUpload /> */}
-                <div className={file.errorField ? 'error-message' : 'error-none'}>
-                  {file.status}
-                </div>
               </div>
             </div>
             <div className="grey-checkbox-wrapper">

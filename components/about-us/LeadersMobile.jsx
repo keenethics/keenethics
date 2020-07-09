@@ -30,7 +30,7 @@ const LeadersMobile = ({ data }) => {
         <Slider
           swipeToSlide
           className="hello"
-          ref={(node) => sliderRef = node}
+          ref={(node) => { sliderRef = node; }}
           {...settings}
         >
           {

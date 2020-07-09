@@ -6,7 +6,6 @@ import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
 import { IreneK, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
-import FileUpload from '../form/upload-file-btn';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -186,12 +185,6 @@ const ContactForm = () => {
         </div>
         <div className={message.errorField ? 'error-message' : 'error-none'}>
           {message.status}
-        </div>
-        <div className="input-cols">
-          {/* <FileUpload /> */}
-          <div className={file.errorField ? 'error-message' : 'error-none'}>
-            {file.status}
-          </div>
         </div>
         <div className="grey-checkbox-wrapper">
           <Checkbox
