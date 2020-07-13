@@ -217,7 +217,7 @@ const ReferralProgram = () => {
         <div className="details-btn-holder">
           <div>
             <img src="/static/images/svg/arrow-down-3.svg" alt="details" />
-            <a role="presentation" className="button" onClick={() => setShowDetails(!showDetails)}>View Details</a>
+            <a className="button" href="#project-stage-details" onClick={() => setShowDetails(!showDetails)}>View Details</a>
           </div>
         </div>
       </div>
@@ -230,7 +230,7 @@ const ReferralProgram = () => {
   );
 
   const renderProjectStageDetailsBlock = () => (
-    <div className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
+    <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
       <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
         <h3>Free UX Discovery</h3>
         <PhotoListGallery
@@ -355,6 +355,7 @@ const ReferralProgram = () => {
                 navigationLabel={({
                   date, locale,
                 }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
+                tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
               />
               <div className="title">Choose time:</div>
               <MultiSelect

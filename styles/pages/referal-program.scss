@@ -113,7 +113,7 @@
                     }
                     @media (max-width: $desktop-md) {
                         flex: 1 1 auto;
-                        padding: 0 0 0 90px;
+                        padding: 0 0 0 102px;
                         flex-direction: column;
                         a {
                             margin: 64px 0;
@@ -734,7 +734,7 @@
                                 &:disabled {
                                     color: rgba(18, 35, 61, 0.5);
                                     background-color: transparent;
-                                    pointer-events: none;
+                                   
                                 }
                                 &.react-calendar__tile--active {
                                     background-color: transparent;
