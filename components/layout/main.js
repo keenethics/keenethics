@@ -88,6 +88,7 @@ class Layout extends React.Component {
       noFooter,
       className,
       style,
+      layoutClass,
     } = this.props;
 
     const currentURL = router.route;
@@ -98,7 +99,7 @@ class Layout extends React.Component {
     const isMobile = isClient ? dimensions.width <= 480 : false;
 
     return (
-      <div className="layout">
+      <div className={classnames('layout', layoutClass)}>
         <Head currentURL={currentURL} meta={meta} />
         {noMenu || (
           <Navigation
@@ -136,6 +137,7 @@ Layout.propTypes = {
   noFooter: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,
+  layoutClass: PropTypes.string,
 };
 
 Layout.defaultProps = {
@@ -146,6 +148,7 @@ Layout.defaultProps = {
   noFooter: false,
   className: '',
   style: {},
+  layoutClass: '',
 };
 
 export default withRouter(Layout);

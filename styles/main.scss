@@ -28,6 +28,7 @@
 @import "about-us/our-team";
 @import "about-us/meet-our-leaders";
 @import "approach-minimum-viable-product";
+@import "pages/referal-program";
 
 @import "content/offer-list";
 
@@ -37,6 +38,8 @@
 @import "../components/content/FeaturesList";
 @import "../components/content/CallToActionButton";
 @import "../components/notify/notify";
+@import "components/photo-list-gallery";
+@import "components/gallery-with-menu";
 
 @import "main-blocks/main";
 @import "main-blocks/common";
@@ -49,3 +52,6 @@
 @import "main-blocks/top-section";
 @import "main-blocks/home-footer";
 @import 'form/upload-btn';
+
+@import 'react-calendar/dist/Calendar.css';
+

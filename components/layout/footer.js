@@ -146,30 +146,33 @@ const fullCycleMethod = [
 const HomeFooter = ({
   isMobile,
   isTablet,
+  openNewTab,
 }) => (
   <div id="footer" className="block block-footer">
     <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#services" className="home-footer-list__title home-footer-list-item__link"><h5>Services</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#services" className="home-footer-list__title home-footer-list-item__link">
+              <h5>Services</h5>
+            </a>
           </li>
           {services.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
           </li>
           {industries.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -179,19 +182,19 @@ const HomeFooter = ({
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
           </li>
           {technologies.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -200,7 +203,7 @@ const HomeFooter = ({
           {careers.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list__title home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list__title home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -328,7 +331,7 @@ const HomeFooter = ({
           <ul className="home-footer-list align-right">
             <li className="home-footer-list-item">
               <Link href="/contacts?activeform=estimate" prefetch={false}>
-                <a className="button footer-estimation">
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="button footer-estimation">
                   Free Estimate
                 </a>
               </Link>
@@ -338,23 +341,23 @@ const HomeFooter = ({
         <div className="home-footer-nav">
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="/"><a className="home-footer-list-item__link">Home</a></Link>
+              <Link href="/"><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Home</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#services" className="home-footer-list-item__link">Services</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#services" className="home-footer-list-item__link">Services</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#industries" className="home-footer-list-item__link">Industries</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list-item__link">Industries</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/contacts" prefetch={false}><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="/contacts" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="/contacts" prefetch={false}>
-                <a className="button footer-estimation">
+                <a className="button footer-estimation" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
                   Free Estimate
                 </a>
               </Link>
@@ -362,16 +365,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="/about-us" prefetch={false}><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="/about-us" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#projects" className="home-footer-list-item__link">Portfolio</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/careers" prefetch={false}><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="/careers" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/blog" prefetch={false}><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="/blog" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>
@@ -380,7 +383,7 @@ const HomeFooter = ({
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">
-          <Link href="/blog" prefetch={false}><a className="home-footer-link">Latest in Blog</a></Link>
+          <Link href="/blog" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-link">Latest in Blog</a></Link>
           <span className="bell-icon" />
         </div>
         <FooterSlider
@@ -394,12 +397,12 @@ const HomeFooter = ({
         </div>
         <div className="footer-links-terms">
           <Link href="/privacy-policy" prefetch={false}>
-            <a className="footer-links-link">
+            <a className="footer-links-link" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
               GDPR Privacy Policy
             </a>
           </Link>
           <Link href="/cookie-policy" prefetch={false}>
-            <a className="footer-links-link">
+            <a className="footer-links-link" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
               Cookie Policy
             </a>
           </Link>
@@ -550,6 +553,7 @@ const HomeFooter = ({
 HomeFooter.propTypes = {
   isMobile: PropTypes.bool.isRequired,
   isTablet: PropTypes.bool.isRequired,
+  openNewTab: PropTypes.bool.isRequired,
 };
 
 export default HomeFooter;
