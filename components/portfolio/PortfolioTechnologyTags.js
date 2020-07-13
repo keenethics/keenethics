@@ -15,6 +15,7 @@ const links = {
   healthcare: '/services-custom-healthcare-software-development',
   education: '/services-education-software-development',
   businessadministration: '/services-business-administration-development',
+  mvp: '/approach-minimum-viable-product',
 };
 
 const PortfolioTechnologyTags = ({ tags, style }) => (

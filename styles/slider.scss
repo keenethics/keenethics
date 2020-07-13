@@ -237,6 +237,9 @@
 .slick-list {
   overflow: hidden;
 }
+.slick-track {
+  touch-action: pan-y;
+}
 .slick-slide {
   display: block;
   float: left;
