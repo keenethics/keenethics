@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import MultiSelect from 'react-multi-select-component';
+import Select from 'react-select';
 import moment from 'moment';
 import StringFormatValidation from 'string-format-validation';
 
@@ -35,9 +35,9 @@ const ReferralProgram = () => {
   const [countryList, setCountryList] = useState([]);
 
   const [meetingStep, setMeetingStep] = useState(1);
-  const [country, setCountry] = useState([]);
+  const [country, setCountry] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [selectedTime, setSelectedTime] = useState([]);
+  const [selectedTime, setSelectedTime] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -66,11 +66,11 @@ const ReferralProgram = () => {
 
   const validateForm = () => {
     if (meetingStep === 1) {
-      if (selectedDate && country.length > 0 && selectedTime.length > 0) {
+      if (!selectedDate || !country) {
+        setShowError(true);
+      } else {
         setShowError(false);
         setMeetingStep(meetingStep + 1);
-      } else {
-        setShowError(true);
       }
       return;
     }
@@ -90,12 +90,12 @@ const ReferralProgram = () => {
     setSendEmailResponse(null);
     const formData = new FormData();
     formData.append('data', JSON.stringify({
-      country: country.length && country[0].value ? country[0].value : '',
+      country: country && country.value ? country.value : '',
       selectedDate,
-      selectedTime: selectedTime.length && selectedTime[0].label ? selectedTime[0].label : '',
+      selectedTime: selectedTime && selectedTime.label ? selectedTime.label : '',
       name,
       email,
-      phone,
+      phone: country && country.phoneCode ? `+${country.phoneCode} ${phone}` : phone,
       idea,
     }));
 
@@ -274,14 +274,6 @@ const ReferralProgram = () => {
     </div>
   );
 
-  const customCountryRenderer = (selected) => (selected.length
-    ? selected.map(({ label }) => label)
-    : 'Your Country');
-
-  const customTimeRenderer = (selected) => (selected.length
-    ? selected.map(({ label }) => label)
-    : 'Select exact time for a call');
-
   const addMinutes = () => {
     const year = moment(selectedDate).get('year');
     const month = moment(selectedDate).get('month');
@@ -358,26 +350,27 @@ const ReferralProgram = () => {
                 tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
               />
               <div className="title">Choose time:</div>
-              <MultiSelect
+              <Select
                 id="countryList"
+                classNamePrefix="country-list"
                 options={countryList}
-                hasSelectAll={false}
-                className={`country-list ${showError && country.length === 0 ? 'error' : ''}`}
-                onChange={(arr) => { setCountry([arr[arr.length - 1]]); return false; }}
+                className={`country-list ${showError && !country ? 'error' : ''}`}
+                onChange={(value) => setCountry(value)}
                 value={country}
-                valueRenderer={customCountryRenderer}
-                disableSearch
+                isSearchable
+                placeholder="Your Country"
+
               />
 
-              <MultiSelect
+              <Select
                 id="timeList"
+                classNamePrefix="time-list"
                 options={addMinutes()}
-                hasSelectAll={false}
-                className={`country-list ${showError && selectedTime.length === 0 ? 'error' : ''}`}
-                onChange={(time) => setSelectedTime([time[time.length - 1]])}
-                disableSearch
+                className={`time-list ${showError && !selectedTime ? 'error' : ''}`}
+                onChange={(time) => setSelectedTime(time)}
                 value={selectedTime}
-                valueRenderer={customTimeRenderer}
+                isSearchable={false}
+                placeholder="Select exact time for a call"
               />
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
@@ -406,11 +399,11 @@ const ReferralProgram = () => {
               <div className={`phone-holder ${showError
                 && !StringFormatValidation.validate({ min: 3, max: 10 }, phone) ? 'error' : ''}`}
               >
-                {country.length && country[0] && country[0].phoneCode
+                {country && country.phoneCode
                   ? (
                     <span>
                       +
-                      {country[0].phoneCode}
+                      {country.phoneCode}
                     </span>
                   )
                   : ''}
@@ -448,11 +441,11 @@ const ReferralProgram = () => {
                 </div>
                 <div className="data">
                   <span>Time:</span>
-                  {selectedTime.length > 0 && selectedTime[0].label ? selectedTime[0].label : ''}
+                  {selectedTime && selectedTime.label ? selectedTime.label : ''}
                 </div>
                 <div className="data">
                   <span>Your Country:</span>
-                  {country.length > 0 && country[0].value ? country[0].value : ''}
+                  {country && country.value ? country.value : ''}
                 </div>
                 <br />
                 {meetingStep === 1
@@ -465,7 +458,7 @@ const ReferralProgram = () => {
                       </div>
                       <div className="data">
                         <span>Your phone:</span>
-                        {phone && country.length && country[0].phoneCode ? `+${country[0].phoneCode}` : ''}
+                        {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
                         {phone}
                       </div>
                       <div className="data">
