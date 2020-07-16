@@ -43,7 +43,7 @@ module.exports = {
     Have in mind, you will receive additional questions because making software is
     close to rocket science and every detail counts.<br>
     Meanwhile, you can jump-start the <del>rocket</del> project by
-    <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
+    <a href="https://dochub.com/alex_pletnov/r4D6EkZVZZ997o3VpQXW7O/nda-with-keenethics-docx?dt=JrD-ndZASKyJRdZBKtyE" target="_blank">
       signing the NDA
     </a>
   </p>
@@ -84,7 +84,7 @@ module.exports = {
       Have in mind, you will receive additional questions because making software is
       close to rocket science and every detail counts.<br>
       Meanwhile, you can jump-start the <del>rocket</del> project by
-      <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
+      <a href="https://dochub.com/alex_pletnov/r4D6EkZVZZ997o3VpQXW7O/nda-with-keenethics-docx?dt=JrD-ndZASKyJRdZBKtyE" target="_blank">
         signing the NDA
       </a>
     </p>
@@ -124,7 +124,7 @@ module.exports = {
     Have in mind, you will receive additional questions because making software is
     close to rocket science and every detail counts.<br>
     Meanwhile, you can jump-start the <del>rocket</del> project by
-    <a href="https://dochub.com/alex_pletnov/eBY7OkW/nda-with-keenethics-docx?dt=R_3JL7iV4EvycAPsm1is" target="_blank">
+    <a href="https://dochub.com/alex_pletnov/r4D6EkZVZZ997o3VpQXW7O/nda-with-keenethics-docx?dt=JrD-ndZASKyJRdZBKtyE" target="_blank">
       signing the NDA
     </a>
   </p>
