@@ -1,0 +1,35 @@
+name: CD
+
+on:
+  push:
+    branches: ['staging', 'production']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: create SSH key
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        sudo chmod 600 ~/.ssh/id_rsa
+        echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+      shell: bash
+      env:
+        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+        SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+
+    - uses: actions/checkout@v2
+
+    - name: check branch and deploy
+      run: |
+        if [ ${GITHUB_REF##*/} == "staging" ]
+        then
+          bash deploy-staging
+        elif [ ${GITHUB_REF##*/} == "production" ]
+        then
+          echo "current branch is: production"
+          ssh root@107.170.121.178 "ls"
+        fi

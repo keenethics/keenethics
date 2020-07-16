@@ -2,7 +2,7 @@ const fs = require('fs');
 const { createClient } = require('contentful');
 const dotenv = require('dotenv-safe');
 
-dotenv.config('./.env');
+dotenv.config({ path: process.env.ENV_PATH });
 const SPACE_ID = process.env.REACT_APP_SPACE_ID;
 const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
 const currentDate = new Date().toISOString().split('T')[0];
@@ -47,7 +47,7 @@ const getSitemapItems = (paths, basePath = '') => paths.map((path) => `
   </url>
 `).join('');
 
-const generatePostsSitemap = async () => {
+const generateSitemap = async () => {
   const posts = (await getPostsList()).items.map(({ fields }) => fields.slug);
   const pagesSitemap = getSitemapItems(pagesName);
   const postsSitemap = getSitemapItems(posts, 'blog/');
@@ -55,4 +55,4 @@ const generatePostsSitemap = async () => {
   fs.writeFileSync('./public/sitemap.xml', sitemap);
 };
 
-generatePostsSitemap();
+generateSitemap();
