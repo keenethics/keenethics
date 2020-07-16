@@ -25,8 +25,12 @@ class CategoriesFilter extends React.Component {
     // TODO Replace -10 with scroll width
 
     const elem = document.getElementById('filter__list');
-    newState.sliderWidth = !elem ? (window.innerWidth - leftMenuWidth - 2
-      * containerPadding - rigthButtonsWidth) : elem.clientWidth;
+    newState.sliderWidth = !elem
+      ? window.innerWidth
+      - leftMenuWidth
+      - 2 * containerPadding
+      - rigthButtonsWidth
+      : elem.clientWidth;
 
     if (newState.sliderWidth >= buttonsWidth) {
       newState.arrowsIsHidden = true;
@@ -43,7 +47,7 @@ class CategoriesFilter extends React.Component {
       newState.isExpanded = false;
     }
     this.setState({ ...newState });
-  })
+  });
 
   constructor() {
     super();
@@ -54,6 +58,7 @@ class CategoriesFilter extends React.Component {
       sliderWidth: 0,
       arrowsIsHidden: false,
     };
+    this.categoriesRef = React.createRef();
   }
 
   componentDidMount() {
@@ -67,7 +72,7 @@ class CategoriesFilter extends React.Component {
 
   toggleExpand = () => {
     this.setState((state) => ({ isExpanded: !state.isExpanded }));
-  }
+  };
 
   scroll = (step) => {
     const { scroll, sliderWidth } = this.state;
@@ -79,7 +84,7 @@ class CategoriesFilter extends React.Component {
 
     if (step === 1) {
       newScroll = scroll - 250;
-      if ((buttonsWidth - sliderWidth) + newScroll < 0) {
+      if (buttonsWidth - sliderWidth + newScroll < 0) {
         newScroll = sliderWidth - buttonsWidth - 10;
         setTimeout(() => {
           this.setState({ scroll: newScroll + 10 });
@@ -115,7 +120,7 @@ class CategoriesFilter extends React.Component {
         this.setState({ scroll: sliderWidth - rigthPosition });
       }, 100);
     }
-  }
+  };
 
   selectCategory = (category) => {
     const {
@@ -140,7 +145,7 @@ class CategoriesFilter extends React.Component {
     });
 
     filterOnChange(selectedItems);
-  }
+  };
 
   clearCategories = () => {
     const { pageTitle, filterOnChange, router } = this.props;
@@ -151,14 +156,11 @@ class CategoriesFilter extends React.Component {
     });
 
     filterOnChange([]);
-  }
+  };
 
   selectAllCategories = () => {
     const {
-      filterOnChange,
-      categoriesList,
-      pageTitle,
-      router,
+      filterOnChange, categoriesList, pageTitle, router,
     } = this.props;
 
     router.replace({
@@ -166,92 +168,49 @@ class CategoriesFilter extends React.Component {
       query: { chosen: categoriesList.join(',') },
     });
     filterOnChange(categoriesList);
-  }
+  };
 
   render() {
     const {
-      pageTitle, categoriesList, selectedCategories, router,
+      pageTitle,
+      categoriesList,
+      selectedCategories,
+      router,
     } = this.props;
     const {
       isExpanded,
       isMobile,
       scroll,
       arrowsIsHidden,
+      sliderWidth,
     } = this.state;
+    const categoriesListFullWidth = categoriesList.length * CATEGORY_BUTTON_WIDTH_DESKTOP;
+    const { pathname } = router;
+    const hideShowAllButton = ['/portfolio', '/blog'];
 
     return (
       <>
         <div className={`filter filter__${pageTitle}`}>
-          {
-            isMobile
-            && (
-              <div className="filter__wrapper">
-                <div
-                  role="button"
-                  tabIndex={0}
-                  onClick={this.toggleExpand}
-                  onKeyPress={this.toggleExpand}
-                  className={classNames('filter__toggler', {
-                    'filter__toggler--expanded': isExpanded,
-                    'filter__toggler--selected': selectedCategories.length,
-                  })}
-                >
-                  {
-                    selectedCategories.length
-                      ? `${selectedCategories.length} filters selected`
-                      : 'Set the filters'
-                  }
-                </div>
-
-                <SlideDown
-                  closed={!isExpanded}
-                  className="filter__slidedown"
-                >
-                  <ul className="filter__list">
-                    <div
-                      className="filter__categories"
-                    >
-                      {categoriesList.map((category) => (
-                        <li className="filter__item" key={category}>
-                          <CategoryButton
-                            category={category}
-                            isActive={selectedCategories.includes(category)}
-                            buttonClick={() => this.selectCategory(category)}
-                          />
-                        </li>
-                      ))}
-                    </div>
-                    <div className="filter__controls">
-                      <li className="filter__item">
-                        <CategoryButton
-                          category="Clear"
-                          buttonClick={this.clearCategories}
-                          className={classNames('-clear', { '-hidden': !selectedCategories.length })}
-                        />
-                      </li>
-                      <li className="filter__item">
-                        <CategoryButton
-                          category="Show All"
-                          buttonClick={() => router.push('/portfolio')}
-                          className="-show-all"
-                        />
-                      </li>
-                    </div>
-                  </ul>
-                </SlideDown>
+          {isMobile && (
+            <div className="filter__wrapper">
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={this.toggleExpand}
+                onKeyPress={this.toggleExpand}
+                className={classNames('filter__toggler', {
+                  'filter__toggler--expanded': isExpanded,
+                  'filter__toggler--selected': selectedCategories.length,
+                })}
+              >
+                {selectedCategories.length
+                  ? `${selectedCategories.length} filters selected`
+                  : 'Set the filters'}
               </div>
-            )
-          }
 
-          {
-            !isMobile
-            && (
-              <div className="filter__wrapper">
-                <ul className="filter__list" id="filter__list">
-                  <div
-                    className="filter__categories"
-                    style={{ left: scroll }}
-                  >
+              <SlideDown closed={!isExpanded} className="filter__slidedown">
+                <ul className="filter__list">
+                  <div className="filter__categories">
                     {categoriesList.map((category) => (
                       <li className="filter__item" key={category}>
                         <CategoryButton
@@ -262,41 +221,90 @@ class CategoriesFilter extends React.Component {
                       </li>
                     ))}
                   </div>
-                </ul>
-
-                {!arrowsIsHidden && (
-                  <div className="filter__arrows">
-                    <button
-                      type="button"
-                      className="filter__arrow filter__arrow-left"
-                      onClick={() => this.scroll(-1)}
-                      label="previous"
-                    />
-                    <button
-                      type="button"
-                      className="filter__arrow filter__arrow-right"
-                      onClick={() => this.scroll(1)}
-                      label="next"
-                    />
+                  <div className="filter__controls">
+                    <li className="filter__item">
+                      <CategoryButton
+                        category="Clear"
+                        buttonClick={this.clearCategories}
+                        className={classNames('-clear', {
+                          '-hidden': !selectedCategories.length,
+                        })}
+                      />
+                    </li>
+                    <li className="filter__item">
+                      <CategoryButton
+                        category="Show All"
+                        buttonClick={() => router.push('/portfolio')}
+                        className="-show-all"
+                      />
+                    </li>
                   </div>
-                )}
+                </ul>
+              </SlideDown>
+            </div>
+          )}
 
-                <div className="filter__controls">
-                  <CategoryButton
-                    category="Clear"
-                    buttonClick={this.clearCategories}
-                    className={classNames('-clear', { '-hidden': !selectedCategories.length })}
+          {!isMobile && (
+            <div className="filter__wrapper">
+              <ul
+                ref={this.categoriesRef}
+                className="filter__list"
+                id="filter__list"
+              >
+                <div className="filter__categories" style={{ left: scroll }}>
+                  {categoriesList.map((category) => (
+                    <li className="filter__item" key={category}>
+                      <CategoryButton
+                        category={category}
+                        isActive={selectedCategories.includes(category)}
+                        buttonClick={() => this.selectCategory(category)}
+                      />
+                    </li>
+                  ))}
+                </div>
+              </ul>
+
+              {!arrowsIsHidden && (
+                <div className="filter__arrows">
+                  <button
+                    type="button"
+                    disabled={scroll === 0}
+                    className="filter__arrow filter__arrow-left"
+                    onClick={() => this.scroll(-1)}
+                    label="previous"
                   />
-                  <CategoryButton
-                    category="Show All"
-                    buttonClick={() => router.push('/portfolio')}
-                    className="-show-all"
+                  <button
+                    type="button"
+                    disabled={(sliderWidth + Math.abs(scroll)) >= categoriesListFullWidth}
+                    className="filter__arrow filter__arrow-right"
+                    onClick={() => this.scroll(1)}
+                    label="next"
                   />
                 </div>
-              </div>
-            )
-          }
+              )}
 
+              <div className="filter__controls">
+                <CategoryButton
+                  category="Clear"
+                  buttonClick={this.clearCategories}
+                  className={classNames('-clear', {
+                    '-hidden': !selectedCategories.length,
+                  })}
+                />
+                {
+                    hideShowAllButton.includes(pathname)
+                      ? null
+                      : (
+                        <CategoryButton
+                          category="Show All"
+                          buttonClick={() => router.push('/portfolio')}
+                          className="-show-all"
+                        />
+                      )
+                  }
+              </div>
+            </div>
+          )}
         </div>
       </>
     );

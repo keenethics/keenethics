@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 import Layout from '../components/layout/main';
 import OurStory from '../components/about-us/OurStory';
@@ -35,7 +36,9 @@ const AboutUs = () => (
       </div>
       <OurStory />
       <OurMission />
-      <OurValues />
+      <LazyLoadComponent>
+        <OurValues />
+      </LazyLoadComponent>
       <MeetOurLeaders />
       <OurTeam />
       <LetsStart />

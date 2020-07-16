@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import FooterSlider from '../blocks/footer/footer-slider';
 import SocialButton from '../social-buttons/main';
+import FooterCountriesList from '../blocks/footer/countries-list';
 
 const services = [
   {
@@ -210,6 +212,11 @@ const HomeFooter = ({
         </ul>
       </div>
       <div className="home-footer-row home-footer-countries">
+
+        <LazyLoadComponent>
+          <FooterCountriesList />
+        </LazyLoadComponent>
+
         <div className="footer-responsive">
           <ul className="home-footer-list">
             <li className="home-footer-list-item">
@@ -393,7 +400,9 @@ const HomeFooter = ({
       </div>
       <div className="home-footer-row footer-links">
         <div className="social-icons footer-links-terms">
-          <SocialButton />
+          <LazyLoadComponent>
+            <SocialButton />
+          </LazyLoadComponent>
         </div>
         <div className="footer-links-terms">
           <Link href="/privacy-policy" prefetch={false}>

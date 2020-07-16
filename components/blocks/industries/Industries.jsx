@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import SeeProjects from './SeeProjects';
 import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
@@ -26,7 +27,7 @@ const Industries = () => {
                 <Link href="/services-education-software-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
-                      <img
+                      <LazyLoadImage
                         src="/static/main-blocks/industries/large/icon-education.svg"
                         width="54px"
                         height="34px"
@@ -46,7 +47,7 @@ const Industries = () => {
                 <Link href="/services-business-administration-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
-                      <img
+                      <LazyLoadImage
                         src="/static/main-blocks/industries/large/icon-business.svg"
                         width="54px"
                         height="34px"
@@ -66,7 +67,7 @@ const Industries = () => {
                 <Link href="/services-custom-healthcare-software-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
-                      <img
+                      <LazyLoadImage
                         src="/static/main-blocks/industries/large/icon-healthcare.svg"
                         width="54px"
                         height="34px"
@@ -88,7 +89,7 @@ const Industries = () => {
                 <Link href="/services-retail-software-development" prefetch={false}>
                   <a className="link">
                     <div className="industries--small-item-logo">
-                      <img
+                      <LazyLoadImage
                         src="/static/main-blocks/industries/small/icon-retail.svg"
                         width="32px"
                         height="27px"
@@ -103,7 +104,7 @@ const Industries = () => {
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
-                  <img
+                  <LazyLoadImage
                     src="/static/main-blocks/industries/small/icon-agriculture.svg"
                     width="32px"
                     height="27px"
@@ -116,7 +117,7 @@ const Industries = () => {
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
-                  <img
+                  <LazyLoadImage
                     src="/static/main-blocks/industries/small/icon-hospitality.svg"
                     width="32px"
                     height="27px"
@@ -129,7 +130,7 @@ const Industries = () => {
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
-                  <img
+                  <LazyLoadImage
                     src="/static/main-blocks/industries/small/icon-real-estate.svg"
                     width="32px"
                     height="27px"
@@ -142,7 +143,7 @@ const Industries = () => {
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
-                  <img
+                  <LazyLoadImage
                     src="/static/main-blocks/industries/small/icon-finance.svg"
                     width="32px"
                     height="27px"
