@@ -113,7 +113,7 @@
                     }
                     @media (max-width: $desktop-md) {
                         flex: 1 1 auto;
-                        padding: 0 0 0 90px;
+                        padding: 0 0 0 102px;
                         flex-direction: column;
                         a {
                             margin: 64px 0;
@@ -734,7 +734,7 @@
                                 &:disabled {
                                     color: rgba(18, 35, 61, 0.5);
                                     background-color: transparent;
-                                    pointer-events: none;
+                                   
                                 }
                                 &.react-calendar__tile--active {
                                     background-color: transparent;
@@ -751,59 +751,148 @@
                     }
                     .country-list {
                         margin: 0 0 16px 0;
-                        &:last-child {
-                            margin: 0;
+                        .country-list__control {
+                            border:none;
+                            box-shadow: none;
+                            border-radius: 0;
+                            height: 40px;
+                            .country-list__indicators {
+                                display: none;
+                            }
+                            .country-list__value-container {
+                                height: 100%;
+                                padding: 0;
+                                .country-list__placeholder {
+                                    margin-left: 8px;
+                                }
+                                .country-list__single-value {
+                                    top: 0;
+                                    height: 100%;
+                                    transform: none;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding: 0;
+                                    width:100%;
+                                    margin: 0 8px;
+                                    max-width: calc(100% - 16px);
+                                    div{
+                                        display: flex;
+                                        align-items: center;
+                                        width: 100%;
+                                        img {
+                                            width: 24px;
+                                            height: 16px;
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
+                                div[class$='Input'] {
+                                    margin: 0 0 0 8px;
+                                    display: flex;
+                                    height: 100%;
+                                    padding: 0;
+                                    width: 100%;
+                                    z-index: 100;
+                                    .country-list__input{
+                                        height: 100%;
+                                        width: 100%;
+                                        input {
+                                            margin-bottom: 0;
+                                            font-family: Raleway;
+                                            color: #12233D;
+                                            font-size: 16px !important;
+                                            line-height: 24px !important;
+                                            width: 100% !important;
+                                            &:focus {
+                                                background-color: white !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            } 
+                            
                         }
                         &.error {
                             border: 1px solid #D62C2C;
                         }
-                        .dropdown-container,
-                        .dropdown-container:focus {
-                            border:none;
-                            box-shadow: none;
-                            border-radius: 0;
-                        }
-                        .dropdown-heading-dropdown-arrow {
-                            display: none;
-                        }
-                        .dropdown-heading-value {
-                            display: flex;
-                            cursor: pointer;
-                            div{
-                                display: flex;
-                                font-family: Raleway;
-                                color: #12233D;
-                                font-size: 16px;
-                                line-height: 24px;
-                                align-items: center;
-                                img {
-                                    width: 24px;
-                                    height: 16px;
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                        .dropdown-content {
-                            padding-top: 0;
-                            ul li .item-renderer {
-                                display: flex;
-                                
-                                input {
-                                    display: none;
-                                }
-                                span div {
+                        .country-list__menu {
+                            margin: 4px 0;
+                            .country-list__option {
+                                padding-top: 5px 10px;
+                                div{
                                     display: flex;
-                                    font-family: Raleway;
-                                    color: #12233D;
-                                    font-size: 16px;
-                                    line-height: 24px;
                                     align-items: center;
-                                    text-align: left;
                                     img {
                                         width: 24px;
                                         height: 16px;
                                         margin-right: 10px;
                                     }
+                                    span {
+                                        display: flex;
+                                        font-family: Raleway;
+                                        color: #12233D;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        align-items: center;
+                                        text-align: left;
+                                        
+                                    }
+                                }
+                                &.country-list__option--is-selected{
+                                    background-color: #DEEBFF;
+                                }
+                            }
+                        }
+                    }
+                    .time-list {
+                        margin: 0 0 16px 0;
+                        .time-list__control {
+                            border:none;
+                            box-shadow: none;
+                            border-radius: 0;
+                            height: 40px;
+                            .time-list__indicators {
+                                display: none;
+                            }
+                            .time-list__value-container {
+                                height: 100%;
+                                padding: 0;
+                                .time-list__placeholder {
+                                    margin-left: 8px;
+                                }
+                                .time-list__single-value {
+                                    top: 0;
+                                    height: 100%;
+                                    transform: none;
+                                    padding: 0;
+                                    width:100%;
+                                    margin: 0 8px;
+                                    max-width: calc(100% - 16px);
+                                    font-family: Raleway;
+                                    color: #12233D;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            } 
+                            
+                        }
+                        &.error {
+                            border: 1px solid #D62C2C;
+                        }
+                        .time-list__menu {
+                            margin: 4px 0;
+                            .time-list__option {
+                                padding: 5px 10px;
+                                font-family: Raleway;
+                                color: #12233D;
+                                font-size: 16px;
+                                line-height: 24px;
+                                align-items: center;
+                                text-align: left;
+                                &.time-list__option--is-selected{
+                                    background-color: #DEEBFF;
                                 }
                             }
                         }
