@@ -10,7 +10,7 @@ import CategoryButton from './CategoryButton';
 // button width
 const CATEGORY_BUTTON_WIDTH_DESKTOP = 170;
 
-class CategoriesFilter extends React.Component {
+class CategoriesFilter extends React.PureComponent {
   handleResize = debounce(() => {
     const { isMobile } = this.state;
     const { categoriesList } = this.props;

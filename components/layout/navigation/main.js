@@ -9,7 +9,7 @@ import Point from './point';
 
 import { config } from '../../../main.config';
 
-class Navigation extends React.Component {
+class Navigation extends React.PureComponent {
   static scrollToActiveSubpoint(scroll) {
     const inner = document.getElementById('subnavigation-inner-current');
 

@@ -80,4 +80,4 @@ FooterSlider.propTypes = {
   isTablet: PropTypes.bool.isRequired,
 };
 
-export default FooterSlider;
+export default React.memo(FooterSlider);
