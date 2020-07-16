@@ -25,11 +25,11 @@ const PhotoListGallery = ({
               onChange={() => { }}
             />
             <label htmlFor={`team-member-${index}`} key={`label-${name}-${index}`}>
-              <a role="presentation" onClick={() => setActiveItem(index)}>
+              <div role="presentation" onClick={() => setActiveItem(index)}>
                 <span>{listTitle}</span>
                 {' '}
                 {listText}
-              </a>
+              </div>
             </label>
           </>
         ))}
@@ -65,7 +65,7 @@ const PhotoListGallery = ({
             {
               data.map((item, index) => (
                 <figcaption key={`figcaption-${name}-${index}`}>
-                  <h3>{item.name}</h3>
+                  <span>{item.name}</span>
                   <p>{item.position}</p>
                 </figcaption>
               ))
