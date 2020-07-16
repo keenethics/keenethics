@@ -148,30 +148,33 @@ const fullCycleMethod = [
 const HomeFooter = ({
   isMobile,
   isTablet,
+  openNewTab,
 }) => (
   <div id="footer" className="block block-footer">
     <div className="home-footer block--footer-content">
       <div className="home-footer-row footer-site-nav">
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#services" className="home-footer-list__title home-footer-list-item__link"><h5>Services</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#services" className="home-footer-list__title home-footer-list-item__link">
+              <h5>Services</h5>
+            </a>
           </li>
           {services.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
           </li>
           {industries.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -181,19 +184,19 @@ const HomeFooter = ({
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
           </li>
           {technologies.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -202,7 +205,7 @@ const HomeFooter = ({
           {careers.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
               <Link href={el.url} prefetch={false}>
-                <a className="home-footer-list__title home-footer-list-item__link">{el.title}</a>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list__title home-footer-list-item__link">{el.title}</a>
               </Link>
             </li>
           ))}
@@ -214,26 +217,154 @@ const HomeFooter = ({
           <FooterCountriesList />
         </LazyLoadComponent>
 
+        <div className="footer-responsive">
+          <ul className="home-footer-list">
+            <li className="home-footer-list-item">
+              <div className="flag-country-wrapper">
+                <span className="flag-country-wrapper-flag">
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://www.google.com/maps/place/KeenEthics/@49.8269687,23.9880895,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae7fa87f09d6f:0x9ac85f44cbcb9257!8m2!3d49.8269687!4d23.9902782"
+                  >
+                    <img
+                      src="/static/images/flag_ukraine.png"
+                      alt="Flag"
+                      className="ico flag"
+                    />
+                  </a>
+                </span>
+                <div className="country-text">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="country-link"
+                    href="https://www.google.com/maps/place/KeenEthics/@49.8269687,23.9880895,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae7fa87f09d6f:0x9ac85f44cbcb9257!8m2!3d49.8269687!4d23.9902782"
+                  >
+                    <span className="country" itemProp="addressRegion">
+                      Ukraine
+                    </span>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="address"
+                    href="https://www.google.com/maps/place/KeenEthics/@49.8269687,23.9880895,17z/data=!3m1!4b1!4m5!3m4!1s0x473ae7fa87f09d6f:0x9ac85f44cbcb9257!8m2!3d49.8269687!4d23.9902782"
+                  >
+                    Lviv, Kulparkivska St. 59
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul className="home-footer-list">
+            <li className="home-footer-list-item">
+              <div className="flag-country-wrapper">
+                <span className="flag-country-wrapper-flag">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.google.com/maps/place/KeenEthics/@51.7713527,5.5118959,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6fdf815ac947b:0xf0d1841b4903762b!8m2!3d51.7713569!4d5.5141752"
+                  >
+                    <img
+                      src="/static/images/flag_netherlands.png"
+                      alt="Flag Netherlands"
+                      className="ico flag"
+                    />
+                  </a>
+                </span>
+                <div className="country-text">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="country-link"
+                    href="https://www.google.com/maps/place/KeenEthics/@51.7713527,5.5118959,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6fdf815ac947b:0xf0d1841b4903762b!8m2!3d51.7713569!4d5.5141752"
+                  >
+                    <span className="country" itemProp="addressRegion">
+                      Netherlands
+                    </span>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="address"
+                    href="https://www.google.com/maps/place/KeenEthics/@51.7713527,5.5118959,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6fdf815ac947b:0xf0d1841b4903762b!8m2!3d51.7713569!4d5.5141752"
+                  >
+                    Oss, Oude litherweg 2, 5346 RT
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul className="home-footer-list">
+            <li className="home-footer-list-item">
+              <div className="flag-country-wrapper">
+                <span className="flag-country-wrapper-flag">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.google.com/maps/place/Workville/@40.7536262,-73.9887379,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab050f01bb:0xc4f59321f603c1a3!8m2!3d40.7536222!4d-73.9865492"
+                  >
+                    <img
+                      src="/static/images/united-states.svg"
+                      alt="Flag USA"
+                      className="ico flag usa-flag"
+                    />
+                  </a>
+                </span>
+                <div className="country-text">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="country-link"
+                    href="https://www.google.com/maps/place/Workville/@40.7536262,-73.9887379,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab050f01bb:0xc4f59321f603c1a3!8m2!3d40.7536222!4d-73.9865492"
+                  >
+                    <span className="country" itemProp="addressRegion">
+                      USA
+                    </span>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="address"
+                    href="https://www.google.com/maps/place/Workville/@40.7536262,-73.9887379,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259ab050f01bb:0xc4f59321f603c1a3!8m2!3d40.7536222!4d-73.9865492"
+                  >
+                    New York, 1412 Broadway, 21st floor, 2200
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul className="home-footer-list align-right">
+            <li className="home-footer-list-item">
+              <Link href="/contacts?activeform=estimate" prefetch={false}>
+                <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="button footer-estimation">
+                  Free Estimate
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div className="home-footer-nav">
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="/"><a className="home-footer-list-item__link">Home</a></Link>
+              <Link href="/"><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Home</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#services" className="home-footer-list-item__link">Services</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#services" className="home-footer-list-item__link">Services</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#industries" className="home-footer-list-item__link">Industries</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list-item__link">Industries</a>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list-item__link">Technologies</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/contacts" prefetch={false}><a className="home-footer-list-item__link">Contact us</a></Link>
+              <Link href="/contacts" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Contact us</a></Link>
             </li>
             <li className="home-footer-list-item">
               <Link href="/contacts" prefetch={false}>
-                <a className="button footer-estimation">
+                <a className="button footer-estimation" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
                   Free Estimate
                 </a>
               </Link>
@@ -241,16 +372,16 @@ const HomeFooter = ({
           </ul>
           <ul className="home-footer-list-tablet">
             <li className="home-footer-list-item">
-              <Link href="/about-us" prefetch={false}><a className="home-footer-list-item__link">About us</a></Link>
+              <Link href="/about-us" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">About us</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <a href="/#projects" className="home-footer-list-item__link">Portfolio</a>
+              <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#projects" className="home-footer-list-item__link">Portfolio</a>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/careers" prefetch={false}><a className="home-footer-list-item__link">Careers</a></Link>
+              <Link href="/careers" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Careers</a></Link>
             </li>
             <li className="home-footer-list-item">
-              <Link href="/blog" prefetch={false}><a className="home-footer-list-item__link">Blog</a></Link>
+              <Link href="/blog" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-list-item__link">Blog</a></Link>
             </li>
           </ul>
         </div>
@@ -259,7 +390,7 @@ const HomeFooter = ({
       <div className="horizontal-divider" />
       <div className="home-footer-row footer-blog">
         <div className="footer-slider-title">
-          <Link href="/blog" prefetch={false}><a className="home-footer-link">Latest in Blog</a></Link>
+          <Link href="/blog" prefetch={false}><a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} className="home-footer-link">Latest in Blog</a></Link>
           <span className="bell-icon" />
         </div>
         <FooterSlider
@@ -275,12 +406,12 @@ const HomeFooter = ({
         </div>
         <div className="footer-links-terms">
           <Link href="/privacy-policy" prefetch={false}>
-            <a className="footer-links-link">
+            <a className="footer-links-link" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
               GDPR Privacy Policy
             </a>
           </Link>
           <Link href="/cookie-policy" prefetch={false}>
-            <a className="footer-links-link">
+            <a className="footer-links-link" target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''}>
               Cookie Policy
             </a>
           </Link>
@@ -431,6 +562,7 @@ const HomeFooter = ({
 HomeFooter.propTypes = {
   isMobile: PropTypes.bool.isRequired,
   isTablet: PropTypes.bool.isRequired,
+  openNewTab: PropTypes.bool.isRequired,
 };
 
 export default HomeFooter;
