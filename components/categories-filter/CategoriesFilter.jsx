@@ -27,9 +27,9 @@ class CategoriesFilter extends React.PureComponent {
     const elem = document.getElementById('filter__list');
     newState.sliderWidth = !elem
       ? window.innerWidth
-      - leftMenuWidth
-      - 2 * containerPadding
-      - rigthButtonsWidth
+        - leftMenuWidth
+        - 2 * containerPadding
+        - rigthButtonsWidth
       : elem.clientWidth;
 
     if (newState.sliderWidth >= buttonsWidth) {
@@ -231,13 +231,6 @@ class CategoriesFilter extends React.PureComponent {
                         })}
                       />
                     </li>
-                    <li className="filter__item">
-                      <CategoryButton
-                        category="Show All"
-                        buttonClick={() => router.push('/portfolio')}
-                        className="-show-all"
-                      />
-                    </li>
                   </div>
                 </ul>
               </SlideDown>
@@ -275,7 +268,9 @@ class CategoriesFilter extends React.PureComponent {
                   />
                   <button
                     type="button"
-                    disabled={(sliderWidth + Math.abs(scroll)) >= categoriesListFullWidth}
+                    disabled={
+                      sliderWidth + Math.abs(scroll) >= categoriesListFullWidth
+                    }
                     className="filter__arrow filter__arrow-right"
                     onClick={() => this.scroll(1)}
                     label="next"
@@ -291,17 +286,13 @@ class CategoriesFilter extends React.PureComponent {
                     '-hidden': !selectedCategories.length,
                   })}
                 />
-                {
-                    hideShowAllButton.includes(pathname)
-                      ? null
-                      : (
-                        <CategoryButton
-                          category="Show All"
-                          buttonClick={() => router.push('/portfolio')}
-                          className="-show-all"
-                        />
-                      )
-                  }
+                {hideShowAllButton.includes(pathname) ? null : (
+                  <CategoryButton
+                    category="Show All"
+                    buttonClick={() => router.push('/portfolio')}
+                    className="-show-all"
+                  />
+                )}
               </div>
             </div>
           )}
