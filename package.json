@@ -12,7 +12,8 @@
     "analyze": "cross-env ANALYZE=1 next build",
     "deploy": "bash deploy",
     "endtoend": "jest --config=__tests__/endtoend/jest.config.js --runInBand",
-    "sitemap-gen": "node generate-sitemap"
+    "sitemap-gen": "node generate-sitemap",
+    "deploy-to-s3": "aws s3 cp public s3://front-end-new/ --recursive && aws cloudfront create-invalidation --distribution-id EN7WTJA1KVJOI --paths /index.html"
   },
   "repository": {
     "type": "git",
