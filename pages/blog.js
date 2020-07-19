@@ -11,7 +11,7 @@ import BellIcon from '../components/blog/BellIcon';
 import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
 import { getPostsList } from '../lib/contentful';
 
-const _ = require('lodash');
+const { intersection } = require('lodash');
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
@@ -86,7 +86,8 @@ class Blog extends React.Component {
     const { step, loading } = this.state;
     const { posts } = this.props;
     const current = this.blogPostListRef.current;
-    const offsetTop = (current?.clientHeight - current?.offsetTop)
+    const offsetTop = current?.clientHeight
+      - current?.offsetTop
       - (e.target.scrollTop + current?.offsetTop);
     if (loading) return;
     if (step * 9 >= posts.length) return;
@@ -96,20 +97,23 @@ class Blog extends React.Component {
         this.setState((state) => ({ step: state.step + 1, loading: false }));
       }, 500);
     }
-  }
-
+  };
 
   postsFilterd = () => {
     const { selectedPosts, step } = this.state;
     const { posts } = this.props;
     const slicedPosts = posts.slice(0, step * 9);
 
-    if (selectedPosts.length === slicedPosts.length
-      || selectedPosts.length === 0) return slicedPosts;
+    if (
+      selectedPosts.length === slicedPosts.length
+      || selectedPosts.length === 0
+    ) { return slicedPosts; }
 
     return slicedPosts.reduce((acc, post) => {
       if (post.fields && post.fields.categories) {
-        return _.intersection(post.fields.categories, selectedPosts).length ? [...acc, post] : acc;
+        return intersection(post.fields.categories, selectedPosts).length
+          ? [...acc, post]
+          : acc;
       }
       return acc;
     }, []);
@@ -125,7 +129,7 @@ class Blog extends React.Component {
     this.setState({
       isSubscribeModalOpen: true,
     });
-  }
+  };
 
   closeSubscribeModal = () => {
     const { router } = this.props;
@@ -133,7 +137,7 @@ class Blog extends React.Component {
     this.setState({
       isSubscribeModalOpen: false,
     });
-  }
+  };
 
   render() {
     const { categoriesList, selectedPosts, isSubscribeModalOpen } = this.state;
@@ -167,20 +171,14 @@ class Blog extends React.Component {
             {!posts.length ? (
               <div className="blog-loading">Loading...</div>
             ) : (
-              <>
-                <Posts ref={this.blogPostListRef} posts={this.postsFilterd()} />
-                <div>
-                  {
-                      this.state.loading
-                        ? <div>loading</div>
-                        : null
-                    }
-                </div>
-              </>
+              <Posts ref={this.blogPostListRef} posts={this.postsFilterd()} />
             )}
           </div>
         </div>
-        <SubscribeModal isOpen={isSubscribeModalOpen} close={this.closeSubscribeModal} />
+        <SubscribeModal
+          isOpen={isSubscribeModalOpen}
+          close={this.closeSubscribeModal}
+        />
       </Layout>
     );
   }
