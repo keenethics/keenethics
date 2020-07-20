@@ -37,7 +37,7 @@ const FooterSlider = ({
   const settings = {
     className: 'footer-slider',
     slidesToShow,
-    initialSlide: 0,
+    initialSlide: 2,
     rtl: true,
     responsive: [
       {
@@ -80,4 +80,4 @@ FooterSlider.propTypes = {
   isTablet: PropTypes.bool.isRequired,
 };
 
-export default FooterSlider;
+export default React.memo(FooterSlider);

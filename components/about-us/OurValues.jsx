@@ -48,30 +48,7 @@ class OurValues extends React.Component {
           values={ourValuesData}
           step={step}
           onStepChange={this.setStep}
-        >
-          {
-            ourValuesData.map((value) => (
-              <div key={value.title} className="slide">
-                <div className="img-wrap">
-                  <img
-                    src={value.image}
-                    alt={value.title}
-                  />
-                </div>
-                <div className="caption">
-                  <h4>{value.title}</h4>
-                  <p>
-                    <ItemDescription
-                      text={value.description}
-                      links={value.links}
-                      visible
-                    />
-                  </p>
-                </div>
-              </div>
-            ))
-          }
-        </ValuesSlider>
+        />
 
         <ul className="values-toggler">
           {

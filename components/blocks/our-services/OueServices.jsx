@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from 'next/link';
-
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
 const platesContent = [
@@ -70,9 +70,13 @@ const OurServices = ({ show }) => {
         })}
         >
           {platesContent.map((el) => (
-            <Link href={el.href} key={el.text} prefetch={false}>
+            <Link key={el.text} href={el.href} prefetch={false}>
               <div className="home-section-plates-item">
-                <img className="plate-img" src={`/static/images/svg/home/services/${el.icon}`} alt="service icon" />
+                <LazyLoadImage
+                  className="plate-img"
+                  src={`/static/images/svg/home/services/${el.icon}`}
+                  alt="service icon"
+                />
                 <p className="plate-text">{el.text}</p>
               </div>
             </Link>
@@ -95,4 +99,4 @@ OurServices.defaultProps = {
   show: false,
 };
 
-export default OurServices;
+export default trackWindowScroll(OurServices);
