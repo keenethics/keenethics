@@ -14,8 +14,7 @@ const getElemMargin = (elem) => {
 
 const getElemHeight = (elem) => elem.clientHeight;
 
-const getComputedSliderHeight = (slider) => getElemHeight(slider) * 2
-  + getElemMargin(slider) + 30;
+const getComputedSliderHeight = (slider) => getElemHeight(slider) * 2 + getElemMargin(slider) + 30;
 
 const getComputedTranslation = (toStep, currentStep, singleSlide) => {
   let translation = 0;
@@ -30,7 +29,11 @@ class OurMission extends React.Component {
   adjustDimensions = debounce(() => {
     this.setState((state) => ({
       sliderHeight: getComputedSliderHeight(this.singleSlide),
-      actualTranslation: getComputedTranslation(state.step, state.step, this.singleSlide),
+      actualTranslation: getComputedTranslation(
+        state.step,
+        state.step,
+        this.singleSlide,
+      ),
     }));
   }, 300);
 
@@ -76,10 +79,14 @@ class OurMission extends React.Component {
       this.setState((state) => ({
         step: toStep,
         sliderHeight: getComputedSliderHeight(this.singleSlide),
-        actualTranslation: getComputedTranslation(toStep, state.step, this.singleSlide),
+        actualTranslation: getComputedTranslation(
+          toStep,
+          state.step,
+          this.singleSlide,
+        ),
       }));
     }
-  }
+  };
 
   render() {
     const { step, sliderHeight, actualTranslation } = this.state;
@@ -87,9 +94,7 @@ class OurMission extends React.Component {
     return (
       <div className="our-mission">
         <h2>We strive for a tech world devoted to the social good</h2>
-        <div
-          className="our-mission-body"
-        >
+        <div className="our-mission-body">
           <h3>
             <span>Our mission </span>
             in our social projects
@@ -102,26 +107,42 @@ class OurMission extends React.Component {
             <div
               className="missions"
               style={{ height: `${sliderHeight}px` }}
-              ref={(node) => { this.missionsSlider = node; }}
+              ref={(node) => {
+                this.missionsSlider = node;
+              }}
             >
               <div
                 className="missions-inner"
                 style={{ transform: `translateY(${actualTranslation}px)` }}
               >
-                {
-                  missionData.map(({ title, image, description }, i) => (
-                    <div
-                      key={title}
-                      className={classNames('missions-item', { active: step === i })}
-                      onClick={() => this.setStep(i)}
-                      ref={i === 0 ? (node) => { this.singleSlide = node; } : null}
-                    >
-                      <img src={image} alt={title} />
+                {missionData.map(({
+                  title, image, description, href,
+                }, i) => (
+                  <div
+                    key={title}
+                    className={classNames('missions-item', {
+                      active: step === i,
+                    })}
+                    onClick={() => this.setStep(i)}
+                    ref={
+                      i === 0
+                        ? (node) => {
+                          this.singleSlide = node;
+                        }
+                        : null
+                    }
+                  >
+                    <img src={image} alt={title} />
+                    {href ? (
+                      <a target="_blank" href={href} rel="nofollow noopener noreferrer">
+                        {title}
+                      </a>
+                    ) : (
                       <h4>{title}</h4>
-                      <p>{description}</p>
-                    </div>
-                  ))
-                }
+                    )}
+                    <p>{description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </Swipeable>
