@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function FeaturesList({ list, titleItalic, titleBold }) {
   const titleStyle = {};
@@ -22,7 +23,7 @@ export default function FeaturesList({ list, titleItalic, titleBold }) {
         key) => (
           <li key={key} className="features-icons--item">
             <figure className="features-icons--figure">
-              {icon && <img src={icon} alt={alt} className="features-icons--img" />}
+              {icon && <LazyLoadImage src={icon} alt={alt} className="features-icons--img" />}
               <figcaption className="features-icons--figcaption" style={titleStyle}>
                 {description}
               </figcaption>

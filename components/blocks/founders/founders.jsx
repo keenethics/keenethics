@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Founders = () => (
   <div id="founders" className="block block-founders">
@@ -21,7 +22,11 @@ const Founders = () => (
         </Link>
       </div>
       <div className="founders-img-container">
-        <img className="founders-img" src="static/images/founders.jpg" alt="founders" />
+        <LazyLoadImage
+          className="founders-img"
+          src="static/images/founders.jpg"
+          alt="founders"
+        />
       </div>
     </div>
   </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import _ from 'lodash';
+import { get } from 'lodash';
 import classnames from 'classnames';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import Moment from 'react-moment';
-import Webp from '../webp';
+// import Webp from '../webp';
 /**
  * Convert blog-post/portfolio-item to same scheme:
  * {
@@ -46,7 +47,7 @@ const getDataFromProperty = (item) => {
       title: item.title,
       description: null,
       imgUrl: `https:${
-        _.get(item.heroImage, 'fields.file.url')
+        get(item.heroImage, 'fields.file.url')
       }?fm=jpg&fl=progressive&q=85&w=600`,
       url: `/post?name=${item.slug}`,
       asUrl: `/blog/${item.slug}`,
@@ -70,35 +71,30 @@ const ListItem = ({ work }) => {
     webpUrl,
   } = getDataFromProperty(work);
 
+
   return (
     <div className={classnames('page__item')}>
       <Link href={url} as={asUrl} prefetch={false}>
         <a className="page__item-link">
           <figure className="page__item-figure">
             <div className="page__item-figure-img-wrap">
-              {
-                webpUrl
-                  ? (
-                    <Webp
-                      src={webpUrl}
-                      fallbackImg={imgUrl}
-                      alt={title}
-                      className="page__item-img"
-                    />
-                  )
-                  : <img src={imgUrl} alt={title} className="page__item-img" />
-              }
+              <LazyLoadComponent>
+                <picture>
+                  <source className="page__item-img" srcSet={webpUrl} />
+                  <img src={imgUrl} alt={title} className="page__item-img" />
+                </picture>
+              </LazyLoadComponent>
             </div>
           </figure>
         </a>
       </Link>
       <div className="page__item-figcaption">
         {!publishDate && (
-        <h3 className="page__item-title">
-          <Link href={url} as={asUrl} prefetch={false}>
-            {title}
-          </Link>
-        </h3>
+          <h3 className="page__item-title">
+            <Link href={url} as={asUrl} prefetch={false}>
+              {title}
+            </Link>
+          </h3>
         )}
         <div className="page__item-figcaption-heading">
           <ul className="page__item-tags">
