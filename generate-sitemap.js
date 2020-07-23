@@ -2,7 +2,7 @@ const fs = require('fs');
 const { createClient } = require('contentful');
 const dotenv = require('dotenv-safe');
 
-dotenv.config({ path: process.env.ENV_PATH });
+dotenv.config('./.env');
 const SPACE_ID = process.env.REACT_APP_SPACE_ID;
 const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
 const currentDate = new Date().toISOString().split('T')[0];

@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = withSass({
   generateBuildId: async () => `build-${Date.now()}`,
   webpack(config) {
-    config.plugins.push(new Dotenv({ path: process.env.ENV_PATH }));
+    config.plugins.push(new Dotenv());
 
     return config;
   },

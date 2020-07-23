@@ -9,7 +9,6 @@ import Background from '../components/content/background';
 
 import Layout from '../components/layout/main';
 
-
 export default class Careers extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +66,6 @@ export default class Careers extends React.Component {
       ],
     };
   }
-
 
   onSubmit(e) {
     e.preventDefault();

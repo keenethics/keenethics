@@ -5,7 +5,6 @@ import { homePageWorks } from '../../../main.config';
 
 import Portfolio from '../../../pages/portfolio';
 
-
 const Projects = ({ minimize }) => (
   <div className="block block-projects" id="projects">
     <header className="block--header">

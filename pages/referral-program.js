@@ -526,5 +526,4 @@ const ReferralProgram = () => {
   );
 };
 
-
 export default ReferralProgram;
