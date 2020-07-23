@@ -120,26 +120,24 @@ class OurMission extends React.Component {
                 }, i) => (
                   <div
                     key={title}
-                    className={classNames('missions-item', {
-                      active: step === i,
-                    })}
+                    className={classNames('missions-item', { active: step === i })}
                     onClick={() => this.setStep(i)}
-                    ref={
-                      i === 0
-                        ? (node) => {
-                          this.singleSlide = node;
-                        }
-                        : null
-                    }
+                    ref={i === 0 ? (node) => { this.singleSlide = node; } : null}
                   >
                     <img src={image} alt={title} />
-                    {href ? (
-                      <a target="_blank" href={href} rel="nofollow noopener noreferrer">
-                        {title}
-                      </a>
-                    ) : (
-                      <h4>{title}</h4>
-                    )}
+                    {
+                        href ? (
+                          <a
+                            target="_blank"
+                            href={href}
+                            rel="nofollow noopener noreferrer"
+                          >
+                            {title}
+                          </a>
+                        ) : (
+                          <h4>{title}</h4>
+                        )
+                    }
                     <p>{description}</p>
                   </div>
                 ))}
