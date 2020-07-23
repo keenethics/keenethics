@@ -934,7 +934,7 @@ const EstimateForm = () => {
                     <a
                       href="https://letkidsmove.org/en"
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener noreferrer nofollow"
                       className="grey sub-dis"
                     >
                       Let Kids Move
