@@ -7,7 +7,7 @@ RUN npm install --only=prod && mv ./node_modules ./react-frontend
 WORKDIR /react-frontend
 
 COPY . .
-RUN npm rebuild node-sass
+#RUN npm rebuild node-sass
 RUN npm run build
 #RUN npm run start
 EXPOSE 3000
