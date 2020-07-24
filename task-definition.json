@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             
-            "memory": 2048,
+            "memory": 1024,
             "portMappings": [
                 {
                     "containerPort": 3000,
@@ -11,14 +11,8 @@
                     "protocol": "tcp"
                 }
             ],
-            "essential": true,
+            "essential": true
             
-            "command": [
-              "npm",
-              "run",
-             "start"
-      ],
-
         } 
     ]
 }
