@@ -65,6 +65,10 @@ const LayoutHead = (props) => {
   let title = DEFAULT_TITLE;
   let description = DEFAULT_DESCRIPTION;
   let noIndexMetaTag = false;
+  const noIndexPages = [
+    '/project-lets-start-coding',
+    '/referral-program',
+  ];
 
   if (meta) {
     title = meta.title || DEFAULT_TITLE;
@@ -79,7 +83,7 @@ const LayoutHead = (props) => {
   if (currentURL.pathname === '/post') {
     currentURL.pathname = router.asPath.replace('#', '?').split('?')[0];
   }
-  if (currentURL.pathname === '/project-lets-start-coding') {
+  if (noIndexPages.includes(currentURL.pathname)) {
     noIndexMetaTag = true;
   }
 
