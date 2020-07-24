@@ -2,7 +2,7 @@
     "family": "keenethics",
     "containerDefinitions": [
         {
-            
+            "name": "keenethics            
             "memory": 1024,
             "portMappings": [
                 {
