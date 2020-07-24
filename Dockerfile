@@ -1,5 +1,6 @@
 FROM node:10
-RUN echo ${{ secrets.SECURITY_SHEET_FILE }} > ./park-8794500e15f6.jsonWORKDIR /usr/src/app
+RUN echo ${{ secrets.SECURITY_SHEET_FILE }} > ./park-8794500e15f6.json
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 
