@@ -5,13 +5,11 @@
     "metaTitle": "KeenEthics: Ethical web and mobile development partner",
     "metaDescription": "KeenEthics is an ethical web and mobile development partner based in Eastern Europe and represented in the Netherlands and the United States.",
     "href": "/#main",
-    "asPath": "/",
     "anchor": "main"
   },
   {
     "name": "Services",
     "href": "/#services",
-    "asPath": "/#services",
     "anchor": "services",
     "points": [
       {
@@ -128,7 +126,6 @@
   {
     "name": "Industries",
     "href": "/#industries",
-    "asPath": "/#industries",
     "anchor": "industries",
     "points": [
       {
@@ -160,7 +157,6 @@
   {
     "name": "About us",
     "href": "/about-us",
-    "asPath": "/about-us",
     "anchor": "founders"
   },
   {
@@ -169,7 +165,6 @@
     "metaTitle": "Projects – KeenEthics",
     "metaDescription": "Keen projects we put into action.",
     "href": "/portfolio",
-    "asPath": "/portfolio",
     "anchor": "projects",
     "points": [
       {
@@ -193,7 +188,6 @@
   {
     "name": "Technologies",
     "href": "/#tech-stack",
-    "asPath": "/#tech-stack",
     "anchor": "tech-stack",
     "points": [
       {
@@ -323,7 +317,6 @@
     "metaTitle": "Web and mobile development blog - KeenEthics",
     "metaDescription": "Read the latest news and opinions about software development from KeenEthics Blog - all articles are based on our experience.",
     "href": "/blog",
-    "asPath": "/blog",
     "anchor": "blog"
   },
   {
@@ -332,7 +325,6 @@
     "metaTitle": "Contact Us - KeenEthics",
     "metaDescription": "Contact KeenEthics to solve your business challenges with full-cycle development.",
     "href": "/contacts",
-    "asPath": "/contacts",
     "anchor": "lets-start"
   },
   {
