@@ -1,12 +1,12 @@
 #!/bin/bash
 
+npm run sitemap-gen
+npm run build
+
 ssh root@167.71.71.176 pm2 stop server
 ssh root@167.71.71.176 rm -rf /home/keenethics
 
 rsync -avz --exclude=node_modules --exclude=.git ../keenethics/ root@167.71.71.176:/home/keenethics
 
-ssh root@167.71.71.176 "cd /home ; cp .env /home/keenethics"
 ssh root@167.71.71.176 "cd /home/keenethics ; npm i"
-ssh root@167.71.71.176 "cd /home/keenethics ; npm run sitemap-gen"
-ssh root@167.71.71.176 "cd /home/keenethics ; npm run build"
 ssh root@167.71.71.176 "cd /home/keenethics ; pm2 restart server.sh --update-env"

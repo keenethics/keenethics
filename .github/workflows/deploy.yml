@@ -10,6 +10,8 @@ jobs:
 
     steps:
 
+    - uses: actions/checkout@v2
+
     - name: create SSH key
       run: |
         mkdir -p ~/.ssh/
@@ -21,7 +23,27 @@ jobs:
         SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
         SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
 
-    - uses: actions/checkout@v2
+    - name: create env file
+      run: |
+        if [ ${GITHUB_REF##*/} == "staging" ]
+        then
+          echo "$STAGING_ENV" > .env
+        elif [ ${GITHUB_REF##*/} == "production" ]
+        then
+          echo "$PROD_ENV" > .env
+        fi
+      shell: bash
+      env:
+        STAGING_ENV: ${{secrets.STAGING_ENV}}
+        PROD_ENV: ${{secrets.PROD_ENV}}
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v1.4.2
+      with:
+        node-version: 10.x
+
+    - name: install packages
+      run: npm install
 
     - name: check branch and deploy
       run: |
