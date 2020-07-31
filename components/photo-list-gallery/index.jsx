@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { times } from 'lodash';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const PhotoListGallery = ({
   title, data, name, direction, galleryClassName,
@@ -47,10 +48,7 @@ const PhotoListGallery = ({
               data
                 .map((item, index) => (
                   <div className="wrapper" key={`photo-${name}-${index}`}>
-                    <img
-                      src={item.picture}
-                      alt={item.name}
-                    />
+                    <LazyLoadImage src={item.picture} alt={item.name} />
                   </div>
                 ))
             }
