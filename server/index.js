@@ -31,6 +31,7 @@ const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const checkAttachment = require('./attachment-validator');
 const autoReplyMailOptions = require('./autoReplyMailOptions');
+const thanksMessageFromUser = require('./autoReplyReferralForm');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -570,10 +571,19 @@ app.prepare().then(() => {
       <p>${idea}</p>
     `;
     const mailOptions = {
-      from: 'business@keenethics.com',
+      from: 'Max from KeenEthics business@keenethics.com',
       to: email,
-      subject: 'Meeting with Max Savonin',
-      html,
+      subject: `${name}, thank you for being in touch with KeenEthics!
+       I am happy
+       to introduce you to our referral program.`,
+      html: thanksMessageFromUser(JSON.parse(req.body.data)),
+      attachments: [
+        {
+          filename: 'keenethics-logo.svg',
+          path: path.resolve(__dirname, '../public/static/images/keenethics.png'),
+          cid: 'keenethics',
+        },
+      ],
     };
 
     transporter.sendMail(mailOptions, () => {
@@ -582,7 +592,7 @@ app.prepare().then(() => {
         status: 'Message sent',
       });
 
-      transporter.sendMail();
+      // transporter.sendMail();
       return false;
     });
   });

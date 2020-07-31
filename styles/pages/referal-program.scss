@@ -30,7 +30,7 @@
                         font-weight: bold;
                         font-size: 54px;
                         line-height: 64px;
-                        
+
                     }
                     .text {
                         margin: 30px -102px 0;
@@ -52,13 +52,13 @@
                                 right: 0;
                                 transform: rotate(180deg);
                             }
-                        } 
+                        }
                     }
                     @media (max-width: $desktop-md) {
                         padding: 0 -90px;
                         .text {
-                            margin: 30px -90px 0; 
-                            padding: 24px 90px;         
+                            margin: 30px -90px 0;
+                            padding: 24px 90px;
                         }
                     }
                     @media (max-width: $tablet-sm) {
@@ -66,10 +66,10 @@
                         h1 {
                             font-size: 28px;
                             line-height: 33px;
-                        }   
+                        }
                         .text {
-                            margin: 30px -25px 0; 
-                            padding: 24px 25px;  
+                            margin: 30px -25px 0;
+                            padding: 24px 25px;
                             font-size: 14px;
                             line-height: 24px;
                             .quotes {
@@ -81,7 +81,7 @@
                                 &.right {
                                     bottom: -12px;
                                 }
-                            }        
+                            }
                         }
                     }
                 }
@@ -222,7 +222,7 @@
                 @media (max-width: $desktop-md) {
                     margin-top: 20px;
                     &-left, &-right {
-                        width: 50%; 
+                        width: 50%;
                         display: flex;
                         flex-direction: column;
                     }
@@ -253,55 +253,55 @@
                 padding: 50px 30px 132px;
                 max-width: 804px;
                 margin: 0 auto;
-                input { 
-                    display: none; 
+                input {
+                    display: none;
                 }
-                input + label { 
+                input + label {
                     display: inline-block;
                 }
                 #exist:checked ~ .tab {
                     .startup-content {
                         opacity: 0;
-                        height: 0; 
+                        height: 0;
                         overflow: hidden;
                         animation-name: hideText;
-                        animation-duration: 300ms; 
+                        animation-duration: 300ms;
                         animation-fill-mode: backwards;
                     }
                     .exist-content {
                         margin: 0;
                         animation-delay: 300ms;
                         animation-name: showText;
-                        animation-duration: 200ms; 
+                        animation-duration: 200ms;
                         animation-fill-mode: backwards;
                     }
                 }
                 #startup:checked ~ .tab {
                     .exist-content {
                         opacity: 0;
-                        height: 0; 
+                        height: 0;
                         overflow: hidden;
                         animation-name: hideText;
-                        animation-duration: 300ms; 
+                        animation-duration: 300ms;
                         animation-fill-mode: backwards;
                     }
                     .startup-content {
                         margin: 0;
                         animation-delay: 300ms;
                         animation-name: showText;
-                        animation-duration: 200ms; 
+                        animation-duration: 200ms;
                         animation-fill-mode: backwards;
                     }
                 }
-                @keyframes hideText { 
+                @keyframes hideText {
                     0% {margin: 0;opacity: 1;height: auto;}
                     100%{margin: 0 200px 0 -200px;opacity: 0;height: 0; overflow: hidden;}
-                } 
-                @keyframes showText { 
+                }
+                @keyframes showText {
                     0% {opacity: 0;height: 0;}
                     100%{opacity: 1;height: auto;}
                 }
-            
+
                 input + label {
                     color: #F9F9FB;
                     font-size: 24px;
@@ -316,7 +316,7 @@
                     align-items: center;
                     div {
                         width: 61.44px;
-                        height: 61.44px; 
+                        height: 61.44px;
                         border: rgba($color: #fff, $alpha: 0.4) 1px solid;
                         border-radius: 50%;
                         display: flex;
@@ -501,10 +501,10 @@
             flex-direction: column;
             align-items: center;
             &.hide {
-            @extend .hide; 
+            @extend .hide;
             }
             &.show {
-                @extend .show; 
+                @extend .show;
             }
             h3 {
                 font-weight: bold;
@@ -519,10 +519,10 @@
                 flex-direction: column;
                 align-content: center;
                 &.hide {
-                    @extend .hide; 
+                    @extend .hide;
                 }
                 &.show {
-                    @extend .show; 
+                    @extend .show;
                 }
             }
         .lets-talk {
@@ -590,24 +590,24 @@
                 line-height: 44px;
                 @media (max-width: $tablet-lg) {
                     padding: 0 15%;
-                } 
+                }
                 @media (max-width: $tablet-sm) {
                     padding: 0 30px;
                     font-size: 26px;
                     line-height: 36px;
-                } 
+                }
             }
             h5 {
                 font-size: 18px;
                 line-height: 28px;
                 @media (max-width: $tablet-lg) {
                     padding: 0 15%;
-                } 
+                }
                 @media (max-width: $tablet-sm) {
                     padding: 0 30px;
                     font-size: 14px;
                     line-height: 24px;
-                } 
+                }
             }
             .lets-discuss-content {
                 display: flex;
@@ -728,25 +728,25 @@
                                 &.react-calendar__tile--now{
                                     color: #D62C2C;
                                     background-color: transparent;
-                                
+
                                 }
                                 &.react-calendar__month-view__days__day--weekend,
                                 &:disabled {
                                     color: rgba(18, 35, 61, 0.5);
                                     background-color: transparent;
-                                   
+
                                 }
                                 &.react-calendar__tile--active {
                                     background-color: transparent;
-                                    
+
                                     abbr {
                                         background: #e04c28;
                                         color: #fff;
-                                
-                                        
+
+
                                     }
                                 }
-                            }                    
+                            }
                         }
                     }
                     .country-list {
@@ -809,8 +809,8 @@
                                         }
                                     }
                                 }
-                            } 
-                            
+                            }
+
                         }
                         &.error {
                             border: 1px solid #D62C2C;
@@ -835,7 +835,7 @@
                                         line-height: 24px;
                                         align-items: center;
                                         text-align: left;
-                                        
+
                                     }
                                 }
                                 &.country-list__option--is-selected{
@@ -875,8 +875,8 @@
                                     display: flex;
                                     align-items: center;
                                 }
-                            } 
-                            
+                            }
+
                         }
                         &.error {
                             border: 1px solid #D62C2C;
@@ -922,7 +922,7 @@
                                 line-height: 24px;
                                 color: rgba(18, 35, 61, 0.5);
                                 div:first-child {
-                                    color: #12233D; 
+                                    color: #12233D;
                                     font-size: 24px;
                                 }
                             }
@@ -930,6 +930,7 @@
                         .data {
                             line-height: 28px;
                             font-weight: normal;
+                            padding: 2px 0;
                             span {
                                 font-size: 18px;
                                 font-weight: bold;
@@ -945,10 +946,10 @@
                     }
                     &.hide {
                         opacity: 0;
-                        height: 0; 
+                        height: 0;
                         overflow: hidden;
                         animation-name: hideText;
-                        animation-duration: 300ms; 
+                        animation-duration: 300ms;
                         animation-fill-mode: backwards;
                         height: 0;
                         margin-bottom: 0;
@@ -958,7 +959,7 @@
                         height: 480px;
                         animation-delay: 300ms;
                         animation-name: showText;
-                        animation-duration: 200ms; 
+                        animation-duration: 200ms;
                         animation-fill-mode: backwards;
                         margin-bottom: 25px;
                     }
@@ -1023,7 +1024,7 @@
                             border: none;
                             outline: none;
                         }
-                        
+
                     }
                 }
                 @media (max-width: $tablet-lg) {
@@ -1040,7 +1041,7 @@
                         width: 100%;
                         padding-right: 0;
                     }
-                } 
+                }
                 @media (max-width: $tablet-lg) {
                     .step-content {
                         max-width: 330px;
