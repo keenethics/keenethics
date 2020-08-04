@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import Select from 'react-select';
 import moment from 'moment';
 import StringFormatValidation from 'string-format-validation';
+import { debounce } from 'lodash';
 
 import Link from 'next/link';
 
@@ -42,10 +43,9 @@ const ReferralProgram = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [idea, setIdea] = useState('');
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
-  console.log(countryList);
-
   const countryItem = ({ name: countryName, flag, callingCodes }) => ({
     label: (
       <div>
@@ -63,14 +63,24 @@ const ReferralProgram = () => {
     setCountryList(list);
   };
 
+  const handleShowScrollToTopBtn = (e) => {
+    if (e.target.scrollTop >= 600) {
+      setShowScrollBtn(true);
+    } else if (e.target.scrollTop <= 600) {
+      setShowScrollBtn(false);
+    }
+  };
+
+
   useEffect(() => {
+    window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
     const getCountriesAndUserIp = async () => {
       const promises = [
         fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;'),
         fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
       ];
       const response = await Promise.all(promises);
-      const [countries, userIpData] = await Promise.all(response.map((i) => i.json()));
+      const [countries, userIpData, allEvents] = await Promise.all(response.map((i) => i.json()));
       const userCountry = countries.find((i) => i.alpha2Code === userIpData.country);
       fillCountries(countries);
       setCountry(countryItem(userCountry));
@@ -236,10 +246,6 @@ const ReferralProgram = () => {
           </div>
         </div>
       </div>
-
-      <a href="#top" className="scroll-top-top">
-        <img src="/static/images/svg/scroll-to-top.svg" alt="scroll to top" />
-      </a>
     </div>
   );
 
@@ -359,7 +365,7 @@ const ReferralProgram = () => {
                 defaultView="month"
                 minDate={new Date()}
                 value={selectedDate}
-                onChange={(date) => { setSelectedDate(date); console.log(date); setSelectedTime([]); }}
+                onChange={(date) => { setSelectedDate(date); setSelectedTime([]); }}
                 navigationLabel={({
                   date, locale,
                 }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
@@ -525,6 +531,15 @@ const ReferralProgram = () => {
 
   return (
     <Layout noMenu layoutClass="referral-layout-page">
+      <a
+        style={
+          { opacity: showScrollBtn ? 1 : 0, transition: 'opacity .25s ease-in-out' }
+        }
+        href="#top"
+        className="scroll-top-top"
+      >
+        <img src="/static/images/svg/scroll-to-top.svg" alt="scroll to top" />
+      </a>
       <section className="page__wrapper page__referral-program content">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}

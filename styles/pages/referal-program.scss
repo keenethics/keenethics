@@ -1,3 +1,15 @@
+.scroll-top-top {
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    width: 48px;
+    height: 96px;
+    z-index: 50;
+    @media (max-width: $desktop-xs) {
+        display: none;
+    }
+}
+
 .referral-layout-page .content {
     padding-left: 0;
     .page__referral-program {
@@ -409,16 +421,6 @@
                         font-size: 16px;
                         text-transform: uppercase;
                     }
-                }
-            }
-            .scroll-top-top {
-                position: absolute;
-                right: 50px;
-                bottom: 40px;
-                width: 48px;
-                height: 96px;
-                @media (max-width: $desktop-xs) {
-                    display: none;
                 }
             }
             @media (max-width: $tablet-sm) {
