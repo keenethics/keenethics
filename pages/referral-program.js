@@ -43,6 +43,7 @@ const ReferralProgram = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [idea, setIdea] = useState('');
+  const [event, setEvent] = useState([]);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
@@ -78,12 +79,14 @@ const ReferralProgram = () => {
       const promises = [
         fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;'),
         fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
+        fetch('/free-busy', { method: 'POST' }),
       ];
       const response = await Promise.all(promises);
       const [countries, userIpData, allEvents] = await Promise.all(response.map((i) => i.json()));
       const userCountry = countries.find((i) => i.alpha2Code === userIpData.country);
       fillCountries(countries);
       setCountry(countryItem(userCountry));
+      setEvent(allEvents);
     };
 
     getCountriesAndUserIp();
