@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { LazyLoadImage, LazyLoadComponent } from 'react-lazy-load-image-component';
 
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
@@ -80,26 +81,30 @@ const ProjectPrix = () => (
             </p>
             <ul className="technologies-list">
               <li className="technologies-item">
-                <img src="/static/portfolio/technologies/redux.png" alt="redux" />
+                <LazyLoadImage src="/static/portfolio/technologies/redux.png" alt="redux" />
               </li>
               <li className="technologies-item">
-                <img src="/static/portfolio/technologies/nodejs.svg" alt="nodejs" />
-              </li>
-            </ul>
-            <ul className="technologies-list">
-              <li className="technologies-item">
-                <img src="/static/portfolio/technologies/firebase.svg" alt="firebase" />
-              </li>
-              <li className="technologies-item">
-                <img src="/static/portfolio/technologies/mongodb.svg" alt="mongodb" />
+                <LazyLoadImage src="/static/portfolio/technologies/nodejs.svg" alt="nodejs" />
               </li>
             </ul>
             <ul className="technologies-list">
               <li className="technologies-item">
-                <img src="/static/portfolio/technologies/twilio.svg" style={{ width: '90%' }} alt="twilio" />
+                <LazyLoadImage src="/static/portfolio/technologies/firebase.svg" alt="firebase" />
               </li>
               <li className="technologies-item">
-                <img src="/static/portfolio/technologies/react-native.png" alt="react native" />
+                <LazyLoadImage src="/static/portfolio/technologies/mongodb.svg" alt="mongodb" />
+              </li>
+            </ul>
+            <ul className="technologies-list">
+              <li className="technologies-item">
+                <LazyLoadImage
+                  src="/static/portfolio/technologies/twilio.svg"
+                  style={{ width: '90%' }}
+                  alt="twilio"
+                />
+              </li>
+              <li className="technologies-item">
+                <LazyLoadImage src="/static/portfolio/technologies/react-native.png" alt="react native" />
               </li>
             </ul>
             <h3 className="red-italic-title">Methodology</h3>
@@ -110,7 +115,12 @@ const ProjectPrix = () => (
             </p>
             <h2>What Makes ParkQX Special?</h2>
             <div>
-              <img style={{ width: '500px' }} src="/static/portfolio/parkqx/parkqx-screens.gif" alt="parkqx screens" />
+              <LazyLoadComponent>
+                <picture>
+                  <source srcSet="/static/portfolio/parkqx/parkqx-screens.webp" />
+                  <img style={{ width: '500px' }} src="/static/portfolio/parkqx/parkqx-screens.gif" alt="parkqx screens" />
+                </picture>
+              </LazyLoadComponent>
             </div>
             <p>
               Sign-up and login procedures, account verification and activation, “Remember me” and

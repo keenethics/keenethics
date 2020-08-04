@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const GalleryWithMenu = ({ data }) => {
   const [activeItem, setActiveItem] = useState(0);
@@ -18,10 +19,7 @@ const GalleryWithMenu = ({ data }) => {
               data
                 .map((item, index) => (
                   <div className="wrapper" key={`photo-${index}`}>
-                    <img
-                      src={item.image}
-                      alt={item.image}
-                    />
+                    <LazyLoadImage src={item.image} alt={item.image} />
                   </div>
                 ))
             }
@@ -70,10 +68,7 @@ const GalleryWithMenu = ({ data }) => {
               </svg>
             </label>
             <div className="mobile-container">
-              <img
-                src={image}
-                alt={image}
-              />
+              <LazyLoadImage src={image} alt={image} />
               <figcaption>
                 <h3>{contentTitle}</h3>
                 <p>{content}</p>

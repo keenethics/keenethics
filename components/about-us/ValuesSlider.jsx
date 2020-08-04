@@ -36,6 +36,7 @@ class Slider extends React.Component {
     return (
       <SlickSlider
         slidesToShow={1.3}
+        lazyLoad={false}
         responsive={sliderBreakpoints}
         className="values-slides"
         // centerMode
@@ -46,28 +47,26 @@ class Slider extends React.Component {
           onStepChange(Math.floor(toStep), true);
         }}
       >
-        {
-          values.map((value) => (
-            <div key={value.title} className="slide">
-              <div className="img-wrap">
-                <img
-                  src={value.image}
-                  alt={value.title}
-                />
-              </div>
-              <div className="caption">
-                <h4>{value.title}</h4>
-                <p>
-                  <ItemDescription
-                    text={value.description}
-                    links={value.links}
-                    visible
-                  />
-                </p>
-              </div>
+        {values.map((value) => (
+          <div key={value.title} className="slide">
+            <div className="img-wrap">
+              <picture>
+                <source srcSet={value.webpUrl} />
+                <img src={value.image} alt={value.title} />
+              </picture>
             </div>
-          ))
-        }
+            <div className="caption">
+              <h4>{value.title}</h4>
+              <p>
+                <ItemDescription
+                  text={value.description}
+                  links={value.links}
+                  visible
+                />
+              </p>
+            </div>
+          </div>
+        ))}
       </SlickSlider>
     );
   }
