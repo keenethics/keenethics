@@ -11,6 +11,8 @@ const renderPreFooter = (data) => `
 </ol>
 `;
 
+// https://calendly.com/keenethics/30min
+
 const thanksMessageFromUser = (data) => `
   <div style="font-fimily:sans-serif; max-width:700px;">
    <h1 style="text-align: center;">Message from Max</h1>
