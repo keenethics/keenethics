@@ -3,11 +3,13 @@ const missionData = [
     title: 'Let Kids Move',
     description: 'Let Kids Move is a movement striving to make the primary and secondary education dynamic. It will help to improve mental and physical health of school children.',
     image: '../../static/images/svg/soc-letkidsmove.svg',
+    href: 'https://letkidsmove.org/',
   },
   {
     title: 'Hebron Academy',
     description: 'Hebron Academy is a social education project for orphans and children from low-income families. It aims to provide free education, mentorship, and, internship in IT sphere.',
     image: '../../static/images/svg/soc-hebron.svg',
+    href: 'https://hebron-academy.com/',
   },
   {
     title: 'Green Box',
