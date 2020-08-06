@@ -42,13 +42,11 @@ class Navigation extends React.PureComponent {
     const blogBlock = document.getElementById('blog');
     const contactUsBlock = document.getElementById('lets-start');
 
-    console.log(mainBlock.clientWidth);
     if (
       typeof window !== 'undefined'
       && this.props.router.pathname === '/'
       && mainBlock.clientWidth >= 700
     ) {
-      console.log('heheeh');
       const options = {
         root: document.getElementById('__next'),
         rootMargin: '0px',
