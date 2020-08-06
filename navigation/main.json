@@ -4,11 +4,13 @@
     "description": "KeenEthics: Ethical Web and Mobile Development Partner",
     "metaTitle": "KeenEthics: Ethical web and mobile development partner",
     "metaDescription": "KeenEthics is an ethical web and mobile development partner based in Eastern Europe and represented in the Netherlands and the United States.",
-    "href": "/#main"
+    "href": "/#main",
+    "anchor": "main"
   },
   {
     "name": "Services",
     "href": "/#services",
+    "anchor": "services",
     "points": [
       {
         "name": "Web Development",
@@ -118,21 +120,13 @@
         "href": "/services-maintenance-support",
         "type": "default",
         "outsideMenu": true
-      },
-      {
-        "name": "Business Administration Software",
-        "metaTitle": "Business Administration Software - KeenEthics",
-        "description": "Business Administration Software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
-        "href": "/services-business-administration-development",
-        "type": "default",
-        "outsideMenu": true
       }
     ]
   },
   {
     "name": "Industries",
     "href": "/#industries",
+    "anchor": "industries",
     "points": [
       {
         "name": "Education Software Development",
@@ -161,8 +155,40 @@
     ]
   },
   {
+    "name": "About us",
+    "href": "/about-us",
+    "anchor": "founders"
+  },
+  {
+    "name": "Projects",
+    "description": "Keen projects we put into action.",
+    "metaTitle": "Projects – KeenEthics",
+    "metaDescription": "Keen projects we put into action.",
+    "href": "/portfolio",
+    "anchor": "projects",
+    "points": [
+      {
+        "name": "All",
+        "href": "/portfolio?chosen=All"
+      },
+      {
+        "name": "Business apps",
+        "href": "/portfolio?chosen=Business"
+      },
+      {
+        "name": "Educational apps",
+        "href": "/portfolio?chosen=Education"
+      },
+      {
+        "name": "Consumer apps",
+        "href": "/portfolio?chosen=E-Commerce"
+      }
+    ]
+  },
+  {
     "name": "Technologies",
     "href": "/#tech-stack",
+    "anchor": "tech-stack",
     "points": [
       {
         "name": "Node.js",
@@ -245,6 +271,22 @@
         "type": "default"
       },
       {
+        "href": "/tech-data-base-mysql",
+        "name": "MySQL",
+        "metaTitle": "MySQL development services – KeenEthics",
+        "description": "Most popular SQL-database",
+        "metaDescription": "MySQL is one of the most popular, simple, and secure database management system. It suits cloud development needs and is not going to grow outdated any time soon.",
+        "icon": "icon-mysql"
+      },
+      {
+        "href": "/tech-data-base-mongo",
+        "name": "Mongo",
+        "description": "Fast noSQL database",
+        "metaTitle": "MongoDB  development services – KeenEthics",
+        "metaDescription": "MongoDB is a flexible, scalable, and convenient database for the latest development challenges." ,
+        "icon": "icon-mongo"
+      },
+      {
         "name": "Meteor",
         "metaTitle": "Meteor JS development services – KeenEthics",
         "description": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
@@ -263,35 +305,6 @@
     ]
   },
   {
-    "name": "About us",
-    "href": "/about-us"
-  },
-  {
-    "name": "Projects",
-    "description": "Keen projects we put into action.",
-    "metaTitle": "Projects – KeenEthics",
-    "metaDescription": "Keen projects we put into action.",
-    "href": "/portfolio",
-    "points": [
-      {
-        "name": "All",
-        "href": "/portfolio?chosen=All"
-      },
-      {
-        "name": "Business apps",
-        "href": "/portfolio?chosen=Business"
-      },
-      {
-        "name": "Educational apps",
-        "href": "/portfolio?chosen=Education"
-      },
-      {
-        "name": "Consumer apps",
-        "href": "/portfolio?chosen=E-Commerce"
-      }
-    ]
-  },
-  {
     "name": "Careers",
     "description": "Find your vocation at an ethical JavaScript development company KeenEthics",
     "metaTitle": "Careers - KeenEthics",
@@ -303,14 +316,16 @@
     "description": "Articles based on our experience",
     "metaTitle": "Web and mobile development blog - KeenEthics",
     "metaDescription": "Read the latest news and opinions about software development from KeenEthics Blog - all articles are based on our experience.",
-    "href": "/blog"
+    "href": "/blog",
+    "anchor": "blog"
   },
   {
     "name": "Contact Us",
     "description": "Contact KeenEthics to solve your business challenges with full-cycle development.",
     "metaTitle": "Contact Us - KeenEthics",
     "metaDescription": "Contact KeenEthics to solve your business challenges with full-cycle development.",
-    "href": "/contacts"
+    "href": "/contacts",
+    "anchor": "lets-start"
   },
   {
     "name": "GDPR Privacy Policy",
