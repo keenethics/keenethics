@@ -18,6 +18,7 @@ import {
   youReceive,
   UXDiscoveryDeliverables,
 } from '../data/referral-program';
+import DiscoveryStageReferralProgram from '../components/referral-page-discovery-stage';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -232,13 +233,8 @@ const ReferralProgram = () => {
   const renderProjectStageDetailsBlock = () => (
     <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
       <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
-        <h3>Free UX Discovery</h3>
-        <PhotoListGallery
-          title="Project Team:"
-          data={teamData}
-          name="team-list"
-          direction="list-gallery"
-        />
+        <h3>What is Your Product Discovery Stage?</h3>
+        <DiscoveryStageReferralProgram />
         <PhotoListGallery
           title="Fundamental Goals:"
           data={fundamentalGoals}
