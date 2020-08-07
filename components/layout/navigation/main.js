@@ -23,6 +23,7 @@ class Navigation extends React.PureComponent {
 
     this.state = {
       showSidebar: false,
+      itemInViewPort: '',
     };
 
     this.getPointContent = this.getPointContent.bind(this);
@@ -30,6 +31,45 @@ class Navigation extends React.PureComponent {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.closeSidebar = this.closeSidebar.bind(this);
   }
+
+  componentDidMount() {
+    const mainBlock = document.getElementById('main');
+    const servicesBlock = document.getElementById('services');
+    const industriesBlock = document.getElementById('industries');
+    const foundersBlock = document.getElementById('founders');
+    const projectsBlock = document.getElementById('projects');
+    const techStackBlock = document.getElementById('tech-stack');
+    const blogBlock = document.getElementById('blog');
+    const contactUsBlock = document.getElementById('lets-start');
+
+    if (
+      typeof window !== 'undefined'
+      && this.props.router.pathname === '/'
+      && mainBlock.clientWidth >= 700
+    ) {
+      const options = {
+        root: document.getElementById('__next'),
+        rootMargin: '0px',
+        threshold: 1,
+      };
+      const callback = (entries) => {
+        entries.forEach((item) => {
+          if (item.intersectionRatio <= 0) return;
+          this.setState({ itemInViewPort: item.target.id });
+        });
+      };
+      const observer = new IntersectionObserver(callback, options);
+      observer.observe(mainBlock);
+      observer.observe(servicesBlock);
+      observer.observe(industriesBlock);
+      observer.observe(foundersBlock);
+      observer.observe(projectsBlock);
+      observer.observe(techStackBlock);
+      observer.observe(blogBlock);
+      observer.observe(contactUsBlock);
+    }
+  }
+
 
   getPointContent(navigation, currentPoint, currentSubpoint) {
     const { points } = navigation;
@@ -95,10 +135,16 @@ class Navigation extends React.PureComponent {
     });
   }
 
-  render() {
-    const { showSidebar } = this.state;
-    const { router, isBurgerMenu } = this.props;
+  activePoint(point, currentURL, itemInViewPort) {
+    if (currentURL.pathname === '/') {
+      return itemInViewPort === point.anchor;
+    }
+    return currentURL.pathname === point.href;
+  }
 
+  render() {
+    const { showSidebar, itemInViewPort } = this.state;
+    const { router, isBurgerMenu } = this.props;
     const currentURL = router;
 
     const { navigation } = config;
@@ -137,26 +183,28 @@ class Navigation extends React.PureComponent {
             </a>
           </Link>
           <ul className="navigation-content">
-            {navigation.map((n, i) => {
-              if (n.type && n.type === 'hidden') return null;
-              if (n.outsideMenu) return null;
+            {
+              navigation.map((n, i) => {
+                if (n.type && n.type === 'hidden') return null;
+                if (n.outsideMenu) return null;
 
-              return (
-                <Point
-                  key={n.name}
-                  element={n}
-                  currentPoint={currentPoint === i}
-                  isBurgerMenu={isBurgerMenu}
-                  closeSidebar={this.closeSidebar}
-                >
-                  {
+                return (
+                  <Point
+                    key={n.name}
+                    element={n}
+                    currentPoint={this.activePoint(n, currentURL, itemInViewPort) || currentPoint === i}
+                    isBurgerMenu={isBurgerMenu}
+                    closeSidebar={this.closeSidebar}
+                  >
+                    {
                     isBurgerMenu
                       ? this.getPointContent(n, currentPoint === i, currentSubpoint)
                       : null
                   }
-                </Point>
-              );
-            })}
+                  </Point>
+                );
+              })
+            }
           </ul>
         </div>
       </div>

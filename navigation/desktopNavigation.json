@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Home",
+    "href": "/#main",
+    "asPath": "/",
+    "anchor": "main"
+  },
+  {
+    "name": "Services",
+    "href": "/#services",
+    "asPath": "/#services",
+    "anchor": "services"
+  },
+  {
+    "name": "Industries",
+    "href": "/#industries",
+    "asPath": "/#industries",
+    "anchor": "industries"
+  },
+  {
+    "name": "About us",
+    "href": "/about-us",
+    "asPath": "/about-us",
+    "anchor": "founders"
+  },
+  {
+    "name": "Projects",
+    "href": "/portfolio",
+    "asPath": "/portfolio",
+    "anchor": "projects"
+  },
+  {
+    "name": "Technologies",
+    "href": "/#tech-stack",
+    "asPath": "/#tech-stack",
+    "anchor": "tech-stack"
+  },
+  {
+    "name": "Careers",
+    "href": "/careers",
+    "asPath": "/careers"
+  },
+  {
+    "name": "Blog",
+    "href": "/blog",
+    "asPath": "/blog",
+    "anchor": "blog"
+  },
+  {
+    "name": "Contact Us",
+    "href": "/contacts",
+    "asPath": "/contacts",
+    "anchor": "lets-start"
+  }
+]
