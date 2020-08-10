@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import Select from 'react-select';
 import moment from 'moment';
 import StringFormatValidation from 'string-format-validation';
+import { debounce } from 'lodash';
 
 import Link from 'next/link';
 
@@ -42,26 +43,50 @@ const ReferralProgram = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [idea, setIdea] = useState('');
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
+  const countryItem = ({ name: countryName, flag, callingCodes }) => ({
+    label: (
+      <div>
+        <img src={flag} alt={countryName} />
+        <span>{countryName}</span>
+      </div>
+    ),
+    flag,
+    value: countryName,
+    phoneCode: callingCodes.length > 0 ? callingCodes[0] : '',
+  });
+
+  const fillCountries = (countries) => {
+    const list = countries.map((item) => (countryItem(item)));
+    setCountryList(list);
+  };
+
+  const handleShowScrollToTopBtn = (e) => {
+    if (e.target.scrollTop >= 600) {
+      setShowScrollBtn(true);
+    } else if (e.target.scrollTop <= 600) {
+      setShowScrollBtn(false);
+    }
+  };
+
 
   useEffect(() => {
-    fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes')
-      .then((response) => response.json())
-      .then((data) => {
-        const list = data.map(({ name: countryName, flag, callingCodes }) => ({
-          label: (
-            <div>
-              <img src={flag} alt={countryName} />
-              <span>{countryName}</span>
-            </div>
-          ),
-          flag,
-          value: countryName,
-          phoneCode: callingCodes.length > 0 ? callingCodes[0] : '',
-        }));
-        setCountryList(list);
-      });
+    window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
+    const getCountriesAndUserIp = async () => {
+      const promises = [
+        fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;'),
+        fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
+      ];
+      const response = await Promise.all(promises);
+      const [countries, userIpData, allEvents] = await Promise.all(response.map((i) => i.json()));
+      const userCountry = countries.find((i) => i.alpha2Code === userIpData.country);
+      fillCountries(countries);
+      setCountry(countryItem(userCountry));
+    };
+
+    getCountriesAndUserIp();
   }, []);
 
   const validateForm = () => {
@@ -156,7 +181,7 @@ const ReferralProgram = () => {
                 <p><img src="/static/images/svg/icon-mail.svg" alt="tel" /></p>
                 max.savonin@keenethics.com
               </a>
-              <a href="skype:maxsav28">
+              <a href="skype:maxsav28?chat">
                 <p><img src="/static/images/svg/skype.svg" alt="tel" /></p>
                 maxsav28
               </a>
@@ -221,11 +246,6 @@ const ReferralProgram = () => {
           </div>
         </div>
       </div>
-
-      <a href="#top" className="scroll-top-top">
-        <img src="/static/images/svg/scroll-to-top.svg" alt="scroll to top" />
-      </a>
-
     </div>
   );
 
@@ -239,6 +259,7 @@ const ReferralProgram = () => {
           name="team-list"
           direction="list-gallery"
         />
+
         <PhotoListGallery
           title="Fundamental Goals:"
           data={fundamentalGoals}
@@ -259,6 +280,7 @@ const ReferralProgram = () => {
           direction="list-gallery"
           galleryClassName="no-top-margin"
         />
+
         <PhotoListGallery
           title="You receive:"
           data={youReceive}
@@ -276,16 +298,16 @@ const ReferralProgram = () => {
 
   const addMinutes = () => {
     const year = moment(selectedDate).get('year');
-    const month = moment(selectedDate).get('month');
+    const month = moment(selectedDate).get('month') + 1;
     const date = moment(selectedDate).get('date');
     const hour = moment(selectedDate).get('hour');
     const minute = moment(selectedDate).get('minute');
 
-    const startDate = moment(`${date}/${month}/${year} 9:00AM`, 'D/M/YYYY hh:mmA');
-    const endDate = moment(`${date}/${month}/${year} 7:00PM`, 'D/M/YYYY hh:mmA');
-    const selectDate = moment(`${date}/${month}/${year} ${hour}:${minute}`, 'D/M/YYYY HH:mmA');
-
+    const startDate = moment(`${date}-${month}-${year} 9:00AM`, 'D/M/YYYY hh:mma');
+    const endDate = moment(`${date}-${month}-${year} 7:00PM`, 'D/M/YYYY hh:mma');
+    const selectDate = moment(`${date}-${month}-${year} ${hour}:${minute}`, 'D/M/YYYY hh:mma');
     const dates = [];
+
     while (startDate <= endDate) {
       if (startDate >= selectDate) {
         dates.push({
@@ -509,6 +531,15 @@ const ReferralProgram = () => {
 
   return (
     <Layout noMenu layoutClass="referral-layout-page">
+      <a
+        style={
+          { opacity: showScrollBtn ? 1 : 0, transition: 'opacity .25s ease-in-out' }
+        }
+        href="#top"
+        className="scroll-top-top"
+      >
+        <img src="/static/images/svg/scroll-to-top.svg" alt="scroll to top" />
+      </a>
       <section className="page__wrapper page__referral-program content">
         {renderWelcomeBlock()}
         {renderProjectStageBlock()}
