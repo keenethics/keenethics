@@ -6,7 +6,7 @@ const renderPreFooter = (data) => `
   <li>Email: ${data.email}</li>
   <li>Phone: ${data.phone}</li>
   <li>Selected date: ${moment(data.selectedDate).format('dddd, MMMM D, YYYY')}</li>
-  <li>Selected time: ${data.selectedTime || '-'}</li>
+  <li>Selected time: ${data.selectedUserTime || '-'}</li>
   <li>Message: ${data.idea}</li>
 </ol>
 `;

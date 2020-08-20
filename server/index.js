@@ -25,16 +25,13 @@ const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const fileUpload = require('express-fileupload');
-const moment = require('moment');
-const { reject } = require('lodash');
 const { mailgunAuth, hubSpot } = require('./config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const checkAttachment = require('./attachment-validator');
 const autoReplyMailOptions = require('./autoReplyMailOptions');
 const thanksMessageFromUser = require('./autoReplyReferralForm');
-const bookingMeeting = require('./calendar');
-const { getAllCalendarEvents } = require('./calendar');
+const { bookingMeeting, getAllCalendarEvents } = require('./calendar');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -92,8 +89,13 @@ app.prepare().then(() => {
   server.use(fileUpload());
 
   server.post('/free-busy', async (req, res) => {
-    const events = await getAllCalendarEvents();
-    res.status(200).json(events);
+    try {
+      const { selectedDate } = req.body;
+      const events = await getAllCalendarEvents(selectedDate);
+      res.status(200).json(events);
+    } catch (err) {
+      res.status(500).json([]);
+    }
   });
 
   server.post('/contact', (req, res) => {
@@ -523,7 +525,6 @@ app.prepare().then(() => {
       name,
       email,
       phone,
-      idea,
     } = JSON.parse(req.body.data);
 
     if (!formatValidation.validate({ min: 3, max: 25 }, name)) {
@@ -592,7 +593,6 @@ app.prepare().then(() => {
         status: 'Message sent',
       });
 
-      // transporter.sendMail();
       return false;
     });
   });

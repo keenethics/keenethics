@@ -11,6 +11,7 @@ import Layout from '../components/layout/main';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
+import Countries from '../data/countries';
 
 import {
   teamData,
@@ -43,17 +44,23 @@ const ReferralProgram = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [idea, setIdea] = useState('');
-  const [event, setEvent] = useState([]);
+  const [events, setEvents] = useState([]);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
-  const countryItem = ({ name: countryName, flag, callingCodes }) => ({
+  const [timeDifference, setTimeDifference] = useState(0); // in minutes
+  const countryItem = ({
+    name: countryName,
+    flag, callingCodes,
+    timeZone,
+  }) => ({
     label: (
       <div>
         <img src={flag} alt={countryName} />
         <span>{countryName}</span>
       </div>
     ),
+    timeZone,
     flag,
     value: countryName,
     phoneCode: callingCodes.length > 0 ? callingCodes[0] : '',
@@ -72,21 +79,46 @@ const ReferralProgram = () => {
     }
   };
 
+  const setTimeZoneDifference = (timeZone) => {
+    const uaTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
+    let userTime;
+    try {
+      userTime = new Date((new Date()).toLocaleString('en-US', { timeZone }));
+    } catch (err) {
+      userTime = new Date();
+    }
+    const difference = Math.round((userTime.getTime() - uaTime.getTime()) / 60000); // 60 000ms = 1m
+
+    setTimeDifference(difference);
+  };
 
   useEffect(() => {
     window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
+    const uaDateTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
     const getCountriesAndUserIp = async () => {
       const promises = [
-        fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;'),
+        fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;region;capital;'),
         fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
-        fetch('/free-busy', { method: 'POST' }),
+        fetch('/free-busy', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ selectedDate: uaDateTime }),
+        }),
       ];
       const response = await Promise.all(promises);
-      const [countries, userIpData, allEvents] = await Promise.all(response.map((i) => i.json()));
+      const [
+        countries,
+        userIpData,
+        calendarEvents,
+      ] = await Promise.all(response.map((i) => i.json()));
       const userCountry = countries.find((i) => i.alpha2Code === userIpData.country);
-      fillCountries(countries);
+
+      setTimeZoneDifference(userIpData.timezone);
+      fillCountries(Countries);
       setCountry(countryItem(userCountry));
-      setEvent(allEvents);
+      setEvents(calendarEvents);
     };
 
     getCountriesAndUserIp();
@@ -120,7 +152,8 @@ const ReferralProgram = () => {
     formData.append('data', JSON.stringify({
       country: country && country.value ? country.value : '',
       selectedDate,
-      selectedTime: selectedTime && selectedTime.label ? selectedTime.label : '',
+      selectedTime: selectedTime && selectedTime.value ? selectedTime.value : '',
+      selectedUserTime: selectedTime && selectedTime.label ? selectedTime.label : '',
       name,
       email,
       phone: country && country.phoneCode ? `+${country.phoneCode} ${phone}` : phone,
@@ -307,27 +340,76 @@ const ReferralProgram = () => {
     const minute = moment(selectedDate).get('minute');
 
     const startDate = moment(`${date}-${month}-${year} 9:00AM`, 'D/M/YYYY hh:mma');
-    const endDate = moment(`${date}-${month}-${year} 7:00PM`, 'D/M/YYYY hh:mma');
+    const endDate = moment(`${date}-${month}-${year} 6:00PM`, 'D/M/YYYY hh:mma');
     const selectDate = moment(`${date}-${month}-${year} ${hour}:${minute}`, 'D/M/YYYY hh:mma');
-    const dates = [];
+    let dates = [];
 
-    while (startDate <= endDate) {
+    while (startDate < endDate) {
       if (startDate >= selectDate) {
         dates.push({
+          dateTime: startDate.format('YYYY-MM-DD HH:mm:ss'),
           value: startDate.format('hh:mm A'),
           label: startDate.format('hh:mm A'),
+          isBooked: false,
         });
       }
       startDate.add(30, 'minute');
     }
 
-    if (dates.length === 0) {
-      dates.push({
-        value: '',
-        label: '',
+    events.forEach(({ start, end }) => {
+      let eventStartTime = new Date(start.dateTime);
+      let eventEndTime = new Date(end.dateTime);
+
+      eventStartTime = eventStartTime.getMinutes() < 30
+        ? new Date(eventStartTime.setMinutes(0))
+        : new Date(eventStartTime.setMinutes(30));
+
+      if (eventEndTime.getMinutes() < 30 && eventEndTime.getMinutes() !== 0) {
+        eventEndTime = new Date(eventEndTime.setMinutes(30));
+      }
+      if (eventEndTime.getMinutes() > 30) {
+        eventEndTime = new Date(eventEndTime.setMinutes(60));
+      }
+
+      dates.forEach(({ dateTime, isBooked }, index) => {
+        const timePeriod = new Date(dateTime);
+        if (timePeriod >= eventEndTime || isBooked) return;
+
+        dates[index].isBooked = eventStartTime <= timePeriod && timePeriod < eventEndTime;
       });
-    }
+    });
+
+    dates = dates.filter(({ isBooked }) => !isBooked).map(({ dateTime, value }) => {
+      const timeByTimezone = moment(dateTime).add(timeDifference, 'm');
+      return {
+        value,
+        dateTime: timeByTimezone.format('YYYY-MM-DD HH:mm:ss'),
+        label: timeByTimezone.format('hh:mm A'),
+      };
+    });
+
     return dates;
+  };
+
+  const selectDate = async (date) => {
+    setSelectedTime([]);
+    setSelectedDate(date);
+    const calendarEvents = await (await fetch('/free-busy',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ selectedDate: date }),
+      })).json();
+
+      console.log(calendarEvents)
+    setEvents(calendarEvents);
+  };
+
+  const selectCountry = (selectedCountry) => {
+    setCountry(selectedCountry);
+    setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
   const renderLetsDiscussBlock = () => (
@@ -368,7 +450,7 @@ const ReferralProgram = () => {
                 defaultView="month"
                 minDate={new Date()}
                 value={selectedDate}
-                onChange={(date) => { setSelectedDate(date); setSelectedTime([]); }}
+                onChange={(date) => { selectDate(date); }}
                 navigationLabel={({
                   date, locale,
                 }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
@@ -380,7 +462,7 @@ const ReferralProgram = () => {
                 classNamePrefix="country-list"
                 options={countryList}
                 className={`country-list ${showError && !country ? 'error' : ''}`}
-                onChange={(value) => setCountry(value)}
+                onChange={(value) => { selectCountry(value); }}
                 value={country}
                 isSearchable
                 placeholder="Your Country"
