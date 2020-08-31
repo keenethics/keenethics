@@ -99,7 +99,7 @@ const ReferralProgram = () => {
       const promises = [
         fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;region;capital;'),
         fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
-        fetch('/free-busy', {
+        fetch('/api/free-busy', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -394,20 +394,20 @@ const ReferralProgram = () => {
   const selectDate = async (date) => {
     setSelectedTime([]);
     setSelectedDate(date);
-    const calendarEvents = await (await fetch('/free-busy',
+    const calendarEvents = await (await fetch('/api/free-busy',
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ selectedDate: date }),
+        body: JSON.stringify({ selectedDate: date.toString() }),
       })).json();
 
-      console.log(calendarEvents)
     setEvents(calendarEvents);
   };
 
   const selectCountry = (selectedCountry) => {
+    setSelectedTime([]);
     setCountry(selectedCountry);
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };

@@ -88,7 +88,7 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(fileUpload());
 
-  server.post('/free-busy', async (req, res) => {
+  server.post('/api/free-busy', async (req, res) => {
     try {
       const { selectedDate } = req.body;
       const events = await getAllCalendarEvents(selectedDate);
@@ -587,13 +587,18 @@ app.prepare().then(() => {
     };
 
     transporter.sendMail(mailOptions, () => {
-      bookingMeeting(JSON.parse(req.body.data));
-      res.send({
-        error: false,
-        status: 'Message sent',
-      });
-
-      return false;
+      try {
+        bookingMeeting(JSON.parse(req.body.data));
+        res.send({
+          error: false,
+          status: 'Message sent',
+        });
+      } catch (err) {
+        res.send({
+          error: true,
+          status: 'Error Creating Calender Event',
+        });
+      }
     });
   });
 

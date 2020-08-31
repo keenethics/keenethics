@@ -12,7 +12,6 @@ const bookingMeeting = async ({ selectedDate, selectedTime, email }) => {
 
 
   const event = {
-    kind: 'calendar#event',
     summary: 'Referral Meeting with Max from KeenEthics',
     location: 'Lviv, Ukraine',
     description: 'Meet with Max to discuss the opportunities of the referral program and software development cooperation',
@@ -29,7 +28,7 @@ const bookingMeeting = async ({ selectedDate, selectedTime, email }) => {
       dateTime: endTime,
       timeZone: 'Europe/Kiev',
     },
-    attendees: [{ email }, { email: 'maxim.savonin@keenethics.com' }],
+    attendees: [{ email }],
   };
   const client = await getUser();
   const calendar = google.calendar({
@@ -39,12 +38,7 @@ const bookingMeeting = async ({ selectedDate, selectedTime, email }) => {
 
   calendar.events.insert(
     { calendarId: 'primary', resource: event, sendUpdates: 'all' },
-    (err) => {
-      // Check for errors and log them if they exist.
-      if (err) return console.error('Error Creating Calender Event:', err.message);
-      // Else log that the event was created.
-      return console.log('Calendar event successfully created.');
-    },
+    (err) => { if (err) throw err; },
   );
 };
 
@@ -54,19 +48,33 @@ const getAllCalendarEvents = async (dateString) => {
     version: 'v3',
     auth: client,
   });
-  const date = new Date(dateString);
+  const date = new Date((new Date(dateString)).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
   const timeMin = date.toISOString();
   const timeMax = (new Date(date.setHours(18))).toISOString();
 
-  const res = await calendar.events.list({
+  const mainCalendarEvents = (await calendar.events.list({
     calendarId: 'max.savonin@keenethics.com',
     singleEvents: true,
     timeMin,
     timeMax,
     maxResults: 250,
     orderBy: 'startTime',
-  });
-  return res.data.items;
+    showHiddenInvitations: true,
+  })).data.items;
+
+  const referalCalendarEvents = (await calendar.events.list({
+    calendarId: 'maxim.savonin@keenethics.com',
+    singleEvents: true,
+    timeMin,
+    timeMax,
+    maxResults: 250,
+    orderBy: 'startTime',
+    showHiddenInvitations: true,
+  })).data.items;
+  return [
+    ...mainCalendarEvents,
+    ...referalCalendarEvents,
+  ];
 };
 
 module.exports = { bookingMeeting, getAllCalendarEvents };
