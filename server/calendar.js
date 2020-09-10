@@ -48,9 +48,9 @@ const getAllCalendarEvents = async (dateString) => {
     version: 'v3',
     auth: client,
   });
-  const date = new Date((new Date(dateString)).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
+  const date = new Date(dateString);
   const timeMin = date.toISOString();
-  const timeMax = (new Date(date.setHours(18))).toISOString();
+  const timeMax = moment(date).add(18, 'h').toISOString();
 
   const mainCalendarEvents = (await calendar.events.list({
     calendarId: 'max.savonin@keenethics.com',

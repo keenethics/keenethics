@@ -400,7 +400,7 @@ const ReferralProgram = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ selectedDate: date.toString() }),
+        body: JSON.stringify({ selectedDate: date }),
       })).json();
 
     setEvents(calendarEvents);
