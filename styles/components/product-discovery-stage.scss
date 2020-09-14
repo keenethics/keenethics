@@ -1,0 +1,228 @@
+.product-discovery-stage--wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+
+  .pds-menu {
+    display: flex;
+    margin-bottom: 25px;
+    @media (min-width: $tablet-lg) {
+      justify-content: space-around;
+      padding:  25px 30px;
+    }
+
+    overflow: auto;
+    overflow-x: scroll;
+    -ms-overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .pds-menu--item {
+      font-size: 14px;
+      white-space: nowrap;
+      display: inline-block;
+      font-weight: bold;
+      color: #12233D;
+      margin-right: 8px;
+      flex: 1 1 100%;
+
+      @media (min-width: $tablet-lg) { flex: 0 0 0; }
+
+      @media (min-width: $desktop-xs) {
+        font-size: 16px;
+      }
+
+      &.active {
+        .pds-menu--item-underscore {
+          border-bottom: 2px solid #D62624;
+
+          .pds-menu--item-stage {
+            background-color: #D62624;
+            opacity: 1;
+          }
+
+          .pds-menu--item-title {
+            color: #D62624;
+            opacity: 1;
+          }
+        }
+      }
+
+      .pds-menu--item-underscore {
+        border-bottom: 2px solid rgba(18, 35, 61, .5);
+        padding-bottom: 2px;
+      }
+
+      .pds-menu--item-stage {
+        font-family: 'Raleway', sans-serif;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #12233D;
+        color: #fff;
+        text-align: center;
+        line-height: 14px;
+        margin-right: 3px;
+        opacity: .5;
+
+        @media (min-width: $desktop-xs) {
+          width: 24px;
+          height: 24px;
+          position: relative;
+          bottom: 2px;
+          line-height: 20px;
+          font-size: 20px;
+        }
+      }
+
+      .pds-menu--item-title {
+        color: #12233D;
+        opacity: .7;
+        position: relative;
+        top: 1px;
+
+        @media (min-width: $desktop-xs) {
+          position: relative;
+          top: -1px;
+        }
+      }
+
+      &:first-child {
+        padding-left: 25px;
+      }
+
+      &:last-child {
+        padding-right: 25px;
+      }
+    }
+  }
+
+  .pds-slider--wrapper {
+      display: flex;
+
+    .pds-slider--arrow {
+      width: 24px;
+      height: 44px;
+      background-size: 24px 44px;
+      padding: 0 25px;
+      cursor: pointer;
+      transition: transform 150ms;
+      align-self: center;
+      position: relative;
+      top: 13vw;
+
+      @media (min-width: $desktop-xs) {
+        top: 10%;
+      }
+
+      @media (max-width: $tablet-lg) {
+        display: none;
+      }
+  
+      &.prev {
+        background: url('/static/main-blocks/partners/arrow-prev.svg') no-repeat center;
+  
+        &:hover {
+          transform: translateX(-5px);
+        }
+      }
+  
+      &.next {
+        background: url('/static/main-blocks/partners/arrow-next.svg') no-repeat center;
+  
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  .pds-slider {
+    padding: 0 25px;
+    color: #12233D;
+
+    @media (min-width: $desktop-xs) { padding: 0 50px }
+
+    figure { overflow: hidden; }
+  
+    .pds-slider-content {
+      display: flex;
+      width: 100%;
+      transition: transform .3s ease;
+  
+      .pds-slider--slide {
+        flex: 0 0 100%;
+        // margin-right: 25px;
+
+        @media (min-width: $desktop-xs) {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+        }
+
+        .pds-slider--slide-content, .pds-img {
+          @media (min-width: $desktop-xs) {
+            flex: 1 1 100%;
+          }
+        }
+  
+        h4 {
+          font-weight: bold;
+          margin-bottom: 8px;
+          font-size: 18px;
+          line-height: 26px;
+
+          @media (max-width: $tablet-lg) {
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 15px;
+          }
+        }
+  
+        h5, .stage {
+          font-size: 16px;
+          line-height: 26px;
+
+          span { font-weight: bold;}
+        }
+
+        .stage {
+          opacity: .7;
+          text-transform: uppercase;
+          margin: 0;
+          font-weight: bold;
+
+          @media (max-width: $desktop-xs) { display: none; }
+
+          span {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+  
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+  
+        .pds-img {
+          width: 100%;
+          margin-top: 10px;
+  
+          img {
+            width: 100%;
+
+            @media (min-width: $desktop-xs) {
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
