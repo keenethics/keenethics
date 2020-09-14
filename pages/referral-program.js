@@ -12,6 +12,8 @@ import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
 import Countries from '../data/countries';
+import { outstaffingImgs, outsourcingImgs } from '../data/referralPageImages';
+import PhotoBlok from '../components/referral-programm/PhotoBlok';
 
 import {
   teamData,
@@ -232,27 +234,27 @@ const ReferralProgram = () => {
 
   const renderProjectStageBlock = () => (
     <div className="project-stage">
-      <h2>At what stage is your project?</h2>
+      <h2>What does your project need?</h2>
       <div className="stages">
 
         <div className="tabs">
           <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); setShowDetails(false); }} />
           <label htmlFor="startup">
             <div>
-              <img src="/static/images/svg/startup_icon.svg" alt="A Startup Idea" />
+              <img src="/static/images/svg/outsourcing_icon.svg" alt="A Startup Idea" />
               <span className="ellipse">
                 <svg viewBox="0 0 32 64" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32 64C27.7977 64 23.6365 63.1723 19.7541 61.5641C15.8717 59.956 12.3441 57.5989 9.37258 54.6274C6.40111 51.6559 4.04401 48.1283 2.43586 44.2459C0.827705 40.3634 0 36.2023 0 32C0 27.7977 0.827705 23.6365 2.43586 19.7541C4.04401 15.8717 6.40111 12.3441 9.37259 9.37258C12.3441 6.40111 15.8717 4.044 19.7541 2.43585C23.6366 0.827704 27.7977 -3.67377e-07 32 0V3.2C28.2179 3.2 24.4729 3.94493 20.9787 5.39227C17.4845 6.8396 14.3097 8.961 11.6353 11.6353C8.961 14.3097 6.83961 17.4845 5.39227 20.9787C3.94493 24.4729 3.2 28.2179 3.2 32C3.2 35.7821 3.94493 39.5271 5.39227 43.0213C6.8396 46.5155 8.961 49.6903 11.6353 52.3647C14.3097 55.039 17.4845 57.1604 20.9787 58.6077C24.4729 60.0551 28.2179 60.8 32 60.8V64Z" />
                 </svg>
               </span>
             </div>
-            <p>A Startup Idea</p>
+            <p>Outsourcing</p>
           </label>
 
           <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); setShowDetails(false); }} />
           <label htmlFor="exist">
             <div>
-              <img src="/static/images/svg/project_icon.svg" alt="An Existing Product" />
+              <img src="/static/images/svg/outstaffing-icon.svg" alt="An Existing Product" />
               <span className="ellipse">
                 <svg viewBox="0 0 32 64" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32 64C27.7977 64 23.6365 63.1723 19.7541 61.5641C15.8717 59.956 12.3441 57.5989 9.37258 54.6274C6.40111 51.6559 4.04401 48.1283 2.43586 44.2459C0.827705 40.3634 0 36.2023 0 32C0 27.7977 0.827705 23.6365 2.43586 19.7541C4.04401 15.8717 6.40111 12.3441 9.37259 9.37258C12.3441 6.40111 15.8717 4.044 19.7541 2.43585C23.6366 0.827704 27.7977 -3.67377e-07 32 0V3.2C28.2179 3.2 24.4729 3.94493 20.9787 5.39227C17.4845 6.8396 14.3097 8.961 11.6353 11.6353C8.961 14.3097 6.83961 17.4845 5.39227 20.9787C3.94493 24.4729 3.2 28.2179 3.2 32C3.2 35.7821 3.94493 39.5271 5.39227 43.0213C6.8396 46.5155 8.961 49.6903 11.6353 52.3647C14.3097 55.039 17.4845 57.1604 20.9787 58.6077C24.4729 60.0551 28.2179 60.8 32 60.8V64Z" />
@@ -260,18 +262,24 @@ const ReferralProgram = () => {
 
               </span>
             </div>
-            <p>An Existing Product</p>
+            <p>Outstaffing</p>
           </label>
 
           <div className="tab">
             <div className="startup-content">
-              <h3>You receive a free UX Discovery</h3>
-              Go through the Intensive discovery stage before diving
-              into software development only if and only if you like the results.
+              You can employ our software experts to analyze all the pitfalls and hidden
+              risks of your project. We offer you one free week of working with either
+              a business analyst, a UX/UI designer or a solution architect depending on your need.
+              Each expert can bring a unique insight into your project allowing you to start it
+              on the right note. Learn more in this article:
+              How to Start With Success or The Product Discovery Process.
             </div>
             <div className="exist-content">
-              <h3>You receive 2 weeks of free Quality Assurance</h3>
-              We offer you to choose one outstanding QA talent among many resumes of testers.
+              You can choose a QA expert who fits your outstaffing needs in the best way.
+              For two weeks, the expert will be working on functional testing revealing
+              the ways we can improve your software. After you receive the final QA report,
+              you will be able to assess the value and continue working with the dedicated QA
+              expert on a full-time or an hourly basis.
             </div>
           </div>
         </div>
@@ -286,50 +294,53 @@ const ReferralProgram = () => {
   );
 
   const renderProjectStageDetailsBlock = () => (
-    <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
-      <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
-        <h3>Free UX Discovery</h3>
-        <PhotoListGallery
-          title="Project Team:"
-          data={teamData}
-          name="team-list"
-          direction="list-gallery"
-        />
+    <>
+      <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
+        <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
+          <h3>Free UX Discovery</h3>
+          <PhotoListGallery
+            title="Project Team:"
+            data={teamData}
+            name="team-list"
+            direction="list-gallery"
+          />
 
-        <PhotoListGallery
-          title="Fundamental Goals:"
-          data={fundamentalGoals}
-          name="fundamental-goal"
-          direction="gallery-list"
-        />
-        <div className="ux-discovery-deliverables-container">
-          <h5>UX Discovery Deliverables</h5>
-          <GalleryWithMenu data={UXDiscoveryDeliverables} />
+          <PhotoListGallery
+            title="Fundamental Goals:"
+            data={fundamentalGoals}
+            name="fundamental-goal"
+            direction="gallery-list"
+          />
+          <div className="ux-discovery-deliverables-container">
+            <h5>UX Discovery Deliverables</h5>
+            <GalleryWithMenu data={UXDiscoveryDeliverables} />
+          </div>
+        </div>
+        <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>
+          <h3>Free Quality Assurance</h3>
+          <PhotoListGallery
+            title="We offer you:"
+            data={weOfferYou}
+            name="we-offer"
+            direction="list-gallery"
+            galleryClassName="no-top-margin"
+          />
+
+          <PhotoListGallery
+            title="You receive:"
+            data={youReceive}
+            name="you-receive"
+            direction="gallery-list"
+            galleryClassName="no-top-margin"
+          />
         </div>
       </div>
-      <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>
-        <h3>Free Quality Assurance</h3>
-        <PhotoListGallery
-          title="We offer you:"
-          data={weOfferYou}
-          name="we-offer"
-          direction="list-gallery"
-          galleryClassName="no-top-margin"
-        />
-
-        <PhotoListGallery
-          title="You receive:"
-          data={youReceive}
-          name="you-receive"
-          direction="gallery-list"
-          galleryClassName="no-top-margin"
-        />
-      </div>
-      <div className="lets-talk">
-        Does the offer look good?
-        <a href="#lets-discuss" className="button orange-btn">Let&#39;s talk</a>
-      </div>
-    </div>
+      <PhotoBlok
+        photos={outsourcingImgs}
+        headerText="Does the offer look good?"
+        btnText="Let&#39;s talk"
+      />
+    </>
   );
 
   const addMinutes = () => {

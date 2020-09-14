@@ -1,0 +1,100 @@
+.photo-wrapper {
+  max-width: 100%;
+
+  @media (min-width: $tablet-sm) { padding: 0 25px; }
+
+  .lets-talk {
+    margin: 40px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: bold;
+    overflow-wrap: normal;
+    
+    @media (max-width: $desktop-xs) {
+      width: 530px;
+      margin: 40px auto 50px;
+      line-height: 66px;
+    }
+
+    @media (max-width: $tablet-sm) {
+      width: 328px;
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    span {
+      @media (max-width: $tablet-sm) {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      margin-left: 40px;
+      position: relative;
+      bottom: 6px;
+
+      @media (max-width: $desktop-xs) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+
+    .photos-item.big {
+      width: 49.5%;
+      padding-bottom: 8px;
+    }
+
+    .photos-item {
+      width: 32.5%;
+      max-height: 280px; 
+
+      img { width: 100%; }
+    }
+  }
+
+  .slider-photo {
+    width: 100%;
+    padding-right: 8px;
+  }
+
+  .photo-toggler {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  
+    li {
+      width: 70px;
+      height: 30px;
+      position: relative;
+      
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 14px;
+        width: 100%;
+        height: 2px;
+        background-color: #D2D2D2;
+      }
+  
+      &.active:before {
+        background-color: #D62624;
+      }
+  
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
