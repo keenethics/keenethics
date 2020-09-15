@@ -615,7 +615,7 @@
                 display: flex;
                 justify-content: center;
                 position: relative;
-                height: 505px;
+                min-height: 505px;
                 .left-content,
                 .right-content {
                     width: 50%;
@@ -635,11 +635,51 @@
                 .right-content {
                     justify-content: flex-start;
                     padding-left: 25px;
+
                     &.center {
                         padding-left: 0;
                         justify-content: flex-end;
-                        width: 376px;
+                        width: 784px;
                         transition: width 300ms;
+
+                        &.smal {
+                            width: 376px;
+                        }
+
+                        .meeting-content {
+                            height: 100%;
+                        }
+
+                        @media (max-width: $tablet-lg) {
+                            max-width: 376px;
+                        }
+
+                        .step-content{
+                            max-width: 784px;
+    
+                            @media (max-width: $tablet-lg) {
+                                max-width: 376px;
+                            }
+                        }
+
+                        .data-wrapper {
+                            display: flex;
+
+                            @media (max-width: $tablet-lg) {
+                                flex-direction: column;
+                            }
+                            .data-container {
+                                width: 50%;
+
+                                @media (max-width: $tablet-lg) {
+                                    width: 100%;
+                                }
+                                .idea-container {
+                                    max-height: 220px;
+                                    overflow-y: auto;
+                                }
+                            }
+                        }
                     }
                 }
                 .step-content {
@@ -929,6 +969,7 @@
                                 }
                             }
                         }
+
                         .data {
                             line-height: 28px;
                             font-weight: normal;

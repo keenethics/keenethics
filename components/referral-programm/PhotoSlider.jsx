@@ -59,7 +59,7 @@ PhotoSlider.propTypes = {
   photos: PropTypes.arrayOf(PropTypes.object).isRequired,
   setRef: PropTypes.func.isRequired,
   onStepChange: PropTypes.func.isRequired,
-  currentStep: PropTypes.string.isRequired,
+  currentStep: PropTypes.number.isRequired,
 };
 
 export default PhotoSlider;

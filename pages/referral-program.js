@@ -541,8 +541,13 @@ const ReferralProgram = () => {
               <textarea name="idea" value={idea} onChange={({ target: { value } }) => setIdea(value)} />
             </div>
           </div>
-          <div className={`right-content ${meetingStep === 3 ? 'center' : ''}`}>
+          <div className={`right-content ${meetingStep === 3 ? 'center' : ''} ${idea ? '' : 'smal'}`}>
             <div className="step-content">
+              {meetingStep === 3 && sendEmailResponse && sendEmailResponse.status
+                ? (
+                  <div className="mail-msg">{sendEmailResponse.status}</div>
+                )
+                : ''}
               <div className="title">Your meeting</div>
               <div className="meeting-content">
                 <div>With:</div>
@@ -553,43 +558,56 @@ const ReferralProgram = () => {
                     <div>Chief Executive Officer at KeenEthics</div>
                   </div>
                 </div>
-                <div className="data">
-                  <span>Date:</span>
-                  {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
-                </div>
-                <div className="data">
-                  <span>Time:</span>
-                  {selectedTime && selectedTime.label ? selectedTime.label : ''}
-                </div>
-                <div className="data">
-                  <span>Your Country:</span>
-                  {country && country.value ? country.value : ''}
-                </div>
-                <br />
-                {meetingStep === 1
-                  ? ''
-                  : (
-                    <>
-                      <div className="data">
-                        <span>Your Name:</span>
-                        {name}
+                <div className="data-wrapper">
+                  <div className="data-container">
+                    <div className="data">
+                      <span>Date:</span>
+                      {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
+                    </div>
+                    <div className="data">
+                      <span>Time:</span>
+                      {selectedTime && selectedTime.label ? selectedTime.label : ''}
+                    </div>
+                    <div className="data">
+                      <span>Your Country:</span>
+                      {country && country.value ? country.value : ''}
+                    </div>
+                    <br />
+                    {meetingStep === 1
+                      ? ''
+                      : (
+                        <>
+                          <div className="data">
+                            <span>Your Name:</span>
+                            {name}
+                          </div>
+                          <div className="data">
+                            <span>Your phone:</span>
+                            {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
+                            {phone}
+                          </div>
+                          <div className="data">
+                            <span>Your email:</span>
+                            {email}
+                          </div>
+                        </>
+                      )}
+                  </div>
+                  {meetingStep === 3 && idea
+                    ? (
+                      <div className="data-container">
+                        <div className="data">
+                          <span>Your Idea:</span>
+                          <br />
+                          <div className="idea-container">
+                            {idea}
+                          </div>
+                        </div>
                       </div>
-                      <div className="data">
-                        <span>Your phone:</span>
-                        {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
-                        {phone}
-                      </div>
-                      <div className="data">
-                        <span>Your email:</span>
-                        {email}
-                      </div>
-                    </>
-                  )}
-                {meetingStep === 3 && sendEmailResponse && sendEmailResponse.status
-                  ? (
-                    <div className="mail-msg">{sendEmailResponse.status}</div>
-                  )
-                  : ''}
+                    )
+                    : ''
+                  }
+                </div>
               </div>
             </div>
           </div>
