@@ -543,81 +543,88 @@ const ReferralProgram = () => {
           </div>
           <div className={`right-content ${meetingStep === 3 ? 'center' : ''} ${idea ? '' : 'smal'}`}>
             <div className="step-content">
-              {meetingStep === 3 && sendEmailResponse && sendEmailResponse.status
+              {meetingStep === 3 && sendEmailResponse && !sendEmailResponse.error
                 ? (
-                  <div className="mail-msg">{sendEmailResponse.status}</div>
+                  <div className="mail-msg">
+                    <h3 className="red">Thank you</h3>
+                    <p>for booking the time with me</p>
+                    <h3>Please check the confirmation email.</h3>
+                  </div>
                 )
-                : ''}
-              <div className="title">Your meeting</div>
-              <div className="meeting-content">
-                <div>With:</div>
-                <div className="with-content">
-                  <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
-                  <div>
-                    <div>Max Savonin</div>
-                    <div>Chief Executive Officer at KeenEthics</div>
-                  </div>
-                </div>
-                <div className="data-wrapper">
-                  <div className="data-container">
-                    <div className="data">
-                      <span>Date:</span>
-                      {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
-                    </div>
-                    <div className="data">
-                      <span>Time:</span>
-                      {selectedTime && selectedTime.label ? selectedTime.label : ''}
-                    </div>
-                    <div className="data">
-                      <span>Your Country:</span>
-                      {country && country.value ? country.value : ''}
-                    </div>
-                    <br />
-                    {meetingStep === 1
-                      ? ''
-                      : (
-                        <>
-                          <div className="data">
-                            <span>Your Name:</span>
-                            {name}
-                          </div>
-                          <div className="data">
-                            <span>Your phone:</span>
-                            {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
-                            {phone}
-                          </div>
-                          <div className="data">
-                            <span>Your email:</span>
-                            {email}
-                          </div>
-                        </>
-                      )}
-                  </div>
-                  {meetingStep === 3 && idea
-                    ? (
-                      <div className="data-container">
-                        <div className="data">
-                          <span>Your Idea:</span>
-                          <br />
-                          <div className="idea-container">
-                            {idea}
-                          </div>
+                : (
+                  <>
+                    <div className="title">Your meeting</div>
+                    <div className="meeting-content">
+                      <div>With:</div>
+                      <div className="with-content">
+                        <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
+                        <div>
+                          <div>Max Savonin</div>
+                          <div>Chief Executive Officer at KeenEthics</div>
                         </div>
                       </div>
-                    )
-                    : ''
-                  }
-                </div>
-              </div>
+                      <div className="data-wrapper">
+                        <div className="data-container">
+                          <div className="data">
+                            <span>Date:</span>
+                            {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
+                          </div>
+                          <div className="data">
+                            <span>Time:</span>
+                            {selectedTime && selectedTime.label ? selectedTime.label : ''}
+                          </div>
+                          <div className="data">
+                            <span>Your Country:</span>
+                            {country && country.value ? country.value : ''}
+                          </div>
+                          <br />
+                          {meetingStep === 1
+                            ? ''
+                            : (
+                              <>
+                                <div className="data">
+                                  <span>Your Name:</span>
+                                  {name}
+                                </div>
+                                <div className="data">
+                                  <span>Your phone:</span>
+                                  {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
+                                  {phone}
+                                </div>
+                                <div className="data">
+                                  <span>Your email:</span>
+                                  {email}
+                                </div>
+                              </>
+                            )}
+                        </div>
+                        {meetingStep === 3 && idea
+                          ? (
+                            <div className="data-container">
+                              <div className="data">
+                                <span>Your Idea:</span>
+                                <br />
+                                <div className="idea-container">
+                                  {idea}
+                                </div>
+                              </div>
+                            </div>
+                          )
+                          : ''
+                        }
+                      </div>
+                    </div>
+                  </>
+                )}
             </div>
           </div>
         </div>
-        <div className="next-btn-holder">
+        <div className={`next-btn-holder ${sendEmailResponse && !sendEmailResponse.error ? 'hide' : ''}`}>
           {meetingStep > 1
             ? (
               <a className="button" role="presentation" onClick={() => setMeetingStep(meetingStep - 1)}>
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
+                  <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1f.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
                 </svg>
                 Back
               </a>
