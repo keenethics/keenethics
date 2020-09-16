@@ -626,7 +626,7 @@ const ReferralProgram = () => {
           {meetingStep === 3
             ? (
               <a role="presentation" className="button orange-btn" onClick={() => sendEmail()}>
-                Confirn
+                REACH OUT
               </a>
             )
             : (

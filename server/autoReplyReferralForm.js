@@ -15,7 +15,6 @@ const renderPreFooter = (data) => `
 
 const thanksMessageFromUser = (data) => `
   <div style="font-fimily:sans-serif; max-width:700px;">
-   <h1 style="text-align: center;">Message from Max</h1>
    <p>Hello ${data.name},
     <br>
     Thank you for getting in touch!
