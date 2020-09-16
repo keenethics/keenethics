@@ -279,6 +279,14 @@
                         animation-name: hideText;
                         animation-duration: 300ms;
                         animation-fill-mode: backwards;
+
+                        a {
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                        a:hover {
+                            opacity: .7;
+                        }
                     }
                     .exist-content {
                         margin: 0;
@@ -303,6 +311,13 @@
                         animation-name: showText;
                         animation-duration: 200ms;
                         animation-fill-mode: backwards;
+                        a {
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                        a:hover {
+                            opacity: .7;
+                        }
                     }
                 }
                 @keyframes hideText {
@@ -529,18 +544,18 @@
             }
         .lets-talk {
             display: flex;
-                justify-content: center;
-                font-weight: bold;
-                font-size: 34px;
-                line-height: 44px;
-                columns: #000;
-                margin: 60px auto;
-                text-transform: uppercase;
-                font-size: 16px;
-                a {
-                    max-width: 172px;
-                    margin-left: 40px;
-                }
+            justify-content: center;
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 44px;
+            columns: #000;
+            margin: 60px auto;
+            text-transform: uppercase;
+            font-size: 34px;
+            a {
+                max-width: 172px;
+                margin-left: 40px;
+            }
         }
             .ux-discovery-deliverables-container {
             margin: 60px 0 0 90px;
@@ -562,6 +577,8 @@
                     margin: 60px auto 0;
                     flex-direction: column;
                     a {
+                        display: block;
+                        margin: 0 auto;
                         margin-top: 25px;
                     }
                 }

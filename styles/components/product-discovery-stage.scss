@@ -1,6 +1,22 @@
 .product-discovery-stage--wrapper {
   max-width: 1200px;
   margin: 20px auto;
+  height: 100%;
+
+  &.hide { display: none; }
+
+  .pds-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+    margin: 70px 0 30px 0;
+
+    @media (max-width: $tablet-lg) {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
 
   .pds-menu {
     display: flex;
@@ -144,10 +160,14 @@
   .pds-slider {
     padding: 0 25px;
     color: #12233D;
+    width: 100%;
 
     @media (min-width: $desktop-xs) { padding: 0 50px }
 
-    figure { overflow: hidden; }
+    figure {
+      overflow: hidden;
+      // width: 100%;
+    }
   
     .pds-slider-content {
       display: flex;
@@ -156,7 +176,6 @@
   
       .pds-slider--slide {
         flex: 0 0 100%;
-        // margin-right: 25px;
 
         @media (min-width: $desktop-xs) {
           display: flex;
@@ -222,6 +241,48 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .lets-talk {
+    margin: 40px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    overflow-wrap: normal;
+    
+    @media (max-width: $desktop-xs) {
+      width: 100%;
+      margin: 40px auto 50px;
+    }
+
+    @media (max-width: $tablet-sm) {
+      width: 328px;
+      font-size: 26px;
+    }
+
+    span {
+      margin-right: 20px;
+      @media (max-width: $tablet-lg) {
+        display: block;
+        margin-bottom: 20px;
+        width: 500px;
+        margin: 20px auto;
+      }
+      @media (max-width: $tablet-sm) {
+        display: block;
+        width: 250px;
+      }
+    }
+
+    a {
+      margin-left: 40px;
+      position: relative;
+      bottom: 6px;
+
+      @media (max-width: $desktop-xs) {
+        margin-left: 0;
       }
     }
   }

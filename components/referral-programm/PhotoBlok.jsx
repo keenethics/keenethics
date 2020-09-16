@@ -6,8 +6,10 @@ import classNames from 'classnames';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import PhotoSlider from './PhotoSlider';
 
-const PhotoBlok = ({ photos, btnText, headerText }) => {
-  // get screen size
+const PhotoBlok = ({
+  photos,
+  shouldHide,
+}) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [slider, setSlider] = useState(null);
   const [desktopView, setDesktopView] = useState(false);
@@ -36,12 +38,7 @@ const PhotoBlok = ({ photos, btnText, headerText }) => {
   };
 
   return (
-    <div className="photo-wrapper">
-      <div className="lets-talk">
-        <span>{headerText.toUpperCase()}</span>
-        <a href="#lets-discuss" className="button orange-btn">{btnText.toUpperCase()}</a>
-      </div>
-
+    <div className={classNames('photo-wrapper', { hide: shouldHide })}>
       {desktopView && (
         <div className="photos">
           {photos.map((photo, index) => (
@@ -80,8 +77,11 @@ const PhotoBlok = ({ photos, btnText, headerText }) => {
 
 PhotoBlok.propTypes = {
   photos: PropTypes.arrayOf(PropTypes.object).isRequired,
-  btnText: PropTypes.string.isRequired,
-  headerText: PropTypes.string.isRequired,
+  shouldHide: PropTypes.bool,
+};
+
+PhotoBlok.defaultProps = {
+  shouldHide: false,
 };
 
 export default PhotoBlok;

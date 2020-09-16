@@ -12,12 +12,13 @@ import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
 import Countries from '../data/countries';
-import { outstaffingImgs, outsourcingImgs } from '../data/referralPageImages';
 import PhotoBlok from '../components/referral-programm/PhotoBlok';
+import ProductDiscoveryStage from '../components/referral-programm/product-discovery-stage';
 
 import {
-  teamData,
   fundamentalGoals,
+  outstaffingImgs,
+  outsourcingImgs,
   weOfferYou,
   youReceive,
   UXDiscoveryDeliverables,
@@ -272,7 +273,9 @@ const ReferralProgram = () => {
               a business analyst, a UX/UI designer or a solution architect depending on your need.
               Each expert can bring a unique insight into your project allowing you to start it
               on the right note. Learn more in this article:
-              How to Start With Success or The Product Discovery Process.
+              {' '}
+              <Link href="#"><a>How to Start With Success or The Product Discovery Process</a></Link>
+              .
             </div>
             <div className="exist-content">
               You can choose a QA expert who fits your outstaffing needs in the best way.
@@ -294,25 +297,11 @@ const ReferralProgram = () => {
   );
 
   const renderProjectStageDetailsBlock = () => (
-    <>
+    <div className="project-stage-details-wrapper">
       <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
         <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
-          <h3>Free UX Discovery</h3>
-          <PhotoListGallery
-            title="Project Team:"
-            data={teamData}
-            name="team-list"
-            direction="list-gallery"
-          />
-
-          <PhotoListGallery
-            title="Fundamental Goals:"
-            data={fundamentalGoals}
-            name="fundamental-goal"
-            direction="gallery-list"
-          />
           <div className="ux-discovery-deliverables-container">
-            <h5>UX Discovery Deliverables</h5>
+            <h5>Product Discovery</h5>
             <GalleryWithMenu data={UXDiscoveryDeliverables} />
           </div>
         </div>
@@ -333,14 +322,18 @@ const ReferralProgram = () => {
             direction="gallery-list"
             galleryClassName="no-top-margin"
           />
+          <div className="lets-talk">
+            Does the offer look good?
+            <a href="#lets-discuss" className="button orange-btn">LET&#39;S TALK</a>
+          </div>
         </div>
       </div>
+      <ProductDiscoveryStage shouldHide={!showDetails || projectStage === 'existProject'} />
       <PhotoBlok
-        photos={outsourcingImgs}
-        headerText="Does the offer look good?"
-        btnText="Let&#39;s talk"
+        photos={projectStage === 'startup' ? outsourcingImgs : outstaffingImgs}
+        shouldHide={!showDetails}
       />
-    </>
+    </div>
   );
 
   const addMinutes = () => {
