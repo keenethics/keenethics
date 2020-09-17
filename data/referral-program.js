@@ -9,6 +9,7 @@ export const teamData = [
     mainDeliverable: 'User Stories',
     position: 'Business Analyst',
     name: 'Irene Krot',
+    href: 'https://docs.google.com/spreadsheets/d/1Aj1Ny_7rcc3cJpNPaDSaoZbzixcXAlHnRPOnsXMjkmY/edit?usp=sharing',
   },
   {
     imgSrc: 'static/images/referral-program/olga.png',
@@ -17,6 +18,7 @@ export const teamData = [
     mainDeliverable: 'lo-fi wireframes',
     position: 'UX/UI designer',
     name: 'Olga Boichuk',
+    href: 'https://www.figma.com/proto/8GOD6iGbYv1TZHHQdmFVEI/KE-Referral_program?node-id=597%3A1559',
   },
   {
     imgSrc: 'static/images/referral-program/yurii.png',
@@ -25,6 +27,7 @@ export const teamData = [
     mainDeliverable: 'Solution Architecture',
     position: 'Solution architect',
     name: 'Yurii Stadnyk',
+    href: 'https://docs.google.com/document/d/1W3hfmsWmkJheyiH98vIh7vvwn58g6eYklMeQ5Ri0TCM/edit?usp=sharing',
   },
   {
     imgSrc: 'static/images/referral-program/andrii.png',
@@ -33,6 +36,7 @@ export const teamData = [
     mainDeliverable: 'Detailed Project Estimate',
     position: 'Solution architect',
     name: 'Andrii Terletskyi',
+    href: 'https://docs.google.com/spreadsheets/d/1cIz0DdCiuetmpmvUgJx1FDcOdHL-UMTV1MDLD8d-Ick/edit?usp=sharing',
   },
 ];
 
@@ -160,7 +164,13 @@ export const UXDiscoveryDeliverables = [
     We work with you on a better understanding of your target audience and your competitors.
     In a week’s time, you receive
     {' '}
-    <Link href="#"><a>user stories</a></Link>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1Aj1Ny_7rcc3cJpNPaDSaoZbzixcXAlHnRPOnsXMjkmY/edit?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      user stories
+    </a>
     {' '}
     describing the user flow leading to a purchase or any other required conversion.
     These stories will be the ground base for the success of your project.
@@ -174,7 +184,13 @@ export const UXDiscoveryDeliverables = [
   <>
     Based on the user stories, the designer creates
     {' '}
-    <Link href="#"><a>low-fidelity wireframes</a></Link>
+    <a
+      href="https://www.figma.com/proto/8GOD6iGbYv1TZHHQdmFVEI/KE-Referral_program?node-id=597%3A1559"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      low-fidelity wireframes
+    </a>
     {' '}
     for your solution. Each wireframe will be clickable containing the user flow leading
     to the required conversions. These lo-fi wireframes are the basis for the architecture
@@ -191,8 +207,18 @@ export const UXDiscoveryDeliverables = [
     all the redundant features. If necessary, we also break up the development into stages starting
     with a
     {' '}
-    <Link href="#"><a>Minimum Viable Product</a></Link>
-    . Our expert provides you with solution architecture including the recommended tech stack,
+    <Link href="/blog/minimum-viable-product"><a>Minimum Viable Product</a></Link>
+    . Our expert provides you with
+    {' '}
+    <a
+      href="https://docs.google.com/document/d/1W3hfmsWmkJheyiH98vIh7vvwn58g6eYklMeQ5Ri0TCM/edit?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      solution architecture
+    </a>
+    {' '}
+    including the recommended tech stack,
     the team composition, the and deadlines.
   </>,
   }, {
@@ -205,7 +231,13 @@ export const UXDiscoveryDeliverables = [
     Our project manager combines your requirements with the user stories, the lo-fi wireframes,
     and the solution architecture. The result is a solid
     {' '}
-    <Link href="#"><a>project estimate</a></Link>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1cIz0DdCiuetmpmvUgJx1FDcOdHL-UMTV1MDLD8d-Ick/edit?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      project estimate
+    </a>
     {' '}
     with all the risks included and without any hidden costs. The product discovery approach
     allows you to mitigate any hidden dangers ranging from going way over the budget

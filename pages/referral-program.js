@@ -16,7 +16,6 @@ import PhotoBlok from '../components/referral-programm/PhotoBlok';
 import ProductDiscoveryStage from '../components/referral-programm/product-discovery-stage';
 
 import {
-  fundamentalGoals,
   outstaffingImgs,
   outsourcingImgs,
   weOfferYou,
@@ -274,7 +273,7 @@ const ReferralProgram = () => {
               Each expert can bring a unique insight into your project allowing you to start it
               on the right note. Learn more in this article:
               {' '}
-              <Link href="#"><a>How to Start With Success or The Product Discovery Process</a></Link>
+              <Link href="/blog/product-discovery"><a>How to Start With Success or The Product Discovery Process</a></Link>
               .
             </div>
             <div className="exist-content">
@@ -453,6 +452,8 @@ const ReferralProgram = () => {
               <Calendar
                 defaultView="month"
                 minDate={new Date()}
+                defaultActiveStartDate={new Date()}
+                minDetail="month"
                 value={selectedDate}
                 onChange={(date) => { selectDate(date); }}
                 navigationLabel={({
