@@ -31,6 +31,7 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
             className={classNames('pds-menu--item', { active: currentStep === index })}
             role="presentation"
             onClick={(e) => { e.preventDefault(); setCurrentStep(index); }}
+            key={stage.title}
           >
             <div className="pds-menu--item-underscore">
               <div className="pds-menu--item-stage">
@@ -56,7 +57,7 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
               }}
             >
               {teamData.map((stage, index) => (
-                <div className="pds-slider--slide">
+                <div className="pds-slider--slide" key={stage.title}>
                   <div className="pds-slider--slide-content">
                     <p className="stage">
                       stage

@@ -433,7 +433,11 @@ const HomeFooter = ({
 HomeFooter.propTypes = {
   isMobile: PropTypes.bool.isRequired,
   isTablet: PropTypes.bool.isRequired,
-  openNewTab: PropTypes.bool.isRequired,
+  openNewTab: PropTypes.bool,
+};
+
+HomeFooter.defaultProps = {
+  openNewTab: false,
 };
 
 export default HomeFooter;
