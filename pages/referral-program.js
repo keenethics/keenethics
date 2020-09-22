@@ -417,7 +417,10 @@ const ReferralProgram = () => {
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
-  const renderLetsDiscussBlock = () => (
+  const renderLetsDiscussBlock = () => {
+    const curentDate = new Date();
+
+    return (
     <div id="lets-discuss" className="lets-discuss-block">
       <h3>Let&#39;s discuss you business idea</h3>
       <h5>A half hour talk with the CEO on how to support your project in the best possible way</h5>
@@ -453,8 +456,8 @@ const ReferralProgram = () => {
               <div className="title">Choose date:</div>
               <Calendar
                 defaultView="month"
-                minDate={new Date()}
-                defaultActiveStartDate={new Date()}
+                minDate={curentDate}
+                defaultActiveStartDate={curentDate}
                 minDetail="month"
                 value={selectedDate}
                 onChange={(date) => { selectDate(date); }}
@@ -648,7 +651,7 @@ const ReferralProgram = () => {
         </div>
       </div>
     </div>
-  );
+  )};
 
   return (
     <Layout noMenu layoutClass="referral-layout-page">
