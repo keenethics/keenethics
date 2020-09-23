@@ -28,6 +28,7 @@ const LeadersMobile = ({ data }) => {
     <>
       <div className="gallery mobile">
         <Slider
+          slidesToScroll={2}
           swipeToSlide
           className="hello"
           ref={(node) => { sliderRef = node; }}
