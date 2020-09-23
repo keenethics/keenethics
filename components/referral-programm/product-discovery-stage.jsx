@@ -24,7 +24,7 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
 
   return (
     <div className={classNames('product-discovery-stage--wrapper', { hide: shouldHide })}>
-      <h3 className="pds-title">What is Your Product Discovery Stage?</h3>
+      <h3 className="pds-title">What Discovery Stage do you want?</h3>
       <div className="pds-menu">
         {teamData.map((stage, index) => (
           <div

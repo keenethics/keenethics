@@ -305,7 +305,7 @@ const ReferralProgram = () => {
       <div id="project-stage-details" className="project-stage-details show">
         <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
           <div className="ux-discovery-deliverables-container">
-            <h5>Product Discovery</h5>
+            <h5>What does free Product Discovery offer?</h5>
             <GalleryWithMenu data={UXDiscoveryDeliverables} />
           </div>
         </div>
