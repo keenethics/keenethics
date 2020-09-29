@@ -6,7 +6,6 @@ import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';
 import OfferList from '../components/content/OfferList';
-import './services-education-software-development.scss';
 
 import { works } from '../main.config';
 

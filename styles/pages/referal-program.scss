@@ -265,6 +265,9 @@
                 padding: 50px 30px 132px;
                 max-width: 804px;
                 margin: 0 auto;
+                .text-bold {
+                    font-weight: bold;
+                }
                 input {
                     display: none;
                 }
@@ -313,7 +316,6 @@
                         animation-fill-mode: backwards;
                         a {
                             color: #fff;
-                            font-weight: bold;
                         }
                         a:hover {
                             opacity: .7;
@@ -561,9 +563,10 @@
             margin: 60px 0 0 90px;
                 h5 {
                     font-weight: bold;
-                    font-size: 24px;
-                    line-height: 34px;
+                    font-size: 34px;
+                    line-height: 44px;
                     margin-bottom: 25px;
+                    text-align: center;
                 }
             }
             @media (max-width: $desktop-sm) {
@@ -771,8 +774,8 @@
                                 font-weight: bold;
                                 font-size: 18px;
                                 line-height: 28px;
-                                text-transform: uppercase;
-                                color: #D62C2C;
+                                color: #12233D;
+                                background-color: #fff;
                                 font-family: 'Raleway', sans-serif;
                                 &:hover {
                                     background-color: transparent;
@@ -780,6 +783,7 @@
                             }
                         }
                         .react-calendar__month-view__days {
+                            &__day  { font-weight: bold; }
                             .react-calendar__tile {
                                 font-family: Raleway;
                                 font-size: 16px;
@@ -810,7 +814,7 @@
                                 &:disabled {
                                     color: rgba(18, 35, 61, 0.5);
                                     background-color: transparent;
-
+                                    font-weight: normal;
                                 }
                                 &.react-calendar__tile--active {
                                     background-color: transparent;
@@ -922,6 +926,10 @@
                     }
                     .time-list {
                         margin: 0 0 16px 0;
+
+                        &__menu {
+                            z-index: 200;
+                        }
                         .time-list__control {
                             border:none;
                             box-shadow: none;
@@ -1153,7 +1161,7 @@
         }
         .lets-discuss-container {
             background-image: url("/static/images/referral-program/lets-discuss-bg.jpg");
-            background-size: calc(50% + 188px) 100%;
+            background-size: calc(50% + 255px) 100%;
             background-repeat: no-repeat;
             padding: 0 82px;
             position: relative;

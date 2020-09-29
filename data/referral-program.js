@@ -197,10 +197,10 @@ export const UXDiscoveryDeliverables = [
     analysis, and they will be turned into high fidelity wireframes soon after the project starts
   </>,
   }, {
-    title: 'Detailed project estimate ',
+    title: 'Improved architecture',
     logo: 'static/images/svg/stories-for-development.svg',
     image: 'static/images/referral-program/hi-fi-wireframes.jpg',
-    contentTitle: 'Detailed project estimate ',
+    contentTitle: 'Improved architecture',
     content:
   <>
     Based on the UX/UI and business analysis, we outline essential functionality and set aside

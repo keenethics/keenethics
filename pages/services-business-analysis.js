@@ -2,7 +2,6 @@ import React from 'react';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
-import './services-education-software-development.scss';
 
 import CallToActionButton from '../components/content/CallToActionButton';
 import FeaturesList from '../components/content/FeaturesList';

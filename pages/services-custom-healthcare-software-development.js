@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
-import './services-education-software-development.scss';
 
 import CallToActionButton from '../components/content/CallToActionButton';
 

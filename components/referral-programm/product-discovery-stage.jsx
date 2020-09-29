@@ -24,13 +24,14 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
 
   return (
     <div className={classNames('product-discovery-stage--wrapper', { hide: shouldHide })}>
-      <h3 className="pds-title">What is Your Product Discovery Stage?</h3>
+      <h3 className="pds-title">What Discovery Stage do you want?</h3>
       <div className="pds-menu">
         {teamData.map((stage, index) => (
           <div
             className={classNames('pds-menu--item', { active: currentStep === index })}
             role="presentation"
             onClick={(e) => { e.preventDefault(); setCurrentStep(index); }}
+            key={stage.title}
           >
             <div className="pds-menu--item-underscore">
               <div className="pds-menu--item-stage">
@@ -56,7 +57,7 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
               }}
             >
               {teamData.map((stage, index) => (
-                <div className="pds-slider--slide">
+                <div className="pds-slider--slide" key={stage.title}>
                   <div className="pds-slider--slide-content">
                     <p className="stage">
                       stage

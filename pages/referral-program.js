@@ -35,7 +35,6 @@ const handleStatusResponse = (response) => {
 
 const ReferralProgram = () => {
   const [projectStage, setProjectStage] = useState('startup');
-  const [showDetails, setShowDetails] = useState(false);
   const [countryList, setCountryList] = useState([]);
 
   const [meetingStep, setMeetingStep] = useState(1);
@@ -128,7 +127,7 @@ const ReferralProgram = () => {
 
   const validateForm = () => {
     if (meetingStep === 1) {
-      if (!selectedDate || !country) {
+      if (!selectedDate || !country || !selectedTime) {
         setShowError(true);
       } else {
         setShowError(false);
@@ -238,7 +237,7 @@ const ReferralProgram = () => {
       <div className="stages">
 
         <div className="tabs">
-          <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); setShowDetails(false); }} />
+          <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); }} />
           <label htmlFor="startup">
             <div>
               <img src="/static/images/svg/outsourcing_icon.svg" alt="A Startup Idea" />
@@ -251,7 +250,7 @@ const ReferralProgram = () => {
             <p>Outsourcing</p>
           </label>
 
-          <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); setShowDetails(false); }} />
+          <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); }} />
           <label htmlFor="exist">
             <div>
               <img src="/static/images/svg/outstaffing-icon.svg" alt="An Existing Product" />
@@ -268,8 +267,14 @@ const ReferralProgram = () => {
           <div className="tab">
             <div className="startup-content">
               You can employ our software experts to analyze all the pitfalls and hidden
-              risks of your project. We offer you one free week of working with either
-              a business analyst, a UX/UI designer or a solution architect depending on your need.
+              risks of your project.
+              {' '}
+              <span className="text-bold">
+                We offer you one free week of working with either
+                a business analyst, a UX/UI designer or a solution architect depending on your need.
+              </span>
+              <br />
+              <br />
               Each expert can bring a unique insight into your project allowing you to start it
               on the right note. Learn more in this article:
               {' '}
@@ -278,17 +283,17 @@ const ReferralProgram = () => {
             </div>
             <div className="exist-content">
               You can choose a QA expert who fits your outstaffing needs in the best way.
-              For two weeks, the expert will be working on functional testing revealing
-              the ways we can improve your software. After you receive the final QA report,
+              {' '}
+              <span className="text-bold">
+                For two weeks, the expert will be working on functional testing revealing
+                the ways we can improve your software.
+              </span>
+              <br />
+              <br />
+              After you receive the final QA report,
               you will be able to assess the value and continue working with the dedicated QA
               expert on a full-time or an hourly basis.
             </div>
-          </div>
-        </div>
-        <div className="details-btn-holder">
-          <div>
-            <img src="/static/images/svg/arrow-down-3.svg" alt="details" />
-            <a className="button" href="#project-stage-details" onClick={() => setShowDetails(!showDetails)}>View Details</a>
           </div>
         </div>
       </div>
@@ -297,10 +302,10 @@ const ReferralProgram = () => {
 
   const renderProjectStageDetailsBlock = () => (
     <div className="project-stage-details-wrapper">
-      <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
+      <div id="project-stage-details" className="project-stage-details show">
         <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
           <div className="ux-discovery-deliverables-container">
-            <h5>Product Discovery</h5>
+            <h5>What does free Product Discovery offer?</h5>
             <GalleryWithMenu data={UXDiscoveryDeliverables} />
           </div>
         </div>
@@ -327,11 +332,8 @@ const ReferralProgram = () => {
           </div>
         </div>
       </div>
-      <ProductDiscoveryStage shouldHide={!showDetails || projectStage === 'existProject'} />
-      <PhotoBlok
-        photos={projectStage === 'startup' ? outsourcingImgs : outstaffingImgs}
-        shouldHide={!showDetails}
-      />
+      <ProductDiscoveryStage shouldHide={projectStage === 'existProject'} />
+      <PhotoBlok photos={projectStage === 'startup' ? outsourcingImgs : outstaffingImgs} />
     </div>
   );
 
@@ -415,7 +417,10 @@ const ReferralProgram = () => {
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
-  const renderLetsDiscussBlock = () => (
+  const renderLetsDiscussBlock = () => {
+    const curentDate = new Date();
+
+    return (
     <div id="lets-discuss" className="lets-discuss-block">
       <h3>Let&#39;s discuss you business idea</h3>
       <h5>A half hour talk with the CEO on how to support your project in the best possible way</h5>
@@ -451,8 +456,8 @@ const ReferralProgram = () => {
               <div className="title">Choose date:</div>
               <Calendar
                 defaultView="month"
-                minDate={new Date()}
-                defaultActiveStartDate={new Date()}
+                minDate={curentDate}
+                defaultActiveStartDate={curentDate}
                 minDetail="month"
                 value={selectedDate}
                 onChange={(date) => { selectDate(date); }}
@@ -463,18 +468,6 @@ const ReferralProgram = () => {
               />
               <div className="title">Choose time:</div>
               <Select
-                id="countryList"
-                classNamePrefix="country-list"
-                options={countryList}
-                className={`country-list ${showError && !country ? 'error' : ''}`}
-                onChange={(value) => { selectCountry(value); }}
-                value={country}
-                isSearchable
-                placeholder="Your Country"
-
-              />
-
-              <Select
                 id="timeList"
                 classNamePrefix="time-list"
                 options={addMinutes()}
@@ -483,6 +476,18 @@ const ReferralProgram = () => {
                 value={selectedTime}
                 isSearchable={false}
                 placeholder="Select exact time for a call"
+              />
+
+              <Select
+                id="countryList"
+                classNamePrefix="country-list"
+                options={countryList}
+                className={`country-list ${showError && !country ? 'error' : ''}`}
+                onChange={(value) => { selectCountry(value); }}
+                value={country}
+                isSearchable
+                placeholder="Your Time Zone"
+
               />
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
@@ -547,9 +552,8 @@ const ReferralProgram = () => {
                 )
                 : (
                   <>
-                    <div className="title">Your meeting</div>
+                    <div className="title">Your meeting with</div>
                     <div className="meeting-content">
-                      <div>With:</div>
                       <div className="with-content">
                         <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
                         <div>
@@ -631,7 +635,12 @@ const ReferralProgram = () => {
               </a>
             )
             : (
-              <a role="presentation" className="button orange-btn" onClick={() => validateForm()}>
+              <a
+                role="presentation"
+                className="button orange-btn"
+                onClick={() => validateForm()}
+                disabled={!selectedDate || !country || !selectedTime ? 'disabled' : ''}
+              >
                 Next
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.99459 4C8.28288 4 8.51351 4.08649 8.68649 4.25946L15.7351 11.2649C15.9369 11.4955 16.0378 11.7405 16.0378 12C16.0378 12.2595 15.9369 12.4901 15.7351 12.6919L8.68649 19.6973C8.48468 19.8991 8.25405 20 7.99459 20C7.73514 20 7.5045 19.8991 7.3027 19.6973C7.1009 19.4955 7 19.2649 7 19.0054C7 18.7459 7.1009 18.5153 7.3027 18.3135L13.6162 12L7.3027 5.68649C7.1009 5.48468 7 5.23964 7 4.95135C7 4.66306 7.09369 4.43243 7.28108 4.25946C7.46847 4.08649 7.70631 4 7.99459 4Z" fill="white" />
@@ -642,7 +651,7 @@ const ReferralProgram = () => {
         </div>
       </div>
     </div>
-  );
+  )};
 
   return (
     <Layout noMenu layoutClass="referral-layout-page">
