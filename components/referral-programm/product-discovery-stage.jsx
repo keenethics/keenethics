@@ -67,7 +67,8 @@ const ProductDiscoveryStage = ({ shouldHide }) => {
                     <h5>
                       <span>Main deliverable</span>
                       :
-                      {` ${stage.mainDeliverable}`}
+                      {' '}
+                      <a href={stage.href} target="_blank" rel="noopener noreferrer">{stage.mainDeliverable}</a>
                     </h5>
                     <h5>
                       <span>{stage.position}</span>
