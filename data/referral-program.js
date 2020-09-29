@@ -219,7 +219,7 @@ export const UXDiscoveryDeliverables = [
     </a>
     {' '}
     including the recommended tech stack,
-    the team composition, and the deadlines.
+    the team composition, the and deadlines.
   </>,
   }, {
     title: 'Detailed project estimate ',
