@@ -41,6 +41,8 @@ const ReferralProgram = () => {
   const [country, setCountry] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
+  const [renderCalendar, setRenderCalendar] = useState(false);
+  const [areEventsLoaded, setEventsLoaded] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -94,6 +96,7 @@ const ReferralProgram = () => {
   };
 
   useEffect(() => {
+    setRenderCalendar(true);
     window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
     const uaDateTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
     const getCountriesAndUserIp = async () => {
@@ -120,6 +123,7 @@ const ReferralProgram = () => {
       fillCountries(Countries);
       setCountry(countryItem(userCountry));
       setEvents(calendarEvents);
+      setEventsLoaded(true);
     };
 
     getCountriesAndUserIp();
@@ -145,6 +149,15 @@ const ReferralProgram = () => {
         setShowError(true);
       }
     }
+  };
+
+  const isFormValid = () => {
+    if (meetingStep === 1) {
+      return !(!selectedDate || !country || !selectedTime);
+    }
+    return StringFormatValidation.validate({ min: 3, max: 25 }, name)
+    && StringFormatValidation.validate({ type: 'email' }, email)
+    && StringFormatValidation.validate({ min: 3, max: 25 }, phone);
   };
 
   const sendEmail = () => {
@@ -397,8 +410,9 @@ const ReferralProgram = () => {
   };
 
   const selectDate = async (date) => {
-    setSelectedTime([]);
+    setSelectedTime(null);
     setSelectedDate(date);
+    setEventsLoaded(false);
     const calendarEvents = await (await fetch('/api/free-busy',
       {
         method: 'POST',
@@ -408,19 +422,17 @@ const ReferralProgram = () => {
         body: JSON.stringify({ selectedDate: date }),
       })).json();
 
+    setEventsLoaded(true);
     setEvents(calendarEvents);
   };
 
   const selectCountry = (selectedCountry) => {
-    setSelectedTime([]);
+    setSelectedTime(null);
     setCountry(selectedCountry);
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
-  const renderLetsDiscussBlock = () => {
-    const curentDate = new Date();
-
-    return (
+  const renderLetsDiscussBlock = () => (
     <div id="lets-discuss" className="lets-discuss-block">
       <h3>Let&#39;s discuss you business idea</h3>
       <h5>A half hour talk with the CEO on how to support your project in the best possible way</h5>
@@ -454,18 +466,21 @@ const ReferralProgram = () => {
           <div className={`left-content ${meetingStep === 3 ? 'hide-content' : 'show-content'}`}>
             <div className={`step-content ${meetingStep === 1 ? 'show' : 'hide'}`}>
               <div className="title">Choose date:</div>
-              <Calendar
-                defaultView="month"
-                minDate={curentDate}
-                defaultActiveStartDate={curentDate}
-                minDetail="month"
-                value={selectedDate}
-                onChange={(date) => { selectDate(date); }}
-                navigationLabel={({
-                  date, locale,
-                }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
-                tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
-              />
+              {
+                typeof window === 'object' && renderCalendar && (
+                  <Calendar
+                    defaultView="month"
+                    minDate={new Date()}
+                    minDetail="month"
+                    value={selectedDate}
+                    onChange={(date) => { selectDate(date); }}
+                    navigationLabel={({
+                      date, locale,
+                    }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
+                    tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
+                  />
+                )
+              }
               <div className="title">Choose time:</div>
               <Select
                 id="timeList"
@@ -475,7 +490,8 @@ const ReferralProgram = () => {
                 onChange={(time) => setSelectedTime(time)}
                 value={selectedTime}
                 isSearchable={false}
-                placeholder="Select exact time for a call"
+                placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
+                isDisabled={!areEventsLoaded}
               />
 
               <Select
@@ -487,7 +503,6 @@ const ReferralProgram = () => {
                 value={country}
                 isSearchable
                 placeholder="Your Time Zone"
-
               />
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
@@ -639,7 +654,7 @@ const ReferralProgram = () => {
                 role="presentation"
                 className="button orange-btn"
                 onClick={() => validateForm()}
-                disabled={!selectedDate || !country || !selectedTime ? 'disabled' : ''}
+                disabled={!isFormValid()}
               >
                 Next
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -651,7 +666,7 @@ const ReferralProgram = () => {
         </div>
       </div>
     </div>
-  )};
+  );
 
   return (
     <Layout noMenu layoutClass="referral-layout-page">

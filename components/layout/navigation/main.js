@@ -192,7 +192,9 @@ class Navigation extends React.PureComponent {
                   <Point
                     key={n.name}
                     element={n}
-                    currentPoint={this.activePoint(n, currentURL, itemInViewPort) || currentPoint === i}
+                    currentPoint={
+                      this.activePoint(n, currentURL, itemInViewPort) || currentPoint === i
+                    }
                     isBurgerMenu={isBurgerMenu}
                     closeSidebar={this.closeSidebar}
                   >

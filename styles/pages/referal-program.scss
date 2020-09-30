@@ -515,7 +515,7 @@
             display: flex;
         }
         .project-stage-details {
-            margin: 95px 72px 20px;
+            margin: 35px 72px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -567,15 +567,18 @@
                     line-height: 44px;
                     margin-bottom: 25px;
                     text-align: center;
+                    @media (max-width: $tablet-lg) {
+                        font-size: 26px;
+                    }
                 }
             }
             @media (max-width: $desktop-sm) {
                 .ux-discovery-deliverables-container {
-                    margin: 60px 0 0;
+                    margin: 40px 0 60px 0;
                 }
             }
             @media (max-width: $desktop-xs) {
-                margin: 80px 30px 20px;
+                margin: 40px 30px 20px;
                 .lets-talk {
                     margin: 60px auto 0;
                     flex-direction: column;
@@ -587,7 +590,7 @@
                 }
             }
             @media (max-width: $tablet-sm) {
-                margin: 60px 25px 20px;
+                margin: 40px 25px 20px;
                 h3 {
                     font-size: 26px;
                     line-height: 36px;
@@ -939,10 +942,29 @@
                                 display: none;
                             }
                             .time-list__value-container {
+                                background-color: #fff;
                                 height: 100%;
                                 padding: 0;
                                 .time-list__placeholder {
                                     margin-left: 8px;
+                                    .loader {
+                                        border: 4px solid #f3f3f3;
+                                        border-radius: 50%;
+                                        border-top: 3px solid #d62624;
+                                        width: 20px;
+                                        height: 20px;
+                                        -webkit-animation: spin 2s linear infinite; /* Safari */
+                                        animation: spin 2s linear infinite;
+                                    }
+                                    /* Safari */
+                                    @-webkit-keyframes spin {
+                                        0% { -webkit-transform: rotate(0deg); }
+                                        100% { -webkit-transform: rotate(360deg); }
+                                    }
+                                    @keyframes spin {
+                                        0% { transform: rotate(0deg); }
+                                        100% { transform: rotate(360deg); }
+                                    }
                                 }
                                 .time-list__single-value {
                                     top: 0;
