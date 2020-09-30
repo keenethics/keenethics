@@ -1,0 +1,18 @@
+{
+    "family": "keenethics-prod",
+    "containerDefinitions": [
+        {
+            "name": "keenethics-prod",           
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true
+            
+        } 
+    ]
+}
