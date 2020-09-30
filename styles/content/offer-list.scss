@@ -26,10 +26,11 @@
 
     .offers-list-item-img {
       @media (max-width: 600px) {
-        max-width: 120px;
+        max-width: 60px;
       }
-      max-width: 150px;
+      max-width: 80px;
       padding: 0 auto;
+      margin-bottom: 10px;
     }
   }
 } 

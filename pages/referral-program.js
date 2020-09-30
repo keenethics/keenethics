@@ -11,10 +11,13 @@ import Layout from '../components/layout/main';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
 import GalleryWithMenu from '../components/gallery-with-menu';
+import Countries from '../data/countries';
+import PhotoBlok from '../components/referral-programm/PhotoBlok';
+import ProductDiscoveryStage from '../components/referral-programm/product-discovery-stage';
 
 import {
-  teamData,
-  fundamentalGoals,
+  outstaffingImgs,
+  outsourcingImgs,
   weOfferYou,
   youReceive,
   UXDiscoveryDeliverables,
@@ -32,27 +35,35 @@ const handleStatusResponse = (response) => {
 
 const ReferralProgram = () => {
   const [projectStage, setProjectStage] = useState('startup');
-  const [showDetails, setShowDetails] = useState(false);
   const [countryList, setCountryList] = useState([]);
 
   const [meetingStep, setMeetingStep] = useState(1);
   const [country, setCountry] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
+  const [renderCalendar, setRenderCalendar] = useState(false);
+  const [areEventsLoaded, setEventsLoaded] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [idea, setIdea] = useState('');
+  const [events, setEvents] = useState([]);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
-  const countryItem = ({ name: countryName, flag, callingCodes }) => ({
+  const [timeDifference, setTimeDifference] = useState(0); // in minutes
+  const countryItem = ({
+    name: countryName,
+    flag, callingCodes,
+    timeZone,
+  }) => ({
     label: (
       <div>
         <img src={flag} alt={countryName} />
         <span>{countryName}</span>
       </div>
     ),
+    timeZone,
     flag,
     value: countryName,
     phoneCode: callingCodes.length > 0 ? callingCodes[0] : '',
@@ -71,19 +82,48 @@ const ReferralProgram = () => {
     }
   };
 
+  const setTimeZoneDifference = (timeZone) => {
+    const uaTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
+    let userTime;
+    try {
+      userTime = new Date((new Date()).toLocaleString('en-US', { timeZone }));
+    } catch (err) {
+      userTime = new Date();
+    }
+    const difference = Math.round((userTime.getTime() - uaTime.getTime()) / 60000); // 60 000ms = 1m
+
+    setTimeDifference(difference);
+  };
 
   useEffect(() => {
+    setRenderCalendar(true);
     window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
+    const uaDateTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
     const getCountriesAndUserIp = async () => {
       const promises = [
-        fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;'),
+        fetch('https://restcountries.eu/rest/v2/all?fields=name;flag;callingCodes;codes;alpha2Code;region;capital;'),
         fetch(`https://ipinfo.io?token=${process.env.GEOLOCATION_KEY_IPINFO}`),
+        fetch('/api/free-busy', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ selectedDate: uaDateTime }),
+        }),
       ];
       const response = await Promise.all(promises);
-      const [countries, userIpData, allEvents] = await Promise.all(response.map((i) => i.json()));
+      const [
+        countries,
+        userIpData,
+        calendarEvents,
+      ] = await Promise.all(response.map((i) => i.json()));
       const userCountry = countries.find((i) => i.alpha2Code === userIpData.country);
-      fillCountries(countries);
+
+      setTimeZoneDifference(userIpData.timezone);
+      fillCountries(Countries);
       setCountry(countryItem(userCountry));
+      setEvents(calendarEvents);
+      setEventsLoaded(true);
     };
 
     getCountriesAndUserIp();
@@ -91,7 +131,7 @@ const ReferralProgram = () => {
 
   const validateForm = () => {
     if (meetingStep === 1) {
-      if (!selectedDate || !country) {
+      if (!selectedDate || !country || !selectedTime) {
         setShowError(true);
       } else {
         setShowError(false);
@@ -111,13 +151,23 @@ const ReferralProgram = () => {
     }
   };
 
+  const isFormValid = () => {
+    if (meetingStep === 1) {
+      return !(!selectedDate || !country || !selectedTime);
+    }
+    return StringFormatValidation.validate({ min: 3, max: 25 }, name)
+    && StringFormatValidation.validate({ type: 'email' }, email)
+    && StringFormatValidation.validate({ min: 3, max: 25 }, phone);
+  };
+
   const sendEmail = () => {
     setSendEmailResponse(null);
     const formData = new FormData();
     formData.append('data', JSON.stringify({
       country: country && country.value ? country.value : '',
       selectedDate,
-      selectedTime: selectedTime && selectedTime.label ? selectedTime.label : '',
+      selectedTime: selectedTime && selectedTime.value ? selectedTime.value : '',
+      selectedUserTime: selectedTime && selectedTime.label ? selectedTime.label : '',
       name,
       email,
       phone: country && country.phoneCode ? `+${country.phoneCode} ${phone}` : phone,
@@ -196,27 +246,27 @@ const ReferralProgram = () => {
 
   const renderProjectStageBlock = () => (
     <div className="project-stage">
-      <h2>At what stage is your project?</h2>
+      <h2>What does your project need?</h2>
       <div className="stages">
 
         <div className="tabs">
-          <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); setShowDetails(false); }} />
+          <input type="radio" name="tabs" id="startup" defaultChecked onClick={() => { setProjectStage('startup'); }} />
           <label htmlFor="startup">
             <div>
-              <img src="/static/images/svg/startup_icon.svg" alt="A Startup Idea" />
+              <img src="/static/images/svg/outsourcing_icon.svg" alt="A Startup Idea" />
               <span className="ellipse">
                 <svg viewBox="0 0 32 64" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32 64C27.7977 64 23.6365 63.1723 19.7541 61.5641C15.8717 59.956 12.3441 57.5989 9.37258 54.6274C6.40111 51.6559 4.04401 48.1283 2.43586 44.2459C0.827705 40.3634 0 36.2023 0 32C0 27.7977 0.827705 23.6365 2.43586 19.7541C4.04401 15.8717 6.40111 12.3441 9.37259 9.37258C12.3441 6.40111 15.8717 4.044 19.7541 2.43585C23.6366 0.827704 27.7977 -3.67377e-07 32 0V3.2C28.2179 3.2 24.4729 3.94493 20.9787 5.39227C17.4845 6.8396 14.3097 8.961 11.6353 11.6353C8.961 14.3097 6.83961 17.4845 5.39227 20.9787C3.94493 24.4729 3.2 28.2179 3.2 32C3.2 35.7821 3.94493 39.5271 5.39227 43.0213C6.8396 46.5155 8.961 49.6903 11.6353 52.3647C14.3097 55.039 17.4845 57.1604 20.9787 58.6077C24.4729 60.0551 28.2179 60.8 32 60.8V64Z" />
                 </svg>
               </span>
             </div>
-            <p>A Startup Idea</p>
+            <p>Outsourcing</p>
           </label>
 
-          <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); setShowDetails(false); }} />
+          <input type="radio" name="tabs" id="exist" onClick={() => { setProjectStage('existProject'); }} />
           <label htmlFor="exist">
             <div>
-              <img src="/static/images/svg/project_icon.svg" alt="An Existing Product" />
+              <img src="/static/images/svg/outstaffing-icon.svg" alt="An Existing Product" />
               <span className="ellipse">
                 <svg viewBox="0 0 32 64" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32 64C27.7977 64 23.6365 63.1723 19.7541 61.5641C15.8717 59.956 12.3441 57.5989 9.37258 54.6274C6.40111 51.6559 4.04401 48.1283 2.43586 44.2459C0.827705 40.3634 0 36.2023 0 32C0 27.7977 0.827705 23.6365 2.43586 19.7541C4.04401 15.8717 6.40111 12.3441 9.37259 9.37258C12.3441 6.40111 15.8717 4.044 19.7541 2.43585C23.6366 0.827704 27.7977 -3.67377e-07 32 0V3.2C28.2179 3.2 24.4729 3.94493 20.9787 5.39227C17.4845 6.8396 14.3097 8.961 11.6353 11.6353C8.961 14.3097 6.83961 17.4845 5.39227 20.9787C3.94493 24.4729 3.2 28.2179 3.2 32C3.2 35.7821 3.94493 39.5271 5.39227 43.0213C6.8396 46.5155 8.961 49.6903 11.6353 52.3647C14.3097 55.039 17.4845 57.1604 20.9787 58.6077C24.4729 60.0551 28.2179 60.8 32 60.8V64Z" />
@@ -224,25 +274,39 @@ const ReferralProgram = () => {
 
               </span>
             </div>
-            <p>An Existing Product</p>
+            <p>Outstaffing</p>
           </label>
 
           <div className="tab">
             <div className="startup-content">
-              <h3>You receive a free UX Discovery</h3>
-              Go through the Intensive discovery stage before diving
-              into software development only if and only if you like the results.
+              You can employ our software experts to analyze all the pitfalls and hidden
+              risks of your project.
+              {' '}
+              <span className="text-bold">
+                We offer you one free week of working with either
+                a business analyst, a UX/UI designer or a solution architect depending on your need.
+              </span>
+              <br />
+              <br />
+              Each expert can bring a unique insight into your project allowing you to start it
+              on the right note. Learn more in this article:
+              {' '}
+              <Link href="/blog/product-discovery"><a>How to Start With Success or The Product Discovery Process</a></Link>
+              .
             </div>
             <div className="exist-content">
-              <h3>You receive 2 weeks of free Quality Assurance</h3>
-              We offer you to choose one outstanding QA talent among many resumes of testers.
+              You can choose a QA expert who fits your outstaffing needs in the best way.
+              {' '}
+              <span className="text-bold">
+                For two weeks, the expert will be working on functional testing revealing
+                the ways we can improve your software.
+              </span>
+              <br />
+              <br />
+              After you receive the final QA report,
+              you will be able to assess the value and continue working with the dedicated QA
+              expert on a full-time or an hourly basis.
             </div>
-          </div>
-        </div>
-        <div className="details-btn-holder">
-          <div>
-            <img src="/static/images/svg/arrow-down-3.svg" alt="details" />
-            <a className="button" href="#project-stage-details" onClick={() => setShowDetails(!showDetails)}>View Details</a>
           </div>
         </div>
       </div>
@@ -250,49 +314,39 @@ const ReferralProgram = () => {
   );
 
   const renderProjectStageDetailsBlock = () => (
-    <div id="project-stage-details" className={`project-stage-details ${showDetails ? 'show' : 'hide'}`}>
-      <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
-        <h3>Free UX Discovery</h3>
-        <PhotoListGallery
-          title="Project Team:"
-          data={teamData}
-          name="team-list"
-          direction="list-gallery"
-        />
+    <div className="project-stage-details-wrapper">
+      <div id="project-stage-details" className="project-stage-details show">
+        <div className={`startup-details ${projectStage === 'startup' ? 'show' : 'hide'}`}>
+          <div className="ux-discovery-deliverables-container">
+            <h5>What does free Product Discovery offer?</h5>
+            <GalleryWithMenu data={UXDiscoveryDeliverables} />
+          </div>
+        </div>
+        <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>
+          <h3>Free Quality Assurance</h3>
+          <PhotoListGallery
+            title="We offer you:"
+            data={weOfferYou}
+            name="we-offer"
+            direction="list-gallery"
+            galleryClassName="no-top-margin"
+          />
 
-        <PhotoListGallery
-          title="Fundamental Goals:"
-          data={fundamentalGoals}
-          name="fundamental-goal"
-          direction="gallery-list"
-        />
-        <div className="ux-discovery-deliverables-container">
-          <h5>UX Discovery Deliverables</h5>
-          <GalleryWithMenu data={UXDiscoveryDeliverables} />
+          <PhotoListGallery
+            title="You receive:"
+            data={youReceive}
+            name="you-receive"
+            direction="gallery-list"
+            galleryClassName="no-top-margin"
+          />
+          <div className="lets-talk">
+            Does the offer look good?
+            <a href="#lets-discuss" className="button orange-btn">LET&#39;S TALK</a>
+          </div>
         </div>
       </div>
-      <div className={`existing-project-details ${projectStage === 'existProject' ? 'show' : 'hide'}`}>
-        <h3>Free Quality Assurance</h3>
-        <PhotoListGallery
-          title="We offer you:"
-          data={weOfferYou}
-          name="we-offer"
-          direction="list-gallery"
-          galleryClassName="no-top-margin"
-        />
-
-        <PhotoListGallery
-          title="You receive:"
-          data={youReceive}
-          name="you-receive"
-          direction="gallery-list"
-          galleryClassName="no-top-margin"
-        />
-      </div>
-      <div className="lets-talk">
-        Does the offer look good?
-        <a href="#lets-discuss" className="button orange-btn">Let&#39;s talk</a>
-      </div>
+      <ProductDiscoveryStage shouldHide={projectStage === 'existProject'} />
+      <PhotoBlok photos={projectStage === 'startup' ? outsourcingImgs : outstaffingImgs} />
     </div>
   );
 
@@ -304,27 +358,78 @@ const ReferralProgram = () => {
     const minute = moment(selectedDate).get('minute');
 
     const startDate = moment(`${date}-${month}-${year} 9:00AM`, 'D/M/YYYY hh:mma');
-    const endDate = moment(`${date}-${month}-${year} 7:00PM`, 'D/M/YYYY hh:mma');
+    const endDate = moment(`${date}-${month}-${year} 6:00PM`, 'D/M/YYYY hh:mma');
     const selectDate = moment(`${date}-${month}-${year} ${hour}:${minute}`, 'D/M/YYYY hh:mma');
-    const dates = [];
+    let dates = [];
 
-    while (startDate <= endDate) {
+    while (startDate < endDate) {
       if (startDate >= selectDate) {
         dates.push({
+          dateTime: startDate.format('YYYY-MM-DD HH:mm:ss'),
           value: startDate.format('hh:mm A'),
           label: startDate.format('hh:mm A'),
+          isBooked: false,
         });
       }
       startDate.add(30, 'minute');
     }
 
-    if (dates.length === 0) {
-      dates.push({
-        value: '',
-        label: '',
+    events.forEach(({ start, end }) => {
+      let eventStartTime = new Date(start.dateTime);
+      let eventEndTime = new Date(end.dateTime);
+
+      eventStartTime = eventStartTime.getMinutes() < 30
+        ? new Date(eventStartTime.setMinutes(0))
+        : new Date(eventStartTime.setMinutes(30));
+
+      if (eventEndTime.getMinutes() < 30 && eventEndTime.getMinutes() !== 0) {
+        eventEndTime = new Date(eventEndTime.setMinutes(30));
+      }
+      if (eventEndTime.getMinutes() > 30) {
+        eventEndTime = new Date(eventEndTime.setMinutes(60));
+      }
+
+      dates.forEach(({ dateTime, isBooked }, index) => {
+        const timePeriod = new Date(dateTime);
+        if (timePeriod >= eventEndTime || isBooked) return;
+
+        dates[index].isBooked = eventStartTime <= timePeriod && timePeriod < eventEndTime;
       });
-    }
+    });
+
+    dates = dates.filter(({ isBooked }) => !isBooked).map(({ dateTime, value }) => {
+      const timeByTimezone = moment(dateTime).add(timeDifference, 'm');
+      return {
+        value,
+        dateTime: timeByTimezone.format('YYYY-MM-DD HH:mm:ss'),
+        label: timeByTimezone.format('hh:mm A'),
+      };
+    });
+
     return dates;
+  };
+
+  const selectDate = async (date) => {
+    setSelectedTime(null);
+    setSelectedDate(date);
+    setEventsLoaded(false);
+    const calendarEvents = await (await fetch('/api/free-busy',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ selectedDate: date }),
+      })).json();
+
+    setEventsLoaded(true);
+    setEvents(calendarEvents);
+  };
+
+  const selectCountry = (selectedCountry) => {
+    setSelectedTime(null);
+    setCountry(selectedCountry);
+    setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
   const renderLetsDiscussBlock = () => (
@@ -361,29 +466,22 @@ const ReferralProgram = () => {
           <div className={`left-content ${meetingStep === 3 ? 'hide-content' : 'show-content'}`}>
             <div className={`step-content ${meetingStep === 1 ? 'show' : 'hide'}`}>
               <div className="title">Choose date:</div>
-              <Calendar
-                defaultView="month"
-                minDate={new Date()}
-                value={selectedDate}
-                onChange={(date) => { setSelectedDate(date); setSelectedTime([]); }}
-                navigationLabel={({
-                  date, locale,
-                }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
-                tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
-              />
+              {
+                typeof window === 'object' && renderCalendar && (
+                  <Calendar
+                    defaultView="month"
+                    minDate={new Date()}
+                    minDetail="month"
+                    value={selectedDate}
+                    onChange={(date) => { selectDate(date); }}
+                    navigationLabel={({
+                      date, locale,
+                    }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
+                    tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
+                  />
+                )
+              }
               <div className="title">Choose time:</div>
-              <Select
-                id="countryList"
-                classNamePrefix="country-list"
-                options={countryList}
-                className={`country-list ${showError && !country ? 'error' : ''}`}
-                onChange={(value) => setCountry(value)}
-                value={country}
-                isSearchable
-                placeholder="Your Country"
-
-              />
-
               <Select
                 id="timeList"
                 classNamePrefix="time-list"
@@ -392,7 +490,19 @@ const ReferralProgram = () => {
                 onChange={(time) => setSelectedTime(time)}
                 value={selectedTime}
                 isSearchable={false}
-                placeholder="Select exact time for a call"
+                placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
+                isDisabled={!areEventsLoaded}
+              />
+
+              <Select
+                id="countryList"
+                classNamePrefix="country-list"
+                options={countryList}
+                className={`country-list ${showError && !country ? 'error' : ''}`}
+                onChange={(value) => { selectCountry(value); }}
+                value={country}
+                isSearchable
+                placeholder="Your Time Zone"
               />
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
@@ -445,65 +555,89 @@ const ReferralProgram = () => {
               <textarea name="idea" value={idea} onChange={({ target: { value } }) => setIdea(value)} />
             </div>
           </div>
-          <div className={`right-content ${meetingStep === 3 ? 'center' : ''}`}>
+          <div className={`right-content ${meetingStep === 3 ? 'center' : ''} ${idea ? '' : 'smal'}`}>
             <div className="step-content">
-              <div className="title">Your meeting</div>
-              <div className="meeting-content">
-                <div>With:</div>
-                <div className="with-content">
-                  <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
-                  <div>
-                    <div>Max Savonin</div>
-                    <div>Chief Executive Officer at KeenEthics</div>
+              {meetingStep === 3 && sendEmailResponse && !sendEmailResponse.error
+                ? (
+                  <div className="mail-msg">
+                    <h3 className="red">Thank you</h3>
+                    <p>for booking the time with me</p>
+                    <h3>Please check the confirmation email.</h3>
                   </div>
-                </div>
-                <div className="data">
-                  <span>Date:</span>
-                  {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
-                </div>
-                <div className="data">
-                  <span>Time:</span>
-                  {selectedTime && selectedTime.label ? selectedTime.label : ''}
-                </div>
-                <div className="data">
-                  <span>Your Country:</span>
-                  {country && country.value ? country.value : ''}
-                </div>
-                <br />
-                {meetingStep === 1
-                  ? ''
-                  : (
-                    <>
-                      <div className="data">
-                        <span>Your Name:</span>
-                        {name}
+                )
+                : (
+                  <>
+                    <div className="title">Your meeting with</div>
+                    <div className="meeting-content">
+                      <div className="with-content">
+                        <img src="/static/images/referral-program/max-savonin.jpg" alt="Max Savonin" />
+                        <div>
+                          <div>Max Savonin</div>
+                          <div>Chief Executive Officer at KeenEthics</div>
+                        </div>
                       </div>
-                      <div className="data">
-                        <span>Your phone:</span>
-                        {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
-                        {phone}
+                      <div className="data-wrapper">
+                        <div className="data-container">
+                          <div className="data">
+                            <span>Date:</span>
+                            {selectedDate ? moment(selectedDate).format('dddd, MMMM D, YYYY') : ''}
+                          </div>
+                          <div className="data">
+                            <span>Time:</span>
+                            {selectedTime && selectedTime.label ? selectedTime.label : ''}
+                          </div>
+                          <div className="data">
+                            <span>Your Country:</span>
+                            {country && country.value ? country.value : ''}
+                          </div>
+                          <br />
+                          {meetingStep === 1
+                            ? ''
+                            : (
+                              <>
+                                <div className="data">
+                                  <span>Your Name:</span>
+                                  {name}
+                                </div>
+                                <div className="data">
+                                  <span>Your phone:</span>
+                                  {phone && country && country.phoneCode ? `+${country.phoneCode}` : ''}
+                                  {phone}
+                                </div>
+                                <div className="data">
+                                  <span>Your email:</span>
+                                  {email}
+                                </div>
+                              </>
+                            )}
+                        </div>
+                        {meetingStep === 3 && idea
+                          ? (
+                            <div className="data-container">
+                              <div className="data">
+                                <span>Your Idea:</span>
+                                <br />
+                                <div className="idea-container">
+                                  {idea}
+                                </div>
+                              </div>
+                            </div>
+                          )
+                          : ''
+                        }
                       </div>
-                      <div className="data">
-                        <span>Your email:</span>
-                        {email}
-                      </div>
-                    </>
-                  )}
-                {meetingStep === 3 && sendEmailResponse && sendEmailResponse.status
-                  ? (
-                    <div className="mail-msg">{sendEmailResponse.status}</div>
-                  )
-                  : ''}
-              </div>
+                    </div>
+                  </>
+                )}
             </div>
           </div>
         </div>
-        <div className="next-btn-holder">
+        <div className={`next-btn-holder ${sendEmailResponse && !sendEmailResponse.error ? 'hide' : ''}`}>
           {meetingStep > 1
             ? (
               <a className="button" role="presentation" onClick={() => setMeetingStep(meetingStep - 1)}>
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
+                  <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1f.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
                 </svg>
                 Back
               </a>
@@ -512,11 +646,16 @@ const ReferralProgram = () => {
           {meetingStep === 3
             ? (
               <a role="presentation" className="button orange-btn" onClick={() => sendEmail()}>
-                Confirn
+                REACH OUT
               </a>
             )
             : (
-              <a role="presentation" className="button orange-btn" onClick={() => validateForm()}>
+              <a
+                role="presentation"
+                className="button orange-btn"
+                onClick={() => validateForm()}
+                disabled={!isFormValid()}
+              >
                 Next
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.99459 4C8.28288 4 8.51351 4.08649 8.68649 4.25946L15.7351 11.2649C15.9369 11.4955 16.0378 11.7405 16.0378 12C16.0378 12.2595 15.9369 12.4901 15.7351 12.6919L8.68649 19.6973C8.48468 19.8991 8.25405 20 7.99459 20C7.73514 20 7.5045 19.8991 7.3027 19.6973C7.1009 19.4955 7 19.2649 7 19.0054C7 18.7459 7.1009 18.5153 7.3027 18.3135L13.6162 12L7.3027 5.68649C7.1009 5.48468 7 5.23964 7 4.95135C7 4.66306 7.09369 4.43243 7.28108 4.25946C7.46847 4.08649 7.70631 4 7.99459 4Z" fill="white" />

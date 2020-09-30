@@ -265,6 +265,9 @@
                 padding: 50px 30px 132px;
                 max-width: 804px;
                 margin: 0 auto;
+                .text-bold {
+                    font-weight: bold;
+                }
                 input {
                     display: none;
                 }
@@ -279,6 +282,14 @@
                         animation-name: hideText;
                         animation-duration: 300ms;
                         animation-fill-mode: backwards;
+
+                        a {
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                        a:hover {
+                            opacity: .7;
+                        }
                     }
                     .exist-content {
                         margin: 0;
@@ -303,6 +314,12 @@
                         animation-name: showText;
                         animation-duration: 200ms;
                         animation-fill-mode: backwards;
+                        a {
+                            color: #fff;
+                        }
+                        a:hover {
+                            opacity: .7;
+                        }
                     }
                 }
                 @keyframes hideText {
@@ -498,7 +515,7 @@
             display: flex;
         }
         .project-stage-details {
-            margin: 95px 72px 20px;
+            margin: 35px 72px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -529,45 +546,51 @@
             }
         .lets-talk {
             display: flex;
-                justify-content: center;
-                font-weight: bold;
-                font-size: 34px;
-                line-height: 44px;
-                columns: #000;
-                margin: 60px auto;
-                text-transform: uppercase;
-                font-size: 16px;
-                a {
-                    max-width: 172px;
-                    margin-left: 40px;
-                }
+            justify-content: center;
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 44px;
+            columns: #000;
+            margin: 60px auto;
+            text-transform: uppercase;
+            font-size: 34px;
+            a {
+                max-width: 172px;
+                margin-left: 40px;
+            }
         }
             .ux-discovery-deliverables-container {
             margin: 60px 0 0 90px;
                 h5 {
                     font-weight: bold;
-                    font-size: 24px;
-                    line-height: 34px;
+                    font-size: 34px;
+                    line-height: 44px;
                     margin-bottom: 25px;
+                    text-align: center;
+                    @media (max-width: $tablet-lg) {
+                        font-size: 26px;
+                    }
                 }
             }
             @media (max-width: $desktop-sm) {
                 .ux-discovery-deliverables-container {
-                    margin: 60px 0 0;
+                    margin: 40px 0 60px 0;
                 }
             }
             @media (max-width: $desktop-xs) {
-                margin: 80px 30px 20px;
+                margin: 40px 30px 20px;
                 .lets-talk {
                     margin: 60px auto 0;
                     flex-direction: column;
                     a {
+                        display: block;
+                        margin: 0 auto;
                         margin-top: 25px;
                     }
                 }
             }
             @media (max-width: $tablet-sm) {
-                margin: 60px 25px 20px;
+                margin: 40px 25px 20px;
                 h3 {
                     font-size: 26px;
                     line-height: 36px;
@@ -615,7 +638,7 @@
                 display: flex;
                 justify-content: center;
                 position: relative;
-                height: 505px;
+                min-height: 505px;
                 .left-content,
                 .right-content {
                     width: 50%;
@@ -635,11 +658,50 @@
                 .right-content {
                     justify-content: flex-start;
                     padding-left: 25px;
+
                     &.center {
                         padding-left: 0;
                         justify-content: flex-end;
-                        width: 376px;
+                        width: 784px;
                         transition: width 300ms;
+
+                        &.smal {
+                            width: 376px;
+                            .data-wrapper .data-container {
+                                width: 100%;
+                            }
+                        }
+                        .meeting-content {
+                            height: 100%;
+                        }
+                        @media (max-width: $tablet-lg) {
+                            width: 376px;
+                        }
+                        .step-content{
+                            max-width: 784px;
+    
+                            @media (max-width: $tablet-lg) {
+                                max-width: 376px;
+                            }
+                        }
+                        .data-wrapper {
+                            display: flex;
+
+                            @media (max-width: $tablet-lg) {
+                                flex-direction: column;
+                            }
+                            .data-container {
+                                width: 50%;
+
+                                @media (max-width: $tablet-lg) {
+                                    width: 100%;
+                                }
+                                .idea-container {
+                                    max-height: 220px;
+                                    overflow-y: auto;
+                                }
+                            }
+                        }
                     }
                 }
                 .step-content {
@@ -649,6 +711,24 @@
                     display: flex;
                     flex-direction: column;
                     margin: 0 0 25px;
+                    .mail-msg {
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-top: 40px;
+                        background-color: #FFF;
+                        height: 400px;
+                        padding: 25px;
+
+                        h3 {
+                            margin-top: 70px;
+                            font-size: 24px;
+                            line-height: 34px;
+                        }
+
+                        .red {
+                            color: #D62C2C;
+                        }
+                    }
                     .title {
                         font-weight: bold;
                         font-size: 24px;
@@ -697,8 +777,8 @@
                                 font-weight: bold;
                                 font-size: 18px;
                                 line-height: 28px;
-                                text-transform: uppercase;
-                                color: #D62C2C;
+                                color: #12233D;
+                                background-color: #fff;
                                 font-family: 'Raleway', sans-serif;
                                 &:hover {
                                     background-color: transparent;
@@ -706,6 +786,7 @@
                             }
                         }
                         .react-calendar__month-view__days {
+                            &__day  { font-weight: bold; }
                             .react-calendar__tile {
                                 font-family: Raleway;
                                 font-size: 16px;
@@ -736,7 +817,7 @@
                                 &:disabled {
                                     color: rgba(18, 35, 61, 0.5);
                                     background-color: transparent;
-
+                                    font-weight: normal;
                                 }
                                 &.react-calendar__tile--active {
                                     background-color: transparent;
@@ -848,6 +929,10 @@
                     }
                     .time-list {
                         margin: 0 0 16px 0;
+
+                        &__menu {
+                            z-index: 200;
+                        }
                         .time-list__control {
                             border:none;
                             box-shadow: none;
@@ -857,10 +942,29 @@
                                 display: none;
                             }
                             .time-list__value-container {
+                                background-color: #fff;
                                 height: 100%;
                                 padding: 0;
                                 .time-list__placeholder {
                                     margin-left: 8px;
+                                    .loader {
+                                        border: 4px solid #f3f3f3;
+                                        border-radius: 50%;
+                                        border-top: 3px solid #d62624;
+                                        width: 20px;
+                                        height: 20px;
+                                        -webkit-animation: spin 2s linear infinite; /* Safari */
+                                        animation: spin 2s linear infinite;
+                                    }
+                                    /* Safari */
+                                    @-webkit-keyframes spin {
+                                        0% { -webkit-transform: rotate(0deg); }
+                                        100% { -webkit-transform: rotate(360deg); }
+                                    }
+                                    @keyframes spin {
+                                        0% { transform: rotate(0deg); }
+                                        100% { transform: rotate(360deg); }
+                                    }
                                 }
                                 .time-list__single-value {
                                     top: 0;
@@ -929,6 +1033,7 @@
                                 }
                             }
                         }
+
                         .data {
                             line-height: 28px;
                             font-weight: normal;
@@ -938,12 +1043,6 @@
                                 font-weight: bold;
                                 margin-right: 15px;
                             }
-                        }
-                        .mail-msg {
-                            font-size: 18px;
-                            font-weight: bold;
-                            margin-top: 20px;
-                            color: #D62C2C;
                         }
                     }
                     &.hide {
@@ -1076,11 +1175,15 @@
                     text-transform: uppercase;
                     height: 48px;
                 }
+
+                &.hide {
+                    display: none;
+                }
             }
         }
         .lets-discuss-container {
             background-image: url("/static/images/referral-program/lets-discuss-bg.jpg");
-            background-size: calc(50% + 188px) 100%;
+            background-size: calc(50% + 255px) 100%;
             background-repeat: no-repeat;
             padding: 0 82px;
             position: relative;

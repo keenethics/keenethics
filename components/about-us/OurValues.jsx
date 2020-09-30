@@ -4,7 +4,6 @@ import React from 'react';
 
 import CategoryButton from '../categories-filter/CategoryButton';
 import ourValuesData from '../../data/ourValues';
-import { ItemDescription } from './StoryItem';
 import ValuesSlider from './ValuesSlider';
 
 const steps = ourValuesData.map((v) => v.title);
