@@ -202,8 +202,19 @@
     }
   }
   .portfolio-works {
-    .portfolio__item {
-
+    ul {
+      margin: 0;
+      li {
+        padding: 0;
+        &:before {
+          content: none;
+        }
+      }
+    }
+  
+    h3 {
+      margin: 0;
+      font-size: initial;
     }
     .portfolio__item-figure {
       box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);

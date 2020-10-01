@@ -1,4 +1,3 @@
-
 on:
   push:
     branches:
@@ -16,6 +15,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Add .env file
+      run: |
+        echo "$PROD_ENV" > .env
+      env:
+        PROD_ENV: ${{secrets.PROD_ENV}}
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -31,7 +36,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: 174235647593.dkr.ecr.eu-central-1.amazonaws.com/keenethics
+        ECR_REPOSITORY: keenethics
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and

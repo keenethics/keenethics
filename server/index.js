@@ -25,13 +25,13 @@ const nodemailer = require('nodemailer');
 const mailgun = require('nodemailer-mailgun-transport');
 const formatValidation = require('string-format-validation');
 const fileUpload = require('express-fileupload');
-const moment = require('moment');
 const { mailgunAuth, hubSpot } = require('./config');
 const { getTeam, getCareers } = require('./get-info-from-googleapis');
 const { checkRequiredEstimateFields } = require('./validator');
 const checkAttachment = require('./attachment-validator');
 const autoReplyMailOptions = require('./autoReplyMailOptions');
 const thanksMessageFromUser = require('./autoReplyReferralForm');
+const { bookingMeeting, getAllCalendarEvents } = require('./calendar');
 
 const dev = NODE_ENV !== 'production';
 const DEFAULT_PORT = 3000;
@@ -87,6 +87,16 @@ app.prepare().then(() => {
   server.use(express.static('public'));
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(fileUpload());
+
+  server.post('/api/free-busy', async (req, res) => {
+    try {
+      const { selectedDate } = req.body;
+      const events = await getAllCalendarEvents(selectedDate);
+      res.status(200).json(events);
+    } catch (err) {
+      res.status(500).json([]);
+    }
+  });
 
   server.post('/contact', (req, res) => {
     const {
@@ -515,7 +525,6 @@ app.prepare().then(() => {
       name,
       email,
       phone,
-      idea,
     } = JSON.parse(req.body.data);
 
     if (!formatValidation.validate({ min: 3, max: 25 }, name)) {
@@ -561,15 +570,6 @@ app.prepare().then(() => {
       return;
     }
 
-    const html = `
-      <p>Dear ${name},</p>
-      <p>You have booked a meeting with Max Savonin</p>
-      <p>Date: ${moment(selectedDate).format('dddd, MMMM D, YYYY')}</p>
-      <p>Time: ${selectedTime}</p>
-      <p>Your country: ${country}</p>
-      <p>Your phone: ${phone}</p>
-      <p>${idea}</p>
-    `;
     const mailOptions = {
       from: 'Max from KeenEthics business@keenethics.com',
       to: email,
@@ -587,13 +587,18 @@ app.prepare().then(() => {
     };
 
     transporter.sendMail(mailOptions, () => {
-      res.send({
-        error: false,
-        status: 'Message sent',
-      });
-
-      // transporter.sendMail();
-      return false;
+      try {
+        bookingMeeting(JSON.parse(req.body.data));
+        res.send({
+          error: false,
+          status: 'Message sent',
+        });
+      } catch (err) {
+        res.send({
+          error: true,
+          status: 'Error Creating Calender Event',
+        });
+      }
     });
   });
 

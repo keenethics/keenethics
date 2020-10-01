@@ -2,10 +2,9 @@ const { google } = require('googleapis');
 const _ = require('lodash');
 const memoize = require('lodash/memoize');
 const { spreadSheet } = require('./config');
+const getUser = require('./google-auth');
 
 const TEAM_SHEET_ID = spreadSheet.id;
-const CREDS_FILE = spreadSheet.securityFile;
-const googleScopes = ['https://www.googleapis.com/auth/drive.readonly'];
 const TEAM_RANGE = spreadSheet.teamRange;
 const CAREERS_RANGE = spreadSheet.careersRange;
 
@@ -23,11 +22,6 @@ const arrayOfArraysToCollection = (arr) => {
 const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
   (v) => new RegExp(rangeName).test(v.range),
 ).values;
-
-const getClient = async (keyFile, scopes) => google.auth.getClient({
-  keyFile,
-  scopes,
-});
 
 let cashedSheetData = [];
 
@@ -51,15 +45,16 @@ class CustomMap extends Map {
 
 memoize.Cache = CustomMap;
 
-const getSheets = memoize(async (spreadsheetId) => {
+const getSheets = memoize(async () => {
   // TEAM_SHEET_ID
-  const client = await getClient(CREDS_FILE, googleScopes);
+  const client = await getUser();
 
   const sheets = google.sheets('v4');
 
   const table = await sheets.spreadsheets.values.batchGet({
     auth: client,
-    spreadsheetId,
+    spreadsheetId: '1uKOBbmCFPXoGIBvkJJ8XH7TjKZUgeguD812T6I2PQwI',
+    key: 'AIzaSyBemxYdxaDImFEbGVX-tw2z5VtCtMxZfVQ',
     ranges,
   });
 
@@ -86,8 +81,7 @@ const getData = async (rangeName, sheetId) => {
     return arrayOfArraysToCollection(cashedData);
   }
 };
-
-getData(TEAM_RANGE, TEAM_SHEET_ID);
+// getData(TEAM_RANGE, TEAM_SHEET_ID);
 
 const getTeam = async () => getData(TEAM_RANGE, TEAM_SHEET_ID);
 const getCareers = async () => getData(CAREERS_RANGE, TEAM_SHEET_ID);

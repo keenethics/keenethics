@@ -11,7 +11,6 @@ import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 import { works } from '../main.config';
 
 import Works from '../components/portfolio/works';
-import './services-education-software-development.scss';
 
 const BusinessAdministrationSoftware = () => {
   const companiesWeServe = [
