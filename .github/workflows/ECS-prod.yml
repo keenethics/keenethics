@@ -15,6 +15,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Add .env file
+      run: |
+        echo "$PROD_ENV" > .env
+      env:
+        PROD_ENV: ${{secrets.PROD_ENV}}
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
