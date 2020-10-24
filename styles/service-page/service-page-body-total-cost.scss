@@ -1,0 +1,26 @@
+.service-page-total-cost {
+  padding-left: calc(15% - 50px);
+  width: max-content;
+  position: relative;
+  &-wrapp {
+    margin-top: 70px;
+  }
+  & > p {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #12233d;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &-background-price {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 28px;
+    color: #d62c2c;
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,26 @@
+.service-page-body-background-color {
+  background-color: #e5e5e5;
+}
+
+.service-page-porfolio-section {
+  background-color: #FAFAFA;
+  padding-top: 70px;
+  & .filter__list {
+    &::before {
+      background: none;
+    }
+    &::after {
+      background: none;
+    }
+  }
+  &-title {
+    margin-bottom: 25px;
+    & > h3 {
+      font-family: Raleway;
+      font-size: 34px;
+      line-height: 44px;
+      text-align: center;
+      color: #12233d;
+    }
+  }
+}

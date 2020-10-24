@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function CallToActionButton({ title, href, buttonBefore }) {
+export default function CallToActionButton({
+  title, href, buttonBefore, clazz,
+}) {
   return (
-    <div className="call-to-cation-btn-wrap">
+    <div className={`call-to-cation-btn-wrap ${clazz}`}>
       {
         buttonBefore && buttonBefore
       }
@@ -26,9 +28,11 @@ CallToActionButton.propTypes = {
   title: PropTypes.string,
   href: PropTypes.string,
   buttonBefore: PropTypes.node,
+  clazz: PropTypes.string,
 };
 CallToActionButton.defaultProps = {
   title: 'Learn more',
+  clazz: '',
   href: '/contacts',
   buttonBefore: null,
 };

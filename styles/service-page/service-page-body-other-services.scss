@@ -1,0 +1,45 @@
+.service-page-body-other-services {
+  padding-right: 30px;
+  &-wrapp {
+    flex: 0 0 37%;
+  }
+  &-title {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #12233d;
+  }
+  &-items {
+    &-list {
+      &-item {
+        padding: 10px 0;
+        border-bottom: 3px solid rgba(18, 35, 61, 0.04);
+        position: relative;
+        &.active {
+          border-bottom: 1px solid rgba(214, 44, 44, 0.2);
+          & > a {
+            color: #d62c2c;
+          }
+        }
+        & > a {
+          font-family: Raleway;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 42px;
+          color: rgba(18, 35, 61, 0.8);
+          text-decoration: none;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 25px;
+          height: 15px;
+          background: url("/static/images/svg/service-page-right-arrow.svg") no-repeat center;
+        }
+      }
+    }
+  }
+}

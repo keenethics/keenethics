@@ -1,0 +1,53 @@
+.service-page-what-do-we-offer {
+  display: flex;
+  justify-content: center;
+  &-header {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 34px;
+    line-height: 44px;
+    color: #12233d;
+    padding: 90px 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    &-item {
+      display: flex;
+      &-left {
+        flex-basis: 50%;
+        &-title {
+          & > h4 {
+            font-family: Raleway;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 14px;
+            color: #000000;
+          }
+        }
+        &-red-underline {
+          width: 95px;
+          background: rgba(0, 0, 0, 0.0001);
+          border: 1px solid #d62c2c;
+          margin: 35px 0;
+        }
+        &-text {
+          & > p {
+            font-family: Raleway;
+            font-size: 16px;
+            line-height: 28px;
+            color: #12233d;
+          }
+        }
+      }
+      &-right {
+        flex-basis: 50%;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
