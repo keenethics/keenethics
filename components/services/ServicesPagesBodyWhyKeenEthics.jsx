@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ServicesPagesBodyWhyKeenEthics = ({ whyKeenList, title }) => (
   <section className="service-page-body-why-keen-ethics-wrapp">
@@ -22,4 +23,9 @@ const ServicesPagesBodyWhyKeenEthics = ({ whyKeenList, title }) => (
   </section>
 );
 
+
+ServicesPagesBodyWhyKeenEthics.propTypes = {
+  whyKeenList: PropTypes.array,
+  title: PropTypes.string,
+};
 export default ServicesPagesBodyWhyKeenEthics;

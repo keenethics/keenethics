@@ -3,140 +3,105 @@ import Link from 'next/link';
 import React from 'react';
 
 import Layout from '../components/layout/main';
+import ContentNavigation from '../components/content/navigation';
 
+import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
+import FeaturesList from '../components/content/FeaturesList';
 import LetsStart from '../components/about-us/LetsStart';
+import { getPostsList } from '../lib/contentful';
 
-import { works, homePageWorks } from '../main.config';
-import ServicesPagesHeader from '../components/services/ServicesPagesHeader';
-import ServicesPagesBodyTotalServiceCost from '../components/services/ServicesPagesBodyTotalServiceCost';
-import ServicePagesBodyWhatIsService from '../components/services/ServicesPagesBodyWhatIsService';
-import Portfolio from './portfolio';
-import ServicesPagesWhatDoWeOffer from '../components/services/ServicesPapgesWhatDoWeOffer';
-import OurMethods from '../components/blocks/our-methods/OurMethods';
-import ServicesPagesBodyWhyKeenEthics from '../components/services/ServicesPagesBodyWhyKeenEthics';
-import ServicesPagesBodyOtherServices from '../components/services/ServicesPagesBodyOtherServices';
+import { works } from '../main.config';
 
 const whatIsWebDevelopment = [
   {
     icon: '/static/services/perfectly-scalable.svg',
-    alt: 'Empowering growth',
-    description: (
-      <p>
-        <b>Empowering growth</b>
-        <br />
-        The story of our experience with indoor positioning service began when
-        one of our top developers earned a PhD degree in indoor positioning and
-        IoT technologies. A few years later, we have many projects in our
-        portfolio and a lot of experience to share. We will be happy to help you
-        implement indoor positioning technology and let your business grow.
-      </p>
-    ),
+    alt: 'perfectly scalable',
+    description:
+  <p>
+    <b>User-friendly</b>
+    <br />
+    Web platforms are more convenient for complex tasks than mobile applications.
+  </p>,
   },
   {
     icon: '/static/services/any-device-or-browser.png',
-    alt: 'Building value',
-    description: (
-      <p>
-        <b>Building value</b>
-        <br />
-        KeenEthics is a company that revolves around its unique ethical strategy
-        — we believe that the tech world can work in favor of the social good.
-        As a part of that, there is an interview series on our blog called
-        {' '}
-        <a href="/blog?chosen=Tech4Good" target="_blank">
-          “The Leaders of Tech4Good”.
-        </a>
-        {' '}
-        Also, we strive for transparent and honest relationships with our
-        employees, clients, and partners. This is what makes us different.
-      </p>
-    ),
+    alt: 'any device or browser',
+    description:
+  <p>
+    <b>Multi-platform</b>
+    <br />
+    Unlike mobile applications, which are tied to a certain platform, web platforms
+    are universal and can be accessed from any device or browser.
+  </p>,
   },
   {
     icon: '/static/services/working-impeccably.svg',
-    alt: 'Launching in a matter of weeks',
-    description: (
-      <p>
-        <b>Launching in a matter of weeks</b>
-        <br />
-        Sometimes, all the bureaucratic processes take too much time — the team
-        burns out before the development itself begins. We have been looking for
-        the solution — and hopefully, we have found one. Our expert Partner
-        Engagement manager is working hand-in-hand with you to launch project
-        development in the shortest possible terms.
-      </p>
-    ),
+    alt: 'easier to develop',
+    description:
+  <p>
+    <b>Simply developed</b>
+    <br />
+    Web apps are easier for a web app development company to develop and maintain
+    since they are not platform-specific.
+  </p>,
   },
   {
     icon: '/static/services/fastest-technology.svg',
-    alt: 'Bringing tech expertise',
-    description: (
-      <p>
-        <b>Bringing tech expertise</b>
-        <br />
-        Aside from indoor positioning expertise, we specialize in web and mobile
-        development. We will develop a custom web or mobile solution, which will
-        make your indoor positioning system complete. Also, there is a Business
-        Analyst in our team who specializes in the implementation of indoor
-        positioning systems IPS — the one who came up with the idea for Asama.
-      </p>
-    ),
+    alt: 'does not require approval',
+    description:
+  <p>
+    <b>Swiftly deployed</b>
+    <br />
+    The deployment of a web platform is almost instant as it does not require
+    approval from App Store or Google Play.
+  </p>,
   },
   {
     icon: '/static/services/radial-chart.svg',
-    alt: 'Protecting your data',
-    description: (
-      <p>
-        <b>Protecting your data</b>
-        <br />
-        AData security is one of the major concerns associated with software
-        development, particularly with indoor positioning and IoT technology.
-        Using different testing approaches, pair programming, and external code
-        review, our developers and QA specialists, together with security
-        experts, make sure that the app is error-free and resistant to malicious
-        attacks.
-      </p>
-    ),
+    alt: 'radial chart',
+    description:
+  <p>
+    <b>Resource-efficient</b>
+    <br />
+    Although web platforms cannot function offline, there is no need to download and
+    install them. It saves the user time, effort, and storage space.
+  </p>,
+  },
+  {
+    icon: '/static/services/phonelink.png',
+    alt: 'phone',
+    description:
+  <p>
+    <b>Optimal</b>
+    <br />
+    If you want to combine the advantages of both web and mobile software, you are welcome to&nbsp;
+    <a href="/tech-apps-progressive-web-apps" target="_blank">develop a progressive web app</a>
+    .
+  </p>,
   },
 ];
 
 const whatDoWeOfferIcons = [
   {
-    header: 'User-friendly',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-1.png',
-    title:
-      'Web platforms are more convenient for complex tasks than mobile applications.',
+    icon: '/static/services/node-js/custom-node-js-software-development-solutions.png',
+    title: 'Business Research and Analysis',
   },
   {
-    header: 'Simply developed',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-2.png',
-    title:
-      'Web apps are easier to develop and maintain since they are not platform-specific.',
+    icon: '/static/services/node-js/ui-ux-development-for-node-js.png',
+    title: 'UI/UX Design',
   },
   {
-    header: 'Resource-efficient',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-3.png',
-    title:
-      'Although web platforms cannot function offline, there is no need to download and install them. It saves the user time, effort, and storage space.',
+    icon: '/static/services/node-js/node-js-data-management.png',
+    title: 'Continuous Support',
   },
   {
-    header: 'Multi-platform',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-4.png',
-    title:
-      'Unlike mobile applications, which are tied to a certain platform, web platforms are universal and can be accessed from any device or browser.',
+    icon: '/static/services/node-js/node-js-web-and-application-development.png',
+    title: 'Web Software Development & QA',
   },
   {
-    header: 'Swiftly deployed',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-5.png',
-    title:
-      'We highly value our pool of talents and make sure that each person feels not as an employee but as a team member. We deeply care about our corporate culture and make sure that every person enjoys the time they spend among their colleagues.',
-  },
-  {
-    header: 'Optimal',
-    icon: '/static/services/indoor-positioning/indoor-positioning-img-6.png',
-    title:
-      'If you want to combine the advantages of both web and mobile software, you are welcome to develop a progressive web app.',
+    icon: '/static/services/node-js/node-js-applications.png',
+    title: 'Tech Consulting',
   },
 ];
 
@@ -146,104 +111,280 @@ class ServicesWebDevelopment extends React.Component {
   constructor() {
     super();
     this.state = {
-      isMobile: false,
-      isTablet: false,
-      isTabletL: false,
+      posts: [],
     };
-
-    this.listener = null;
   }
 
-  componentDidMount() {
-    if (typeof window !== 'undefined') {
-      this.listener = window.addEventListener('resize', ({ target }) => {
-        if (target) {
-          this.setState({
-            isTabletL: target.innerWidth <= 1024 && target.innerWidth > 768,
-            isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
-            isMobile: target.innerWidth <= 480,
-          });
-        }
-      });
-
-      this.setState({
-        isTabletL: window.innerWidth <= 1024 && window.innerWidth > 768,
-        isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
-        isMobile: window.innerWidth <= 480,
-      });
-    }
-  }
-
-  componentWillUnmount() {
-    if (typeof window !== 'undefined' && this.listener) {
-      window.removeEventListener(this.listener);
+  async componentDidMount() {
+    const { posts } = this.state;
+    if (!posts || !posts.length) {
+      const blogPosts = await getPostsList();
+      if (blogPosts && blogPosts.items) {
+        this.setState({ posts: blogPosts.items });
+      }
     }
   }
 
   render() {
-    const { isMobile, isTablet, isTabletL } = this.state;
-    const serviceCostText = (
-      <p>
-        is the projected indoor location market size in 2022, according to
-        {' '}
-        <Link href="https://www.marketsandmarkets.com/Market-Reports/indoor-location-market-989.html">
-          <a>Markets and Markets.</a>
-        </Link>
-      </p>
-    );
-    const whatisParagraphs = [
-      'Indoor positioning is a technology, which uses a network of devices to locate people or objects in such places where GPS and other satellite technologies cannot do it properly. For instance, GPS technologies are not precise enough to locate people inside large buildings, such as airports, malls, or warehouses. And this is where indoor positioning comes into play. This technology offers a few ways for locating people and objects with one-meter accuracy. One of such ways is based on iBeacon — the technology developed by Apple, which employs BLE transmitters.',
-      'ndoor positioning system is an IoT solution, which lets businesses efficiently locate their employees or customers and use this information for business development purposes. For example, indoor positioning in retail can help businesses advertise their products to the customers passing by their store. At the same time, indoor positioning in airports can help passengers find their way around the building and receive timely flight information. Meanwhile, indoor positioning in warehouses can help employers control their employees. The opportunities are indeed endless when you start thinking about it.',
-    ];
     return (
       <Layout>
-        <main className="service-page-body-background-color">
-          <ServicesPagesHeader />
-          <ServicesPagesBodyTotalServiceCost
-            priceText="$ 40.99 billion"
-            text={serviceCostText}
-          />
-          <ServicePagesBodyWhatIsService
-            paragraphs={whatisParagraphs}
-            title="What Is Web Development?"
-          />
+        <ContentNavigation />
+        <div className="content-block service-webdev">
+          <section>
+            <h1 className="text-center">Custom Web Development Services</h1>
+            <p className="text-center text-italic">Developing high-quality and fault-tolerant web platforms for the Internet and private networks</p>
+          </section>
+          <section>
+            <h2>What Is Web Development?</h2>
+            <p>
+              The Internet has turned into a universal environment for people to communicate, rest,
+              and work. Each web platform is a particular ecosystem with its own population,
+              opportunities, and threats. Hire a professional and skillful team of web application
+              developers. This is the best way to ensure that the users of your website are safe and
+              satisfied with their web experience.
+            </p>
+            <p>
+              Some say that custom web application development is going obsolete as mobile devices
+              conquer the world. Yet, there are some strengths that make web development a decent
+              competitor to mobile tech.
+            </p>
+          </section>
+          <section>
+            <h2>Portfolio</h2>
+            <p>
+              These are some of the applications and websites that we have developed as a
+              web application development company:
+            </p>
+            <Works works={webDevelopmentWorks} />
+          </section>
+          <section>
+            <h2>Why Custom Web Application Development Services?</h2>
+            <FeaturesList list={whatIsWebDevelopment} />
+            <CallToActionButton title="Request a proof of concept" />
+          </section>
+          <section>
+            <h2>What Do We Offer?</h2>
+            <ul className="mobile-development-list">
+              {
+                whatDoWeOfferIcons.map(({ icon, title, href }) => (
+                  <li className="mobile-development-item" key={icon}>
+                    <figure>
+                      <img src={icon} alt={title} />
+                      <figcaption className="mobile-development-figcaption">
+                        {
+                          href ? <Link href={href}>{title}</Link> : title
+                        }
+                      </figcaption>
+                    </figure>
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+          <section>
+            <h2>How We Do It?</h2>
+            <p>
+              When providing custom web application development services, we strive to satisfy
+              every need of our partner. We position ourselves as a full-stack development company,
+              and each software developer at KeenEthics is equally skilled in
+              back end and front end.
+            </p>
+            <h2 className="subtitle-web-dev">
+              --
+              <br />
+              Our team of expert designers, developers, QA specialists, and Project Managers will
+              turn your project idea into a perfect final product.
+              <br />
+              --
+            </h2>
+            <p className="technologies-links">
+              These are the technologies that help us do it:
+              <span><a href="/services-web-development-node" target="_blank">Node.js</a></span>
+              ,
+              <span><a href="/tech-front-end-angular" target="_blank">Angular</a></span>
+              ,
+              <span><a href="/tech-front-end-react" target="_blank">React</a></span>
+              ,
+              <span><a href="/tech-front-end-aurelia" target="_blank">Aurelia</a></span>
+              ,
+              <span><a href="/tech-front-end-vue" target="_blank">Vue</a></span>
+              ,
+              <span><a href="/tech-back-end-express" target="_blank">Express</a></span>
+              ,
+              <span><a href="https://github.com/keenethics/svelte-notifications" target="_blank" rel="noopener noreferrer nofollow">Svelte</a></span>
+              ,
+              <span><a href="/services-web-development-meteor" target="_blank">Meteor</a></span>
+              .
+            </p>
+            <div className="project-content-more">
+              <ul className="technologies-list">
+                <li className="technologies-item">
+                  <a href="/tech-front-end-angular" target="_blank">
+                    <img src="/static/services/web-dev/angular.svg" alt="Angular" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-front-end-react" target="_blank">
+                    <img src="/static/services/web-dev/react.png" alt="React" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-front-end-aurelia" target="_blank">
+                    <img src="/static/services/web-dev/aurelia.png" alt="Aurelia" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-front-end-vue" target="_blank">
+                    <img src="/static/services/web-dev/vue.png" alt="Vue" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/services-web-development-meteor" target="_blank">
+                    <img src="/static/services/web-dev/meteor.png" alt="Meteor" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a
+                    href="https://github.com/keenethics/svelte-notifications"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <img src="/static/services/web-dev/svelte.png" alt="Svelte" />
+                  </a>
+                </li>
+              </ul>
+              <ul className="technologies-list">
+                <li className="technologies-item">
+                  <a href="/services-web-development-node" target="_blank">
+                    <img src="/static/services/web-dev/node-js.png" alt="Node.js" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-back-end-express" target="_blank">
+                    <img src="/static/services/web-dev/express.png" alt="Express.js" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p>
+              The database technology that we integrate are&nbsp;
+              <a href="/tech-data-base-mongo" target="_blank">MongoDB</a>
+              &nbsp;and&nbsp;
+              <a href="/tech-data-base-mysql" target="_blank">MySQL</a>
+              .
+            </p>
+            <div className="project-content-more">
+              <ul className="technologies-list">
+                <li className="technologies-item">
+                  <a href="/tech-data-base-mongo" target="_blank">
+                    <img src="/static/services/web-dev/mongodb.png" alt="MySQL" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-data-base-mysql" target="_blank">
+                    <img src="/static/services/web-dev/mysql.jpg" alt="Express.js" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p>
+              The API integration technologies we use are&nbsp;
+              <a href="/tech-api-integration-rest" target="_blank">REST</a>
+              &nbsp;and&nbsp;
+              <a href="/tech-api-integration-graphql" target="_blank">GraphQL</a>
+              .
+            </p>
+            <div className="project-content-more">
+              <ul className="technologies-list">
+                <li className="technologies-item">
+                  <a href="/tech-api-integration-rest" target="_blank">
+                    <img src="/static/services/web-dev/rest.png" alt="REST" />
+                  </a>
+                </li>
+                <li className="technologies-item">
+                  <a href="/tech-api-integration-graphql" target="_blank">
+                    <img src="/static/services/web-dev/graphql.png" alt="GraphQL" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>Why KeenEthics?</h2>
 
-          <section className="service-page-porfolio-section">
-            <div className="service-page-porfolio-section-title">
-              <h3>Projects</h3>
-            </div>
-            <Portfolio
-              isMobile={isTabletL || isTablet || isMobile}
-              postIds={homePageWorks}
-              pageTitle="/"
-              topTitle=" "
-            />
+            <h3 className="red-italic-title">
+              <span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span>
+              &nbsp;Empowering growth
+            </h3>
+            <p>
+              “One size fits all” is neither professional nor effective. We understand that
+              your business is unique, with its special features, interests, and needs. Our PMs
+              and business analysts are here for you to collect, analyze, and implement all your
+              requirements. Also, we have software engineers who, besides their general technical
+              expertise, are knowledgeable and skilled in specific industries, ranging from&nbsp;
+              <a href="/services-education-software-development" target="_blank">education software development services</a>
+              &nbsp;to ecommerce.
+            </p>
+
+            <h3 className="red-italic-title">
+              <span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span>
+              &nbsp;Building value
+            </h3>
+            <p>
+              Our web application development company cooperates according to both Time & Material
+              and Fixed Price approach, whichever you find to be more suitable. The pricing of our
+              web app development services is equally suitable for small businesses and start-ups
+              and for large corporations because, while providing cost-efficient solutions, we do
+              not compromise quality. If you are not convinced,&nbsp;
+              <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer nofollow">see what our long-term partner has to say</a>
+              &nbsp;or&nbsp;
+              <a href="/contacts?activeform=estimate" target="_blank">let us estimate your project</a>
+              !
+            </p>
+
+            <h3 className="red-italic-title">
+              <span style={{ fontSize: '28px', marginRight: '.5em' }}>3</span>
+              &nbsp;Launching in a matter of weeks
+            </h3>
+            <p>
+              Our professional Project Managers are ready and willing to organize custom web app
+              development according to your requests and to&nbsp;
+              <a href="/blog/how-to-choose-your-optimal-development-methodology" target="_blank">choose the optimal development methodology</a>
+              &nbsp;together with you. They will make sure that you are constantly involved in the
+              process of custom web application development services if you want to. If you do not
+              have time to communicate continuously, they will provide you with a perfect final
+              product. If you want to manage the project yourself, our web application developers
+              will gladly play according to your rules.
+            </p>
+
+            <h3 className="red-italic-title">
+              <span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span>
+              &nbsp;Bringing tech expertise
+            </h3>
+            <p>
+              Our UI/UX designers develop elegant and responsive interfaces, which are visually
+              appealing and intuitively clear. In turn, our proficient developers create robust
+              and fault-tolerant solutions, and QA specialists make sure that the web platform
+              is bug-free and functions perfectly. Check our&nbsp;
+              <a href="/portfolio" target="_blank">case studies</a>
+              &nbsp;to see the quality of our web app development services!
+            </p>
+
+            <h3 className="red-italic-title">
+              <span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span>
+              &nbsp;Protecting your data
+            </h3>
+            <p>
+              We understand that&nbsp;
+              <a href="/blog/1543388400000-your-data-is-safe-in-ukraine" target="_blank">information and data</a>
+              &nbsp;are the most valuable assets in the 21st century. Therefore, we ensure the
+              physical safety of our servers and proper encryption of online data. We also sign
+              non-disclosure agreements with our partners and employees to prevent any leaks of
+              information about our clients or operations.
+            </p>
           </section>
-          <ServicesPagesWhatDoWeOffer offers={whatDoWeOfferIcons} />
-          <OurMethods />
-          <section className="service-page-see-more-projects-wrapp">
-            <div className="service-page-see-more-projects">
-              <h3>
-                For more projects in these and other industries, check out our
-                Case Studies.
-              </h3>
-              <CallToActionButton
-                clazz="see-more-projects"
-                title="See Projects"
-              />
-            </div>
-          </section>
-          <ServicesPagesBodyWhyKeenEthics
-            title="Why choose KeenEthics?"
-            whyKeenList={whatIsWebDevelopment}
-          />
-          <LetsStart />
-          <section className="service-page-choose-other-services-wrapp">
-            <div className="service-page-choose-other-services">
-              <ServicesPagesBodyOtherServices title="You may also be interested in following services" />
-            </div>
-          </section>
-        </main>
+        </div>
+        <LetsStart />
       </Layout>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ServicesPagesBodyTotalServiceCost = ({ priceText, text }) => (
   <div className="service-page-total-cost-wrapp">
@@ -10,5 +11,10 @@ const ServicesPagesBodyTotalServiceCost = ({ priceText, text }) => (
     </div>
   </div>
 );
+
+ServicesPagesBodyTotalServiceCost.propTypes = {
+  priceText: PropTypes.string,
+  text: PropTypes.string,
+};
 
 export default ServicesPagesBodyTotalServiceCost;
