@@ -9,6 +9,9 @@
     line-height: 44px;
     color: #12233d;
     padding: 90px 0;
+    @media screen and (max-width: $mobile-lg) {
+      padding: 60px 10px 60px 10px;
+    }
   }
 
   &-list {
@@ -19,11 +22,17 @@
       max-width: initial;
       padding: 0 30px;
     }
+    @media screen and (max-width: $mobile-lg) {
+      padding: 0 20px;
+    }
     &-item {
       display: flex;
       justify-content: space-between;
       &:not(:first-child) {
         margin-top: 90px;
+        @media screen and (max-width: $mobile-lg) {
+          margin-top: 45px;
+        }
       }
       @media screen and (max-width: $tablet-lg) {
         flex-direction: column-reverse;
@@ -33,6 +42,9 @@
         @media screen and (max-width: $tablet-lg) {
           max-width: 80%;
           margin-top: 35px;
+        }
+        @media screen and (max-width: $mobile-lg) {
+          max-width: initial;
         }
         &-title {
           & > h4 {
@@ -62,6 +74,9 @@
         flex-basis: 50%;
         @media screen and (max-width: $tablet-lg) {
           max-width: 80%;
+        }
+        @media screen and (max-width: $mobile-lg) {
+          max-width: initial;
         }
         & > img {
           width: 100%;

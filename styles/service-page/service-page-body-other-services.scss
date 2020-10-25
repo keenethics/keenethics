@@ -1,5 +1,9 @@
 .service-page-body-other-services {
   padding-right: 30px;
+  @media screen and (max-width: $mobile-lg) {
+    padding-right: 0;
+    padding-left: 20px;
+  }
   &-wrapp {
     flex: 0 0 37%;
   }
@@ -21,6 +25,9 @@
         position: relative;
         @media screen and (max-width: $tablet-lg) {
           max-width: 90%;
+        }
+        @media screen and (max-width: $mobile-lg) {
+          max-width: initial;
         }
         &.active {
           border-bottom: 1px solid rgba(214, 44, 44, 0.2);
@@ -44,6 +51,9 @@
           width: 25px;
           height: 15px;
           background: url("/static/images/svg/service-page-right-arrow.svg") no-repeat center;
+          @media screen and (max-width: $mobile-lg) {
+            right: 15px;
+          }
         }
       }
     }

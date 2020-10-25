@@ -1,5 +1,8 @@
 .service-page-body-what-is-service {
   flex: 0 0 42%;
+  @media screen and (max-width: $mobile-lg) {
+    padding: 0 20px;
+  }
   &-wrapp {
     padding-left: calc(15% - 50px);
     display: flex;
@@ -8,6 +11,9 @@
     @media screen and (max-width: $tablet-lg) {
       flex-direction: column;
       padding-left: 30px;
+    }
+    @media screen and (max-width: $mobile-lg) {
+      padding-left: 0;
     }
   }
   &-title {
@@ -20,6 +26,7 @@
   &-paragraphs {
     @media screen and (max-width: $tablet-lg) {
       max-width: 619px;
+      padding-right: 30px;
     }
     &-paragraph {
       font-family: Raleway;

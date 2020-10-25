@@ -21,6 +21,9 @@
     bottom: 0;
     right: 0;
     height: initial;
+    @media screen and (max-width: $mobile-lg) {
+      display: none;
+    }
     & > .orange-circle {
       position: initial;
       bottom: initial;
@@ -56,6 +59,11 @@
         text-transform: uppercase;
         color: #ffffff;
         max-width: 333px;
+        @media screen and (max-width: $mobile-lg) {
+          font-size: 28px;
+          line-height: 54px;
+          max-width: 250px;
+        }
       }
       &-red-underline {
         width: 174px;
@@ -66,11 +74,18 @@
       &-description {
         padding-right: 15px;
         max-width: 477px;
+        @media screen and (max-width: $mobile-lg) {
+          max-width: 273px;
+        }
         & > p {
+          font-family: Raleway;
           font-style: italic;
           font-size: 18px;
           line-height: 32px;
           color: #ffffff;
+          @media screen and (max-width: $mobile-lg) {
+            line-height: 28px;
+          }
         }
       }
       &-call-to-action-btn {

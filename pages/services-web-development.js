@@ -3,13 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 
 import Layout from '../components/layout/main';
-import ContentNavigation from '../components/content/navigation';
 
-import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
-import FeaturesList from '../components/content/FeaturesList';
 import LetsStart from '../components/about-us/LetsStart';
-import { getPostsList } from '../lib/contentful';
 
 import { works, homePageWorks } from '../main.config';
 import ServicesPagesHeader from '../components/services/ServicesPagesHeader';

@@ -31,7 +31,10 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  @media screen and (max-width: $tablet-lg) {
+  @media screen and (max-width: 1200px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $desktop-sm) {
     flex-direction: column;
   }
   &-wrapp {
@@ -43,7 +46,7 @@
     font-size: 18px;
     line-height: 28px;
     color: #12233d;
-    @media screen and (max-width: $tablet-lg) {
+    @media screen and (max-width: $desktop-sm) {
       margin-bottom: 30px;
     }
   }

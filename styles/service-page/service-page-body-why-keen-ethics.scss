@@ -19,21 +19,29 @@
 
   &-list {
     display: flex;
-    justify-content: space-evenly;
     @media screen and (max-width: $tablet-lg) {
-      padding: 0 30px;
       justify-content: space-between;
     }
     &-left,
     &-right {
-      flex-basis: 35%;
-      @media screen and (max-width: $tablet-lg) {
-        flex-basis: 49%;
-      }
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
       &-item {
         display: flex;
         margin-bottom: 45px;
+        flex-basis: 45%;
+        @media screen and (max-width: $tablet-sm) {
+          flex-basis: initial;
+          flex-direction: column;
+          text-align: center;
+        }
         &-icon {
+          @media screen and (max-width: $tablet-sm) {
+            margin-bottom: 10px;
+          }
           & > img {
             max-width: 24px;
             max-height: 24px;
@@ -41,6 +49,9 @@
         }
         &-descr {
           margin-left: 33px;
+          @media screen and (max-width: $tablet-sm) {
+            margin-left: 0;
+          }
           & > p {
             font-family: Raleway;
             font-size: 16px;
