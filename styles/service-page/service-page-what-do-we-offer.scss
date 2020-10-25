@@ -1,6 +1,7 @@
 .service-page-what-do-we-offer {
   display: flex;
   justify-content: center;
+  padding-bottom: 70px;
   &-header {
     text-align: center;
     font-family: Raleway;
@@ -16,8 +17,12 @@
     max-width: 90%;
     &-item {
       display: flex;
+      justify-content: space-between;
+      &:not(:first-child) {
+        margin-top: 90px;
+      }
       &-left {
-        flex-basis: 50%;
+        flex-basis: 46%;
         &-title {
           & > h4 {
             font-family: Raleway;
@@ -46,7 +51,11 @@
         flex-basis: 50%;
         & > img {
           width: 100%;
+          max-height: 220px;
         }
+      }
+      &.row-reverse {
+        flex-direction: row-reverse;
       }
     }
   }

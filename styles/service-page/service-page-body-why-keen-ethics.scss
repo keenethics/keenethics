@@ -1,0 +1,56 @@
+.service-page-body-why-keen-ethics {
+  padding-bottom: 50px;
+  &-wrapp {
+    background: #12233d;
+    margin-top: 90px;
+    & > h3 {
+      font-family: Raleway;
+      padding-top: 70px;
+      padding-bottom: 50px;
+      font-size: 34px;
+      line-height: 44px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-evenly;
+    &-left,
+    &-right {
+      flex-basis: 35%;
+      &-item {
+        display: flex;
+        margin-bottom: 45px;
+        &-icon {
+          & > img {
+            max-width: 24px;
+            max-height: 24px;
+          }
+        }
+        &-descr {
+          margin-left: 33px;
+          & > p {
+            font-family: Raleway;
+            font-size: 16px;
+            line-height: 26px;
+            color: #ffffff;
+            & > a {
+              color: #ffffff;
+            }
+            & > b {
+              font-family: Raleway;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 28px;
+              color: #ffffff;
+              display: inline-block;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

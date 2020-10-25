@@ -7,17 +7,20 @@ const ServicesPagesHeader = () => (
       <div className="service-page-header-left-block">
         <div className="service-page-header-left-block-header">
           <h1 className="service-page-header-left-block-header-title">
-            WEB DEVELOPMENT SERVICE
+            Indoor Positioning System
           </h1>
           <div className="service-page-header-left-block-header-red-underline" />
           <div className="service-page-header-left-block-header-description">
             <p>
-              Developing high-quality and fault-tolerant web platforms for the
-              Internet and private networks
+              This solution will bring your customer service and employee
+              management to a new level.
             </p>
           </div>
           <div className="service-page-header-left-block-header-call-to-action-btn">
-            <CallToActionButton clazz="service-page-header-btn" title="Check the cases" />
+            <CallToActionButton
+              clazz="service-page-header-btn"
+              title="Check the cases"
+            />
           </div>
         </div>
       </div>

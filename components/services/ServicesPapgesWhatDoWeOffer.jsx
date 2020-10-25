@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 const ServicesPagesWhatDoWeOffer = ({ offers }) => (
   <section className="service-page-what-do-we-offer-wrapp">
@@ -6,19 +7,22 @@ const ServicesPagesWhatDoWeOffer = ({ offers }) => (
     <div className="service-page-what-do-we-offer">
       <div className="service-page-what-do-we-offer-list">
         {
-            offers.map((item) => (
-              <div className="service-page-what-do-we-offer-list-item">
+            offers.map(({ title, header, icon }, idx) => (
+              <div className={cn('service-page-what-do-we-offer-list-item', {
+                'row-reverse': idx % 2 === 1,
+              })}
+              >
                 <div className="service-page-what-do-we-offer-list-item-left">
                   <div className="service-page-what-do-we-offer-list-item-left-title">
-                    <h4>Hello</h4>
+                    <h4>{header}</h4>
                   </div>
                   <div className="service-page-what-do-we-offer-list-item-left-red-underline" />
                   <div className="service-page-what-do-we-offer-list-item-left-text">
-                    <p>web asd hrt the article was very interesting</p>
+                    <p>{title}</p>
                   </div>
                 </div>
                 <div className="service-page-what-do-we-offer-list-item-right">
-                  <img src="/static/services-header/service-page-web-development-header.png" alt="img" />
+                  <img src={icon} alt={`${header} title`} />
                 </div>
               </div>
             ))
