@@ -5,6 +5,10 @@
     display: flex;
     margin-top: 50px;
     justify-content: space-between;
+    @media screen and (max-width: $tablet-lg) {
+      flex-direction: column;
+      padding-left: 30px;
+    }
   }
   &-title {
     font-family: Raleway;
@@ -14,6 +18,9 @@
     color: #12233d;
   }
   &-paragraphs {
+    @media screen and (max-width: $tablet-lg) {
+      max-width: 619px;
+    }
     &-paragraph {
       font-family: Raleway;
       font-size: 18px;

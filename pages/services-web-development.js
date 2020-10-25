@@ -150,21 +150,42 @@ class ServicesWebDevelopment extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
+      isMobile: false,
+      isTablet: false,
+      isTabletL: false,
     };
+
+    this.listener = null;
   }
 
-  async componentDidMount() {
-    const { posts } = this.state;
-    if (!posts || !posts.length) {
-      const blogPosts = await getPostsList();
-      if (blogPosts && blogPosts.items) {
-        this.setState({ posts: blogPosts.items });
-      }
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      this.listener = window.addEventListener('resize', ({ target }) => {
+        if (target) {
+          this.setState({
+            isTabletL: target.innerWidth <= 1024 && target.innerWidth > 768,
+            isTablet: target.innerWidth <= 768 && target.innerWidth > 480,
+            isMobile: target.innerWidth <= 480,
+          });
+        }
+      });
+
+      this.setState({
+        isTabletL: window.innerWidth <= 1024 && window.innerWidth > 768,
+        isTablet: window.innerWidth <= 768 && window.innerWidth > 480,
+        isMobile: window.innerWidth <= 480,
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    if (typeof window !== 'undefined' && this.listener) {
+      window.removeEventListener(this.listener);
     }
   }
 
   render() {
+    const { isMobile, isTablet, isTabletL } = this.state;
     const serviceCostText = (
       <p>
         is the projected indoor location market size in 2022, according to
@@ -195,7 +216,12 @@ class ServicesWebDevelopment extends React.Component {
             <div className="service-page-porfolio-section-title">
               <h3>Projects</h3>
             </div>
-            <Portfolio postIds={homePageWorks} pageTitle="/" topTitle=" " />
+            <Portfolio
+              isMobile={isTabletL || isTablet || isMobile}
+              postIds={homePageWorks}
+              pageTitle="/"
+              topTitle=" "
+            />
           </section>
           <ServicesPagesWhatDoWeOffer offers={whatDoWeOfferIcons} />
           <OurMethods />

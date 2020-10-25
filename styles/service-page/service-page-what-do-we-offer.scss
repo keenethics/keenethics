@@ -15,14 +15,25 @@
     display: flex;
     flex-direction: column;
     max-width: 90%;
+    @media screen and (max-width: $tablet-lg) {
+      max-width: initial;
+      padding: 0 30px;
+    }
     &-item {
       display: flex;
       justify-content: space-between;
       &:not(:first-child) {
         margin-top: 90px;
       }
+      @media screen and (max-width: $tablet-lg) {
+        flex-direction: column-reverse;
+      }
       &-left {
         flex-basis: 46%;
+        @media screen and (max-width: $tablet-lg) {
+          max-width: 80%;
+          margin-top: 35px;
+        }
         &-title {
           & > h4 {
             font-family: Raleway;
@@ -49,6 +60,9 @@
       }
       &-right {
         flex-basis: 50%;
+        @media screen and (max-width: $tablet-lg) {
+          max-width: 80%;
+        }
         & > img {
           width: 100%;
           max-height: 220px;
@@ -56,6 +70,10 @@
       }
       &.row-reverse {
         flex-direction: row-reverse;
+        @media screen and (max-width: $tablet-lg) {
+          flex-direction: column-reverse;
+          align-items: flex-end;
+        }
       }
     }
   }

@@ -11,6 +11,9 @@
 
   & > .scroll-info-container {
     top: 57vh;
+    @media screen and (max-width: $desktop-sm) {
+      display: none;
+    }
   }
 
   & > .circle-container {
@@ -23,12 +26,12 @@
       bottom: initial;
       height: initial;
       width: 380px;
-      @media screen and (max-width: $tablet-lg) {
+      @media screen and (max-width: $desktop-sm) {
         width: 220px;
       }
       & > .border {
         position: initial;
-        @media screen and (max-width: $tablet-lg) {
+        @media screen and (max-width: $desktop-sm) {
           border-width: 110px;
         }
       }

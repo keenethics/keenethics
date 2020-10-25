@@ -2,6 +2,9 @@
   padding-left: calc(15% - 50px);
   width: max-content;
   position: relative;
+  @media screen and (max-width: $tablet-lg) {
+    padding-left: 30px;
+  }
   &-wrapp {
     margin-top: 70px;
   }

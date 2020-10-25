@@ -3,6 +3,9 @@
   &-wrapp {
     background: #12233d;
     margin-top: 90px;
+    @media screen and (max-width: $tablet-lg) {
+      margin-top: 43px;
+    }
     & > h3 {
       font-family: Raleway;
       padding-top: 70px;
@@ -17,9 +20,16 @@
   &-list {
     display: flex;
     justify-content: space-evenly;
+    @media screen and (max-width: $tablet-lg) {
+      padding: 0 30px;
+      justify-content: space-between;
+    }
     &-left,
     &-right {
       flex-basis: 35%;
+      @media screen and (max-width: $tablet-lg) {
+        flex-basis: 49%;
+      }
       &-item {
         display: flex;
         margin-bottom: 45px;

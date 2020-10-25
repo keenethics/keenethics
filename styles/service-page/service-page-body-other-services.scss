@@ -11,11 +11,17 @@
     color: #12233d;
   }
   &-items {
+    @media screen and (max-width: $tablet-lg) {
+      padding-bottom: 70px;
+    }
     &-list {
       &-item {
         padding: 10px 0;
         border-bottom: 3px solid rgba(18, 35, 61, 0.04);
         position: relative;
+        @media screen and (max-width: $tablet-lg) {
+          max-width: 90%;
+        }
         &.active {
           border-bottom: 1px solid rgba(214, 44, 44, 0.2);
           & > a {

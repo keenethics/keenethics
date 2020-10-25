@@ -31,6 +31,9 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  @media screen and (max-width: $tablet-lg) {
+    flex-direction: column;
+  }
   &-wrapp {
     margin-top: 55px;
   }
@@ -40,6 +43,9 @@
     font-size: 18px;
     line-height: 28px;
     color: #12233d;
+    @media screen and (max-width: $tablet-lg) {
+      margin-bottom: 30px;
+    }
   }
   & > .see-more-projects {
     margin: 0;
@@ -60,6 +66,9 @@
 
 .service-page-choose-other-services {
   margin-top: 85px;
+  @media screen and (max-width: $tablet-lg) {
+    display: none;
+  }
   & > .service-page-body-other-services-wrapp {
     & > .service-page-body-other-services {
       padding-right: 0;
