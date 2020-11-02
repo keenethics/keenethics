@@ -120,6 +120,15 @@
         "href": "/services-maintenance-support",
         "type": "default",
         "outsideMenu": true
+      },
+      {
+        "name": "Indoor Positioning System",
+        "metaTitle": "Indoor Positioning System — KeenEthics",
+        "description": "This solution will bring your customer service and employee management to a new level",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants",
+        "href": "/services-indoor-positioning-system",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },
@@ -283,7 +292,7 @@
         "name": "Mongo",
         "description": "Fast noSQL database",
         "metaTitle": "MongoDB  development services – KeenEthics",
-        "metaDescription": "MongoDB is a flexible, scalable, and convenient database for the latest development challenges." ,
+        "metaDescription": "MongoDB is a flexible, scalable, and convenient database for the latest development challenges.",
         "icon": "icon-mongo"
       },
       {
