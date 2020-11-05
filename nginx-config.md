@@ -31,6 +31,19 @@
       rewrite ^/(([^/]+/)*)index\.php?$ https://keenethics.com/$1 redirect;
       rewrite ^/(([^/]+/)*)default\.html?$ https://keenethics.com/$1 redirect;
       rewrite ^/post?name=(.*)$ https://keenethics.com/blog/$1 permanent;
+      rewrite ^/blog/(\d*)-estimates$ https://keenethics.com/contacts?activeform=estimate/$1 permanent;
+      rewrite ^/blog/(\d*)-applications-business-tools-of-the-year-estimates$ https://keenethics.com/$1 permanent;
+      rewrite ^/services-web-development-e-commerce$ https://keenethics.com/services-retail-software-development/$1 permanent;
+      rewrite ^/services-web-development-chatbot$ https://keenethics.com/services-chatbots-artificial-intelligence/$1 permanent;
+      rewrite ^/blog/UI%20UX%20design%20company$ https://keenethics.com/#industries/$1 permanent;
+      rewrite ^/blog/(\d*)-two-monitors-or-one-ultrawide$ https://keenethics.com/$1 permanent;
+      rewrite ^/blog/$ https://keenethics.com/blog/$1 permanent;
+      rewrite ^/services-web-development-chatbot$ https://keenethics.com/services-chatbots-artificial-intelligence/$1 permanent;
+      rewrite ^/services-proof$ https://keenethics.com/services-business-analysis/$1 permanent;
+      rewrite ^/tech-front-end-redux$ https://keenethics.com/#tech-stack/$1 permanent;
+      rewrite ^/i$ https://keenethics.com/$1 permanent;
+      rewrite ^/services-desktop-applications$ https://keenethics.com/#services/$1 permanent;
+      rewrite ^/blog/(\d*)-applications-business-tools-of-the-year$ https://keenethics.com/blog/$1 permanent;
       rewrite ^/(.*)/$ /$1 permanent;
     }
   }
