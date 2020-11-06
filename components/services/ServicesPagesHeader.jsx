@@ -25,11 +25,11 @@ const ServicesPagesHeader = () => (
         </div>
       </div>
       <div className="scroll-info-container">
-        <a href="/#services">
+        <a href="#advantages">
           <p className="vertical-text">SCROLL DOWN TO LEARN MORE</p>
         </a>
         <button className="mouse-scroll" type="button">
-          <a href="/#services">
+          <a href="#advantages">
             <span className="mouse-scroll-wheel" />
           </a>
         </button>

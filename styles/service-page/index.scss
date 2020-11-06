@@ -83,9 +83,9 @@
       }
       & > .service-page-body-other-services-items {
         & > .service-page-body-other-services-items-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-column-gap: 25px;
           padding: 0 25px 40px 25px;
           & > .service-page-body-other-services-items-list-item {
             flex-basis: 30%;
