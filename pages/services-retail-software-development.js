@@ -143,8 +143,6 @@ const ServicesWebDevelopmentE = () => (
               <li>
                 <a
                   href="https://www.paypal.com/ua/home"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
                 >
                   PayPal
                 </a>

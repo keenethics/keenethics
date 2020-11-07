@@ -113,8 +113,6 @@ const ProjectPrix = () => (
               cordova ble plugin &ndash;&nbsp;
               <a
                 href="https://github.com/don/cordova-plugin-ble-central"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
               >
                 cordova-plugin-ble-central
               </a>
