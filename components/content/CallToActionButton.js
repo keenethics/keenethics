@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function CallToActionButton({
-  title, href, buttonBefore, clazz,
+  title,
+  href,
+  buttonBefore,
+  clazz,
+  nofollow,
 }) {
   return (
     <div className={`call-to-cation-btn-wrap ${clazz}`}>
-      {
-        buttonBefore && buttonBefore
-      }
+      {buttonBefore && buttonBefore}
       <a
         href={href}
+        // eslint-disable-next-line react/jsx-no-target-blank
         target="_blank"
-        rel="noopener noreferrer"
+        rel={`noopener noreferrer ${nofollow ? 'nofollow' : ''}`}
       >
-        <button
-          className="call-to-cation-btn"
-          type="button"
-        >
+        <button className="call-to-cation-btn" type="button">
           {title}
         </button>
       </a>
@@ -29,10 +29,12 @@ CallToActionButton.propTypes = {
   href: PropTypes.string,
   buttonBefore: PropTypes.node,
   clazz: PropTypes.string,
+  nofollow: PropTypes.bool,
 };
 CallToActionButton.defaultProps = {
   title: 'Learn more',
   clazz: '',
   href: '/contacts',
   buttonBefore: null,
+  nofollow: false,
 };

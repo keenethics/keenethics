@@ -20,7 +20,10 @@ import Layout from '../components/layout/main';
 import Error from './_error';
 import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
 
+import blogPostsDoFollowLinks from '../data/blogPostsDoFollowHrefLinks';
+
 const _ = require('lodash');
+
 
 const EMBEDDED_ENTRY_CLASSNAMES = {
   usefulReadings: 'useful-readings',
@@ -158,11 +161,11 @@ const bodyOptions = {
           {children.reduce((acc, item) => {
             if (typeof item === 'object' && item.type === 'a') {
               const { props: { children: child, href } } = item;
-              const isNeddedNofollow = href.includes('https://keenethics.com');
-              if (isNeddedNofollow) {
+              const isDofollowLink = blogPostsDoFollowLinks.includes(href);
+              if (isDofollowLink) {
                 acc.push(<a href={href}>{child}</a>);
               } else {
-                acc.push(<a rel="nofollow" href={href}>{child}</a>);
+                acc.push(<a rel="nofollow noopener" href={href}>{child}</a>);
               }
             } else if (item) {
               acc.push(item);
