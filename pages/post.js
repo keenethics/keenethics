@@ -161,7 +161,6 @@ const bodyOptions = {
           {children.reduce((acc, item) => {
             if (typeof item === 'object' && item.type === 'a') {
               const { props: { children: child, href } } = item;
-              console.log(href);
               const isDofollowLink = blogPostsDoFollowLinks.includes(href);
               if (isDofollowLink) {
                 acc.push(<a href={href}>{child}</a>);
