@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'moment';
 import Slider from 'react-slick';
 import Link from 'next/link';
 import PostsContext from '../../context/posts-context';
+import dateParse from '../../../helpers/date-parser';
 
 const PostItem = ({ post: { fields: { publishDate, title, slug } } }) => (
   <div className="slide-item">
     <div className="slide-date">
-      {Moment(publishDate).format('D MMM, YYYY').toUpperCase()}
+      {dateParse(publishDate, 'D MMM YYYY').toUpperCase()}
     </div>
     <Link as={`/blog/${slug}`} prefetch={false} href={`blog/${slug}`}>
       <a className="slide-link">

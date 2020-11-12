@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LazyLoadComponent, trackWindowScroll } from 'react-lazy-load-image-component';
+import Image from 'next/image';
 import useScrollToAnchor from '../../../helpers/useScrollToAnchor';
 
 const TechStack = () => {

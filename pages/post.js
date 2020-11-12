@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment';
 import Link from 'next/link';
 import ReactContentfulImage from 'react-contentful-image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -22,8 +21,9 @@ import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
 
 import blogPostsDoFollowLinks from '../data/blogPostsDoFollowHrefLinks';
 
-const _ = require('lodash');
+import dateParse from '../helpers/date-parser';
 
+const { get, isEmpty } = require('lodash');
 
 const EMBEDDED_ENTRY_CLASSNAMES = {
   usefulReadings: 'useful-readings',
@@ -72,8 +72,8 @@ const socialMediaShareButtons = ({ url }) => (
 const postCardComponent = ({
   slug, heroImage, publishDate, title,
 }) => {
-  const url = _.get(heroImage, 'fields.file.url');
-  const alt = _.get(heroImage, 'fields.description') || _.get(heroImage, 'fields.title');
+  const url = get(heroImage, 'fields.file.url');
+  const alt = get(heroImage, 'fields.description') || get(heroImage, 'fields.title');
 
   return (
     <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
@@ -83,7 +83,11 @@ const postCardComponent = ({
         </div>
         <div className="blog-page-post-header">
           <div className="date">
-            {publishDate && <Moment format="MMMM DD YYYY">{new Date(publishDate)}</Moment>}
+            {publishDate && (
+            <time dateTime={Date.parse(publishDate)}>
+              {dateParse(publishDate, 'MMMM DD YYYY')}
+            </time>
+            )}
           </div>
           <div className="title">{title}</div>
         </div>
@@ -109,8 +113,8 @@ const imageComponent = ({ src, description, title }) => (
 const personComponent = ({
   image, name, position, linkedIn,
 }) => {
-  const url = _.get(image, 'fields.file.url');
-  const alt = _.get(image, 'fields.description') || _.get(image, 'fields.title');
+  const url = get(image, 'fields.file.url');
+  const alt = get(image, 'fields.description') || get(image, 'fields.title');
 
   if (linkedIn) {
     return (
@@ -182,8 +186,8 @@ const bodyOptions = {
       return imageComponent({ src: url, description, title });
     },
     [BLOCKS.EMBEDDED_ENTRY]: (node) => {
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
-        const { bookList, list } = _.get(node, 'data.target.fields', null);
+      if (get(node, 'data.target.sys.contentType.sys.id') === 'usefulReadings') {
+        const { bookList, list } = get(node, 'data.target.fields', null);
 
         return (
           <div className={EMBEDDED_ENTRY_CLASSNAMES.usefulReadings}>
@@ -197,17 +201,17 @@ const bodyOptions = {
           </div>
         );
       }
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor') {
-        const { list } = _.get(node, 'data.target.fields', null);
+      if (get(node, 'data.target.sys.contentType.sys.id') === 'mostSuitableFor') {
+        const { list } = get(node, 'data.target.fields', null);
 
         return embeddedEntryComponent({ list, type: 'mostSuitableFor' });
       }
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools') {
-        const { list } = _.get(node, 'data.target.fields', null);
+      if (get(node, 'data.target.sys.contentType.sys.id') === 'helpfulTools') {
+        const { list } = get(node, 'data.target.fields', null);
 
         return embeddedEntryComponent({ list, type: 'helpfulTools' });
       }
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'suggestion') {
+      if (get(node, 'data.target.sys.contentType.sys.id') === 'suggestion') {
         const {
           body,
           suggesterName,
@@ -247,7 +251,7 @@ const bodyOptions = {
       return null;
     },
     'embedded-entry-inline': (node) => {
-      if (_.get(node, 'data.target.sys.contentType.sys.id') === 'person') {
+      if (get(node, 'data.target.sys.contentType.sys.id') === 'person') {
         const { image, name, position } = node.data.target.fields;
 
         return personComponent({ image, name, position });
@@ -284,7 +288,7 @@ export default class Post extends React.Component {
     const relatedPosts = tags.length
       ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
       : [];
-    const updatedAt = _.get(response, 'items[0].sys.updatedAt', false);
+    const updatedAt = get(response, 'items[0].sys.updatedAt', false);
 
     return {
       ...items[0].fields,
@@ -321,10 +325,10 @@ export default class Post extends React.Component {
       metaTitle,
       metaDescription,
     } = this.props;
-    const heroSrc = _.get(heroImage, 'fields.file.url', '');
-    const heroTitle = _.get(heroImage, 'fields.title', '');
+    const heroSrc = get(heroImage, 'fields.file.url', '');
+    const heroTitle = get(heroImage, 'fields.title', '');
 
-    if (!title || _.isEmpty(bodyRich)) {
+    if (!title || isEmpty(bodyRich)) {
       return <Error statusCode={404} />;
     }
 
@@ -352,7 +356,9 @@ export default class Post extends React.Component {
                   <>
                     PUBLISH DATE:
                     {' '}
-                    <Moment format="MMMM DD YYYY">{`${new Date(publishDate)}`}</Moment>
+                    <time dateTime={Date.parse(publishDate)}>
+                      {dateParse(publishDate, 'MMMM DD YYYY')}
+                    </time>
                   </>
                 )}
                 <br />
@@ -360,7 +366,9 @@ export default class Post extends React.Component {
                   <>
                     UPD:
                     {' '}
-                    <Moment format="MMMM DD YYYY">{`${new Date(updatedAt)}`}</Moment>
+                    <time dateTime={Date.parse(publishDate)}>
+                      {dateParse(publishDate, 'MMMM DD YYYY')}
+                    </time>
                   </>
                 )}
               </span>
