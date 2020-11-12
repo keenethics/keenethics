@@ -45,7 +45,6 @@ const ServicesPagesBodyOtherServices = ({
   title = 'Other Serivces',
 }) => {
   const { pathname } = router;
-  const allServices = main.find(({ name }) => name === 'Services');
   return (
     <section className="service-page-body-other-services-wrapp">
       <div className="service-page-body-other-services">
