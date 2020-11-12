@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 const ServicesPagesWhatDoWeOffer = ({ offers }) => (
-  <section className="service-page-what-do-we-offer-wrapp">
+  <section id="advantages" className="service-page-what-do-we-offer-wrapp">
     <h3 className="service-page-what-do-we-offer-header">Advantages of Web Development</h3>
     <div className="service-page-what-do-we-offer">
       <div className="service-page-what-do-we-offer-list">
