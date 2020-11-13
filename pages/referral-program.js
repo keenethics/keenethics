@@ -201,7 +201,7 @@ const ReferralProgram = () => {
           <div className="text">
             <img src="/static/images/svg/quotes.svg" className="quotes left" alt="quotes" />
             I am happy to see you were directed by one of our satisfied customers.
-            KeenEthics is your ethical software development partner with a special referral offer.
+            KeenEthics is your ethical software development partner with a special ref erral offer.
             You can read about the offer below or book a meeting with me,
             and I will introduce you to the benefits of working with us personally.
             <img src="/static/images/svg/quotes.svg" className="quotes right" alt="quotes" />
@@ -455,7 +455,7 @@ const ReferralProgram = () => {
           </svg>
         </div>
       </div>
-      <div className="lets-discuss-container">
+      <div id="lets-discuss-container" className="lets-discuss-container">
         <div className="lets-discuss-content">
           <div className="circles-bg">
             <svg width="205" height="251" viewBox="0 0 205 251" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -635,7 +635,7 @@ const ReferralProgram = () => {
         <div className={`next-btn-holder ${sendEmailResponse && !sendEmailResponse.error ? 'hide' : ''}`}>
           {meetingStep > 1
             ? (
-              <a className="button" role="presentation" onClick={() => setMeetingStep(meetingStep - 1)}>
+              <a className="button" href="#lets-discuss-container" role="presentation" onClick={() => setMeetingStep(meetingStep - 1)}>
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.00541 0C8.71712 0 8.48649 0.0864865 8.31351 0.259459L1f.26487 7.26486C1.06306 7.4955 0.962163 7.74054 0.962163 8C0.962163 8.25946 1.06306 8.49009 1.26487 8.69189L8.31351 15.6973C8.51532 15.8991 8.74595 16 9.00541 16C9.26486 16 9.4955 15.8991 9.6973 15.6973C9.8991 15.4955 10 15.2649 10 15.0054C10 14.7459 9.8991 14.5153 9.6973 14.3135L3.38378 8L9.6973 1.68649C9.8991 1.48468 10 1.23964 10 0.951351C10 0.663063 9.90631 0.432432 9.71892 0.259459C9.53153 0.0864865 9.29369 0 9.00541 0Z" fill="#12233D" />
                 </svg>
@@ -651,6 +651,7 @@ const ReferralProgram = () => {
             )
             : (
               <a
+                href="#lets-discuss-container"
                 role="presentation"
                 className="button orange-btn"
                 onClick={() => validateForm()}

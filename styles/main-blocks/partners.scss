@@ -73,6 +73,9 @@
     justify-content: center;
     align-items: center;
     min-height: 210px;
+    @media screen and (max-width: 550px) {
+      min-height: 260px;
+    }
   }
 
   &--testimonial {

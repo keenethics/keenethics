@@ -699,6 +699,11 @@
       flex-direction: column;
       width: 100%;
 
+      @include breakpoint(mobile) {
+        position: sticky;
+        bottom: 0;
+      }
+
       &-footer {
         display: flex;
         margin-top: 15px;
@@ -1318,6 +1323,10 @@
     flex-direction: column;
   }
 
+  @include breakpoint(mobile) {
+    padding-bottom: 50px;
+  }
+
   * {
     font-family: "Raleway", sans-serif !important;
   }
@@ -1428,6 +1437,9 @@
     }
     @include breakpoint(lg) {
       padding: 50px 40px 33px 53px;
+    }
+    @include breakpoint(mobile) {
+      position: sticky;
     }
 
     .btn-group {
