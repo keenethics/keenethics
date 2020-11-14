@@ -171,7 +171,7 @@ const ProjectBusinessResearchPlatform = () => (
                 ,&nbsp;
                 <a href="/tech-front-end-react" target="_blank">React</a>
                 ,&nbsp;
-                <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+                <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS</a>
                 &nbsp;(SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana),&nbsp;
                 <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless</a>
                 ,&nbsp;

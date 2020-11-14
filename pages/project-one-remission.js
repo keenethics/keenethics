@@ -67,7 +67,7 @@ const ProjectPrix = () => (
               <h3><b>Providing Valuable Knowledge</b></h3>
               <p>
                 The app features a comprehensive knowledge base of diets, exercises, and
-                post-cancerpractices. It is curated by Integrative Medicine experts, whose
+                post-cancer practices. It is curated by Integrative Medicine experts, whose
                 goal is to let one live a safe and enjoyable life. For instance, a user can
                 search for the information on cancer-related risks and benefits of a
                 certain food product.

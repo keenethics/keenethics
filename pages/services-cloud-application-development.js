@@ -171,7 +171,7 @@ const ServicesCloudAppDev = () => {
           <p>
             These are the technologies and cloud application development platforms that
             help us do it:&nbsp;
-            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS</a>
             &nbsp;(SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana),&nbsp;
             <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless</a>
             ,&nbsp;
@@ -229,7 +229,7 @@ const ServicesCloudAppDev = () => {
             businesses of any size. We provide cost-efficient solutions without compromising
             the quality of your future software product. For more about the business
             value we have built,&nbsp;
-            <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer nofollow">seewhat our long-term partner has to say</a>
+            <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer">seewhat our long-term partner has to say</a>
             .&nbsp;
             <a href="/contacts?activeform=estimate">Let us estimate your project</a>
             , and youwill see whether the business value is worth the effort.
