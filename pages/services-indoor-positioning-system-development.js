@@ -213,10 +213,10 @@ const ServicesIndoorPositioningDevelopment = () => {
 
           <h2>THE THREE ESSENTIAL FEATURES</h2>
 
-          <div className="services-ips-wdwo__list">
+          <div className="page__list">
               {
                 essentialFeaturesList.map(({title, description}) => (
-                  <div className="services-ips-wdwo__item">
+                  <div className="services-ips-wdwo__item page__item">
                     <p className="text-center"><b>{title}</b></p>
                     <p className="text-center">
                       {description}
@@ -271,7 +271,7 @@ const ServicesIndoorPositioningDevelopment = () => {
           <h2>What is our experience with indoor positioning companies?</h2>
 
           <div>
-            <h3>PREE</h3>
+            <h3 className="text-center">PREE</h3>
             <p>
               PREE is an IoT system for indoor positioning, which is implemented with BLE beacons and a mobile app. The goal of 
               PREE is to let users always know where their precious belongings are. The idea is simple. The user attaches a beacon 
@@ -291,7 +291,7 @@ const ServicesIndoorPositioningDevelopment = () => {
           </div>
 
           <div>
-            <h3>Airport Showroom</h3>
+            <h3 className="text-center">Airport Showroom</h3>
             <p>
               The mobile app offers a showroom map to users where they can see all the necessary objects and facilities and the 
               optimal route towards them. The app can be downloaded via a QR code. Besides, the app allows admins to change 
