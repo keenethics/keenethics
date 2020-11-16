@@ -53,6 +53,10 @@ const industries = [
     title: 'Healthcare',
     url: '/services-custom-healthcare-software-development',
   },
+  {
+    title: 'Real Estate',
+    url: '/services-real-estate-software-development'
+  }
 ];
 const technologies = [
   {
