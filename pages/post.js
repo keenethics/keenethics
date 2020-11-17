@@ -151,6 +151,7 @@ const renderNoFollowLinks = (children) => children.reduce((acc, item) => {
   if (typeof item !== 'object' && item.type !== 'a') {
     return [...acc, item];
   }
+
   const { props: { children: child, href } } = item;
   const isNofollowLink = blogPostsNoFollowLinks.includes(href);
   return [
