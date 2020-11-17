@@ -13,17 +13,16 @@ import {
   LinkedinIcon,
 } from 'react-share';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import SubscribePanel from '../components/subscribe-for-updates';
+import { get, isEmpty } from 'lodash';
+import SubscribePanel from '../../components/subscribe-for-updates';
 
-import Layout from '../components/layout/main';
-import Error from './_error';
-import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
+import Layout from '../../components/layout/main';
+import Error from '../_error';
+import { getPostBySlug, getRelatedPosts, getPostsList } from '../../lib/contentful';
 
-import blogPostsDoFollowLinks from '../data/blogPostsDoFollowHrefLinks';
+import blogPostsDoFollowLinks from '../../data/blogPostsDoFollowHrefLinks';
 
-import dateParse from '../helpers/date-parser';
-
-const { get, isEmpty } = require('lodash');
+import dateParse from '../../helpers/date-parser';
 
 const EMBEDDED_ENTRY_CLASSNAMES = {
   usefulReadings: 'useful-readings',
@@ -76,7 +75,7 @@ const postCardComponent = ({
   const alt = get(heroImage, 'fields.description') || get(heroImage, 'fields.title');
 
   return (
-    <Link href={`/post?name=${slug}`} as={`/blog/${slug}`} key={slug}>
+    <Link href={`/blog/${slug}`} key={slug}>
       <div className="blog-page-post">
         <div className="blog-page-post-img">
           <img alt={alt} src={`https://${url}?fm=jpg&fl=progressive&q=85&w=350`} />
@@ -273,30 +272,6 @@ export default class Post extends React.Component {
     };
   }
 
-  static async getInitialProps(p) {
-    const { name, preview } = p.query;
-    const { res } = p;
-    const response = await getPostBySlug({ slug: name, preview });
-    const { items } = response || {};
-
-    if (!items || !Array.isArray(items) || !items[0]) {
-      res.statusCode = 404;
-      return {};
-    }
-
-    const { tags = [], slug } = items[0].fields;
-    const relatedPosts = tags.length
-      ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
-      : [];
-    const updatedAt = get(response, 'items[0].sys.updatedAt', false);
-
-    return {
-      ...items[0].fields,
-      updatedAt,
-      relatedPosts,
-    };
-  }
-
   componentDidMount() {
     this.setState({
       url: window.location.href,
@@ -459,6 +434,42 @@ export default class Post extends React.Component {
       </Layout>
     );
   }
+}
+
+export async function getStaticPaths() {
+  // Call an external API endpoint to get posts
+  const contResp = await getPostsList();
+  // Get the paths we want to pre-render based on posts
+  const paths = (contResp && contResp.items).map((post) => ({
+    params: { id: post.fields.slug },
+  }));
+
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params: name }) {
+  const response = await getPostBySlug({ slug: name.id });
+  const { items } = response || {};
+
+  if (!items || !Array.isArray(items) || !items[0]) {
+    return { notFound: true };
+  }
+
+  const { tags = [], slug } = items[0].fields;
+  const relatedPosts = tags.length
+    ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
+    : [];
+  const updatedAt = get(response, 'items[0].sys.updatedAt', false);
+
+  return {
+    props: {
+      ...items[0].fields,
+      updatedAt,
+      relatedPosts,
+    },
+  };
 }
 
 personComponent.propTypes = {

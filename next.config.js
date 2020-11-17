@@ -12,7 +12,7 @@ module.exports = withSass({
       'REACT_APP_PREVIEW_TOKEN',
     ]));
     config.plugins.push(new Dotenv());
-
+    config.optimization.splitChunks.minChunks = 2;
     return config;
   },
 });
