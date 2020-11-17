@@ -2,16 +2,14 @@ import { withRouter } from 'next/router';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { debounce } from 'lodash';
+import { debounce, intersection } from 'lodash';
 
-import SubscribeModal from '../components/blog/SubscribeModal';
-import Layout from '../components/layout/main';
-import Posts from '../components/blog/posts';
-import BellIcon from '../components/blog/BellIcon';
-import CategoriesFilter from '../components/categories-filter/CategoriesFilter';
-import { getPostsList } from '../lib/contentful';
-
-const { intersection } = require('lodash');
+import SubscribeModal from '../../components/blog/SubscribeModal';
+import Layout from '../../components/layout/main';
+import Posts from '../../components/blog/posts';
+import BellIcon from '../../components/blog/BellIcon';
+import CategoriesFilter from '../../components/categories-filter/CategoriesFilter';
+import { getPostsList } from '../../lib/contentful';
 
 const transformateCategories = (chosenCategory, existCategories) => {
   const categories = existCategories.filter(
@@ -74,12 +72,6 @@ class Blog extends React.Component {
   componentWillUnmount() {
     document.body.style.overflowY = 'initial';
     window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  static async getInitialProps() {
-    const contResp = await getPostsList();
-
-    return { posts: contResp && contResp.items ? contResp.items : [] };
   }
 
   handleScroll = (e) => {
@@ -180,6 +172,11 @@ class Blog extends React.Component {
       </Layout>
     );
   }
+}
+
+export async function getStaticProps() {
+  const contResp = await getPostsList();
+  return { props: { posts: contResp && contResp.items ? contResp.items : [] } };
 }
 
 Blog.propTypes = {
