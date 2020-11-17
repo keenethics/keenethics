@@ -148,48 +148,29 @@ const personComponent = ({
 };
 
 const renderNoFollowLinks = (children) => children.reduce((acc, item) => {
-  if (typeof item === 'object' && item.type === 'a') {
-    const { props: { children: child, href } } = item;
-    const isNofollowLink = blogPostsNoFollowLinks.includes(href);
-    if (isNofollowLink) {
-      acc.push(<a rel="nofollow noopener" href={href}>{child}</a>);
-    } else {
-      acc.push(<a href={href}>{child}</a>);
-    }
-  } else if (item) {
-    acc.push(item);
+  if (typeof item !== 'object' && item.type !== 'a') {
+    return [...acc, item];
   }
-  return acc;
+  const { props: { children: child, href } } = item;
+  const isNofollowLink = blogPostsNoFollowLinks.includes(href);
+  return [
+    ...acc,
+    <a rel={isNofollowLink ? 'nofollow noopener' : ''} href={href}>{child}</a>,
+  ];
 }, []);
 
 const bodyOptions = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => {
-      const filteredChildren = children.filter((item) => !!item);
-
-      if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
-        return filteredChildren[0];
-      }
-
-      return (
-        <p>
-          {renderNoFollowLinks(children)}
-        </p>
-      );
-    },
-    [BLOCKS.HEADING_3]: (node, children) => {
-      const filteredChildren = children.filter((item) => !!item);
-
-      if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
-        return filteredChildren[0];
-      }
-
-      return (
-        <h3>
-          {renderNoFollowLinks(children)}
-        </h3>
-      );
-    },
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p>
+        {renderNoFollowLinks(children)}
+      </p>
+    ),
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3>
+        {renderNoFollowLinks(children)}
+      </h3>
+    ),
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
