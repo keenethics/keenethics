@@ -7,7 +7,7 @@ import { works } from '../main.config'
 
 import Works from '../components/portfolio/works'
 import CallToActionButton from  '../components/content/CallToActionButton'
-import FeaturesList from '../components/content/FeaturesList'
+import LetsStart from '../components/about-us/LetsStart'
 
 const ServicesIndoorPositioningDevelopment = () => {
 
@@ -315,8 +315,7 @@ const ServicesIndoorPositioningDevelopment = () => {
         </section>
 
         <section>
-          <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-          <CallToActionButton title="Contact Us" href="/contacts" />
+          <LetsStart />
         </section>
 
       </div>

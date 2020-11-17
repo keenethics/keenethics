@@ -56,6 +56,9 @@
         max-width: 95px;
       }
     }
+    @media screen and (max-width: $mobile-lg) {
+      width: 100%;
+    };
   }
     .services-ips-bauc-figcaption {
       text-align: center;
@@ -84,10 +87,16 @@
   }
 
   &-wiip {
+    @media screen and (max-width: $mobile-lg) {
+      width: 100%;
+    };
     width: 50%;
   }
 
   &-wdwo {
+    @media screen and (max-width: $mobile-lg) {
+      width: 100%;
+    };
     width: 33%;
   }
 }
