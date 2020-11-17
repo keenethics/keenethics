@@ -153,8 +153,8 @@ const ServicesIndoorPositioningDevelopment = () => {
 
         <section>
           <h2>What is indoor positioning?</h2>
-          <div className="page__list">
-            <p className="page__item-wiip page__item">
+          <div className="services-ips--list">
+            <p className="services-ips--item-wiip services-ips--item">
               <b>From the technical perspective...</b><br/>
               Indoor positioning is a 
               technology, which uses a network of devices to locate people or objects in such 
@@ -167,7 +167,7 @@ const ServicesIndoorPositioningDevelopment = () => {
               based on iBeacon — the technology developed by 
               Apple, which employs BLE transmitters.
             </p>
-            <p className="page__item-wiip page__item">
+            <p className="services-ips--item-wiip services-ips--item">
               <b>From the business perspective...</b><br/>
               Indoor positioning system is an IoT solution, which lets 
               businesses efficiently locate their employees or 
@@ -190,13 +190,13 @@ const ServicesIndoorPositioningDevelopment = () => {
 
         <section>
           <h2>Whom we offer our indoor positioning solution to?</h2>
-          <ul className="whom-we-offer-indoor-development__list">
+          <ul className="whom-we-offer-indoor-development--list">
             {
               whomWeOfferList.map(({ icon, title }) => (
-                <li className="whom-we-offer-indoor-development__item" key={icon}>
+                <li className="whom-we-offer-indoor-development--item" key={icon}>
                   <figure>
                     <img src={icon} alt={title} />
-                    <figcaption className="whom-we-offer-indoor-development-figcaption">
+                    <figcaption className="whom-we-offer-indoor-development--item-figcaption">
                       {title}
                     </figcaption>
                   </figure>
@@ -213,10 +213,10 @@ const ServicesIndoorPositioningDevelopment = () => {
 
           <h2>THE THREE ESSENTIAL FEATURES</h2>
 
-          <div className="page__list">
+          <div className="services-ips--list">
               {
                 essentialFeaturesList.map(({title, description}) => (
-                  <div className="services-ips-wdwo__item page__item">
+                  <div className="services-ips--item-wdwo services-ips--item">
                     <p className="text-center"><b>{title}</b></p>
                     <p className="text-center">
                       {description}
@@ -227,10 +227,10 @@ const ServicesIndoorPositioningDevelopment = () => {
           </div>
 
           <h2>BENEFITS AND USE CASES</h2>
-          <div className="services-ips-bauc__list">
+          <div className="services-ips-bauc--list">
             {
               benefitsList.map(({icon, title, description}) => (
-                <div className="services-ips-bauc__item">
+                <div className="services-ips-bauc--item">
                   <figure>
                     <img src={icon} alt={title}/>
                     <figcaption className="services-ips-bauc-figcaption">
