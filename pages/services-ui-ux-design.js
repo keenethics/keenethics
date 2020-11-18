@@ -441,7 +441,7 @@ const ServicesUiUxDesign = () => {
               </div>
             </div>
             <Works
-              works={works.filter(({ title }) => ['Pree'].includes(title))}
+              works={works.filter(({ title }) => ['ParkQX'].includes(title))}
             />
           </div>
 
