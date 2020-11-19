@@ -175,10 +175,6 @@ const ServicesUiUxDesign = () => {
     },
   ];
 
-  const webDevelopmentWorks = works.filter(({ title }) => ['ParkQX', 'SelfLeaders', 'Pree', 'BankerAdvisor', 'WorkBooking'].includes(
-    title,
-  ));
-
   return (
     <Layout>
       <ContentNavigation />
