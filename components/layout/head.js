@@ -80,9 +80,6 @@ const LayoutHead = (props) => {
     description = currentPoint.metaDescription || currentPoint.description;
   }
 
-  // if (currentURL.pathname === '/post') {
-  //   currentURL.pathname = router.asPath.replace('#', '?').split('?')[0];
-  // }
   if (noIndexPages.includes(currentURL.pathname)) {
     noIndexMetaTag = true;
   }

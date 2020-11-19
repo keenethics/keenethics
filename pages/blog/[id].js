@@ -435,15 +435,11 @@ export default class Post extends React.Component {
 }
 
 export async function getStaticPaths() {
-  // Call an external API endpoint to get posts
   const contResp = await getPostsList();
-  // Get the paths we want to pre-render based on posts
   const paths = (contResp && contResp.items).map((post) => ({
     params: { id: post.fields.slug },
   }));
 
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 }
 
