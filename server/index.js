@@ -457,7 +457,6 @@ app.prepare().then(() => {
     });
   });
 
-  // server.get('/blog/:name', (req, res) => app.render(req, res, '/blog', { name: req.params.name }));
 
   server.post('/blog/subscribe', (req, res) => {
     const { email } = req.body;
