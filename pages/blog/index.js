@@ -95,18 +95,20 @@ class Blog extends React.Component {
     const { selectedPosts, step } = this.state;
     const { posts } = this.props;
 
-    if (
-      selectedPosts.length === 0
-    ) { return posts.slice(0, step * 9); }
+    if (selectedPosts.length === 0) {
+      return posts.slice(0, step * 9);
+    }
 
-    return posts.reduce((acc, post) => {
-      if (post.fields && post.fields.categories) {
-        return intersection(post.fields.categories, selectedPosts).length
-          ? [...acc, post]
-          : acc;
-      }
-      return acc;
-    }, []).slice(0, step * 9);
+    return posts
+      .reduce((acc, post) => {
+        if (post.fields && post.fields.categories) {
+          return intersection(post.fields.categories, selectedPosts).length
+            ? [...acc, post]
+            : acc;
+        }
+        return acc;
+      }, [])
+      .slice(0, step * 9);
   };
 
   filterOnChange = (selectedPosts) => {
@@ -176,7 +178,17 @@ class Blog extends React.Component {
 
 export async function getStaticProps() {
   const contResp = await getPostsList();
-  return { props: { posts: contResp && contResp.items ? contResp.items : [] } };
+  return {
+    props: {
+      posts:
+        contResp && contResp.items
+          ? contResp.items.sort(
+            (a, b) => new Date(b.sys.updatedAt).getTime()
+                - new Date(a.sys.updatedAt).getTime(),
+          )
+          : [],
+    },
+  };
 }
 
 Blog.propTypes = {
