@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#289e94';
 
@@ -127,6 +129,22 @@ const ProjectWorkbooking = () => (
             <div className="project-content-chapter" style={{ marginBottom: '50px' }}>
               <img className="chapter-image" src="static/images/project/workbooking-leptop.png" alt="Workbooking" />
             </div>
+          </div>
+          
+          <div className="project-content-more">
+            <h2>Do You Have a Similar Project Idea?</h2>
+            <CallToActionButton
+              title="SHARE YOUR IDEA"
+              buttonBefore={(
+                <Link href="/portfolio">
+                  <a>
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK OTHER PROJECTS
+                    </button>
+                  </a>
+                </Link>
+              )}
+            />
           </div>
           <Navigation />
         </div>

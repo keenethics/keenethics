@@ -162,9 +162,9 @@ const ProjectSelfLeaders = () => (
             </section>
 
             <section>
-              <h2 className='text-center'>Do You Have a Similar Project Idea?</h2>
+              <h2>Do You Have a Similar Project Idea?</h2>
               <CallToActionButton
-                title='Share your idea'
+                title="SHARE YOUR IDEA"
                 buttonBefore={(
                   <a
                     href="http://selfleaders.com"
