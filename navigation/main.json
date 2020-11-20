@@ -168,6 +168,14 @@
         "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
         "href": "/services-real-estate-software-development",
         "type": "default"
+      },
+      {
+        "name": "Agriculture Software Development",
+        "description": "Making the agricultural sphere smarter and more efficient",
+        "metaTitle": "Agriculture Software Development — KeenEthics Blog",
+        "metaDescription": "KeenEthics helps farmers make the agricultural sphere smarter and more efficient. We offer solutions for grazing management, livestock management, precision agriculture, farm management and accounting, and agriculture trade.",
+        "href": "/services-agriculture-software-development",
+        "type": "default"
       }
     ]
   },
