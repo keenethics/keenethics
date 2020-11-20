@@ -24,7 +24,7 @@ const ProjectWhatIsHeader = ({
             </td>
             <td style={{ border: 0 }}>
               {
-                industries.map((elem, i) => i < industries.length-1 ? elem + ', ' : elem )
+                industries.join(', ')
               }
             </td>
           </tr>
