@@ -160,6 +160,14 @@
         "metaDescription": "Solving app development challenges associated with medical responsibility, patient ethics, high costs, technological advancement, and holistic approach",
         "href": "/services-custom-healthcare-software-development",
         "type": "default"
+      },
+      {
+        "name": "Nonprofit Software Development",
+        "metaTitle": "Non-Profit Software Development – KeenEthics",
+        "description": "Helping non-profit companies achieve their ethical goals",
+        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
+        "href": "/servcies-non-profit-software-development",
+        "type": "default"
       }
     ]
   },
