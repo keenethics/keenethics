@@ -291,20 +291,24 @@ const ServicesIndoorPositioningDevelopment = () => {
           </div>
 
           <div>
-            <h3 className="text-center">Airport Showroom</h3>
+            <h3 className="text-center">Airport Solution</h3>
             <p>
-              The mobile app offers a showroom map to users where they can see all the necessary objects and facilities and the 
-              optimal route towards them. The app can be downloaded via a QR code. Besides, the app allows admins to change 
-              the map, routes, information, and so on allowing them to set up the system without developers help.
+              The airport solution optimizes and automates navigation and the communication with passengers. The solution
+              includes a mobile app and Bluetooth sensors.
             </p>
             <p>
-              Additionally, the admins can tag Bluetooth sensors with certain content making it appear to the users when they are 
-              nearby. The user, for example, can get a message about special offers, promotions, and exclusive products when 
-              going near Duty Free stores. They can also receive notifications from airlines about delays, issues, or promos. All 
-              in all, it is a good place for both timely communications and ads.
+              The mobile app offers a wayfinding map to users where they can see all the necessary objects and facilities and the
+              optimal route towards them. The app can be downloaded via a QR code. Besides, the app allows admins to change
+              the map, routes, information, and so on allowing them to set up the system without the help of developers.
+            </p>
+            <p>
+              Additionally, the admins can tag Bluetooth sensors with certain content making it appear to the users when they are
+              nearby. The user, for example, can get a message about special offers, promotions, and exclusive products when
+              going near Duty Free stores. They can also receive notifications from airlines about delays, issues, or promos. All in
+              all, it is a good place for both timely communications and ads.
             </p>
             <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development"><a>Mobile application</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development"><a>Mobile</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Technologies</b>:<Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link>, <Link href="/tech-front-end-react"><a>React</a></Link>, <Link href="/tech-apps-progressive-web-apps"><a>PWA</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team of 7</b>: 1 Product Owner, 1 UI UX designer, 1 back-end developer, 1 full-stack developer, 1 mobile developer, 1 hardware engineer, 1 QA special</div>
