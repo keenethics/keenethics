@@ -129,6 +129,15 @@
         "href": "/services-indoor-positioning-system",
         "type": "default",
         "outsideMenu": true
+      },
+      {
+        "name": "Banking and Financial Software Development Services",
+        "metaTitle": "Banking and Financial Software Development Services – KeenEthics",
+        "description": "Fostering innovation and bringing the world of banking and financial services one step closer to people",
+        "metaDescription":"KeenEthics fosters innovation and brings the world of banking and financial services one step closer to people. By ensuring quality, security, compliance, and elegance, we develop effective and reliable financial software solutions.",
+        "href": "/services-financial-software-development",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },
