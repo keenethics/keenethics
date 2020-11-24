@@ -14,6 +14,7 @@ import {
 } from 'react-share';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { get, isEmpty } from 'lodash';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import SubscribePanel from '../../components/subscribe-for-updates';
 
 import Layout from '../../components/layout/main';
@@ -103,10 +104,12 @@ const imageSizes = [
 ];
 
 const imageComponent = ({ src, description, title }) => (
-  <figure>
-    <ReactContentfulImage alt={description || title} src={src} sizes={imageSizes} />
-    {description && <figcaption>{description}</figcaption>}
-  </figure>
+  <LazyLoadComponent>
+    <figure>
+      <ReactContentfulImage alt={description || title} src={src} sizes={imageSizes} />
+      {description && <figcaption>{description}</figcaption>}
+    </figure>
+  </LazyLoadComponent>
 );
 
 const personComponent = ({
