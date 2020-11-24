@@ -72,12 +72,6 @@ const TechStack = () => {
                     <img className="toggle-color" src="/static/main-blocks/tech-stack/electron-color.svg" alt="electron" />
                   </div>
                 </Link>
-                <Link href="/tech-apps-cordova" prefetch={false}>
-                  <div className="tech-stack--block-item">
-                    <img src="/static/main-blocks/tech-stack/cordova.svg" alt="cordova" />
-                    <img className="toggle-color" src="/static/main-blocks/tech-stack/cordova-color.svg" alt="cordova" />
-                  </div>
-                </Link>
                 <Link href="/tech-apps-phonegap" prefetch={false}>
                   <div className="tech-stack--block-item">
                     <img src="/static/main-blocks/tech-stack/phonegap.svg" alt="phonegap" />
