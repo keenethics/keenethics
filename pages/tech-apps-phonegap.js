@@ -13,7 +13,7 @@ import { works, techApps } from '../main.config';
 
 import Works from '../components/portfolio/works';
 
-const ServicesWebDevelopmentMeteor = () => {
+const TechAppsPhone = () => {
   const whyPhoneGap = [
     {
       icon: '/static/technologies/meteor/user.png',
@@ -300,4 +300,4 @@ const ServicesWebDevelopmentMeteor = () => {
   );
 };
 
-export default ServicesWebDevelopmentMeteor;
+export default TechAppsPhone;
