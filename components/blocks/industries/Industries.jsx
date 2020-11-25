@@ -99,17 +99,21 @@ const Industries = () => {
                 </div>
               </div>
               <div className="industries--small-item">
-                <div className="industries--small-item-logo">
-                  <LazyLoadImage
-                    src="/static/main-blocks/industries/small/icon-agriculture.svg"
-                    width="32px"
-                    height="27px"
-                    alt="Agriculture industries"
-                  />
-                </div>
-                <div className="industries--small-item-title">
-                  Agriculture
-                </div>
+                <Link href="/services-agriculture-software-development" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/icon-agriculture.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Agriculture industries"
+                      />
+                    </div>
+                    <div className="industries--small-item-title">
+                      Agriculture
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">

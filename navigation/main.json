@@ -176,6 +176,14 @@
         "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
         "href": "/servcies-non-profit-software-development",
         "type": "default"
+      },
+      {
+        "name": "Agriculture Software Development",
+        "description": "Making the agricultural sphere smarter and more efficient",
+        "metaTitle": "Agriculture Software Development — KeenEthics Blog",
+        "metaDescription": "KeenEthics helps farmers make the agricultural sphere smarter and more efficient. We offer solutions for grazing management, livestock management, precision agriculture, farm management and accounting, and agriculture trade.",
+        "href": "/services-agriculture-software-development",
+        "type": "default"
       }
     ]
   },

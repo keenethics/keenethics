@@ -188,22 +188,23 @@ const ProjectTetrami = () => (
                 to learn more!
               </p>
             </section>
-
-            <h2>Do You Have a Similar Project Idea?</h2>
-
-            <CallToActionButton
-              buttonBefore={(
-                <a
-                  href="//web.tetrami.com/"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    CHECK THE PROJECT
-                  </button>
-                </a>
-              )}
-            />
+            <section>
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="https://web.tetrami.com/"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK THE PROJECT
+                    </button>
+                  </a>
+                )}
+              />
+            </section>
           </div>
           <Navigation />
         </div>
