@@ -20,7 +20,7 @@ import Layout from '../components/layout/main';
 import Error from './_error';
 import { getPostBySlug, getRelatedPosts } from '../lib/contentful';
 
-import blogPostsDoFollowLinks from '../data/blogPostsDoFollowHrefLinks';
+import blogPostsNoFollowLinks from '../data/blogPostsNoFollowHrefLinks';
 
 const _ = require('lodash');
 
@@ -147,34 +147,31 @@ const personComponent = ({
   );
 };
 
+const renderNoFollowLinks = (children) => children.reduce((acc, item) => {
+  if (typeof item !== 'object' && item.type !== 'a') {
+    return [...acc, item];
+  }
+
+  const { props: { children: child, href } } = item;
+  const isNofollowLink = blogPostsNoFollowLinks.includes(href);
+  return [
+    ...acc,
+    <a rel={isNofollowLink ? 'nofollow noopener' : ''} href={href}>{child}</a>,
+  ];
+}, []);
+
 const bodyOptions = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => {
-      const filteredChildren = children.filter((item) => !!item);
-
-      if (filteredChildren.length === 1 && typeof filteredChildren[0] === 'object') {
-        return filteredChildren[0];
-      }
-
-      return (
-        <p>
-          {children.reduce((acc, item) => {
-            if (typeof item === 'object' && item.type === 'a') {
-              const { props: { children: child, href } } = item;
-              const isDofollowLink = blogPostsDoFollowLinks.includes(href);
-              if (isDofollowLink) {
-                acc.push(<a href={href}>{child}</a>);
-              } else {
-                acc.push(<a rel="nofollow noopener" href={href}>{child}</a>);
-              }
-            } else if (item) {
-              acc.push(item);
-            }
-            return acc;
-          }, [])}
-        </p>
-      );
-    },
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p>
+        {renderNoFollowLinks(children)}
+      </p>
+    ),
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3>
+        {renderNoFollowLinks(children)}
+      </h3>
+    ),
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
@@ -218,6 +215,7 @@ const bodyOptions = {
           buttonText,
           redirectLink,
         } = node.data.target.fields;
+        const noFollowLink = blogPostsNoFollowLinks.includes(redirectLink) ? 'nofollow' : '';
 
         return (
           <div className="suggestion">
@@ -233,7 +231,7 @@ const bodyOptions = {
               <a
                 href={redirectLink || '/contacts'}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={`noopener noreferrer ${noFollowLink}`}
               >
                 <button type="button" className="btn btn-schedule">
                   {buttonText || 'Schedule a call'}

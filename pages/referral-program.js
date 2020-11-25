@@ -7,6 +7,7 @@ import { debounce } from 'lodash';
 
 import Link from 'next/link';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Layout from '../components/layout/main';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
@@ -52,6 +53,7 @@ const ReferralProgram = () => {
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
   const [timeDifference, setTimeDifference] = useState(0); // in minutes
+
   const countryItem = ({
     name: countryName,
     flag, callingCodes,
@@ -59,7 +61,7 @@ const ReferralProgram = () => {
   }) => ({
     label: (
       <div>
-        <img src={flag} alt={countryName} />
+        <LazyLoadImage src={flag} alt={countryName} />
         <span>{countryName}</span>
       </div>
     ),

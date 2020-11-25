@@ -101,6 +101,7 @@
   img {
     display: block;
     max-width: 100%;
+    max-height: 100px;
     margin: 0 auto;
   }
   ul,
@@ -211,7 +212,7 @@
         }
       }
     }
-  
+
     h3 {
       margin: 0;
       font-size: initial;
@@ -349,7 +350,7 @@
     }
   }
 
-  h3 { 
+  h3 {
     font-size: initial;
   }
 }

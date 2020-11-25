@@ -2,6 +2,8 @@
   {
     "href": "/tech-front-end-react",
     "name": "React",
+    "metaDescription": "KeenEthics offers React JS development services for the development of responsive user interfaces and management of dynamically changing data. A ReactJS developer can make almost any idea work, however complex the project was.",
+    "metaTitle": "React JS Development Company, Hire React.js Developers — KeenEthics",
     "description": "Library for blazing-fast UI-rendering va virtual-DOM",
     "icon": "icon-rn"
   },
@@ -28,9 +30,9 @@
   {
     "href": "/tech-front-end-vue",
     "name": "Vue JS",
-    "metaTitle": "Vue.js development services – KeenEthics",
+    "metaTitle": "Vue.js development services — KeenEthics",
     "description": "Popular lightweight library for UI",
-    "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
+    "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework. It is ideal for MVP and PWA development.",
     "icon": "icon-vue"
   }
 ]
