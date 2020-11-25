@@ -264,33 +264,6 @@ const ServicesInternetOfThings = () => {
           <WhyKeenethicsList list={whyKeenethics} />
         </section>
         <section>
-          <h2>Our IoT Solutions</h2>
-          <img style={{ marginBottom: '20px' }} src="/static/services/internet-of-things/asama-logo.png" alt="Asama logo" />
-          <p>
-            <a href="https://asama.tech/eng" target="_blank" rel="noopener noreferrer nofollow">Asama</a>
-            &nbsp;is an IoT employee tracking solution developed by KeenEthics. This system consists
-            of fitness trackers, BLE beacons, artificial intelligence, and mobile app. It works
-            in any industry where employers need to monitor movement or routes of employees,
-            from industrial plants and constructions to restaurants and delivery services. This
-            solution helps you as a manager or a business owner make sure that the employees are
-            working actively throughout the day, not sleeping or wandering around, arriving on
-            time, and leaving on time. KeenEthics specialists will install and configure the
-            system of beacons, set up trackers and the mobile app, and instruct managers on how
-            to use Asama.
-          </p>
-        </section>
-        <section>
-          <img src="/static/services/internet-of-things/asama-items.png" alt="Asama Items" />
-          <CallToActionButton
-            title="learn more"
-            href="/contacts"
-          />
-          <p>
-            Another company we have provided Internet of Things development services with is PREE.
-            See the case study to learn more about it.
-          </p>
-        </section>
-        <section>
           <h2>Portfolio</h2>
           <p>These are some of the cloud applications that we have developed:</p>
           <Works works={webDevelopmentWorks} />

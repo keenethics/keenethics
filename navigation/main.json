@@ -29,10 +29,10 @@
         "type": "default"
       },
       {
-        "name": "Minimum Viable Product",
-        "description": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
-        "metaTitle": "МVP Software Development - KeenEthics",
-        "metaDescription": "To find out whether your idea can win the competition and receive customers’ love, create a minimum viable product first.",
+        "name": "MVP Development Services",
+        "description": "Using a resource-efficient approach to test the viability of your business idea.",
+        "metaTitle": "MVP Development Services — KeenEthics",
+        "metaDescription": "Developing MVP is a resource-efficient approach to test the viability of your business idea — to see if the market needs it, if the users like it, and how you can improve it. In fact, MVP development takes about 6 times less time and resources than the development of a full app.",
         "href": "/approach-minimum-viable-product",
         "type": "default"
       },
@@ -124,9 +124,9 @@
       {
         "name": "Indoor Positioning System",
         "metaTitle": "Indoor Positioning System — KeenEthics",
-        "description": "This solution will bring your customer service and employee management to a new level",
-        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants",
-        "href": "/services-indoor-positioning-system",
+        "description": "This solution will bring your customer service and employee management to a new level.",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
+        "href": "/services-indoor-positioning-system-development",
         "type": "default",
         "outsideMenu": true
       }

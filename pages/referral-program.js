@@ -495,17 +495,18 @@ const ReferralProgram = () => {
                 placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
                 isDisabled={!areEventsLoaded}
               />
-
-              <Select
-                id="countryList"
-                classNamePrefix="country-list"
-                options={countryList}
-                className={`country-list ${showError && !country ? 'error' : ''}`}
-                onChange={(value) => { selectCountry(value); }}
-                value={country}
-                isSearchable
-                placeholder="Your Time Zone"
-              />
+              <div onClick={(e) => e.target.scrollIntoView(true)}>
+                <Select
+                  id="countryList"
+                  classNamePrefix="country-list"
+                  options={countryList}
+                  className={`country-list ${showError && !country ? 'error' : ''}`}
+                  onChange={(value) => { selectCountry(value); }}
+                  value={country}
+                  isSearchable
+                  placeholder="Your Time Zone"
+                />
+              </div>
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
               <div className="title">Your Info:</div>

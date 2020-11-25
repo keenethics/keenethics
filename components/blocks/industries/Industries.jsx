@@ -123,6 +123,7 @@ const Industries = () => {
                 <div className="industries--small-item-title">
                   Finance and Banking
                 </div>
+
               </div>
               <div className="industries--small-item">
                 <div className="industries--small-item-logo">
