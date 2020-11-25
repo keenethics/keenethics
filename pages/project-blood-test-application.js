@@ -101,12 +101,12 @@ const ProjectPrix = () => (
               <CallToActionButton
                 title="SHARE YOUR IDEA"
                 buttonBefore={(
-                  <Link
-                    href="/portfolio"
-                  >
-                    <button type="button" className="call-to-cation-btn -secondary">
-                      CHECK OTHER PROJECTS
-                    </button>
+                  <Link href="/portfolio">
+                    <a>
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        CHECK OTHER PROJECTS
+                      </button>
+                    </a>
                   </Link>
                 )}
               />

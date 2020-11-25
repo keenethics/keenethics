@@ -135,17 +135,18 @@ const ProjectPrix = () => (
                 The company we have provided hospital management software development services for managed to become one of the most promising start-ups in the digital healthcare sector. It witnessed considerable growth in the demand for this hospital management system. Indeed, this platform seems to be a life-saver for clinics that struggle managing their online presence and other marketing activities.
               </p>
             </section>
+
             <section>
               <h2>Do You Have a Similar Project Idea?</h2>
               <CallToActionButton
-                title="SHARE YOUR IDEA"
+                title="SHARE YOUR IDEAD"
                 buttonBefore={(
-                  <Link
-                    href="/portfolio"
-                  >
-                    <button type="button" className="call-to-cation-btn -secondary">
-                      CHECK OTHER PROJECTS
-                    </button>
+                  <Link href="/portfolio">
+                    <a>
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        CHECK OTHER PROJECTS
+                      </button>
+                    </a>
                   </Link>
                 )}
               />

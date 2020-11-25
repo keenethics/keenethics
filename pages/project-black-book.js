@@ -6,6 +6,7 @@ import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#3c67ab';
 
@@ -69,15 +70,23 @@ const ProjectBlackBook = () => (
                 <span>Login: user@mail.com</span>
                 <span>Password: 111111</span>
               </p>
-              <a
-                href="http://bb-ipad.herokuapp.com"
-                rel="noopener noreferrer nofollow"
-                target="_blank"
-                className="link"
-                style={{ background: baseColor }}
-              >
-                Look at the project
-              </a>
+            </div>
+            <div className="project-content-more">
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="http://bb-ipad.herokuapp.com"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK THE PROJECT
+                    </button>
+                  </a>
+                )}
+              />
             </div>
           </div>
           <Navigation />
