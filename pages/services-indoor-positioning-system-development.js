@@ -270,7 +270,7 @@ const ServicesIndoorPositioningDevelopment = () => {
         <section>
           <h2>What is our experience with indoor positioning companies?</h2>
 
-          <div>
+          <div className="content-block">
             <h3 className="text-center">PREE</h3>
             <p>
               PREE is an IoT system for indoor positioning, which is implemented with BLE beacons and a mobile app. The goal of 
@@ -287,10 +287,14 @@ const ServicesIndoorPositioningDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 PM</div>
             </div>
-            <Works works={works.filter(({ title }) => ['Pree'].includes(title))} />
+            <img
+              loading="lazy"
+              src="/static/portfolio/pree.jpg"
+              alt="Airport Solution"
+            />
           </div>
 
-          <div>
+          <div className="content-block">
             <h3 className="text-center">Airport Solution</h3>
             <p>
               The airport solution optimizes and automates navigation and the communication with passengers. The solution
@@ -313,16 +317,17 @@ const ServicesIndoorPositioningDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team of 7</b>: 1 Product Owner, 1 UI UX designer, 1 back-end developer, 1 full-stack developer, 1 mobile developer, 1 hardware engineer, 1 QA special</div>
             </div>
-            <img src='/static/portfolio/airportscreen.png' alt="Airport Showroom" className="airport-showrooms-image"/>
+            <img
+              loading="lazy"
+              src="/static/portfolio/airportscreen.png"
+              alt="Airport Solution"
+            />
           </div>
 
         </section>
-
-        <section>
-          <LetsStart />
-        </section>
-
       </div>
+
+      <LetsStart />
     </Layout>
   )
 }
