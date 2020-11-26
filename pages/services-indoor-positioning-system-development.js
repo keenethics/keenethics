@@ -49,27 +49,27 @@ const ServicesIndoorPositioningDevelopment = () => {
   
   const whomWeOfferList = [
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-5 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_1.svg',
       title: 'Stores & Shopping malls'
     },
     {
-      icon: '/static/services/indoor-positioning-development/icon-8 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_2.svg',
       title: 'Exhibition & Business centers'
     },
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-2 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_3.svg',
       title: 'Warehouses & Construction sites'
     },
     {
-      icon: '/static/services/indoor-positioning-development/Group_97 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_4.svg',
       title: 'Airports, Subway & Railway stations'
     },
     {
-      icon: '/static/services/indoor-positioning-development/Group 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_5.svg',
       title: 'Hotels & motels'
     },
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-3 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_6.svg',
       title: 'Plants & Factories'
     },
   ]
