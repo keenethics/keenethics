@@ -263,12 +263,12 @@ const ServicesMobileDevelopment = () => {
 
         <section>
           <h2>Custom Nonprofit Development Services We Offer</h2>
-          <ul className="mobile-development-list">
+          <ul className="we-offer-list">
             {servicesList.map(({ icon, title, href }) => (
-              <li className="mobile-development-item" key={href}>
+              <li className="we-offer-item" key={href}>
                 <figure>
-                  <img src={icon} alt={title} />
-                  <figcaption className="mobile-development-figcaption">
+                  <img src={icon} alt={title}/>
+                  <figcaption className="we-offer-figcaption">
                     {href ? (
                       <Link href={href}>
                         <a>{title}</a>
