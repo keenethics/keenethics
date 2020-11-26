@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { works } from '../main.config';
 
@@ -223,7 +224,7 @@ const ServicesMobileDevelopment = () => {
 
         <section>
           <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-          <CallToActionButton title="Contact Us" href="/contacts" />
+          <LetsStart />
         </section>
       </div>
     </Layout>
