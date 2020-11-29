@@ -27,10 +27,7 @@ export default class NavigationPoint extends React.Component {
 
   renderPoint() {
     const {
-      element: {
-        href,
-        points,
-      },
+      element: { href, points },
       isBurgerMenu,
     } = this.props;
 
@@ -69,58 +66,47 @@ export default class NavigationPoint extends React.Component {
   renderPointContent() {
     const {
       element: {
-        name,
-        icon,
-        number,
-        type,
+        name, icon, number, type,
       },
     } = this.props;
 
     switch (type) {
-      case 'icon': return (
-        <span className="navigation-cell">
-          <span className="navigation-icon">
-            <img
-              src={`/static/images/svg/${icon.name || ''}.svg`}
-              width="30px"
-              height="30px"
-              alt={icon.alt || ''}
-            />
-          </span>
-          {name}
-        </span>
-      );
-      case 'number': return (
-        <span className="navigation-cell">
-          <i>{number}</i>
-          <span className="menu-sub-nm">
+      case 'icon':
+        return (
+          <span className="navigation-cell">
+            <span className="navigation-icon">
+              <img
+                src={`/static/images/svg/${icon.name || ''}.svg`}
+                width="30px"
+                height="30px"
+                alt={icon.alt || ''}
+              />
+            </span>
             {name}
           </span>
-        </span>
-      );
-      default: return (
-        <span className="navigation-cell">{name}</span>
-      );
+        );
+      case 'number':
+        return (
+          <span className="navigation-cell">
+            <i>{number}</i>
+            <span className="menu-sub-nm">{name}</span>
+          </span>
+        );
+      default:
+        return <span className="navigation-cell">{name}</span>;
     }
   }
 
   render() {
     const {
-      element: {
-        name,
-        points,
-      },
+      element: { name, points, href },
     } = this.props;
 
     const { isExpanded } = this.state;
 
     if (!name) return null;
 
-    const {
-      children,
-      currentPoint,
-      currentSubpoint,
-    } = this.props;
+    const { children, currentPoint, currentSubpoint } = this.props;
 
     const className = cn({
       'navigation-item': true,
@@ -132,8 +118,10 @@ export default class NavigationPoint extends React.Component {
 
     return (
       <li
-        className={className}
         role="presentation"
+        // eslint-disable-next-line no-restricted-globals
+        onClick={() => (name === 'Contact Us' ? location.assign(href) : null)}
+        className={className}
       >
         {this.renderPoint()}
         {children}
