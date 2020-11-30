@@ -533,9 +533,8 @@ const ServicesWebDevelopmentNode = () => {
           <h2>Why choose KeenEthics?</h2>
           <WhyKeenethicsList list={whyKeenethics} />
         </section>
-        <h2>Now, let’s discuss your business idea!</h2>
-        <LetsStart />
       </div>
+      <LetsStart />
     </Layout>
   );
 };
