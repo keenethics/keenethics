@@ -44,7 +44,7 @@ const Industries = () => {
                 </Link>
               </div>
               <div className="col-1-3">
-                <Link href="/servcies-non-profit-software-development" prefetch={false}>
+                <Link href="/services-non-profit-software-development" prefetch={false}>
                   <a className="industries--big-item">
                     <div className="industries--big-item-logo">
                       <LazyLoadImage
@@ -91,11 +91,11 @@ const Industries = () => {
                     src="/static/main-blocks/industries/small/logisctics-icon.svg"
                     width="32px"
                     height="27px"
-                    alt="Logisctics Industry"
+                    alt="Logistics Industry"
                   />
                 </div>
                 <div className="industries--small-item-title">
-                  Logisctics
+                  Logistics
                 </div>
               </div>
               <div className="industries--small-item">

@@ -358,8 +358,8 @@ const TechFrontEndVue = () => {
             />
           </div>
         </section>
-        <LetsStart />
       </div>
+      <LetsStart />
     </Layout>
   );
 };

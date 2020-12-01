@@ -293,9 +293,8 @@ const TechAppsPhone = () => {
           <p>These are some web and mobile apps that we have developed: </p>
           <Works works={phoneGapWorks} />
         </section>
-        <h2>Now, let’s discuss your business idea!</h2>
-        <LetsStart />
       </div>
+      <LetsStart />
     </Layout>
   );
 };

@@ -326,10 +326,7 @@ const ServicesIndoorPositioningDevelopment = () => {
 
         </section>
       </div>
-
-      <div className="lets-start-block-ips">
-        <LetsStart />
-      </div>
+      <LetsStart />
     </Layout>
   )
 }
