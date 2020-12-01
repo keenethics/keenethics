@@ -1,0 +1,41 @@
+.service-page-total-cost {
+  padding-left: calc(15% - 50px);
+  width: max-content;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (max-width: $tablet-lg) {
+    padding-left: 30px;
+    width: initial;
+  }
+  @media screen and (max-width: $mobile-lg) {
+    padding: 0 20px
+  }
+  &-wrapp {
+    margin-top: 45px;
+    @media screen and (max-width: $tablet-lg) {
+      margin-top: 35px;
+    }
+  }
+  & > p {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #12233d;
+    max-width: 493px;
+  }
+
+  &-background-price {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 90px;
+    color: #d62c2c;
+    opacity: 0.2;
+    @media screen and (max-width: $tablet-lg) {
+      font-size: 70px;
+    }
+    @media screen and (max-width: $mobile-lg) {
+      font-size: 50px;
+    }
+  }
+}

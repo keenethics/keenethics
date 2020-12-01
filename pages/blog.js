@@ -102,21 +102,19 @@ class Blog extends React.Component {
   postsFilterd = () => {
     const { selectedPosts, step } = this.state;
     const { posts } = this.props;
-    const slicedPosts = posts.slice(0, step * 9);
 
     if (
-      selectedPosts.length === slicedPosts.length
-      || selectedPosts.length === 0
-    ) { return slicedPosts; }
+      selectedPosts.length === 0
+    ) { return posts.slice(0, step * 9); }
 
-    return slicedPosts.reduce((acc, post) => {
+    return posts.reduce((acc, post) => {
       if (post.fields && post.fields.categories) {
         return intersection(post.fields.categories, selectedPosts).length
           ? [...acc, post]
           : acc;
       }
       return acc;
-    }, []);
+    }, []).slice(0, step * 9);
   };
 
   filterOnChange = (selectedPosts) => {

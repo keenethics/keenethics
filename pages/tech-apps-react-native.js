@@ -20,7 +20,7 @@ const whyReactNativeSection = [
     <br />
     Reactive Native apps perform as well as the native ones.
     In fact, the &nbsp;
-    <a href="https://medium.com/the-react-native-log/comparing-the-performance-between-native-ios-swift-and-react-native-7b5490d363e2" target="_blank" rel="noopener noreferrer nofollow">research</a>
+    <a href="https://medium.com/the-react-native-log/comparing-the-performance-between-native-ios-swift-and-react-native-7b5490d363e2">research</a>
     &nbsp; confirms that the only performance characteristic where
     React Native loses to Swift is CPU usage.
   </>,

@@ -15,7 +15,7 @@ const whyAndroid = [
   {
     icon: '/static/services/world.svg',
     alt: 'world',
-    description: <p>Android market is growing at a rapid pace, and you can become a part of it. At the end of 2018, <a href="//www.statista.com/statistics/266136/global-market-share-held-by-smartphone-operating-systems/" target="_blank" rel="noopener noreferrer nofollow">88% of all smartphones</a> sold to end users were using Android. Your business will go global.</p>,
+    description: <p>Android market is growing at a rapid pace, and you can become a part of it. At the end of 2018, <a href="//www.statista.com/statistics/266136/global-market-share-held-by-smartphone-operating-systems/">88% of all smartphones</a> sold to end users were using Android. Your business will go global.</p>,
   },
   {
     icon: '/static/services/audience.svg',

@@ -178,32 +178,33 @@ const ProjectTetrami = () => (
               </p>
               <p>
                 To sign up for Tetrami, one may use their
-                <span style={{ marginLeft: '.25em' }}><a href="//www.facebook.com/tetramideals/" target="_blank" rel="noopener noreferrer nofollow">Facebook</a></span>
+                <span style={{ marginLeft: '.25em' }}><a href="//www.facebook.com/tetramideals/">Facebook</a></span>
                 ,
-                <span style={{ marginLeft: '.25em' }}><a href="//twitter.com/tetramideals" target="_blank" rel="noopener noreferrer nofollow">Instagram</a></span>
+                <span style={{ marginLeft: '.25em' }}><a href="//twitter.com/tetramideals">Instagram</a></span>
                 , or
-                <span style={{ margin: '0 .25em' }}><a href="//www.instagram.com/tetramideals/" target="_blank" rel="noopener noreferrer nofollow">Twitter</a></span>
+                <span style={{ margin: '0 .25em' }}><a href="//www.instagram.com/tetramideals/">Twitter</a></span>
                 accounts. Respectively, the platform has its accounts on all of these three
                 networks, so feel free to check their Facebook, Twitter, and Instagram
                 to learn more!
               </p>
             </section>
-
-            <h2>Do You Have a Similar Project Idea?</h2>
-
-            <CallToActionButton
-              buttonBefore={(
-                <a
-                  href="//web.tetrami.com/"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    CHECK THE PROJECT
-                  </button>
-                </a>
-              )}
-            />
+            <section>
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="https://web.tetrami.com/"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK THE PROJECT
+                    </button>
+                  </a>
+                )}
+              />
+            </section>
           </div>
           <Navigation />
         </div>

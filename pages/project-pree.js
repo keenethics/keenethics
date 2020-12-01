@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#4d48b4';
 
@@ -113,8 +115,6 @@ const ProjectPrix = () => (
               cordova ble plugin &ndash;&nbsp;
               <a
                 href="https://github.com/don/cordova-plugin-ble-central"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
               >
                 cordova-plugin-ble-central
               </a>
@@ -204,6 +204,21 @@ const ProjectPrix = () => (
               src="/static/images/project/pree-hand.jpg"
               alt="Pree site"
               className="image-gaps"
+            />
+          </div>
+          <div className="project-content-more">
+            <h2>Do You Have a Similar Project Idea?</h2>
+            <CallToActionButton
+              title="SHARE YOUR IDEA"
+              buttonBefore={(
+                <Link href="/portfolio">
+                  <a>
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK OTHER PROJECTS
+                    </button>
+                  </a>
+                </Link>
+              )}
             />
           </div>
           <Navigation />

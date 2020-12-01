@@ -211,7 +211,7 @@ class ServicesWebDevelopment extends React.Component {
               ,
               <span><a href="/tech-back-end-express" target="_blank">Express</a></span>
               ,
-              <span><a href="https://github.com/keenethics/svelte-notifications" target="_blank" rel="noopener noreferrer nofollow">Svelte</a></span>
+              <span><a href="https://github.com/keenethics/svelte-notifications">Svelte</a></span>
               ,
               <span><a href="/services-web-development-meteor" target="_blank">Meteor</a></span>
               .
@@ -246,8 +246,6 @@ class ServicesWebDevelopment extends React.Component {
                 <li className="technologies-item">
                   <a
                     href="https://github.com/keenethics/svelte-notifications"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
                   >
                     <img src="/static/services/web-dev/svelte.png" alt="Svelte" />
                   </a>
@@ -336,7 +334,7 @@ class ServicesWebDevelopment extends React.Component {
               web app development services is equally suitable for small businesses and start-ups
               and for large corporations because, while providing cost-efficient solutions, we do
               not compromise quality. If you are not convinced,&nbsp;
-              <a href="https://clutch.co/profile/keenethics#review-184570" target="_blank" rel="noopener noreferrer nofollow">see what our long-term partner has to say</a>
+              <a href="https://clutch.co/profile/keenethics#review-184570">see what our long-term partner has to say</a>
               &nbsp;or&nbsp;
               <a href="/contacts?activeform=estimate" target="_blank">let us estimate your project</a>
               !

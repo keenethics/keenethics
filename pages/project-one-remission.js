@@ -4,6 +4,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#fe6340';
 
@@ -67,7 +68,7 @@ const ProjectPrix = () => (
               <h3><b>Providing Valuable Knowledge</b></h3>
               <p>
                 The app features a comprehensive knowledge base of diets, exercises, and
-                post-cancerpractices. It is curated by Integrative Medicine experts, whose
+                post-cancer practices. It is curated by Integrative Medicine experts, whose
                 goal is to let one live a safe and enjoyable life. For instance, a user can
                 search for the information on cancer-related risks and benefits of a
                 certain food product.
@@ -113,16 +114,23 @@ const ProjectPrix = () => (
             </div>
           </div>
           <img src="/static/portfolio/one-remission/oneremission-img-3.jpg" alt="OneRemission App" />
+
           <div className="project-content-more">
-            <a
-              href="http://oneremission.com/"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
+            <h2>Do You Have a Similar Project Idea?</h2>
+            <CallToActionButton
+              title="SHARE YOUR IDEA"
+              buttonBefore={(
+                <a
+                  href="http://oneremission.com/"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                >
+                  <button type="button" className="call-to-cation-btn -secondary">
+                    CHECK THE PROJECT
+                  </button>
+                </a>
+              )}
+            />
           </div>
           <Navigation />
         </div>

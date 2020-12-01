@@ -1,0 +1,114 @@
+.service-page-body-background-color {
+  background-color: #e5e5e5;
+}
+
+.service-page-porfolio-section {
+  background-color: #fafafa;
+  padding-top: 70px;
+  & .filter__list {
+    &::before {
+      background: none;
+    }
+    &::after {
+      background: none;
+    }
+  }
+  &-title {
+    margin-bottom: 25px;
+    & > h3 {
+      font-family: Raleway;
+      font-size: 34px;
+      line-height: 44px;
+      text-align: center;
+      color: #12233d;
+    }
+  }
+}
+
+.service-page-see-more-projects {
+  max-width: 993px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $desktop-sm) {
+    flex-direction: column;
+  }
+  &-wrapp {
+    margin-top: 55px;
+  }
+  & > h3 {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 18px;
+    line-height: 28px;
+    color: #12233d;
+    @media screen and (max-width: $desktop-sm) {
+      margin-bottom: 30px;
+    }
+  }
+  & > .see-more-projects {
+    margin: 0;
+    & > a {
+      margin: 0;
+      & > button {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        text-transform: initial;
+        width: 169px;
+      }
+    }
+  }
+}
+
+.service-page-choose-other-services {
+  margin-top: 85px;
+  @media screen and (max-width: $tablet-lg) {
+    display: none;
+  }
+  & > .service-page-body-other-services-wrapp {
+    & > .service-page-body-other-services {
+      padding-right: 0;
+      & > .service-page-body-other-services-title {
+        max-width: 430px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      & > .service-page-body-other-services-items {
+        & > .service-page-body-other-services-items-list {
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-column-gap: 25px;
+          padding: 0 25px 40px 25px;
+          & > .service-page-body-other-services-items-list-item {
+            flex-basis: 30%;
+            display: flex;
+            align-items: center;
+            & > a {
+              color: #000000;
+            }
+            &.active {
+              & > a {
+                color: #d62c2c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./service-page-header.scss";
+@import "./service-page-body-other-services.scss";
+@import "./service-page-body-total-cost.scss";
+@import "./service-page-body-what-is-service.scss";
+@import "./service-page-body-why-keen-ethics.scss";
+@import "./service-page-what-do-we-offer.scss";

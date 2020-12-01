@@ -123,15 +123,21 @@ const ProjectComicEnglish = () => (
               </p>
             </section>
 
-            <CallToActionButton
-              buttonBefore={(
-                <Link href="/portfolio">
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    Other case studies
-                  </button>
-                </Link>
-              )}
-            />
+            <section>
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <Link href="/portfolio">
+                    <a>
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        CHECK OTHER PROJECTS
+                      </button>
+                    </a>
+                  </Link>
+                )}
+              />
+            </section>
           </div>
           <Navigation />
         </div>

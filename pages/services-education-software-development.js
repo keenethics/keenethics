@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { works } from '../main.config';
 
@@ -14,15 +15,15 @@ const ServicesMobileDevelopment = () => {
   const edTechIndustry = [
     {
       description: 'Business development.',
-      additionalText: <p>All leading retail companies like Coca-Cola, Home Depot, and Walmart use mobile learning apps and educational web services for the purpose of teaching and <b>training employees</b>.</p>,
+      additionalText: <p>All leading retail companies like Coca-Cola, Home Depot, and Walmart use mobile learning apps and educational web services for the purpose of <b>teaching and training employees.</b></p>,
     },
     {
       description: 'Personal development.',
-      additionalText: <p>Lots of students decide to abandon traditional education and opt for online education via such <b>self-learning</b> platforms as edX, Coursera, or LinkedIn Learning. <b>Learning languages</b> has become so much easier when Duolingo, Memrise, LinguaLeo, Babbel were introduced.</p>,
+      additionalText: <p>Lots of students decide to abandon traditional education and opt for online education via such <b>self-learning</b> platforms as edX, Coursera, or LinkedIn Learning. <b>Learning languages</b> has become so much easier when Duolingo, Memrise, LinguaLeo, Babbel entered the market.</p>,
     },
     {
       description: 'Academic development.',
-      additionalText: <p>Most school administrations, including those of Oxford, MIT, and California Institute of Technology, have employed e-learning software in the pursuit of <b>managing their learning process</b>, assessing and <b>keeping a record of student performance</b>, and <b>sharing educational materials and resources</b>.</p>,
+      additionalText: <p>Most school administrations, including those of Oxford, MIT, and California Institute of Technology, have employed e-learning software development in the pursuit of <b>managing their learning process</b>, assessing and <b>keeping a record of student performance</b>, and <b>sharing educational materials and resources</b>.</p>,
     },
   ];
   const servicesList = [
@@ -67,17 +68,17 @@ const ServicesMobileDevelopment = () => {
         <section>
           <h1 className="text-center">Education Software Development Services</h1>
           <p className="text-center text-italic">Revolutionizing the world of personal, academic, and professional development.</p>
-          <CallToActionButton href="/contacts" />
+          <CallToActionButton title="BOOK A CALL" href="/contacts" />
         </section>
         <section>
           <h2>Ed-Tech Industry</h2>
-          <p>Due to the rapid growth of the smartphone market, mobile development is the most popular service in the IT industry, and the number of companies providing it is immense.</p>
+          <p>The ed-tech industry is going to hit $325 billion in revenue by 2025, according to Forbes. In other words, by the year 2025, the industry is bound to have tripled the revenue it brought in 2015. Custom e-learning solutions and platforms are actively used in school settings, for business development, and for self-education. </p>
           <FeaturesList list={edTechIndustry} titleItalic />
         </section>
 
         <section>
-          <h2>Challenges in Education Software Development</h2>
-          <p>You may want to realize your fresh idea for an online dictionary, a tool for visual learning, a mind-mapping instrument, an interactive STEM app, or a music simulator. You may need your conventional education organization to go online or your existing education platform to get a second breath. You may want to test your startup idea or learn more regarding education software development services. In any case, you are going to encounter certain challenges.</p>
+          <h2>What are the education software development challenges?</h2>
+          <p>You may want to implement your fresh idea for an online dictionary, a tool for visual learning, a mind-mapping instrument, an interactive STEM app, or a music simulator. You may need your conventional education organization to go online or your existing education platform to get a second breath. Or you may want to test your startup idea and to learn more regarding education software development services. In any case, you are going to encounter certain challenges.</p>
           <ul className="challenges-list">
             <li className="challenges-item">
               <h3><img src="/static/services/services-education-software-development/challenges-you-face.png" alt="challenges you face"/>CHALLENGES YOU FACE</h3>
@@ -103,7 +104,7 @@ const ServicesMobileDevelopment = () => {
             <li className="challenges-item">
               <h3 className="hidden-xs"><img src="/static/services/services-education-software-development/solutions-we-offer.png" alt="challenges you face"/>SOLUTIONS WE OFFER</h3>
               <ul>
-                <li>If you are a pedagog yourself or you have those in your team, please, cooperate with us at all times and closely <a href="/blog/1553896800000-how-to-monitor-your-project-distantly" target="_blank" rel="noopener noreferrer nofollow">monitor your project</a>.</li>
+                <li>If you are an educator yourself or you have those in your team, please, cooperate with us at all times and closely <a href="/blog/1553896800000-how-to-monitor-your-project-distantly" target="_blank" rel="noopener noreferrer nofollow">monitor your project</a>.</li>
                 <li>If you do not have pedagogical expertise, we will provide you with a professional in the field.</li>
               </ul>
             </li>
@@ -111,7 +112,7 @@ const ServicesMobileDevelopment = () => {
               <h3 className="hidden-xs"><img src="/static/services/services-education-software-development/challenges-you-face.png" alt="challenges you face"/>CHALLENGES YOU FACE</h3>
               <b>Technological advancement</b>
               <p>
-                While technologies are advancing so rapidly, it is easy to fall behind the pace. However, falling behind technological advancement means missing a valuable opportunity and losing the competition. <b>HowHow can you keep your recently developed educational app or e-learning platform up-to-date?</b>
+                While technologies are advancing so rapidly, it is easy to fall behind the pace. However, falling behind technological advancement means missing a valuable opportunity and losing the educational app development competition. <b>HowHow can you keep your recently developed educational app or e-learning platform up-to-date?</b>
               </p>
             </li>
             <li className="challenges-item">
@@ -127,7 +128,7 @@ const ServicesMobileDevelopment = () => {
         </section>
 
         <section>
-          <h2>Education Software Development Services We Offer</h2>
+          <h2>What education software development services do we offer?</h2>
           <ul className="mobile-development-list">
             {
               servicesList.map(({ icon, title, href }) => (
@@ -147,7 +148,7 @@ const ServicesMobileDevelopment = () => {
         </section>
 
         <section>
-          <h2>Portfolio</h2>
+          <h2>What is our experience in education development?</h2>
           <div>
             <h3>SelfLeaders</h3>
             <p>SelfLeaders delivers training events for professional and personal development in self-leadership for businesses of different sizes, NGOs, and the public sector. This app is a set of personal growth tools for those who organize and participate in educational events. It provides an opportunity to conduct workshops with interactive materials, videos, presentations, etc.</p>
@@ -175,6 +176,19 @@ const ServicesMobileDevelopment = () => {
           </div>
 
           <div>
+            <h3>Let’s Start Coding</h3>
+            <p>Let’s Start Coding is an interactive e-learning platform for children. The website and desktop application are augmented with physical coding kits — printed circuit boards in the shape of cars, rockets, or pianos. Through the usage of these software and hardware tools, children are encouraged to learn to code. This e-learning app development experience was quite a challenge, but we are happy and proud to have been a part of it.</p>
+
+            <div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="#"><a>Desktop</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-apps-electron"><a>Electron</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
+              <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers, and 1 QA specialist.</div>
+            </div>
+            <Works works={works.filter(({ title }) => ['Let’s Start Coding'].includes(title))} />
+          </div>
+
+          <div>
             <h3>ComicEnglish</h3>
             <p>ComicEnglish is a service that helps users develop their language skills by playing games with the English learning chatbot. It includes quests of various difficulty levels and language competence. The gamified platform motivates users to stay on the track of learning English with rewards and multiple fun features.</p>
 
@@ -189,11 +203,11 @@ const ServicesMobileDevelopment = () => {
         </section>
 
         <section>
-          <h2>Why KeenEthics?</h2>
+          <h2>Why choose KeenEthics?</h2>
           <p>As an education software development company, we are devoted to the needs of your business and the best interests of your users.</p>
 
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>1</span> Empowering growth</h3>
-          <p>We have a proven record of helping education companies grow. The elearning software of our latest client has grown by 5 times in terms of the number of users over the course of a year. We are ready to support you in the atmosphere of changing needs and requirements.</p>
+          <p>We have a proven record of helping education companies grow. The elearning software of our latest client has grown by 5 times in terms of the number of users over the course of a year. We are ready to support you through the entire process of e-learning application development in the atmosphere of changing needs and requirements.</p>
 
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>2</span> Building value</h3>
           <p>Ethics is not just a part of our company name, it is the foremost principle we abide by. We cooperate with our partners on the basis of trust and transparency. We make sure that our education software solutions fully comply with the technical and ethical guidelines of Android, iOS, Microsoft, or any other platform you work with.</p>
@@ -202,12 +216,13 @@ const ServicesMobileDevelopment = () => {
           <p>We strive to optimize and shorten the engagement stage of our cooperation. So, our education software development company will offer you the exact number of software professionals you need. You can hire software developers, QA specialists, UI/UX designers, and a dedicated PM in the shortest terms possible.</p>
 
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>4</span> Bringing tech expertise</h3>
-          <p>Our specialists have sound experience in developing educational apps and elearning software, and we want to share this experience with you. We offer mobile, desktop, and web education software solutions, on multiple platforms and software development technologies. Should you want a progressive web app or a chatbot, we are also ready to offer our assistance.</p>
+          <p>Our specialists have sound experience in developing educational apps and elearning software, and we want to share this experience with you. We offer mobile, desktop, and web education software solutions, written for multiple platforms and with different software development technologies. Should you need a <Link href="/tech-apps-progressive-web-apps"><a>progressive web app</a></Link> or a <Link href="/services-chatbots-artificial-intelligence"><a>chatbot development</a></Link>, we are also ready to offer our assistance.</p>
 
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data</h3>
-          <p>We understand how valuable your project idea is, so we comply with all the data security regulations. If you choose to sign an NDA, we will respect and value your willingness to stay private.</p>
+          <p>We understand how valuable your project idea is, so we comply with all the <Link href="/blog/1543388400000-your-data-is-safe-in-ukraine"><a>data security</a></Link> regulations. If you choose to sign an NDA, we will respect and value your willingness to stay private.</p>
         </section>
       </div>
+      <LetsStart />
     </Layout>
   );
 };

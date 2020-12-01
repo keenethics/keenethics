@@ -1,0 +1,95 @@
+.service-page-what-do-we-offer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 70px;
+  &-header {
+    text-align: center;
+    font-family: Raleway;
+    font-size: 34px;
+    line-height: 44px;
+    color: #12233d;
+    padding: 90px 0;
+    @media screen and (max-width: $mobile-lg) {
+      padding: 60px 10px 60px 10px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    @media screen and (max-width: $tablet-lg) {
+      max-width: initial;
+      padding: 0 30px;
+    }
+    @media screen and (max-width: $mobile-lg) {
+      padding: 0 20px;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      &:not(:first-child) {
+        margin-top: 90px;
+        @media screen and (max-width: $mobile-lg) {
+          margin-top: 45px;
+        }
+      }
+      @media screen and (max-width: $tablet-lg) {
+        flex-direction: column-reverse;
+      }
+      &-left {
+        flex-basis: 46%;
+        @media screen and (max-width: $tablet-lg) {
+          max-width: 80%;
+          margin-top: 35px;
+        }
+        @media screen and (max-width: $mobile-lg) {
+          max-width: initial;
+        }
+        &-title {
+          & > h4 {
+            font-family: Raleway;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 14px;
+            color: #000000;
+          }
+        }
+        &-red-underline {
+          width: 95px;
+          background: rgba(0, 0, 0, 0.0001);
+          border: 1px solid #d62c2c;
+          margin: 35px 0;
+        }
+        &-text {
+          & > p {
+            font-family: Raleway;
+            font-size: 16px;
+            line-height: 28px;
+            color: #12233d;
+          }
+        }
+      }
+      &-right {
+        flex-basis: 50%;
+        @media screen and (max-width: $tablet-lg) {
+          max-width: 80%;
+        }
+        @media screen and (max-width: $mobile-lg) {
+          max-width: initial;
+        }
+        & > img {
+          width: 100%;
+          max-height: 220px;
+        }
+      }
+      &.row-reverse {
+        flex-direction: row-reverse;
+        @media screen and (max-width: $tablet-lg) {
+          flex-direction: column-reverse;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}

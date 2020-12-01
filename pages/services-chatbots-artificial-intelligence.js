@@ -172,7 +172,7 @@ const ChatbotsArtificialIntelligence = () => {
               <b>Voice-based chatbots:</b>
               <br />
               <Link href="https://aws.amazon.com/">
-                <a target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+                <a>AWS</a>
               </Link>
               ,&nbsp;
               <Link href="https://www.luis.ai/home">

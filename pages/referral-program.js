@@ -7,6 +7,7 @@ import { debounce } from 'lodash';
 
 import Link from 'next/link';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Layout from '../components/layout/main';
 import Partners from '../components/blocks/partners/Partners';
 import PhotoListGallery from '../components/photo-list-gallery';
@@ -52,6 +53,7 @@ const ReferralProgram = () => {
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
   const [timeDifference, setTimeDifference] = useState(0); // in minutes
+
   const countryItem = ({
     name: countryName,
     flag, callingCodes,
@@ -59,7 +61,7 @@ const ReferralProgram = () => {
   }) => ({
     label: (
       <div>
-        <img src={flag} alt={countryName} />
+        <LazyLoadImage src={flag} alt={countryName} />
         <span>{countryName}</span>
       </div>
     ),
@@ -493,63 +495,77 @@ const ReferralProgram = () => {
                 placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
                 isDisabled={!areEventsLoaded}
               />
-
-              <Select
-                id="countryList"
-                classNamePrefix="country-list"
-                options={countryList}
-                className={`country-list ${showError && !country ? 'error' : ''}`}
-                onChange={(value) => { selectCountry(value); }}
-                value={country}
-                isSearchable
-                placeholder="Your Time Zone"
-              />
+              <div onClick={(e) => e.target.scrollIntoView(true)}>
+                <Select
+                  id="countryList"
+                  classNamePrefix="country-list"
+                  options={countryList}
+                  className={`country-list ${showError && !country ? 'error' : ''}`}
+                  onChange={(value) => { selectCountry(value); }}
+                  value={country}
+                  isSearchable
+                  placeholder="Your Time Zone"
+                />
+              </div>
             </div>
             <div className={`step-content ${meetingStep === 2 ? 'show' : 'hide'}`}>
               <div className="title">Your Info:</div>
-              <input
-                type="text"
-                required
-                name="name"
-                value={name}
-                placeholder="Name"
-                minLength="2"
-                maxLength="25"
-                onChange={({ target: { value } }) => setName(value)}
-                className={showError && !StringFormatValidation.validate({ min: 3, max: 25 }, name) ? 'error' : ''}
-              />
-              <input
-                type="email"
-                required
-                name="email"
-                value={email}
-                placeholder="Email"
-                maxLength="50"
-                onChange={({ target: { value } }) => setEmail(value)}
-                className={showError && !StringFormatValidation.validate({ type: 'email' }, email) ? 'error' : ''}
-              />
-              <div className={`phone-holder ${showError
-                && !StringFormatValidation.validate({ min: 3, max: 10 }, phone) ? 'error' : ''}`}
-              >
-                {country && country.phoneCode
-                  ? (
-                    <span>
-                      +
-                      {country.phoneCode}
-                    </span>
-                  )
-                  : ''}
-                <input
-                  type="number"
-                  required
-                  name="phone"
-                  value={phone}
-                  placeholder="Phone Number"
-                  onChange={({ target: { value } }) => setPhone(value)}
-                  minLength="2"
-                  maxLength="10"
-                />
-              </div>
+
+              <div className="lets-discuss-input-wrap">
+                  <input
+                    required
+                    id="name"
+                    name="name"
+                    value={name}
+                    minLength="2"
+                    maxLength="25"
+                    onChange={({ target: { value } }) => setName(value)}
+                    className={`lets-discuss-input ${showError && !StringFormatValidation.validate({ min: 3, max: 25 }, name) ? 'error' : ''}`}
+                  />
+                  <label className="lets-discuss-form-label" htmlFor="name">Name</label>
+                </div>
+
+                <div className="lets-discuss-input-wrap">
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    name="email"
+                    value={email}
+                    maxLength="50"
+                    onChange={({ target: { value } }) => setEmail(value)}
+                    className={`lets-discuss-input ${showError && !StringFormatValidation.validate({ type: 'email' }, email) ? 'error' : ''}`}
+                  />
+                  <label className="lets-discuss-form-label" htmlFor="email">Email</label>
+                </div>
+
+                <div className={`phone-holder ${showError
+                  && !StringFormatValidation.validate({ min: 3, max: 10 }, phone) ? 'error' : ''}`}
+                >
+                  {country && country.phoneCode
+                    ? (
+                      <span>
+                        +
+                        {country.phoneCode}
+                      </span>
+                    )
+                    : ''}
+                  <div className="lets-discuss-input-wrap">
+                    <input
+                      id="phone"
+                      type="number"
+                      required
+                      name="phone"
+                      value={phone}
+                      onChange={({ target: { value } }) => setPhone(value)}
+                      minLength="2"
+                      maxLength="10"
+                      className="lets-discuss-input"
+                    />
+                    <label className="lets-discuss-form-label" htmlFor="phone">Phone Number</label>
+                  </div>
+                </div>
+
 
               <div className="title">Tell about your idea</div>
               <textarea name="idea" value={idea} onChange={({ target: { value } }) => setIdea(value)} />

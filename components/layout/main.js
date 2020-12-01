@@ -11,10 +11,9 @@ import '../../styles/main.scss';
 
 import Head from './head';
 
-// import Navigation from './navigation/main';
 import PostsContext from '../context/posts-context';
 import { getPostsList } from '../../lib/contentful';
-// import Footer from './footer';
+
 const Footer = dynamic(
   () => import('./footer'),
   { ssr: false },
@@ -122,6 +121,7 @@ class Layout extends React.Component {
               {children}
               {noFooter || (
                 <Footer
+                  openNewTab={currentURL === '/referral-program'}
                   isMobile={isMobile}
                   isTablet={isTablet}
                 />

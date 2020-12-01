@@ -1,0 +1,48 @@
+.service-page-body-what-is-service {
+  flex: 0 0 42%;
+  @media screen and (max-width: $mobile-lg) {
+    padding: 0 20px;
+  }
+  &-wrapp {
+    padding-left: calc(15% - 50px);
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet-lg) {
+      flex-direction: column;
+      padding-left: 30px;
+    }
+    @media screen and (max-width: $mobile-lg) {
+      padding-left: 0;
+    }
+  }
+  &-title {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    color: #12233d;
+  }
+  &-paragraphs {
+    @media screen and (max-width: $tablet-lg) {
+      max-width: 619px;
+      padding-right: 30px;
+    }
+    &-paragraph {
+      font-family: Raleway;
+      font-size: 18px;
+      line-height: 28px;
+      color: #12233d;
+      margin-top: 25px;
+    }
+  }
+  &-call-to-action-btn {
+    display: flex;
+    & button {
+      font-family: Raleway;
+    }
+    & a {
+      margin: 0;
+    }
+  }
+}

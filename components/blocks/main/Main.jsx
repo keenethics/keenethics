@@ -35,8 +35,6 @@ const Main = () => (
             <a
               href="https://www.upwork.com/agencies/~0106b5437592391f94"
               className="link link-upwork"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
             >
               Top rated Upwork agency
             </a>
@@ -45,8 +43,6 @@ const Main = () => (
             <a
               href="https://clutch.co/profile/keenethics"
               className="link link-clutch"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
             >
               5-star rated company on Clutch
             </a>

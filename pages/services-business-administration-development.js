@@ -287,6 +287,7 @@ const BusinessAdministrationSoftware = () => {
             &nbsp;is based on.
           </p>
           <CallToActionButton
+            nofollow
             title="SEE THE SOLUTION"
             href="https://www.silvertowntechnologies.com/?utm_source=KeenEthics&utm_medium=KeenEthics&utm_campaign=KeenEthics"
           />
