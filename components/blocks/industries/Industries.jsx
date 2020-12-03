@@ -55,7 +55,7 @@ const Industries = () => {
                       />
                     </div>
                     <div className="industries--big-item-title">
-                      Non profit
+                      Nonprofit
                     </div>
                     <div className="industries--big-item-description">
                       Administration Development

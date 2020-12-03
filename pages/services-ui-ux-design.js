@@ -222,7 +222,7 @@ const ServicesUiUxDesign = () => {
         <section>
           <h2>What is our experience in UI/UX design?</h2>
           <p>
-            ThThese are some of the applications and websites that our design
+            These are some of the applications and websites that our design
             company as a UI design agency has developed:
           </p>
           <div>

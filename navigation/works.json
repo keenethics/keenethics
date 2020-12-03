@@ -231,18 +231,6 @@
     "description": "Keep you cows healthy and well-fed"
   },
   {
-    "title": "Pollen",
-    "href": "/project-pollen",
-    "imgSrc": "pollen.jpg",
-    "webpSrc": "pollen.webp",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "description": "Organizing social-campaigns via Gmail contacts"
-  },
-  {
     "title": "BarFrogs",
     "href": "/project-barfrogs",
     "category": {
@@ -265,18 +253,6 @@
       ]
     },
     "description": "Online video-streaming"
-  },
-  {
-    "title": "Wargaming",
-    "href": "/project-wargaming",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "imgSrc": "wargaming.jpg",
-    "webpSrc": "wargaming.webp",
-    "description": "Platform for forecasting and validation of business strategies for companies."
   },
   {
     "title": "Plutio",
