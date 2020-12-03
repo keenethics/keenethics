@@ -191,7 +191,7 @@ const ServicesMobileDevelopment = () => {
             personalized service to the user.
           </p>
 
-          <h3>These are some of the Node.js applications and websites we have developed:</h3>
+          <h3>These are some of the mobile applications and websites we have developed:</h3>
           <Works works={mobileDevelopmentWorks} />
         </section>
       </div>

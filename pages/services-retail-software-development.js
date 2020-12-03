@@ -14,8 +14,7 @@ const ServicesWebDevelopmentE = () => (
       <section>
         <h1 className="text-center">Retail Software Development Services</h1>
         <p className="text-center text-italic">
-          Solving retail challenges associated with medical responsibility, patient ethics, high
-          costs, technological advancement, and holistic approach
+          Solving retail challenges associated with digital transformation, data safety, and technological advancement.
         </p>
         <CallToActionButton />
       </section>
