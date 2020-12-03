@@ -42,7 +42,9 @@ const ReferralProgram = () => {
   const [country, setCountry] = useState(null);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [renderCalendar, setRenderCalendar] = useState(false);
+  const [renderTimeList, setRenderTimeList] = useState(false);
   const [areEventsLoaded, setEventsLoaded] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -98,7 +100,6 @@ const ReferralProgram = () => {
   };
 
   useEffect(() => {
-    setRenderCalendar(true);
     window.addEventListener('scroll', debounce(handleShowScrollToTopBtn, 100), true);
     const uaDateTime = new Date((new Date()).toLocaleString('en-US', { timeZone: 'Europe/Kiev' }));
     const getCountriesAndUserIp = async () => {
@@ -125,6 +126,8 @@ const ReferralProgram = () => {
       fillCountries(Countries);
       setCountry(countryItem(userCountry));
       setEvents(calendarEvents);
+      setRenderCalendar(true);
+      setRenderTimeList(true);
       setEventsLoaded(true);
     };
 
@@ -353,53 +356,12 @@ const ReferralProgram = () => {
   );
 
   const addMinutes = () => {
-    const year = moment(selectedDate).get('year');
-    const month = moment(selectedDate).get('month') + 1;
-    const date = moment(selectedDate).get('date');
-    const hour = moment(selectedDate).get('hour');
-    const minute = moment(selectedDate).get('minute');
-
-    const startDate = moment(`${date}-${month}-${year} 9:00AM`, 'D/M/YYYY hh:mma');
-    const endDate = moment(`${date}-${month}-${year} 6:00PM`, 'D/M/YYYY hh:mma');
-    const selectDate = moment(`${date}-${month}-${year} ${hour}:${minute}`, 'D/M/YYYY hh:mma');
-    let dates = [];
-
-    while (startDate < endDate) {
-      if (startDate >= selectDate) {
-        dates.push({
-          dateTime: startDate.format('YYYY-MM-DD HH:mm:ss'),
-          value: startDate.format('hh:mm A'),
-          label: startDate.format('hh:mm A'),
-          isBooked: false,
-        });
-      }
-      startDate.add(30, 'minute');
-    }
-
-    events.forEach(({ start, end }) => {
-      let eventStartTime = new Date(start.dateTime);
-      let eventEndTime = new Date(end.dateTime);
-
-      eventStartTime = eventStartTime.getMinutes() < 30
-        ? new Date(eventStartTime.setMinutes(0))
-        : new Date(eventStartTime.setMinutes(30));
-
-      if (eventEndTime.getMinutes() < 30 && eventEndTime.getMinutes() !== 0) {
-        eventEndTime = new Date(eventEndTime.setMinutes(30));
-      }
-      if (eventEndTime.getMinutes() > 30) {
-        eventEndTime = new Date(eventEndTime.setMinutes(60));
-      }
-
-      dates.forEach(({ dateTime, isBooked }, index) => {
-        const timePeriod = new Date(dateTime);
-        if (timePeriod >= eventEndTime || isBooked) return;
-
-        dates[index].isBooked = eventStartTime <= timePeriod && timePeriod < eventEndTime;
-      });
+    const formatedDate = moment(selectedDate).format('YYYY-MM-DD');
+    const currentDate = new Date()
+    const selectedDateOptions = events[formatedDate].filter((element) => {
+      return moment(element.dateTime) > currentDate
     });
-
-    dates = dates.filter(({ isBooked }) => !isBooked).map(({ dateTime, value }) => {
+    const timezoneOptions = selectedDateOptions.map(({dateTime, value}) => {
       const timeByTimezone = moment(dateTime).add(timeDifference, 'm');
       return {
         value,
@@ -407,13 +369,17 @@ const ReferralProgram = () => {
         label: timeByTimezone.format('hh:mm A'),
       };
     });
-
-    return dates;
+    return timezoneOptions;
   };
 
   const selectDate = async (date) => {
     setSelectedTime(null);
     setSelectedDate(date);
+  };
+
+  const getMonthEvents = async (date) => {
+    setSelectedMonth(date.getMonth());
+    setRenderTimeList(false);
     setEventsLoaded(false);
     const calendarEvents = await (await fetch('/api/free-busy',
       {
@@ -422,10 +388,10 @@ const ReferralProgram = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ selectedDate: date }),
-      })).json();
-
-    setEventsLoaded(true);
+      }
+    )).json();
     setEvents(calendarEvents);
+    setEventsLoaded(true);
   };
 
   const selectCountry = (selectedCountry) => {
@@ -433,6 +399,15 @@ const ReferralProgram = () => {
     setCountry(selectedCountry);
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
+
+  const checkTileAvailability = (date) => {
+    const currentDate = moment(date).format('YYYY-MM-DD');
+    const tileMonth = date.getMonth();
+    const isCurrentMonth = tileMonth === selectedMonth;
+    const isDayOff = date.getDay() === 0 || date.getDay() === 6;
+    const availableOptions = events[currentDate] ? events[currentDate].length : 0
+    return !isCurrentMonth || isDayOff || !availableOptions;
+  }
 
   const renderLetsDiscussBlock = () => (
     <div id="lets-discuss" className="lets-discuss-block">
@@ -475,26 +450,44 @@ const ReferralProgram = () => {
                     minDate={new Date()}
                     minDetail="month"
                     value={selectedDate}
-                    onChange={(date) => { selectDate(date); }}
+                    onActiveStartDateChange = {({activeStartDate}) => {getMonthEvents(activeStartDate)}}
+                    onChange={(date) => { selectDate(date); setRenderTimeList(true)}}
                     navigationLabel={({
                       date, locale,
                     }) => `${date.toLocaleDateString(locale, { month: 'long' })}`}
-                    tileDisabled={({ date }) => date.getDay() === 0 || date.getDay() === 6}
+                    tileDisabled={({ date }) => checkTileAvailability(date)}
                   />
                 )
               }
               <div className="title">Choose time:</div>
-              <Select
-                id="timeList"
-                classNamePrefix="time-list"
-                options={addMinutes()}
-                className={`time-list ${showError && !selectedTime ? 'error' : ''}`}
-                onChange={(time) => setSelectedTime(time)}
-                value={selectedTime}
-                isSearchable={false}
-                placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
-                isDisabled={!areEventsLoaded}
-              />
+              {
+                renderTimeList 
+                ? (
+                  <Select
+                    id="timeList"
+                    classNamePrefix="time-list"
+                    options={addMinutes()}
+                    className={`time-list ${showError && !selectedTime ? 'error' : ''}`}
+                    onChange={(time) => setSelectedTime(time)}
+                    value={selectedTime}
+                    isSearchable={false}
+                    placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
+                    isDisabled={!areEventsLoaded}
+                  />
+                ) : (
+                  <Select
+                    id="timeList"
+                    classNamePrefix="time-list"
+                    options={[]}
+                    className={`time-list ${showError && !selectedTime ? 'error' : ''}`}
+                    onChange={(time) => setSelectedTime(time)}
+                    value={selectedTime}
+                    isSearchable={false}
+                    placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
+                    isDisabled={!areEventsLoaded}
+                  />
+                )
+              }
               <div onClick={(e) => e.target.scrollIntoView(true)}>
                 <Select
                   id="countryList"
