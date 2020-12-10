@@ -436,7 +436,7 @@ const ReferralProgram = () => {
 
   const renderLetsDiscussBlock = () => (
     <div id="lets-discuss" className="lets-discuss-block">
-      <h3>Let&#39;s discuss you business idea</h3>
+      <h3>Let&#39;s discuss your business idea</h3>
       <h5>A half hour talk with the CEO on how to support your project in the best possible way</h5>
       <div className="checkmark-steps">
         <div className={`checkmark ${meetingStep >= 1 ? 'active' : ''}`}>
