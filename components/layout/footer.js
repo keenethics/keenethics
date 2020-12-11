@@ -56,6 +56,10 @@ const industries = [
   {
     title: 'Real Estate',
     url: '/services-real-estate-software-development'
+  },
+  {
+    title: 'Logistics',
+    url: '/logistics-industry'
   }
 ];
 const technologies = [

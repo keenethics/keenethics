@@ -86,17 +86,21 @@ const Industries = () => {
             </div>
             <div className="industries-small">
               <div className="industries--small-item">
-                <div className="industries--small-item-logo">
-                  <LazyLoadImage
-                    src="/static/main-blocks/industries/small/logisctics-icon.svg"
-                    width="32px"
-                    height="27px"
-                    alt="Logistics Industry"
-                  />
-                </div>
-                <div className="industries--small-item-title">
-                  Logistics
-                </div>
+                <Link href="/logistics-industry" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/logisctics-icon.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Logistics Industry"
+                      />
+                    </div>
+                    <div className="industries--small-item-title">
+                      Logistics
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className="industries--small-item">
                 <Link href="/services-agriculture-software-development" prefetch={false}>
