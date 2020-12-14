@@ -156,7 +156,7 @@ const Industries = () => {
                         alt="Finance and Banking industries"
                       />
                     </div>
-                    <div className="industries--small-item-title">
+                    <div className="industries--small-item-title link">
                       Finance and Banking
                     </div>
                   </a>
