@@ -96,7 +96,7 @@ const Industries = () => {
                         alt="Logistics Industry"
                       />
                     </div>
-                    <div className="industries--small-item-title">
+                    <div className="industries--small-item-title link">
                       Logistics
                     </div>
                   </a>
