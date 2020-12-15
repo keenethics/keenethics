@@ -55,12 +55,6 @@ const ProjectSelfLeaders = () => (
                 vents and workshops, which help companies advance their corporate culture. Their target clients include businesses of different
                 sizes, NGOs, and public sector organizations.
               </p>
-              <img
-                loading="lazy"
-                src="/static/portfolio/self-leaders/what-is-s-l-image_1.png"
-                alt="Self Leaders"
-                className="image-gaps"
-              />
             </section>
 
             <section>
