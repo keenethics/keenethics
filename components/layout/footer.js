@@ -187,7 +187,7 @@ const HomeFooter = ({
             </li>
           ))}
           <li className="home-footer-list-item home-footer-list__title">
-            <a href="/#methods" className="home-footer-list__title home-footer-list-item__link"><h5>Full-cycle Method</h5></a>
+            <a href="/#methods" className="home-footer-list__title home-footer-list-item__link"><h5>Full-Cycle Method</h5></a>
           </li>
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
