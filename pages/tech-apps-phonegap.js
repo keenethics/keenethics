@@ -1,76 +1,302 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
-import { techApps } from '../main.config';
+import CallToActionButton from '../components/content/CallToActionButton';
+import FeaturesList from '../components/content/FeaturesList';
+import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 
-const TechAppsPhone = () => (
-  <Layout>
-    <ContentNavigation
-      image="app"
-      points={techApps()}
-    />
-    <div className="content-block">
-      <h1>PhoneGap App Development Services</h1>
-      <p>
-        Native iOS and native Android development services are time-consuming and usually cost a
-        lot. Of course, if you need to reach a specially selected audience and researches show
-        that this audience uses iPhones, building a native iOS App makes sense. But if you
-        hesitate and are not sure which platform to choose, hire PhoneGap Developers to build a
-        multi-platform mobile solution using an open-source framework Adobe PhoneGap.
-      </p>
-      <p>
-        So what is Adobe PhoneGap and what benefits does it give? Adobe PhoneGap is Adobe&apos;s
-        distribution of Apache Cordova, with some extra capabilities added by Adobe. Adobe
-        PhoneGap platform enables developers to create an app that runs on a variety of mobile
-        devices. Just imagine, you will not have to worry about all those different smartphones
-        and tablets on the market. Your users will easily find whatever they need regardless of
-        the platform and the device they prefer.
-      </p>
-      <p>
-        The developer accomplishes the goal by writing the user interface portion of their
-        application with Web technologies such as HTML, CSS, and JavaScript. Also, the developer
-        gets access to APIs and app stores. PhoneGap’s development tools then bundle the HTML,
-        CSS, and JavaScript files into platform-specific deployment packages.
-      </p>
-      <p>
-        Today, PhoneGap App Developers can support a wide variety of platforms:
-      </p>
-      <ul>
-        <li>iOS;</li>
-        <li>Android;</li>
-        <li>Windows Phone;</li>
-        <li>BlackBerry;</li>
-        <li>WebOS.</li>
-      </ul>
-      <p>
-        PhoneGap comes complete with plugins to support device capabilities such as the
-        following: accelerometer, camera, contacts, file system, media playback and recording,
-        network availability. If these capabilities are not enough, PhoneGap Developers can
-        extend the App with plugins that enable to access more device features, including
-        barcode scanning, Bluetooth, push notifications, text to speech, calendars, Facebook
-        Connect and others.
-      </p>
-      <h2>Hire PhoneGap App Developers</h2>
-      <p>
-        If you are looking forward to saving your budget, consider an idea of outsourcing
-        PhoneGap Development services to a software provider. Hiring an offshore software
-        development vendor will allow you to hire PhoneGap App Developers for more reasonable
-        than on your local market rates.
-      </p>
-      <p>
-        For example, on our KeenEthics spaceship, we have experience delivering high-end
-        cross-platform PhoneGap Apps for different businesses all around the world. Apps for
-        Finance & Banking, Healthcare, Education, Transportation and other industries you can
-        find in our case studies. You can feel free to ask us any questions about our projects.
-      </p>
-      <p>
-        Contact us anytime and hire a team of experienced PhoneGap App developers to build an
-        awesome App for your business in no time.
-      </p>
-    </div>
-  </Layout>
-);
+import { works, techApps } from '../main.config';
+
+import Works from '../components/portfolio/works';
+
+const TechAppsPhone = () => {
+  const whyPhoneGap = [
+    {
+      icon: '/static/technologies/meteor/user.png',
+      alt: 'Simple',
+      description: (
+        <>
+          <b>Simple</b>
+          <br />
+          Cordova and PhoneGap let a developer build a mobile app with no
+          knowledge of mobile technologies, only JavaScript, HTML, and CSS.
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/users.png',
+      alt: 'Popular',
+      description: (
+        <>
+          <b>Popular</b>
+          <br />
+          Both Cordova and PhoneGap are open-source projects. They have large
+          communities of devoted developers, who constantly update and support
+          the frameworks.
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/dimension.png',
+      alt: 'Extensible',
+      description: (
+        <>
+          <b>Extensible</b>
+          <br />
+          PhoneGap and Cordova are supported by multiple libraries,
+          {' '}
+          <Link href="https://phonegap.com/tool/page7/">
+            <a rel="noreferrer nofollow" target="_blank">
+              tools,
+            </a>
+          </Link>
+          {' '}
+          and
+          {' '}
+          <Link href="https://cordova.apache.org/plugins/">
+            <a rel="noreferrer nofollow" target="_blank">
+              plugins,
+            </a>
+          </Link>
+          {' '}
+          which may greatly facilitate the development and advance the software
+          solution.
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/like.png',
+      alt: 'Convenient',
+      description: (
+        <>
+          <b>Convenient</b>
+          <br />
+          Cordova and PhoneGap let you bypass the app store approval and
+          deployment process, which will save you a lot of time and effort.
+          Updating a Cordova app may be as simple as updating a website.
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/geography.png',
+      alt: 'Meteor',
+      description: (
+        <>
+          <b>Universal</b>
+          <br />
+          The apps built with PhoneGap and Cordova can be used on all popular
+          mobile operating systems, including iOS, Android, BlackBerry, and
+          Windows Mobile.
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/payment.png',
+      alt: 'Dimension',
+      description: (
+        <>
+          <b>Cost-efficient</b>
+          <br />
+          Cross-platform development is by definition faster and cheaper than
+          the native one. PhoneGap application development company lets you save
+          on both development and maintenance.
+        </>
+      ),
+    },
+  ];
+
+  const whatDoWeOfferIcons = [
+    {
+      icon: '/static/technologies/meteor/image20.png',
+      title: (
+        <>
+          PhoneGap application
+          <br />
+          development
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/image9.png',
+      title: (
+        <>
+          PhoneGap applications
+          <br />
+          maintenance and support
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/image1.png',
+      title: 'UI/UX development for PhoneGap',
+    },
+    {
+      icon: '/static/technologies/meteor/image19.png',
+      title: 'PhoneGap data management',
+    },
+    {
+      icon: '/static/technologies/meteor/image14.png',
+      title: (
+        <>
+          Custom PhoneGap mobile
+          <br />
+          development solutions
+        </>
+      ),
+    },
+    {
+      icon: '/static/technologies/meteor/image6.png',
+      title: 'PhoneGap migrating',
+    },
+  ];
+
+  const whyKeenethics = [
+    {
+      title: 'Empowering growth',
+      desc: (
+        <>
+          Large enterprises can afford to go native. If you own a start-up or a
+          small or medium business, you should choose a more cost-efficient
+          option. By offering Cordova application development and PhoneGap
+          development services, we let you save on building a mobile app for
+          your business. This is how we help your company grow.
+        </>
+      ),
+    },
+    {
+      title: 'Building value',
+      desc: (
+        <>
+          For the app to be not only affordable but also valuable, it has to
+          perform impeccably. Cordova and PhoneGap apps are often associated
+          with poor performance because there are a lot of inexperienced
+          developers in the niche. KeenEthics specialists make sure that the app
+          is high-quality and brings value.
+        </>
+      ),
+    },
+    {
+      title: 'Launching in a matter of weeks',
+      desc: (
+        <>
+          Cross-platform development is a star known for efficiency and speed.
+          But what if we can do it even faster? We have optimized the partner
+          engagement process so that we could start working on the project as
+          early as possible. The sooner we start, the sooner your app goes to
+          the market.
+        </>
+      ),
+    },
+    {
+      title: 'Bringing tech expertise',
+      desc: (
+        <>
+          KeenEthics professionals have a lot of experience with JavaScript and
+          with mobile development in general. By involving software engineers in
+          the process of idea discovery, we make sure that they understand what
+          exactly is expected from a mobile app.
+        </>
+      ),
+    },
+    {
+      title: 'Protecting your data',
+      desc: (
+        <>
+          Along with quality and efficiency, there is one more important point
+          that cannot go unnoticed. Data security is an essential aspect of
+          Cordova development. Our experts take the necessary legal and
+          technical measures to make sure that your app data and information of
+          your users are safe.
+        </>
+      ),
+    },
+  ];
+
+  const phoneGapWorks = works.filter(({ title }) => ['OneRemission', 'Pree', 'SelfLeaders'].includes(title));
+
+  return (
+    <Layout>
+      <ContentNavigation image="app" points={techApps()} />
+      <div className="content-block">
+        <section>
+          <h1 className="text-center">PhoneGap & Cordova App Development</h1>
+          <p className="text-center text-italic">
+            Using a cross-platform framework to let you save on mobile app
+            development.
+          </p>
+          <CallToActionButton />
+          <h2
+            style={{ fontSize: '40px', fontWeight: 900, marginBottom: '1em' }}
+          >
+            2,5 times faster
+          </h2>
+          <p className="text-center">
+            it is to develop a hybrid mobile app than a native app.
+          </p>
+        </section>
+        <section>
+          <h2>What Is PhoneGap and Cordova?</h2>
+          <p>
+            Cordova, also known as Apache Cordova, is a cross-platform mobile
+            app development framework, which was introduced in 2009. PhoneGap is
+            the most popular distribution of Apache Cordova. PhoneGap and
+            Cordova can be used interchangeably — there is basically only one
+            difference between them. Cordova is free and open source, and so is
+            PhoneGap, but the latter belongs to Adobe. If for some reason you
+            prefer one over the other, we will gladly comply with your request.
+            For us as for Cordova & PhoneGap app development company, there is
+            barely any difference.
+          </p>
+          <p>
+            Cordova and PhoneGap application development offer a lot of
+            benefits, chiefly — convenience and universality. Yet, these
+            solutions are not a panacea. PhoneGap and Cordova are perfect for
+            prototyping or for internal business applications, which serve as
+            add-ons, not the core of your business. However, if a mobile app is
+            in the essence of your business, you should choose native
+            development instead.
+          </p>
+        </section>
+        <section>
+          <h2>Why PhoneGap and Cordova?</h2>
+          <FeaturesList list={whyPhoneGap} />
+          <CallToActionButton
+            title="HIRE Meteor JS DEVELOPERS"
+            href="/contacts"
+          />
+        </section>
+        <section>
+          <h2>What PhoneGap Development Services Do We Offer?</h2>
+          <ul className="mobile-development-list">
+            {whatDoWeOfferIcons.map(({ icon, title, href }) => (
+              <li className="mobile-development-item" key={icon}>
+                <figure>
+                  <img src={icon} alt={title} />
+                  <figcaption className="mobile-development-figcaption">
+                    {href ? <a href={href}>{title}</a> : title}
+                  </figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <h2>Why KeenEthics?</h2>
+          <WhyKeenethicsList list={whyKeenethics} />
+        </section>
+        <section>
+          <h2>Portfolio</h2>
+          <p>These are some web and mobile apps that we have developed: </p>
+          <Works works={phoneGapWorks} />
+        </section>
+      </div>
+      <LetsStart />
+    </Layout>
+  );
+};
 
 export default TechAppsPhone;

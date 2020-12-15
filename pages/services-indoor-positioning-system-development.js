@@ -7,7 +7,7 @@ import { works } from '../main.config'
 
 import Works from '../components/portfolio/works'
 import CallToActionButton from  '../components/content/CallToActionButton'
-import FeaturesList from '../components/content/FeaturesList'
+import LetsStart from '../components/about-us/LetsStart'
 
 const ServicesIndoorPositioningDevelopment = () => {
 
@@ -49,27 +49,27 @@ const ServicesIndoorPositioningDevelopment = () => {
   
   const whomWeOfferList = [
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-5 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_1.svg',
       title: 'Stores & Shopping malls'
     },
     {
-      icon: '/static/services/indoor-positioning-development/icon-8 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_2.svg',
       title: 'Exhibition & Business centers'
     },
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-2 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_3.svg',
       title: 'Warehouses & Construction sites'
     },
     {
-      icon: '/static/services/indoor-positioning-development/Group_97 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_4.svg',
       title: 'Airports, Subway & Railway stations'
     },
     {
-      icon: '/static/services/indoor-positioning-development/Group 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_5.svg',
       title: 'Hotels & motels'
     },
     {
-      icon: '/static/services/indoor-positioning-development/asama-icon-3 1.svg',
+      icon: '/static/services/indoor-positioning-development/offer-list-icon_6.svg',
       title: 'Plants & Factories'
     },
   ]
@@ -153,8 +153,8 @@ const ServicesIndoorPositioningDevelopment = () => {
 
         <section>
           <h2>What is indoor positioning?</h2>
-          <div className="page__list">
-            <p className="page__item-wiip page__item">
+          <div className="services-ips--list">
+            <p className="services-ips--item-wiip services-ips--item">
               <b>From the technical perspective...</b><br/>
               Indoor positioning is a 
               technology, which uses a network of devices to locate people or objects in such 
@@ -167,7 +167,7 @@ const ServicesIndoorPositioningDevelopment = () => {
               based on iBeacon — the technology developed by 
               Apple, which employs BLE transmitters.
             </p>
-            <p className="page__item-wiip page__item">
+            <p className="services-ips--item-wiip services-ips--item">
               <b>From the business perspective...</b><br/>
               Indoor positioning system is an IoT solution, which lets 
               businesses efficiently locate their employees or 
@@ -190,13 +190,13 @@ const ServicesIndoorPositioningDevelopment = () => {
 
         <section>
           <h2>Whom we offer our indoor positioning solution to?</h2>
-          <ul className="whom-we-offer-indoor-development__list">
+          <ul className="whom-we-offer-indoor-development--list">
             {
               whomWeOfferList.map(({ icon, title }) => (
-                <li className="whom-we-offer-indoor-development__item" key={icon}>
+                <li className="whom-we-offer-indoor-development--item" key={icon}>
                   <figure>
                     <img src={icon} alt={title} />
-                    <figcaption className="whom-we-offer-indoor-development-figcaption">
+                    <figcaption className="whom-we-offer-indoor-development--item-figcaption">
                       {title}
                     </figcaption>
                   </figure>
@@ -213,10 +213,10 @@ const ServicesIndoorPositioningDevelopment = () => {
 
           <h2>THE THREE ESSENTIAL FEATURES</h2>
 
-          <div className="services-ips-wdwo__list">
+          <div className="services-ips--list">
               {
                 essentialFeaturesList.map(({title, description}) => (
-                  <div className="services-ips-wdwo__item">
+                  <div className="services-ips--item-wdwo services-ips--item">
                     <p className="text-center"><b>{title}</b></p>
                     <p className="text-center">
                       {description}
@@ -227,10 +227,10 @@ const ServicesIndoorPositioningDevelopment = () => {
           </div>
 
           <h2>BENEFITS AND USE CASES</h2>
-          <div className="services-ips-bauc__list">
+          <div className="services-ips-bauc--list">
             {
               benefitsList.map(({icon, title, description}) => (
-                <div className="services-ips-bauc__item">
+                <div className="services-ips-bauc--item">
                   <figure>
                     <img src={icon} alt={title}/>
                     <figcaption className="services-ips-bauc-figcaption">
@@ -270,8 +270,8 @@ const ServicesIndoorPositioningDevelopment = () => {
         <section>
           <h2>What is our experience with indoor positioning companies?</h2>
 
-          <div>
-            <h3>PREE</h3>
+          <div className="content-block">
+            <h3 className="text-center">PREE</h3>
             <p>
               PREE is an IoT system for indoor positioning, which is implemented with BLE beacons and a mobile app. The goal of 
               PREE is to let users always know where their precious belongings are. The idea is simple. The user attaches a beacon 
@@ -287,39 +287,46 @@ const ServicesIndoorPositioningDevelopment = () => {
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team</b>: 1 UI/UX designer, 2 full-stack developers, 1 QA specialist, and 1 PM</div>
             </div>
-            <Works works={works.filter(({ title }) => ['Pree'].includes(title))} />
+            <img
+              loading="lazy"
+              src="/static/portfolio/pree.jpg"
+              alt="Airport Solution"
+            />
           </div>
 
-          <div>
-            <h3>Airport Showroom</h3>
+          <div className="content-block">
+            <h3 className="text-center">Airport Solution</h3>
             <p>
-              The mobile app offers a showroom map to users where they can see all the necessary objects and facilities and the 
-              optimal route towards them. The app can be downloaded via a QR code. Besides, the app allows admins to change 
-              the map, routes, information, and so on allowing them to set up the system without developers help.
+              The airport solution optimizes and automates navigation and the communication with passengers. The solution
+              includes a mobile app and Bluetooth sensors.
             </p>
             <p>
-              Additionally, the admins can tag Bluetooth sensors with certain content making it appear to the users when they are 
-              nearby. The user, for example, can get a message about special offers, promotions, and exclusive products when 
-              going near Duty Free stores. They can also receive notifications from airlines about delays, issues, or promos. All 
-              in all, it is a good place for both timely communications and ads.
+              The mobile app offers a wayfinding map to users where they can see all the necessary objects and facilities and the
+              optimal route towards them. The app can be downloaded via a QR code. Besides, the app allows admins to change
+              the map, routes, information, and so on allowing them to set up the system without the help of developers.
+            </p>
+            <p>
+              Additionally, the admins can tag Bluetooth sensors with certain content making it appear to the users when they are
+              nearby. The user, for example, can get a message about special offers, promotions, and exclusive products when
+              going near Duty Free stores. They can also receive notifications from airlines about delays, issues, or promos. All in
+              all, it is a good place for both timely communications and ads.
             </p>
             <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development"><a>Mobile application</a></Link></div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development"><a>Mobile</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Technologies</b>:<Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link>, <Link href="/tech-front-end-react"><a>React</a></Link>, <Link href="/tech-apps-progressive-web-apps"><a>PWA</a></Link></div>
               <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
               <div style={{ marginBottom: '25px' }}><b>Team of 7</b>: 1 Product Owner, 1 UI UX designer, 1 back-end developer, 1 full-stack developer, 1 mobile developer, 1 hardware engineer, 1 QA special</div>
             </div>
-            <img src='/static/portfolio/airportscreen.png' alt="Airport Showroom" className="airport-showrooms-image"/>
+            <img
+              loading="lazy"
+              src="/static/portfolio/airportscreen.png"
+              alt="Airport Solution"
+            />
           </div>
 
         </section>
-
-        <section>
-          <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-          <CallToActionButton title="Contact Us" href="/contacts" />
-        </section>
-
       </div>
+      <LetsStart />
     </Layout>
   )
 }

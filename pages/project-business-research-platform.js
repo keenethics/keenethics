@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
@@ -171,7 +172,7 @@ const ProjectBusinessResearchPlatform = () => (
                 ,&nbsp;
                 <a href="/tech-front-end-react" target="_blank">React</a>
                 ,&nbsp;
-                <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer nofollow">AWS</a>
+                <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS</a>
                 &nbsp;(SES, S3, Secrets Manager, Lambda, CloudWatch, ElasticSearch, Kibana),&nbsp;
                 <a href="https://serverless.com/" target="_blank" rel="noopener noreferrer nofollow">Serverless</a>
                 ,&nbsp;
@@ -255,14 +256,13 @@ const ProjectBusinessResearchPlatform = () => (
               <CallToActionButton
                 title="SHARE YOUR IDEA"
                 buttonBefore={(
-                  <a
-                    href="/portfolio"
-                    target="_blank"
-                  >
-                    <button type="button" className="call-to-cation-btn -secondary">
-                      CHECK OTHER PROJECT
-                    </button>
-                  </a>
+                  <Link href="/portfolio">
+                    <a>
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        CHECK OTHER PROJECTS
+                      </button>
+                    </a>
+                  </Link>
                 )}
               />
             </section>

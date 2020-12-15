@@ -1,0 +1,23 @@
+.service-page-ui-ux-our-procces {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  & > span {
+    font-size: 22px;
+    padding-left: 10px;
+    position: relative;
+    &:not(:last-child) {
+      padding-right: 20px;
+      &::after {
+        content: "";
+        position: absolute;
+        background: url("/static/images/arrow-pointing-to-right.png") no-repeat center;
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        right: 0;
+        top: 7px;
+      }
+    }
+  }
+}

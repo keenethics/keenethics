@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { works } from '../main.config';
 
@@ -220,12 +221,8 @@ const ServicesMobileDevelopment = () => {
           <h3 className="red-italic-title"><span style={{ fontSize: '28px', marginRight: '.5em' }}>5</span> Protecting your data</h3>
           <p>We understand how valuable your project idea is, so we comply with all the <Link href="/blog/1543388400000-your-data-is-safe-in-ukraine"><a>data security</a></Link> regulations. If you choose to sign an NDA, we will respect and value your willingness to stay private.</p>
         </section>
-
-        <section>
-          <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-          <CallToActionButton title="Contact Us" href="/contacts" />
-        </section>
       </div>
+      <LetsStart />
     </Layout>
   );
 };

@@ -1,7 +1,7 @@
 .lets-start {
     display: flex;
     justify-content: space-around;
-    padding-top: 130px;
+    padding-top: 35px;
     line-height: 28px;
     .lets-start-section {
         width: 50%;
@@ -40,9 +40,14 @@
 
 }
 
+.block-lets-start {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
 @media (max-width: 660px) {
     .lets-start {
-        padding-top: 120px;
+        padding-top: 20px;
         position: relative;
         justify-content: flex-start;
         .lets-start-text {

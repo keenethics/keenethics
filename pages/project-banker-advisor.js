@@ -5,6 +5,7 @@ import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
 import PortfolioFeedback from '../components/portfolio/PortfolioFeedback';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#0c2fdf';
 
@@ -209,15 +210,22 @@ const ProjectBankerAdvisor = () => (
               alt="BankerAdvisor"
               className="image-gaps"
             />
-            <a
-              href="http://bankeradvisor.com"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
+
+            <h2>Do You Have a Similar Project Idea?</h2>
+            <CallToActionButton
+              title="SHARE YOUR IDEA"
+              buttonBefore={(
+                <a
+                  href="http://bankeradvisor.com"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                >
+                  <button type="button" className="call-to-cation-btn -secondary">
+                    Check The Project
+                  </button>
+                </a>
+              )}
+            />
           </div>
           <Navigation />
         </div>

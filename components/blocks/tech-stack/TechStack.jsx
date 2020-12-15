@@ -72,12 +72,6 @@ const TechStack = () => {
                     <img className="toggle-color" src="/static/main-blocks/tech-stack/electron-color.svg" alt="electron" />
                   </div>
                 </Link>
-                <Link href="/tech-apps-cordova" prefetch={false}>
-                  <div className="tech-stack--block-item">
-                    <img src="/static/main-blocks/tech-stack/cordova.svg" alt="cordova" />
-                    <img className="toggle-color" src="/static/main-blocks/tech-stack/cordova-color.svg" alt="cordova" />
-                  </div>
-                </Link>
                 <Link href="/tech-apps-phonegap" prefetch={false}>
                   <div className="tech-stack--block-item">
                     <img src="/static/main-blocks/tech-stack/phonegap.svg" alt="phonegap" />
@@ -150,6 +144,12 @@ const TechStack = () => {
                   <div className="tech-stack--block-item">
                     <img src="/static/main-blocks/tech-stack/stripe.svg" alt="stripe" />
                     <img className="toggle-color" src="/static/main-blocks/tech-stack/stripe-color.svg" alt="stripe" />
+                  </div>
+                </Link>
+                <Link href="tech-api-integration-elastic-search" prefetch={false}>
+                  <div className="tech-stack--block-item">
+                    <img src="/static/main-blocks/tech-stack/elasticsearch.svg" alt="elasticsearch" />
+                    <img className="toggle-color" src="/static/main-blocks/tech-stack/elasticsearch-color.svg" alt="elasticsearch" />
                   </div>
                 </Link>
               </div>

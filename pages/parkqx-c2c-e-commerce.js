@@ -146,17 +146,18 @@ const ProjectPrix = () => (
               lender. All users are granted full access to their parking data history.
             </p>
             <h2>Do You Have a Similar Project Idea?</h2>
-            <CallToActionButton
-              buttonBefore={(
-                <Link
-                  href="/portfolio"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    Other case studies
-                  </button>
-                </Link>
-              )}
-            />
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <Link href="/portfolio">
+                    <a>
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        CHECK OTHER PROJECTS
+                      </button>
+                    </a>
+                  </Link>
+                )}
+              />
           </div>
           <Navigation />
         </div>

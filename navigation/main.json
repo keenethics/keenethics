@@ -87,9 +87,9 @@
       },
       {
         "name": "UI/UX Design",
-        "metaTitle": "UI/UX Design and Development Services, Hire UI/UX Developers",
+        "metaTitle": "UI UX Design Services, Hire UI/UX Designers — Keenethics",
         "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
-        "metaDescription": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "metaDescription": "As a UI UX design company, we start with project discovery, user testing, and UX audit. Then, we do wireframing, prototyping, and mockuping. After that, we evaluate designs. Only when clients and designers are happy with results, the designs are sent for development.",
         "href": "/services-ui-ux-design",
         "type": "default",
         "outsideMenu": true
@@ -124,9 +124,9 @@
       {
         "name": "Indoor Positioning System",
         "metaTitle": "Indoor Positioning System — KeenEthics",
-        "description": "This solution will bring your customer service and employee management to a new level",
-        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants",
-        "href": "/services-indoor-positioning-system",
+        "description": "This solution will bring your customer service and employee management to a new level.",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
+        "href": "/services-indoor-positioning-system-development",
         "type": "default",
         "outsideMenu": true
       },
@@ -177,6 +177,30 @@
         "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
         "href": "/services-real-estate-software-development",
         "type": "default"
+      },
+      {
+        "name": "Nonprofit Software Development",
+        "metaTitle": "Non-Profit Software Development – KeenEthics",
+        "description": "Helping non-profit companies achieve their ethical goals",
+        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
+        "href": "/services-non-profit-software-development",
+        "type": "default"
+      },
+      {
+        "name": "Agriculture Software Development",
+        "description": "Making the agricultural sphere smarter and more efficient",
+        "metaTitle": "Agriculture Software Development — KeenEthics Blog",
+        "metaDescription": "KeenEthics helps farmers make the agricultural sphere smarter and more efficient. We offer solutions for grazing management, livestock management, precision agriculture, farm management and accounting, and agriculture trade.",
+        "href": "/services-agriculture-software-development",
+        "type": "default"
+      },
+      {
+        "name": "Logistics Software Solutions",
+        "description": "Embodying goal-oriented values and taking your business to a new level",
+        "metaTitle": "Logistics Software Development Company — KeenEthics",
+        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
+        "href": "/logistics-industry",
+        "type": "default"
       }
     ]
   },
@@ -218,9 +242,9 @@
     "points": [
       {
         "name": "Node.js",
-        "metaTitle": "Node.JS Development Company, Node.JS Development Services - KeenEthics",
+        "metaTitle": "Node.js Development Services — KeenEthics",
         "description": "The optimal environment for sustainable, scalable, and resource-efficient apps",
-        "metaDescription": "The optimal environment for sustainable, scalable, and resource-efficient apps",
+        "metaDescription": "As an experienced Node.js development company, we can build a variety of server tools and applications, Node.js chatbots, complex websites, real-time applications, and more — whatever will help your company grow.",
         "href": "/services-web-development-node",
         "type": "default"
       },
@@ -234,9 +258,9 @@
       },
       {
         "name": "React",
-        "metaTitle": "React.JS Development Services, Hire ReactJS Developers - KeenEthics",
+        "metaTitle": "React.JS Development Services, Hire ReactJS Developers — KeenEthics",
         "description": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data",
-        "metaDescription": "Using a JS library for the development of responsive user interfaces and management of dynamically changing data.",
+        "metaDescription": "KeenEthics offers React JS development services for the development of responsive user interfaces and management of dynamically changing data. A ReactJS developer can make almost any idea work, however complex the project was.",
         "href": "/tech-front-end-react",
         "type": "default"
       },
@@ -258,9 +282,9 @@
       },
       {
         "name": "Vue.js",
-        "metaTitle": "Vue.js development services – KeenEthics",
+        "metaTitle": "Vue.js development services — KeenEthics",
         "description": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
-        "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework.",
+        "metaDescription": "Vue.js is the innovative, performant, flexible, highly popular, and fastest-growing JS front-end development framework. It is ideal for MVP and PWA development.",
         "href": "/tech-front-end-vue",
         "type": "default"
       },
@@ -281,16 +305,8 @@
         "type": "default"
       },
       {
-        "name": "Cordova",
-        "metaTitle": "Cordova development services – KeenEthics",
-        "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "href": "/tech-apps-cordova",
-        "type": "default"
-      },
-      {
         "name": "PhoneGap",
-        "metaTitle": "PhoneGap Application Development Company, Hire Phonegap developers | KeenEthics",
+        "metaTitle": "Cordova & PhoneGap App Development – KeenEthics",
         "description": "If you are looking forward to saving your budget, consider an idea of outsourcing PhoneGap to a software provider.",
         "metaDescription": "KeenEthics uses a convenient cross-platform framework to let you save on mobile app development and market the app faster.",
         "href": "/tech-apps-phonegap",
@@ -314,7 +330,7 @@
       },
       {
         "name": "Meteor",
-        "metaTitle": "Meteor JS development services – KeenEthics",
+        "metaTitle": "Meteor JS  development services — KeenEthics",
         "description": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
         "metaDescription": "Meteor JS is a highly efficient, popular, convenient, and universal JavaScript framework. While some may say that the glory days of Meteor are over, we will argue that they are definitely not.",
         "href": "/services-web-development-meteor",
@@ -346,7 +362,7 @@
     "anchor": "blog"
   },
   {
-    "name": "Contact Us",
+    "name": "Contact us",
     "description": "Contact KeenEthics to solve your business challenges with full-cycle development.",
     "metaTitle": "Contact Us - KeenEthics",
     "metaDescription": "Contact KeenEthics to solve your business challenges with full-cycle development.",

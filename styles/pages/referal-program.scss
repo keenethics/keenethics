@@ -1127,6 +1127,43 @@
                         }
 
                     }
+                    .lets-discuss-input-wrap {
+                        position: relative;
+                        width: 100%;
+
+                        .lets-discuss-form-label {
+                            position: absolute;
+                            left: 11.5px;
+                            top: 11.5px;
+                            pointer-events: none;
+                            color: rgba(18, 35, 61, 0.5);
+                            transition: 0.2s ease all;
+                            -moz-transition: 0.2s ease all;
+                            -webkit-transition: 0.2s ease all;
+                        }
+
+                        .lets-discuss-input {
+                            width: 100%;
+
+                            &:focus ~ .lets-discuss-form-label,
+                            &:not([value=""]) ~ .lets-discuss-form-label,
+                            &:valid ~ .lets-discuss-form-label {
+                              top: -4.5px;
+                              left: 15.5px;
+                              font-size: 10px;
+                              background: #fafafa;
+                              display: inline-block;
+                              padding: 0 4px;
+                            }
+
+                            &:not([value=""]):not(:focus) {
+                                & ~ .lets-discuss-form-label {
+                                    display: none;
+                                }
+                            }
+                        }
+                        
+                    }
                 }
                 @media (max-width: $tablet-lg) {
                     flex-direction: column;

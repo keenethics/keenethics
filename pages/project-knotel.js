@@ -4,6 +4,7 @@ import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import Navigation from '../components/project/navigation';
 import PortfolioTechnologyTags from '../components/portfolio/PortfolioTechnologyTags';
+import CallToActionButton from '../components/content/CallToActionButton';
 
 const baseColor = '#fc634d';
 
@@ -103,15 +104,22 @@ const ProjectKnotel = () => (
               Although Knotel is a relatively new company, they see further growth, and
               more opportunities are yet to come for this aspiring venture.
             </p>
-            <a
-              href="https://www.knotel.com/"
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className="link"
-              style={{ background: baseColor }}
-            >
-              Look at the project
-            </a>
+
+            <h2>Do You Have a Similar Project Idea?</h2>
+            <CallToActionButton
+              title="SHARE YOUR IDEA"
+              buttonBefore={(
+                <a
+                  href="https://www.knotel.com/"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                >
+                  <button type="button" className="call-to-cation-btn -secondary">
+                    CHECK THE PROJECT
+                  </button>
+                </a>
+              )}
+            />
           </div>
           <Navigation />
         </div>
