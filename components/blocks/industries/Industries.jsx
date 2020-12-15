@@ -34,7 +34,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Education
                     </div>
                     <div className="industries--big-item-description">
@@ -54,7 +54,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Non profit
                     </div>
                     <div className="industries--big-item-description">
@@ -74,7 +74,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Healthcare
                     </div>
                     <div className="industries--big-item-description">
@@ -113,7 +113,7 @@ const Industries = () => {
                         alt="Agriculture industries"
                       />
                     </div>
-                    <div className="industries--small-item-title">
+                    <div className="industries--small-item-title link">
                       Agriculture
                     </div>
                   </a>
