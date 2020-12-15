@@ -340,5 +340,18 @@
         "Real Estate"
       ]
     }
+  },
+  {
+    "title": "StoryTerrace",
+    "metaTitle": "StoryTerrace – KeenEthics Projects",
+    "description":"A ghostwriting and publishing solution, which brings the book industry to a new level",
+    "metaDescription":"StoryTerrace is a ghostwriting platform, which brings the publishing industry to a new level. It connects writers, editors, and people who need help writing their book.",
+    "href": "/project-storyterrace",
+    "imgSrc": "storyterrace/storyterrace-image-main.png",
+    "category": {
+      "main": [
+        "Business"
+      ]
+    }
   }
 ]

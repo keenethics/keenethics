@@ -34,7 +34,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Education
                     </div>
                     <div className="industries--big-item-description">
@@ -54,7 +54,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Nonprofit
                     </div>
                     <div className="industries--big-item-description">
@@ -74,7 +74,7 @@ const Industries = () => {
                         alt="Education industries"
                       />
                     </div>
-                    <div className="industries--big-item-title">
+                    <div className="industries--big-item-title link">
                       Healthcare
                     </div>
                     <div className="industries--big-item-description">
@@ -86,17 +86,21 @@ const Industries = () => {
             </div>
             <div className="industries-small">
               <div className="industries--small-item">
-                <div className="industries--small-item-logo">
-                  <LazyLoadImage
-                    src="/static/main-blocks/industries/small/logisctics-icon.svg"
-                    width="32px"
-                    height="27px"
-                    alt="Logistics Industry"
-                  />
-                </div>
-                <div className="industries--small-item-title">
-                  Logistics
-                </div>
+                <Link href="/logistics-industry" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/logisctics-icon.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Logistics Industry"
+                      />
+                    </div>
+                    <div className="industries--small-item-title link">
+                      Logistics
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className="industries--small-item">
                 <Link href="/services-agriculture-software-development" prefetch={false}>
@@ -109,7 +113,7 @@ const Industries = () => {
                         alt="Agriculture industries"
                       />
                     </div>
-                    <div className="industries--small-item-title">
+                    <div className="industries--small-item-title link">
                       Agriculture
                     </div>
                   </a>
