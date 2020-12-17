@@ -6,6 +6,7 @@ import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 import FeaturesList from '../components/content/FeaturesList';
 import Works from '../components/portfolio/works';
 
@@ -143,9 +144,8 @@ const TechBackEndExpress = () => (
         <p>As an Express.js development company we have created:</p>
         <Works works={works.filter(({ title }) => ['Education System Platform', 'Pree', 'BankerAdvisor'].includes(title))} />
       </section>
-
-      <CallToActionButton title="CONTACT US" href="/contacts" />
     </div>
+    <LetsStart/>
   </Layout>
 );
 

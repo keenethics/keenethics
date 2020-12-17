@@ -3,9 +3,9 @@ import Link from 'next/link';
 import RocketIcon from '../components/approach-minimum-viable-product/RocketIcon';
 import GlassIcon from '../components/approach-minimum-viable-product/GlassIcon';
 import Layout from '../components/layout/main';
-import LetsStart from '../components/about-us/LetsStart';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { works } from '../main.config';
 
@@ -295,10 +295,8 @@ const ApproachMinimumValProduct = () => (
           for nobody to access the data unwarranted.
         </p>
       </div>
-      
-      <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-      <CallToActionButton title="Contact Us" href="/contacts" />
     </div>
+    <LetsStart/>
   </Layout>
 );
 

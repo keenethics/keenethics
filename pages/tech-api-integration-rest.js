@@ -2,6 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { techApiIntegration } from '../main.config';
 
@@ -62,6 +63,7 @@ const TechApiIntegrationRest = () => (
         deliver an efficient solution to your business.
       </p>
     </div>
+    <LetsStart/>
   </Layout>
 );
 

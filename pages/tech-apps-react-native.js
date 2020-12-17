@@ -5,6 +5,7 @@ import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 import FeaturesList from '../components/content/FeaturesList';
 import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 
@@ -267,10 +268,8 @@ const TechAppsRN = () => (
           <Works works={works.filter(({ title }) => ['ParkQX'].includes(title))} />
         </div>
       </section>
-      <h2>Now, let’s discuss your business idea!</h2>
-
-      <CallToActionButton title="CONTACT US" href="/contacts" />
     </div>
+    <LetsStart/>
   </Layout>
 );
 

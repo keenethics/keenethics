@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 import Works from '../components/portfolio/works';
 
 import { servicesWebDevelopmentTabs, works } from '../main.config';
@@ -528,11 +529,8 @@ const ServicesWebDevelopmentE = () => (
           services if you choose to sign a non-disclosure agreement.
         </p>
       </section>
-      <section>
-        <h2>Now, let’s discuss your business idea!</h2>
-        <CallToActionButton title="CONTACT US" />
-      </section>
     </div>
+    <LetsStart/>
   </Layout>
 );
 
