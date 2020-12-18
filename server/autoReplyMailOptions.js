@@ -1,6 +1,6 @@
 const path = require('path');
 const {
-  messageFromIrene,
+  messageFromIlona,
   messageFromPaul,
   messageFromJean,
 } = require('./autoReplyMails');
@@ -10,7 +10,7 @@ module.exports = (country, type, data) => {
     email,
   } = data;
 
-  let from = 'irene@keenethics.com';
+  let from = 'ilona@keenethics.com';
   let html = '';
   let replyTo = '';
 
@@ -26,15 +26,15 @@ module.exports = (country, type, data) => {
       replyTo = 'jean.marc.arsan@keenethics.com';
       break;
     default:
-      from = 'Irene from KeenEthics irene@keenethics.com';
-      html = messageFromIrene(type, data);
-      replyTo = 'irene@keenethics.com';
+      from = 'Ilona from KeenEthics ilona@keenethics.com';
+      html = messageFromIlona(type, data);
+      replyTo = 'ilona@keenethics.com';
   }
 
   return {
     from,
     to: email,
-    bcc: ['business@keenethics.com', replyTo, replyTo === 'irene@keenethics.com' ? '' : 'irene@keenethics.com'],
+    bcc: ['business@keenethics.com', replyTo, replyTo === 'ilona@keenethics.com' ? '' : 'ilona@keenethics.com'],
     subject: 'Thank you for being in touch with KeenEthics! I am happy to deliver on your request',
     html,
     attachments: [
