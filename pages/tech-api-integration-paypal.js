@@ -2,6 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
+import LetsStart from '../components/about-us/LetsStart';
 
 import { techApiIntegration } from '../main.config';
 
@@ -66,6 +67,7 @@ const TechApiIntegrationPayPal = () => (
         get some tips on how to build or improve your product.
       </p>
     </div>
+    <LetsStart/>
   </Layout>
 );
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Layout from "../components/layout/main";
 import ContentNavigation from "../components/content/navigation";
 import CallToActionButton from "../components/content/CallToActionButton";
+import LetsStart from '../components/about-us/LetsStart';
 import WhyKeenethicsList from "../components/content/WhyKeenethicsList";
 import FeaturesList from "../components/content/FeaturesList";
 import Works from "../components/portfolio/works";
@@ -310,10 +311,8 @@ const TechFrontEndReact = () => (
 
         <WhyKeenethicsList list={whyKeenethics} />
       </section>
-
-      <h2>Now, let’s discuss your business idea!</h2>
-      <CallToActionButton title="Contact us" href="/contacts" />
     </div>
+    <LetsStart/>
   </Layout>
 );
 

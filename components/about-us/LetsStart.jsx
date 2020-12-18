@@ -7,18 +7,16 @@ const LetsStart = () => (
       <div className="lets-start">
         <div className="lets-start-section lets-start-text">
           <h4 className="lets-start-text-title">
-            Our clients come to us with tough business challenges,
-            and I strive to make sure they find a solution.
+            I am here to help you find a software solution.
           </h4>
           <p className="lets-start-text-description">
-            Starting an ambitious project or trying to breath in
-            new life into a legacy solution can be difficult.
-            Let me take it from here and offer you
-            a free estimate of your project.
-
+            If you have a business challenge you want to 
+            be solved with a software solution, let me tell 
+            you about what we can offer. Should we start 
+            with a free estimate of your project?
           </p>
           <p className="lets-start__author">
-            Irene Krot
+            Ilona Shvahla
           </p>
           <p className="lets-start__author-position">
             Head of Partner Engagement
@@ -27,9 +25,7 @@ const LetsStart = () => (
             <a className="button lets-start-btn orange-btn">Let&#39;s start</a>
           </Link>
         </div>
-        <div className="lets-start-section lets-start-img">
-          {/* <img src="/static/images/IreneK 1.png" alt="Irene" /> */}
-        </div>
+        <div className="lets-start-section lets-start-img"/>
       </div>
     </div>
   </div>
