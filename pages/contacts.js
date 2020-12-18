@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
 
-import { IreneK, PaulW, JeanA } from '../public/static/contacts/contacts-data';
+import { IlonaS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -336,7 +336,7 @@ const Contacts = ({ router }) => {
   let person;
   if (selectedCountry === 'NL') person = PaulW;
   else if (selectedCountry === 'US') person = JeanA;
-  else person = IreneK;
+  else person = IlonaS;
   return (
     <Layout noFooter>
       <div className="contacts-page" id="contacts-page">

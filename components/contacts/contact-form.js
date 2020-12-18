@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 import { ContactUsContext } from '../context/contacts-context';
 import Person from '../person';
 import Checkbox from '../form/checkbox';
-import { IreneK, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
+import { IlonaS, PaulW, JeanA } from '../../public/static/contacts/contacts-data';
 
 const handleStatusResponse = (response) => {
   if (response.status >= 200 && response.status < 300) {
@@ -30,7 +30,7 @@ const ContactForm = () => {
   let person;
   if (selectedCountry === 'NL') person = PaulW;
   else if (selectedCountry === 'US') person = JeanA;
-  else person = IreneK;
+  else person = IlonaS;
   const [firstname, setFirstname] = useState({
     value: '',
     error: false,

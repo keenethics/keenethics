@@ -27,7 +27,7 @@ const renderPreFooter = (type, data) => {
 };
 
 module.exports = {
-  messageFromIrene(type, data) {
+  messageFromIlona(type, data) {
     return `
 <div style="font-family:sans-serif;max-width:700px;margin-top:10px;margin-bottom:10px;margin-right:10px;color:#000;" >
   <p style="font-size:14px;" >
@@ -36,7 +36,7 @@ module.exports = {
   <p style="font-size:14px;">
     Thank you for getting in touch!<br>
     I will get back to you <strong>within 23 hours</strong> but you can
-    <a href="https://calendly.com/irene-keenethics" target="_blank">book a meeting with me</a>
+    <a href="https://calendly.com/ilona-keenethics" target="_blank">book a meeting with me</a>
     for the earliest time available.
   </p>
   <p style="font-size:14px;">
@@ -49,7 +49,7 @@ module.exports = {
   </p>
   <p style="font-size:14px;">
     Talk to you soon, <br>
-    Irene
+    Ilona
   </p>
   <p style="font-size:14px;margin: 10px 0 0;" >
     P.S. Just in case, here is the copy of your submission:
@@ -58,10 +58,11 @@ module.exports = {
   <p style="font-size:14px;" >--</p>
 
   <ul style="font-size:14px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-left:0;list-style-type:none;" >
-    <li style="display:inline-block;margin-left:0;">Irene Krot <span style="color:red;" >•</span></li>
+    <li style="display:inline-block;margin-left:0;">Ilona Shvahla <span style="color:red;" >•</span></li>
     <li style="display:inline-block;margin-left:0;">Head of Engagement <span style="color:red;" >•</span></li>
-    <li style="display:inline-block;margin-left:0;"><a href="mailto:irene@keenethics.com">irene@keenethics.com</a> <span style="color:red;" >•</span></li>
-    <li style="display:inline-block;margin-left:0;">Mobile: <a href="tel:+380947106105">+38 (094) 710 61 05</a> <span style="color:red;" >•</span></li>
+    <li style="display:inline-block;margin-left:0;"><a href="mailto:ilona@keenethics.com">ilona@keenethics.com</a> <span style="color:red;" >•</span></li>
+    <li style="display:inline-block;margin-left:0;">Mobile: <a href="tel:+380936978118">+38 (093) 697 81 18</a> <span style="color:red;" >•</span></li>
+    <li style="display:inline-block;margin-left:0;">Skype: <a href="skype:ilonashvagla">ilonashvagla</a> <span style="color:red;" >•</span></li>
   </ul>
 
   <img src="cid:keenethics" width="110px" style="width: 110px;">

@@ -1,7 +1,7 @@
-export const IreneK = {
-  name: 'Talk to Irene Krot',
+export const IlonaS = {
+  name: 'Talk to Ilona Shvahla',
   position: 'Head of Engagement',
-  imgSrc: 'static/images/irene_krot.png',
+  imgSrc: 'static/images/ilona_shvahla.webp',
 };
 
 export const PaulW = {
