@@ -184,26 +184,25 @@ const ProjectStoryTerrace = () => (
                 className="image-gaps"
               />
             </section>
+
+            <section>
+                <h2 className='text-center'>Do You Have a Similar Project Idea?</h2>
+                <CallToActionButton
+                  title='Share your idea'
+                  buttonBefore={(
+                    <a
+                      href="https://storyterrace.com/"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                    >
+                      <button type="button" className="call-to-cation-btn -secondary">
+                        Check The Project
+                      </button>
+                    </a>
+                  )}
+                />
+            </section>
           </div>
-
-          <section>
-            <h2 className='text-center'>Do You Have a Similar Project Idea?</h2>
-            <CallToActionButton
-              title='Share your idea'
-              buttonBefore={(
-                <a
-                  href="https://storyterrace.com/"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    Check The Project
-                  </button>
-                </a>
-              )}
-            />
-          </section>
-
           <Navigation />
         </div>
       </div>

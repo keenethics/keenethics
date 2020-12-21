@@ -92,21 +92,23 @@ const ProjectMyGrassGrowth = () => (
               </ul>
             </div>
 
-            <h2>Do You Have a Similar Project Idea?</h2>
-            <CallToActionButton
-              title="SHARE YOUR IDEA"
-              buttonBefore={(
-                <a
-                  href="http://52.48.81.242/signIn"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    CHECK THE PROJECT
-                  </button>
-                </a>
-              )}
-            />
+            <div className="project-content-more">
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="http://52.48.81.242/signIn"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      CHECK THE PROJECT
+                    </button>
+                  </a>
+                )}
+              />
+            </div>
           </div>
           <Navigation />
         </div>
