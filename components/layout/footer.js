@@ -164,7 +164,7 @@ const HomeFooter = ({
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
             <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#services" className="home-footer-list__title home-footer-list-item__link">
-              <h5>Services</h5>
+              <h5 className="home-footer-list__title-text">Services</h5>
             </a>
           </li>
           {services.map((el) => (
@@ -177,7 +177,9 @@ const HomeFooter = ({
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list__title home-footer-list-item__link"><h5>Industries</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#industries" className="home-footer-list__title home-footer-list-item__link">
+              <h5 className="home-footer-list__title-text">Industries</h5>
+            </a>
           </li>
           {industries.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -187,7 +189,9 @@ const HomeFooter = ({
             </li>
           ))}
           <li className="home-footer-list-item home-footer-list__title">
-            <a href="/#methods" className="home-footer-list__title home-footer-list-item__link"><h5>Full-Cycle Method</h5></a>
+            <a href="/#methods" className="home-footer-list__title home-footer-list-item__link">
+              <h5 className="home-footer-list__title-text">Full-Cycle Method</h5>
+            </a>
           </li>
           {fullCycleMethod.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
@@ -199,7 +203,9 @@ const HomeFooter = ({
         </ul>
         <ul className="home-footer-list">
           <li className="home-footer-list-item">
-            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link"><h5>Technologies</h5></a>
+            <a target={openNewTab ? '_blank' : ''} rel={openNewTab ? 'noopener noreferrer' : ''} href="/#tech-stack" className="home-footer-list__title home-footer-list-item__link">
+              <h5 className="home-footer-list__title-text">Technologies</h5>
+            </a>
           </li>
           {technologies.map((el) => (
             <li className="home-footer-list-item" key={el.title}>
