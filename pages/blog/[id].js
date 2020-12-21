@@ -169,12 +169,12 @@ const renderNoFollowLinks = (children) => children.reduce((acc, item) => {
 const bodyOptions = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => (
-      <p>
+      <p key={`&{type}_${Math.random()}`}>
         {renderNoFollowLinks(children)}
       </p>
     ),
     [BLOCKS.HEADING_3]: (node, children) => (
-      <h3>
+      <h3 key={`&{type}_${Math.random()}`}>
         {renderNoFollowLinks(children)}
       </h3>
     ),
