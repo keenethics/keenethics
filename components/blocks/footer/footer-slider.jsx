@@ -36,7 +36,7 @@ const FooterSlider = ({
 
   const settings = {
     className: 'footer-slider',
-    slidesToShow,
+    slidesToShow: slidesToShow,
     initialSlide: 2,
     rtl: true,
     responsive: [
@@ -61,16 +61,20 @@ const FooterSlider = ({
 
   return (
     <>
-      <Slider
-        {...settings}
-      >
-        {posts.reverse()
-          .map((post) => (
-            <div className="slide-container" key={post.fields.slug}>
-              <PostItem post={post} />
-            </div>
-          ))}
-      </Slider>
+      {
+        posts && posts.length > 0 && 
+        <Slider
+          {...settings}
+        >
+          {
+            posts.map((post) => (
+              <div className="slide-container" key={post.fields.slug}>
+                <PostItem post={post} />
+              </div>
+            ))
+          }
+        </Slider>
+      }
     </>
   );
 };

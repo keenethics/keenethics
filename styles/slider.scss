@@ -201,6 +201,9 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
+    &:active, &:focus {
+      outline: none;
+    }
 
     &:hover {
       transform: scale(1.1);
