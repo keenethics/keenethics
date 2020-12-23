@@ -162,16 +162,6 @@ const renderNoFollowLinks = (children) => children.reduce((acc, item) => {
 
 const bodyOptions = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => (
-      <p>
-        {renderNoFollowLinks(children)}
-      </p>
-    ),
-    [BLOCKS.HEADING_3]: (node, children) => (
-      <h3>
-        {renderNoFollowLinks(children)}
-      </h3>
-    ),
     [BLOCKS.EMBEDDED_ASSET]: (node) => {
       const { url } = node.data.target.fields.file;
       const { description, title } = node.data.target.fields;
@@ -252,11 +242,28 @@ const bodyOptions = {
       }
 
       return null;
-    },
+    }
   },
   renderMark: {
-    [MARKS.CODE]: (text) => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
-  },
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p>
+        {renderNoFollowLinks(children)}
+      </p>
+    ),
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3>
+        {renderNoFollowLinks(children)}
+      </h3>
+    ),
+    [MARKS.CODE]: (text) => (
+      <SyntaxHighlighter 
+        language="javascript"
+        showLineNumbers
+      >
+          {text}
+      </SyntaxHighlighter>
+    )
+  }
 };
 
 export default class Post extends React.Component {
