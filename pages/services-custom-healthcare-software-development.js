@@ -6,6 +6,7 @@ import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart'
 
 import { works } from '../main.config';
 
@@ -443,12 +444,8 @@ const ServicesCustomHealthcareSoftwareDevelopment = () => (
 
         </div>
       </section>
-      <h2>Now, let’s discuss your business idea!</h2>
-      <CallToActionButton
-        title="Contact us"
-        href="/contacts"
-      />
     </div>
+    <LetsStart/>
   </Layout>
 );
 

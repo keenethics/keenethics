@@ -5,6 +5,7 @@ import Layout from '../components/layout/main';
 import FeaturesList from '../components/content/FeaturesList';
 import ContentNavigation from '../components/content/navigation';
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 import Works from '../components/portfolio/works';
 
@@ -306,11 +307,8 @@ const TechDataBaseMongo = () => (
           />
         </div>
       </section>
-      <section>
-        <h2>Now, let’s discuss your business idea!</h2>
-        <CallToActionButton title="CONTACT US" />
-      </section>
     </div>
+    <LetsStart/>
   </Layout>
 );
 

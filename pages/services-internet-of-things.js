@@ -4,6 +4,7 @@ import Layout from '../components/layout/main';
 import ContentNavigation from '../components/content/navigation';
 
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart';
 import FeaturesList from '../components/content/FeaturesList';
 import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 
@@ -268,12 +269,8 @@ const ServicesInternetOfThings = () => {
           <p>These are some of the cloud applications that we have developed:</p>
           <Works works={webDevelopmentWorks} />
         </section>
-        <h2>Now, let’s discuss your business idea!</h2>
-        <CallToActionButton
-          title="Contact us"
-          href="/contacts"
-        />
       </div>
+      <LetsStart/>
     </Layout>
   );
 };

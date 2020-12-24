@@ -184,6 +184,14 @@
         "metaDescription": "KeenEthics helps farmers make the agricultural sphere smarter and more efficient. We offer solutions for grazing management, livestock management, precision agriculture, farm management and accounting, and agriculture trade.",
         "href": "/services-agriculture-software-development",
         "type": "default"
+      },
+      {
+        "name": "Logistics Software Solutions",
+        "description": "Embodying goal-oriented values and taking your business to a new level",
+        "metaTitle": "Logistics Software Development Company — KeenEthics",
+        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
+        "href": "/logistics-industry",
+        "type": "default"
       }
     ]
   },
@@ -345,7 +353,7 @@
     "anchor": "blog"
   },
   {
-    "name": "Contact Us",
+    "name": "Contact us",
     "description": "Contact KeenEthics to solve your business challenges with full-cycle development.",
     "metaTitle": "Contact Us - KeenEthics",
     "metaDescription": "Contact KeenEthics to solve your business challenges with full-cycle development.",

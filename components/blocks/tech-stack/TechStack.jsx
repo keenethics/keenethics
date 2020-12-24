@@ -146,6 +146,12 @@ const TechStack = () => {
                     <img className="toggle-color" src="/static/main-blocks/tech-stack/stripe-color.svg" alt="stripe" />
                   </div>
                 </Link>
+                <Link href="tech-api-integration-elastic-search" prefetch={false}>
+                  <div className="tech-stack--block-item">
+                    <img src="/static/main-blocks/tech-stack/elasticsearch.svg" alt="elasticsearch" />
+                    <img className="toggle-color" src="/static/main-blocks/tech-stack/elasticsearch-color.svg" alt="elasticsearch" />
+                  </div>
+                </Link>
               </div>
             </div>
           </LazyLoadComponent>

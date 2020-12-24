@@ -7,6 +7,7 @@ import { works } from '../main.config';
 
 import Works from '../components/portfolio/works';
 import CallToActionButton from '../components/content/CallToActionButton';
+import LetsStart from '../components/about-us/LetsStart'
 import OfferList from '../components/content/OfferList';
 import WhyKeenethicsList from '../components/content/WhyKeenethicsList';
 
@@ -207,12 +208,8 @@ const ServicesAgricultureSoftwareDevelopment = () => {
           <h2>Why choose KeenEthics?</h2>
           <WhyKeenethicsList list={keenethicsList} />
         </section>
-
-        <section>
-          <h1 className="text-center">Now, let’s discuss your business idea!</h1>
-          <CallToActionButton title="Contact Us" href="/contacts" />
-        </section>
       </div>
+      <LetsStart/>
     </Layout>
   )
 }

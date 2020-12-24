@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export const teamData = [
   {
-    imgSrc: 'static/images/referral-program/irene.png',
+    imgSrc: 'static/images/referral-program/ilona.webp',
     title: 'Business Discovery',
     description: 'The business analyst gathers requirements from all stakeholders, including target audience interviews and market research, to build a solution that will bring value. The backbone of the analysis revolves around the target audience and your competition that may already serve the audience.',
     mainDeliverable: 'User Stories',
     position: 'Business Analyst',
-    name: 'Irene Krot',
+    name: 'Ilona Shvahla',
     href: 'https://docs.google.com/spreadsheets/d/1Aj1Ny_7rcc3cJpNPaDSaoZbzixcXAlHnRPOnsXMjkmY/edit?usp=sharing',
   },
   {
