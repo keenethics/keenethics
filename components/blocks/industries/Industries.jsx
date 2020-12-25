@@ -166,6 +166,23 @@ const Industries = () => {
                   </a>
                 </Link>
               </div>
+              <div className="industries--small-item">
+                <Link href="/services-financial-software-development" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/icon-finance.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Finance and Banking industries"
+                      />
+                    </div>
+                    <div className="industries--small-item-title link">
+                      Finance and Banking
+                    </div>
+                  </a>
+                </Link>
+              </div>
             </div>
             <SeeProjects />
           </div>
