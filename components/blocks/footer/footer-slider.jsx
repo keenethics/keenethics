@@ -62,7 +62,7 @@ const FooterSlider = ({
   return (
     <>
       {
-        posts && posts.length > 0 && 
+        posts && posts.length && 
         <Slider
           {...settings}
         >
