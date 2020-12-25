@@ -1,0 +1,12 @@
+.offers-list {
+    justify-content: center;
+    &-item {
+        @media (max-width: 600px) {
+            width: 50%;
+            padding: 10px;
+        }
+        @media (min-width: 601px) {
+            min-width: 300px !important;
+        }
+    }
+}

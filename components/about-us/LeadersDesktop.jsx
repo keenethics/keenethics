@@ -46,7 +46,7 @@ const LeadersDesktop = ({ data }) => {
                 .map((item) => (
                   <div className="wrapper" key={item.name}>
                     <img
-                      src={`static/images/about-us/leaders/${item.picture}.jpg`}
+                      src={`static/images/about-us/leaders/${item.picture}.webp`}
                       alt={item.name}
                     />
                     <div className="overlay">
@@ -87,7 +87,7 @@ const LeadersDesktop = ({ data }) => {
                 .map((item) => (
                   <div className="wrapper" key={item.name}>
                     <img
-                      src={`static/images/about-us/leaders/${item.picture}.jpg`}
+                      src={`static/images/about-us/leaders/${item.picture}.webp`}
                       alt={item.name}
                     />
                     <div className="overlay">

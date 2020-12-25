@@ -39,7 +39,7 @@ const LeadersMobile = ({ data }) => {
               <figure key={index}>
                 <div className="wrapper">
                   <img
-                    src={`static/images/about-us/leaders/${item.picture}.jpg`}
+                    src={`static/images/about-us/leaders/${item.picture}.webp`}
                     alt={item.name}
                   />
                   <div className="overlay">

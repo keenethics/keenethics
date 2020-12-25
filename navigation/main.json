@@ -75,14 +75,6 @@
         "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business",
         "href": "/services-internet-of-things",
         "type": "default"
-      },
-      {
-        "name": "Indoor Positioning System",
-        "metaTitle": "Indoor Positioning System — KeenEthics",
-        "description": "This solution will bring your customer service and employee management to a new level.",
-        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
-        "href": "/services-indoor-positioning-system-development",
-        "type": "default"
       }
     ]
   },
@@ -194,6 +186,24 @@
         "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
         "href": "/logistics-industry",
         "type": "default"
+      },
+      {
+        "name": "Indoor Positioning System",
+        "metaTitle": "Indoor Positioning System — KeenEthics",
+        "description": "This solution will bring your customer service and employee management to a new level.",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
+        "href": "/services-indoor-positioning-system-development",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Banking and Financial Software Development Services",
+        "metaTitle": "Banking and Financial Software Development Services – KeenEthics",
+        "description": "Fostering innovation and bringing the world of banking and financial services one step closer to people",
+        "metaDescription":"KeenEthics fosters innovation and brings the world of banking and financial services one step closer to people. By ensuring quality, security, compliance, and elegance, we develop effective and reliable financial software solutions.",
+        "href": "/services-financial-software-development",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },
