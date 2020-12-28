@@ -29,7 +29,7 @@ const leadersData = [
     name: 'Alex Pletnov',
     position: 'Chief Technical Officer',
     picture: 'alex-pletnev',
-    linkedin: 'https://www.linkedin.com/in/oleksiy-pletnov-212b3764/',
+    linkedin: 'https://www.linkedin.com/in/alex-pletnov-212b3764/',
     email: 'mailto:oleksiy.pletnov@keenethics.com',
     id: 2,
   },
