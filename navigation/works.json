@@ -1,31 +1,68 @@
 [
   {
-    "title": "B2C Online Store",
-    "metaTitle": "B2C Online Store – KeenEthics Case Study",
-    "href": "/project-b2c-online-store",
-    "imgSrc": "b2c-online-store/b2c-online-store.png",
-    "webpSrc": "b2c-online-store/b2c-online-store.webp",
+    "title": "SelfLeaders",
+    "metaTitle":"SelfLeaders — KeenEthics Portfolio",
+    "href": "/project-self-leaders",
+    "imgSrc": "selfleaders.jpg",
+    "webpSrc": "selfleaders.webp",
     "category": {
       "main": [
-        "Retail"
+        "Education"
       ]
     },
-    "description": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance",
-    "metaDescription": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance"
+    "description": "Personal Growth Tool",
+    "metaDescription":"SelfLeaders is a Swedish company helping its customers drive development and create a strong and engaging corporate culture."
   },
   {
-    "title": "Business Research Platform",
-    "metaTitle": "Business Research Platform – KeenEthics Case Study",
-    "href": "/project-business-research-platform",
-    "imgSrc": "the-business-research-platform/the-business-research-platform.jpg",
-    "webpSrc": "the-business-research-platform/the-business-research-platform.webp",
+    "title": "ComicEnglish",
+    "href": "/project-comic-english",
+    "imgSrc": "comicenglish.jpg",
+    "webpSrc": "comicenglish.webp",
     "category": {
       "main": [
-        "Business"
+        "Education"
       ]
     },
-    "description": "A web platform offering the services of a mediator between business consultants and consultees.",
-    "metaDescription": "A web platform offering the services of a mediator between business consultants and consultees."
+    "description": "ComicEnglish is a chatbot-based app for interactive English learning"
+  },
+  {
+    "title": "Let’s Start Coding",
+    "metaTitle": "Case study: Let’s Start Coding – KeenEthics",
+    "href": "/project-lets-start-coding",
+    "imgSrc": "lets-start-coding/lets-start-coding.jpg",
+    "webpSrc": "lets-start-coding/lets-start-coding.webp",
+    "category": {
+      "main": [
+        "Education"
+      ]
+    },
+    "description": "An interactive e-learning platform with physical code kits and online lessons on computer coding for kids",
+    "metaDescription": "An interactive e-learning platform with physical code kits and online lessons on computer coding for kids"
+  },
+  {
+    "title": "Education System Platform",
+    "href": "/project-education-system-platform",
+    "imgSrc": "education-system-platform.jpg",
+    "webpSrc": "education-system-platform.webp",
+    "category": {
+      "main": [
+        "Education"
+      ]
+    },
+    "description": "Analysis and optimization of the federal education system"
+  },
+  {
+    "title": "OneRemission",
+    "href": "/project-one-remission",
+    "imgSrc": "one-remission/one-remission.jpg",
+    "webpSrc": "one-remission/one-remission.webp",
+    "category": {
+      "main": [
+        "Nonprofit & Community Development",
+        "Healthcare"
+      ]
+    },
+    "description": "Making the lives of cancer survivors easier"
   },
   {
     "title": "WorldLabs",
@@ -35,7 +72,7 @@
     "webpSrc": "worldlabs/wl-screenshot.webp",
     "category": {
       "main": [
-        "Business"
+        "Nonprofit & Community Development"
       ]
     },
     "description": "A business incubation platform giving people the power to elevate their ideas.",
@@ -70,42 +107,6 @@
     "metaDescription": "A project revolutionizing the outdated, disorganized, and inefficient traditional system of healthcare."
   },
   {
-    "title": "ParkQX",
-    "href": "/parkqx-c2c-e-commerce",
-    "imgSrc": "parkqx/parkqx.jpg",
-    "webpSrc": "parkqx/parkqx.webp",
-    "category": {
-      "main": [
-        "Retail"
-      ]
-    },
-    "description": "A C2C e-commerce app, which makes parking routine easy, hassle-free, and convenient."
-  },
-  {
-    "title": "Education System Platform",
-    "href": "/project-education-system-platform",
-    "imgSrc": "education-system-platform.jpg",
-    "webpSrc": "education-system-platform.webp",
-    "category": {
-      "main": [
-        "Education"
-      ]
-    },
-    "description": "Analysis and optimization of the federal education system"
-  },
-  {
-    "title": "OneRemission",
-    "href": "/project-one-remission",
-    "imgSrc": "one-remission/one-remission.jpg",
-    "webpSrc": "one-remission/one-remission.webp",
-    "category": {
-      "main": [
-        "Healthcare"
-      ]
-    },
-    "description": "Making the lives of cancer survivors easier"
-  },
-  {
     "title": "Diagnostic Appointment Scheduling System",
     "metaTitle": "Case study: Diagnostic Appointment Scheduling System  KeenEthics",
     "href": "/project-diagnostic-appointment-scheduling-system",
@@ -118,18 +119,6 @@
     },
     "description": "Personalized medical care and public health support",
     "metaDescription": "A platform providing personalized medical care and public health support"
-  },
-  {
-    "title": "Pree",
-    "href": "/project-pree",
-    "imgSrc": "pree.jpg",
-    "webpSrc": "pree.webp",
-    "category": {
-      "main": [
-        "Retail"
-      ]
-    },
-    "description": "Stop losing your stuff"
   },
   {
     "title": "Hospital Marketing Administration System",
@@ -146,77 +135,28 @@
     "metaDescription": "A hospital management system for modeling patient journey, automating marketing documentation, and improving client service"
   },
   {
-    "title": "SelfLeaders",
-    "metaTitle":"SelfLeaders — KeenEthics Portfolio",
-    "href": "/project-self-leaders",
-    "imgSrc": "selfleaders.jpg",
-    "webpSrc": "selfleaders.webp",
+    "title": "ParkQX",
+    "href": "/parkqx-c2c-e-commerce",
+    "imgSrc": "parkqx/parkqx.jpg",
+    "webpSrc": "parkqx/parkqx.webp",
     "category": {
       "main": [
-        "Education"
+        "Logistics"
       ]
     },
-    "description": "Personal Growth Tool",
-    "metaDescription":"SelfLeaders is a Swedish company helping its customers drive development and create a strong and engaging corporate culture."
+    "description": "A C2C e-commerce app, which makes parking routine easy, hassle-free, and convenient."
   },
   {
-    "title": "BankerAdvisor",
-    "href": "/project-banker-advisor",
-    "imgSrc": "banker-advisor.jpg",
-    "webpSrc": "banker-advisor.webp",
+    "title": "Pree",
+    "href": "/project-pree",
+    "imgSrc": "pree.jpg",
+    "webpSrc": "pree.webp",
     "category": {
       "main": [
-        "Finance & Banking"
+        "Logistics"
       ]
     },
-    "description": "Investment banking tool"
-  },
-  {
-    "title": "Black Book",
-    "href": "/project-black-book",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "imgSrc": "black-book.jpg",
-    "description": "Display the statistics of company employees"
-  },
-  {
-    "title": "Tetrami",
-    "href": "/project-tetrami",
-    "imgSrc": "tetrami.jpg",
-    "webpSrc": "tetrami.webp",
-    "category": {
-      "main": [
-        "Retail"
-      ]
-    },
-    "description": "A brand new “deal” e-commerce project with a unique discounting method"
-  },
-  {
-    "title": "WorkBooking",
-    "href": "/project-workbooking",
-    "imgSrc": "workbooking.jpg",
-    "webpSrc": "workbooking.webp",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "description": "Get hired or find someone to do the job for you"
-  },
-  {
-    "title": "Paceup",
-    "href": "/project-paceup",
-    "imgSrc": "paceup/paceup.jpg",
-    "webpSrc": "paceup/paceup.webp",
-    "category": {
-      "main": [
-        "Real estate"
-      ]
-    },
-    "description": "Revenue management system for increasing customer loyalty"
+    "description": "Stop losing your stuff"
   },
   {
     "title": "My Grass Growth",
@@ -231,76 +171,16 @@
     "description": "Keep you cows healthy and well-fed"
   },
   {
-    "title": "BarFrogs",
-    "href": "/project-barfrogs",
+    "title": "BankerAdvisor",
+    "href": "/project-banker-advisor",
+    "imgSrc": "banker-advisor.jpg",
+    "webpSrc": "banker-advisor.webp",
     "category": {
       "main": [
-        "Entertainment"
+        "Finance & Banking"
       ]
     },
-    "imgSrc": "barfrogs.jpg",
-    "webpSrc": "barfrogs.webp",
-    "description": "Find an event you are interested in"
-  },
-  {
-    "title": "Phenix",
-    "href": "/project-phenix",
-    "imgSrc": "phenix.jpg",
-    "webpSrc": "phenix.webp",
-    "category": {
-      "main": [
-        "Entertainment"
-      ]
-    },
-    "description": "Online video-streaming"
-  },
-  {
-    "title": "Plutio",
-    "href": "/project-plutio",
-    "imgSrc": "plutio.jpg",
-    "webpSrc": "plutio.webp",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "description": "Business management platform"
-  },
-  {
-    "title": "The Check Network",
-    "href": "/project-the-check-network",
-    "imgSrc": "the-check-network/the-check-network.jpg",
-    "webpSrc": "the-check-network/the-check-network.webp",
-    "category": {
-      "main": [
-        "Business"
-      ]
-    },
-    "description": "Comprehensive e-commerce platform for effective SEO optimization"
-  },
-  {
-    "title": "ComicEnglish",
-    "href": "/project-comic-english",
-    "imgSrc": "comicenglish.jpg",
-    "webpSrc": "comicenglish.webp",
-    "category": {
-      "main": [
-        "Education"
-      ]
-    },
-    "description": "ComicEnglish is a chatbot-based app for interactive English learning"
-  },
-  {
-    "title": "Knote",
-    "href": "/project-knote",
-    "imgSrc": "knote.jpg",
-    "webpSrc": "knote.webp",
-    "category": {
-      "main": [
-        "Business administration"
-      ]
-    },
-    "description": "A tool for online collaboration and task-management"
+    "description": "Investment banking tool"
   },
   {
     "title": "Knotel",
@@ -309,24 +189,22 @@
     "webpSrc": "knotel.webp",
     "category": {
       "main": [
-        "Real estate"
+        "Real Estate"
       ]
     },
     "description": "Headquarters as a Service"
   },
   {
-    "title": "Let’s Start Coding",
-    "metaTitle": "Case study: Let’s Start Coding – KeenEthics",
-    "href": "/project-lets-start-coding",
-    "imgSrc": "lets-start-coding/lets-start-coding.jpg",
-    "webpSrc": "lets-start-coding/lets-start-coding.webp",
+    "title": "Paceup",
+    "href": "/project-paceup",
+    "imgSrc": "paceup/paceup.jpg",
+    "webpSrc": "paceup/paceup.webp",
     "category": {
       "main": [
-        "Education"
+        "Real Estate"
       ]
     },
-    "description": "An interactive e-learning platform with physical code kits and online lessons on computer coding for kids",
-    "metaDescription": "An interactive e-learning platform with physical code kits and online lessons on computer coding for kids"
+    "description": "Revenue management system for increasing customer loyalty"
   },
   {
     "title": "Immocloud",
@@ -342,6 +220,132 @@
     }
   },
   {
+    "title": "B2C Online Store",
+    "metaTitle": "B2C Online Store – KeenEthics Case Study",
+    "href": "/project-b2c-online-store",
+    "imgSrc": "b2c-online-store/b2c-online-store.png",
+    "webpSrc": "b2c-online-store/b2c-online-store.webp",
+    "category": {
+      "main": [
+        "E-Commerce",
+        "Digitalization"
+      ]
+    },
+    "description": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance",
+    "metaDescription": "Developing an e-commerce B2C web platform with usual functionality but exceptional performance"
+  },
+  {
+    "title": "Tetrami",
+    "href": "/project-tetrami",
+    "imgSrc": "tetrami.jpg",
+    "webpSrc": "tetrami.webp",
+    "category": {
+      "main": [
+        "E-Commerce",
+        "Digitalization"
+      ]
+    },
+    "description": "A brand new “deal” e-commerce project with a unique discounting method"
+  },
+  {
+    "title": "The Check Network",
+    "href": "/project-the-check-network",
+    "imgSrc": "the-check-network/the-check-network.jpg",
+    "webpSrc": "the-check-network/the-check-network.webp",
+    "category": {
+      "main": [
+        "E-Commerce",
+        "Digitalization"
+      ]
+    },
+    "description": "Comprehensive e-commerce platform for effective SEO optimization"
+  },
+  {
+    "title": "BarFrogs",
+    "href": "/project-barfrogs",
+    "category": {
+      "main": [
+        "E-Commerce"
+      ]
+    },
+    "imgSrc": "barfrogs.jpg",
+    "webpSrc": "barfrogs.webp",
+    "description": "Find an event you are interested in"
+  },
+  {
+    "title": "Phenix",
+    "href": "/project-phenix",
+    "imgSrc": "phenix.jpg",
+    "webpSrc": "phenix.webp",
+    "category": {
+      "main": [
+        "E-Commerce"
+      ]
+    },
+    "description": "Online video-streaming"
+  },
+  {
+    "title": "Black Book",
+    "href": "/project-black-book",
+    "category": {
+      "main": [
+        "Digitalization"
+      ]
+    },
+    "imgSrc": "black-book.jpg",
+    "description": "Display the statistics of company employees"
+  },
+  {
+    "title": "WorkBooking",
+    "href": "/project-workbooking",
+    "imgSrc": "workbooking.jpg",
+    "webpSrc": "workbooking.webp",
+    "category": {
+      "main": [
+        "Digitalization"
+      ]
+    },
+    "description": "Get hired or find someone to do the job for you"
+  },
+  {
+    "title": "Plutio",
+    "href": "/project-plutio",
+    "imgSrc": "plutio.jpg",
+    "webpSrc": "plutio.webp",
+    "category": {
+      "main": [
+        "Digitalization"
+      ]
+    },
+    "description": "Business management platform"
+  },
+  {
+    "title": "Knote",
+    "href": "/project-knote",
+    "imgSrc": "knote.jpg",
+    "webpSrc": "knote.webp",
+    "category": {
+      "main": [
+        "Digitalization"
+      ]
+    },
+    "description": "A tool for online collaboration and task-management"
+  },
+  {
+    "title": "Business Research Platform",
+    "metaTitle": "Business Research Platform – KeenEthics Case Study",
+    "href": "/project-business-research-platform",
+    "imgSrc": "the-business-research-platform/the-business-research-platform.jpg",
+    "webpSrc": "the-business-research-platform/the-business-research-platform.webp",
+    "category": {
+      "main": [
+        "Digitalization"
+      ]
+    },
+    "description": "A web platform offering the services of a mediator between business consultants and consultees.",
+    "metaDescription": "A web platform offering the services of a mediator between business consultants and consultees."
+  },
+  {
     "title": "StoryTerrace",
     "metaTitle": "StoryTerrace – KeenEthics Projects",
     "description":"A ghostwriting and publishing solution, which brings the book industry to a new level",
@@ -350,7 +354,7 @@
     "imgSrc": "storyterrace/storyterrace-image-main.png",
     "category": {
       "main": [
-        "Business"
+        "Digitalization"
       ]
     }
   }
