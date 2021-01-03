@@ -120,7 +120,9 @@ export default class NavigationPoint extends React.Component {
       <li
         role="presentation"
         // eslint-disable-next-line no-restricted-globals
-        onClick={() => (name === 'Contact Us' ? location.assign(href) : null)}
+        onClick={() => {
+          if (name === 'Contact Us') return location.assign(href);
+        }}
         className={className}
       >
         {this.renderPoint()}
