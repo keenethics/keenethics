@@ -273,6 +273,30 @@ export default class Post extends React.Component {
     };
   }
 
+  static async getInitialProps(p) {
+    const { id, preview } = p.query;
+    const { res } = p;
+    const response = await getPostBySlug({ slug: id, preview });
+    const { items } = response || {};
+
+    if (!items || !Array.isArray(items) || !items[0]) {
+      res.statusCode = 404;
+      return {};
+    }
+
+    const { tags = [], slug } = items[0].fields;
+    const relatedPosts = tags.length
+      ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
+      : [];
+    const updatedAt = get(response, 'items[0].sys.updatedAt', false);
+
+    return {
+      ...items[0].fields,
+      updatedAt,
+      relatedPosts,
+    };
+  }
+
   componentDidMount() {
     this.setState({
       url: window.location.href,
@@ -437,37 +461,6 @@ export default class Post extends React.Component {
   }
 }
 
-export async function getStaticPaths() {
-  const contResp = await getPostsList();
-  const paths = (contResp && contResp.items).map((post) => ({
-    params: { id: post.fields.slug },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params: name }) {
-  const response = await getPostBySlug({ slug: name.id });
-  const { items } = response || {};
-
-  if (!items || !Array.isArray(items) || !items[0]) {
-    return { notFound: true };
-  }
-
-  const { tags = [], slug } = items[0].fields;
-  const relatedPosts = tags.length
-    ? (await getRelatedPosts({ limit: 3, tags, excludeSlug: slug })).items
-    : [];
-  const updatedAt = get(response, 'items[0].sys.updatedAt', false);
-
-  return {
-    props: {
-      ...items[0].fields,
-      updatedAt,
-      relatedPosts,
-    },
-  };
-}
 
 personComponent.propTypes = {
   image: PropTypes.object.isRequired,
