@@ -35,7 +35,7 @@ const leadersData = [
   },
   {
     name: 'Olga Boichuk',
-    position: 'Head of UX/UI Department',
+    position: 'Head of UX/UI',
     picture: 'olga-boichuk',
     linkedin: 'https://www.linkedin.com/in/olga-boichuk-374029150/',
     email: 'mailto:olga.boichuk@keenethics.com',

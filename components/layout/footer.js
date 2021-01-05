@@ -46,20 +46,32 @@ const industries = [
     url: '/services-education-software-development',
   },
   {
-    title: 'Business',
-    url: '/services-business-administration-development',
+    title: 'Nonprofit',
+    url: '/services-non-profit-software-development',
   },
   {
     title: 'Healthcare',
     url: '/services-custom-healthcare-software-development',
   },
   {
+    title: 'Logistics',
+    url: '/logistics-industry'
+  },
+  {
+    title: 'Agriculture',
+    url: '/services-agriculture-software-development'
+  },
+  {
+    title: 'Finance and Banking',
+    url: '/services-financial-software-development'
+  },
+  {
     title: 'Real Estate',
     url: '/services-real-estate-software-development'
   },
   {
-    title: 'Logistics',
-    url: '/logistics-industry'
+    title: 'Retail',
+    url: '/services-retail-software-development'
   }
 ];
 const technologies = [

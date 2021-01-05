@@ -261,7 +261,24 @@ const bodyOptions = {
     },
   },
   renderMark: {
-    [MARKS.CODE]: (text) => <SyntaxHighlighter language="javascript">{text}</SyntaxHighlighter>,
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p>
+        {renderNoFollowLinks(children)}
+      </p>
+    ),
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3>
+        {renderNoFollowLinks(children)}
+      </h3>
+    ),
+    [MARKS.CODE]: (text) => (
+      <SyntaxHighlighter
+        language="javascript"
+        showLineNumbers
+      >
+        {text}
+      </SyntaxHighlighter>
+    ),
   },
 };
 
