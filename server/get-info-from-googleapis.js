@@ -1,6 +1,5 @@
 const { google } = require('googleapis');
-const _ = require('lodash');
-const memoize = require('lodash/memoize');
+const { fromPairs, get, memoize } = require('lodash');
 const { spreadSheet } = require('./config');
 const getUser = require('./google-auth');
 
@@ -16,7 +15,7 @@ const TITLE_COLUMN_INDEX = 0;
 const arrayOfArraysToCollection = (arr) => {
   const properties = arr[TITLE_COLUMN_INDEX];
   return arr.slice(TITLE_COLUMN_INDEX + 1)
-    .map((v) => _.fromPairs(properties.map((property, index) => ([property, v[index]]))));
+    .map((v) => fromPairs(properties.map((property, index) => ([property, v[index]]))));
 };
 
 const getSheetValues = (valueRanges, rangeName) => valueRanges.find(
@@ -58,7 +57,7 @@ const getSheets = memoize(async () => {
     ranges,
   });
 
-  const result = _.get(table, 'data', {});
+  const result = get(table, 'data', {});
   // eslint-disable-next-line
   result._date = Date.now();
 
