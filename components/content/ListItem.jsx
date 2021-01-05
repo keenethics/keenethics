@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { get } from 'lodash';
 import classnames from 'classnames';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
-import Moment from 'react-moment';
+import dateParse from '../../helpers/date-parser';
 // import Webp from '../webp';
 /**
  * Convert blog-post/portfolio-item to same scheme:
@@ -49,7 +49,7 @@ const getDataFromProperty = (item) => {
       imgUrl: `https:${
         get(item.heroImage, 'fields.file.url')
       }?fm=jpg&fl=progressive&q=85&w=600`,
-      url: `/post?name=${item.slug}`,
+      url: `/blog/${item.slug}`,
       asUrl: `/blog/${item.slug}`,
       tags: item.categories,
       publishDate: item.publishDate,
@@ -74,7 +74,7 @@ const ListItem = ({ work }) => {
 
   return (
     <div className={classnames('page__item')}>
-      <Link href={url} as={asUrl} prefetch={false}>
+      <Link href={url}>
         <a className="page__item-link">
           <figure className="page__item-figure">
             <div className="page__item-figure-img-wrap">
@@ -127,12 +127,9 @@ const ListItem = ({ work }) => {
           {
             publishDate
             && (
-              <Moment
-                format="MMM DD, YYYY"
-                className="page__item-date"
-              >
-                {new Date(publishDate)}
-              </Moment>
+              <time className="page__item-date" dateTime={Date.parse(publishDate)}>
+                {dateParse(publishDate, 'MMM DD YYYY')}
+              </time>
             )
           }
         </div>

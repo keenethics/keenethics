@@ -1,11 +1,13 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, {
+  Head, Main, NextScript, Html,
+} from 'next/document';
 
 import React from 'react';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <script
           defer
           dangerouslySetInnerHTML={{
@@ -31,7 +33,7 @@ export default class MyDocument extends Document {
         </noscript>
         <Main className="root" />
         <NextScript />
-      </html>
+      </Html>
     );
   }
 }
