@@ -75,6 +75,15 @@
         "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business",
         "href": "/services-internet-of-things",
         "type": "default"
+      },
+      {
+        "name": "Indoor Positioning System",
+        "metaTitle": "Indoor Positioning System — KeenEthics",
+        "description": "This solution will bring your customer service and employee management to a new level.",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
+        "href": "/services-indoor-positioning-system-development",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },
@@ -140,11 +149,11 @@
         "type": "default"
       },
       {
-        "name": "Business Administration Software Development",
-        "metaTitle": "Business administration software development – KeenEthics",
-        "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "href": "/services-business-administration-development",
+        "name": "Nonprofit Software Development",
+        "metaTitle": "Non-Profit Software Development – KeenEthics",
+        "description": "Helping non-profit companies achieve their ethical goals",
+        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
+        "href": "/services-non-profit-software-development",
         "type": "default"
       },
       {
@@ -156,19 +165,11 @@
         "type": "default"
       },
       {
-        "name": "Real Estate Software Development Services",
-        "description": "Automating routine tasks, making the market transparent, and bringing CRM to a new level",
-        "metaTitle": "Real Estate Software Development Services – KeenEthics",
-        "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
-        "href": "/services-real-estate-software-development",
-        "type": "default"
-      },
-      {
-        "name": "Nonprofit Software Development",
-        "metaTitle": "Non-Profit Software Development – KeenEthics",
-        "description": "Helping non-profit companies achieve their ethical goals",
-        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
-        "href": "/services-non-profit-software-development",
+        "name": "Logistics Software Solutions",
+        "description": "Embodying goal-oriented values and taking your business to a new level",
+        "metaTitle": "Logistics Software Development Company — KeenEthics",
+        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
+        "href": "/logistics-industry",
         "type": "default"
       },
       {
@@ -180,30 +181,28 @@
         "type": "default"
       },
       {
-        "name": "Logistics Software Solutions",
-        "description": "Embodying goal-oriented values and taking your business to a new level",
-        "metaTitle": "Logistics Software Development Company — KeenEthics",
-        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
-        "href": "/logistics-industry",
-        "type": "default"
-      },
-      {
-        "name": "Indoor Positioning System",
-        "metaTitle": "Indoor Positioning System — KeenEthics",
-        "description": "This solution will bring your customer service and employee management to a new level.",
-        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
-        "href": "/services-indoor-positioning-system-development",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
         "name": "Banking and Financial Software Development Services",
         "metaTitle": "Banking and Financial Software Development Services – KeenEthics",
         "description": "Fostering innovation and bringing the world of banking and financial services one step closer to people",
         "metaDescription":"KeenEthics fosters innovation and brings the world of banking and financial services one step closer to people. By ensuring quality, security, compliance, and elegance, we develop effective and reliable financial software solutions.",
         "href": "/services-financial-software-development",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
+      },
+      {
+        "name": "Real Estate Software Development Services",
+        "metaTitle": "Real Estate Software Development Services – KeenEthics",
+        "description": "Automating routine tasks, making the market transparent, and bringing CRM to a new level",
+        "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
+        "href": "/services-real-estate-software-development",
+        "type": "default"
+      },
+      {
+        "name": "Retail Software Development Services",
+        "metaTitle": "Retail Software Development Services – KeenEthics",
+        "description": "Solving retail challenges associated with digital transformation, data safety, and technological advancement.",
+        "metaDescription": "Solving retail app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations.",
+        "href": "/services-retail-software-development",
+        "type": "default"
       }
     ]
   },
