@@ -131,20 +131,23 @@ const Industries = () => {
                 <div className="industries--small-item-title">
                   Finance and Banking
                 </div>
-
               </div>
               <div className="industries--small-item">
-                <div className="industries--small-item-logo">
-                  <LazyLoadImage
-                    src="/static/main-blocks/industries/small/icon-real-estate.svg"
-                    width="32px"
-                    height="27px"
-                    alt="Real Estate industries"
-                  />
-                </div>
-                <div className="industries--small-item-title">
-                  Real Estate
-                </div>
+                <Link href="/services-real-estate-software-development" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/icon-real-estate.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Real Estate industries"
+                      />
+                    </div>
+                    <div className="industries--small-item-title link">
+                      Real Estate
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className="industries--small-item">
                 <Link href="/services-retail-software-development" prefetch={false}>
@@ -159,6 +162,23 @@ const Industries = () => {
                     </div>
                     <div className="industries--small-item-title link">
                       Retail
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <div className="industries--small-item">
+                <Link href="/services-financial-software-development" prefetch={false}>
+                  <a className="link">
+                    <div className="industries--small-item-logo">
+                      <LazyLoadImage
+                        src="/static/main-blocks/industries/small/icon-finance.svg"
+                        width="32px"
+                        height="27px"
+                        alt="Finance and Banking industries"
+                      />
+                    </div>
+                    <div className="industries--small-item-title link">
+                      Finance and Banking
                     </div>
                   </a>
                 </Link>

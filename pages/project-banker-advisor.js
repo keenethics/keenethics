@@ -211,21 +211,23 @@ const ProjectBankerAdvisor = () => (
               className="image-gaps"
             />
 
-            <h2>Do You Have a Similar Project Idea?</h2>
-            <CallToActionButton
-              title="SHARE YOUR IDEA"
-              buttonBefore={(
-                <a
-                  href="http://bankeradvisor.com"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    Check The Project
-                  </button>
-                </a>
-              )}
-            />
+            <div className="project-content-more">
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="http://bankeradvisor.com"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      Check The Project
+                    </button>
+                  </a>
+                )}
+              />
+            </div>
           </div>
           <Navigation />
         </div>

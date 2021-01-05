@@ -53,19 +53,19 @@
         "type": "default"
       },
       {
-        "name": "Chatbots and Artificial Intelligence",
-        "description": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
-        "metaTitle": "AI Chatbot Development Services | KeenEthics",
-        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
-        "href": "/services-chatbots-artificial-intelligence",
-        "type": "default"
-      },
-      {
         "name": "Cloud Application Development",
         "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
         "metaTitle": "Software Maintenance and Support Services | KeenEthics",
         "metaDescription": "KeenEthics offers secure and reliable custom cloud solutions, from custom development through migration and integration to support and maintenance.",
         "href": "/services-cloud-application-development",
+        "type": "default"
+      },
+      {
+        "name": "Chatbots and Artificial Intelligence",
+        "description": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
+        "metaTitle": "AI Chatbot Development Services | KeenEthics",
+        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "href": "/services-chatbots-artificial-intelligence",
         "type": "default"
       },
       {
@@ -75,15 +75,22 @@
         "metaDescription": "KeenEthics builds effective, reliable, and secure IoT solutions, which will jump-start your business",
         "href": "/services-internet-of-things",
         "type": "default"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Full-Cycle Method",
+    "href": "/#methods",
+    "anchor": "methods",
+    "outsideMenu": true,
+    "points": [
       {
         "name": "Business Analysis",
         "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
         "metaTitle": "Business Analysis Services | KeenEthics",
         "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research",
         "href": "/services-business-analysis",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
       },
       {
         "name": "UI/UX Design",
@@ -91,8 +98,7 @@
         "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
         "metaDescription": "As a UI UX design company, we start with project discovery, user testing, and UX audit. Then, we do wireframing, prototyping, and mockuping. After that, we evaluate designs. Only when clients and designers are happy with results, the designs are sent for development.",
         "href": "/services-ui-ux-design",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
       },
       {
         "name": "Development and Quality Assurance",
@@ -100,17 +106,15 @@
         "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
         "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
         "href": "/services-development-and-quality-assurance",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
       },
       {
         "name": "Software Deployment and Implementation Services",
         "metaTitle": "Software Deployment and Implementation Services - KeenEthics",
-        "description": "",
-        "metaDescription": "",
+        "description": "Making your software product finally bring profit",
+        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
         "href": "/services-software-deployment",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
       },
       {
         "name": "Maintenance and Support",
@@ -118,17 +122,7 @@
         "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
         "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning. We offer a warranty for each software product we develop",
         "href": "/services-maintenance-support",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
-        "name": "Indoor Positioning System",
-        "metaTitle": "Indoor Positioning System — KeenEthics",
-        "description": "This solution will bring your customer service and employee management to a new level.",
-        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
-        "href": "/services-indoor-positioning-system-development",
-        "type": "default",
-        "outsideMenu": true
+        "type": "default"
       }
     ]
   },
@@ -192,6 +186,24 @@
         "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
         "href": "/logistics-industry",
         "type": "default"
+      },
+      {
+        "name": "Indoor Positioning System",
+        "metaTitle": "Indoor Positioning System — KeenEthics",
+        "description": "This solution will bring your customer service and employee management to a new level.",
+        "metaDescription": "We offer the indoor positioning solution, which will bring your customer service and employee management to a new level. We are working with stores, malls, airports, subway and railway stations, business centers, hotels, warehouses, construction sites, and plants.",
+        "href": "/services-indoor-positioning-system-development",
+        "type": "default",
+        "outsideMenu": true
+      },
+      {
+        "name": "Banking and Financial Software Development Services",
+        "metaTitle": "Banking and Financial Software Development Services – KeenEthics",
+        "description": "Fostering innovation and bringing the world of banking and financial services one step closer to people",
+        "metaDescription":"KeenEthics fosters innovation and brings the world of banking and financial services one step closer to people. By ensuring quality, security, compliance, and elegance, we develop effective and reliable financial software solutions.",
+        "href": "/services-financial-software-development",
+        "type": "default",
+        "outsideMenu": true
       }
     ]
   },

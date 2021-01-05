@@ -196,26 +196,25 @@ const ProjectImmocloud = () => (
                 encryption, and backups all the data regularly.
               </p>
             </section>
+
+            <section>
+              <h2>Do You Have a Similar Project Idea?</h2>
+              <CallToActionButton
+                title="SHARE YOUR IDEA"
+                buttonBefore={(
+                  <a
+                    href="https://www.immocloud.de/"
+                    rel="noopener noreferrer nofollow"
+                    target="_blank"
+                  >
+                    <button type="button" className="call-to-cation-btn -secondary">
+                      Check The Project
+                    </button>
+                  </a>
+                )}
+              />
+            </section>
           </div>
-
-          <section>
-            <h2>Do You Have a Similar Project Idea?</h2>
-            <CallToActionButton
-              title="SHARE YOUR IDEA"
-              buttonBefore={(
-                <a
-                  href="https://www.immocloud.de/"
-                  rel="noopener noreferrer nofollow"
-                  target="_blank"
-                >
-                  <button type="button" className="call-to-cation-btn -secondary">
-                    Check The Project
-                  </button>
-                </a>
-              )}
-            />
-          </section>
-
           <Navigation />
         </div>
       </div>
