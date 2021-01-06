@@ -58,8 +58,6 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
-    document.body.style.overflowY = 'hidden';
-
     const { router, posts } = this.props;
     if (typeof window === 'object') {
       window.addEventListener('scroll', debounce(this.handleScroll, 50), true);
