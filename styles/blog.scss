@@ -402,6 +402,11 @@ blockquote {
     padding-left: 12px;
     margin-bottom: 12px;
   }
+
+  p:last-of-type {
+    border-left: none;
+  }
+
   div.person {
     margin-bottom: 0;
 

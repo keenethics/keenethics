@@ -77,6 +77,61 @@ const ServicesMobileDevelopment = () => {
         </section>
 
         <section>
+          <h2>What is our experience in education development?</h2>
+          <div>
+            <h3 className='text-center'>SelfLeaders</h3>
+            <p>SelfLeaders delivers training events for professional and personal development in self-leadership for businesses of different sizes, NGOs, and the public sector. This app is a set of personal growth tools for those who organize and participate in educational events. It provides an opportunity to conduct workshops with interactive materials, videos, presentations, etc.</p>
+
+            <div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: Android and iOS</div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: Meteor, GraphQL, and React</div>
+              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
+              <div style={{ marginBottom: '25px' }}><b>Team</b>: 4 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
+            </div>
+            <Works works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
+          </div>
+
+          <div>
+            <h3 className='text-center'>Public schools monitoring system</h3>
+            <p>It is an educational project, which enables high-level education officials to keep track of the learning progress of a certain student, school, region, and the country overall. This analysis provides valuable data on how educational processes may be optimized in the pursuit of reaching optimal learning results. This data is important for making sure that all schools across all regions are funded sufficiently and justly and no students are left underprivileged.</p>
+
+            <div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: Web</div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: Angular, Node.js, Express and MongoDB</div>
+              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Waterfall</div>
+              <div style={{ marginBottom: '25px' }}><b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
+            </div>
+            <Works works={works.filter(({ title }) => ['Education System Platform'].includes(title))} />
+          </div>
+
+          <div>
+            <h3 className='text-center'>Let’s Start Coding</h3>
+            <p>Let’s Start Coding is an interactive e-learning platform for children. The website and desktop application are augmented with physical coding kits — printed circuit boards in the shape of cars, rockets, or pianos. Through the usage of these software and hardware tools, children are encouraged to learn to code. This e-learning app development experience was quite a challenge, but we are happy and proud to have been a part of it.</p>
+
+            <div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: Desktop</div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: Electron</div>
+              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
+              <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers, and 1 QA specialist.</div>
+            </div>
+            <Works works={works.filter(({ title }) => ['Let’s Start Coding'].includes(title))} />
+          </div>
+
+          <div>
+            <h3 className='text-center'>ComicEnglish</h3>
+            <p>ComicEnglish is a service that helps users develop their language skills by playing games with the English learning chatbot. It includes quests of various difficulty levels and language competence. The gamified platform motivates users to stay on the track of learning English with rewards and multiple fun features.</p>
+
+            <div>
+              <div style={{ marginBottom: '5px' }}><b>Platform</b>: Android and iOS</div>
+              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: Meteor and Ionic</div>
+              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
+              <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers</div>
+            </div>
+            <Works works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
+          </div>
+        </section>
+
+        <section>
           <h2>What are the education software development challenges?</h2>
           <p>You may want to implement your fresh idea for an online dictionary, a tool for visual learning, a mind-mapping instrument, an interactive STEM app, or a music simulator. You may need your conventional education organization to go online or your existing education platform to get a second breath. Or you may want to test your startup idea and to learn more regarding education software development services. In any case, you are going to encounter certain challenges.</p>
           <ul className="challenges-list">
@@ -145,61 +200,6 @@ const ServicesMobileDevelopment = () => {
               ))
             }
           </ul>
-        </section>
-
-        <section>
-          <h2>What is our experience in education development?</h2>
-          <div>
-            <h3>SelfLeaders</h3>
-            <p>SelfLeaders delivers training events for professional and personal development in self-leadership for businesses of different sizes, NGOs, and the public sector. This app is a set of personal growth tools for those who organize and participate in educational events. It provides an opportunity to conduct workshops with interactive materials, videos, presentations, etc.</p>
-
-            <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android"><a>Android</a></Link> and <Link href="/services-mobile-development-apple"><a>iOS</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link>, <Link href="/tech-api-integration-graphql"><a>GraphQL</a></Link>, and <Link href="/tech-front-end-react"><a>React</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
-              <div style={{ marginBottom: '25px' }}><b>Team</b>: 4 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
-            </div>
-            <Works works={works.filter(({ title }) => ['SelfLeaders'].includes(title))} />
-          </div>
-
-          <div>
-            <h3>Public schools monitoring system</h3>
-            <p>It is an educational project, which enables high-level education officials to keep track of the learning progress of a certain student, school, region, and the country overall. This analysis provides valuable data on how educational processes may be optimized in the pursuit of reaching optimal learning results. This data is important for making sure that all schools across all regions are funded sufficiently and justly and no students are left underprivileged.</p>
-
-            <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-web-development"><a>Web</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-front-end-angular"><a>Angular</a></Link>, <Link href="/services-web-development-node"><a>Node.js</a></Link>, <Link href="/tech-back-end-express"><a>Express</a></Link> and <Link href="/tech-data-base-mongo"><a>MongoDB</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Waterfall</div>
-              <div style={{ marginBottom: '25px' }}><b>Team</b>: 3 full-stack developers, 1 QA specialist, and 1 Project Manager.</div>
-            </div>
-            <Works works={works.filter(({ title }) => ['Education System Platform'].includes(title))} />
-          </div>
-
-          <div>
-            <h3>Let’s Start Coding</h3>
-            <p>Let’s Start Coding is an interactive e-learning platform for children. The website and desktop application are augmented with physical coding kits — printed circuit boards in the shape of cars, rockets, or pianos. Through the usage of these software and hardware tools, children are encouraged to learn to code. This e-learning app development experience was quite a challenge, but we are happy and proud to have been a part of it.</p>
-
-            <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="#"><a>Desktop</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-apps-electron"><a>Electron</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Scrum</div>
-              <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers, and 1 QA specialist.</div>
-            </div>
-            <Works works={works.filter(({ title }) => ['Let’s Start Coding'].includes(title))} />
-          </div>
-
-          <div>
-            <h3>ComicEnglish</h3>
-            <p>ComicEnglish is a service that helps users develop their language skills by playing games with the English learning chatbot. It includes quests of various difficulty levels and language competence. The gamified platform motivates users to stay on the track of learning English with rewards and multiple fun features.</p>
-
-            <div>
-              <div style={{ marginBottom: '5px' }}><b>Platform</b>: <Link href="/services-mobile-development-android"><a>Android</a></Link> and <Link href="/services-mobile-development-apple"><a>iOS</a></Link></div>
-              <div style={{ marginBottom: '5px' }}><b>Technologies</b>: <Link href="/tech-back-end-meteor"><a>Meteor</a></Link> and Ionic</div>
-              <div style={{ marginBottom: '5px' }}><b>Methodology</b>: Kanban</div>
-              <div style={{ marginBottom: '25px' }}><b>Team</b>: 2 full-stack developers</div>
-            </div>
-            <Works works={works.filter(({ title }) => ['ComicEnglish'].includes(title))} />
-          </div>
         </section>
 
         <section>

@@ -53,19 +53,19 @@
         "type": "default"
       },
       {
-        "name": "Chatbots and Artificial Intelligence",
-        "description": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
-        "metaTitle": "AI Chatbot Development Services | KeenEthics",
-        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
-        "href": "/services-chatbots-artificial-intelligence",
-        "type": "default"
-      },
-      {
         "name": "Cloud Application Development",
         "description": "KeenEthics offers secure, reliable, and cost-efficient custom cloud solutions, from custom development through migration and integration to support and maintenance.",
         "metaTitle": "Software Maintenance and Support Services | KeenEthics",
         "metaDescription": "KeenEthics offers secure and reliable custom cloud solutions, from custom development through migration and integration to support and maintenance.",
         "href": "/services-cloud-application-development",
+        "type": "default"
+      },
+      {
+        "name": "Chatbots and Artificial Intelligence",
+        "description": "Automating monotonous tasks, improving your business performance, and boosting customer satisfaction.",
+        "metaTitle": "AI Chatbot Development Services | KeenEthics",
+        "metaDescription": "KeenEthics chatbot and AI solutions automate monotonous tasks, improve your business performance, and boost customer satisfaction.",
+        "href": "/services-chatbots-artificial-intelligence",
         "type": "default"
       },
       {
@@ -77,51 +77,6 @@
         "type": "default"
       },
       {
-        "name": "Business Analysis",
-        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
-        "metaTitle": "Business Analysis Services | KeenEthics",
-        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research",
-        "href": "/services-business-analysis",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
-        "name": "UI/UX Design",
-        "metaTitle": "UI UX Design Services, Hire UI/UX Designers — Keenethics",
-        "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
-        "metaDescription": "As a UI UX design company, we start with project discovery, user testing, and UX audit. Then, we do wireframing, prototyping, and mockuping. After that, we evaluate designs. Only when clients and designers are happy with results, the designs are sent for development.",
-        "href": "/services-ui-ux-design",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
-        "name": "Development and Quality Assurance",
-        "metaTitle": "Software Testing and QA Services | KeenEthics",
-        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
-        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
-        "href": "/services-development-and-quality-assurance",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
-        "name": "Software Deployment and Implementation Services",
-        "metaTitle": "Software Deployment and Implementation Services - KeenEthics",
-        "description": "",
-        "metaDescription": "",
-        "href": "/services-software-deployment",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
-        "name": "Maintenance and Support",
-        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
-        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
-        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning. We offer a warranty for each software product we develop",
-        "href": "/services-maintenance-support",
-        "type": "default",
-        "outsideMenu": true
-      },
-      {
         "name": "Indoor Positioning System",
         "metaTitle": "Indoor Positioning System — KeenEthics",
         "description": "This solution will bring your customer service and employee management to a new level.",
@@ -129,6 +84,54 @@
         "href": "/services-indoor-positioning-system-development",
         "type": "default",
         "outsideMenu": true
+      }
+    ]
+  },
+  {
+    "name": "Full-Cycle Method",
+    "href": "/#methods",
+    "anchor": "methods",
+    "outsideMenu": true,
+    "points": [
+      {
+        "name": "Business Analysis",
+        "description": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research.",
+        "metaTitle": "Business Analysis Services | KeenEthics",
+        "metaDescription": "KeenEthics business analysis services: reducing development expenses and boosting sales through sound project research",
+        "href": "/services-business-analysis",
+        "type": "default"
+      },
+      {
+        "name": "UI/UX Design",
+        "metaTitle": "UI UX Design Services, Hire UI/UX Designers — Keenethics",
+        "description": "KeenEthics UI/UX Designers are creating elegant, responsive, and effectual user interface and experience designs with the latest market tendencies in mind.",
+        "metaDescription": "As a UI UX design company, we start with project discovery, user testing, and UX audit. Then, we do wireframing, prototyping, and mockuping. After that, we evaluate designs. Only when clients and designers are happy with results, the designs are sent for development.",
+        "href": "/services-ui-ux-design",
+        "type": "default"
+      },
+      {
+        "name": "Development and Quality Assurance",
+        "metaTitle": "Software Testing and QA Services | KeenEthics",
+        "description": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "metaDescription": "KeenEthics team creates high-quality software products with thorough development and expert Quality Assurance services.",
+        "href": "/services-development-and-quality-assurance",
+        "type": "default"
+      },
+      {
+        "name": "Software Deployment and Implementation Services",
+        "metaTitle": "Software Deployment and Implementation Services - KeenEthics",
+        "description": "Making your software product finally bring profit",
+        "metaDescription": "If you do not deploy your software product to the web or an app store, the entire software design and development process becomes useless. Having come so far, why would you hide your product from the target audience?",
+        "href": "/services-software-deployment",
+        "type": "default"
+      },
+      {
+        "name": "Maintenance and Support",
+        "metaTitle": "Software Maintenance and Support Services – KeenEthics Blog",
+        "description": "KeenEthics team keeps your product updated, relevant, and perfectly functioning.",
+        "metaDescription": "KeenEthics team keeps your product updated, relevant, and perfectly functioning. We offer a warranty for each software product we develop",
+        "href": "/services-maintenance-support",
+        "type": "default"
       }
     ]
   },
@@ -146,11 +149,11 @@
         "type": "default"
       },
       {
-        "name": "Business Administration Software Development",
-        "metaTitle": "Business administration software development – KeenEthics",
-        "description": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "metaDescription": "Business administration software, which helps your business grow, automates mundane tasks, and boosts productivity",
-        "href": "/services-business-administration-development",
+        "name": "Nonprofit Software Development",
+        "metaTitle": "Non-Profit Software Development – KeenEthics",
+        "description": "Helping non-profit companies achieve their ethical goals",
+        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
+        "href": "/services-non-profit-software-development",
         "type": "default"
       },
       {
@@ -162,19 +165,11 @@
         "type": "default"
       },
       {
-        "name": "Real Estate Software Development Services",
-        "description": "Automating routine tasks, making the market transparent, and bringing CRM to a new level",
-        "metaTitle": "Real Estate Software Development Services – KeenEthics",
-        "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
-        "href": "/services-real-estate-software-development",
-        "type": "default"
-      },
-      {
-        "name": "Nonprofit Software Development",
-        "metaTitle": "Non-Profit Software Development – KeenEthics",
-        "description": "Helping non-profit companies achieve their ethical goals",
-        "metaDescription": "KeenEthics helps non-profit companies achieve their ethical goals. We develop landing and donation pages, automation solutions, CRM systems, and software for fundraising, event management, communication, volunteer management, marketing, and advertising.",
-        "href": "/services-non-profit-software-development",
+        "name": "Logistics Software Solutions",
+        "description": "Embodying goal-oriented values and taking your business to a new level",
+        "metaTitle": "Logistics Software Development Company — KeenEthics",
+        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
+        "href": "/logistics-industry",
         "type": "default"
       },
       {
@@ -186,11 +181,27 @@
         "type": "default"
       },
       {
-        "name": "Logistics Software Solutions",
-        "description": "Embodying goal-oriented values and taking your business to a new level",
-        "metaTitle": "Logistics Software Development Company — KeenEthics",
-        "metaDescription": "KeenEthics builds logistics software solutions that increase your profit and systematize business processes. We provide transportation, navigation, warehouse management, accounting &amp; reporting, and supply chain tech solutions.",
-        "href": "/logistics-industry",
+        "name": "Banking and Financial Software Development Services",
+        "metaTitle": "Banking and Financial Software Development Services – KeenEthics",
+        "description": "Fostering innovation and bringing the world of banking and financial services one step closer to people",
+        "metaDescription":"KeenEthics fosters innovation and brings the world of banking and financial services one step closer to people. By ensuring quality, security, compliance, and elegance, we develop effective and reliable financial software solutions.",
+        "href": "/services-financial-software-development",
+        "type": "default"
+      },
+      {
+        "name": "Real Estate Software Development Services",
+        "metaTitle": "Real Estate Software Development Services – KeenEthics",
+        "description": "Automating routine tasks, making the market transparent, and bringing CRM to a new level",
+        "metaDescription": "Together with KeenEthics, you can automate routine tasks, make the real estate market more transparent, and bring customer relationship management to a new level.",
+        "href": "/services-real-estate-software-development",
+        "type": "default"
+      },
+      {
+        "name": "Retail Software Development Services",
+        "metaTitle": "Retail Software Development Services – KeenEthics",
+        "description": "Solving retail challenges associated with digital transformation, data safety, and technological advancement.",
+        "metaDescription": "Solving retail app development challenges associated with digital transformation, communication, data safety, technological advancement, and financial operations.",
+        "href": "/services-retail-software-development",
         "type": "default"
       }
     ]

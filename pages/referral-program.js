@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Calendar from 'react-calendar';
 import Select from 'react-select';
 import moment from 'moment';
@@ -53,6 +53,8 @@ const ReferralProgram = () => {
   const [showError, setShowError] = useState(false);
   const [sendEmailResponse, setSendEmailResponse] = useState(null);
   const [timeDifference, setTimeDifference] = useState(0); // in minutes
+
+  const selectCountryRef = useRef()
 
   const countryItem = ({
     name: countryName,
@@ -434,6 +436,12 @@ const ReferralProgram = () => {
     setTimeZoneDifference(`${selectedCountry.timeZone}`);
   };
 
+  const handleCountrySelectMobile = () => {
+    if(window.innerWidth <= 768) {
+      setTimeout(() => selectCountryRef.current.scrollIntoView({ behavior: 'smooth', block:'start'}), 600);
+    }
+  };
+
   const renderLetsDiscussBlock = () => (
     <div id="lets-discuss" className="lets-discuss-block">
       <h3>Let&#39;s discuss your business idea</h3>
@@ -495,13 +503,14 @@ const ReferralProgram = () => {
                 placeholder={areEventsLoaded ? 'Select exact time for a call' : <div className="loader" />}
                 isDisabled={!areEventsLoaded}
               />
-              <div onClick={(e) => e.target.scrollIntoView(true)}>
+              <div ref={selectCountryRef}>
                 <Select
                   id="countryList"
                   classNamePrefix="country-list"
                   options={countryList}
                   className={`country-list ${showError && !country ? 'error' : ''}`}
                   onChange={(value) => { selectCountry(value); }}
+                  onFocus={handleCountrySelectMobile}
                   value={country}
                   isSearchable
                   placeholder="Your Time Zone"
