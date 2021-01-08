@@ -4,6 +4,7 @@
   min-height: 100%;
   padding-left: 160px;
   box-sizing: border-box;
+  width: 100%;
 
   -webkit-overflow-scrolling: touch;
 
@@ -16,10 +17,9 @@
 }
 .content-inner {
   position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   scroll-behavior: smooth;
 
   &.home-full-vh {

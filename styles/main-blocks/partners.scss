@@ -6,6 +6,7 @@
 
 .partners {
   position: relative;
+  overflow: hidden;
 
   &::before {
     content: '';
