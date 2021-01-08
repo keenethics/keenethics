@@ -12,6 +12,7 @@ module.exports = withSass({
       'REACT_APP_PREVIEW_TOKEN',
     ]));
     config.plugins.push(new Dotenv());
+    config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
     config.optimization.splitChunks.minChunks = 2;
     return config;
   },
