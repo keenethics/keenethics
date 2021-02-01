@@ -2,7 +2,7 @@ const path = require('path');
 const {
   messageFromIlona,
   messageFromPaul,
-  messageFromJean,
+  // messageFromJean,
 } = require('./autoReplyMails');
 
 module.exports = (country, type, data) => {
@@ -20,11 +20,11 @@ module.exports = (country, type, data) => {
       html = messageFromPaul(type, data);
       replyTo = 'paul.van.workum@keenethics.com';
       break;
-    case 'US':
-      from = 'Jean-Marc from KeenEthics jean.marc.arsan@keenethics.com';
-      html = messageFromJean(type, data);
-      replyTo = 'jean.marc.arsan@keenethics.com';
-      break;
+    // case 'US':
+    //   from = 'Jean-Marc from KeenEthics jean.marc.arsan@keenethics.com';
+    //   html = messageFromJean(type, data);
+    //   replyTo = 'jean.marc.arsan@keenethics.com';
+    //   break;
     default:
       from = 'Ilona from KeenEthics ilona@keenethics.com';
       html = messageFromIlona(type, data);
