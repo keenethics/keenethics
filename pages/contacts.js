@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { get } from 'lodash';
 
-import { IlonaS, PaulW, JeanA } from '../public/static/contacts/contacts-data';
+import { IlonaS, PaulW } from '../public/static/contacts/contacts-data';
 import Layout from '../components/layout/main';
 import Background from '../components/content/background';
 import EstimateForm from '../components/contacts/estimate-form';
@@ -45,44 +45,44 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           type="button"
           className={classnames({
             'container-btn': true,
-            'arrow-left-triangle': selectedCountry === 'UA' || !selectedCountry,
+            'arrow-left-triangle': selectedCountry === 'US',
           })}
           onClick={() => {
-            setSelectedCountry('UA');
+            setSelectedCountry('US');
             mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
               <img
-                src="/static/images/flag_ukraine.png"
+                src="/static/images/united-states.svg"
                 alt="Flag"
                 className="ico flag"
               />
             </span>
             <span className="country" itemProp="addressRegion">
-              Ukraine
+              USA
             </span>
           </div>
         </button>
         <div className="address-telephone-wrapper">
           <a
-            href="https://goo.gl/maps/bwz3k5aHf8oGyAzx8"
+            href="https://goo.gl/maps/tg3pYa3wed1QFYH67"
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
-            <span itemProp="addressLocality">Lviv</span>
-            ,&nbsp;
+            <span itemProp="addressLocality">New York,&nbsp;</span>
             <span itemProp="streetAddress">
-              Lytvynenka St, 3,
+              1412 Broadway,&nbsp;
               <br className="display-block-sm" />
-              {' '}
-              79000
+              21st floor, 2200
+              <br />
+              NY 10018
             </span>
           </a>
-          <a href="tel:+380947106105" target="_blank" rel="noopener noreferrer">
+          <a href="tel:+19292141392" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
-              +38 (094) 710 61 05
+              +1 (929) 214 1392
             </span>
           </a>
         </div>
@@ -153,44 +153,44 @@ const Address = ({ className, setSelectedCountry, selectedCountry }) => (
           type="button"
           className={classnames({
             'container-btn': true,
-            'arrow-left-triangle': selectedCountry === 'US',
+            'arrow-left-triangle': selectedCountry === 'UA' || !selectedCountry,
           })}
           onClick={() => {
-            setSelectedCountry('US');
+            setSelectedCountry('UA');
             mobileScrollIntoView('contacts-page');
           }}
         >
           <div className="flag-country-wrapper">
             <span className="flag-country-wrapper-flag">
               <img
-                src="/static/images/united-states.svg"
+                src="/static/images/flag_ukraine.png"
                 alt="Flag"
                 className="ico flag"
               />
             </span>
             <span className="country" itemProp="addressRegion">
-              USA
+              Ukraine
             </span>
           </div>
         </button>
         <div className="address-telephone-wrapper">
           <a
-            href="https://goo.gl/maps/tg3pYa3wed1QFYH67"
+            href="https://goo.gl/maps/bwz3k5aHf8oGyAzx8"
             rel="noopener noreferrer nofollow"
             target="_blank"
           >
-            <span itemProp="addressLocality">New York,&nbsp;</span>
+            <span itemProp="addressLocality">Lviv</span>
+            ,&nbsp;
             <span itemProp="streetAddress">
-              1412 Broadway,&nbsp;
+              Lytvynenka St, 3,
               <br className="display-block-sm" />
-              21st floor, 2200
-              <br />
-              NY 10018
+              {' '}
+              79000
             </span>
           </a>
-          <a href="tel:+19292141392" target="_blank" rel="noopener noreferrer">
+          <a href="tel:+380947106105" target="_blank" rel="noopener noreferrer">
             <span className="telephone" itemProp="telephone">
-              +1 (929) 214 1392
+              +38 (094) 710 61 05
             </span>
           </a>
         </div>
@@ -335,7 +335,6 @@ const Contacts = ({ router }) => {
 
   let person;
   if (selectedCountry === 'NL') person = PaulW;
-  else if (selectedCountry === 'US') person = JeanA;
   else person = IlonaS;
   return (
     <Layout noFooter>
