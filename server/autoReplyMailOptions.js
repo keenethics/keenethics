@@ -34,7 +34,7 @@ module.exports = (country, type, data) => {
   return {
     from,
     to: email,
-    bcc: ['business@keenethics.com', replyTo, replyTo === 'ilona@keenethics.com' ? '' : 'ilona@keenethics.com'],
+    cc: ['business@keenethics.com', replyTo, replyTo === 'ilona@keenethics.com' ? '' : 'ilona@keenethics.com'],
     subject: 'Thank you for being in touch with KeenEthics! I am happy to deliver on your request',
     html,
     attachments: [
