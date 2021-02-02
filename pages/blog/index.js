@@ -56,6 +56,8 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
+    document.body.style.overflowY = 'hidden';
+
     const { router, posts } = this.props;
     if (typeof window === 'object') {
       window.addEventListener('scroll', debounce(this.handleScroll, 50), true);
@@ -134,7 +136,13 @@ class Blog extends React.Component {
     const { router, posts } = this.props;
 
     return (
-      <Layout currentURL={router.current}>
+      <Layout
+        currentURL={router.current}
+        style={{
+          maxHeight: '100vh',
+          overflowY: 'auto',
+        }}
+      >
         <div onScroll={this.handleScroll} className="page__wrapper">
           <div className="blog-page-content">
             <div className="page__header">
